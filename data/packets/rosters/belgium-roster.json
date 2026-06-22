@@ -9,7 +9,6 @@
                  "captured_at":  "2026-06-20T22:20:00+08:00"
              },
     "status":  "complete_minimum_verified_closure",
-    "captured_at":  "2026-06-20T22:20:00+08:00",
     "source_summary":  [
                            {
                                "name":  "FourFourTwo - Belgium World Cup 2026 squad",
@@ -298,7 +297,13 @@
                                                         "postmatch_form_status_1_5":  3.5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-02",
@@ -466,7 +471,13 @@
                                                         "postmatch_form_status_1_5":  2.5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-03",
@@ -634,7 +645,13 @@
                                                         "postmatch_form_status_1_5":  2.5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-04",
@@ -812,7 +829,13 @@
                                                         "postmatch_form_status_1_5":  3.3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-05",
@@ -990,7 +1013,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-06",
@@ -1156,7 +1185,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-07",
@@ -1322,7 +1357,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-08",
@@ -1488,7 +1529,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-09",
@@ -1666,7 +1713,13 @@
                                                         "postmatch_form_status_1_5":  3.4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-10",
@@ -1832,7 +1885,13 @@
                                                         "postmatch_form_status_1_5":  2.5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-11",
@@ -2013,7 +2072,13 @@
                                                         "postmatch_form_status_1_5":  2.5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-12",
@@ -2193,7 +2258,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-13",
@@ -2359,7 +2430,13 @@
                                                         "postmatch_form_status_1_5":  2.5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-14",
@@ -2537,7 +2614,13 @@
                                                         "postmatch_form_status_1_5":  3.3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-15",
@@ -2715,7 +2798,13 @@
                                                         "postmatch_form_status_1_5":  3.2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-16",
@@ -2893,7 +2982,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-17",
@@ -3071,7 +3166,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-18",
@@ -3249,7 +3350,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-19",
@@ -3415,7 +3522,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-20",
@@ -3581,7 +3694,13 @@
                                                         "postmatch_form_status_1_5":  2.5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-21",
@@ -3759,7 +3878,13 @@
                                                         "postmatch_form_status_1_5":  3.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-22",
@@ -3937,7 +4062,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-23",
@@ -4115,7 +4246,13 @@
                                                         "postmatch_form_status_1_5":  3.2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-24",
@@ -4281,7 +4418,13 @@
                                                         "postmatch_form_status_1_5":  2.5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-25",
@@ -4447,7 +4590,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "belgium-26",
@@ -4627,7 +4776,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_belgium_0-0_iran",
+                                              "result":  "0-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/belgium-player-state.json"
+                                          }
                     }
                 ],
     "gap_remediation_batch_d":  {
@@ -4663,7 +4818,7 @@
                                                   "status":  "partial",
                                                   "notes":  "Only missing fields filled where Transfermarkt detailed squad table matched the local player name."
                                               },
-    "updated_at":  "2026-06-21T03:40:00+08:00",
+    "updated_at":  "2026-06-23T01:35:00+08:00",
     "rating_policy_update":  {
                                  "updated_at":  "2026-06-21T03:25:00+08:00",
                                  "external_rating_required":  false,
@@ -4682,5 +4837,22 @@
                                          "rule":  "internal_match_rating_1_5 is project internal model score, based on verified minutes, role, events, cards, availability and form_status_1_5; it must not be presented as an external rating."
                                      },
     "internal_match_rating_policy_updated_at":  "2026-06-21T03:55:00+08:00",
-    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating."
+    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating.",
+    "player_state_update_status":  "partial",
+    "round2_dynamic_updates":  {
+                                   "2026-06-21_belgium_0-0_iran":  {
+                                                                       "status":  "partial",
+                                                                       "records":  26,
+                                                                       "source_status":  "partial_source_limited",
+                                                                       "note":  "Per-player internal rating records are stored in player_state and mirrored in member table; roster dynamic sync marks match participation as partial because official minutes table was not captured."
+                                                                   }
+                               },
+    "captured_at":  "2026-06-23T01:35:00+08:00",
+    "round2_update_summary":  {
+                                  "match_id":  "2026-06-21_belgium_0-0_iran",
+                                  "result":  "0-0",
+                                  "status":  "partial_source_limited",
+                                  "captured_at":  "2026-06-23T01:35:00+08:00",
+                                  "note":  "Roster-level dynamic round2 summary added; detailed player ratings are authoritative in player_state file."
+                              }
 }

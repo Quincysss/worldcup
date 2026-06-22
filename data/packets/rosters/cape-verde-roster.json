@@ -6,7 +6,7 @@
     "group":  "H",
     "status":  "complete_current_stage",
     "created_at":  "2026-06-20T00:00:00+08:00",
-    "updated_at":  "2026-06-21T03:40:00+08:00",
+    "updated_at":  "2026-06-23T01:35:00+08:00",
     "owner":  "worldcup-data-collector-cape-verde",
     "scope":  "H组佛得角 roster 与 staff table；只做事实采集与标准化，不做预测或投注建议。",
     "coach":  {
@@ -193,7 +193,7 @@
                                               "Sidny Lopes Cabral yellow card, substituted at 76"
                                           ]
                             },
-    "player_state_update_status":  "updated",
+    "player_state_update_status":  "partial",
     "players":  [
                     {
                         "chinese_name":  "沃齐尼亚",
@@ -416,7 +416,13 @@
                                                         "postmatch_form_status_1_5":  5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "斯托皮拉",
@@ -639,7 +645,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "迪内",
@@ -862,7 +874,13 @@
                                                         "postmatch_form_status_1_5":  4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "皮科·洛佩斯",
@@ -1085,7 +1103,13 @@
                                                         "postmatch_form_status_1_5":  5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "洛根·科斯塔",
@@ -1308,7 +1332,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "凯文·皮纳",
@@ -1531,7 +1561,13 @@
                                                         "postmatch_form_status_1_5":  4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "若瓦内·卡布拉尔",
@@ -1754,7 +1790,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "若昂·保罗",
@@ -1977,7 +2019,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "吉尔森·本希莫尔",
@@ -2200,7 +2248,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "贾米罗·蒙特罗",
@@ -2423,7 +2477,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "加里·罗德里格斯",
@@ -2646,7 +2706,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "马尔西奥·罗萨",
@@ -2869,7 +2935,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "西德尼·洛佩斯·卡布拉尔",
@@ -3092,7 +3164,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "德罗伊·杜阿尔特",
@@ -3315,7 +3393,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "拉罗斯·杜阿尔特",
@@ -3538,7 +3622,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "亚尼克·塞梅多",
@@ -3761,7 +3851,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "威利·塞梅多",
@@ -3984,7 +4080,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "特尔莫·阿尔坎若",
@@ -4207,7 +4309,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "戴隆·利夫拉门托",
@@ -4430,7 +4538,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "瑞安·门德斯",
@@ -4653,7 +4767,13 @@
                                                         "postmatch_form_status_1_5":  4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "努诺·达科斯塔",
@@ -4876,7 +4996,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "史蒂文·莫雷拉",
@@ -5099,7 +5225,13 @@
                                                         "postmatch_form_status_1_5":  4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "CJ·多斯桑托斯",
@@ -5322,7 +5454,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "瓦格纳·皮纳",
@@ -5545,7 +5683,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "凯尔文·皮雷斯",
@@ -5768,7 +5912,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "埃利奥·瓦雷拉",
@@ -5991,7 +6141,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_uruguay_2-2_cape-verde",
+                                              "result":  "2-2",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/cape-verde-player-state.json"
+                                          }
                     }
                 ],
     "gap_remediation_batch_d":  {
@@ -6198,5 +6354,21 @@
                                          "rule":  "internal_match_rating_1_5 is project internal model score, based on verified minutes, role, events, cards, availability and form_status_1_5; it must not be presented as an external rating."
                                      },
     "internal_match_rating_policy_updated_at":  "2026-06-21T03:55:00+08:00",
-    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating."
+    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating.",
+    "round2_dynamic_updates":  {
+                                   "2026-06-21_uruguay_2-2_cape_verde":  {
+                                                                             "status":  "partial",
+                                                                             "records":  26,
+                                                                             "source_status":  "partial_source_limited",
+                                                                             "note":  "Per-player internal rating records are stored in player_state and mirrored in member table; roster dynamic sync marks match participation as partial because official minutes table was not captured."
+                                                                         }
+                               },
+    "captured_at":  "2026-06-23T01:35:00+08:00",
+    "round2_update_summary":  {
+                                  "match_id":  "2026-06-21_uruguay_2-2_cape-verde",
+                                  "result":  "2-2",
+                                  "status":  "partial_source_limited",
+                                  "captured_at":  "2026-06-23T01:35:00+08:00",
+                                  "note":  "Roster-level dynamic round2 summary added; detailed player ratings are authoritative in player_state file."
+                              }
 }

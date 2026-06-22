@@ -6,10 +6,9 @@
     "group":  "G",
     "status":  "complete_minimum_fact_packet",
     "created_at":  "2026-06-20T00:00:00+08:00",
-    "updated_at":  "2026-06-21T03:40:00+08:00",
-    "captured_at":  "2026-06-20T21:52:16+08:00",
+    "updated_at":  "2026-06-23T01:35:00+08:00",
     "collection_scope":  "Egypt only; factual roster, staff and first-round usage; no predictions or betting advice.",
-    "player_state_update_status":  "updated",
+    "player_state_update_status":  "partial",
     "roster_count":  26,
     "source_priority_note":  "Current 26 follows FourFourTwo final selection cross-checked with Transfermarkt current 26-player squad.",
     "head_coach":  {
@@ -897,7 +896,13 @@
                                                         "postmatch_form_status_1_5":  4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-26",
@@ -1110,7 +1115,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-01",
@@ -1323,7 +1334,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-16",
@@ -1536,7 +1553,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-06",
@@ -1749,7 +1772,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-04",
@@ -1962,7 +1991,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-05",
@@ -2175,7 +2210,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-02",
@@ -2388,7 +2429,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-13",
@@ -2601,7 +2648,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-15",
@@ -2814,7 +2867,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-03",
@@ -3027,7 +3086,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-24",
@@ -3240,7 +3305,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-19",
@@ -3453,7 +3524,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-17",
@@ -3666,7 +3743,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-14",
@@ -3879,7 +3962,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-18",
@@ -4091,7 +4180,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-08",
@@ -4304,7 +4399,13 @@
                                                         "postmatch_form_status_1_5":  5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-21",
@@ -4517,7 +4618,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-07",
@@ -4729,7 +4836,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-20",
@@ -4942,7 +5055,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-11",
@@ -5155,7 +5274,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-10",
@@ -5378,7 +5503,13 @@
                                                         "postmatch_form_status_1_5":  4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-12",
@@ -5591,7 +5722,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-25",
@@ -5804,7 +5941,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-22",
@@ -6017,7 +6160,13 @@
                                                         "postmatch_form_status_1_5":  4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "egy-09",
@@ -6239,7 +6388,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "3-1",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/egypt-player-state.json"
+                                          }
                     }
                 ],
     "gap_remediation_batch_d":  {
@@ -6555,5 +6710,21 @@
                                          "rule":  "internal_match_rating_1_5 is project internal model score, based on verified minutes, role, events, cards, availability and form_status_1_5; it must not be presented as an external rating."
                                      },
     "internal_match_rating_policy_updated_at":  "2026-06-21T03:55:00+08:00",
-    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating."
+    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating.",
+    "round2_dynamic_updates":  {
+                                   "2026-06-21_new_zealand_1-3_egypt":  {
+                                                                            "status":  "partial",
+                                                                            "records":  26,
+                                                                            "source_status":  "partial_source_limited",
+                                                                            "note":  "Per-player internal rating records are stored in player_state and mirrored in member table; roster dynamic sync marks match participation as partial because official minutes table was not captured."
+                                                                        }
+                               },
+    "captured_at":  "2026-06-23T01:35:00+08:00",
+    "round2_update_summary":  {
+                                  "match_id":  "2026-06-21_new-zealand_1-3_egypt",
+                                  "result":  "3-1",
+                                  "status":  "partial_source_limited",
+                                  "captured_at":  "2026-06-23T01:35:00+08:00",
+                                  "note":  "Roster-level dynamic round2 summary added; detailed player ratings are authoritative in player_state file."
+                              }
 }

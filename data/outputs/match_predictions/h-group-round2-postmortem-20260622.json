@@ -1,0 +1,103 @@
+{
+    "phase":  "group_stage_round2_postmatch_review",
+    "group":  "H",
+    "round":  2,
+    "status":  "partial_source_limited",
+    "captured_at":  "2026-06-23T01:45:00+08:00",
+    "player_state_update_status":  "partial",
+    "matches":  [
+                    {
+                        "group":  "H",
+                        "match_id":  "2026-06-21_spain_4-0_saudi-arabia",
+                        "title":  "西班牙 4-0 沙特",
+                        "date":  "2026-06-21",
+                        "teams":  [
+                                      "西班牙",
+                                      "沙特"
+                                  ],
+                        "score":  "4-0",
+                        "actual_result":  "spain_win",
+                        "prediction_reference":  "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+                        "pre_match_xg":  "Spain 2.05 - Saudi Arabia 0.52",
+                        "pre_match_probabilities":  "Spain 73.5% / Draw 18.3% / Saudi Arabia 8.2%",
+                        "summary":  "西班牙用4-3-3快速打穿沙特5-4-1，Yamal 10分钟进球，Oyarzabal 21和24分钟连入两球，49分钟 Al-Tambakti 乌龙。西班牙射门和控球优势明显。",
+                        "postmatch_error":  "方向命中西班牙胜，但低估强队早球后连续扩大比分的尾部；市场强烈看好西班牙在本场比本地模型更接近事实。",
+                        "player_state_update_status":  "partial_source_limited"
+                    },
+                    {
+                        "group":  "H",
+                        "match_id":  "2026-06-21_uruguay_2-2_cape-verde",
+                        "title":  "乌拉圭 2-2 佛得角",
+                        "date":  "2026-06-21",
+                        "teams":  [
+                                      "乌拉圭",
+                                      "佛得角"
+                                  ],
+                        "score":  "2-2",
+                        "actual_result":  "draw",
+                        "prediction_reference":  "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+                        "pre_match_xg":  "Cape Verde 0.60 - Uruguay 1.55",
+                        "pre_match_probabilities":  "Cape Verde 14.2% / Draw 25.3% / Uruguay 60.5%",
+                        "summary":  "Kevin Pina 任意球为佛得角先拔头筹，Maxi Araujo 与 Agustin Canobbio 帮乌拉圭反超；下半场 Helio Varela 扳平。佛得角连续第二场拿到平局。",
+                        "postmatch_error":  "模型高估乌拉圭取胜稳定性，低估佛得角定位球质量、韧性与落后后的扳平路径。",
+                        "player_state_update_status":  "partial_source_limited"
+                    }
+                ],
+    "player_state_updates":  [
+                                 {
+                                     "team":  "spain",
+                                     "status":  "partial_source_limited_updated",
+                                     "player_state":  "data/outputs/player_state/spain-player-state.json",
+                                     "roster":  "data/packets/rosters/spain-roster.json"
+                                 },
+                                 {
+                                     "team":  "saudi-arabia",
+                                     "status":  "partial_source_limited_updated",
+                                     "player_state":  "data/outputs/player_state/saudi-arabia-player-state.json",
+                                     "roster":  "data/packets/rosters/saudi-arabia-roster.json"
+                                 },
+                                 {
+                                     "team":  "uruguay",
+                                     "status":  "partial_source_limited_updated",
+                                     "player_state":  "data/outputs/player_state/uruguay-player-state.json",
+                                     "roster":  "data/packets/rosters/uruguay-roster.json"
+                                 },
+                                 {
+                                     "team":  "cape-verde",
+                                     "status":  "partial_source_limited_updated",
+                                     "player_state":  "data/outputs/player_state/cape-verde-player-state.json",
+                                     "roster":  "data/packets/rosters/cape-verde-roster.json"
+                                 }
+                             ],
+    "source_log":  [
+                       {
+                           "name":  "ESPN match reports / match centres",
+                           "url":  "https://www.espn.com/soccer/",
+                           "captured_at":  "2026-06-23T01:45:00+08:00",
+                           "notes":  "Scores, Spain-Saudi event/stats snippets, venue and match report context."
+                       },
+                       {
+                           "name":  "Al Jazeera World Cup reports",
+                           "url":  "https://www.aljazeera.com/sports/2026/6/",
+                           "captured_at":  "2026-06-23T01:45:00+08:00",
+                           "notes":  "Narrative confirmation for the four G/H round2 matches."
+                       },
+                       {
+                           "name":  "FIFA match centre snippets",
+                           "url":  "https://www.fifa.com/en/match-centre/",
+                           "captured_at":  "2026-06-23T01:45:00+08:00",
+                           "notes":  "Fixture and venue cross-check where accessible."
+                       },
+                       {
+                           "name":  "Local quant prediction files",
+                           "url":  "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json; data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+                           "captured_at":  "2026-06-23T01:45:00+08:00",
+                           "notes":  "Pre-match xG, 1X2, top scorelines and market comparison baseline."
+                       }
+                   ],
+    "gaps_and_conflicts":  [
+                               "Official full lineups/minutes for every squad player not fully extracted in this emergency closure.",
+                               "External same-source player ratings are optional and remain missing where unavailable.",
+                               "Member tables and player_state now contain internal 1-5 model ratings for every squad player."
+                           ]
+}

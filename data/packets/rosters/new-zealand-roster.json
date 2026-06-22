@@ -6,7 +6,7 @@
     "group":  "G",
     "status":  "complete_current_stage",
     "created_at":  "2026-06-20T00:00:00+08:00",
-    "updated_at":  "2026-06-21T03:40:00+08:00",
+    "updated_at":  "2026-06-23T01:35:00+08:00",
     "owner":  "worldcup-data-collector-new-zealand",
     "scope":  "G组新西兰 roster 与 staff table；只做事实采集与标准化，不做预测或投注建议。",
     "coach":  {
@@ -279,7 +279,7 @@
                                               "No New Zealand yellow/red cards confirmed in accessible sources"
                                           ]
                             },
-    "player_state_update_status":  "updated",
+    "player_state_update_status":  "partial",
     "players":  [
                     {
                         "chinese_name":  "马克斯·克罗科姆",
@@ -508,7 +508,13 @@
                                                         "postmatch_form_status_1_5":  4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "蒂姆·佩恩",
@@ -737,7 +743,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "弗朗西斯·德弗里斯",
@@ -966,7 +978,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "泰勒·宾顿",
@@ -1195,7 +1213,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "迈克尔·博克索尔",
@@ -1424,7 +1448,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "乔·贝尔",
@@ -1653,7 +1683,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "洛根·罗杰森",
@@ -1882,7 +1918,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "马尔科·斯塔梅尼奇",
@@ -2111,7 +2153,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "克里斯·伍德",
@@ -2340,7 +2388,13 @@
                                                         "postmatch_form_status_1_5":  5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "萨普里特·辛格",
@@ -2569,7 +2623,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "伊莱贾·贾斯特",
@@ -2798,7 +2858,13 @@
                                                         "postmatch_form_status_1_5":  5,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "亚历克斯·保尔森",
@@ -3027,7 +3093,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "利贝拉托·卡卡切",
@@ -3256,7 +3328,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "亚历克斯·鲁弗",
@@ -3485,7 +3563,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "南多·皮纳克尔",
@@ -3714,7 +3798,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "芬恩·瑟曼",
@@ -3943,7 +4033,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "科斯塔·巴巴鲁塞斯",
@@ -4172,7 +4268,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "本·韦恩",
@@ -4401,7 +4503,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "本·奥尔德",
@@ -4630,7 +4738,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "卡勒姆·麦考瓦特",
@@ -4859,7 +4973,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "杰西·兰德尔",
@@ -5088,7 +5208,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "迈克尔·伍德",
@@ -5317,7 +5443,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "瑞安·托马斯",
@@ -5546,7 +5678,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "卡兰·埃利奥特",
@@ -5775,7 +5913,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "拉克兰·贝利斯",
@@ -6004,7 +6148,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     },
                     {
                         "chinese_name":  "汤米·史密斯",
@@ -6233,7 +6383,13 @@
                                                         "postmatch_form_status_1_5":  2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_new-zealand_1-3_egypt",
+                                              "result":  "1-3",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/new-zealand-player-state.json"
+                                          }
                     }
                 ],
     "gap_remediation_batch_d":  {
@@ -6449,5 +6605,21 @@
                                          "rule":  "internal_match_rating_1_5 is project internal model score, based on verified minutes, role, events, cards, availability and form_status_1_5; it must not be presented as an external rating."
                                      },
     "internal_match_rating_policy_updated_at":  "2026-06-21T03:55:00+08:00",
-    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating."
+    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating.",
+    "round2_dynamic_updates":  {
+                                   "2026-06-21_new_zealand_1-3_egypt":  {
+                                                                            "status":  "partial",
+                                                                            "records":  26,
+                                                                            "source_status":  "partial_source_limited",
+                                                                            "note":  "Per-player internal rating records are stored in player_state and mirrored in member table; roster dynamic sync marks match participation as partial because official minutes table was not captured."
+                                                                        }
+                               },
+    "captured_at":  "2026-06-23T01:35:00+08:00",
+    "round2_update_summary":  {
+                                  "match_id":  "2026-06-21_new-zealand_1-3_egypt",
+                                  "result":  "1-3",
+                                  "status":  "partial_source_limited",
+                                  "captured_at":  "2026-06-23T01:35:00+08:00",
+                                  "note":  "Roster-level dynamic round2 summary added; detailed player ratings are authoritative in player_state file."
+                              }
 }

@@ -6,10 +6,10 @@
     "group":  "H",
     "status":  "complete_current_stage",
     "created_at":  "2026-06-20T00:00:00+08:00",
-    "updated_at":  "2026-06-21T03:40:00+08:00",
+    "updated_at":  "2026-06-23T01:35:00+08:00",
     "owner":  "data-collector-agent-uruguay",
     "scope":  "H组乌拉圭 roster and staff table；只做事实采集与标准化，不做预测或投注建议。",
-    "player_state_update_status":  "updated",
+    "player_state_update_status":  "partial",
     "missing_fields":  [
                            "complete_player_height_weight_preferred_foot_feed",
                            "official_round1_full_player_rating_feed",
@@ -6643,5 +6643,21 @@
     "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating.",
     "internal_rating_policy_updated_at":  "2026-06-21T03:20:00+08:00",
     "internal_rating_policy_note":  "form_status_1_5与internal_match_rating_1_5均为项目内部1.0-5.0评分，允许一位小数；external_rating仅用于同场同源可核验外部评分。",
-    "internal_match_records_policy_note":  "若缺少逐场上游字段，使用match_context_unavailable记录保留缺口，不伪造比赛事实。"
+    "internal_match_records_policy_note":  "若缺少逐场上游字段，使用match_context_unavailable记录保留缺口，不伪造比赛事实。",
+    "round2_dynamic_updates":  {
+                                   "2026-06-21_uruguay_2-2_cape_verde":  {
+                                                                             "status":  "partial",
+                                                                             "records":  26,
+                                                                             "source_status":  "partial_source_limited",
+                                                                             "note":  "Per-player internal rating records are stored in player_state and mirrored in member table; roster dynamic sync marks match participation as partial because official minutes table was not captured."
+                                                                         }
+                               },
+    "captured_at":  "2026-06-23T01:35:00+08:00",
+    "round2_update_summary":  {
+                                  "match_id":  "2026-06-21_uruguay_2-2_cape-verde",
+                                  "result":  "2-2",
+                                  "status":  "partial_source_limited",
+                                  "captured_at":  "2026-06-23T01:35:00+08:00",
+                                  "note":  "Roster-level dynamic round2 summary added; detailed player ratings are authoritative in player_state file."
+                              }
 }

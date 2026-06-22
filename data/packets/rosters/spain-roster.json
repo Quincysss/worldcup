@@ -12,8 +12,7 @@
              },
     "status":  "complete",
     "created_at":  "2026-06-20T22:35:00+08:00",
-    "updated_at":  "2026-06-21T03:40:00+08:00",
-    "captured_at":  "2026-06-20T22:35:00+08:00",
+    "updated_at":  "2026-06-23T01:35:00+08:00",
     "owner":  "worldcup-data-collector",
     "scope":  "H组西班牙国家队成员表数据采集；不处理沙特、乌拉圭、佛得角；不做预测或竞彩建议。",
     "coaches_and_staff":  [
@@ -320,7 +319,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-02",
@@ -512,7 +517,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-03",
@@ -704,7 +715,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-04",
@@ -896,7 +913,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-05",
@@ -1124,7 +1147,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-06",
@@ -1352,7 +1381,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-07",
@@ -1580,7 +1615,13 @@
                                                         "postmatch_form_status_1_5":  2.7,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-08",
@@ -1808,7 +1849,13 @@
                                                         "postmatch_form_status_1_5":  2.7,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-09",
@@ -2036,7 +2083,13 @@
                                                         "postmatch_form_status_1_5":  2.7,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-10",
@@ -2264,7 +2317,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-11",
@@ -2456,7 +2515,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-12",
@@ -2648,7 +2713,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-13",
@@ -2840,7 +2911,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-14",
@@ -3068,7 +3145,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-15",
@@ -3260,7 +3343,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-16",
@@ -3488,7 +3577,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-17",
@@ -3716,7 +3811,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-18",
@@ -3908,7 +4009,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-19",
@@ -4136,7 +4243,13 @@
                                                         "postmatch_form_status_1_5":  3.2,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-20",
@@ -4364,7 +4477,13 @@
                                                         "postmatch_form_status_1_5":  3.4,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-21",
@@ -4592,7 +4711,13 @@
                                                         "postmatch_form_status_1_5":  2.8,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-22",
@@ -4820,7 +4945,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-23",
@@ -5048,7 +5179,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-24",
@@ -5276,7 +5413,13 @@
                                                         "postmatch_form_status_1_5":  3,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-25",
@@ -5470,7 +5613,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     },
                     {
                         "player_id":  "spain-26",
@@ -5662,7 +5811,13 @@
                                                         "postmatch_form_status_1_5":  2.6,
                                                         "captured_at":  "2026-06-21T03:55:00+08:00"
                                                     }
-                                                ]
+                                                ],
+                        "round2_status":  {
+                                              "match":  "2026-06-21_spain_4-0_saudi-arabia",
+                                              "result":  "4-0",
+                                              "captured_at":  "2026-06-23T01:35:00+08:00",
+                                              "detail_source":  "data/outputs/player_state/spain-player-state.json"
+                                          }
                     }
                 ],
     "gap_remediation_batch_d":  {
@@ -5840,5 +5995,22 @@
                                          "rule":  "internal_match_rating_1_5 is project internal model score, based on verified minutes, role, events, cards, availability and form_status_1_5; it must not be presented as an external rating."
                                      },
     "internal_match_rating_policy_updated_at":  "2026-06-21T03:55:00+08:00",
-    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating."
+    "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating.",
+    "player_state_update_status":  "partial",
+    "round2_dynamic_updates":  {
+                                   "2026-06-21_spain_4-0_saudi_arabia":  {
+                                                                             "status":  "partial",
+                                                                             "records":  26,
+                                                                             "source_status":  "partial_source_limited",
+                                                                             "note":  "Per-player internal rating records are stored in player_state and mirrored in member table; roster dynamic sync marks match participation as partial because official minutes table was not captured."
+                                                                         }
+                               },
+    "captured_at":  "2026-06-23T01:35:00+08:00",
+    "round2_update_summary":  {
+                                  "match_id":  "2026-06-21_spain_4-0_saudi-arabia",
+                                  "result":  "4-0",
+                                  "status":  "partial_source_limited",
+                                  "captured_at":  "2026-06-23T01:35:00+08:00",
+                                  "note":  "Roster-level dynamic round2 summary added; detailed player ratings are authoritative in player_state file."
+                              }
 }

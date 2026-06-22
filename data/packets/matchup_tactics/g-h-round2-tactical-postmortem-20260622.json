@@ -1,0 +1,264 @@
+{
+  "phase": "round2_tactical_postmortem",
+  "groups": ["G", "H"],
+  "round": 2,
+  "status": "partial_source_limited",
+  "created_at": "2026-06-23T00:55:00+08:00",
+  "updated_at": "2026-06-23T01:45:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "G/H group round 2 tactical postmortem only; no score prediction, WDL probability or betting advice.",
+  "input_status": {
+    "local_round2_data_thread_postmortems": "available_partial_source_limited",
+    "local_round2_model_backtest": "framework_only",
+    "source_mode": "local postmortem JSON and group reviews prioritized, supplemented by pre-match revisions, first-round reviews and public match reports",
+    "player_state_update_status": "partial_source_limited_by_data_thread",
+    "player_state_update_note": "Main thread/data closure reports all eight player_state, roster and member-table files received second-round internal rating records, with complete official minutes and same-source external ratings still limited."
+  },
+  "source_inputs": [
+    "data/outputs/match_predictions/g-group-round2-postmortem-20260622.json",
+    "data/outputs/match_predictions/h-group-round2-postmortem-20260622.json",
+    "比赛/已完成比赛/小组赛/G组/G组第二轮复盘.md",
+    "比赛/已完成比赛/小组赛/H组/H组第二轮复盘.md",
+    "比赛/已完成比赛/小组赛/G组/2026-06-21_比利时_0-0_伊朗_复盘.md",
+    "比赛/已完成比赛/小组赛/G组/2026-06-21_新西兰_1-3_埃及_复盘.md",
+    "比赛/已完成比赛/小组赛/H组/2026-06-21_西班牙_4-0_沙特_复盘.md",
+    "比赛/已完成比赛/小组赛/H组/2026-06-21_乌拉圭_2-2_佛得角_复盘.md",
+    "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+    "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+    "比赛/已完成比赛/小组赛/G组/G组第一轮复盘.md",
+    "比赛/已完成比赛/小组赛/H组/H组第一轮复盘.md",
+    "比赛/已完成比赛/小组赛/G组/2026-06-15_比利时_1-1_埃及_复盘.md",
+    "比赛/已完成比赛/小组赛/G组/2026-06-15_伊朗_2-2_新西兰_复盘.md",
+    "比赛/已完成比赛/小组赛/H组/2026-06-15_西班牙_0-0_佛得角_复盘.md",
+    "比赛/已完成比赛/小组赛/H组/2026-06-15_沙特_1-1_乌拉圭_复盘.md",
+    "data/packets/tactics/{belgium,iran,new-zealand,egypt,spain,saudi-arabia,uruguay,cape-verde}-tactics-packet.json",
+    "public match reports listed in source_log"
+  ],
+  "factor_scale": {
+    "magnitude": "postmatch model adjustment on -1.0 to +1.0 scale; positive usually increases the named factor, risk factors use increase_risk/decrease_risk",
+    "confidence": "high when result and repeated tactical evidence align; medium when based on one match with incomplete lineup/minute detail; low when role-specific detail is missing"
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-21_belgium_0-0_iran",
+      "group": "G",
+      "match": "Belgium 0-0 Iran",
+      "match_cn": "比利时 0-0 伊朗",
+      "result_context": "Belgium again had territorial and shot-volume pressure but did not convert. Iran survived through a compact block, Beiranvand saves and late Belgian red-card context; Taremi also had an offside goal threat and Belgium needed Courtois saves.",
+      "formation_and_structure": {
+        "belgium": "Nominal 4-2-3-1/4-3-3 reference remains usable, but possession dominance lacked box occupation and clean final action.",
+        "iran": "4-2-3-1/4-4-2 low-to-mid block reference remains usable; Taremi outlet and keeper performance were central to game survival."
+      },
+      "teams": {
+        "belgium": {
+          "team_cn": "比利时",
+          "tactical_summary": "Belgium can still pin opponents back through De Bruyne/Doku corridors, but two group matches show process volume without reliable penalty-box conversion. The red card to Nathan Ngoy and repeated transition concessions keep defensive-line and coach risk elevated.",
+          "factors": {
+            "pressing_adjustment": {"direction": "mixed", "magnitude": 0.05, "evidence": "Belgium applied territorial pressure but the 10-man phase reduced stable high pressing control.", "confidence": "medium", "model_note": "Do not convert possession pressure into a large pressing upgrade; cap until full pass/press data arrive."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.30, "evidence": "Belgium still reached advanced zones and produced shot volume across two matches.", "confidence": "medium", "model_note": "Use as progression stability, not as finishing quality."},
+            "transition_attack_adjustment": {"direction": "negative", "magnitude": -0.20, "evidence": "Wide and final-third entries did not create enough clean conversions against Iran's set block.", "confidence": "medium", "model_note": "Downgrade direct transition payoff despite Doku/De Bruyne reputation."},
+            "transition_defense_risk": {"direction": "increase_risk", "magnitude": 0.35, "evidence": "Iran generated Taremi/offside danger and Belgium needed Courtois saves; Ngoy red-card foul came in a recovery context.", "confidence": "medium_high", "model_note": "Keep separate from generic defense score; this is rest-defense fragility."},
+            "wide_channel_advantage": {"direction": "mixed", "magnitude": 0.10, "evidence": "Doku and Belgian width still advanced play, but Iran protected central box and forced low-efficiency end product.", "confidence": "medium", "model_note": "Cap wide advantage unless paired with confirmed box target role."},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.25, "evidence": "Belgium's midfield possession edge remained visible, led by De Bruyne/Tielemans profile.", "confidence": "medium", "model_note": "Central control should not double count shot volume."},
+            "set_piece_advantage": {"direction": "neutral", "magnitude": 0.00, "evidence": "No decisive Belgian set-piece output in the scoreless match.", "confidence": "medium", "model_note": "Hold pre-match set-piece rating; no postmatch upgrade."},
+            "defensive_line_risk": {"direction": "increase_risk", "magnitude": 0.30, "evidence": "Belgium's recovery defense and red-card event left Iran transition routes alive.", "confidence": "medium", "model_note": "Use as a late-game/game-state risk flag."},
+            "coach_substitution_risk": {"direction": "increase_risk", "magnitude": 0.25, "evidence": "Belgium failed to break Iran's block and did not solve attacking balance before the red-card phase.", "confidence": "medium", "model_note": "Challenge Rudi Garcia's attacking adjustment value in model review."},
+            "game_state_tendency": {"direction": "process_without_conversion", "magnitude": 0.45, "evidence": "Two games now show Belgian pressure without self-scored goal conversion noted by public reports.", "confidence": "high", "model_note": "Increase draw/low-conversion scenario in future model features without outputting probabilities here."}
+          }
+        },
+        "iran": {
+          "team_cn": "伊朗",
+          "tactical_summary": "Iran's low/mid block and goalkeeper performance turned Belgium's process edge into a survivable draw. The attacking threat was intermittent but real through Taremi and direct outlets.",
+          "factors": {
+            "pressing_adjustment": {"direction": "neutral", "magnitude": 0.00, "evidence": "Iran did not need sustained high press; value came from compact resistance.", "confidence": "medium", "model_note": "Model as block strength rather than pressing uplift."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.20, "evidence": "Iran escaped enough pressure to create Taremi threat and force Courtois involvement.", "confidence": "medium", "model_note": "Small upgrade only; complete pass data missing."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.30, "evidence": "Taremi's offside goal threat and Belgian recovery fouls showed outlet danger.", "confidence": "medium_high", "model_note": "Useful against high-possession teams; do not duplicate Taremi player-state boosts."},
+            "transition_defense_risk": {"direction": "decrease_risk", "magnitude": -0.30, "evidence": "Iran absorbed Belgium's wide attacks and survived large territorial pressure.", "confidence": "medium_high", "model_note": "Credit compactness, but note Beiranvand saves may not repeat at same rate."},
+            "wide_channel_advantage": {"direction": "negative", "magnitude": -0.15, "evidence": "Iran mostly defended wide zones rather than creating wide superiority.", "confidence": "medium", "model_note": "Do not penalize too heavily because wide defending was functional."},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.25, "evidence": "Belgium held more central possession; Iran's central value was disruption not control.", "confidence": "medium", "model_note": "Separate central control from defensive compactness."},
+            "set_piece_advantage": {"direction": "neutral", "magnitude": 0.05, "evidence": "Iran's set-piece/body profile remains relevant, but no decisive event confirmed.", "confidence": "low", "model_note": "Leave near baseline until event map arrives."},
+            "defensive_line_risk": {"direction": "decrease_risk", "magnitude": -0.25, "evidence": "A disciplined block and goalkeeper saves kept Belgium scoreless.", "confidence": "medium", "model_note": "Cap because goalkeeper overperformance can mask line vulnerability."},
+            "coach_substitution_risk": {"direction": "decrease_risk", "magnitude": -0.15, "evidence": "Ghalenoei's side preserved structure under heavy pressure and against late game-state changes.", "confidence": "medium", "model_note": "Small coaching credit; detailed substitution timeline missing."},
+            "game_state_tendency": {"direction": "survival_block_with_counter_tail", "magnitude": 0.35, "evidence": "Iran accepted long defensive phases and used isolated transition moments.", "confidence": "high", "model_note": "Encode as low-tempo/draw-protection tactical state, not as a result prediction."}
+          }
+        }
+      }
+    },
+    {
+      "match_id": "2026-06-22_new_zealand_1-3_egypt",
+      "group": "G",
+      "match": "New Zealand 1-3 Egypt",
+      "match_cn": "新西兰 1-3 埃及",
+      "result_context": "New Zealand led through a Finn Surman header, but Egypt's second-half pressure changed the match: Mostafa Ziko headed the equalizer, Salah finished the turnaround and Trezeguet added a corner header.",
+      "formation_and_structure": {
+        "new_zealand": "Direct 4-4-2/5-4-1 reference stayed visible through aerial target and set-piece routes, but second-half block and lead management failed.",
+        "egypt": "Egypt moved from low-block counter profile into a more assertive second-half pressure and box-arrival structure, with Salah/Ashour/Ziko/Trezeguet providing layered threats."
+      },
+      "teams": {
+        "new_zealand": {
+          "team_cn": "新西兰",
+          "tactical_summary": "New Zealand's aerial/direct route remained productive enough to lead, but the side again struggled to protect a lead and control second-half pressure.",
+          "factors": {
+            "pressing_adjustment": {"direction": "negative", "magnitude": -0.25, "evidence": "New Zealand could not disrupt Egypt's second-half rhythm after taking the lead.", "confidence": "medium", "model_note": "Do not rate them as a sustained pressing team."},
+            "build_up_resistance_adjustment": {"direction": "negative", "magnitude": -0.35, "evidence": "After Egypt increased pressure, New Zealand struggled to keep possession and relieve the block.", "confidence": "medium_high", "model_note": "Downgrade against teams able to press after halftime."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.20, "evidence": "Direct/aerial route produced the first-half lead through Surman's header.", "confidence": "medium", "model_note": "Keep Wood/direct-play tail but cap after second-half fade."},
+            "transition_defense_risk": {"direction": "increase_risk", "magnitude": 0.45, "evidence": "Egypt repeatedly entered the box after halftime and scored three times through pressure and wide/set-piece routes.", "confidence": "high", "model_note": "Major postmatch downgrade for lead-protection defense."},
+            "wide_channel_advantage": {"direction": "negative", "magnitude": -0.30, "evidence": "Egypt's wide/corner and second-wave routes became more decisive than New Zealand's wide play.", "confidence": "medium", "model_note": "Separate from aerial set-piece threat."},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.45, "evidence": "Emam Ashour and Egypt controlled the second-half tempo and central links.", "confidence": "medium_high", "model_note": "Central control should be reduced when facing technically stronger midfields."},
+            "set_piece_advantage": {"direction": "mixed", "magnitude": 0.10, "evidence": "New Zealand scored via a header route but also conceded Trezeguet's corner header.", "confidence": "high", "model_note": "Do not blanket-upgrade set pieces; attack and defense split in model."},
+            "defensive_line_risk": {"direction": "increase_risk", "magnitude": 0.40, "evidence": "Second-half defensive spacing collapsed under Egypt pressure.", "confidence": "medium_high", "model_note": "Use as fatigue/lead-state risk."},
+            "coach_substitution_risk": {"direction": "increase_risk", "magnitude": 0.30, "evidence": "Game-state management after leading was not solved; public report notes another squandered lead pattern.", "confidence": "medium", "model_note": "Needs substitution timeline from data thread for confirmation."},
+            "game_state_tendency": {"direction": "early_direct_threat_late_fade", "magnitude": 0.50, "evidence": "New Zealand led early but could not handle Egypt's second-half intensity.", "confidence": "high", "model_note": "Encode strong first-contact threat plus negative late-state resilience."}
+          }
+        },
+        "egypt": {
+          "team_cn": "埃及",
+          "tactical_summary": "Egypt moved beyond a pure Salah-counter script. The second-half wave involved central orchestration, box arrivals, wide delivery and set-piece threat.",
+          "factors": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.35, "evidence": "Egypt's sustained second-half pressure flipped the match after trailing.", "confidence": "high", "model_note": "Upgrade situational pressing, not necessarily full-match high press."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.30, "evidence": "Ashour helped Egypt keep pressure and connect attacks after halftime.", "confidence": "medium_high", "model_note": "Small structural upgrade; avoid double counting Ashour form."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.45, "evidence": "Salah and Marmoush-style speed profile remained dangerous; Salah scored during the turnaround.", "confidence": "high", "model_note": "Maintain but cap if already reflected in Salah player-state."},
+            "transition_defense_risk": {"direction": "neutral", "magnitude": 0.05, "evidence": "Egypt conceded to an aerial/direct route but controlled much of the second half.", "confidence": "medium", "model_note": "Keep direct-ball vulnerability, but do not over-penalize after strong response."},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.35, "evidence": "Egypt's second-half pressure and corner delivery produced decisive box contacts.", "confidence": "medium_high", "model_note": "Use as chance-creation route, not just winger ability."},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.40, "evidence": "Ashour orchestrated play effectively in public reports and Egypt controlled the second-half rhythm.", "confidence": "medium_high", "model_note": "Cap against elite midfields; strong here versus New Zealand."},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.30, "evidence": "Trezeguet sealed the match with a free header from a corner.", "confidence": "high", "model_note": "Avoid double counting with goal events; use as defensive-opponent vulnerability signal."},
+            "defensive_line_risk": {"direction": "mixed", "magnitude": 0.10, "evidence": "The early header conceded shows aerial vulnerability, but Egypt's structure improved after halftime.", "confidence": "medium", "model_note": "Keep near neutral with set-piece defense watch."},
+            "coach_substitution_risk": {"direction": "decrease_risk", "magnitude": -0.25, "evidence": "Hossam Hassan's halftime/second-half adjustment produced pressure, equalizer, lead and set-piece control.", "confidence": "medium", "model_note": "Detailed substitutions missing; treat as coaching game-state credit."},
+            "game_state_tendency": {"direction": "second_half_acceleration", "magnitude": 0.55, "evidence": "Egypt dominated after halftime and overturned a deficit.", "confidence": "high", "model_note": "Raise late pressure and comeback-state resilience."}
+          }
+        }
+      }
+    },
+    {
+      "match_id": "2026-06-21_spain_4-0_saudi_arabia",
+      "group": "H",
+      "match": "Spain 4-0 Saudi Arabia",
+      "match_cn": "西班牙 4-0 沙特",
+      "result_context": "Spain corrected the Cape Verde stalemate with a fast-starting, aggressive 4-0: Yamal scored early, Oyarzabal added two before the first drinks break, and a second-half own goal followed a corner sequence.",
+      "formation_and_structure": {
+        "spain": "Guardian live listed Spain in a 4-2-3-1. Yamal's start, Oyarzabal's penalty-box occupation, Rodri control and early rotation made the attack more vertical than round one.",
+        "saudi_arabia": "Guardian live listed Saudi Arabia in a 5-3-2. The block was overwhelmed before it could settle, and second-half changes arrived after the match state had already tilted."
+      },
+      "teams": {
+        "spain": {
+          "team_cn": "西班牙",
+          "tactical_summary": "Spain restored identity through tempo, width and early box occupation. The key tactical correction from round one was turning possession into early penalty-box actions, then rotating after control was secured.",
+          "factors": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.45, "evidence": "Spain played with purposeful aggression and kept Saudi Arabia pinned early.", "confidence": "high", "model_note": "Raise high-press/control factor when Yamal/Olmo/Baena roles are active."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.55, "evidence": "Rodri completed heavy midfield volume and Spain controlled more than 70% possession in reports.", "confidence": "high", "model_note": "Strong structural input; avoid double counting possession share."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.35, "evidence": "Spain attacked faster than against Cape Verde, with Yamal and early box runners accelerating attacks.", "confidence": "medium_high", "model_note": "This is tempo upgrade, not pure counterattack."},
+            "transition_defense_risk": {"direction": "decrease_risk", "magnitude": -0.25, "evidence": "Saudi Arabia produced little stable threat while Spain controlled territory.", "confidence": "medium", "model_note": "Keep small because stronger transition teams can still target fullback space."},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.60, "evidence": "Yamal's first start and goal changed Spain's right-side threat; Cucurella/Olmo back-post sequence also mattered.", "confidence": "high", "model_note": "High double-counting risk with Yamal player-state; cap individual plus tactical combined uplift."},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.65, "evidence": "Rodri, Baena and Olmo helped Spain play through Saudi Arabia's 5-3-2 before the block settled.", "confidence": "high", "model_note": "Use as central dominance, not as independent finishing boost."},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.25, "evidence": "The fourth came from a corner/back-post sequence ending in an own goal.", "confidence": "medium_high", "model_note": "Only small set-piece upgrade; open-play superiority was main driver."},
+            "defensive_line_risk": {"direction": "decrease_risk", "magnitude": -0.20, "evidence": "Spain's counterpress and control reduced Saudi transition access.", "confidence": "medium", "model_note": "Do not erase fullback-space risk against Uruguay-level runners."},
+            "coach_substitution_risk": {"direction": "decrease_risk", "magnitude": -0.35, "evidence": "De la Fuente could remove Yamal and Oyarzabal at halftime and manage load from a position of control.", "confidence": "high", "model_note": "Credit selection correction and game-state rotation."},
+            "game_state_tendency": {"direction": "fast_start_then_load_manage", "magnitude": 0.65, "evidence": "Three goals before the first drinks break, then controlled second-half rotation.", "confidence": "high", "model_note": "Encode a stronger early-start state after round-one frustration."}
+          }
+        },
+        "saudi_arabia": {
+          "team_cn": "沙特",
+          "tactical_summary": "Saudi Arabia's 5-3-2 did not protect the first 25 minutes. Once Spain scored early, the block lost compactness and the game became damage limitation.",
+          "factors": {
+            "pressing_adjustment": {"direction": "negative", "magnitude": -0.35, "evidence": "Saudi Arabia could not press Spain's build-up and spent the early match defending deep.", "confidence": "high", "model_note": "Downgrade pressing only against elite build-up teams."},
+            "build_up_resistance_adjustment": {"direction": "negative", "magnitude": -0.55, "evidence": "Saudi Arabia failed to sustain exits from Spain's early territorial control.", "confidence": "high", "model_note": "Major downgrade versus high press; do not extrapolate fully to weaker opponents."},
+            "transition_attack_adjustment": {"direction": "negative", "magnitude": -0.35, "evidence": "Saudi Arabia could not turn Al-Dawsari/Al-Buraikan outlets into meaningful transition threat.", "confidence": "medium_high", "model_note": "Keep some baseline transition speed, but lower against Spain-style counterpress."},
+            "transition_defense_risk": {"direction": "increase_risk", "magnitude": 0.55, "evidence": "The 5-3-2 was pulled apart by early width, box entries and second balls.", "confidence": "high", "model_note": "High risk when conceding first and forced to open structure."},
+            "wide_channel_advantage": {"direction": "negative", "magnitude": -0.50, "evidence": "Yamal and Spain's wide/back-post routes overwhelmed Saudi wide defense.", "confidence": "high", "model_note": "Treat as wide-defense penalty more than attacking-wide penalty."},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.60, "evidence": "Rodri-led Spain controlled midfield and prevented Saudi Arabia from establishing rhythm.", "confidence": "high", "model_note": "Cap if facing non-elite midfields."},
+            "set_piece_advantage": {"direction": "negative", "magnitude": -0.25, "evidence": "A corner sequence contributed to the fourth goal via deflection/own goal.", "confidence": "medium_high", "model_note": "Mark defensive set-piece vulnerability, not attacking set-piece weakness."},
+            "defensive_line_risk": {"direction": "increase_risk", "magnitude": 0.60, "evidence": "Early goals and loose box defending showed poor line/box coordination.", "confidence": "high", "model_note": "Large downgrade, but opponent quality caveat applies."},
+            "coach_substitution_risk": {"direction": "increase_risk", "magnitude": 0.30, "evidence": "Donis's halftime changes came after the game state was already heavily damaged.", "confidence": "medium", "model_note": "Use as response-timing risk; complete substitution list needed."},
+            "game_state_tendency": {"direction": "early_concede_damage_limitation", "magnitude": 0.55, "evidence": "Saudi Arabia trailed heavily before the first drinks break and spent the rest in containment.", "confidence": "high", "model_note": "Increase vulnerability to early favorite pressure."}
+          }
+        }
+      }
+    },
+    {
+      "match_id": "2026-06-21_uruguay_2-2_cape_verde",
+      "group": "H",
+      "match": "Uruguay 2-2 Cape Verde",
+      "match_cn": "乌拉圭 2-2 佛得角",
+      "result_context": "Cape Verde led through Kevin Pina's free-kick. Uruguay replied before halftime through Maxi Araujo and Agustin Canobbio, but Cape Verde equalized through Helio Varela after a defensive error and survived late pressure.",
+      "formation_and_structure": {
+        "uruguay": "Bielsa's high-pressure, wide and vertical structure generated volume and comeback pressure, but defensive errors and game-state disorder undermined control.",
+        "cape_verde": "Cape Verde kept the same low-block/counter and set-piece identity that frustrated Spain, adding more attacking bravery and composure."
+      },
+      "teams": {
+        "uruguay": {
+          "team_cn": "乌拉圭",
+          "tactical_summary": "Uruguay's pressure and shot volume were real, but Bielsa-ball is currently too open at both ends. Defensive errors and poor control after taking the lead are now repeated tournament risks.",
+          "factors": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.35, "evidence": "Uruguay pushed for a winner and generated sustained late pressure.", "confidence": "medium_high", "model_note": "Keep pressing power, but link to fatigue and defensive exposure."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.25, "evidence": "Uruguay recovered from an early deficit and created enough volume to lead before halftime.", "confidence": "medium", "model_note": "Use moderate upgrade; disorganization limits full control score."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.35, "evidence": "Araujo and Canobbio goals before halftime came from Uruguay's vertical/wide pressure profile.", "confidence": "medium_high", "model_note": "Avoid double counting with individual goal events."},
+            "transition_defense_risk": {"direction": "increase_risk", "magnitude": 0.55, "evidence": "Cape Verde equalized after a defensive error and repeatedly found upset-path moments despite lower volume.", "confidence": "high", "model_note": "Major Bielsa high-line/rest-defense risk."},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.30, "evidence": "Valverde/Ugarte crossing and wide service were involved in Uruguay's first-half response according to public reports.", "confidence": "medium", "model_note": "Use as chance route, but not a finishing guarantee."},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.20, "evidence": "Uruguay had pressure and territory, but Bielsa admitted disorganization and Cape Verde disrupted rhythm.", "confidence": "medium", "model_note": "Central control should be smaller than pre-match model expected."},
+            "set_piece_advantage": {"direction": "negative", "magnitude": -0.20, "evidence": "Uruguay conceded Kevin Pina's free-kick and did not turn late pressure into a winner.", "confidence": "medium_high", "model_note": "Downgrade defensive set-piece handling; attack set-pieces not fully assessed."},
+            "defensive_line_risk": {"direction": "increase_risk", "magnitude": 0.60, "evidence": "Two goals conceded, including an avoidable second-half error, after also drawing Saudi Arabia in round one.", "confidence": "high", "model_note": "This is a core postmatch parameter correction."},
+            "coach_substitution_risk": {"direction": "increase_risk", "magnitude": 0.35, "evidence": "Uruguay pressure did not translate into controlled late-game solutions; public reports frame Bielsa under pressure.", "confidence": "medium", "model_note": "Use as game-state management risk until substitution data arrives."},
+            "game_state_tendency": {"direction": "high_intensity_disordered_tail", "magnitude": 0.55, "evidence": "Uruguay can flip games with pressure but also leaves chaotic late and defensive-error tails.", "confidence": "high", "model_note": "Increase volatility, not just attack rating."}
+          }
+        },
+        "cape_verde": {
+          "team_cn": "佛得角",
+          "tactical_summary": "Cape Verde repeated their Spain performance with more attacking edge: set-piece quality, composure after conceding twice, and late-block defending now look like stable traits rather than noise.",
+          "factors": {
+            "pressing_adjustment": {"direction": "mixed", "magnitude": 0.05, "evidence": "Cape Verde mainly relied on block discipline, with selective pressure and counter moments.", "confidence": "medium", "model_note": "Do not model as high press."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.25, "evidence": "Cape Verde stayed composed enough to equalize after going behind.", "confidence": "medium", "model_note": "Small upgrade; still not a possession-control side."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.40, "evidence": "Varela's equalizer and repeated danger moments came from exploiting Uruguay's defensive disorder.", "confidence": "medium_high", "model_note": "Useful specifically against high-line opponents."},
+            "transition_defense_risk": {"direction": "mixed", "magnitude": 0.15, "evidence": "Cape Verde conceded twice before halftime but survived sustained late pressure.", "confidence": "medium", "model_note": "Split first-half vulnerability from late-block resilience."},
+            "wide_channel_advantage": {"direction": "mixed", "magnitude": 0.10, "evidence": "Cape Verde's attacking threat was more set-piece/error/counter based than sustained wide dominance.", "confidence": "medium", "model_note": "Keep near neutral unless winger roles confirmed."},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.25, "evidence": "Uruguay had more pressure and central territory, but Cape Verde disrupted enough to avoid collapse.", "confidence": "medium", "model_note": "Do not over-penalize due to effective defensive block."},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.45, "evidence": "Kevin Pina scored a powerful free-kick; set pieces are now a confirmed upset route.", "confidence": "high", "model_note": "Avoid double counting Pina's goal in player_state; keep as team set-piece route."},
+            "defensive_line_risk": {"direction": "decrease_risk", "magnitude": -0.20, "evidence": "Despite conceding two, Cape Verde blocked late Uruguay pressure and repeated strong low-block survival from Spain match.", "confidence": "medium_high", "model_note": "Risk reduction applies to late low-block state, not open first half."},
+            "coach_substitution_risk": {"direction": "decrease_risk", "magnitude": -0.25, "evidence": "Cape Verde maintained belief and shape after conceding twice and through late pressure.", "confidence": "medium", "model_note": "Credit game-state management; detailed substitution sequence missing."},
+            "game_state_tendency": {"direction": "resilient_low_block_set_piece_tail", "magnitude": 0.60, "evidence": "Draws against Spain and Uruguay show low-block resilience plus set-piece/counter scoring path.", "confidence": "high", "model_note": "Model as repeatable upset/draw-state trait, not one-off noise."}
+          }
+        }
+      }
+    }
+  ],
+  "cross_match_tactical_lessons": [
+    "G/H favorites with possession volume need separate conversion and rest-defense parameters; Belgium and Uruguay created pressure without control.",
+    "Low-block underdogs with verified set-piece or goalkeeper routes should not be treated as passive only: Iran and Cape Verde created real result-protection mechanisms.",
+    "Spain's 4-0 is a tactical correction from round one: early width, box occupation and halftime load management repaired the low-block problem against a weaker defensive structure.",
+    "Egypt's 3-1 shows second-half pressure and central orchestration can be added to the prior Salah-only transition profile.",
+    "New Zealand's direct/aerial threat remains real, but lead management and second-half resistance require downgrade."
+  ],
+  "double_counting_warnings": [
+    "Spain wide_channel_advantage overlaps with Lamine Yamal player-state and goal event; cap the combined uplift.",
+    "Egypt transition_attack_adjustment overlaps with Salah and Trezeguet/Ziko goal events; use as route confirmation, not extra finishing form.",
+    "Cape Verde set_piece_advantage overlaps with Kevin Pina's free-kick goal; keep as team route and do not double-add to player form.",
+    "Belgium process_without_conversion should not be counted both as attack downgrade and draw-tail increase without a cap.",
+    "Uruguay defensive_line_risk and transition_defense_risk describe overlapping Bielsa rest-defense exposure; aggregate cautiously."
+  ],
+  "data_gaps": [
+    "Local round2 postmatch JSON and Markdown are now available but remain partial_source_limited.",
+    "Official starting XIs, formations, substitution minutes, cards and complete event feeds still need full data-collector extraction.",
+    "Eight roster/player_state/member-table files have second-round internal rating records, but full official per-player minutes and same-source external ratings remain incomplete.",
+    "Same-source xG, shot map, possession, pass network and set-piece event maps are missing or only partially available.",
+    "Some public sources disagree on exact Uruguay/Cape Verde second-goal error mechanics; treat as generic defensive-error evidence until official event log is imported.",
+    "Coach substitution claims are medium confidence because detailed substitution timelines were not locally available."
+  ],
+  "source_log": [
+    {"source": "Guardian match report: Belgium 0-0 Iran", "url": "https://www.theguardian.com/football/2026/jun/21/belgium-iran-world-cup-group-g-match-report", "supports": ["Belgium blunt attack", "Beiranvand saves", "Ngoy red card", "Taremi offside threat", "Courtois saves"], "confidence": "high"},
+    {"source": "Guardian live/report: New Zealand 1-3 Egypt", "url": "https://www.theguardian.com/football/live/2026/jun/22/fifa-world-cup-2026-live-new-zealand-v-egypt-updates-nzl-vs-egy-group-g-match-score-latest", "supports": ["Surman header", "Ziko equalizer", "Salah goal", "Trezeguet corner header", "Egypt second-half pressure"], "confidence": "high"},
+    {"source": "Guardian match report: Spain 4-0 Saudi Arabia", "url": "https://www.theguardian.com/football/2026/jun/21/spain-saudi-arabia-world-cup-group-h-match-report", "supports": ["Yamal first-start goal", "Oyarzabal brace", "Rodri control", "Spain possession and intensity", "rotation"], "confidence": "high"},
+    {"source": "Guardian live: Spain 4-0 Saudi Arabia", "url": "https://www.theguardian.com/football/live/2026/jun/21/spain-v-saudi-arabia-world-cup-2026-live", "supports": ["expected formations 4-2-3-1 and 5-3-2", "halftime substitutions", "corner/own-goal sequence"], "confidence": "medium_high"},
+    {"source": "Guardian match report: Uruguay 2-2 Cape Verde", "url": "https://www.theguardian.com/football/2026/jun/22/cape-verde-uruguay-world-cup-group-h-match-report", "supports": ["Pina free-kick", "Araujo and Canobbio goals", "Varela equalizer", "Cape Verde late defending"], "confidence": "high"},
+    {"source": "Guardian live: Uruguay 2-2 Cape Verde", "url": "https://www.theguardian.com/football/live/2026/jun/21/uruguay-v-cape-verde-world-cup-2026-live", "supports": ["match state", "equalizer context", "late pressure"], "confidence": "medium_high"},
+    {"source": "Managing Madrid Uruguay/Cape Verde report", "url": "https://www.managingmadrid.com/fifa-world-cup/109328/fede-valverdes-uruguay-faces-tough-challenge-to-progress-to-knockout-rounds-following-2-2-draw-vs-cape-verde", "supports": ["reported xG 2.32-0.88", "Valverde advanced role", "cross assists detail"], "confidence": "medium_low"},
+    {"source": "Local G/H first-round reviews and round2 quant revisions", "url": "E:/worldcup", "supports": ["pre-match baselines", "round-one tactical corrections", "team tactical packets"], "confidence": "medium_high"}
+    ,
+    {"source": "Local G/H round2 postmortem JSON and group reviews", "url": "data/outputs/match_predictions/g-group-round2-postmortem-20260622.json; data/outputs/match_predictions/h-group-round2-postmortem-20260622.json; 比赛/已完成比赛/小组赛/G组/G组第二轮复盘.md; 比赛/已完成比赛/小组赛/H组/H组第二轮复盘.md", "supports": ["confirmed results", "player_state_update_status", "partial_source_limited roster/player_state/member-table updates", "model error summaries"], "confidence": "medium_high"}
+  ],
+  "validation_expectation": {
+    "matches": 4,
+    "teams": 8,
+    "factors_per_team": 10,
+    "factor_fields": ["direction", "magnitude", "evidence", "confidence", "model_note"],
+    "no_betting_advice": true
+  }
+}

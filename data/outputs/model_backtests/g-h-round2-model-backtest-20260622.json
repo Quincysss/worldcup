@@ -1,0 +1,338 @@
+{
+  "phase": "model_backtest",
+  "group_scope": ["G", "H"],
+  "round": 2,
+  "status": "completed_partial_source_limited_updated",
+  "created_at": "2026-06-23T01:12:00+08:00",
+  "updated_at": "2026-06-23T01:42:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "G组/H组第二轮四场赛前量化预测回测、误差归因与参数迭代建议；不输出投注建议。",
+  "input_files": {
+    "g_prediction": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+    "h_prediction": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+    "g_postmortem": {
+      "path": "data/outputs/match_predictions/g-group-round2-postmortem-20260622.json",
+      "status": "partial_source_limited",
+      "player_state_update_status": "partial"
+    },
+    "h_postmortem": {
+      "path": "data/outputs/match_predictions/h-group-round2-postmortem-20260622.json",
+      "status": "partial_source_limited",
+      "player_state_update_status": "partial"
+    }
+  },
+  "metric_definitions": {
+    "score_abs_error": "sum of absolute team-goal errors between predicted xG and actual goals",
+    "goal_total_error": "absolute difference between predicted total xG and actual total goals",
+    "goal_diff_error": "absolute difference between predicted xG differential and actual goal differential",
+    "brier_1x2": "multi-class Brier score over win/draw/loss probabilities",
+    "log_loss_1x2": "negative natural log of predicted probability assigned to actual 1X2 result",
+    "top5_covered_actual": "whether actual exact score appeared in pre-match top five scorelines"
+  },
+  "matches": [
+    {
+      "match": "Belgium vs Iran",
+      "group": "G",
+      "actual_score": {"belgium": 0, "iran": 0},
+      "actual_1x2": "draw",
+      "pre_match_expected_goals": {"belgium": 1.55, "iran": 1.10},
+      "pre_match_probabilities_1x2": {"belgium_win": 0.477, "draw": 0.253, "iran_win": 0.270},
+      "pre_match_top_scorelines": [
+        {"score": "1-1", "probability": 0.1205},
+        {"score": "1-0", "probability": 0.1095},
+        {"score": "2-1", "probability": 0.0934},
+        {"score": "2-0", "probability": 0.0849},
+        {"score": "0-1", "probability": 0.0777}
+      ],
+      "actual_score_probability": 0.0707,
+      "top5_covered_actual": false,
+      "score_abs_error": 2.65,
+      "goal_total_error": 2.65,
+      "goal_diff_error": 0.45,
+      "brier_1x2": 0.8584,
+      "log_loss_1x2": 1.3744,
+      "totals_backtest": {
+        "pre_match_over_2_5": 0.494,
+        "pre_match_under_2_5": 0.506,
+        "model_lean": "under_2_5_slight",
+        "actual_total_goals": 0,
+        "actual_total_side": "under_2_5",
+        "direction_result": "correct_but_low_confidence"
+      },
+      "market_calibration_backtest": {
+        "market_no_vig": {"belgium_win": 0.681, "draw": 0.200, "iran_win": 0.120},
+        "model_vs_market": "Model discounted Belgium and raised draw/Iran relative to market.",
+        "helped_or_misled": "model_helped_vs_hot_favorite_market",
+        "note": "Market was too hot on Belgium for the actual 0-0, but the model still overestimated total scoring and did not lift 0-0 enough."
+      },
+      "bias_diagnosis": [
+        "低位防守与门将/禁区封堵造成的零封尾部不足。",
+        "比利时进攻均值仍偏高，未充分反映首轮后转换率问题。",
+        "平局概率方向相对市场更好，但 0-0 exact-score tail 仍偏薄。"
+      ],
+      "player_state_backtest_link": {
+        "status": "partial_source_limited_updated",
+        "teams": {"belgium": "partial_source_limited_updated", "iran": "partial_source_limited_updated"},
+        "reason": "G组 postmortem JSON is present; data thread marked player_state_update_status=partial with emergency source limits."
+      }
+    },
+    {
+      "match": "New Zealand vs Egypt",
+      "group": "G",
+      "actual_score": {"new_zealand": 1, "egypt": 3},
+      "actual_1x2": "egypt_win",
+      "pre_match_expected_goals": {"new_zealand": 0.98, "egypt": 1.32},
+      "pre_match_probabilities_1x2": {"new_zealand_win": 0.277, "draw": 0.278, "egypt_win": 0.444},
+      "pre_match_top_scorelines": [
+        {"score": "0-1", "probability": 0.1323},
+        {"score": "1-1", "probability": 0.1297},
+        {"score": "0-0", "probability": 0.1003},
+        {"score": "1-0", "probability": 0.0983},
+        {"score": "0-2", "probability": 0.0873}
+      ],
+      "actual_score_probability": 0.0377,
+      "top5_covered_actual": false,
+      "score_abs_error": 1.70,
+      "goal_total_error": 1.70,
+      "goal_diff_error": 1.66,
+      "brier_1x2": 0.4631,
+      "log_loss_1x2": 0.8119,
+      "totals_backtest": {
+        "pre_match_over_2_5": 0.404,
+        "pre_match_under_2_5": 0.596,
+        "model_lean": "under_2_5",
+        "actual_total_goals": 4,
+        "actual_total_side": "over_2_5",
+        "direction_result": "miss_underestimated_egypt_scoring_tail"
+      },
+      "market_calibration_backtest": {
+        "market_no_vig": {"new_zealand_win": 0.189, "draw": 0.248, "egypt_win": 0.563},
+        "model_vs_market": "Model kept New Zealand/draw materially higher after round-one player-state upgrades.",
+        "helped_or_misled": "market_helped_directionally",
+        "note": "Market was closer on Egypt win; model overreacted to New Zealand's round-one attacking spike and underweighted Egypt 3-goal tail."
+      },
+      "bias_diagnosis": [
+        "对新西兰首轮 Wood/Just 状态上修偏大，压低了埃及胜率和多球胜尾部。",
+        "埃及 Salah/Marmoush/Ashour 进攻质量的上限未充分进入比分分布。",
+        "大小球被低估，1-3 处在非 top5 尾部。"
+      ],
+      "player_state_backtest_link": {
+        "status": "partial_source_limited_updated",
+        "teams": {"new_zealand": "partial_source_limited_updated", "egypt": "partial_source_limited_updated"},
+        "reason": "G组 postmortem JSON is present; data thread marked player_state_update_status=partial with emergency source limits."
+      }
+    },
+    {
+      "match": "Spain vs Saudi Arabia",
+      "group": "H",
+      "actual_score": {"spain": 4, "saudi_arabia": 0},
+      "actual_1x2": "spain_win",
+      "pre_match_expected_goals": {"spain": 2.05, "saudi_arabia": 0.52},
+      "pre_match_probabilities_1x2": {"spain_win": 0.735, "draw": 0.1826, "saudi_arabia_win": 0.0823},
+      "pre_match_top_scorelines": [
+        {"score": "2-0", "probability": 0.1608},
+        {"score": "1-0", "probability": 0.1569},
+        {"score": "3-0", "probability": 0.1099},
+        {"score": "2-1", "probability": 0.0836},
+        {"score": "1-1", "probability": 0.0816}
+      ],
+      "actual_score_probability": 0.0563,
+      "top5_covered_actual": false,
+      "score_abs_error": 2.47,
+      "goal_total_error": 1.43,
+      "goal_diff_error": 2.47,
+      "brier_1x2": 0.1103,
+      "log_loss_1x2": 0.3079,
+      "totals_backtest": {
+        "pre_match_over_2_5": 0.474,
+        "pre_match_under_2_5": 0.526,
+        "model_lean": "under_2_5_slight",
+        "actual_total_goals": 4,
+        "actual_total_side": "over_2_5",
+        "direction_result": "miss_underestimated_favorite_blowout_tail"
+      },
+      "market_calibration_backtest": {
+        "market_no_vig": {"spain_win": 0.8735, "draw": 0.0901, "saudi_arabia_win": 0.0364},
+        "model_vs_market": "Model retained much more draw/Saudi tail than market.",
+        "helped_or_misled": "market_helped_favorite_strength",
+        "note": "Market's Spain strength signal was directionally helpful; model correctly favored Spain but underweighted 4-0/blowout tail."
+      },
+      "bias_diagnosis": [
+        "强队压制低位后扩大比分的尾部分布不足。",
+        "均值 xG 还可以解释胜负方向，但 4球零封概率偏低。",
+        "对沙特韧性和低位生存的上修在本场过重。"
+      ],
+      "player_state_backtest_link": {
+        "status": "partial_source_limited_updated",
+        "teams": {"spain": "partial_source_limited_updated", "saudi_arabia": "partial_source_limited_updated"},
+        "reason": "H组 postmortem JSON is present; data thread marked player_state_update_status=partial with emergency source limits."
+      }
+    },
+    {
+      "match": "Cape Verde vs Uruguay",
+      "group": "H",
+      "actual_score": {"cape_verde": 2, "uruguay": 2},
+      "actual_1x2": "draw",
+      "pre_match_expected_goals": {"cape_verde": 0.60, "uruguay": 1.55},
+      "pre_match_probabilities_1x2": {"cape_verde_win": 0.1422, "draw": 0.2528, "uruguay_win": 0.6050},
+      "pre_match_top_scorelines": [
+        {"score": "0-1", "probability": 0.1806},
+        {"score": "0-2", "probability": 0.1399},
+        {"score": "0-0", "probability": 0.1165},
+        {"score": "1-1", "probability": 0.1083},
+        {"score": "1-2", "probability": 0.0840}
+      ],
+      "actual_score_probability": 0.0252,
+      "top5_covered_actual": false,
+      "score_abs_error": 1.85,
+      "goal_total_error": 1.85,
+      "goal_diff_error": 0.95,
+      "brier_1x2": 0.9446,
+      "log_loss_1x2": 1.3752,
+      "totals_backtest": {
+        "pre_match_over_2_5": 0.3639,
+        "pre_match_under_2_5": 0.6361,
+        "model_lean": "under_2_5",
+        "actual_total_goals": 4,
+        "actual_total_side": "over_2_5",
+        "direction_result": "miss_underestimated_cape_verde_scoring_and_game_volatility"
+      },
+      "market_calibration_backtest": {
+        "market_no_vig": {"cape_verde_win": 0.1129, "draw": 0.2181, "uruguay_win": 0.6690, "over_2_5": 0.4224, "under_2_5": 0.5776},
+        "model_vs_market": "Model raised Cape Verde/draw relative to market and lowered Uruguay.",
+        "helped_or_misled": "model_helped_draw_tail_but_both_missed_over",
+        "note": "Model was better than market on draw direction but still badly underweighted Cape Verde scoring and 2-2 exact-score tail."
+      },
+      "bias_diagnosis": [
+        "佛得角低位韧性被识别，但进攻/反击得分尾部仍偏低。",
+        "乌拉圭强队均值较高但无法转化为胜局，平局尾部仍不足。",
+        "低估了非洲小队在落后/对攻阶段的韧性和二次得分能力。"
+      ],
+      "player_state_backtest_link": {
+        "status": "partial_source_limited_updated",
+        "teams": {"cape_verde": "partial_source_limited_updated", "uruguay": "partial_source_limited_updated"},
+        "reason": "H组 postmortem JSON is present; data thread marked player_state_update_status=partial with emergency source limits."
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "matches_count": 4,
+    "actual_score_in_top5_count": 0,
+    "mean_brier_1x2": 0.5941,
+    "mean_log_loss_1x2": 0.9674,
+    "mean_score_abs_error": 2.1675,
+    "mean_goal_total_error": 1.9075,
+    "totals_direction_record": {"correct": 1, "miss": 3},
+    "market_signal_summary": {
+      "helped": ["New Zealand vs Egypt", "Spain vs Saudi Arabia"],
+      "misled_or_overheated": ["Belgium vs Iran", "Cape Verde vs Uruguay favorite strength"],
+      "mixed": ["Cape Verde vs Uruguay draw tail"]
+    }
+  },
+  "common_biases": [
+    {
+      "bias": "top_scoreline_tail_too_thin",
+      "evidence": "All four actual exact scores were outside the pre-match top five scorelines.",
+      "model_implication": "Keep Poisson mean for direction, but widen exact-score tail for 0-0, 1-3, 4-0 and 2-2 style outcomes."
+    },
+    {
+      "bias": "underestimated_strong_favorite_blowout_tail",
+      "evidence": "Spain 4-0 Saudi Arabia and Egypt 3-1 New Zealand both exceeded pre-match total-goal tails.",
+      "model_implication": "When market, squad strength and tactical mismatch align, add tail dispersion rather than only raising favorite win probability."
+    },
+    {
+      "bias": "underestimated_low_block_zero_zero_tail",
+      "evidence": "Belgium 0-0 Iran had only 7.07% exact-score probability and was outside top five.",
+      "model_implication": "Raise zero-inflation / low-event draw handling when favorite conversion is uncertain and underdog block is experienced."
+    },
+    {
+      "bias": "underestimated_african_compact_team_resilience_and_scoring_tail",
+      "evidence": "Egypt scored three; Cape Verde scored two and drew Uruguay; Iran kept Belgium scoreless.",
+      "model_implication": "Do not treat compact underdogs only as under/low-scoring agents; preserve counter, set-piece and late-game scoring tails."
+    },
+    {
+      "bias": "market_calibration_needs_context_split",
+      "evidence": "Market helped on Egypt and Spain but was too hot on Belgium and Uruguay.",
+      "model_implication": "Use market as directional support only when tactical mismatch and internal model agree; discount market favorite heat after weak conversion signals."
+    }
+  ],
+  "parameter_updates": [
+    {
+      "parameter": "poisson_tail_dispersion_for_high_mismatch_matches",
+      "old": "single independent Poisson tail only",
+      "new": "add +0.03 to +0.06 redistributed mass into favorite 3+ goal win tails when strength, market and tactical mismatch align",
+      "reason": "Spain 4-0 and Egypt 3-1 were outside top five despite correct favorite direction.",
+      "applicable_scope": "elite or clearly superior favorite vs low-block/limited-chase opponent; next-round use only with lineup confirmation",
+      "overfit_guard": "Do not raise mean xG blindly; only increase tail dispersion and cap at +0.06."
+    },
+    {
+      "parameter": "low_event_zero_inflation_draw_tail",
+      "old": 0.00,
+      "new": "+0.03 to +0.05 draw/0-0 mass",
+      "reason": "Belgium-Iran produced 0-0 after model already recognized favorite market heat but still kept total xG too high.",
+      "applicable_scope": "favorite conversion uncertain, opponent experienced low block, T-75m lineup lacks clear finisher upgrade",
+      "overfit_guard": "Do not apply when favorite has early-goal or set-piece mismatch signal."
+    },
+    {
+      "parameter": "round1_player_state_overreaction_cap",
+      "old": "player_state up to +0.16 from one strong opening match",
+      "new": "cap single-match positive player_state adjustment at +0.10 unless supported by role continuity and opponent-adjusted xG",
+      "reason": "New Zealand attacking upgrade after 2-2 Iran appears too strong against Egypt.",
+      "applicable_scope": "teams whose round-one spike came from one or two players and a high-variance game state",
+      "overfit_guard": "Maintain individual notes, but reduce team-level aggregate bump."
+    },
+    {
+      "parameter": "africa_compact_counter_resilience_bonus",
+      "old": 0.00,
+      "new": "+0.03 to +0.05 underdog scoring/draw tail",
+      "reason": "Egypt, Cape Verde and Iran each beat model expectations in resilience or scoring suppression/production.",
+      "applicable_scope": "CAF teams with compact block, transition outlets, set-piece threat, or proven second-half resilience",
+      "overfit_guard": "Not a confederation-only blanket; require tactical and player-state evidence."
+    },
+    {
+      "parameter": "market_alignment_weight_split",
+      "old": "market_adjustment 0.05-0.10 applied as broad probability calibration",
+      "new": "split into market_direction_weight and market_tail_weight; direction max 0.06, tail max 0.04",
+      "reason": "Market helped Spain/Egypt direction but misled Belgium/Uruguay favorite heat.",
+      "applicable_scope": "all matches with public odds snippets but no official same-source complete market snapshot",
+      "overfit_guard": "Official/same-source odds can receive higher trust only after overround and timestamp are clean."
+    },
+    {
+      "parameter": "non_favorite_two_goal_tail",
+      "old": "mostly driven by mean xG below 0.8",
+      "new": "+0.02 to +0.04 exact-score tail for 2-goal underdog outcomes when set-piece/counter evidence exists",
+      "reason": "Cape Verde 2-2 Uruguay exposed underdog two-goal tail as too thin.",
+      "applicable_scope": "underdogs with transition outlet plus opponent rest-defense or game-management risk",
+      "overfit_guard": "Do not apply to teams with no open-play route or no set-piece evidence."
+    }
+  ],
+  "player_state_backtest_link": {
+    "status": "partial_source_limited_updated",
+    "postmortem_files_checked": {
+      "g_group": "partial_source_limited; player_state_update_status=partial",
+      "h_group": "partial_source_limited; player_state_update_status=partial"
+    },
+    "teams": {
+      "belgium": "partial_source_limited_updated",
+      "iran": "partial_source_limited_updated",
+      "new_zealand": "partial_source_limited_updated",
+      "egypt": "partial_source_limited_updated",
+      "spain": "partial_source_limited_updated",
+      "saudi_arabia": "partial_source_limited_updated",
+      "uruguay": "partial_source_limited_updated",
+      "cape_verde": "partial_source_limited_updated"
+    },
+    "note": "Data thread postmortem files are present and mark player_state_update_status=partial. Member tables/player_state/rosters have second-round internal rating records under partial_source_limited constraints; official full lineups/minutes and external same-source ratings remain incomplete."
+  },
+  "quality_notes": [
+    "This is a model backtest using pre-match prediction JSON plus user-provided verified results.",
+    "Data thread postmortem JSON files are present; player-state linkage is partial_source_limited_updated, not fully complete.",
+    "No betting advice is included; odds are treated only as calibration signals."
+  ],
+  "source_log": [
+    "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+    "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+    "data/outputs/match_predictions/g-group-round2-postmortem-20260622.json",
+    "data/outputs/match_predictions/h-group-round2-postmortem-20260622.json"
+  ]
+}

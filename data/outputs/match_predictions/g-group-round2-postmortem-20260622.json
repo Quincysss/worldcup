@@ -1,0 +1,103 @@
+{
+    "phase":  "group_stage_round2_postmatch_review",
+    "group":  "G",
+    "round":  2,
+    "status":  "partial_source_limited",
+    "captured_at":  "2026-06-23T01:45:00+08:00",
+    "player_state_update_status":  "partial",
+    "matches":  [
+                    {
+                        "group":  "G",
+                        "match_id":  "2026-06-21_belgium_0-0_iran",
+                        "title":  "比利时 0-0 伊朗",
+                        "date":  "2026-06-21",
+                        "teams":  [
+                                      "比利时",
+                                      "伊朗"
+                                  ],
+                        "score":  "0-0",
+                        "actual_result":  "draw",
+                        "prediction_reference":  "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+                        "pre_match_xg":  "Belgium 1.55 - Iran 1.10",
+                        "pre_match_probabilities":  "Belgium 47.7% / Draw 25.3% / Iran 27.0%",
+                        "summary":  "比利时控球和压迫占优，但禁区转化继续偏低；伊朗用更保守的后场结构、贝兰万德扑救和低位纪律拿到关键一分。Nathan Ngoy 被红牌罚下，Taremi 有进球因越位/VAR被取消。",
+                        "postmatch_error":  "模型偏向比利时小胜，实际为0-0；低估门将超常、红牌与比利时终结低迷造成的低比分尾部。",
+                        "player_state_update_status":  "partial_source_limited"
+                    },
+                    {
+                        "group":  "G",
+                        "match_id":  "2026-06-21_new-zealand_1-3_egypt",
+                        "title":  "新西兰 1-3 埃及",
+                        "date":  "2026-06-21",
+                        "teams":  [
+                                      "新西兰",
+                                      "埃及"
+                                  ],
+                        "score":  "1-3",
+                        "actual_result":  "egypt_win",
+                        "prediction_reference":  "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+                        "pre_match_xg":  "New Zealand 0.98 - Egypt 1.32",
+                        "pre_match_probabilities":  "New Zealand 27.7% / Draw 27.8% / Egypt 44.4%",
+                        "summary":  "新西兰由 Finn Surman 先开局，但下半场被埃及持续压制。Mostafa Ziko 扳平，Mohamed Salah 反超，Trezeguet 锁定胜局，埃及取得队史世界杯首胜。",
+                        "postmatch_error":  "方向命中埃及胜，但比分和下半场强度高于赛前中位数；模型低估埃及压迫后程与定位球/传中终结。",
+                        "player_state_update_status":  "partial_source_limited"
+                    }
+                ],
+    "player_state_updates":  [
+                                 {
+                                     "team":  "belgium",
+                                     "status":  "partial_source_limited_updated",
+                                     "player_state":  "data/outputs/player_state/belgium-player-state.json",
+                                     "roster":  "data/packets/rosters/belgium-roster.json"
+                                 },
+                                 {
+                                     "team":  "iran",
+                                     "status":  "partial_source_limited_updated",
+                                     "player_state":  "data/outputs/player_state/iran-player-state.json",
+                                     "roster":  "data/packets/rosters/iran-roster.json"
+                                 },
+                                 {
+                                     "team":  "new-zealand",
+                                     "status":  "partial_source_limited_updated",
+                                     "player_state":  "data/outputs/player_state/new-zealand-player-state.json",
+                                     "roster":  "data/packets/rosters/new-zealand-roster.json"
+                                 },
+                                 {
+                                     "team":  "egypt",
+                                     "status":  "partial_source_limited_updated",
+                                     "player_state":  "data/outputs/player_state/egypt-player-state.json",
+                                     "roster":  "data/packets/rosters/egypt-roster.json"
+                                 }
+                             ],
+    "source_log":  [
+                       {
+                           "name":  "ESPN match reports / match centres",
+                           "url":  "https://www.espn.com/soccer/",
+                           "captured_at":  "2026-06-23T01:45:00+08:00",
+                           "notes":  "Scores, Spain-Saudi event/stats snippets, venue and match report context."
+                       },
+                       {
+                           "name":  "Al Jazeera World Cup reports",
+                           "url":  "https://www.aljazeera.com/sports/2026/6/",
+                           "captured_at":  "2026-06-23T01:45:00+08:00",
+                           "notes":  "Narrative confirmation for the four G/H round2 matches."
+                       },
+                       {
+                           "name":  "FIFA match centre snippets",
+                           "url":  "https://www.fifa.com/en/match-centre/",
+                           "captured_at":  "2026-06-23T01:45:00+08:00",
+                           "notes":  "Fixture and venue cross-check where accessible."
+                       },
+                       {
+                           "name":  "Local quant prediction files",
+                           "url":  "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json; data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+                           "captured_at":  "2026-06-23T01:45:00+08:00",
+                           "notes":  "Pre-match xG, 1X2, top scorelines and market comparison baseline."
+                       }
+                   ],
+    "gaps_and_conflicts":  [
+                               "Official full lineups/minutes for every squad player not fully extracted in this emergency closure.",
+                               "External same-source player ratings are optional and remain missing where unavailable.",
+                               "Member tables and player_state now contain internal 1-5 model ratings for every squad player."
+                           ]
+}
