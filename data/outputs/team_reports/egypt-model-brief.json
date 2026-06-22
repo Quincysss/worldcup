@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:21:00+08:00",
+  "team": {"zh": "埃及", "en": "Egypt", "fifa_code": "EGY", "group": "G"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "G组中游挑战者，强依赖 Salah 状态和反击效率。", "recommended_weights": {"elo": 0.30, "fifa_ranking": 0.12, "recent_form": 0.16, "squad_quality": 0.14, "tactical_fit": 0.16, "availability": 0.12}, "round1_correction": "not_available_pre_match"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "medium", "defensive_floor": "medium", "transition_attack": "high_if_salah_fit", "low_block": "strong_vs_favorite", "salah_dependency": "very_high"},
+  "availability_sensitivity": [{"player": "Mohamed Salah", "lambda_for_impact": "very_high"}, {"player": "Omar Marmoush", "transition_impact": "medium_high"}, {"player": "Mostafa Mohamed", "box_presence_impact": "medium"}, {"player": "Mohamed Abdelmonem", "lambda_against_impact": "medium_high"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals"], "warning": "Salah 状态会显著移动盘口。"},
+  "uncertainty_flags": ["opening match not played/confirmed", "T-75m lineup", "Salah fitness", "fresh odds"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "Belgium defensive shape", "Egypt transition pairing"],
+  "model_risk_notes": "埃及的均值可能不高，但反击尾部明显；如果 Salah 状态不满，进攻 lambda 要显著下调。"
+}

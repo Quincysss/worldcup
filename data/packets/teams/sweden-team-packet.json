@@ -1,0 +1,23 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T13:06:00+08:00",
+  "scope": "F组瑞典队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "瑞典", "en": "Sweden", "fifa_code": "SWE", "group": "F", "confederation": "UEFA"},
+  "source_log_path": "K:/worldcup/data/source_logs/sweden-team-source-log.json",
+  "fixtures_context": {"round1_result": "瑞典 5-1 突尼斯", "remaining_group_matches": ["荷兰 vs 瑞典", "日本 vs 瑞典"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Graham Potter", "team_identity": "首轮大胜后信心极高，双前锋和边路供应威胁很大；但必须警惕对手强度提升后的真实含金量。", "likely_structure": ["4-2-3-1", "4-4-2", "3-4-2-1 variants"]},
+  "core_players_watch": [
+    {"player": "Alexander Isak", "role": "中锋纵深、脚下连接和终结"},
+    {"player": "Viktor Gyökeres", "role": "力量型冲击、压迫和禁区终结"},
+    {"player": "Dejan Kulusevski", "role": "右路/中路推进和创造"},
+    {"player": "Anthony Elanga", "role": "边路速度和反击"},
+    {"player": "Lucas Bergvall", "role": "中场年轻推进变量"},
+    {"player": "Victor Lindelöf", "role": "防线经验和出球"}
+  ],
+  "strengths": ["双前锋火力", "身体和速度", "反击纵深", "边路冲击", "首轮大胜气势"],
+  "risks": ["首轮样本过热", "面对荷兰控球时防线承压", "中场控制稳定性", "防线速度", "热门盘口快速升温"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "5-1 后瑞典方向会升温，模型必须限制首轮对弱化对手的外推。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["official technical report", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

@@ -1,0 +1,21 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T13:07:00+08:00",
+  "team": {"zh": "瑞典", "en": "Sweden", "fifa_code": "SWE", "group": "F"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-4-2", "3-4-2-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "可以直接找 Isak/Gyökeres，也能通过 Kulusevski 带球推进；边路速度给前锋提供纵深。",
+    "pressing_profile": "前场压迫和身体冲击强，双前锋可以迫使对手后场仓促处理球。",
+    "defensive_block": "中低位可依赖身体和经验，但面对荷兰控球时中场覆盖会被考验。",
+    "attacking_transition": "强项，前锋个人能力和边路推进都能制造高价值机会。",
+    "set_piece": "有身体高度和冲击力，攻防两端都应加权。"
+  },
+  "coach_tendencies": {"coach": "Graham Potter", "risk_appetite": "medium_high", "game_state": "首轮 5-1 后信心强，但第二轮对荷兰需要更谨慎的中场保护。"},
+  "post_round1_update": "5-1 突尼斯后，进攻火力和前锋组合权重上调；但要限制对弱化对手的外推。",
+  "tactical_risks": ["荷兰控球压制", "防线速度", "中场控制不足", "首轮过热"],
+  "confidence_notes": {"high": ["锋线冲击", "反击纵深"], "medium": ["中场控制", "防守稳定"], "low_or_missing": ["T-75m首发", "官方技术报告"]},
+  "handoff_to_model": {"attack_ceiling": "high", "defensive_floor": "medium", "transition_attack": "high", "public_bias_risk": "high_after_5_1"},
+  "handoff_to_red_team": ["5-1 是否被高估", "对荷兰时中场能否顶住", "双前锋身后保护是否足够"]
+}

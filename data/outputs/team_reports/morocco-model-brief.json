@@ -1,0 +1,149 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "摩洛哥",
+    "en": "Morocco",
+    "fifa_code": "MAR",
+    "group": "C"
+  },
+  "status": "deep_partial",
+  "created_at": "2026-06-12T19:22:00+08:00",
+  "updated_at": "2026-06-12T19:55:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "C组摩洛哥 team_profile 深版模型输入简报；只做球队层面的强度基线、变量、敏感度和不确定性，不输出比分、胜平负、出线、冠军或投注建议。",
+  "missing_inputs": [
+    "T-24h injury and training refresh",
+    "T-75m official lineup",
+    "structured odds snapshot",
+    "new-coach tournament sample expansion"
+  ],
+  "stale_inputs": [
+    "2022世界杯防守表现不能直接视为 2026 稳定地板"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\packets\\teams\\morocco-team-packet.json",
+    "K:\\worldcup\\data\\packets\\tactics\\morocco-tactics-packet.json",
+    "K:\\worldcup\\data\\reviews\\red_team\\morocco-red-team-review.md"
+  ],
+  "notes": [
+    "已按深版 team_profile 口径扩写。",
+    "保留为 deep_partial，等待换帅后更多正式样本和赛前动态。"
+  ],
+  "baseline_strength_framework": {
+    "tier_hint": "C组第二档强队，防守韧性和反击上限都在高位。",
+    "rating_field_placeholders": {
+      "elo": "ratings.elo",
+      "fifa": "ratings.fifa_rank",
+      "opta": "ratings.opta_power"
+    },
+    "recommended_weights": {
+      "elo": 0.32,
+      "fifa_ranking": 0.1,
+      "opta_power": 0.2,
+      "recent_competitive_form": 0.16,
+      "squad_value": 0.1,
+      "tactical_fit": 0.08,
+      "coach_transition": 0.04
+    },
+    "weighting_notes": [
+      "摩洛哥的强点更像防守地板和结构韧性，不能只看前场名字。",
+      "近期表现必须区分强队脚本和弱队脚本，因为摩洛哥面对低位时未必同样舒服。",
+      "换帅变量虽不应压倒长期强度，但必须保留独立折扣。"
+    ],
+    "recent_form_treatment": {
+      "window": "近 8 场正式比赛优先",
+      "adjustments": [
+        "分离强敌防反样本和对弱队控球样本",
+        "记录先丢球后阵地战追分表现",
+        "边后卫和门将状态单独追踪"
+      ]
+    },
+    "squad_value_core_player_logic": {
+      "summary": "摩洛哥阵容价值不如巴西，但关键位置质量集中，尤其在边后卫、门将和中轴。",
+      "core_players": [
+        "Achraf Hakimi",
+        "Brahim Diaz",
+        "Hakim Ziyech",
+        "Sofyan Amrabat",
+        "Youssef En-Nesyri",
+        "Nayef Aguerd",
+        "Yassine Bounou"
+      ]
+    }
+  },
+  "style_adjustments": {
+    "in_possession": "更多依赖边路推进和半空间终传，不是持续压制型控球队。",
+    "transition_attack": "high",
+    "transition_defense_risk": "medium",
+    "low_block_breaking": "medium",
+    "set_piece_attack": "medium_high",
+    "set_piece_defense": "high",
+    "game_state_note": "领先后韧性通常较强，但先丢球时创造力和主动性需单独打问号。"
+  },
+  "availability_sensitivity": {
+    "attack_core": [
+      {
+        "player": "Achraf Hakimi",
+        "team_lambda_impact": "high",
+        "reason": "右路推进、反击速度和宽度引擎。"
+      },
+      {
+        "player": "Brahim Diaz",
+        "team_lambda_impact": "medium_high",
+        "reason": "半空间创造和最后一传。"
+      }
+    ],
+    "midfield_balance": [
+      {
+        "player": "Sofyan Amrabat",
+        "lambda_against_impact": "medium_high",
+        "reason": "防守屏障、反击前保护和出球稳定。"
+      }
+    ],
+    "back_line": [
+      {
+        "player": "Nayef Aguerd",
+        "lambda_against_impact": "medium_high",
+        "reason": "中卫组织和定位球防守地板。"
+      },
+      {
+        "player": "Noussair Mazraoui",
+        "team_lambda_impact": "medium",
+        "reason": "边路推进和结构平衡。"
+      }
+    ],
+    "goalkeeper": {
+      "player": "Yassine Bounou",
+      "lambda_against_impact": "medium_high",
+      "reason": "门线地板和高压局容错。"
+    }
+  },
+  "market_signal_placeholder": {
+    "markets_to_capture": [
+      "group_winner",
+      "group_qualification",
+      "single_match_1x2",
+      "single_match_totals",
+      "single_match_handicap"
+    ],
+    "modeling_note": "市场可能对 2022 四强记忆定价过高，模型需把历史声望和当下换帅风险拆开。"
+  },
+  "uncertainty_flags": [
+    "换帅后体系延续性",
+    "对低位弱队时的阵地战创造力",
+    "核心边后卫/门将状态",
+    "2022 光环带来的重复计权"
+  ],
+  "prediction_input_requirements": [
+    "T-75m official lineup",
+    "new coach shape confirmation",
+    "Hakimi and Mazraoui fitness",
+    "latest odds snapshot",
+    "opponent low-block versus open-game tag"
+  ],
+  "model_risk_notes": [
+    "摩洛哥模型最怕把强队脚本直接外推到所有对手。",
+    "防守韧性应高估，进攻上限应更谨慎。",
+    "首战对巴西与后两场对苏格兰、海地，必须分脚本建模。"
+  ]
+}

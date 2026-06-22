@@ -1,0 +1,43 @@
+{
+  "team": {"zh": "克罗地亚", "en": "Croatia", "group": "L"},
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "captured_at": "2026-06-16T12:20:00+08:00",
+  "scope_guard": "球队画像阶段；不写比分、赛果倾向、出线结论、冠军判断或投注建议。",
+  "sources": [
+    {
+      "name": "FIFA - Group L focus",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/group-l-focus-teams-fixtures-standings",
+      "tier": "official",
+      "supports": ["group assignment", "opening fixture England vs Croatia", "FIFA ranking snapshot", "high-level team context"]
+    },
+    {
+      "name": "FIFA - Match schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "tier": "official",
+      "supports": ["fixture calendar", "match-centre refresh gate"]
+    },
+    {
+      "name": "Croatian Football Federation",
+      "url": "https://hns.family/",
+      "tier": "official_association",
+      "supports": ["national-team announcements", "coach and squad refresh gate", "injury/training follow-up"]
+    }
+  ],
+  "verified_facts": {
+    "coach": {"value": "Zlatko Dalic", "confidence": "high", "needs_refresh": false},
+    "opening_match": {"value": "England vs Croatia", "confidence": "high", "needs_refresh": true},
+    "core_player_pool": {
+      "value": ["Luka Modric", "Mateo Kovacic", "Josko Gvardiol", "Andrej Kramaric", "Dominik Livakovic", "Josip Stanisic"],
+      "confidence": "medium",
+      "needs_refresh": true,
+      "note": "老将和边路球员的真实负荷、首发角色、替补计划需赛前刷新。"
+    }
+  },
+  "gaps_and_conflicts": [
+    "Modric、Perisic、Brozovic 等老将角色不能按历史惯性固定，需要以官方名单和训练信息为准。",
+    "T-24h 训练、伤停和发布会信息待刷新。",
+    "T-75m 官方首发待刷新。"
+  ],
+  "handoff_notes": "战术端重点看克罗地亚是否仍能用中场控制稀释英格兰冲击；模型端需要把老化风险和大赛经验拆开计权。"
+}

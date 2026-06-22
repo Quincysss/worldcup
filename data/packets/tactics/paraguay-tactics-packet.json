@@ -1,0 +1,47 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:26:00+08:00",
+  "team": {"zh": "巴拉圭", "en": "Paraguay", "fifa_code": "PAR", "group": "D"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {
+    "default": "4-2-3-1",
+    "alternates": ["4-4-2", "5-4-1"],
+    "confidence": "medium"
+  },
+  "phase_behaviour": {
+    "possession_structure": "不追求长时间控球，更多依赖 Almiron、Enciso、Ramon Sosa 的反击和个人推进。",
+    "pressing_profile": "可阶段性前压，但首轮暴露身后空间后，第二轮更可能先收紧中低位结构。",
+    "defensive_block": "中位/低位是更稳妥选择，Gustavo Gomez 和 Junior Alonso 的经验对防线稳定很关键。",
+    "attacking_transition": "有威胁，但第一脚出球质量和边路推进速度决定上限。",
+    "set_piece": "传统强项之一，适合在低比分局面里制造破局机会。"
+  },
+  "coach_tendencies": {
+    "coach": "Gustavo Alfaro",
+    "risk_appetite": "medium_low_after_round1",
+    "substitution_pattern": "needs_recent_sample",
+    "game_state": "首轮大败后优先修复防守结构，早丢球会显著放大阵型和情绪风险。"
+  },
+  "key_roles": [
+    "Almiron: 反击推进和速度点",
+    "Enciso: 前场创造和远射",
+    "Gustavo Gomez: 防线领袖和制空",
+    "Ramon Sosa: 边路冲击",
+    "Matias Rojas: 左脚定位球服务"
+  ],
+  "post_round1_update": "1-4 输美国后，防线速度、边路保护和心理韧性下调；但也要防止市场把一场崩盘过度外推。",
+  "tactical_risks": ["防线速度", "边路保护", "纪律和黄牌", "早丢球后的结构松动", "进攻创造依赖少数单点"],
+  "confidence_notes": {
+    "high": ["低位防守倾向", "反击和定位球路径"],
+    "medium": ["首轮后保守调整", "核心球员角色"],
+    "low_or_missing": ["T-75m首发", "停赛和伤停", "官方技术报告"]
+  },
+  "handoff_to_model": {
+    "attack_ceiling": "medium",
+    "defensive_floor": "volatile_after_round1",
+    "transition_attack": "medium_high",
+    "set_piece": "medium_high",
+    "discipline_risk": "medium_high"
+  },
+  "handoff_to_red_team": ["首轮大败后心理是否崩", "纪律风险是否影响对抗强度", "面对土耳其技术点是否会被肋部打穿"]
+}

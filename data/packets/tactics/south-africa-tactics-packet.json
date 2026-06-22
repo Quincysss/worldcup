@@ -1,0 +1,276 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "South Africa",
+    "en": "South Africa",
+    "fifa_code": "RSA",
+    "group": "A"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-11T16:52:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "South Africa tactical packet only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "full set-piece taker and target map",
+    "video-backed pressing and wide-transition review",
+    "broader event-level chance creation sample"
+  ],
+  "source_log": [
+    {
+      "source": "SAFA final World Cup squad article",
+      "url": "https://www.safa.net/news/broos-names-final-bafana-squad-for-the-2026-fifa-world-cup/",
+      "note": "Official final 26-player World Cup squad by Hugo Broos."
+    },
+    {
+      "source": "SAFA preliminary squad article",
+      "url": "https://www.safa.net/general-news/broos-announces-preliminary-bafana-squad-for-the-2026-fifa-world-cup/",
+      "note": "Useful wider player pool and squad context before the final cut."
+    },
+    {
+      "source": "FIFA South Africa squad page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/south-africa/squad",
+      "note": "Current tournament squad reference."
+    },
+    {
+      "source": "CAF South Africa World Cup profile",
+      "url": "https://www.cafonline.com/fifa-world-cup/news/fifa-world-cup-south-africas-emphatic-return-to-the-global-stage-after-a-16-year-wait/",
+      "note": "Describes South Africa as organized, disciplined, and built on unity rather than individual stardom."
+    },
+    {
+      "source": "CAF Hugo Broos coach profile",
+      "url": "https://www.cafonline.com/afcon2025/news/totalenergies-caf-afcon-2025-know-the-coach-hugo-broos-south-africa/",
+      "note": "Confirms tenure, background, and tournament pragmatism."
+    },
+    {
+      "source": "CAF fearless mentality feature",
+      "url": "https://www.cafonline.com/afcon2025/news/hugo-broos-building-a-new-bafana-bafana-with-a-fearless-mentality/",
+      "note": "Useful for identity, compactness, and team mentality under Broos."
+    },
+    {
+      "source": "SAFA Nicaragua friendly report",
+      "url": "https://www.safa.net/general-news/bafana-share-the-spoils-with-nicaragua/",
+      "note": "Warm-up match context and coach reaction."
+    },
+    {
+      "source": "SAFA preparations article",
+      "url": "https://www.safa.net/news/bafana-continue-with-their-world-cup-preparations-after-jamaica-friendly/",
+      "note": "Pre-tournament preparation context."
+    },
+    {
+      "source": "CAF opener preview",
+      "url": "https://www.cafonline.com/fifa-world-cup/news/bafana-bafana-ready-to-carry-south-africa-s-hopes-in-fifa-world-cup-opener/",
+      "note": "Broos frames the Mexico opener as a chance to carry the nation's hopes."
+    }
+  ],
+  "notes": [
+    "Deepening pass completed on 2026-06-11.",
+    "Current phase is team_profile only; no score, group, champion, or betting output."
+  ],
+  "fan_summary_en": "Broos has turned South Africa into a compact tournament team that do not need the ball to bother you; if they survive the first pressure wave, they can make the match ugly, tactical, and surprisingly dangerous on counters and set plays.",
+  "data": {
+    "analysis_status": "partial",
+    "confidence_overall": "medium_high",
+    "sample_summary": {
+      "primary_window": "2025 qualification cycle through 2026 World Cup preparation",
+      "coach": "Hugo Broos",
+      "sample_quality": "medium",
+      "notes": [
+        "Uses official SAFA, FIFA, and CAF material plus the existing local data packet.",
+        "Chance-creation micro detail remains partial until a larger structured sample is available."
+      ]
+    },
+    "coach_profile": {
+      "coach": "Hugo Broos",
+      "system_stability": "high",
+      "selection_stability": "medium_high",
+      "preferred_systems": [
+        "4-2-3-1",
+        "4-3-3",
+        "4-5-1 defensive shell"
+      ],
+      "tournament_pragmatism": "high",
+      "summary": "Broos has built South Africa into a highly organized tournament side. The public official profile repeatedly stresses discipline, unity, and fearlessness, but the tactical base is still pragmatic: compact block first, controlled aggression second, and selective transition attacks third.",
+      "confidence": "high"
+    },
+    "team_shape": {
+      "nominal_formations": [
+        "4-2-3-1",
+        "4-3-3"
+      ],
+      "in_possession_shape": "Usually a back four with cautious support from the fullbacks, midfielders positioned for second balls and long switches, and a front line prepared to attack space early rather than sustain elaborate possession.",
+      "out_of_possession_shape": "Often a compact 4-5-1 or 4-1-4-1 defensive picture with disciplined horizontal spacing.",
+      "role_asymmetry": [
+        "The goalkeeper and center-backs are heavily responsible for calming pressure waves.",
+        "Midfield shape is chosen more for control, recovery, and tactical discipline than for artistic possession."
+      ],
+      "confidence": "high"
+    },
+    "key_roles": [
+      {
+        "role": "goalkeeper_leader",
+        "players": [
+          "Ronwen Williams"
+        ],
+        "note": "The team's most visible defensive leader and emotional stabilizer.",
+        "confidence": "high"
+      },
+      {
+        "role": "midfield_heartbeat",
+        "players": [
+          "Teboho Mokoena"
+        ],
+        "note": "Important for midfield intelligence, passing range, and set-piece quality.",
+        "confidence": "high"
+      },
+      {
+        "role": "wide_balance_and_delivery",
+        "players": [
+          "Aubrey Modiba",
+          "Oswin Appollis"
+        ],
+        "note": "Key pieces for width, transition release, and crossing or set-piece delivery support.",
+        "confidence": "medium_high"
+      },
+      {
+        "role": "forward_reference",
+        "players": [
+          "Lyle Foster",
+          "Evidence Makgopa"
+        ],
+        "note": "South Africa's striker role is less about glamour finishing and more about running, outlets, and making counterattacks live.",
+        "confidence": "medium"
+      },
+      {
+        "role": "experience_and_match_control",
+        "players": [
+          "Themba Zwane"
+        ],
+        "note": "Brings calmness and game-reading value in heavier tournament moments.",
+        "confidence": "medium_high"
+      }
+    ],
+    "phase_model": {
+      "attack": {
+        "summary": "South Africa are most comfortable attacking from compactness rather than from long sterile possession phases. Their offense comes alive through counters, wide releases, second balls, and dead-ball situations.",
+        "transition_attack": "medium_high",
+        "wide_attack": "medium",
+        "settled_attack_organization": "low_medium",
+        "set_piece_attack": "medium",
+        "tempo_preference": "medium_low_to_medium",
+        "notes": [
+          "The first goal is often to keep the game manageable before chasing expanded attacking volume.",
+          "Set pieces and long-range or second-phase attacks matter more than intricate central combinations."
+        ],
+        "confidence": "medium_high"
+      },
+      "defense": {
+        "summary": "South Africa defend with discipline, compactness, and goalkeeper leadership. They are built to survive long spells without the ball, though the cost can be limited open-play chance creation on the other side.",
+        "compact_block": "high",
+        "pressing": "medium",
+        "recovery_block": "high",
+        "center_back_protection": "medium_high",
+        "midfield_screen": "medium_high",
+        "fullback_space_risk": "medium",
+        "notes": [
+          "Broos does not need constant high pressing to make the team competitive.",
+          "The defensive identity is more about denying central access and forcing uncomfortable game scripts."
+        ],
+        "confidence": "high"
+      },
+      "set_pieces": {
+        "attack": "Set pieces are an important equalizer because they reduce the need for sustained open-play superiority.",
+        "defense": "The basic structure looks disciplined, but a fuller taker-target map is still missing.",
+        "confidence": "medium"
+      }
+    },
+    "coach_tendencies": {
+      "leading_adjustments": "When ahead, South Africa are likely to protect spacing, defensive shape, and emotional discipline before seeking extra attacking risk.",
+      "trailing_adjustments": "When trailing, Broos can add directness and more open-field running, but the team is still more likely to remain structurally honest than to become reckless.",
+      "substitution_resources": "medium",
+      "knockout_conservatism": "high",
+      "summary": "Broos is a classic tournament coach in this context: disciplined, opponent-aware, and more interested in match controllability than in cosmetic possession numbers.",
+      "confidence": "medium_high"
+    },
+    "model_features": {
+      "attack_ceiling": {
+        "value": "low_medium",
+        "confidence": "medium",
+        "note": "South Africa can create dangerous moments, but their highest level is still more situational than constant."
+      },
+      "defensive_floor": {
+        "value": "medium_high",
+        "confidence": "high",
+        "note": "Compactness, Williams, and Broos' structure give them a respectable floor."
+      },
+      "set_piece_attack": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "A practical support weapon, especially in tight matches."
+      },
+      "tempo_preference": {
+        "value": "medium_low_to_medium",
+        "confidence": "medium",
+        "note": "They prefer controlled, manageable rhythms unless transition moments invite more speed."
+      },
+      "transition_attack": {
+        "value": "medium",
+        "confidence": "medium_high",
+        "note": "Counters and second balls are more important than complex possession chains."
+      },
+      "transition_defense_risk": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "Risk is present if they are forced to chase and widen the match, but usually contained when the block stays intact."
+      },
+      "key_player_dependency": {
+        "value": "medium_high",
+        "confidence": "medium_high",
+        "note": "Williams and Mokoena are especially important for keeping the team coherent."
+      },
+      "market_relevant_flags": [
+        {
+          "factor": "Ronwen Williams availability and form",
+          "impact_area": "1x2/handicap/totals",
+          "note": "His presence materially affects South Africa's defensive floor."
+        },
+        {
+          "factor": "Mokoena set-piece and midfield control",
+          "impact_area": "handicap/totals",
+          "note": "He influences both transition resistance and dead-ball upside."
+        },
+        {
+          "factor": "whether the match stays compact",
+          "impact_area": "totals",
+          "note": "South Africa are more comfortable in low- to medium-event scripts than in stretched end-to-end games."
+        }
+      ]
+    },
+    "verification_questions": [
+      {
+        "claim_id": "rsa-001",
+        "claim": "South Africa's strongest identity is a compact tournament block rather than a proactive high-possession style.",
+        "confidence": "high",
+        "why_challengeable": "Needs broader event data across weaker-opponent samples where they may have had more of the ball.",
+        "challenge_type": "opponent_specific"
+      },
+      {
+        "claim_id": "rsa-002",
+        "claim": "Williams is the single biggest defensive-floor player in the squad.",
+        "confidence": "high",
+        "why_challengeable": "Should be tested against samples where midfield protection was stronger or weaker than usual.",
+        "challenge_type": "injury_dependency"
+      },
+      {
+        "claim_id": "rsa-003",
+        "claim": "South Africa's attack depends more on counters, second balls, and set pieces than on settled central creativity.",
+        "confidence": "medium_high",
+        "why_challengeable": "A wider structured sample may show more controlled-possession phases against lower blocks.",
+        "challenge_type": "small_sample"
+      }
+    ],
+    "completion_note": "Deep version completed to a usable handoff level, but packet remains partial pending fuller structured sample work and a complete set-piece map."
+  }
+}

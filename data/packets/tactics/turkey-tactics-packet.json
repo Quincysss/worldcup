@@ -1,0 +1,47 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:26:00+08:00",
+  "team": {"zh": "土耳其", "en": "Turkey", "fifa_code": "TUR", "group": "D"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {
+    "default": "4-2-3-1",
+    "alternates": ["4-3-3", "4-1-4-1"],
+    "confidence": "medium"
+  },
+  "phase_behaviour": {
+    "possession_structure": "Calhanoglu/Kokcu 负责节奏和传球，Arda Guler、Kenan Yildiz 提供最后三区创造力。",
+    "pressing_profile": "可前压，但若中场保护不稳，防线身后和肋部会暴露。",
+    "defensive_block": "需要更紧凑，尤其是定位球和二点球保护。",
+    "attacking_transition": "中高。年轻前场在空间里能制造威胁。",
+    "set_piece": "进攻脚法好，防守端风险更大。"
+  },
+  "coach_tendencies": {
+    "coach": "Vincenzo Montella",
+    "risk_appetite": "medium_high_when_chasing",
+    "substitution_pattern": "needs_recent_sample",
+    "game_state": "落后时容易加大进攻投入，模型要放大尾部风险和反击丢球风险。"
+  },
+  "key_roles": [
+    "Calhanoglu: 节奏、远射和定位球",
+    "Arda Guler: 创造力和最后一传",
+    "Kenan Yildiz: 边路/肋部突破",
+    "Baris Alper Yilmaz: 速度冲击",
+    "Demiral: 中卫对抗和情绪稳定"
+  ],
+  "post_round1_update": "0-2 输澳大利亚后，防守定位球、身体对抗和比赛管理下调；但技术上限仍不能低估。",
+  "tactical_risks": ["防守转换", "定位球防守", "身体对抗", "情绪波动", "年轻天赋被市场高估"],
+  "confidence_notes": {
+    "high": ["中前场技术上限", "定位球进攻脚法"],
+    "medium": ["压迫和控球结构", "首轮后调整"],
+    "low_or_missing": ["T-75m首发", "停赛和伤停", "官方技术报告"]
+  },
+  "handoff_to_model": {
+    "attack_ceiling": "medium_high",
+    "defensive_floor": "medium_low_if_set_piece_exposed",
+    "transition_attack": "medium_high",
+    "set_piece_attack": "medium_high",
+    "emotional_volatility": "high"
+  },
+  "handoff_to_red_team": ["年轻天赋是否被高估", "首轮失利后情绪风险", "定位球防守是否会连续失血"]
+}

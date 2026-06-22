@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T16:12:00+08:00",
+  "team": {"zh": "西班牙", "en": "Spain", "fifa_code": "ESP", "group": "H"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-3-3", "alternates": ["4-2-3-1", "4-1-4-1"], "confidence": "medium_high"},
+  "phase_behaviour": {
+    "possession_structure": "以 Rodri 为后场和中场之间的稳定轴，Pedri/Olmo 在肋部接球，Yamal 和 Nico Williams 拉开宽度后制造一对一。",
+    "pressing_profile": "丢球后第一反应是就地反抢，边锋和中锋负责压迫触发，中场靠距离控制压缩对手第一脚出球。",
+    "defensive_block": "阵地防守可回到 4-1-4-1，关键是边后卫压上后的身后保护和中卫面对长传的落点判断。",
+    "attacking_transition": "不是纯冲刺型反击队，但抢回球后能通过 Yamal/Nico 的第一脚向前快速把对手拉散。",
+    "set_piece": "脚法质量好，防守端要关注第二点和后点身体对抗。"
+  },
+  "coach_tendencies": {"coach": "Luis de la Fuente", "risk_appetite": "medium", "game_state": "对低位对手会持续控球和边路换位，但需要避免把节奏控成无效横传。"},
+  "tactical_risks": ["边后卫身后空间", "终结效率", "定位球防守对抗", "年轻边锋被包夹后的二次方案"],
+  "confidence_notes": {"high": ["控球结构", "边路一对一"], "medium": ["中锋终结", "防守转换"], "low_or_missing": ["T-75m首发", "伤停"]},
+  "handoff_to_model": {"attack_ceiling": "high", "defensive_floor": "medium_high", "transition_defense_risk": "medium", "set_piece": "medium"},
+  "handoff_to_red_team": ["热门溢价", "终结效率", "对佛得角反击和定位球的防守"]
+}

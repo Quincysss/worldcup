@@ -1,0 +1,385 @@
+{
+  "phase": "group_round_prediction",
+  "status": "pre_match_conditional_quant_revision",
+  "captured_at": "2026-06-20T20:55:00+08:00",
+  "group": "F",
+  "round": 2,
+  "scope": "F group round 2 quantitative revision after F group roster/player_state completion",
+  "previous_prediction_file": "data/outputs/match_predictions/f-group-round2-predictions.json",
+  "risk_gate": {
+    "lineups": "not_confirmed_T_minus_75m",
+    "injury_check": "public_sources_conflict_or_predicted_lineups_only",
+    "odds_snapshot": "public_sources_not_official_jingcai_not_full_same-source_1x2_handicap_totals",
+    "red_team_policy": "revise",
+    "purchase_language": "discussion_only"
+  },
+  "matches": [
+    {
+      "match": "Netherlands vs Sweden",
+      "date": "2026-06-20",
+      "factor_inputs": {
+        "baseline_strength": {
+          "Netherlands": 82,
+          "Sweden": 75,
+          "notes": "Netherlands retain deeper squad and market respect; Sweden upgraded after 5-1 but opponent-quality discount retained."
+        },
+        "attack": {
+          "Netherlands": 78,
+          "Sweden": 74,
+          "notes": "Sweden attack remains live through Isak/Gyokeres/Ayari, but previous Kulusevski-start assumption removed because local roster marks him absent from the 26."
+        },
+        "defense": {
+          "Netherlands": 71,
+          "Sweden": 68,
+          "notes": "Netherlands transition risk stayed elevated after the 2-2 Japan draw; Sweden have not earned a clean-sheet assumption."
+        },
+        "player_state": {
+          "Netherlands": 0.01,
+          "Sweden": 0.04,
+          "notes": "Sweden first-round form positive; Netherlands attacking ceiling retained but late-game management discounted."
+        },
+        "availability": {
+          "Netherlands": -0.04,
+          "Sweden": -0.03,
+          "notes": "Frenkie de Jong status has conflicting public signals; Sweden lose the old Kulusevski assumption but core striker pair remains available in current local packet."
+        },
+        "tactical_matchup": {
+          "Netherlands": -0.02,
+          "Sweden": 0.03,
+          "notes": "Sweden transition/direct two-striker pattern attacks a known Netherlands weakness; Netherlands still hold set-piece and ball-progression tools."
+        },
+        "schedule_environment": {
+          "Netherlands": 0,
+          "Sweden": 0,
+          "notes": "No decisive rest/travel/environment edge applied in this revision."
+        },
+        "market": {
+          "Netherlands": 0.03,
+          "Sweden": -0.02,
+          "notes": "Public market still favors Netherlands around the mid-50s after vig removal; model remains cooler than market."
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.28,
+        "attack": 0.18,
+        "defense": 0.16,
+        "player_state": 0.12,
+        "injury_availability": 0.1,
+        "tactical_matchup": 0.1,
+        "schedule_environment": 0.03,
+        "market_calibration": 0.03
+      },
+      "team_strength_score": {
+        "Netherlands": 76.4,
+        "Sweden": 72.1
+      },
+      "attack_score": {
+        "Netherlands": 78,
+        "Sweden": 74
+      },
+      "defense_score": {
+        "Netherlands": 71,
+        "Sweden": 68
+      },
+      "player_state_adjustment": {
+        "Netherlands": 0.01,
+        "Sweden": 0.04
+      },
+      "injury_adjustment": {
+        "Netherlands": -0.04,
+        "Sweden": -0.03
+      },
+      "tactical_matchup_adjustment": {
+        "Netherlands": -0.02,
+        "Sweden": 0.03
+      },
+      "schedule_environment_adjustment": {
+        "Netherlands": 0,
+        "Sweden": 0
+      },
+      "market_adjustment": {
+        "Netherlands": 0.03,
+        "Draw": 0,
+        "Sweden": -0.02
+      },
+      "expected_goals": {
+        "pre_market": {
+          "Netherlands": 1.5,
+          "Sweden": 1.24
+        },
+        "final": {
+          "Netherlands": 1.52,
+          "Sweden": 1.22
+        }
+      },
+      "poisson_score_matrix": {
+        "home_team": "Netherlands",
+        "away_team": "Sweden",
+        "probability_unit": "percent",
+        "scores_0_to_5": {
+          "0": {"0": 6.46, "1": 7.88, "2": 4.81, "3": 1.95, "4": 0.6, "5": 0.15},
+          "1": {"0": 9.81, "1": 11.97, "2": 7.3, "3": 2.97, "4": 0.91, "5": 0.22},
+          "2": {"0": 7.46, "1": 9.1, "2": 5.55, "3": 2.26, "4": 0.69, "5": 0.17},
+          "3": {"0": 3.78, "1": 4.61, "2": 2.81, "3": 1.14, "4": 0.35, "5": 0.09},
+          "4": {"0": 1.44, "1": 1.75, "2": 1.07, "3": 0.43, "4": 0.13, "5": 0.03},
+          "5": {"0": 0.44, "1": 0.53, "2": 0.32, "3": 0.13, "4": 0.04, "5": 0.01}
+        },
+        "matrix_mass": 99.36,
+        "tail_probability": 0.64
+      },
+      "probabilities_1x2": {
+        "poisson_raw": {
+          "Netherlands": 43.7,
+          "Draw": 25.3,
+          "Sweden": 30.4
+        },
+        "final": {
+          "Netherlands": 45,
+          "Draw": 26,
+          "Sweden": 29
+        }
+      },
+      "totals_probabilities": {
+        "over_2_5": 51,
+        "under_2_5": 48.4
+      },
+      "top_scorelines": [
+        {"score": "1-1", "probability": 11.97},
+        {"score": "1-0", "probability": 9.81},
+        {"score": "2-1", "probability": 9.1},
+        {"score": "0-1", "probability": 7.88},
+        {"score": "2-0", "probability": 7.46}
+      ],
+      "odds_implied_probability": {
+        "source": "RotoWire public odds snapshot/search snippet, captured 2026-06-20",
+        "vig_removed_reference": {
+          "Netherlands": 56,
+          "Draw": 24,
+          "Sweden": 20
+        }
+      },
+      "model_market_delta": {
+        "Netherlands": -11,
+        "Draw": 2,
+        "Sweden": 9
+      },
+      "red_team_status": "revise",
+      "final_probabilities": {
+        "Netherlands": 45,
+        "Draw": 26,
+        "Sweden": 29
+      },
+      "representative_score": "Netherlands 2-1 Sweden",
+      "confidence_interval": {
+        "Netherlands": [40, 50],
+        "Draw": [23, 29],
+        "Sweden": [25, 34]
+      },
+      "postmatch_error": null,
+      "parameter_updates": null
+    },
+    {
+      "match": "Tunisia vs Japan",
+      "date": "2026-06-20",
+      "factor_inputs": {
+        "baseline_strength": {
+          "Tunisia": 62,
+          "Japan": 76,
+          "notes": "Japan remain clearly stronger; Tunisia retain upset path through low block, set pieces, and new-coach bounce."
+        },
+        "attack": {
+          "Tunisia": 56,
+          "Japan": 72,
+          "notes": "Japan attack down from previous version because Kubo is listed as expected to miss with knee issue; Ito/Maeda/Ueda still give Japan enough routes."
+        },
+        "defense": {
+          "Tunisia": 55,
+          "Japan": 72,
+          "notes": "Tunisia defense heavily penalized after 1-5, but Renard appointment raises probability of a more conservative structure."
+        },
+        "player_state": {
+          "Tunisia": -0.05,
+          "Japan": 0.04,
+          "notes": "Japan 2-2 Netherlands is a positive signal; Tunisia morale and defensive structure remain fragile."
+        },
+        "availability": {
+          "Tunisia": 0,
+          "Japan": -0.07,
+          "notes": "No Tunisia injury table hit in latest RotoWire preview; Kubo knee flag reduces Japan creativity and set-piece quality."
+        },
+        "tactical_matchup": {
+          "Tunisia": 0.03,
+          "Japan": -0.03,
+          "notes": "Japan must solve a lower, more desperate block rather than transition against a favorite; Tunisia may compress space after coach change."
+        },
+        "schedule_environment": {
+          "Tunisia": 0,
+          "Japan": 0,
+          "notes": "No decisive environment edge applied."
+        },
+        "market": {
+          "Tunisia": -0.01,
+          "Japan": 0.03,
+          "notes": "Latest public prices are shorter on Japan than the old conservative sample, but model does not fully chase due Kubo and coach-change uncertainty."
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.28,
+        "attack": 0.18,
+        "defense": 0.16,
+        "player_state": 0.12,
+        "injury_availability": 0.1,
+        "tactical_matchup": 0.1,
+        "schedule_environment": 0.03,
+        "market_calibration": 0.03
+      },
+      "team_strength_score": {
+        "Tunisia": 58.9,
+        "Japan": 73.5
+      },
+      "attack_score": {
+        "Tunisia": 56,
+        "Japan": 72
+      },
+      "defense_score": {
+        "Tunisia": 55,
+        "Japan": 72
+      },
+      "player_state_adjustment": {
+        "Tunisia": -0.05,
+        "Japan": 0.04
+      },
+      "injury_adjustment": {
+        "Tunisia": 0,
+        "Japan": -0.07
+      },
+      "tactical_matchup_adjustment": {
+        "Tunisia": 0.03,
+        "Japan": -0.03
+      },
+      "schedule_environment_adjustment": {
+        "Tunisia": 0,
+        "Japan": 0
+      },
+      "market_adjustment": {
+        "Tunisia": -0.01,
+        "Draw": -0.01,
+        "Japan": 0.03
+      },
+      "expected_goals": {
+        "pre_market": {
+          "Tunisia": 0.78,
+          "Japan": 1.39
+        },
+        "final": {
+          "Tunisia": 0.76,
+          "Japan": 1.42
+        }
+      },
+      "poisson_score_matrix": {
+        "home_team": "Tunisia",
+        "away_team": "Japan",
+        "probability_unit": "percent",
+        "scores_0_to_5": {
+          "0": {"0": 11.3, "1": 16.05, "2": 11.4, "3": 5.39, "4": 1.92, "5": 0.54},
+          "1": {"0": 8.59, "1": 12.2, "2": 8.66, "3": 4.1, "4": 1.46, "5": 0.41},
+          "2": {"0": 3.26, "1": 4.64, "2": 3.29, "3": 1.56, "4": 0.55, "5": 0.16},
+          "3": {"0": 0.83, "1": 1.17, "2": 0.83, "3": 0.39, "4": 0.14, "5": 0.04},
+          "4": {"0": 0.16, "1": 0.22, "2": 0.16, "3": 0.07, "4": 0.03, "5": 0.01},
+          "5": {"0": 0.02, "1": 0.03, "2": 0.02, "3": 0.01, "4": 0, "5": 0}
+        },
+        "matrix_mass": 99.64,
+        "tail_probability": 0.36
+      },
+      "probabilities_1x2": {
+        "poisson_raw": {
+          "Tunisia": 20,
+          "Draw": 27.2,
+          "Japan": 52.4
+        },
+        "final": {
+          "Tunisia": 19,
+          "Draw": 27,
+          "Japan": 54
+        }
+      },
+      "totals_probabilities": {
+        "over_2_5": 36.8,
+        "under_2_5": 62.8
+      },
+      "top_scorelines": [
+        {"score": "0-1", "probability": 16.05},
+        {"score": "1-1", "probability": 12.2},
+        {"score": "0-2", "probability": 11.4},
+        {"score": "0-0", "probability": 11.3},
+        {"score": "1-2", "probability": 8.66}
+      ],
+      "odds_implied_probability": {
+        "source": "RotoWire odds table, captured 2026-06-20",
+        "sample_books": {
+          "BetMGM": {"Tunisia": 475, "Draw": 290, "Japan": -175},
+          "DraftKings": {"Tunisia": 500, "Draw": 300, "Japan": -170},
+          "FanDuel": {"Tunisia": 500, "Draw": 290, "Japan": -175},
+          "bet365": {"Tunisia": 525, "Draw": 290, "Japan": -175},
+          "Kalshi": {"Tunisia": 527, "Draw": 295, "Japan": -183}
+        },
+        "vig_removed_reference": {
+          "Tunisia": 16,
+          "Draw": 24,
+          "Japan": 60
+        }
+      },
+      "model_market_delta": {
+        "Tunisia": 3,
+        "Draw": 3,
+        "Japan": -6
+      },
+      "red_team_status": "revise",
+      "final_probabilities": {
+        "Tunisia": 19,
+        "Draw": 27,
+        "Japan": 54
+      },
+      "representative_score": "Tunisia 1-2 Japan",
+      "confidence_interval": {
+        "Tunisia": [16, 23],
+        "Draw": [24, 30],
+        "Japan": [49, 59]
+      },
+      "postmatch_error": null,
+      "parameter_updates": null
+    }
+  ],
+  "red_team_review": {
+    "verdict": "revise",
+    "top_concerns": [
+      "Official T-75m lineups are not confirmed.",
+      "Frenkie de Jong status has conflicting public signals.",
+      "Kubo knee flag materially affects Japan's low-block breaking quality.",
+      "Tunisia coach-change effect is hard to price from one week of evidence.",
+      "Poisson matrix underweights red cards, early goals, and state-dependent tactical shifts."
+    ],
+    "recommended_probability_adjustment": "Keep favorites as first directions but widen uncertainty bands and avoid executable betting language."
+  },
+  "quality_notes": [
+    "This file is the 2026-06-20 quantitative revision, not the original 2026-06-17 prediction.",
+    "Odds are public market references, not official竞彩 and not a same-source 1X2/handicap/totals snapshot.",
+    "Use discussion_only until official lineups, latest injury checks, and market snapshots are complete."
+  ],
+  "sources": [
+    "E:/worldcup/比赛/未开始比赛/小组赛/F组/F组第二轮预测汇总.md",
+    "E:/worldcup/比赛/已完成比赛/小组赛/F组/F组第一轮赛后复盘.md",
+    "E:/worldcup/data/packets/rosters/netherlands-roster.json",
+    "E:/worldcup/data/packets/rosters/japan-roster.json",
+    "E:/worldcup/data/packets/rosters/sweden-roster.json",
+    "E:/worldcup/data/packets/rosters/tunisia-roster.json",
+    "https://www.rotowire.com/soccer/article/netherlands-vs-sweden-picks-tips-odds-best-bets-2026-world-cup-group-f-118925",
+    "https://www.standard.co.uk/sport/football/netherlands-vs-sweden-lineups-predicted-xi-confirmed-team-news-injury-latest-world-cup-2026-b1286828.html",
+    "https://www.barcablaugranes.com/world-cup-2026/124074/frenkie-de-jong-a-fitness-doubt-for-the-netherlands-as-ronald-koeman-offers-update-on-barcelona-star",
+    "https://www.rotowire.com/soccer/article/tunisia-vs-japan-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-f-118802"
+  ],
+  "files_written": [
+    "比赛/未开始比赛/小组赛/F组/F组第二轮预测_20260620量化修订.md",
+    "data/outputs/match_predictions/f-group-round2-quant-revision-20260620.json"
+  ]
+}

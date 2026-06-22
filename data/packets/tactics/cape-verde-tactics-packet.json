@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T16:12:00+08:00",
+  "team": {"zh": "佛得角", "en": "Cape Verde", "fifa_code": "CPV", "group": "H"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-3-3", "alternates": ["4-2-3-1", "5-4-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "面对强队时大概率减少后场冒险，优先把球送到边路或前场支点，争取第二点和定位球。",
+    "pressing_profile": "更可能是中低位压迫，选择边线和回传作为触发点，避免被西班牙中场连续穿透。",
+    "defensive_block": "低位时需要两条线紧凑，边锋回撤保护边后卫，防守重心在限制 Yamal/Nico 的接球方向。",
+    "attacking_transition": "主要武器是 Garry Rodrigues、Jovane Cabral、Ryan Mendes 的第一波速度和弱侧跑动。",
+    "set_piece": "定位球是缩小实力差距的关键窗口，Logan Costa 等高点有价值。"
+  },
+  "coach_tendencies": {"coach": "Bubista / Pedro Leitao", "risk_appetite": "low_to_medium", "game_state": "首要目标是把比赛拖进低节奏和低空间环境，再通过转换寻找机会。"},
+  "tactical_risks": ["长时间无球导致体能下滑", "边路连续被一对一压制", "落后后阵地战办法不足", "门将和中卫出球被压迫"],
+  "confidence_notes": {"high": ["反击思路", "低位需求"], "medium": ["定位球威胁"], "low_or_missing": ["最终首发", "伤停和体能"]},
+  "handoff_to_model": {"attack_ceiling": "medium_low", "defensive_floor": "medium", "transition_defense_risk": "medium_high", "set_piece": "medium"},
+  "handoff_to_red_team": ["首次世界杯情绪是否被高估", "是否能承受西班牙连续压迫", "阵容深度和替补质量"]
+}

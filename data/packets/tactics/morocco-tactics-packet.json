@@ -1,0 +1,202 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Morocco",
+    "en": "Morocco",
+    "fifa_code": "MAR",
+    "group": "C"
+  },
+  "match": null,
+  "status": "deep_partial",
+  "created_at": "2026-06-12T19:34:00+08:00",
+  "updated_at": "2026-06-15T09:18:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Morocco tactical and coaching team_profile only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "confirmed set-piece taker map",
+    "clean structured sample under current coach",
+    "fresh injury and suspension refresh"
+  ],
+  "source_log": [
+    {
+      "source": "local team packet",
+      "url": "K:\\worldcup\\data\\packets\\teams\\morocco-team-packet.json",
+      "note": "Local context exists but includes malformed JSON/encoding damage in current copy."
+    },
+    {
+      "source": "local source log",
+      "url": "K:\\worldcup\\data\\source_logs\\morocco-team-source-log.json",
+      "note": "Fixture, coach-context, and source trace reference."
+    }
+  ],
+  "notes": [
+    "Rewritten into stable parseable JSON after malformed content was detected.",
+    "No score prediction, group projection, champion projection, or betting advice."
+  ],
+  "data": {
+    "coach_profile": {
+      "coach": "Mohamed Ouahbi",
+      "default_formation": "4-3-3",
+      "alternate_formation": [
+        "4-2-3-1",
+        "5-4-1 defensive shell"
+      ],
+      "system_stability": "medium",
+      "tournament_pragmatism": "high",
+      "summary": "Morocco's identity still points toward compact defending, strong wing progression, and dangerous transition moments. The main uncertainty is how much of the old tournament structure cleanly carries into the current coaching sample."
+    },
+    "possession_structure": {
+      "summary": "Morocco do not need territorial dominance. Their controlled possession is most useful when it frees Hakimi or another wide carrier and creates half-space touches for Brahim Diaz or Ziyech-type creators.",
+      "build_up": "Back four base with midfield security behind aggressive wing progression.",
+      "central_control_level": "medium",
+      "width_usage": "high",
+      "confidence": "medium"
+    },
+    "pressing_profile": {
+      "summary": "Morocco can press in bursts, but the stronger identity remains compactness and well-timed jumps rather than full-match chaos.",
+      "press_height": "medium",
+      "press_orientation": "hybrid_and_trigger_based",
+      "counterpress_level": "medium",
+      "confidence": "medium"
+    },
+    "defensive_block": {
+      "summary": "This is the team's clearest stable strength. Morocco are comfortable compressing central space, defending physically, and asking opponents to beat them with patient precision.",
+      "line_height": "medium_low",
+      "compactness": "high",
+      "central_screen_quality": "high",
+      "fullback_space_risk": "medium",
+      "confidence": "high"
+    },
+    "attacking_transition": {
+      "summary": "Morocco remain dangerous when the first escape pass is clean and the wide runners can attack recovering defenders before the block resets.",
+      "speed": "high",
+      "primary_outlets": [
+        "Achraf Hakimi",
+        "Brahim Diaz",
+        "Hakim Ziyech",
+        "Youssef En-Nesyri"
+      ],
+      "confidence": "medium_high"
+    },
+    "defensive_transition": {
+      "summary": "The team can usually recover shape well, but wing-back or fullback aggression still creates moments where the far side has to be protected quickly.",
+      "rest_defense_quality": "medium_high",
+      "recovery_risk": "medium",
+      "confidence": "medium"
+    },
+    "set_piece_attack": {
+      "summary": "Morocco have enough aerial ability and delivery quality to treat set pieces as a real support weapon.",
+      "threat_level": "medium_high",
+      "confidence": "medium"
+    },
+    "set_piece_defense": {
+      "summary": "Usually reliable because of size, organization, and goalkeeper quality, but final matchup confidence still needs a current taker-target map.",
+      "stability": "medium_high",
+      "confidence": "medium"
+    },
+    "game_state_behaviour": {
+      "leading": "Morocco are comfortable lowering tempo and protecting space once ahead.",
+      "trailing": "When chasing, they can push the fullbacks higher and ask more from half-space creators, but the game opens against them at the same time.",
+      "confidence": "medium"
+    },
+    "substitution_tendency": {
+      "summary": "Bench changes are more likely to refresh pace, ball carrying, or central creativity than to completely change the defensive identity.",
+      "resource_type": "pace_and_wide_pressure",
+      "confidence": "medium"
+    },
+    "key_player_roles": [
+      {
+        "role": "right_side_engine",
+        "players": [
+          "Achraf Hakimi"
+        ],
+        "note": "The biggest field-tilter in both progression and transition."
+      },
+      {
+        "role": "between_lines_creator",
+        "players": [
+          "Brahim Diaz",
+          "Hakim Ziyech"
+        ],
+        "note": "Important for unlocking matches when the game slows down."
+      },
+      {
+        "role": "midfield_screen",
+        "players": [
+          "Sofyan Amrabat"
+        ],
+        "note": "Key to preserving defensive compactness and protecting the center."
+      },
+      {
+        "role": "box_reference",
+        "players": [
+          "Youssef En-Nesyri"
+        ],
+        "note": "Useful as a runner, target, and penalty-box focal point."
+      },
+      {
+        "role": "goalkeeping_floor",
+        "players": [
+          "Yassine Bounou"
+        ],
+        "note": "Raises the defensive floor in close, low-event matches."
+      }
+    ],
+    "tactical_risks": [
+      "too much reliance on transition moments if forced into long settled attacks",
+      "space behind advanced wide defenders",
+      "uncertainty around tactical continuity under the current coach",
+      "reduced margin if the central screen loses duels"
+    ],
+    "first_matchday_adjustment_watch": {
+      "summary": "The first strong opponent sample should tell us whether Morocco can still defend elite attacks without sacrificing their own transition outlet quality.",
+      "confidence": "medium"
+    },
+    "data_gaps": [
+      "malformed local team packet limits clean extraction",
+      "current-coach sample size still feels thin",
+      "need confirmed set-piece roles",
+      "need fresh availability update"
+    ],
+    "confidence_notes": [
+      {
+        "topic": "defensive compactness",
+        "confidence": "high",
+        "reason": "This is the most repeatable identity trait across Morocco's relevant competitive samples."
+      },
+      {
+        "topic": "settled attack ceiling",
+        "confidence": "medium_low",
+        "reason": "Needs more current evidence when Morocco are forced to dominate weaker opponents."
+      },
+      {
+        "topic": "coach-continuity assumption",
+        "confidence": "medium",
+        "reason": "Core structure is plausible, but exact current coaching adaptations still need cleaner samples."
+      }
+    ],
+    "handoff_to_model": {
+      "attack_ceiling": "medium_high",
+      "defensive_floor": "high",
+      "set_piece_attack": "medium_high",
+      "tempo_preference": "medium_low_to_medium",
+      "transition_attack": "high",
+      "transition_defense_risk": "medium",
+      "key_player_dependency": "high_on_hakimi_amrabat_bounou",
+      "market_relevant_flags": [
+        "Morocco can drag stronger opponents into low-event matches",
+        "If forced to chase early, the game becomes more open than their ideal script",
+        "Hakimi's role materially changes both progression and counter threat"
+      ]
+    },
+    "handoff_to_red_team": {
+      "challenge_points": [
+        "Are we carrying too much 2022 memory into the current coach context?",
+        "Does Morocco create enough from settled attacks against low blocks?",
+        "If Amrabat or Bounou are compromised, does the defensive floor fall faster than assumed?"
+      ],
+      "priority": "high"
+    }
+  }
+}

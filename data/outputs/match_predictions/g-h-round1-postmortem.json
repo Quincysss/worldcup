@@ -1,0 +1,210 @@
+{
+  "phase": "post_match_review",
+  "status": "completed_deep_review",
+  "captured_at": "2026-06-17T15:35:00+08:00",
+  "scope": "Groups G and H round 1 deep prediction review with betting process correction",
+  "quality_notes": {
+    "subagents_used": true,
+    "subagent_roles": [
+      "G group tactical/model review",
+      "H group tactical/model review",
+      "red-team betting process review",
+      "data collection agent attempted but failed with transport error"
+    ],
+    "fact_handling": "Subagent outputs were treated as draft evidence; conflicting scorers/timelines were rechecked by the main thread before writing.",
+    "missing_data": [
+      "full official xG for all four matches",
+      "complete opening-to-closing odds time series",
+      "China Sports Lottery official historical odds for these fixtures"
+    ]
+  },
+  "matches": [
+    {
+      "group": "G",
+      "match": "Belgium vs Egypt",
+      "postmortem_file": "K:/worldcup/比赛/已完成比赛/小组赛/G组/2026-06-15_比利时_1-1_埃及_复盘.md",
+      "prediction": {
+        "score": "Belgium 2-1 Egypt",
+        "lean": "Belgium win",
+        "probabilities": {
+          "Belgium": 52,
+          "Draw": 26,
+          "Egypt": 22
+        },
+        "status_at_prediction": "pre_match_partial"
+      },
+      "actual": {
+        "score": "Belgium 1-1 Egypt",
+        "outcome": "Draw"
+      },
+      "outcome_hit": false,
+      "score_hit": false,
+      "model_errors": [
+        "Belgium attack ceiling was mistaken for attack reliability",
+        "Egypt transition threat was described but not priced into the final probability distribution",
+        "draw protection was too low for a favorite-vs-low-block first-round match",
+        "red-team hold/revise gates did not block an executable favorite lean"
+      ],
+      "betting_errors": [
+        "favorite win was allowed as the main actionable direction despite unresolved lineup and odds gates",
+        "no complete verified odds snapshot was captured before giving conditional betting language",
+        "draw and handicap protection were not elevated enough for the user-facing recommendation"
+      ],
+      "next_adjustments": [
+        "lower Belgium win conversion",
+        "raise Belgium transition-defense risk",
+        "raise Egypt counterattack weight",
+        "raise draw baseline",
+        "block main-pick language when red-team status is hold or revise"
+      ]
+    },
+    {
+      "group": "G",
+      "match": "Iran vs New Zealand",
+      "postmortem_file": "K:/worldcup/比赛/已完成比赛/小组赛/G组/2026-06-15_伊朗_2-2_新西兰_复盘.md",
+      "prediction": {
+        "score": "Iran 1-0 New Zealand",
+        "lean": "Iran win",
+        "probabilities": {
+          "Iran": 47,
+          "Draw": 30,
+          "New Zealand": 23
+        },
+        "status_at_prediction": "pre_match_partial"
+      },
+      "actual": {
+        "score": "Iran 2-2 New Zealand",
+        "outcome": "Draw"
+      },
+      "outcome_hit": false,
+      "score_hit": false,
+      "model_errors": [
+        "New Zealand attack ceiling was underweighted",
+        "Chris Wood support value was treated too narrowly as set-piece/long-ball value",
+        "Iran defensive floor against direct play was overestimated",
+        "total-goal distribution was too low"
+      ],
+      "betting_errors": [
+        "Iran win and low-score narratives were too tightly linked",
+        "high-scoring draw tail was underweighted"
+      ],
+      "next_adjustments": [
+        "raise New Zealand open-play threat",
+        "raise second-ball and support-run impact around Wood",
+        "lower Iran clean-sheet probability",
+        "widen total-goal distribution"
+      ]
+    },
+    {
+      "group": "H",
+      "match": "Spain vs Cape Verde",
+      "postmortem_file": "K:/worldcup/比赛/已完成比赛/小组赛/H组/2026-06-15_西班牙_0-0_佛得角_复盘.md",
+      "prediction": {
+        "score": "Spain 2-0 Cape Verde",
+        "lean": "Spain win",
+        "probabilities": {
+          "Spain": 66,
+          "Draw": 21,
+          "Cape Verde": 13
+        },
+        "status_at_prediction": "pre_match_partial"
+      },
+      "actual": {
+        "score": "Spain 0-0 Cape Verde",
+        "outcome": "Draw"
+      },
+      "outcome_hit": false,
+      "score_hit": false,
+      "model_errors": [
+        "possession and pass volume were over-converted into goal expectation",
+        "Cape Verde defensive floor and emotional first-World-Cup boost were underweighted",
+        "draw probability was too low for a deep-block first-round match",
+        "goalkeeper/block variance was underweighted"
+      ],
+      "betting_errors": [
+        "conditional Spain betting language remained too strong without full live odds and lineup confirmation",
+        "deep handicap risk was mentioned but not fully converted into a no-bet gate"
+      ],
+      "next_adjustments": [
+        "lower Spain low-block conversion reliability",
+        "raise Cape Verde defensive floor",
+        "raise low-score draw tail",
+        "separate process dominance from 1X2 result probability"
+      ]
+    },
+    {
+      "group": "H",
+      "match": "Saudi Arabia vs Uruguay",
+      "postmortem_file": "K:/worldcup/比赛/已完成比赛/小组赛/H组/2026-06-15_沙特_1-1_乌拉圭_复盘.md",
+      "prediction": {
+        "score": "Saudi Arabia 0-1 Uruguay",
+        "lean": "Uruguay win",
+        "probabilities": {
+          "Saudi Arabia": 21,
+          "Draw": 29,
+          "Uruguay": 50
+        },
+        "status_at_prediction": "pre_match_partial"
+      },
+      "actual": {
+        "score": "Saudi Arabia 1-1 Uruguay",
+        "outcome": "Draw"
+      },
+      "outcome_hit": false,
+      "score_hit": false,
+      "model_errors": [
+        "Uruguay physical and pressing advantage was over-converted into win probability",
+        "Saudi set-piece and second-ball routes were underweighted",
+        "Uruguay control after game-state changes was overestimated",
+        "draw probability was still too low despite the narrow-score script"
+      ],
+      "betting_errors": [
+        "Uruguay win remained the main direction even though the written script was narrow and volatile",
+        "Saudi handicap and draw protection should have been higher priority"
+      ],
+      "next_adjustments": [
+        "lower Uruguay clean-sheet and win-conversion probability",
+        "raise Saudi resilience and set-piece threat",
+        "avoid binding Uruguay win to under/low-score narratives",
+        "downgrade deep Uruguay handicap credibility"
+      ]
+    }
+  ],
+  "aggregate": {
+    "matches_reviewed": 4,
+    "outcome_hits": 0,
+    "score_hits": 0,
+    "all_actual_outcomes": "draw",
+    "main_calibration_issue": "favorite process dominance was converted too easily into favorite win probability",
+    "betting_process_issue": "risk notes did not operate as hard gates against actionable favorite picks",
+    "rules_now_active": [
+      "No main-pick language when prediction status is pre_match_partial and key lineup/odds variables are unresolved.",
+      "No executable handicap or 1X2 advice without a complete odds snapshot.",
+      "If red-team verdict is hold or revise, output risk ranking or no-bet until gates are cleared.",
+      "Raise draw baseline for first-round favorite-vs-low-block matches.",
+      "Separate process dominance from result conversion."
+    ]
+  },
+  "files_written": [
+    "比赛/已完成比赛/小组赛/G组/2026-06-15_比利时_1-1_埃及_复盘.md",
+    "比赛/已完成比赛/小组赛/G组/2026-06-15_伊朗_2-2_新西兰_复盘.md",
+    "比赛/已完成比赛/小组赛/G组/G组第一轮复盘.md",
+    "比赛/已完成比赛/小组赛/H组/2026-06-15_西班牙_0-0_佛得角_复盘.md",
+    "比赛/已完成比赛/小组赛/H组/2026-06-15_沙特_1-1_乌拉圭_复盘.md",
+    "比赛/已完成比赛/小组赛/H组/H组第一轮复盘.md",
+    "data/outputs/betting_risk/g-h-round1-process-correction.md",
+    "data/outputs/match_predictions/g-h-round1-postmortem.json"
+  ],
+  "source_urls": [
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-egypt-highlights-match-report",
+    "https://www.espn.com/soccer/match/_/gameId/760426/egypt-belgium",
+    "https://apnews.com/article/world-cup-belgium-egypt-score-9d8e0dbc29d07c21d9821ae9d3f9b4f5",
+    "https://www.aljazeera.com/sports/liveblog/2026/6/15/live-iran-v-new-zealand-fifa-world-cup-2026",
+    "https://www.espn.com/soccer/match/_/gameId/760427/new-zealand-iran",
+    "https://www.cbssports.com/soccer/news/iran-vs-new-zealand-odds-fifa-world-cup-2026-prediction-picks-june-15-best-bets-from-proven-soccer-insider/",
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-cabo-verde-highlights-match-report",
+    "https://www.espn.com/soccer/story/_/id/49077523/fifa-world-cup-2026-stats-june-15-day-wc-draws-spain-734-south-america-0-4",
+    "https://apnews.com/article/world-cup-spain-cape-verde-score-2d283e8e8a28032cca0e59bfdffa176e",
+    "https://apnews.com/article/world-cup-saudi-arabia-uruguay-score-f280fe0d5161f48f9d9b81477cd2129e"
+  ]
+}

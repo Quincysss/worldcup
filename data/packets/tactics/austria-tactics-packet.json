@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:28:00+08:00",
+  "team": {"zh": "奥地利", "en": "Austria", "fifa_code": "AUT", "group": "J"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-4-2", "4-3-3"], "confidence": "medium_high"},
+  "phase_behaviour": {
+    "possession_structure": "Rangnick 的奥地利不追求长时间装饰性控球，更重视纵向推进、二点回收和压迫后的快速进攻。",
+    "pressing_profile": "高位压迫和反抢是核心，Laimer、Sabitzer、Seiwald 负责把比赛压成高节奏对抗。",
+    "defensive_block": "压迫被绕过后需要中卫速度和后腰补位，Alaba 若健康会提升出球和防线指挥。",
+    "attacking_transition": "抢下球后直接找 Baumgartner、Sabitzer 和中锋点，强调禁区前沿的快速射门和二次进攻。",
+    "set_piece": "定位球脚法与高点不错，对约旦这种低位队是重要破局手段。"
+  },
+  "coach_tendencies": {"coach": "Ralf Rangnick", "risk_appetite": "medium_high", "game_state": "对弱势队会主动提高压迫和节奏，但领先后仍要防止压迫惯性留下身后空间。"},
+  "tactical_risks": ["压迫背后空间", "Alaba 健康", "低位破局效率", "前锋终结波动"],
+  "confidence_notes": {"high": ["压迫身份", "中场强度"], "medium": ["破低位效率", "防线健康"], "low_or_missing": ["Alaba 状态", "T-75m首发"]},
+  "handoff_to_model": {"attack_ceiling": "medium_high", "defensive_floor": "medium_high", "transition_defense_risk": "medium", "set_piece": "medium_high"},
+  "handoff_to_red_team": ["战术热度是否高估了进球兑现", "约旦低位和反击路径", "Alaba 缺阵时防线组织"]
+}

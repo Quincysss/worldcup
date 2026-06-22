@@ -1,0 +1,25 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T16:08:00+08:00",
+  "scope": "H组乌拉圭队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "乌拉圭", "en": "Uruguay", "fifa_code": "URU", "group": "H", "confederation": "CONMEBOL"},
+  "source_log_path": "K:/worldcup/data/source_logs/uruguay-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["沙特 vs 乌拉圭", "佛得角 vs 乌拉圭", "乌拉圭 vs 西班牙"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Marcelo Bielsa", "team_identity": "南美高强度压迫队，身体、跑动、转换和中场硬度都很强，风险在于高线和情绪成本。", "likely_structure": ["4-3-3", "4-2-3-1"]},
+  "core_players_watch": [
+    {"player": "Federico Valverde", "role": "中场覆盖、推进、远射和攻防转换核心"},
+    {"player": "Darwin Nunez", "role": "纵深冲刺、压迫和禁区威胁"},
+    {"player": "Ronald Araujo", "role": "后防速度、对抗和右中卫/边路保护"},
+    {"player": "Manuel Ugarte", "role": "抢断、压迫覆盖和中场屏障"},
+    {"player": "Rodrigo Bentancur", "role": "节奏连接、推进和中场经验"},
+    {"player": "Jose Maria Gimenez", "role": "防线领袖、空中对抗和定位球"},
+    {"player": "Nicolas de la Cruz", "role": "前场压迫、连接和定位球"},
+    {"player": "Facundo Pellistri", "role": "边路纵深和无球冲刺"}
+  ],
+  "strengths": ["压迫强度", "中场硬度", "身体对抗", "转换速度", "定位球对抗", "南美大赛气质"],
+  "risks": ["Bielsa 高线身后空间", "体能消耗", "牌数风险", "中卫健康", "Darwin Nunez 机会转化波动"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "乌拉圭强度容易获得模型青睐，但若盘口过深，要复核体能、牌数和高线风险。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

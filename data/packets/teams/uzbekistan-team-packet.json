@@ -1,0 +1,23 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:48:00+08:00",
+  "scope": "K组乌兹别克斯坦队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "乌兹别克斯坦", "en": "Uzbekistan", "fifa_code": "UZB", "group": "K", "confederation": "AFC"},
+  "source_log_path": "K:/worldcup/data/source_logs/uzbekistan-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["乌兹别克斯坦 vs 哥伦比亚", "葡萄牙 vs 乌兹别克斯坦", "刚果金 vs 乌兹别克斯坦"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Fabio Cannavaro", "team_identity": "首次世界杯语境下的亚洲体系型球队，纪律、身体和中后场潜力不错，但世界杯经验和进攻上限需要复核。", "likely_structure": ["3-4-2-1", "5-4-1", "4-2-3-1"]},
+  "core_players_watch": [
+    {"player": "Abdukodir Khusanov", "role": "中卫速度、对抗和防线上限"},
+    {"player": "Eldor Shomurodov", "role": "中锋支点、终结和反击接应"},
+    {"player": "Abbosbek Fayzullaev", "role": "前场创造、持球推进和定位球"},
+    {"player": "Jaloliddin Masharipov", "role": "边路经验、传中和定位球"},
+    {"player": "Otabek Shukurov", "role": "中场平衡、对抗和第一脚出球"},
+    {"player": "Utkir Yusupov", "role": "门将稳定和禁区指挥"}
+  ],
+  "strengths": ["防守纪律", "中卫天赋", "反击支点", "团队跑动", "首次世界杯动能"],
+  "risks": ["世界杯经验不足", "面对哥伦比亚边路压迫出球困难", "进攻创造稳定性", "落后后追分方案", "边翼卫身后空间"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "乌兹别克斯坦可能被市场按首次参赛低估，但对哥伦比亚时必须确认抗压出球能力。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI", "Cannavaro tactical setup"]}
+}

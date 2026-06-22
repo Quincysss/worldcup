@@ -1,0 +1,101 @@
+{
+  "model_scope": "H group round 1 match predictions, group qualification initial projection, and market-risk notes",
+  "captured_at": "2026-06-15T17:05:00+08:00",
+  "model_version": "worldcup-simple-strength-v0.3",
+  "input_readiness": {
+    "label": "partial",
+    "available_inputs": ["team profiles", "tactical packets", "model briefs", "red-team reviews", "public pre-match news snippets"],
+    "missing_or_stale_inputs": ["official T-75m lineups", "fresh complete bookmaker odds snapshot", "same-day injury confirmation", "official match-centre final status"],
+    "uncertainty_flags": ["Spain possible rotation", "Uruguay travel disruption", "Saudi goalkeeper choice", "Cape Verde first World Cup variance"]
+  },
+  "method": {
+    "baseline": "qualitative strength tier plus tactical matchup adjustment",
+    "adjustments": ["rotation", "pressing mismatch", "set-piece risk", "travel/rest disruption", "market bias warning"],
+    "odds_treatment": "No complete verified live odds snapshot captured; market notes are conditional, not bookmaker-specific.",
+    "confidence_policy": "Probabilities are rounded to avoid false precision."
+  },
+  "matches": [
+    {
+      "match": "Spain vs Cape Verde",
+      "stage": "group_stage_round1",
+      "group": "H",
+      "captured_at": "2026-06-15T17:05:00+08:00",
+      "input_readiness": "partial",
+      "model_version": "worldcup-simple-strength-v0.3",
+      "probabilities": {
+        "team_a_win": 0.66,
+        "draw": 0.21,
+        "team_b_win": 0.13,
+        "team_a_advance": null,
+        "team_b_advance": null
+      },
+      "expected_goals": {"team_a": 1.85, "team_b": 0.55},
+      "scoreline_modes": ["2-0", "1-0", "2-1"],
+      "headline_pick": "Spain 2-0 Cape Verde",
+      "confidence": "medium_low",
+      "main_drivers": ["Spain midfield control", "Spain counterpress", "Cape Verde low-block resistance", "possible Spain wing rotation"],
+      "risk_flags": ["favorite tax", "low-block finishing variance", "set-piece upset path", "official lineups pending"],
+      "market_comparison": {
+        "included": false,
+        "bookmakers": [],
+        "market_implied": {},
+        "model_minus_market": {},
+        "overround": null,
+        "notes": "Conditional lean only: Spain direction near AH -1.25; avoid chasing -1.75 or deeper without strong lineup confirmation."
+      },
+      "source_dependencies": [
+        "K:/worldcup/data/packets/teams/spain-team-packet.json",
+        "K:/worldcup/data/packets/teams/cape-verde-team-packet.json",
+        "K:/worldcup/data/packets/tactics/spain-tactics-packet.json",
+        "K:/worldcup/data/packets/tactics/cape-verde-tactics-packet.json"
+      ]
+    },
+    {
+      "match": "Saudi Arabia vs Uruguay",
+      "stage": "group_stage_round1",
+      "group": "H",
+      "captured_at": "2026-06-15T17:05:00+08:00",
+      "input_readiness": "partial",
+      "model_version": "worldcup-simple-strength-v0.3",
+      "probabilities": {
+        "team_a_win": 0.21,
+        "draw": 0.29,
+        "team_b_win": 0.50,
+        "team_a_advance": null,
+        "team_b_advance": null
+      },
+      "expected_goals": {"team_a": 0.72, "team_b": 1.35},
+      "scoreline_modes": ["0-1", "1-1", "0-2"],
+      "headline_pick": "Saudi Arabia 0-1 Uruguay",
+      "confidence": "medium_low",
+      "main_drivers": ["Uruguay midfield pressure", "Uruguay set-piece and duel edge", "Saudi counterattack path", "Uruguay travel disruption"],
+      "risk_flags": ["travel disruption", "Bielsa high-line tail risk", "card risk", "official lineups pending"],
+      "market_comparison": {
+        "included": false,
+        "bookmakers": [],
+        "market_implied": {},
+        "model_minus_market": {},
+        "overround": null,
+        "notes": "Conditional lean only: Uruguay direction near AH -0.75; avoid -1.25 or deeper. Totals lean under at 2.5/2.75 or higher."
+      },
+      "source_dependencies": [
+        "K:/worldcup/data/packets/teams/saudi-arabia-team-packet.json",
+        "K:/worldcup/data/packets/teams/uruguay-team-packet.json",
+        "K:/worldcup/data/packets/tactics/saudi-arabia-tactics-packet.json",
+        "K:/worldcup/data/packets/tactics/uruguay-tactics-packet.json"
+      ]
+    }
+  ],
+  "group_projection": {
+    "group": "H",
+    "simulation_runs": null,
+    "teams": [
+      {"team": "Spain", "avg_points": null, "finish_1st": 0.55, "finish_2nd": 0.29, "finish_3rd": 0.12, "finish_4th": 0.04, "advance_probability": 0.94},
+      {"team": "Uruguay", "avg_points": null, "finish_1st": 0.31, "finish_2nd": 0.39, "finish_3rd": 0.22, "finish_4th": 0.08, "advance_probability": 0.82},
+      {"team": "Cape Verde", "avg_points": null, "finish_1st": 0.08, "finish_2nd": 0.19, "finish_3rd": 0.38, "finish_4th": 0.35, "advance_probability": 0.42},
+      {"team": "Saudi Arabia", "avg_points": null, "finish_1st": 0.06, "finish_2nd": 0.13, "finish_3rd": 0.28, "finish_4th": 0.53, "advance_probability": 0.31}
+    ],
+    "assumptions": ["top two advance directly", "some third-place teams advance", "no first-round final results incorporated", "lineups and odds pending"],
+    "risk_flags": ["third-place qualification path uncertain until other groups mature", "goal difference volatility", "lineup rotation and injuries pending"]
+  }
+}

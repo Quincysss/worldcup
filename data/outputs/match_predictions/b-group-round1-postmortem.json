@@ -1,0 +1,48 @@
+{
+  "phase": "group_round_postmortem",
+  "status": "completed_match_review",
+  "updated_at": "2026-06-17T11:05:00+08:00",
+  "group": "B",
+  "scope": "B group round 1 postmatch review",
+  "sources": [
+    {
+      "name": "ESPN World Cup fixtures/results",
+      "url": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "supports": ["Canada 1-1 Bosnia and Herzegovina", "Qatar 1-1 Switzerland"]
+    },
+    {
+      "name": "FIFA Match Schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["fixture reference"]
+    }
+  ],
+  "matches": [
+    {
+      "match": "Canada vs Bosnia and Herzegovina",
+      "prediction": "Canada 1-1 Bosnia and Herzegovina",
+      "actual": "Canada 1-1 Bosnia and Herzegovina",
+      "wdl_hit": true,
+      "exact_score_hit": true,
+      "lesson": "Davies absence and Bosnia box presence were correctly weighted."
+    },
+    {
+      "match": "Qatar vs Switzerland",
+      "prediction": "Qatar 0-2 Switzerland",
+      "actual": "Qatar 1-1 Switzerland",
+      "wdl_hit": false,
+      "exact_score_hit": false,
+      "lesson": "Swiss control was overconverted into win probability; Qatar low-block/single-star variance was underweighted."
+    }
+  ],
+  "aggregate_evaluation": {
+    "matches_reviewed": 2,
+    "wdl_hits": 1,
+    "exact_score_hits": 1
+  },
+  "next_round_model_rules": [
+    "Raise B group draw baseline.",
+    "Downgrade Switzerland control-to-goal conversion until attack sharpness improves.",
+    "Keep Qatar 1-1 and underdog draw paths alive.",
+    "Maintain Canada left-side progression discount if Davies remains unavailable."
+  ]
+}

@@ -1,0 +1,238 @@
+[
+  {
+    "source": "Norwegian Football Federation",
+    "url": "https://www.fotball.no/landslag/norge-a-herrer/vm-2026/",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "team",
+      "group",
+      "fixtures",
+      "venues",
+      "base_camp",
+      "roster_names",
+      "world_cup_context"
+    ],
+    "reliability_tier": 1,
+    "notes": "NFF World Cup hub for Norway; used as primary official source for group, venues, fixture times, base camp and roster list."
+  },
+  {
+    "source": "Norwegian Football Federation",
+    "url": "https://www.fotball.no/landslag/norge-a-herrer/2026/her-er-norges-vm-tropp/",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "final_squad_announced",
+      "roster_positions",
+      "roster_clubs",
+      "player_caps",
+      "player_goals",
+      "coach"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official squad announcement; used for final squad confirmation and player-level club/position metadata."
+  },
+  {
+    "source": "FIFA",
+    "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/norway",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "team_profile",
+      "official_world_cup_team_page"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official tournament team profile."
+  },
+  {
+    "source": "FIFA",
+    "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/norway/fixtures",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "fixtures",
+      "official_schedule_reference"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official fixtures reference; cross-checked against NFF schedule page."
+  },
+  {
+    "source": "FIFA Men's World Ranking",
+    "url": "https://inside.fifa.com/tournaments/fifa-world-ranking/men",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "strength_indicators.fifa_rank"
+    ],
+    "reliability_tier": 1,
+    "notes": "Latest official ranking page; Norway listed at No. 31 in search result preview."
+  },
+  {
+    "source": "World Football Elo Ratings",
+    "url": "https://eloratings.net/Norway",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "strength_indicators.elo_rating",
+      "strength_indicators.elo_world_rank"
+    ],
+    "reliability_tier": 4,
+    "notes": "Used for Elo rating context; search result preview showed Norway rated 1917 and ranked 38th."
+  },
+  {
+    "source": "Transfermarkt",
+    "url": "https://www.transfermarkt.com/norwegen/startseite/verein/3440",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "strength_indicators.squad_market_value_eur"
+    ],
+    "reliability_tier": 4,
+    "notes": "Used for current squad market value snapshot; search result preview showed EUR 589.90m."
+  },
+  {
+    "source": "The Analyst / Opta",
+    "url": "https://theanalyst.com/articles/world-cup-groups-2026-easiest-hardest-opta-power-rankings",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "strength_indicators.opta_power_rank"
+    ],
+    "reliability_tier": 4,
+    "notes": "Used for authority-style team strength context; search result preview placed Norway 25th."
+  },
+  {
+    "source": "The Analyst / Opta",
+    "url": "https://theanalyst.com/articles/who-will-win-2026-fifa-world-cup-predictions-opta-supercomputer",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "strength_indicators.opta_context_note"
+    ],
+    "reliability_tier": 4,
+    "notes": "Supplementary Opta-style context; search result preview cited 3.5% title probability."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8699450",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Norway 3-0 Italy on 2025-06-06."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8700506",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Estonia 0-1 Norway on 2025-06-09."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8701107",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Norway 11-1 Moldova on 2025-09-09."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8707594",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Norway 5-0 Israel on 2025-10-11."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8708914",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Norway 4-1 Estonia on 2025-11-13."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8710160",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Italy 1-4 Norway on 2025-11-16."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=9074707",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Netherlands 2-1 Norway on 2026-03-27."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=9074708",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Norway 0-0 Switzerland on 2026-03-31."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=9164516",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches",
+      "fitness_risks"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Norway 1-1 Morocco on 2026-06-01; source preview also carried Ødegaard post-match return comment."
+  },
+  {
+    "source": "Norwegian Football Federation Match Centre",
+    "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=9164522",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "recent_form.sample_matches"
+    ],
+    "reliability_tier": 1,
+    "notes": "Official match reference for Norway 3-1 Sweden on 2026-06-07."
+  },
+  {
+    "source": "FOX Sports / FanDuel quoted odds",
+    "url": "https://www.foxsports.com/stories/soccer/world-cup-dark-horse-underdog-norway-colombia-morocco-japan",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "market_context.outright",
+      "market_context.advance_from_group"
+    ],
+    "reliability_tier": 5,
+    "notes": "Search result preview quoted Norway +1600 to win the World Cup and -900 to advance from the group."
+  },
+  {
+    "source": "Sports Illustrated / FanDuel quoted odds",
+    "url": "https://www.si.com/betting/every-teams-championship-group-odds-for-the-2026-world-cup-spain-and-france-top-odds-list-01kt4yygesqb",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "market_context.group_winner"
+    ],
+    "reliability_tier": 5,
+    "notes": "Search result preview quoted Norway +290 for Group I on June 2; used as older market snapshot, not final line."
+  },
+  {
+    "source": "FanDuel Sportsbook",
+    "url": "https://sportsbook.fanduel.com/soccer/fifa-world-cup/iraq-v-norway-35442324",
+    "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+    "supports_fields": [
+      "market_context.first_match_1x2"
+    ],
+    "reliability_tier": 5,
+    "notes": "Search result preview quoted Iraq +1400, draw +550, Norway -550 for the opener."
+  }
+]

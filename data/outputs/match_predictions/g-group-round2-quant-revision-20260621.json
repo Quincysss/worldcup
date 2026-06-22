@@ -1,0 +1,317 @@
+{
+  "phase": "group_round_prediction",
+  "status": "pre_match_quant_revision",
+  "captured_at": "2026-06-21T00:00:00+08:00",
+  "group": "G",
+  "round": 2,
+  "scope": "G group round 2 match predictions revised after internal player rating policy and round-1 player_state updates",
+  "risk_gate": {
+    "lineups": "not_confirmed_T_minus_75m",
+    "odds_snapshot": "latest_public_snippets_checked_2026-06-21_not_official_jingcai",
+    "betting_language": "discussion_only_hold",
+    "red_team_policy": "revise_for_model_hold_for_betting_until_lineups_and_official_odds"
+  },
+  "factor_weights": {
+    "baseline_strength": 0.30,
+    "attack_defense": 0.25,
+    "player_state": 0.20,
+    "tactical_matchup": 0.15,
+    "schedule_environment": 0.05,
+    "market_adjustment": 0.05
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-21_belgium_vs_iran",
+      "match": "Belgium vs Iran",
+      "date_note": "Project legacy file uses 2026-06-20; external fixtures/odds sources show local 2026-06-21.",
+      "factor_inputs": {
+        "belgium": {
+          "baseline_strength": "higher squad depth and market value",
+          "round1": "1-1 Egypt; process advantage but win conversion down",
+          "player_state_notes": ["Kevin De Bruyne 3.3", "Jeremy Doku 3.2", "Thibaut Courtois 3.5"],
+          "tactical_notes": ["wide 1v1 threat", "De Bruyne final pass", "Lukaku bench/starting status must be rechecked"]
+        },
+        "iran": {
+          "baseline_strength": "lower squad value but experienced spine",
+          "round1": "2-2 New Zealand; response ability up, clean-sheet probability down",
+          "player_state_notes": ["Mohammad Mohebi 4.0", "Saman Ghoddos 4.0", "Mehdi Taremi 3.0"],
+          "tactical_notes": ["Taremi support play", "set pieces", "transition path against Belgium's rest defense"]
+        }
+      },
+      "team_strength_score": {
+        "belgium": 6.8,
+        "iran": 5.6
+      },
+      "attack_score": {
+        "belgium": 6.9,
+        "iran": 5.8
+      },
+      "defense_score": {
+        "belgium": 5.7,
+        "iran": 5.1
+      },
+      "player_state_adjustment": {
+        "belgium": -0.08,
+        "iran": 0.10
+      },
+      "injury_adjustment": {
+        "belgium": 0.0,
+        "iran": -0.03,
+        "note": "No T-75m official lineup; Iran external disruption retained as small uncertainty only."
+      },
+      "tactical_matchup_adjustment": {
+        "belgium": 0.10,
+        "iran": 0.12
+      },
+      "schedule_environment_adjustment": {
+        "belgium": 0.02,
+        "iran": -0.03
+      },
+      "market_adjustment": {
+        "belgium": -0.08,
+        "iran": 0.06,
+        "note": "Market is much hotter on Belgium than the model; no upward favorite chase."
+      },
+      "expected_goals": {
+        "belgium": 1.55,
+        "iran": 1.10
+      },
+      "poisson_score_matrix": {
+        "0-0": 0.0707,
+        "0-1": 0.0777,
+        "0-2": 0.0427,
+        "0-3": 0.0157,
+        "0-4": 0.0043,
+        "0-5": 0.0009,
+        "1-0": 0.1095,
+        "1-1": 0.1205,
+        "1-2": 0.0663,
+        "1-3": 0.0243,
+        "1-4": 0.0067,
+        "1-5": 0.0015,
+        "2-0": 0.0849,
+        "2-1": 0.0934,
+        "2-2": 0.0513,
+        "2-3": 0.0188,
+        "2-4": 0.0052,
+        "2-5": 0.0011,
+        "3-0": 0.0438,
+        "3-1": 0.0482,
+        "3-2": 0.0265,
+        "3-3": 0.0097,
+        "3-4": 0.0027,
+        "3-5": 0.0006,
+        "4-0": 0.0170,
+        "4-1": 0.0187,
+        "4-2": 0.0103,
+        "4-3": 0.0038,
+        "4-4": 0.0010,
+        "4-5": 0.0002,
+        "5-0": 0.0053,
+        "5-1": 0.0058,
+        "5-2": 0.0032,
+        "5-3": 0.0012,
+        "5-4": 0.0003,
+        "5-5": 0.0001,
+        "tail_probability": 0.0062
+      },
+      "probabilities_1x2": {
+        "belgium_win": 0.477,
+        "draw": 0.253,
+        "iran_win": 0.270
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.494,
+        "under_2_5": 0.506
+      },
+      "top_scorelines": [
+        {"score": "1-1", "probability": 0.1205},
+        {"score": "1-0", "probability": 0.1095},
+        {"score": "2-1", "probability": 0.0934},
+        {"score": "2-0", "probability": 0.0849},
+        {"score": "0-1", "probability": 0.0777}
+      ],
+      "odds_implied_probability": {
+        "source": "Oddschecker public snippet",
+        "captured_at": "2026-06-21T00:00:00+08:00",
+        "american_odds": {
+          "belgium": -245,
+          "draw": 380,
+          "iran": 700
+        },
+        "normalized": {
+          "belgium": 0.681,
+          "draw": 0.200,
+          "iran": 0.120
+        }
+      },
+      "model_market_delta": {
+        "belgium": -0.204,
+        "draw": 0.053,
+        "iran": 0.150
+      },
+      "red_team_status": "revise",
+      "final_probabilities": {
+        "belgium_win": 0.477,
+        "draw": 0.253,
+        "iran_win": 0.270
+      },
+      "quality_notes": [
+        "T-75m lineups missing; betting gate remains hold.",
+        "Belgium market price is much hotter than model after round-1 draw.",
+        "Iran defensive floor is weak, but scoring response path is real."
+      ]
+    },
+    {
+      "match_id": "2026-06-21_new_zealand_vs_egypt",
+      "match": "New Zealand vs Egypt",
+      "date_note": "Project legacy file uses Egypt vs New Zealand / 2026-06-20; external fixtures/odds sources show New Zealand vs Egypt on 2026-06-21/22 across time zones.",
+      "factor_inputs": {
+        "new_zealand": {
+          "baseline_strength": "lower squad value and depth",
+          "round1": "2-2 Iran; open-play and direct-play production upgraded",
+          "player_state_notes": ["Chris Wood 5.0", "Elijah Just 5.0", "Max Crocombe 4.0"],
+          "tactical_notes": ["Wood target play", "Just finishing", "set pieces and second balls"]
+        },
+        "egypt": {
+          "baseline_strength": "higher attacking quality through Salah, Marmoush and Ashour",
+          "round1": "1-1 Belgium; defensive block and counter path confirmed",
+          "player_state_notes": ["Emam Ashour 5.0", "Mohamed Salah 4.0", "Omar Marmoush 4.0"],
+          "tactical_notes": ["right/central transition through Salah", "Marmoush depth", "Ashour late box arrival"]
+        }
+      },
+      "team_strength_score": {
+        "new_zealand": 5.1,
+        "egypt": 6.1
+      },
+      "attack_score": {
+        "new_zealand": 5.5,
+        "egypt": 6.3
+      },
+      "defense_score": {
+        "new_zealand": 4.9,
+        "egypt": 5.8
+      },
+      "player_state_adjustment": {
+        "new_zealand": 0.16,
+        "egypt": 0.14
+      },
+      "injury_adjustment": {
+        "new_zealand": -0.03,
+        "egypt": 0.0,
+        "note": "No T-75m official lineup; latest public preview mentions no fresh Egypt injury concerns but official team sheet still pending."
+      },
+      "tactical_matchup_adjustment": {
+        "new_zealand": 0.12,
+        "egypt": 0.10
+      },
+      "schedule_environment_adjustment": {
+        "new_zealand": 0.0,
+        "egypt": 0.0
+      },
+      "market_adjustment": {
+        "new_zealand": 0.05,
+        "egypt": -0.07,
+        "note": "Market is warmer on Egypt than the model; New Zealand round-1 attacking update kept."
+      },
+      "expected_goals": {
+        "new_zealand": 0.98,
+        "egypt": 1.32
+      },
+      "poisson_score_matrix": {
+        "0-0": 0.1003,
+        "0-1": 0.1323,
+        "0-2": 0.0873,
+        "0-3": 0.0384,
+        "0-4": 0.0127,
+        "0-5": 0.0033,
+        "1-0": 0.0983,
+        "1-1": 0.1297,
+        "1-2": 0.0856,
+        "1-3": 0.0377,
+        "1-4": 0.0124,
+        "1-5": 0.0033,
+        "2-0": 0.0481,
+        "2-1": 0.0636,
+        "2-2": 0.0419,
+        "2-3": 0.0185,
+        "2-4": 0.0061,
+        "2-5": 0.0016,
+        "3-0": 0.0157,
+        "3-1": 0.0208,
+        "3-2": 0.0137,
+        "3-3": 0.0060,
+        "3-4": 0.0020,
+        "3-5": 0.0005,
+        "4-0": 0.0039,
+        "4-1": 0.0051,
+        "4-2": 0.0034,
+        "4-3": 0.0015,
+        "4-4": 0.0005,
+        "4-5": 0.0001,
+        "5-0": 0.0008,
+        "5-1": 0.0010,
+        "5-2": 0.0007,
+        "5-3": 0.0003,
+        "5-4": 0.0001,
+        "5-5": 0.0,
+        "tail_probability": 0.0029
+      },
+      "probabilities_1x2": {
+        "new_zealand_win": 0.277,
+        "draw": 0.278,
+        "egypt_win": 0.444
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.404,
+        "under_2_5": 0.596
+      },
+      "top_scorelines": [
+        {"score": "0-1", "probability": 0.1323},
+        {"score": "1-1", "probability": 0.1297},
+        {"score": "0-0", "probability": 0.1003},
+        {"score": "1-0", "probability": 0.0983},
+        {"score": "0-2", "probability": 0.0873}
+      ],
+      "odds_implied_probability": {
+        "source": "Oddschecker public snippet",
+        "captured_at": "2026-06-21T00:00:00+08:00",
+        "american_odds": {
+          "new_zealand": 410,
+          "draw": 290,
+          "egypt": -140
+        },
+        "normalized": {
+          "new_zealand": 0.189,
+          "draw": 0.248,
+          "egypt": 0.563
+        }
+      },
+      "model_market_delta": {
+        "new_zealand": 0.088,
+        "draw": 0.030,
+        "egypt": -0.119
+      },
+      "red_team_status": "revise",
+      "final_probabilities": {
+        "new_zealand_win": 0.277,
+        "draw": 0.278,
+        "egypt_win": 0.444
+      },
+      "quality_notes": [
+        "T-75m lineups missing; betting gate remains hold.",
+        "New Zealand attack upgraded after Wood/Just internal ratings.",
+        "Egypt remains favorite but market price is warmer than model."
+      ]
+    }
+  ],
+  "files_written": [
+    "比赛/未开始比赛/小组赛/G组/2026-06-21_比利时_vs_伊朗_量化修订预测.md",
+    "比赛/未开始比赛/小组赛/G组/2026-06-21_新西兰_vs_埃及_量化修订预测.md",
+    "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json"
+  ],
+  "postmatch_error": null,
+  "parameter_updates": null,
+  "player_state_update_status": "not_applicable_pre_match",
+  "player_state_updates": null
+}

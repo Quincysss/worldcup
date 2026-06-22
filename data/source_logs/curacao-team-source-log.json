@@ -1,0 +1,14 @@
+{
+  "team": {"zh": "库拉索", "en": "Curaçao", "fifa_code": "CUW", "group": "E"},
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "captured_at": "2026-06-15T12:45:00+08:00",
+  "sources": [
+    {"name": "FIFA World Cup 26 match schedule", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule", "source_type": "official", "supports": ["Group E fixtures"], "freshness": "needs_refresh_before_prediction"},
+    {"name": "The Guardian live report: Germany 7-1 Curaçao", "url": "https://www.theguardian.com/football/live/2026/jun/14/germany-v-curacao-world-cup-2026-live", "source_type": "reputable_media", "supports": ["Round 1 result", "historic first World Cup goal"], "freshness": "post_match"},
+    {"name": "Federashon Futbol Kòrsou", "url": "https://www.ffk.cw/", "source_type": "official_association", "supports": ["squad and availability updates"], "freshness": "needs_refresh_before_prediction"},
+    {"name": "Financial Times profile on Dick Advocaat and Curaçao", "url": "https://www.ft.com/content/d56df5f0-0310-4e31-b5bb-f53d335b191c", "source_type": "reputable_media", "supports": ["coach context", "qualification narrative"], "freshness": "current_profile"}
+  ],
+  "volatile_fields": {"injury_status": "needs_refresh", "suspensions": "needs_refresh", "starting_xi": "T-75m_required", "odds": "needs_refresh", "official_technical_report": "missing"},
+  "data_quality_note": "可用于球队画像；首轮 1-7 后必须复核身体恢复、心理状态和是否调整防线结构。"
+}

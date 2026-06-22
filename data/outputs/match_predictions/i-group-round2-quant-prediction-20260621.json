@@ -1,0 +1,358 @@
+{
+  "model_scope": "I group round 2 quantitative match predictions",
+  "captured_at": "2026-06-21T18:45:00+08:00",
+  "model_version": "worldcup-quant-poisson-market-calibrated-v0.1",
+  "workflow_status": "completed_pre_match_conditional",
+  "input_readiness": {
+    "label": "partial_current",
+    "available_inputs": [
+      "local team profiles",
+      "I group round 1 postmatch reviews",
+      "player_state JSON for France, Iraq, Norway, Senegal",
+      "public fixture pages",
+      "public odds and preview fragments"
+    ],
+    "missing_or_stale_inputs": [
+      "T-75m official lineups",
+      "official Chinese sports lottery odds",
+      "same-book 1X2 plus handicap plus totals live snapshot",
+      "final injury and minutes-limit confirmation"
+    ],
+    "betting_execution_status": "discussion_only_hold"
+  },
+  "matches": [
+    {
+      "match": "France vs Iraq",
+      "group": "I",
+      "stage": "group_stage_round2",
+      "date_local": "2026-06-22",
+      "venue_note": "Philadelphia Stadium / Lincoln Financial Field, Philadelphia",
+      "factor_inputs": {
+        "base_strength_gap": "France very large advantage",
+        "round1_correction": "France late-game attack and elite finisher conversion upgraded; Iraq low-block resilience and game-state stability downgraded",
+        "player_state_adjustment": {
+          "france": 0.16,
+          "iraq": -0.1
+        },
+        "injury_adjustment": {
+          "france": -0.18,
+          "iraq": 0
+        },
+        "tactical_matchup_adjustment": {
+          "france": 0.2,
+          "iraq": 0.06
+        },
+        "schedule_environment_adjustment": {
+          "france": -0.04,
+          "iraq": 0
+        },
+        "market_adjustment": {
+          "france": 0.18,
+          "iraq": -0.04
+        }
+      },
+      "factor_weights": {
+        "base_strength": 0.3,
+        "recent_round1_form": 0.2,
+        "attack_defense_structure": 0.2,
+        "player_availability": 0.1,
+        "tactical_matchup": 0.1,
+        "market_calibration": 0.1
+      },
+      "team_strength_score": {
+        "france": 86.5,
+        "iraq": 49.2
+      },
+      "attack_score": {
+        "france": 88,
+        "iraq": 45
+      },
+      "defense_score": {
+        "france": 80,
+        "iraq": 44
+      },
+      "expected_goals": {
+        "france": 2.55,
+        "iraq": 0.58
+      },
+      "poisson_score_matrix": {
+        "0-0": 0.0437,
+        "0-1": 0.0254,
+        "0-2": 0.0074,
+        "0-3": 0.0014,
+        "0-4": 0.0002,
+        "0-5": 0,
+        "1-0": 0.1115,
+        "1-1": 0.0647,
+        "1-2": 0.0188,
+        "1-3": 0.0036,
+        "1-4": 0.0005,
+        "1-5": 0.0001,
+        "2-0": 0.1421,
+        "2-1": 0.0824,
+        "2-2": 0.0239,
+        "2-3": 0.0046,
+        "2-4": 0.0007,
+        "2-5": 0.0001,
+        "3-0": 0.1208,
+        "3-1": 0.0701,
+        "3-2": 0.0203,
+        "3-3": 0.0039,
+        "3-4": 0.0006,
+        "3-5": 0.0001,
+        "4-0": 0.077,
+        "4-1": 0.0447,
+        "4-2": 0.013,
+        "4-3": 0.0025,
+        "4-4": 0.0004,
+        "4-5": 0,
+        "5-0": 0.0393,
+        "5-1": 0.0228,
+        "5-2": 0.0066,
+        "5-3": 0.0013,
+        "5-4": 0.0002,
+        "5-5": 0,
+        "tail": 0.0454
+      },
+      "probabilities_1x2": {
+        "france_win": 0.7999,
+        "draw": 0.1366,
+        "iraq_win": 0.0634
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.6052,
+        "under_2_5": 0.3947,
+        "over_3_5": 0.3818,
+        "under_3_5": 0.6181
+      },
+      "top_scorelines": [
+        {
+          "score": "2-0",
+          "probability": 0.1421
+        },
+        {
+          "score": "3-0",
+          "probability": 0.1208
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1115
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0824
+        },
+        {
+          "score": "4-0",
+          "probability": 0.077
+        }
+      ],
+      "odds_implied_probability": {
+        "source": "DraftKings Network public opening odds",
+        "captured_at": "2026-06-21T18:45:00+08:00",
+        "raw_moneyline": {
+          "france": -1100,
+          "draw": 850,
+          "iraq": 2500
+        },
+        "normalized_no_vig": {
+          "france_win": 0.8644,
+          "draw": 0.0993,
+          "iraq_win": 0.0363
+        }
+      },
+      "model_market_delta": {
+        "france_win": -0.0645,
+        "draw": 0.0373,
+        "iraq_win": 0.0271
+      },
+      "confidence_interval": {
+        "france_win": [0.74, 0.85],
+        "draw": [0.1, 0.18],
+        "iraq_win": [0.035, 0.095]
+      },
+      "red_team_status": "revise_for_probability_hold_for_betting",
+      "final_probabilities": {
+        "france_win": 0.7999,
+        "draw": 0.1366,
+        "iraq_win": 0.0634
+      },
+      "player_state_update_status": null,
+      "player_state_updates": null,
+      "postmatch_error": null,
+      "parameter_updates": null
+    },
+    {
+      "match": "Norway vs Senegal",
+      "group": "I",
+      "stage": "group_stage_round2",
+      "date_local": "2026-06-22",
+      "venue_note": "New York/New Jersey Stadium, East Rutherford",
+      "factor_inputs": {
+        "base_strength_gap": "Norway small-to-moderate advantage after round 1",
+        "round1_correction": "Norway elite finisher conversion and set-piece edge upgraded; Senegal late defensive fatigue downgraded but transition threat retained",
+        "player_state_adjustment": {
+          "norway": 0.18,
+          "senegal": -0.04
+        },
+        "injury_adjustment": {
+          "norway": 0,
+          "senegal": -0.04
+        },
+        "tactical_matchup_adjustment": {
+          "norway": 0.12,
+          "senegal": 0.1
+        },
+        "schedule_environment_adjustment": {
+          "norway": -0.02,
+          "senegal": 0.04
+        },
+        "market_adjustment": {
+          "norway": -0.04,
+          "senegal": 0.02
+        }
+      },
+      "factor_weights": {
+        "base_strength": 0.3,
+        "recent_round1_form": 0.2,
+        "attack_defense_structure": 0.2,
+        "player_availability": 0.1,
+        "tactical_matchup": 0.1,
+        "market_calibration": 0.1
+      },
+      "team_strength_score": {
+        "norway": 78.1,
+        "senegal": 68.1
+      },
+      "attack_score": {
+        "norway": 80,
+        "senegal": 68
+      },
+      "defense_score": {
+        "norway": 66,
+        "senegal": 60
+      },
+      "expected_goals": {
+        "norway": 1.75,
+        "senegal": 1.25
+      },
+      "poisson_score_matrix": {
+        "0-0": 0.0498,
+        "0-1": 0.0622,
+        "0-2": 0.0389,
+        "0-3": 0.0162,
+        "0-4": 0.0051,
+        "0-5": 0.0013,
+        "1-0": 0.0871,
+        "1-1": 0.1089,
+        "1-2": 0.0681,
+        "1-3": 0.0284,
+        "1-4": 0.0089,
+        "1-5": 0.0022,
+        "2-0": 0.0762,
+        "2-1": 0.0953,
+        "2-2": 0.0596,
+        "2-3": 0.0248,
+        "2-4": 0.0078,
+        "2-5": 0.0019,
+        "3-0": 0.0445,
+        "3-1": 0.0556,
+        "3-2": 0.0347,
+        "3-3": 0.0145,
+        "3-4": 0.0045,
+        "3-5": 0.0011,
+        "4-0": 0.0195,
+        "4-1": 0.0243,
+        "4-2": 0.0152,
+        "4-3": 0.0063,
+        "4-4": 0.002,
+        "4-5": 0.0005,
+        "5-0": 0.0068,
+        "5-1": 0.0085,
+        "5-2": 0.0053,
+        "5-3": 0.0022,
+        "5-4": 0.0007,
+        "5-5": 0.0002,
+        "tail": 0.011
+      },
+      "probabilities_1x2": {
+        "norway_win": 0.4914,
+        "draw": 0.2349,
+        "senegal_win": 0.2737
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5768,
+        "under_2_5": 0.4232,
+        "over_3_5": 0.3528,
+        "under_3_5": 0.6472
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1089
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0953
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0871
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0762
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0681
+        }
+      ],
+      "odds_implied_probability": {
+        "source": "Total Football Analysis public odds table",
+        "captured_at": "2026-06-21T18:45:00+08:00",
+        "raw_fractional": {
+          "norway": "11/8",
+          "draw": "5/2",
+          "senegal": "9/4"
+        },
+        "normalized_no_vig": {
+          "norway_win": 0.4149,
+          "draw": 0.2816,
+          "senegal_win": 0.3033
+        }
+      },
+      "model_market_delta": {
+        "norway_win": 0.0765,
+        "draw": -0.0467,
+        "senegal_win": -0.0296
+      },
+      "confidence_interval": {
+        "norway_win": [0.43, 0.55],
+        "draw": [0.19, 0.29],
+        "senegal_win": [0.22, 0.34]
+      },
+      "red_team_status": "revise_for_probability_hold_for_betting",
+      "final_probabilities": {
+        "norway_win": 0.4914,
+        "draw": 0.2349,
+        "senegal_win": 0.2737
+      },
+      "player_state_update_status": null,
+      "player_state_updates": null,
+      "postmatch_error": null,
+      "parameter_updates": null
+    }
+  ],
+  "sources": [
+    "FIFA match centre: France v Iraq",
+    "FIFA match centre: Norway v Senegal",
+    "DraftKings Network 2026-06-17 France vs Iraq opening odds",
+    "Evening Standard 2026-06-21 France vs Iraq team news",
+    "ESPN Norway vs Senegal odds page",
+    "Total Football Analysis 2026-06-19 Norway vs Senegal preview and odds",
+    "SportsGambler 2026-06-21 Norway vs Senegal preview",
+    "local I group round 1 reviews",
+    "local player_state JSON files"
+  ]
+}

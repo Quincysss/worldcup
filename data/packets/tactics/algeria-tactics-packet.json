@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:28:00+08:00",
+  "team": {"zh": "阿尔及利亚", "en": "Algeria", "fifa_code": "ALG", "group": "J"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-3-3", "alternates": ["4-2-3-1", "4-1-4-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "Mahrez 右路内收和 Ait-Nouri 左路推进能提供宽度与创造，Bennacer/Aouar 负责中路连接。",
+    "pressing_profile": "可阶段性前压，但对阿根廷更现实的是中位防守加反击，避免被 Messi 和中场连续穿透。",
+    "defensive_block": "需要保护禁区前沿和右肋空间，边锋回防质量决定能否限制阿根廷边后卫。",
+    "attacking_transition": "抢回球后第一选择是找 Mahrez、Gouiri 或左路推进点，利用阿根廷压上后的边路空间。",
+    "set_piece": "Mahrez 脚法和后点高点都有威胁，是弱势对局的重要得分窗口。"
+  },
+  "coach_tendencies": {"coach": "Vladimir Petkovic", "risk_appetite": "medium", "game_state": "对强队时会更重视结构完整，落后后可能通过边路和双前锋增加直接性。"},
+  "tactical_risks": ["防线集中度", "中场被压迫后的丢球", "情绪与犯规管理", "Mahrez 体能和回防"],
+  "confidence_notes": {"high": ["边路创造", "转换路径"], "medium": ["防守结构", "中场控制"], "low_or_missing": ["T-75m首发", "关键球员体能"]},
+  "handoff_to_model": {"attack_ceiling": "medium_high", "defensive_floor": "medium", "transition_defense_risk": "medium_high", "set_piece": "medium_high"},
+  "handoff_to_red_team": ["是否高估 Mahrez 单点改变比赛能力", "阿根廷控节奏下无球耐心", "防线失误风险"]
+}

@@ -1,0 +1,29 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:35:00+08:00",
+  "team": {"zh": "克罗地亚", "en": "Croatia", "group": "L"},
+  "tactical_summary": "克罗地亚的战术价值在于把比赛拖进自己擅长的节奏：中场拿球、横向转移、减少来回冲刺，再通过 Modric/Kovacic/Gvardiol 的出球把压力拆掉。短板也清晰：如果被迫长时间防守纵深和边路一对一，体能与速度压力会放大。",
+  "structures": {
+    "base_shapes": ["4-3-3"],
+    "alternate_shapes": ["4-2-3-1", "4-1-4-1"],
+    "in_possession": "三中场靠站位和接应角度解决第一压迫，Gvardiol 可从左路带出推进。",
+    "out_of_possession": "多为中位块，避免无谓高压消耗，靠中场压缩传球线路。"
+  },
+  "phase_behaviour": {
+    "build_up": "核心仍是中场接应、门将/中卫短传和弱侧转移。",
+    "chance_creation": "更多来自半空间传球、边路倒三角、定位球和禁区二点。",
+    "transition_attack": "不是纯速度型反击，更依赖第一脚出球质量和前场经验。",
+    "rest_defense": "边后卫压上后的回收速度是主要风险。",
+    "set_pieces": "脚法稳定、跑位成熟，但空中绝对优势取决于首发配置。"
+  },
+  "coach_profile": {
+    "coach": "Zlatko Dalic",
+    "selection_stability": "high",
+    "risk_appetite": "medium_low",
+    "substitution_pattern": "通常重视比赛控制和经验，落后时才明显增加直接性。",
+    "tournament_note": "教练与核心组熟悉度高，但老将负荷需要实时校正。"
+  },
+  "key_matchup_inputs_for_model": ["midfield_press_resistance", "veteran_minutes", "wide_channel_defense", "late_game_control", "set_piece_floor"],
+  "confidence_notes": {"overall": "medium_high", "weak_points": ["老将真实负荷", "锋线排序", "边路防守速度"]}
+}

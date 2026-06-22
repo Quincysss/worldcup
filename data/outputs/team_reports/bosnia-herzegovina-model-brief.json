@@ -1,0 +1,33 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "波黑", "en": "Bosnia and Herzegovina", "fifa_code": "BIH", "group": "B"},
+  "status": "deep_partial",
+  "updated_at": "2026-06-12T19:05:00+08:00",
+  "scope": "球队层面模型输入；不含比分、胜平负、出线或投注建议。",
+  "baseline_strength_framework": {
+    "tier_hint": "经验与禁区威胁明显，但整体速度和体能使其强度区间较宽。",
+    "recommended_weights": {"elo": 0.34, "fifa_ranking": 0.12, "recent_competitive_form": 0.20, "squad_quality": 0.14, "tactical_fit": 0.12, "age_curve_risk": 0.08},
+    "age_curve_note": "核心老将价值不能只按名气加分，要同步增加体能衰减和后程防守风险。"
+  },
+  "style_adjustments": {
+    "tempo": "medium_low",
+    "box_presence": "positive",
+    "wide_crossing": "positive",
+    "defensive_speed": "negative",
+    "discipline_volatility": "medium"
+  },
+  "availability_sensitivity": [
+    {"player": "Edin Dzeko", "lambda_impact": "medium_high", "reason": "支点、终结和定位球威胁仍是关键变量。"},
+    {"player": "Ermedin Demirovic", "lambda_impact": "medium", "reason": "影响反击延展和二前锋跑动。"},
+    {"player": "Amar Dedic", "lambda_against_impact": "medium", "reason": "边路推进与防守回追都会影响模型两端。"},
+    {"player": "Sead Kolasinac", "lambda_against_impact": "medium", "reason": "对抗和防线稳定性。"}
+  ],
+  "market_signal_placeholder": {
+    "needs_refresh": true,
+    "fields": ["1x2", "asian_handicap", "total_goals", "cards", "set_piece_related_props_if_available"],
+    "warning": "市场可能低估老将队在单场杯赛中的禁区与定位球上限。"
+  },
+  "prediction_input_requirements": ["首发年龄结构", "中卫组合速度", "Dzeko/Demirovic状态", "裁判尺度", "最新盘口水位"],
+  "uncertainty_flags": ["早丢球后提速能力弱", "领先后可能变深导致被围攻", "定位球样本对单场影响偏大"],
+  "model_risk_notes": "波黑不宜按平滑均值处理，应在低节奏小比分和定位球破局两种脚本间保留分叉。"
+}

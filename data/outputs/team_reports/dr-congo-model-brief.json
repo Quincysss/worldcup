@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:55:00+08:00",
+  "team": {"zh": "刚果金", "en": "DR Congo", "fifa_code": "COD", "group": "K"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "K组下游到中游挑战者；反击和身体上限不低，但防线稳定性和出球受压是扣分项。", "recommended_weights": {"elo": 0.30, "fifa_ranking": 0.12, "recent_form": 0.18, "squad_quality": 0.15, "tactical_fit": 0.15, "availability": 0.10}, "round1_correction": "not_available_pre_match"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "medium", "defensive_floor": "medium_low", "transition_defense_risk": "medium_high", "set_piece": "medium_high", "market_name_bias": "low"},
+  "availability_sensitivity": [{"player": "Yoane Wissa", "transition_impact": "medium_high"}, {"player": "Cedric Bakambu", "lambda_for_impact": "medium"}, {"player": "Chancel Mbemba", "lambda_against_impact": "high"}, {"player": "Arthur Masuaku", "set_piece_impact": "medium"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals"], "warning": "刚果金受让价值取决于葡萄牙让球深度和反击效率。"},
+  "uncertainty_flags": ["opening match not played/confirmed", "T-75m lineup", "fresh odds", "defensive shape"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "Mbemba fitness", "Portugal rotation"],
+  "model_risk_notes": "刚果金有反击尾部，但对葡萄牙时防线承压和犯规送定位球风险很高。"
+}

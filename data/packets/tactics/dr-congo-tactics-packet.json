@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:52:00+08:00",
+  "team": {"zh": "刚果金", "en": "DR Congo", "fifa_code": "COD", "group": "K"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-3-3", "5-4-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "对葡萄牙时不宜后场短传冒险，更可能直接找 Bakambu/Wissa/Silas 的支点和纵深。",
+    "pressing_profile": "阶段性压迫可以制造对手失误，但更现实是中低位保持紧凑，避免被葡萄牙肋部穿透。",
+    "defensive_block": "需要保护禁区前沿和弱侧后点，边锋回防质量决定能否限制葡萄牙宽度。",
+    "attacking_transition": "抢回球后第一脚找 Wissa、Silas 或 Bakambu，利用葡萄牙边后卫身后。",
+    "set_piece": "Mbemba、Bakambu 等高点有威胁，是对强队最现实的得分窗口之一。"
+  },
+  "coach_tendencies": {"coach": "Sebastien Desabre", "risk_appetite": "medium", "game_state": "先保结构，落后后会增加速度点和直接冲击，但结构可能更开放。"},
+  "tactical_risks": ["防线集中度", "出球被压迫", "犯规和定位球送给对手", "边路回防距离"],
+  "confidence_notes": {"high": ["反击路径", "身体对抗"], "medium": ["低位防守", "定位球"], "low_or_missing": ["T-75m首发", "伤停"]},
+  "handoff_to_model": {"attack_ceiling": "medium", "defensive_floor": "medium_low", "transition_defense_risk": "medium_high", "set_piece": "medium_high"},
+  "handoff_to_red_team": ["是否把刚果金写成纯身体队", "葡萄牙控球压力", "反击效率和防线错误"]
+}

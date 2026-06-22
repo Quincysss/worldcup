@@ -1,0 +1,33 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "加拿大",
+    "en": "Canada",
+    "fifa_code": "CAN",
+    "group": "B"
+  },
+  "status": "partial_team_profile_ready",
+  "created_at": "2026-06-12T15:55:00+08:00",
+  "updated_at": "2026-06-12T15:55:00+08:00",
+  "owner": "main-thread",
+  "scope": "B组加拿大 team_profile；不输出比分预测、出线预测、冠军预测或投注建议。",
+  "source_log_path": "K:\\worldcup\\data\\source_logs\\canada-team-source-log.json",
+  "fixtures_context": {
+    "group_matches": ["加拿大 vs 波黑", "加拿大 vs 卡塔尔", "瑞士 vs 加拿大"],
+    "needs_official_time_refresh": true
+  },
+  "data": {
+    "coach": "Jesse Marsch",
+    "profile": "东道主之一，运动能力、边路速度和转换进攻是核心卖点；主场能量很强，但中后场稳定性和阵地战破密防仍需要打问号。",
+    "core_players_watch": ["Alphonso Davies", "Jonathan David", "Tajon Buchanan", "Stephen Eustaquio", "Ismael Kone", "Cyle Larin", "Alistair Johnston", "Moise Bombito"],
+    "style_tags": ["高强度压迫", "边路速度", "快速转换", "Davies左路爆点", "主场能量"],
+    "strengths": ["主场环境", "运动能力", "边路推进", "前场冲刺和反击", "核心球员欧洲高水平经验"],
+    "risks": ["中卫和防线抗压", "阵地战创造力波动", "压迫被打穿后的回追空间", "主场压力", "关键球员伤停敏感"],
+    "data_confidence": "medium"
+  },
+  "missing_fields": ["official_matchday_squad_refresh", "T-24h injury/training", "T-75m lineup", "fresh odds", "complete recent structured sample"],
+  "data_quality": {
+    "completion_level": "usable_partial",
+    "reason_not_complete": "临场名单、伤停、首发和盘口仍需赛前复核。"
+  }
+}

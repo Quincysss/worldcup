@@ -1,0 +1,215 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Iraq",
+    "en": "Iraq",
+    "fifa_code": "IRQ",
+    "group": "I"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-11T00:45:00+08:00",
+  "updated_at": "2026-06-11T15:55:00+08:00",
+  "owner": "main-thread",
+  "scope": "2026 FIFA World Cup Iraq team_profile data packet only",
+  "missing_fields": [
+    "T-24h training and injury update",
+    "T-75m official starters and bench",
+    "complete last-10 structured sample",
+    "exact Opta power-ranking position",
+    "complete set-piece taker map",
+    "closing odds and market movement"
+  ],
+  "source_log": [
+    {
+      "source": "FIFA Iraq squad announcement",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/iraq-preliminary-squad-announcement-graham-arnold",
+      "captured_at": "2026-06-11T15:55:00+08:00",
+      "use": "squad, coach, injury replacement, warm-up schedule"
+    },
+    {
+      "source": "FIFA Iraq team page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/iraq",
+      "captured_at": "2026-06-11T15:55:00+08:00",
+      "use": "team page and tournament context"
+    },
+    {
+      "source": "Olympics Iraq squad guide",
+      "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-iraq-players-squad-list-key-stats-schedule",
+      "captured_at": "2026-06-11T15:55:00+08:00",
+      "use": "squad guide and key player context"
+    },
+    {
+      "source": "Transfermarkt Iraq national team",
+      "url": "https://www.transfermarkt.com/irak/startseite/verein/3577",
+      "captured_at": "2026-06-11T15:55:00+08:00",
+      "use": "market value, FIFA ranking cross-check"
+    },
+    {
+      "source": "World Football Elo Ratings / International Football",
+      "url": "https://www.international-football.net/country?team=Iraq",
+      "captured_at": "2026-06-11T15:55:00+08:00",
+      "use": "Elo rating and rank snapshot"
+    },
+    {
+      "source": "World Cup odds snapshot",
+      "url": "https://www.si.com/betting/2026-world-cup-odds",
+      "captured_at": "2026-06-11T15:55:00+08:00",
+      "use": "market facts only"
+    }
+  ],
+  "notes": [
+    "Main thread filled this packet directly to avoid another failed data-collector handoff.",
+    "No score prediction, group projection, champion prediction, or betting advice is included.",
+    "Status remains partial because matchday availability, full last-10 table and market close are not locked."
+  ],
+  "data": {
+    "basic_info": {
+      "team_name": "Iraq",
+      "nickname": "Lions of Mesopotamia",
+      "confederation": "AFC",
+      "coach": "Graham Arnold",
+      "group": "I",
+      "group_opponents": [
+        "Norway",
+        "France",
+        "Senegal"
+      ],
+      "world_cup_context": "First World Cup appearance since 1986."
+    },
+    "fixtures": [
+      {
+        "date_local": "2026-06-14",
+        "opponent": "Norway",
+        "venue": "Boston Stadium",
+        "status": "scheduled"
+      },
+      {
+        "date_local": "2026-06-20",
+        "opponent": "France",
+        "venue": "Philadelphia Stadium",
+        "status": "scheduled"
+      },
+      {
+        "date_local": "2026-06-26",
+        "opponent": "Senegal",
+        "venue": "Toronto Stadium",
+        "status": "scheduled"
+      }
+    ],
+    "squad_status": {
+      "official_squad_status": "FIFA-published squad article available",
+      "reported_context": "Graham Arnold named a squad with three warm-up matches against Spain, Andorra and Venezuela.",
+      "injury_replacement": {
+        "out": "Ahmed Yahya",
+        "reason": "hamstring injury",
+        "in": "Ahmed Hassan Makenzie"
+      },
+      "core_players": [
+        {
+          "name": "Aymen Hussein",
+          "position_group": "forward",
+          "role": "target striker, box reference, set-piece threat",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Zidane Iqbal",
+          "position_group": "midfielder",
+          "role": "technical connector and progression option",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Ali Jasim",
+          "position_group": "forward",
+          "role": "wide/attacking spark and transition carrier",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Ibrahim Bayesh",
+          "position_group": "midfielder/winger",
+          "role": "wide work rate, ball-carrying and pressing support",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Jalal Hassan",
+          "position_group": "goalkeeper",
+          "role": "experienced goalkeeper and defensive organizer",
+          "availability": "in_squad"
+        }
+      ],
+      "fitness_notes": [
+        "Ahmed Yahya is out with a hamstring injury and was replaced.",
+        "T-24h training and T-75m official match sheet remain required for final availability."
+      ]
+    },
+    "recent_samples": [
+      {
+        "date": "2026-06-03",
+        "match": "Spain 1-1 Iraq",
+        "competition_context": "World Cup warm-up",
+        "takeaway": "Credible defensive and game-management sample against elite opposition."
+      },
+      {
+        "date": "2026-06-06",
+        "match": "Andorra 0-1 Iraq",
+        "competition_context": "World Cup warm-up",
+        "takeaway": "Win, but also a reminder that chance creation against compact teams may not be explosive."
+      },
+      {
+        "date": "2026-06-10",
+        "match": "Venezuela 1-2 Iraq",
+        "competition_context": "World Cup warm-up",
+        "takeaway": "Positive final tune-up and useful confidence sample before group play."
+      }
+    ],
+    "strength_indicators": {
+      "fifa_ranking": {
+        "value": 57,
+        "confidence": "medium_high"
+      },
+      "elo": {
+        "value": 1602,
+        "rank": 62,
+        "confidence": "medium"
+      },
+      "transfermarkt": {
+        "squad_value_eur": 17450000,
+        "confidence": "medium"
+      },
+      "opta_power_ranking": {
+        "value": null,
+        "status": "missing_exact_rank"
+      }
+    },
+    "market_facts": [
+      {
+        "bookmaker_or_source": "FanDuel via Sports Illustrated snapshot",
+        "market": "World Cup winner",
+        "american_odds": 50000,
+        "decimal_odds": 501.0,
+        "raw_implied_probability": 0.001996,
+        "captured_at": "2026-06-11T15:55:00+08:00",
+        "note": "Market fact only, not betting advice."
+      },
+      {
+        "bookmaker_or_source": "FanDuel via Sports Illustrated snapshot",
+        "market": "Group I winner",
+        "american_odds": 8000,
+        "decimal_odds": 81.0,
+        "raw_implied_probability": 0.01235,
+        "captured_at": "2026-06-11T15:55:00+08:00",
+        "note": "Market fact only, not betting advice."
+      }
+    ],
+    "data_quality": {
+      "overall": "partial_but_usable_for_team_profile",
+      "highest_risk_fields": [
+        "player availability",
+        "full squad role mapping",
+        "opponent-adjusted recent sample",
+        "market movement",
+        "matchday starters"
+      ]
+    }
+  }
+}

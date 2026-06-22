@@ -1,0 +1,117 @@
+{
+  "phase": "group_round_postmortem",
+  "status": "complete",
+  "updated_at": "2026-06-19T00:00:00+08:00",
+  "group": "B",
+  "round": 2,
+  "scope": "B group second-round results, forecast audit, table impact, and model adjustment handoff.",
+  "sources": [
+    {
+      "name": "ESPN Canada vs Qatar match centre",
+      "url": "https://www.espn.com/soccer/match/_/gameId/760440/qatar-canada",
+      "supports": ["Canada 6-0 Qatar result"]
+    },
+    {
+      "name": "FOX Sports Canada vs Qatar live updates",
+      "url": "https://www.foxsports.com/live-blog/soccer/canada-vs-qatar-live-updates-score-latest-world-cup-news-goals",
+      "supports": ["Canada first men's World Cup win", "Jonathan David hat trick", "Qatar red cards"]
+    },
+    {
+      "name": "The Guardian Canada vs Qatar report",
+      "url": "https://www.theguardian.com/football/2026/jun/18/canada-qatar-world-cup-2026-group-b-match-report",
+      "supports": ["Canada 6-0 Qatar", "Kone injury", "goal scorers", "Qatar two red cards"]
+    },
+    {
+      "name": "FIFA Switzerland vs Bosnia and Herzegovina report",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-bosnia-herzegovina-match-report-highlights",
+      "supports": ["Switzerland 4-1 Bosnia and Herzegovina", "Manzambi impact"]
+    },
+    {
+      "name": "The Guardian Switzerland vs Bosnia and Herzegovina report",
+      "url": "https://www.theguardian.com/football/2026/jun/18/switzerland-bosnia-and-herzegovina-group-b-match-report",
+      "supports": ["Switzerland 4-1 Bosnia and Herzegovina", "late Swiss goals", "red card"]
+    },
+    {
+      "name": "Al Jazeera Switzerland vs Bosnia and Herzegovina report",
+      "url": "https://www.aljazeera.com/sports/2026/6/18/switzerland-beat-bosnia-and-herzegovina-4-1-top-group-b-in-world-cup",
+      "supports": ["Switzerland top Group B after 4-1 win"]
+    }
+  ],
+  "standings_after_round": [
+    {"team": "Canada", "points": 4, "goal_difference": 6, "status_note": "big home win; top-tier group position, Kone injury to monitor"},
+    {"team": "Switzerland", "points": 4, "goal_difference": 3, "status_note": "late burst lifts qualification path"},
+    {"team": "Bosnia and Herzegovina", "points": 1, "goal_difference": -3, "status_note": "red-card collapse creates pressure before final match"},
+    {"team": "Qatar", "points": 1, "goal_difference": -6, "status_note": "two red cards and heavy defeat severely damage outlook"}
+  ],
+  "matches": [
+    {
+      "match": "Canada vs Qatar",
+      "postmortem_file": "比赛/已完成比赛/小组赛/B组/2026-06-18_加拿大_6-0_卡塔尔_复盘.md",
+      "prediction": {
+        "score": {"canada": 2, "qatar": 1},
+        "model_probabilities": {"canada": 61, "draw": 24, "qatar": 15},
+        "confidence": "medium"
+      },
+      "actual": {
+        "score": {"canada": 6, "qatar": 0},
+        "goal_notes": ["Jonathan David hat trick", "Cyle Larin goal", "Nathan Saliba goal", "Qatar own goal"],
+        "discipline_notes": ["Homam Ahmed red card", "Assim Madibo red card"],
+        "injury_notes": ["Ismael Kone serious leg injury after Madibo challenge"]
+      },
+      "forecast_audit": {
+        "wdl": "Canada win direction hit",
+        "scoreline": "major miss; Canada blowout tail severely underweighted",
+        "total_goals": "over/blowout tail missed",
+        "script": "Canada pressure script hit; Qatar low-block resilience and discipline were overestimated"
+      },
+      "model_adjustments": [
+        "raise canada_home_attacking_ceiling",
+        "raise qatar_discipline_risk",
+        "raise canada_red_card_blowout_multiplier",
+        "lower qatar_low_block_resilience",
+        "raise favorite_ceiling_tail_probability"
+      ]
+    },
+    {
+      "match": "Switzerland vs Bosnia and Herzegovina",
+      "postmortem_file": "比赛/已完成比赛/小组赛/B组/2026-06-18_瑞士_4-1_波黑_复盘.md",
+      "prediction": {
+        "score": {"switzerland": 1, "bosnia_and_herzegovina": 1},
+        "model_probabilities": {"switzerland": 49, "draw": 29, "bosnia_and_herzegovina": 22},
+        "confidence": "medium_low"
+      },
+      "actual": {
+        "score": {"switzerland": 4, "bosnia_and_herzegovina": 1},
+        "goal_notes": ["Johan Manzambi scored twice", "Ruben Vargas scored", "Granit Xhaka scored", "Mahmic scored for Bosnia and Herzegovina"],
+        "discipline_notes": ["Muharemovic red card around 80th minute"]
+      },
+      "forecast_audit": {
+        "wdl": "missed draw lean; Switzerland win probability too low",
+        "scoreline": "major miss; late Swiss scoring burst not captured",
+        "total_goals": "under/small-score path failed",
+        "script": "Swiss control existed; substitution impact and Bosnia red-card collapse were underweighted"
+      },
+      "model_adjustments": [
+        "raise switzerland_late_substitution_impact",
+        "raise switzerland_control_to_goal_conversion",
+        "raise bosnia_red_card_collapse_risk",
+        "lower bosnia_draw_resistance",
+        "lower b_group_draw_baseline_after_round1"
+      ]
+    }
+  ],
+  "model_update_summary": {
+    "main_lessons": [
+      "First-round group-wide draws should not mechanically raise second-round draw baseline too far.",
+      "Red cards can turn narrow favorite scripts into blowout tails; discipline risk needs stronger interaction terms.",
+      "Canada's home attacking ceiling was underestimated.",
+      "Switzerland's late substitute impact and conversion ceiling were underestimated.",
+      "Qatar and Bosnia and Herzegovina both showed collapse risk once their defensive plan was disrupted."
+    ],
+    "handoff_to_round3": [
+      "Canada vs Switzerland should model two high-confidence teams but include Kone injury and market overreaction risk.",
+      "Qatar and Bosnia final-round profiles need severe discipline and goal-difference pressure adjustments.",
+      "B group draw baseline must be reset downward after round-two blowouts."
+    ]
+  }
+}

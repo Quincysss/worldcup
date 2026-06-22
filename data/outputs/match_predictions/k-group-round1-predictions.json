@@ -1,0 +1,95 @@
+{
+  "model_scope": "K group round 1 predictions with public odds comparison",
+  "captured_at": "2026-06-16T11:45:00+08:00",
+  "model_version": "worldcup-simple-strength-v0.4-post-GH-draw-adjusted",
+  "input_readiness": {
+    "label": "partial",
+    "available_inputs": ["team profiles", "team packets", "tactical packets", "model briefs", "red-team reviews", "public odds snippets", "Groups G/H postmortem"],
+    "missing_or_stale_inputs": ["official T-75m lineups", "full same-book bookmaker odds board", "same-day injury confirmation", "official match-centre final status"],
+    "uncertainty_flags": ["Ronaldo minutes plan", "DR Congo counter setup", "Uzbekistan back-five setup", "James/Luis Diaz fitness", "line movement before kickoff"]
+  },
+  "method": {
+    "baseline": "qualitative strength tier plus tactical matchup adjustment",
+    "odds_treatment": "Use public 1X2 odds snippets as market signal; normalize implied probabilities where complete 1X2 set is available.",
+    "postmortem_adjustment": "After Groups G/H produced four draws, raise draw baseline and underdog low-block resistance in first-round fixtures.",
+    "confidence_policy": "Probabilities are rounded to avoid false precision."
+  },
+  "matches": [
+    {
+      "match": "Portugal vs DR Congo",
+      "stage": "group_stage_round1",
+      "group": "K",
+      "captured_at": "2026-06-16T11:45:00+08:00",
+      "input_readiness": "partial",
+      "model_version": "worldcup-simple-strength-v0.4-post-GH-draw-adjusted",
+      "probabilities": {
+        "team_a_win": 0.76,
+        "draw": 0.16,
+        "team_b_win": 0.08,
+        "team_a_advance": null,
+        "team_b_advance": null
+      },
+      "expected_goals": {"team_a": 2.10, "team_b": 0.55},
+      "scoreline_modes": ["2-0", "3-0", "2-1", "1-0"],
+      "headline_pick": "Portugal 2-0 DR Congo",
+      "confidence": "medium",
+      "main_drivers": ["Portugal attacking depth", "Portugal set pieces", "DR Congo transition threat", "favorite price already reflected"],
+      "risk_flags": ["Ronaldo minutes plan pending", "Portugal favorite tax", "DR Congo counter path", "official lineups pending"],
+      "market_comparison": {
+        "included": true,
+        "bookmakers": ["Oddschecker public odds snapshot", "JuveFC public odds preview"],
+        "odds_format": "American/fractional",
+        "market_odds": {"Portugal": "-375", "Draw": "+500", "DR Congo": "+1100"},
+        "raw_implied": {"Portugal": 0.7895, "Draw": 0.1667, "DR Congo": 0.0833},
+        "overround": 1.0395,
+        "normalized_market_implied": {"Portugal": 0.7595, "Draw": 0.1603, "DR Congo": 0.0802},
+        "model_minus_market": {"Portugal": 0.0005, "Draw": -0.0003, "DR Congo": -0.0002},
+        "notes": "Model and market align. No clear 1X2 edge; handicap/totals are more relevant."
+      },
+      "source_dependencies": [
+        "K:/worldcup/队伍/葡萄牙/正式球队档案.md",
+        "K:/worldcup/队伍/刚果金/正式球队档案.md",
+        "K:/worldcup/data/packets/tactics/portugal-tactics-packet.json",
+        "K:/worldcup/data/packets/tactics/dr-congo-tactics-packet.json"
+      ]
+    },
+    {
+      "match": "Uzbekistan vs Colombia",
+      "stage": "group_stage_round1",
+      "group": "K",
+      "captured_at": "2026-06-16T11:45:00+08:00",
+      "input_readiness": "partial",
+      "model_version": "worldcup-simple-strength-v0.4-post-GH-draw-adjusted",
+      "probabilities": {
+        "team_a_win": 0.13,
+        "draw": 0.24,
+        "team_b_win": 0.63,
+        "team_a_advance": null,
+        "team_b_advance": null
+      },
+      "expected_goals": {"team_a": 0.80, "team_b": 1.35},
+      "scoreline_modes": ["1-1", "0-1", "0-2", "1-2"],
+      "headline_pick": "Uzbekistan 1-1 Colombia",
+      "confidence": "medium_low",
+      "main_drivers": ["Colombia wide threat", "Colombia set pieces", "Uzbekistan low-block resistance", "post-G/H draw adjustment"],
+      "risk_flags": ["Colombia quality can break model if early goal", "Uzbekistan first World Cup variance", "James/Luis Diaz status pending", "official lineups pending"],
+      "market_comparison": {
+        "included": true,
+        "bookmakers": ["Oddschecker public odds snapshot", "SportsLine/FanDuel public odds snapshot"],
+        "odds_format": "American",
+        "market_odds": {"Uzbekistan": "+700", "Draw": "+360", "Colombia": "-220"},
+        "raw_implied": {"Uzbekistan": 0.1250, "Draw": 0.2174, "Colombia": 0.6875},
+        "overround": 1.0299,
+        "normalized_market_implied": {"Uzbekistan": 0.1214, "Draw": 0.2111, "Colombia": 0.6675},
+        "model_minus_market": {"Uzbekistan": 0.0086, "Draw": 0.0289, "Colombia": -0.0375},
+        "notes": "Model is more cautious on Colombia than market and gives extra weight to draw/Uzbekistan +1.5 paths."
+      },
+      "source_dependencies": [
+        "K:/worldcup/队伍/乌兹别克斯坦/正式球队档案.md",
+        "K:/worldcup/队伍/哥伦比亚/正式球队档案.md",
+        "K:/worldcup/data/packets/tactics/uzbekistan-tactics-packet.json",
+        "K:/worldcup/data/packets/tactics/colombia-tactics-packet.json"
+      ]
+    }
+  ]
+}

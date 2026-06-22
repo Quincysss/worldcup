@@ -1,0 +1,182 @@
+{
+  "phase": "team_profile",
+  "profile_depth": "deep",
+  "team": {
+    "zh": "捷克",
+    "en": "Czechia",
+    "fifa_code": "CZE",
+    "group": "A"
+  },
+  "status": "partial",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-11T17:02:07+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "A组捷克 team_profile 深版模型输入简报；只覆盖强度基线、lambda/xG修正、风格建模、市场校准接口和不确定性，不输出比分、胜平负、出线、冠军或投注建议。",
+  "missing_fields": [
+    "T-24h injury update",
+    "T-75m official lineup",
+    "complete recent structured sample",
+    "exact Elo/FIFA/Opta numeric ratings",
+    "Schick health and minutes risk",
+    "back-three vs back-four confirmation",
+    "closing odds and latest market snapshot",
+    "set-piece map",
+    "wide-defense video sample"
+  ],
+  "uncertainty_flags": [
+    "不能把欧洲中游队标签写成天然稳定。",
+    "Schick可用性会显著影响开放进攻lambda和禁区终结。",
+    "Soucek路线很清晰，但若传中和二点被限制，创造方式会变窄。",
+    "捷克定位球强项真实存在，但需要完整地图量化。",
+    "速度防守和边路宽度是主要失效路径，当前必须保留风险。"
+  ],
+  "source_log": [
+    {
+      "type": "team_packet",
+      "path": "data/packets/teams/czechia-team-packet.json",
+      "status_observed": "partial",
+      "used_for": "教练、核心球员观察、定位球/空中优势和速度风险"
+    },
+    {
+      "type": "tactics_packet",
+      "path": "data/packets/tactics/czechia-tactics-packet.json",
+      "status_observed": "partial",
+      "used_for": "3-4-2-1/4-2-3-1/4-3-3、Schick、Soucek、传中二点和宽度防守"
+    },
+    {
+      "type": "red_team_review",
+      "path": "data/reviews/red_team/czechia-red-team-review.md",
+      "status_observed": "revise / partial",
+      "used_for": "防止欧洲队标签过度稳定化，强调速度和边路风险"
+    }
+  ],
+  "notes": [
+    "当前文件已按深版 partial 落盘，上游缺口未补齐前不硬凑 complete。",
+    "当前阶段只做 team_profile 模型输入，不进入任何比赛预测。"
+  ],
+  "data": {
+    "model_scope": {
+      "stage": "team_profile",
+      "group_workflow": "A组球队档案阶段",
+      "prediction_policy": "禁止输出具体比分、胜平负、小组出线、冠军或投注建议"
+    },
+    "baseline_strength_framework": {
+      "temporary_band": "competitive_group_contender",
+      "confidence": "medium_low",
+      "recommended_formula": "baseline_z = 0.30*Elo_z + 0.10*FIFA_z + 0.22*OptaPower_z + 0.15*RecentForm_z + 0.10*SquadValue_z + 0.13*SetPiecePhysicality_z",
+      "component_notes": [
+        "Elo与Opta确定长期强度，FIFA排名只作低权重锚定。",
+        "近期表现必须拆出强对手、低位互耗、定位球收益和开放转换样本。",
+        "阵容身价不能解释捷克的空中优势和定位球效率，应另设set_piece/physicality特征。",
+        "Schick与Soucek的核心路径要避免重复计权：球员质量、定位球、传中二点不能无限叠加。"
+      ],
+      "current_packet_facts": {
+        "coach": "Ivan Hasek",
+        "profile": "欧洲中游竞争队，身体、定位球、禁区存在感和Schick/Soucek路线清晰。",
+        "core_players_watch": [
+          "Patrik Schick",
+          "Tomas Soucek",
+          "Antonin Barak",
+          "Lukas Provod",
+          "David Jurasek"
+        ],
+        "strengths": [
+          "aerial power",
+          "set pieces",
+          "box presence",
+          "central duels"
+        ],
+        "risks": [
+          "pace against fast transitions",
+          "creative variety if Schick is isolated",
+          "defending wide overloads"
+        ]
+      }
+    },
+    "lambda_xg_sensitivity": {
+      "core_roles": [
+        {
+          "role": "中锋终结与禁区支点",
+          "players": [
+            "Patrik Schick"
+          ],
+          "available_effect": "提升开放进攻xG兑现、传中终结和禁区牵制。",
+          "limited_or_absent_effect": "捷克attack lambda明显下修，创造方式更依赖定位球和二点。"
+        },
+        {
+          "role": "后插上与定位球核心",
+          "players": [
+            "Tomas Soucek"
+          ],
+          "available_effect": "提升二点球、后点冲击和定位球xG。",
+          "limited_or_absent_effect": "set-piece和禁区混战尾部下修。"
+        },
+        {
+          "role": "中场创造与连接",
+          "players": [
+            "Antonin Barak",
+            "Lukas Provod"
+          ],
+          "available_effect": "提升传中前一脚、二线远射和弱侧转移。",
+          "limited_or_absent_effect": "阵地战创造变窄，更多依赖直接传中。"
+        },
+        {
+          "role": "边路宽度与防守承压点",
+          "players": [
+            "David Jurasek"
+          ],
+          "available_effect": "提升边路推进和传中服务。",
+          "limited_or_absent_effect": "宽度下降；若对手速度强，防守lambda可能上修。"
+        }
+      ],
+      "placeholder_adjustments": {
+        "schick_unavailable_attack_lambda": [-0.24, -0.10],
+        "soucek_unavailable_set_piece_xg": [-0.12, -0.05],
+        "wide_defense_exposed_opponent_lambda": [0.08, 0.20],
+        "set_piece_advantage_attack_lambda": [0.06, 0.16]
+      }
+    },
+    "style_modeling_notes": {
+      "attack": "Schick终结、Soucek后插上、传中、二点球和定位球是主要路线。",
+      "defense": "中低位和身体对抗是底盘，但被拉到边路和被速度冲击时风险上升。",
+      "low_block": "捷克面对低位防守时可能通过传中和定位球制造机会，但地面渗透多样性需补证。",
+      "versus_possession_teams": "可接受长时间无球并寻找定位球/二点，但若被持续横向调动，体能和宽度防守承压。",
+      "leading_state": "领先后更适合压低节奏和空中防守，但边路防守与二点保护仍是关键。",
+      "set_pieces": "定位球是高优先级正修正，必须在下一阶段补齐进攻与防守双向地图。"
+    },
+    "market_calibration": {
+      "current_market_view": "A组竞争者层级；仅作为市场事实方向，不构成投注建议。",
+      "required_markets": [
+        "outright winner",
+        "group winner",
+        "group qualification",
+        "single match 1X2",
+        "single match totals",
+        "asian handicap"
+      ],
+      "calibration_rules": [
+        "先去水，再检查市场是否充分计入定位球和空中优势。",
+        "若市场低看捷克，要确认是否忽略低事件、定位球和身体对抗带来的抗衡能力。",
+        "若市场高看捷克，要检查Schick健康和宽度防守风险是否被低估。",
+        "缺 closing odds 时不得输出市场价值判断。"
+      ]
+    },
+    "required_fields_for_next_stage": [
+      "ratings.elo",
+      "ratings.fifa_rank",
+      "ratings.opta_power",
+      "recent_form.sample_split",
+      "schick_availability",
+      "soucek_role_and_minutes",
+      "back_three_or_back_four",
+      "set_piece_attack_defense",
+      "wide_defense_grade",
+      "creative_variety_grade",
+      "market_fair_probabilities"
+    ],
+    "handoff_notes": [
+      "横向比较时要把捷克的定位球上限和速度防守风险同时保留。",
+      "比赛预测阶段先确认Schick状态、阵型选择和对手是否能切断传中二点。"
+    ]
+  }
+}

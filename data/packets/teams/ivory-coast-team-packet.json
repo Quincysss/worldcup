@@ -1,0 +1,32 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:46:00+08:00",
+  "scope": "E组科特迪瓦队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "科特迪瓦", "en": "Côte d'Ivoire", "fifa_code": "CIV", "group": "E", "confederation": "CAF"},
+  "source_log_path": "K:/worldcup/data/source_logs/ivory-coast-team-source-log.json",
+  "fixtures_context": {
+    "round1_result": "科特迪瓦 1-0 厄瓜多尔",
+    "remaining_group_matches": ["德国 vs 科特迪瓦", "库拉索 vs 科特迪瓦"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Emerse Faé",
+    "team_identity": "身体、速度、反击和边路爆点突出，首轮绝杀提升士气；但对德国时需要处理控球劣势和防线长时间承压。",
+    "likely_structure": ["4-2-3-1", "4-3-3", "4-4-2 defensive phase"]
+  },
+  "core_players_watch": [
+    {"player": "Amad Diallo", "role": "边路/肋部爆点，首轮绝杀者"},
+    {"player": "Franck Kessie", "role": "中场对抗、推进和禁区前插"},
+    {"player": "Sebastien Haller", "role": "中锋支点、禁区终结和高球"},
+    {"player": "Simon Adingra", "role": "边路速度和一对一"},
+    {"player": "Oumar Diakite", "role": "前场冲击和替补变化"},
+    {"player": "Evan Ndicka", "role": "中卫防空和出球"},
+    {"player": "Seko Fofana", "role": "中场推进和远射"}
+  ],
+  "strengths": ["边路速度", "身体对抗", "反击纵深", "中场硬度", "首轮绝杀士气"],
+  "risks": ["控球稳定性", "面对德国压迫时出球", "防线长时间低位承压", "进攻选择有时偏直接", "首轮绝杀可能掩盖机会质量问题"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "首轮赢球后市场会重新评估科特迪瓦反击威胁，但对德国仍需赔率校准。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["official technical report", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

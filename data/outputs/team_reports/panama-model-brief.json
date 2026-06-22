@@ -1,0 +1,28 @@
+{
+  "model_scope": "Panama team-profile inputs for L group; no match prediction in this file.",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:40:00+08:00",
+  "team": {"zh": "巴拿马", "en": "Panama", "group": "L"},
+  "input_readiness": {
+    "available": ["coach", "group", "opening fixture", "core player pool", "tactical traits", "risk flags"],
+    "missing_or_stale": ["fresh injuries", "confirmed starting XI", "latest odds", "referee", "front-line role order"],
+    "volatile_inputs": ["wingback selection", "discipline profile", "set-piece assignments"]
+  },
+  "strength_profile": {
+    "attack_ceiling": "medium_low",
+    "defensive_floor": "medium",
+    "midfield_control": "medium_low",
+    "set_piece": "medium_high",
+    "bench_impact": "low_medium",
+    "uncertainty": "medium"
+  },
+  "model_features_to_encode": [
+    "compact-block resilience",
+    "set-piece and aerial variance",
+    "Carrasquilla progression dependency",
+    "bench-depth limitation",
+    "discipline-card sensitivity"
+  ],
+  "calibration_notes": "巴拿马不应只按纸面实力下调；中低位结构和定位球会抬高低比分波动，但追分能力和替补火力需要保守。",
+  "handoff_notes": "第一轮建模前刷新翼卫选择、锋线排序、伤停、赔率、总进球线和裁判尺度。"
+}

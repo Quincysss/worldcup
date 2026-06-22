@@ -1,0 +1,184 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Bosnia and Herzegovina",
+    "en": "Bosnia and Herzegovina",
+    "fifa_code": "BIH",
+    "group": "B"
+  },
+  "match": null,
+  "status": "deep_partial",
+  "created_at": "2026-06-12T17:05:00+08:00",
+  "updated_at": "2026-06-12T17:25:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Bosnia and Herzegovina tactical and coaching team_profile only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "complete set-piece taker and target map",
+    "full recent structured sample against high-tempo opponents",
+    "video-backed recovery-defense review"
+  ],
+  "source_log": [
+    {
+      "source": "local team packet",
+      "url": "K:\\worldcup\\data\\packets\\teams\\bosnia-herzegovina-team-packet.json",
+      "note": "Initial local context"
+    }
+  ],
+  "notes": [
+    "Created first before deepening content.",
+    "No match prediction, group projection, champion projection, or betting advice."
+  ],
+  "data": {
+    "coach_profile": {
+      "coach": "Sergej Barbarez",
+      "default_formation": "4-2-3-1",
+      "alternate_formation": [
+        "4-4-2",
+        "4-3-3"
+      ],
+      "system_stability": "medium",
+      "tournament_pragmatism": "high",
+      "summary": "Barbarez's Bosnia and Herzegovina project leans on experience, emotional intensity, and direct central routes. The team are more comfortable in structured, physical games than in high-speed, open-space races."
+    },
+    "possession_structure": {
+      "summary": "Bosnia do not need long possession dominance. Their controlled attacks are usually there to create service into the striker, second-ball fights, or crossing situations.",
+      "build_up": "Back four base with central midfielders trying to feed direct service or recycle toward the wings.",
+      "central_control_level": "medium_low",
+      "width_usage": "medium_high",
+      "confidence": "medium"
+    },
+    "pressing_profile": {
+      "summary": "The team can press in bursts, especially from emotional momentum, but they are not best described as a full-match high-press side.",
+      "press_height": "medium",
+      "press_orientation": "selective_and_emotion_driven",
+      "counterpress_level": "medium_low",
+      "confidence": "medium"
+    },
+    "defensive_block": {
+      "summary": "Bosnia are more comfortable in a mid/low block where the line can stay connected and the game can be slowed down. Their biggest discomfort appears when fast opponents stretch them repeatedly.",
+      "line_height": "medium_low",
+      "compactness": "medium",
+      "central_screen_quality": "medium",
+      "fullback_space_risk": "medium_high",
+      "confidence": "medium"
+    },
+    "attacking_transition": {
+      "summary": "Bosnia can counter when the first pass finds the striker or an aggressive runner early, but their transition ceiling is more about timing and service than raw team speed.",
+      "speed": "medium",
+      "primary_outlets": [
+        "Edin Dzeko",
+        "Ermedin Demirovic",
+        "Amar Dedic"
+      ],
+      "confidence": "medium"
+    },
+    "defensive_transition": {
+      "summary": "This is a real concern area. If Bosnia lose the first duel after their own attack breaks down, recovery pace and spacing can be exposed.",
+      "rest_defense_quality": "medium_low",
+      "recovery_risk": "high",
+      "confidence": "medium"
+    },
+    "set_piece_attack": {
+      "summary": "Set pieces are one of Bosnia's clearest support weapons because they amplify experience, size, and box instincts.",
+      "threat_level": "high",
+      "confidence": "medium_high"
+    },
+    "set_piece_defense": {
+      "summary": "Usually serviceable because of size and experience, but the exact quality still depends on final lineup freshness and mobility.",
+      "stability": "medium",
+      "confidence": "medium"
+    },
+    "game_state_behaviour": {
+      "leading": "When ahead, Bosnia are likely to lower tempo, defend territory, and trust experience rather than chase a second stylistic phase.",
+      "trailing": "When trailing, they can increase crossing volume and commit more bodies around the striker, but the comeback route may become predictable.",
+      "confidence": "medium"
+    },
+    "substitution_tendency": {
+      "summary": "Expected changes are more likely to reinforce direct service, box presence, or emotional intensity than to shift into a radically different possession model.",
+      "resource_type": "experience_and_box_pressure",
+      "confidence": "medium"
+    },
+    "key_player_roles": [
+      {
+        "role": "central_reference_striker",
+        "players": [
+          "Edin Dzeko"
+        ],
+        "note": "Still the clearest penalty-box and hold-up reference, even if mobility is no longer the defining feature."
+      },
+      {
+        "role": "support_runner_and_secondary_finisher",
+        "players": [
+          "Ermedin Demirovic"
+        ],
+        "note": "Important because he can attack off the main striker and raise the running output."
+      },
+      {
+        "role": "wide_progressor",
+        "players": [
+          "Amar Dedic"
+        ],
+        "note": "One of the most important pace and carrying outlets from the wide areas."
+      },
+      {
+        "role": "defensive_experience_axis",
+        "players": [
+          "Sead Kolasinac",
+          "Rade Krunic"
+        ],
+        "note": "Critical for keeping the team emotionally and structurally connected."
+      }
+    ],
+    "tactical_risks": [
+      "recovery pace against fast transitions",
+      "dependence on service quality into older attacking references",
+      "midfield coverage when match tempo rises",
+      "predictability when chasing a game through crosses"
+    ],
+    "data_gaps": [
+      "clean lineup-linked evidence of back-four versus two-forward usage",
+      "current-minute load and freshness of veteran core",
+      "recent high-quality sample against elite transition teams"
+    ],
+    "confidence_notes": [
+      {
+        "topic": "box and set-piece threat",
+        "confidence": "medium_high",
+        "reason": "Supported by player profiles and team tendencies."
+      },
+      {
+        "topic": "open-play pace ceiling",
+        "confidence": "medium",
+        "reason": "Needs fresher sample versus stronger opposition."
+      },
+      {
+        "topic": "defensive transition resilience",
+        "confidence": "medium",
+        "reason": "Widely plausible but still needs video-backed review."
+      }
+    ],
+    "handoff_to_model": {
+      "attack_ceiling": "medium",
+      "defensive_floor": "medium_low_to_medium",
+      "set_piece_attack": "high",
+      "tempo_preference": "medium_low",
+      "transition_attack": "medium",
+      "transition_defense_risk": "high",
+      "key_player_dependency": "high_on_dzeko_demirovic_dedic",
+      "market_relevant_flags": [
+        "If the game becomes cross-heavy, Bosnia become more live",
+        "If forced into repeated recovery sprints, Bosnia's defensive floor drops quickly",
+        "Veteran freshness is a major hidden variable"
+      ]
+    },
+    "handoff_to_red_team": {
+      "challenge_points": [
+        "Are we over-anchoring on veteran reputation instead of current mobility?",
+        "How much does Dzeko's role still increase box threat at current age?",
+        "Can Dedic alone solve the pace gap against faster groups?"
+      ],
+      "priority": "high"
+    }
+  }
+}

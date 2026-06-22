@@ -1,0 +1,340 @@
+﻿{
+  "phase": "team_profile",
+  "team": "France",
+  "team_cn": "法国队",
+  "group": "I",
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-10T17:16:20.4497734+08:00",
+  "updated_at": "2026-06-10T17:58:00+08:00",
+  "owner": "tactics-coach-agent",
+  "scope": "法国队战术/教练分析包",
+  "inputs_expected": ["france-team-packet", "recent_match_samples", "official_squad"],
+  "missing_fields": [
+    "full structured recent_match_samples packet from data collector",
+    "official substitution timeline by game state across a broader 2025-2026 sample",
+    "video-backed confirmation of weak-side defensive exposure across multiple matches",
+    "set-piece taker map across the full World Cup squad sample",
+    "injury-status rationale for players absent from final 2026 squad"
+  ],
+  "source_log": [
+    {
+      "source": "FFF official squad article",
+      "url": "https://www.fff.fr/article/16790-les-26-bleus-pour-le-mondial-2026.html",
+      "note": "Didier Deschamps announced the 26-player World Cup squad on 2026-05-14."
+    },
+    {
+      "source": "FFF latest squad page",
+      "url": "https://www.fff.fr/selection/2-equipe-de-france/derniere-selection.html",
+      "note": "Current 26-player France squad grouped by position."
+    },
+    {
+      "source": "FFF coach reaction to Griezmann retirement",
+      "url": "https://www.fff.fr/article/13305-deschamps-antoine-un-monument-du-football-francais-.html",
+      "note": "Confirms Antoine Griezmann retired internationally on 2024-09-30 and is not part of the 2026 squad."
+    },
+    {
+      "source": "FFF team page",
+      "url": "https://www.fff.fr/selection/2-equipe-de-france/index.html",
+      "note": "Confirms Didier Deschamps is still head coach and had led France in 178 matches as of 2026-06-08."
+    },
+    {
+      "source": "FFF match report",
+      "url": "https://www.fff.fr/article/15240-examen-de-rentree-reussi-2-0-.html",
+      "note": "Ukraine 0-2 France, 2025-09-05."
+    },
+    {
+      "source": "FFF match report",
+      "url": "https://www.fff.fr/article/16507-les-bleus-s-offrent-le-bresil.html",
+      "note": "Brazil 1-2 France, 2026-03-26."
+    },
+    {
+      "source": "FFF match page",
+      "url": "https://www.fff.fr/selection/matchs/3736-colombie-france.html",
+      "note": "Colombia 1-3 France, 2026-03-29."
+    },
+    {
+      "source": "FFF lineup article",
+      "url": "https://www.fff.fr/article/16917-les-compos-pour-france-cote-d-ivoire.html",
+      "note": "France vs Cote d'Ivoire starting XI, 2026-06-04."
+    },
+    {
+      "source": "FFF match report",
+      "url": "https://www.fff.fr/article/16943-signe-olise.html",
+      "note": "France 3-1 Northern Ireland, 2026-06-08."
+    }
+  ],
+  "notes": [
+    "先落文件骨架，等待 tactics agent 填充；当前阶段不包含比赛预测。",
+    "本包只写法国队 team_profile，不扩展到 I 组赛果、出线或冠军预测。",
+    "最终名单口径以 FFF 2026 世界杯 26 人名单为准；格列兹曼已在 2024 年退出法国国家队。"
+  ],
+  "fan_summary": "这支法国最可怕的地方是前场不靠一种解法活着：能靠姆巴佩冲身后，能靠登贝莱和奥利塞撕边路，也能靠中前场连续换位把比赛打成高质量转换战。",
+  "data": {
+    "analysis_status": "partial",
+    "confidence_overall": "medium",
+    "sample_summary": {
+      "primary_window": "2025-09 to 2026-06",
+      "coach": "Didier Deschamps",
+      "sample_quality": "medium",
+      "notes": [
+        "优先使用 2025 世界杯预选赛与 2026 世界杯前热身赛。",
+        "当前缺少数据采集 agent 的结构化比赛样本包，因此部分临场与细颗粒战术结论仍需后续复核。"
+      ]
+    },
+    "final_squad_notes": {
+      "squad_size": 26,
+      "listed_core_attackers": [
+        "Kylian Mbappe",
+        "Ousmane Dembele",
+        "Michael Olise",
+        "Rayan Cherki",
+        "Marcus Thuram",
+        "Desire Doue",
+        "Bradley Barcola"
+      ],
+      "listed_core_midfielders": [
+        "Aurelien Tchouameni",
+        "Adrien Rabiot",
+        "N'Golo Kante",
+        "Warren Zaire-Emery",
+        "Matteo Guendouzi",
+        "Manu Kone"
+      ],
+      "listed_core_defenders": [
+        "Jules Kounde",
+        "Theo Hernandez",
+        "William Saliba",
+        "Ibrahima Konate",
+        "Dayot Upamecano",
+        "Malo Gusto"
+      ],
+      "not_in_final_squad_notes": [
+        "Antoine Griezmann retired internationally in 2024 and is not part of the 2026 squad.",
+        "Eduardo Camavinga is not in the official 2026 World Cup squad list used for this packet."
+      ]
+    },
+    "coach_profile": {
+      "coach": "Didier Deschamps",
+      "system_stability": "high",
+      "selection_stability": "high",
+      "preferred_systems": [
+        "4-2-3-1",
+        "4-3-3"
+      ],
+      "tournament_pragmatism": "high",
+      "summary": "Deschamps 依旧保持四后卫底稿和高等级比赛务实取向。法国可以根据对手在 4-2-3-1 与 4-3-3 之间切换，但球队的核心原则没有变：后场先保证中路安全，前场依靠个体突破、换位和转换质量决定上限。",
+      "confidence": "high"
+    },
+    "team_shape": {
+      "nominal_formations": [
+        "4-2-3-1",
+        "4-3-3"
+      ],
+      "in_possession_shape": "常见为四后卫底稿上的 2-3-5 或 3-2-5 感，左路给姆巴佩较大自由度，右路由登贝莱或奥利塞提供宽度与一对一，后腰负责托底和转移。",
+      "out_of_possession_shape": "常见为 4-4-2 或 4-1-4-1，前场第一线会根据首发人选在姆巴佩、登贝莱、图拉姆、奥利塞之间调整。",
+      "role_asymmetry": [
+        "左路通常更像明星终结侧，右路更像持球创造侧。",
+        "中场会根据楚阿梅尼、拉比奥、坎特或扎伊尔-埃梅里的组合，在扫荡、出球和前插之间重新分配职责。"
+      ],
+      "confidence": "high"
+    },
+    "key_roles": [
+      {
+        "role": "left_side_superstar_finisher",
+        "players": [
+          "Kylian Mbappe"
+        ],
+        "note": "最终名单口径下，姆巴佩依旧是法国最重要的终结点和纵深威胁点。无论纸面写左路还是中锋，他都会占据最优冲刺与射门通道。",
+        "confidence": "high"
+      },
+      {
+        "role": "right_side_dribbler_creator",
+        "players": [
+          "Ousmane Dembele",
+          "Michael Olise"
+        ],
+        "note": "登贝莱和奥利塞共同承担右路宽度、持球爆破和最后一传任务。两人风格不同，但都让法国在右侧具备把对手边后卫和弱侧中场一起拉开的能力。",
+        "confidence": "high"
+      },
+      {
+        "role": "advanced_organizer_after_griezmann",
+        "players": [
+          "Michael Olise",
+          "Rayan Cherki",
+          "Ousmane Dembele"
+        ],
+        "note": "格列兹曼不在最终名单后，法国没有单一旧式 10 号位继承者，更像由奥利塞、谢尔基和登贝莱分担前场组织与危险传球任务。",
+        "confidence": "medium"
+      },
+      {
+        "role": "midfield_screen_and_balance",
+        "players": [
+          "Aurelien Tchouameni",
+          "Adrien Rabiot",
+          "N'Golo Kante",
+          "Warren Zaire-Emery"
+        ],
+        "note": "楚阿梅尼是最稳定的中路屏障和节奏再分配点；拉比奥负责覆盖与推进；坎特与扎伊尔-埃梅里则更多改变抢回球和转换强度。",
+        "confidence": "high"
+      },
+      {
+        "role": "center_back_protection_core",
+        "players": [
+          "William Saliba",
+          "Ibrahima Konate",
+          "Dayot Upamecano"
+        ],
+        "note": "法国双中卫的核心任务不是高位冒险出球，而是先确保对抗、回追和禁区保护的下限。",
+        "confidence": "high"
+      }
+    ],
+    "phase_model": {
+      "attack": {
+        "summary": "法国最稳定的进攻逻辑不是纯控球压死对手，而是把边路一对一、肋部换位和快速转换串成连续威胁。左路更偏姆巴佩的强点冲击，右路更偏登贝莱或奥利塞的持球创造。",
+        "left_side_blast": "high",
+        "transition_attack": "high",
+        "settled_attack": "medium_high",
+        "wing_width": "high",
+        "set_piece_attack": "medium_high",
+        "notes": [
+          "姆巴佩所在侧通常决定法国最直接的杀伤出口。",
+          "右侧创造者能把比赛从直线冲刺切换成连续过人和横传威胁。",
+          "阵地战不是法国最华丽的部分，但因为个人能力高，仍能稳定制造高质量禁区事件。"
+        ],
+        "confidence": "high"
+      },
+      "defense": {
+        "summary": "法国可以主动压迫，但在高等级比赛里更常见的是有选择地前压、随后迅速回收到稳固四后卫结构。中场屏障和双中卫保护仍然是防守下限的关键。",
+        "pressing": "medium_high",
+        "recovery_block": "high",
+        "center_back_protection": "high",
+        "fullback_space_risk": "medium",
+        "midfield_screen": "high",
+        "notes": [
+          "对强队时，法国通常不会把整场比赛变成无保护高压。",
+          "当边后卫压上较深且前场丢球位置靠外时，边后卫身后仍会出现可被攻击的通道。",
+          "楚阿梅尼、拉比奥、坎特这类中场是否齐整，直接影响法国防守下限。"
+        ],
+        "confidence": "medium_high"
+      },
+      "set_pieces": {
+        "attack": "法国定位球威胁更多来自执行质量加中后场身高优势，而不是极端依赖单一套路。",
+        "defense": "在双中卫主力齐整时，法国定位球防守下限较高；但完整主罚人与盯防映射仍需更细样本确认。",
+        "confidence": "medium"
+      }
+    },
+    "coach_tendencies": {
+      "leading_adjustments": "领先时更倾向补强中场控制和回收稳定度，同时保留至少一个能够打身后的前场出口。",
+      "trailing_adjustments": "落后时会优先增加前场持球、换位和禁区点位密度，常见做法是投入更多边路爆点或更激进的前场技术型球员。",
+      "substitution_resources": "high",
+      "knockout_conservatism": "high",
+      "summary": "Deschamps 的临场调整通常不是推翻底层结构，而是在同一四后卫底稿上换更快、更能过人或更稳的功能件。到淘汰赛或强强对话阶段，他的风险控制倾向依旧明显。",
+      "confidence": "medium"
+    },
+    "model_features": {
+      "attack_ceiling": {
+        "value": "high",
+        "confidence": "high",
+        "note": "法国拥有顶级边锋爆点、强转换终结和多点持球创造，上限仍属赛事第一梯队。"
+      },
+      "defensive_floor": {
+        "value": "high",
+        "confidence": "medium_high",
+        "note": "只要核心中卫与屏障型中场齐整，法国的防守下限仍很高。"
+      },
+      "set_piece_attack": {
+        "value": "medium_high",
+        "confidence": "medium",
+        "note": "定位球威胁稳定，但当前公开样本不足以把它写成最核心武器。"
+      },
+      "tempo_preference": {
+        "value": "variable_toward_medium_high",
+        "confidence": "medium",
+        "note": "法国不必全场快打，但在能提速时很愿意把比赛拉进高质量转换节奏。"
+      },
+      "transition_attack": {
+        "value": "high",
+        "confidence": "high",
+        "note": "这是法国最容易直接伤人的阶段之一，尤其在姆巴佩、登贝莱、奥利塞、图拉姆等人同时在场时。"
+      },
+      "transition_defense_risk": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "边后卫压上和前场边路丢球后，法国仍会留下可被强队针对的反击通道。"
+      },
+      "key_player_dependency": {
+        "value": "medium_high",
+        "confidence": "medium_high",
+        "note": "姆巴佩对终结与纵深威胁的影响最大；楚阿梅尼对中场屏障的重要性同样很高。"
+      },
+      "market_relevant_flags": [
+        {
+          "factor": "Mbappe centrality and fitness",
+          "impact_area": "1x2/totals/handicap",
+          "note": "他是否处于完整爆发状态，直接影响法国在开放空间中的杀伤质量。"
+        },
+        {
+          "factor": "right-side creator selection",
+          "impact_area": "totals/handicap",
+          "note": "登贝莱与奥利塞的首发组合会改变右路持球创造的持续性和宽度。"
+        },
+        {
+          "factor": "Tchouameni availability",
+          "impact_area": "1x2/handicap",
+          "note": "他对法国的中路屏障、落位和攻守平衡价值很高。"
+        },
+        {
+          "factor": "fullback aggression level",
+          "impact_area": "totals",
+          "note": "边后卫站位越激进，法国的进攻上限和被反击风险往往一起上升。"
+        }
+      ]
+    },
+    "verification_questions": [
+      {
+        "claim_id": "france-001",
+        "claim": "法国当前稳定底稿是 4-2-3-1 与 4-3-3 之间切换的四后卫体系。",
+        "confidence": "high",
+        "why_challengeable": "需要用更多完整比赛样本区分纸面阵型和实际无球结构。",
+        "challenge_type": "opponent_specific"
+      },
+      {
+        "claim_id": "france-002",
+        "claim": "格列兹曼离开后，法国没有单一固定组织核心，而是由奥利塞、谢尔基、登贝莱等人分担前场组织。",
+        "confidence": "medium",
+        "why_challengeable": "需要更长样本确认这是否为稳定分工，而不只是阶段性人员选择。",
+        "challenge_type": "small_sample"
+      },
+      {
+        "claim_id": "france-003",
+        "claim": "楚阿梅尼是法国中场屏障和防守下限的最关键单点之一。",
+        "confidence": "high",
+        "why_challengeable": "应复核他缺阵或状态受限时，法国是否能由其他中场完全替代其平衡功能。",
+        "challenge_type": "injury_dependency"
+      },
+      {
+        "claim_id": "france-004",
+        "claim": "法国最危险的进攻阶段之一仍然是高质量转换，而不是纯阵地战压制。",
+        "confidence": "high",
+        "why_challengeable": "需要更细的机会来源数据，确认不同对手强度下的比例变化。",
+        "challenge_type": "small_sample"
+      },
+      {
+        "claim_id": "france-005",
+        "claim": "法国边后卫身后是可被高质量强队重点攻击的次级风险点。",
+        "confidence": "medium",
+        "why_challengeable": "需要视频和事件级数据确认这是否持续出现，而非个别比赛场景。",
+        "challenge_type": "source_conflict"
+      },
+      {
+        "claim_id": "france-006",
+        "claim": "Deschamps 在领先和淘汰赛阶段仍保持明显务实与风险控制倾向。",
+        "confidence": "medium_high",
+        "why_challengeable": "需要更系统的换人时间线与淘汰赛样本映射来支撑当前版本的教练倾向判断。",
+        "challenge_type": "old_sample"
+      }
+    ],
+    "completion_note": "已完成法国队首版 team_profile，但因本地 france-team-packet 仍是骨架、缺少结构化 recent_match_samples 与更细替补时间线，本包状态定为 partial。"
+  }
+}

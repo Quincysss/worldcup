@@ -1,0 +1,31 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:25:00+08:00",
+  "scope": "L组克罗地亚球队画像；不包含比分、赛果倾向、出线、冠军或投注建议。",
+  "team": {"zh": "克罗地亚", "en": "Croatia", "fifa_code": "CRO", "group": "L", "confederation": "UEFA"},
+  "fixtures_context": {
+    "opening_match_status": "pending",
+    "opening_match": "England vs Croatia",
+    "group_matches": ["England vs Croatia", "Croatia vs Ghana", "Croatia vs Panama"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Zlatko Dalic",
+    "team_identity": "克罗地亚仍然是典型的节奏管理型球队，中场经验、比赛阅读和心理韧性很强；风险在于老化、冲刺能力和持续压迫下的体能消耗。",
+    "likely_structure": ["4-3-3", "4-2-3-1", "4-1-4-1"]
+  },
+  "core_players_watch": [
+    {"player": "Luka Modric", "role": "节奏控制、定位球、后场出球接应和关键传球"},
+    {"player": "Mateo Kovacic", "role": "抗压推进、带球脱压和中路连接"},
+    {"player": "Josko Gvardiol", "role": "左中卫/左后卫转换、推进和大范围覆盖"},
+    {"player": "Andrej Kramaric", "role": "前场连接、禁区嗅觉和二前锋式游动"},
+    {"player": "Dominik Livakovic", "role": "门线稳定、大赛心理和点球场景经验"},
+    {"player": "Josip Stanisic", "role": "边后卫/中卫机动性、防守覆盖和出球选择"}
+  ],
+  "strengths": ["中场控节奏", "大赛经验", "抗压传控", "定位球脚法", "Gvardiol防守覆盖", "胶着局处理"],
+  "risks": ["核心年龄结构", "速度和纵深防守", "锋线产量", "高强度对抗下的体能", "边路防守身后", "过度依赖老将比赛阅读"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "克罗地亚历史韧性容易让模型和市场产生分歧，需要用当期体能和首发年龄结构校正。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["fresh injuries", "fresh odds", "confirmed starting XI", "veteran minutes plan"]}
+}

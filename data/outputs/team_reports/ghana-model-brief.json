@@ -1,0 +1,28 @@
+{
+  "model_scope": "Ghana team-profile inputs for L group; no match prediction in this file.",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:40:00+08:00",
+  "team": {"zh": "加纳", "en": "Ghana", "group": "L"},
+  "input_readiness": {
+    "available": ["coach correction", "group", "opening fixture", "core player pool", "tactical traits", "risk flags"],
+    "missing_or_stale": ["fresh injuries", "confirmed starting XI", "latest odds", "referee", "Queiroz tactical sample"],
+    "volatile_inputs": ["Partey fitness", "Kudus role", "defensive shape"]
+  },
+  "strength_profile": {
+    "attack_ceiling": "medium_high",
+    "defensive_floor": "medium",
+    "midfield_control": "medium",
+    "set_piece": "medium_high",
+    "bench_impact": "medium",
+    "uncertainty": "medium_high"
+  },
+  "model_features_to_encode": [
+    "transition-speed threat",
+    "coach-transition uncertainty",
+    "defensive concentration risk",
+    "Kudus creation dependency",
+    "physical-duel advantage in selected matchups"
+  ],
+  "calibration_notes": "加纳需要分开处理个人爆点和团队稳定性；Queiroz 能提高防守秩序的假设需要用实际首发和近期训练信息验证。",
+  "handoff_notes": "第一轮建模前刷新 Queiroz 阵型、Partey 状态、锋线选择、伤停、赔率和总进球线。"
+}

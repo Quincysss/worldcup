@@ -1,0 +1,56 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "墨西哥",
+    "en": "Mexico",
+    "fifa_code": "MEX",
+    "group": "A"
+  },
+  "status": "partial_post_match_ready",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-12T15:10:00+08:00",
+  "owner": "main-thread-takeover",
+  "scope": "A组墨西哥 team_profile；含第一轮赛后上下文和第二轮准备，不输出比分预测、出线预测、冠军预测或投注建议。",
+  "source_log": [
+    {
+      "source": "FIFA Mexico team page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/mexico",
+      "supports_fields": ["team_identity", "competition_context"]
+    },
+    {
+      "source": "Mexico official squad / federation context",
+      "url": "https://miseleccion.mx/",
+      "supports_fields": ["coach_context", "squad_context"],
+      "confidence": "medium"
+    },
+    {
+      "source": "A组第一轮赛后复盘",
+      "path": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-11_墨西哥_2-0_南非_复盘.md",
+      "supports_fields": ["post_match_context", "prediction_audit"]
+    }
+  ],
+  "data": {
+    "coach": "Javier Aguirre",
+    "profile": "东道主热门之一，主场环境、经验脊梁和中场对抗是主要加分项；比赛不能只按纸面优势处理，公众压力和纪律风险需要持续扣权。",
+    "core_players_watch": ["Edson Alvarez", "Santiago Gimenez", "Raul Jimenez", "Hirving Lozano", "Johan Vasquez", "Luis Malagon"],
+    "style_tags": ["4-3-3/4-2-3-1可切换", "边路推进", "中场压迫", "主场情绪驱动", "定位球与二点球"],
+    "strengths": ["主场和海拔/熟悉环境加成", "中场硬度", "边路强度", "大赛经验", "第一轮拿到净胜球优势"],
+    "risks": ["东道主压力", "终结效率波动", "边后卫压上后的身后空间", "领先后的情绪和纪律管理", "第二轮前需确认停赛与体能"],
+    "post_match_context": {
+      "round_1_result": "墨西哥 2-0 南非",
+      "points_after_round_1": 3,
+      "goal_difference_after_round_1": 2,
+      "audit_note": "旧预测命中比分和胜平负，但赛前深版流程未闭环，不能把命中当作流程合格。"
+    },
+    "second_round_preparation": {
+      "must_refresh": ["官方伤停", "停赛/纪律确认", "T-24h训练", "T-75m首发", "临场盘口", "对手针对墨西哥边路和反击的布置"],
+      "model_adjustments": ["保留主场加成", "纪律风险单列", "领先后控场样本待补"]
+    }
+  },
+  "missing_fields": ["官方完整技术统计", "第二轮T-24h伤停训练", "第二轮T-75m官方首发", "closing_odds_refresh", "完整近期10场结构化样本"],
+  "data_quality": {
+    "overall_confidence": "medium",
+    "completion_level": "usable_partial",
+    "reason_not_complete": "动态赛前字段和第二轮临场信息尚未锁定。"
+  }
+}

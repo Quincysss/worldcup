@@ -1,0 +1,182 @@
+{
+  "phase": "team_profile",
+  "profile_depth": "deep",
+  "team": {
+    "zh": "南非",
+    "en": "South Africa",
+    "fifa_code": "RSA",
+    "group": "A"
+  },
+  "status": "partial",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-11T17:02:07+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "A组南非 team_profile 深版模型输入简报；只覆盖强度基线、lambda/xG修正、风格建模、市场校准接口和不确定性，不输出比分、胜平负、出线、冠军或投注建议。",
+  "missing_fields": [
+    "T-24h injury update",
+    "T-75m official lineup",
+    "complete last-10 structured sample",
+    "exact Elo/FIFA/Opta numeric ratings",
+    "full recent xG and shot-quality sample",
+    "closing odds and latest market snapshot",
+    "set-piece map",
+    "video sample for pressure survival"
+  ],
+  "uncertainty_flags": [
+    "不能把南非写成普通弱旅，低事件比赛制造能力需要保留。",
+    "防守韧性不等于稳定抢分，进攻创造力仍是主要缺口。",
+    "门将表现可能显著改变失球尾部，但不能用单点名气替代全队防守质量。",
+    "若长时间无球，体能和替补深度可能放大后段失球风险。",
+    "市场低估或高估都需要结合低比分分布校准，不能直接得出价值结论。"
+  ],
+  "source_log": [
+    {
+      "type": "team_packet",
+      "path": "data/packets/teams/south-africa-team-packet.json",
+      "status_observed": "partial",
+      "used_for": "教练、核心球员观察、防守韧性、转换和定位球风险"
+    },
+    {
+      "type": "tactics_packet",
+      "path": "data/packets/tactics/south-africa-tactics-packet.json",
+      "status_observed": "partial",
+      "used_for": "4-2-3-1/4-3-3/4-5-1防守态、反击、二点球和紧凑防线"
+    },
+    {
+      "type": "red_team_review",
+      "path": "data/reviews/red_team/south-africa-red-team-review.md",
+      "status_observed": "revise / partial",
+      "used_for": "不要低估韧性，也不要高估稳定抢分能力"
+    }
+  ],
+  "notes": [
+    "当前文件已按深版 partial 落盘，上游缺口未补齐前不硬凑 complete。",
+    "当前阶段只做 team_profile 模型输入，不进入任何比赛预测。"
+  ],
+  "data": {
+    "model_scope": {
+      "stage": "team_profile",
+      "group_workflow": "A组球队档案阶段",
+      "prediction_policy": "禁止输出具体比分、胜平负、小组出线、冠军或投注建议"
+    },
+    "baseline_strength_framework": {
+      "temporary_band": "structured_underdog",
+      "confidence": "medium_low",
+      "recommended_formula": "baseline_z = 0.30*Elo_z + 0.10*FIFA_z + 0.20*OptaPower_z + 0.15*RecentForm_z + 0.10*SquadValue_z + 0.15*LowEventResistance_z",
+      "component_notes": [
+        "Elo与Opta用于长期实力，不足以解释南非的低事件韧性。",
+        "近期表现要分出控球劣势下的防守样本、转换样本和定位球样本。",
+        "阵容身价权重不宜过高，否则会低估门将、防守纪律和集体压缩空间能力。",
+        "低事件阻滞能力应单独入模，影响平局尾部和大比分失利概率。"
+      ],
+      "current_packet_facts": {
+        "coach": "Hugo Broos",
+        "profile": "纪律性较强的下位队，依赖紧凑防守、门将领导力、转换和定位球。",
+        "core_players_watch": [
+          "Ronwen Williams",
+          "Teboho Mokoena",
+          "Aubrey Modiba",
+          "Evidence Makgopa",
+          "Oswin Appollis",
+          "Themba Zwane"
+        ],
+        "strengths": [
+          "goalkeeper leadership",
+          "compact block",
+          "set pieces",
+          "transition counters"
+        ],
+        "risks": [
+          "chance creation against strong blocks",
+          "depth vs elite tempo",
+          "defending long spells without ball"
+        ]
+      }
+    },
+    "lambda_xg_sensitivity": {
+      "core_roles": [
+        {
+          "role": "门将核心",
+          "players": [
+            "Ronwen Williams"
+          ],
+          "available_effect": "降低post-shot失球风险，提升低事件比赛存活率和定位球防守信心。",
+          "limited_or_absent_effect": "失球尾部上修，南非制造低比分比赛的能力下降。"
+        },
+        {
+          "role": "中场屏障与远射/定位球触发点",
+          "players": [
+            "Teboho Mokoena"
+          ],
+          "available_effect": "提升中路保护、二点球竞争和定位球威胁。",
+          "limited_or_absent_effect": "对手禁区前沿xG和二次进攻概率上修。"
+        },
+        {
+          "role": "边路推进与定位球服务",
+          "players": [
+            "Aubrey Modiba",
+            "Oswin Appollis"
+          ],
+          "available_effect": "提升反击出球、宽度和定位球质量。",
+          "limited_or_absent_effect": "南非进攻lambda下修，尤其是落后状态下。"
+        },
+        {
+          "role": "前场支点和禁区冲击",
+          "players": [
+            "Evidence Makgopa",
+            "Themba Zwane"
+          ],
+          "available_effect": "提高反击终点、二点连接和少量高价值机会的兑现。",
+          "limited_or_absent_effect": "射门数量和禁区触球同时下修。"
+        }
+      ],
+      "placeholder_adjustments": {
+        "goalkeeper_unavailable_opponent_goals": [0.08, 0.18],
+        "midfield_screen_unavailable_opponent_lambda": [0.06, 0.16],
+        "transition_core_unavailable_attack_lambda": [-0.18, -0.08],
+        "low_event_resistance_modifier": "压低总进球均值，但保留长时间承压后的失球右尾"
+      }
+    },
+    "style_modeling_notes": {
+      "attack": "反击、边路释放、二点球和定位球是主要进攻路径；阵地战持续创造要保守估计。",
+      "defense": "紧凑中低位是底盘，门将领导力和中场保护决定低事件比赛能力。",
+      "low_block": "南非自己面对低位时可能缺少持续拆解手段，应降低阵地战attack lambda。",
+      "versus_possession_teams": "面对控球强队时，前60分钟抗压与后30分钟体能/替补深度必须分开建模。",
+      "leading_state": "领先后大概率进一步压低节奏，但过深回收可能抬高对手定位球和二次进攻xG。",
+      "set_pieces": "定位球既是进攻加分项，也是承压时的防守风险点，需要双向建模。"
+    },
+    "market_calibration": {
+      "current_market_view": "下位队或小组弱势方层级；仅作为市场事实方向，不构成投注建议。",
+      "required_markets": [
+        "outright winner",
+        "group winner",
+        "group qualification",
+        "single match 1X2",
+        "single match totals",
+        "asian handicap"
+      ],
+      "calibration_rules": [
+        "先去水，再检查市场是否低估低事件平局尾部。",
+        "若总进球市场偏低，要区分南非主动压低节奏和被动挨打两种来源。",
+        "若让球市场过深，应检查门将和防线状态是否支持抗穿盘能力，但不输出投注建议。",
+        "缺 closing odds 时不得输出市场价值判断。"
+      ]
+    },
+    "required_fields_for_next_stage": [
+      "ratings.elo",
+      "ratings.fifa_rank",
+      "ratings.opta_power",
+      "recent_form.sample_split",
+      "keeper_availability",
+      "midfield_screen_availability",
+      "transition_attack_grade",
+      "low_event_resistance_grade",
+      "set_piece_attack_defense",
+      "market_fair_probabilities"
+    ],
+    "handoff_notes": [
+      "横向比较时不要只按身价压低南非，应保留低事件和门将变量。",
+      "比赛预测阶段要先判断南非是主动低位还是被迫深守。"
+    ]
+  }
+}

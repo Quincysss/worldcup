@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:20:00+08:00",
+  "team": {"zh": "埃及", "en": "Egypt", "fifa_code": "EGY", "group": "G"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-3-3", "alternates": ["4-2-3-1", "4-5-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "更适合低位后快速找 Salah/Marmoush，不适合长时间阵地控球。",
+    "pressing_profile": "会阶段性压迫，但对比利时更可能先收紧中低位。",
+    "defensive_block": "紧凑低位和中场二点保护是基本盘，边路回防必须到位。",
+    "attacking_transition": "强依赖 Salah 的第一脚和斜插路线，Marmoush 可提供第二速度点。",
+    "set_piece": "中锋和中卫有对抗，定位球是弱势局破局方式。"
+  },
+  "coach_tendencies": {"coach": "Hossam Hassan", "risk_appetite": "medium_low_vs_favorite", "game_state": "对强队先稳，落后后才加大前场人数。"},
+  "tactical_risks": ["过度依赖Salah", "控球创造不足", "低位被持续压制", "早丢球后缺少主动方案"],
+  "confidence_notes": {"high": ["反击路径", "低位倾向"], "medium": ["定位球", "中场保护"], "low_or_missing": ["Salah体能", "T-75m首发"]},
+  "handoff_to_model": {"attack_ceiling": "medium", "defensive_floor": "medium", "transition_attack": "high_if_salah_fit", "low_block": "expected_vs_belgium"},
+  "handoff_to_red_team": ["Salah状态是否被高估", "落后时进攻是否足够", "比利时边路是否压垮防线"]
+}

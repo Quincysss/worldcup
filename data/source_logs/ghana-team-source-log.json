@@ -1,0 +1,50 @@
+{
+  "team": {"zh": "加纳", "en": "Ghana", "group": "L"},
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "captured_at": "2026-06-16T12:20:00+08:00",
+  "scope_guard": "球队画像阶段；不写比分、赛果倾向、出线结论、冠军判断或投注建议。",
+  "sources": [
+    {
+      "name": "FIFA - Group L focus",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/group-l-focus-teams-fixtures-standings",
+      "tier": "official",
+      "supports": ["group assignment", "opening fixture Ghana vs Panama", "high-level team context"]
+    },
+    {
+      "name": "Ghana Football Association",
+      "url": "https://www.ghanafa.org/",
+      "tier": "official_association",
+      "supports": ["national-team announcements", "coach and squad refresh gate", "injury/training follow-up"]
+    },
+    {
+      "name": "Ghana FA - Carlos Queiroz appointed",
+      "url": "https://www.ghanafa.org/carlos-queiroz-appointed-black-stars-head-coach-for-2026-fifa-world-cup",
+      "tier": "official_association",
+      "supports": ["coach correction", "staff transition context"]
+    },
+    {
+      "name": "FIFA - Match schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "tier": "official",
+      "supports": ["fixture calendar", "match-centre refresh gate"]
+    }
+  ],
+  "verified_facts": {
+    "coach": {"value": "Carlos Queiroz", "confidence": "high", "needs_refresh": false},
+    "opening_match": {"value": "Ghana vs Panama", "confidence": "high", "needs_refresh": true},
+    "core_player_pool": {
+      "value": ["Mohammed Kudus", "Antoine Semenyo", "Thomas Partey", "Jordan Ayew", "Inaki Williams", "Tariq Lamptey", "Mohammed Salisu", "Alexander Djiku", "Lawrence Ati-Zigi"],
+      "confidence": "medium",
+      "needs_refresh": true,
+      "note": "球员池用于画像，不等同于官方首发或最终可用名单。"
+    }
+  },
+  "gaps_and_conflicts": [
+    "部分旧预览仍可能引用 Otto Addo；本档案以加纳足协最新教练公告为准。",
+    "Queiroz 接手后的样本偏小，战术稳定性需谨慎。",
+    "T-24h 训练、伤停和发布会信息待刷新。",
+    "T-75m 官方首发待刷新。"
+  ],
+  "handoff_notes": "战术端重点看 Queiroz 是先稳住中后场，还是释放 Kudus、Semenyo 的转换速度；模型端应给教练切换加入不确定性折扣。"
+}

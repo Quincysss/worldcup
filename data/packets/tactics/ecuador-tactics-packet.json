@@ -1,0 +1,21 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:47:00+08:00",
+  "team": {"zh": "厄瓜多尔", "en": "Ecuador", "fifa_code": "ECU", "group": "E"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-3-3", "3-4-2-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "Caicedo 是中场平衡点，左路 Estupiñán/Hincapié 体系能提供推进和保护。",
+    "pressing_profile": "中高位压迫能力不错，对库拉索可能会承担更多控球和压迫责任。",
+    "defensive_block": "中卫身体条件强，防守地板不低；但久攻不下时要防身后反击。",
+    "attacking_transition": "中等偏强，取决于 Paez、Valencia 和边路推进质量。",
+    "set_piece": "有身体条件，需补主罚和目标分布。"
+  },
+  "coach_tendencies": {"coach": "Sebastián Beccacece", "risk_appetite": "medium_high_after_loss", "game_state": "首轮失利后抢分压力上升，对库拉索可能更主动。"},
+  "post_round1_update": "0-1 科特迪瓦后，终结效率和临门一脚被下调；整体强度和防守地板仍保留。",
+  "tactical_risks": ["久攻不下", "终结效率", "老将锋线体能", "抢分压力导致身后空间"],
+  "confidence_notes": {"high": ["中后场对抗", "左路推进"], "medium": ["阵地战创造", "压迫稳定性"], "low_or_missing": ["官方技术报告", "T-75m首发"]},
+  "handoff_to_model": {"attack_ceiling": "medium_high", "defensive_floor": "medium_high", "transition_attack": "medium", "chance_conversion_risk": "high"},
+  "handoff_to_red_team": ["首轮小负是否导致市场过度下调", "对库拉索能否早早转化优势", "抢分压力是否扩大反击风险"]
+}

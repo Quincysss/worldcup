@@ -1,0 +1,162 @@
+{
+  "phase": "model_adjustment",
+  "status": "complete",
+  "updated_at": "2026-06-19T00:00:00+08:00",
+  "group": "B",
+  "round": 2,
+  "scope": "B group second-round forecast audit and parameter updates for future match modeling.",
+  "source_results": [
+    {
+      "match": "Canada 6-0 Qatar",
+      "result_sources": [
+        "https://www.espn.com/soccer/match/_/gameId/760440/qatar-canada",
+        "https://www.foxsports.com/live-blog/soccer/canada-vs-qatar-live-updates-score-latest-world-cup-news-goals",
+        "https://www.theguardian.com/football/2026/jun/18/canada-qatar-world-cup-2026-group-b-match-report"
+      ]
+    },
+    {
+      "match": "Switzerland 4-1 Bosnia and Herzegovina",
+      "result_sources": [
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-bosnia-herzegovina-match-report-highlights",
+        "https://www.espn.co.uk/football/match/_/gameId/760439/bosnia-herzegovina-switzerland",
+        "https://www.theguardian.com/football/2026/jun/18/switzerland-bosnia-and-herzegovina-group-b-match-report",
+        "https://www.aljazeera.com/sports/2026/6/18/switzerland-beat-bosnia-and-herzegovina-4-1-top-group-b-in-world-cup"
+      ]
+    }
+  ],
+  "forecast_audit": [
+    {
+      "match": "Canada 6-0 Qatar",
+      "pre_match_prediction": {
+        "score": "Canada 2-1 Qatar",
+        "probabilities": {"canada": 61, "draw": 24, "qatar": 15},
+        "confidence": "medium"
+      },
+      "actual": "Canada 6-0 Qatar",
+      "audit": {
+        "direction": "Canada win direction hit",
+        "score": "major miss; blowout tail severely underweighted",
+        "total_goals": "small-score script failed after Qatar discipline collapse",
+        "script": "Canada home pressure script hit; Qatar low-block resilience and discipline were overestimated"
+      }
+    },
+    {
+      "match": "Switzerland 4-1 Bosnia and Herzegovina",
+      "pre_match_prediction": {
+        "score": "Switzerland 1-1 Bosnia and Herzegovina",
+        "probabilities": {"switzerland": 49, "draw": 29, "bosnia_and_herzegovina": 22},
+        "confidence": "medium_low"
+      },
+      "actual": "Switzerland 4-1 Bosnia and Herzegovina",
+      "audit": {
+        "direction": "missed draw lean; Switzerland win probability too low",
+        "score": "major miss; late Swiss burst and red-card tail were underweighted",
+        "total_goals": "under/small-score path failed",
+        "script": "Swiss control was correctly identified, but conversion and substitution impact were over-penalized"
+      }
+    }
+  ],
+  "parameter_updates": [
+    {
+      "parameter": "canada_home_attacking_ceiling",
+      "old": "+0.10 xG",
+      "new": "+0.28 xG",
+      "reason": "Canada's home press, speed and vertical attack created a far higher ceiling than modeled despite Davies-related concerns.",
+      "applies_to": "Canada home matches against low-block or high-discipline-risk opponents",
+      "round3_active": true,
+      "round3_constraint": "Model Ismael Kone injury separately before applying full value."
+    },
+    {
+      "parameter": "canada_red_card_blowout_multiplier",
+      "old": "1.20",
+      "new": "1.55",
+      "reason": "Qatar's red cards turned a Canada-favored match into a 6-0 blowout; the model had not amplified 4+ goal tails enough.",
+      "applies_to": "Canada leading against a team reduced to ten or nine men, especially before 60 minutes",
+      "round3_active": true
+    },
+    {
+      "parameter": "qatar_discipline_risk",
+      "old": "+2pp major discipline event risk",
+      "new": "+7pp major discipline event risk",
+      "reason": "Two red cards under sustained pressure show a much higher collapse-risk profile.",
+      "applies_to": "Qatar against high-press, high-speed opponents or when trailing",
+      "round3_active": true
+    },
+    {
+      "parameter": "qatar_low_block_resilience",
+      "old": "+0.12 defensive-resilience coefficient",
+      "new": "-0.05 when trailing or down a player",
+      "reason": "The first-round draw with Switzerland did not generalize once Qatar conceded and lost discipline.",
+      "applies_to": "Qatar after first concession, red card, or forced open-game state",
+      "round3_active": true
+    },
+    {
+      "parameter": "switzerland_late_substitution_impact",
+      "old": "+0.04 xG after 60 minutes",
+      "new": "+0.18 xG after 60 minutes",
+      "reason": "Johan Manzambi and Ruben Vargas changed the match state; Switzerland's late bench impact was materially underestimated.",
+      "applies_to": "Switzerland in stalemate games after 60 minutes",
+      "round3_active": true
+    },
+    {
+      "parameter": "switzerland_control_to_goal_conversion",
+      "old": "-0.12 xG conversion discount",
+      "new": "0 baseline; +0.10 xG if opponent opens up or loses a player",
+      "reason": "The first-round draw with Qatar caused an excessive conversion penalty; Switzerland converted control into goals in round two.",
+      "applies_to": "Switzerland controlling possession/territory, especially after opponent fatigue or discipline events",
+      "round3_active": true
+    },
+    {
+      "parameter": "bosnia_red_card_collapse_risk",
+      "old": "+1pp big-loss tail",
+      "new": "+6pp big-loss tail",
+      "reason": "Muharemovic's red card preceded a rapid Swiss scoring burst and structural collapse.",
+      "applies_to": "Bosnia and Herzegovina trailing, fatigued, or down a player against a control team",
+      "round3_active": true
+    },
+    {
+      "parameter": "bosnia_draw_resistance",
+      "old": "+4pp draw bonus",
+      "new": "+1pp draw bonus",
+      "reason": "The model over-carried Bosnia's first-round draw resistance into a match where late Swiss pressure broke the game.",
+      "applies_to": "Bosnia and Herzegovina against stronger control teams, especially after 60 minutes",
+      "round3_active": true
+    },
+    {
+      "parameter": "b_group_draw_baseline_after_round1",
+      "old": "+5pp draw baseline",
+      "new": "+1pp draw baseline",
+      "reason": "Two first-round 1-1 draws did not imply another draw-heavy round; second-round pressure created open tails.",
+      "applies_to": "B group round three and future group-specific priors",
+      "round3_active": true
+    },
+    {
+      "parameter": "favorite_ceiling_tail_probability",
+      "old": "P(win by 3+) +2pp",
+      "new": "P(win by 3+) +7pp; +12pp under red-card conditions",
+      "reason": "Canada and Switzerland both produced heavy wins after favorable match-state swings.",
+      "applies_to": "Clear favorites with early lead, speed/bench advantage, or opponent discipline collapse",
+      "round3_active": true
+    },
+    {
+      "parameter": "market_alignment_weight_when_clear_favorite",
+      "old": "0.35",
+      "new": "0.50",
+      "reason": "The model was materially below market on Canada and Switzerland win probabilities, while the market direction was correct.",
+      "applies_to": "Clear favorites where market and team-strength fundamentals agree and lineup gaps are not severe",
+      "round3_active": true
+    }
+  ],
+  "model_lessons": [
+    "First-round group-wide draws should not mechanically inflate the next round's draw baseline.",
+    "Red cards must be treated as scoreline-tail multipliers, not just small win-probability adjustments.",
+    "Canada's home attacking ceiling remains high even with Davies-related left-side concerns.",
+    "Switzerland's late substitutions and control-to-goal conversion need a conditional uplift rather than a blanket finishing discount.",
+    "Qatar and Bosnia and Herzegovina both showed discipline/collapse risk once their defensive plan was disrupted."
+  ],
+  "handoff_to_round3": [
+    "Canada vs Switzerland must include Ismael Kone injury uncertainty and possible market overreaction to two big favorite wins.",
+    "Qatar and Bosnia and Herzegovina require discipline, suspension and morale checks before final-round modeling.",
+    "B group draw baseline should reset downward from the round-one all-draw prior."
+  ]
+}

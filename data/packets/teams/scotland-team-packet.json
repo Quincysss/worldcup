@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "苏格兰", "en": "Scotland", "fifa_code": "SCO", "group": "C"},
+  "status": "deep_partial",
+  "updated_at": "2026-06-12T19:30:00+08:00",
+  "owner": "main-thread",
+  "scope": "C组苏格兰 team_profile；不输出比分、胜平负、出线、冠军或投注建议。",
+  "source_log_path": "K:\\worldcup\\data\\source_logs\\scotland-team-source-log.json",
+  "fixtures_context": {
+    "group_matches": ["海地 vs 苏格兰", "苏格兰 vs 摩洛哥", "苏格兰 vs 巴西"],
+    "needs_official_time_refresh": true
+  },
+  "data": {
+    "coach": "Steve Clarke",
+    "profile": "纪律、身体和中场硬度是底盘，时隔多年重返世界杯会带来强情绪；能否从海地身上拿足结果，决定整个小组走势。",
+    "core_players_watch": ["Scott McTominay", "John McGinn", "Andy Robertson", "Kieran Tierney", "Billy Gilmour", "Callum McGregor", "Che Adams", "Angus Gunn"],
+    "style_tags": ["3-4-2-1", "中场冲击", "边翼卫推进", "定位球", "纪律防守"],
+    "strengths": ["中场对抗", "边路传中", "定位球", "组织纪律", "球迷能量"],
+    "risks": ["锋线终结", "高位压迫抗性", "面对速度型边路", "必须赢海地的压力", "落后后创造力不足"],
+    "data_confidence": "medium_high"
+  },
+  "missing_fields": ["official_matchday_squad_refresh", "T-24h injury/training", "T-75m lineup", "fresh odds", "final suspension check"],
+  "data_quality": {"completion_level": "usable_deep_partial", "reason_not_complete": "临场名单、伤停、首发与盘口仍需赛前复核。"}
+}

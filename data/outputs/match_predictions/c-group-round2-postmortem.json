@@ -1,0 +1,74 @@
+{
+  "phase": "round_postmortem",
+  "group": "C",
+  "round": 2,
+  "status": "complete_current_stage",
+  "updated_at": "2026-06-20T00:45:00+08:00",
+  "owner": "main-thread",
+  "actual_results": [
+    {
+      "match": "Brazil vs Haiti",
+      "actual_score": {"brazil": 3, "haiti": 0},
+      "prediction_score": {"brazil": 2, "haiti": 0},
+      "prediction_probabilities": {"brazil": 82, "draw": 13, "haiti": 5},
+      "direction_hit": true,
+      "exact_score_hit": false,
+      "main_error": "Brazil margin undercalled by one goal",
+      "key_facts": [
+        "Matheus Cunha scored twice.",
+        "Vinicius Junior scored and assisted one Cunha goal.",
+        "Raphinha left with a first-half injury.",
+        "Brazil won clearly but were not fully fluid in possession."
+      ]
+    },
+    {
+      "match": "Scotland vs Morocco",
+      "actual_score": {"scotland": 0, "morocco": 1},
+      "prediction_score": {"scotland": 0, "morocco": 1},
+      "prediction_probabilities": {"scotland": 24, "draw": 34, "morocco": 42},
+      "direction_hit": true,
+      "exact_score_hit": true,
+      "main_error": null,
+      "key_facts": [
+        "Ismael Saibari scored after roughly 70 seconds.",
+        "Morocco protected a one-goal lead.",
+        "Scotland improved in the second half but lacked final quality.",
+        "A second-half non-penalty decision on McTominay was a major controversy point."
+      ]
+    }
+  ],
+  "standings_after_round": [
+    {"team": "Brazil", "points": 4, "goal_difference": 3},
+    {"team": "Morocco", "points": 4, "goal_difference": 1},
+    {"team": "Scotland", "points": 3, "goal_difference": 0},
+    {"team": "Haiti", "points": 0, "goal_difference": -4}
+  ],
+  "forecast_audit": {
+    "direction_hits": "2/2",
+    "exact_score_hits": "1/2",
+    "probability_assessment": "Both highest-probability outcomes occurred. Brazil goal margin was slightly conservative; Scotland-Morocco was well calibrated.",
+    "betting_status": "post_match_review_only"
+  },
+  "source_log": [
+    {
+      "source": "Guardian Brazil 3-0 Haiti live report",
+      "url": "https://www.theguardian.com/football/live/2026/jun/20/fifa-world-cup-2026-live-brazil-v-haiti-updates-bra-vs-hai-group-c-match-score-latest",
+      "captured_at": "2026-06-20T00:45:00+08:00"
+    },
+    {
+      "source": "AP via WSLS Brazil 3-0 Haiti",
+      "url": "https://www.wsls.com/sports/2026/06/20/matheus-cunha-scores-2-goals-as-brazil-eliminates-haiti-from-world-cup-with-3-0-win/",
+      "captured_at": "2026-06-20T00:45:00+08:00"
+    },
+    {
+      "source": "Guardian Scotland 0-1 Morocco live report",
+      "url": "https://www.theguardian.com/football/live/2026/jun/19/scotland-v-morocco-world-cup-2026-live",
+      "captured_at": "2026-06-20T00:45:00+08:00"
+    },
+    {
+      "source": "ESPN UK Scotland 0-1 Morocco",
+      "url": "https://www.espn.co.uk/football/match/_/gameId/760445/morocco-scotland",
+      "captured_at": "2026-06-20T00:45:00+08:00"
+    }
+  ]
+}

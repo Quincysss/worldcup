@@ -1,0 +1,26 @@
+{
+  "team": {"zh": "苏格兰", "en": "Scotland", "fifa_code": "SCO", "group": "C"},
+  "captured_at": "2026-06-12T19:30:00+08:00",
+  "status": "deep_partial",
+  "sources": [
+    {
+      "name": "FIFA match schedule / Group C fixture references",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["group", "fixtures", "venues"],
+      "confidence": "high"
+    },
+    {
+      "name": "The Sun Haiti vs Scotland preview",
+      "url": "https://www.thesun.co.uk/sport/39371492/haiti-scotland-world-cup-2026-date-time-tv-channel/",
+      "supports": ["return to World Cup", "coach", "key midfielders", "opening fixture"],
+      "confidence": "medium"
+    },
+    {
+      "name": "New York Post Group C preview",
+      "url": "https://nypost.com/2026/06/10/sports/world-cup-2026-group-c-preview-prediction-odds-full-team-overviews/",
+      "supports": ["market framing", "shape note", "group context"],
+      "confidence": "medium"
+    }
+  ],
+  "gaps": ["official T-24h injury report", "T-75m lineup", "fresh odds snapshot", "final suspension check"]
+}

@@ -1,0 +1,52 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "海地", "en": "Haiti", "fifa_code": "HAI", "group": "C"},
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T10:20:00+08:00",
+  "owner": "main-thread",
+  "scope": "Haiti tactical profile only; no match prediction.",
+  "missing_fields": ["T-75m lineup", "training-base freshness", "set-piece map", "full recent match sample"],
+  "data": {
+    "coach_profile": {"coach": "Sebastien Migne", "default_formation": "4-2-3-1", "alternate_formation": ["4-4-2", "5-4-1 low block"], "summary": "海地现实路线是低位稳住、靠反击和定位球制造少数机会。"},
+    "possession_structure": "控球不是主武器，后场出球更可能直接找前锋或边路冲刺点。",
+    "pressing_profile": "以中低位为主，前压需要非常谨慎，否则身后空间会被巴西/摩洛哥惩罚。",
+    "defensive_block": "人数和纪律是关键，边路防守宽度与二点保护会被持续测试。",
+    "attacking_transition": "有速度和前锋单点，但连续推进质量不稳定。",
+    "set_piece": "弱势球队的重要破局方式，需确认主罚和第一落点。",
+    "key_player_roles": [
+      {"role": "counter_outlet", "players": ["Wilson Isidor", "Duckens Nazon"]},
+      {"role": "box_finisher", "players": ["Frantzdy Pierrot"]},
+      {"role": "goalkeeping_resistance", "players": ["Johny Placide"]},
+      {"role": "midfield_duel", "players": ["Danley Jean Jacques"]},
+      {"role": "defensive_anchor", "players": ["Ricardo Ade"]}
+    ],
+    "tactical_risks": ["长时间受压", "后场出球失误", "阵容深度不足", "早丢球后计划被迫打开"],
+    "handoff_to_model": {"attack_ceiling": "low_medium", "defensive_floor": "low_if_early_goal_conceded", "transition_attack": "medium", "transition_defense_risk": "high"},
+    "handoff_to_red_team": ["不要把弱队完全写死", "资格赛表现是否被对手质量扭曲", "训练和旅途条件是否影响体能"],
+    "post_round1_tactical_update": {
+      "match_context": "海地 0-1 苏格兰",
+      "summary": "首轮输给苏格兰后，海地的抵抗能力和进攻短板都更清楚了。他们不是完全没有反击窗口，但最后一传、终结和持续控球出压能力仍然不足。",
+      "confirmed_traits": [
+        "低位防守能在一段时间内维持比赛悬念",
+        "前场速度点可以攻击对手边翼卫身后",
+        "门将和禁区人数会决定比分是否被拉开",
+        "进攻机会少，一旦浪费就很难再持续制造"
+      ],
+      "new_questions": [
+        "面对巴西时前 30 分钟能否守住",
+        "如果早丢球，是否还有足够替补深度维持反击",
+        "对摩洛哥时能否避免被 Hakimi 侧持续压制"
+      ],
+      "game_state_notes": {
+        "leading": "若罕见领先，会极深回收并依赖门将和定位球防守。",
+        "level": "目标是低事件、低节奏，保留一两个反击窗口。",
+        "trailing": "追分路线狭窄，压出来后身后风险快速增加。"
+      },
+      "confidence_notes": [
+        {"topic": "low_block_resistance_short_spells", "confidence": "medium"},
+        {"topic": "attacking_efficiency", "confidence": "low_medium"},
+        {"topic": "late_game_fatigue_and_depth", "confidence": "medium_high"}
+      ]
+    }
+  }
+}

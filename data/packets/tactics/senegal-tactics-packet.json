@@ -1,0 +1,330 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Senegal",
+    "en": "Senegal",
+    "fifa_code": "SEN",
+    "group": "I"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-10T18:00:00+08:00",
+  "updated_at": "2026-06-10T18:20:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Senegal tactical and coaching team_profile packet only",
+  "missing_fields": [
+    "verified structured team packet from data collector",
+    "complete final 26-player text list from an official text source rather than image-only publication",
+    "full substitution timeline by match state across 2025-2026 sample",
+    "video-backed review of wide defensive exposure and rest-defense spacing",
+    "full set-piece taker mapping across the current tournament squad"
+  ],
+  "source_log": [
+    {
+      "source": "FSF official World Cup provisional squad article",
+      "url": "https://fsfoot.sn/mondial-2026-pape-thiaw-publie-sa-liste/",
+      "note": "Published 2026-05-21. Confirms Pape Thiaw, provisional 28-man World Cup list, and pre-tournament friendlies vs USA and Saudi Arabia."
+    },
+    {
+      "source": "FSF official World Cup retained players article",
+      "url": "https://fsfoot.sn/liste-des-lions-retenus-pour-le-mondial-2026/",
+      "note": "Published 2026-06-02. Official final-retained World Cup article exists, but the accessible text in this page is limited and appears image-based."
+    },
+    {
+      "source": "FIFA World Cup 2026 squad page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/senegal/squad",
+      "note": "Accessible search snippet confirms the current Senegal squad page and core player names."
+    },
+    {
+      "source": "FSF match report",
+      "url": "https://fsfoot.sn/eliminatoires-mondial-2026-le-senegal-fait-match-nul-blanc-contre-le-soudan/",
+      "note": "Sudan 0-0 Senegal, 2025-03-23. FSF says Senegal largely dominated but failed to convert chances."
+    },
+    {
+      "source": "FSF match report",
+      "url": "https://fsfoot.sn/match-sud-soudan-senegal-les-lions-etrillent-les-bright-stars-5-0-et-conservent-la-tete-du-groupe-b/",
+      "note": "South Sudan 0-5 Senegal, 2025-10-10."
+    },
+    {
+      "source": "FSF match report",
+      "url": "https://fsfoot.sn/preparatifs-mondial-2026-le-senegal-et-larabie-saoudite-se-neutralisent-0-0/",
+      "note": "Saudi Arabia 0-0 Senegal, 2026-06-10. Final World Cup warm-up ended in a scoreless draw."
+    },
+    {
+      "source": "FSF category page",
+      "url": "https://fsfoot.sn/actu-categorie/actualite/",
+      "note": "Lists USA 3-2 Senegal friendly and the 2026 retained squad article."
+    },
+    {
+      "source": "CAF coach profile",
+      "url": "https://www.cafonline.com/afcon2025/news/totalenergies-caf-afcon-2025-know-the-coach-pape-thiaw-senegal/",
+      "note": "Describes Pape Thiaw as attack-minded while balancing flair and discipline."
+    },
+    {
+      "source": "FSF AFCON homecoming article",
+      "url": "https://fsfoot.sn/amp/accueil/",
+      "note": "Published 2026-01-21. States Senegal returned home after winning AFCON 2025."
+    }
+  ],
+  "notes": [
+    "File created first by main thread and then filled incrementally.",
+    "No match score prediction, group projection, champion prediction, or betting advice.",
+    "This packet only covers Senegal team_profile.",
+    "Current version uses official FSF, FIFA, and CAF public sources because the local team packet is still a skeleton."
+  ],
+  "fan_summary_en": "Senegal are not only about power and speed; they can slow a match into a physical grind and then suddenly break it open with Mane, Ismaila Sarr, and Nicolas Jackson attacking depth.",
+  "data": {
+    "analysis_status": "partial",
+    "confidence_overall": "medium",
+    "sample_summary": {
+      "primary_window": "2025-03 to 2026-06",
+      "coach": "Pape Thiaw",
+      "sample_quality": "medium",
+      "notes": [
+        "Primary sample is drawn from 2025 World Cup qualifying, AFCON 2025 cycle information, and 2026 World Cup warm-up matches.",
+        "The local structured fact packet is still incomplete, so some role and in-game adjustment claims remain provisional."
+      ]
+    },
+    "coach_profile": {
+      "coach": "Pape Thiaw",
+      "system_stability": "medium_high",
+      "selection_stability": "medium_high",
+      "preferred_systems": [
+        "4-3-3",
+        "4-2-3-1"
+      ],
+      "tournament_pragmatism": "high",
+      "summary": "Pape Thiaw has kept Senegal's strong physical and transition-heavy base while adding a more attack-minded release of pace and wide runners. Public CAF material describes him as attack-minded but disciplined, which broadly matches the available sample.",
+      "confidence": "medium_high"
+    },
+    "final_squad_notes": {
+      "official_status": "partial_verification",
+      "notes": [
+        "FSF published a provisional 28-player World Cup list on 2026-05-21 and a retained-players article on 2026-06-02.",
+        "Because the retained article is not fully accessible as clean text, this packet relies on the FSF provisional list plus the FIFA current squad page for core-player confirmation.",
+        "Core tactical analysis focuses on repeatedly referenced leaders: Sadio Mane, Kalidou Koulibaly, Edouard Mendy, Ismaila Sarr, Nicolas Jackson, Pape Matar Sarr, and Idrissa Gana Gueye."
+      ]
+    },
+    "team_shape": {
+      "nominal_formations": [
+        "4-3-3",
+        "4-2-3-1"
+      ],
+      "in_possession_shape": "Often a back four base with one fullback advancing, wide forwards attacking depth, and a midfield triangle balancing second balls and central coverage.",
+      "out_of_possession_shape": "Usually a compact 4-1-4-1 or 4-5-1 look, with the wingers recovering and the midfield screening central access.",
+      "role_asymmetry": [
+        "Left side often carries more star gravity through Mane.",
+        "Right side often becomes the direct running lane for Ismaila Sarr or another pace outlet.",
+        "The midfield three are chosen to preserve duel strength and transition coverage before pure chance-creation volume."
+      ],
+      "confidence": "medium_high"
+    },
+    "key_roles": [
+      {
+        "role": "left_side_star_and_transition_reference",
+        "players": [
+          "Sadio Mane"
+        ],
+        "note": "Still the main reference for elite attacking moments, big-game responsibility, and left-side threat. His value is not only scoring but also forcing defensive attention and changing match rhythm.",
+        "confidence": "high"
+      },
+      {
+        "role": "central_defensive_leader",
+        "players": [
+          "Kalidou Koulibaly"
+        ],
+        "note": "Main center-back organizer, duel leader, and defensive-line authority. His presence strongly shapes Senegal's defensive floor.",
+        "confidence": "high"
+      },
+      {
+        "role": "goalkeeper_shotstop_and_box_command",
+        "players": [
+          "Edouard Mendy"
+        ],
+        "note": "Important for box security, high-ball handling, and preserving low-event match control.",
+        "confidence": "high"
+      },
+      {
+        "role": "right_side_depth_runner",
+        "players": [
+          "Ismaila Sarr"
+        ],
+        "note": "Key outlet for pace, wide transition attacks, and stretching the line vertically.",
+        "confidence": "high"
+      },
+      {
+        "role": "mobile_central_channel_runner",
+        "players": [
+          "Nicolas Jackson"
+        ],
+        "note": "Offers channel running, carry threat, and space attack rather than only fixed-box finishing.",
+        "confidence": "medium_high"
+      },
+      {
+        "role": "midfield_progression_and_energy",
+        "players": [
+          "Pape Matar Sarr"
+        ],
+        "note": "Brings running power, pressure resistance, and forward momentum from midfield.",
+        "confidence": "medium_high"
+      },
+      {
+        "role": "midfield_screen_and_experience",
+        "players": [
+          "Idrissa Gana Gueye"
+        ],
+        "note": "Still important for ball-winning, central protection, and match management in physically demanding games.",
+        "confidence": "high"
+      }
+    ],
+    "phase_model": {
+      "attack": {
+        "summary": "Senegal's attack is most dangerous when the game opens. They can attack through pace, wide runs, and direct depth early, then use physical presence and second balls to sustain pressure.",
+        "speed": "high",
+        "wing_play": "high",
+        "transition_attack": "high",
+        "vertical_depth_attack": "high",
+        "settled_attack_organization": "medium",
+        "set_piece_attack": "medium_high",
+        "notes": [
+          "Mane and Ismaila Sarr are the main wide-release threats.",
+          "Nicolas Jackson adds central mobility and channel running rather than purely static penalty-box presence.",
+          "In settled attacks, Senegal can look less fluid than top possession-heavy teams and may rely on individual acceleration or crosses more than elaborate central combinations."
+        ],
+        "confidence": "medium_high"
+      },
+      "defense": {
+        "summary": "Senegal's defensive identity is built on duel strength, center-back authority, and a willingness to alternate between pressing and compact recovery depending on the opponent.",
+        "physical_duels": "high",
+        "pressing": "medium",
+        "recovery_block": "high",
+        "center_back_protection": "high",
+        "midfield_screen": "high",
+        "fullback_space_risk": "medium",
+        "notes": [
+          "They do not need to press at maximum height all match to stay competitive.",
+          "The core protection comes from Koulibaly plus experienced midfield screening.",
+          "The main structural concern is the space behind advancing fullbacks or wide defenders when Senegal commit runners forward and the first counterpressure fails."
+        ],
+        "confidence": "medium_high"
+      },
+      "set_pieces": {
+        "attack": "Set-piece threat is supported by athleticism, center-back size, and second-ball aggression.",
+        "defense": "Set-piece defense is generally solid when the main aerial leaders are available, but the full taker-target map remains incomplete.",
+        "confidence": "medium"
+      }
+    },
+    "coach_tendencies": {
+      "leading_adjustments": "When ahead, Senegal tend to protect central zones first and keep at least one fast outlet live for counters rather than fully abandoning transition threat.",
+      "trailing_adjustments": "When trailing, the likely pathway is more direct width, added pace, and a faster tempo rather than an extreme possession-based structural rewrite.",
+      "substitution_resources": "medium_high",
+      "knockout_conservatism": "high",
+      "summary": "Thiaw appears willing to attack, but the available sample still points to a tournament logic built on defensive respectability first and pace release second.",
+      "confidence": "medium"
+    },
+    "model_features": {
+      "attack_ceiling": {
+        "value": "medium_high",
+        "confidence": "medium_high",
+        "note": "Top-end pace and wide threats can create explosive attacking spells, especially in open matches."
+      },
+      "defensive_floor": {
+        "value": "high",
+        "confidence": "medium_high",
+        "note": "With Koulibaly, Mendy, and experienced midfield shielding, Senegal's defensive floor is strong."
+      },
+      "set_piece_attack": {
+        "value": "medium_high",
+        "confidence": "medium",
+        "note": "Athleticism and aerial capacity make set pieces a meaningful secondary weapon."
+      },
+      "tempo_preference": {
+        "value": "variable_toward_medium_high",
+        "confidence": "medium",
+        "note": "Senegal can slow the game into a physical battle or accelerate sharply when transition lanes open."
+      },
+      "transition_attack": {
+        "value": "high",
+        "confidence": "high",
+        "note": "This is one of Senegal's clearest high-value attacking phases."
+      },
+      "transition_defense_risk": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "Wide recovery and rest-defense spacing can be stressed when advanced runners and fullbacks are caught ahead of the ball."
+      },
+      "key_player_dependency": {
+        "value": "medium_high",
+        "confidence": "medium_high",
+        "note": "Mane remains the main gravity piece in attack, while Koulibaly and Mendy anchor the defensive floor."
+      },
+      "market_relevant_flags": [
+        {
+          "factor": "Mane fitness and burst level",
+          "impact_area": "1x2/totals/handicap",
+          "note": "His ability to accelerate attacks and demand extra defensive attention changes Senegal's attacking ceiling."
+        },
+        {
+          "factor": "Jackson central role",
+          "impact_area": "totals/handicap",
+          "note": "A more mobile striker profile can make Senegal more dangerous in channels and early transition attacks."
+        },
+        {
+          "factor": "Gana Gueye and midfield shield availability",
+          "impact_area": "1x2/handicap",
+          "note": "Midfield screen quality strongly affects Senegal's defensive control and second-ball recovery."
+        },
+        {
+          "factor": "fullback aggression level",
+          "impact_area": "totals",
+          "note": "The more aggressively Senegal push wide defenders, the more both attacking width and transition exposure rise."
+        }
+      ]
+    },
+    "verification_questions": [
+      {
+        "claim_id": "senegal-001",
+        "claim": "Senegal's stable base shape under Pape Thiaw is a 4-3-3 or 4-2-3-1 four-back structure.",
+        "confidence": "medium_high",
+        "why_challengeable": "This should be separated by opponent level and by whether the frontline includes Jackson, Mane, and Ismaila Sarr together.",
+        "challenge_type": "opponent_specific"
+      },
+      {
+        "claim_id": "senegal-002",
+        "claim": "Senegal's attack is strongest in transition and depth attacks rather than in long spells of complex settled possession.",
+        "confidence": "high",
+        "why_challengeable": "Needs broader event-level evidence across different match states and opponent profiles.",
+        "challenge_type": "small_sample"
+      },
+      {
+        "claim_id": "senegal-003",
+        "claim": "Koulibaly is the single most important defensive-floor player in the squad.",
+        "confidence": "high",
+        "why_challengeable": "Should be tested against matches where Mendy or the midfield screen had to compensate for center-back absences or decline.",
+        "challenge_type": "injury_dependency"
+      },
+      {
+        "claim_id": "senegal-004",
+        "claim": "Wide defensive exposure behind advanced fullbacks is one of Senegal's main structural risks.",
+        "confidence": "medium",
+        "why_challengeable": "Requires video-backed review to prove it is a repeated team issue rather than isolated game state noise.",
+        "challenge_type": "source_conflict"
+      },
+      {
+        "claim_id": "senegal-005",
+        "claim": "Pape Thiaw remains tournament-pragmatic even if his public profile is more attack-minded than some earlier Senegal setups.",
+        "confidence": "medium",
+        "why_challengeable": "Needs more complete substitution and late-game management evidence across stronger opponents.",
+        "challenge_type": "old_sample"
+      },
+      {
+        "claim_id": "senegal-006",
+        "claim": "The final retained World Cup squad still centers on the same veteran spine plus a pace-heavy wide attack group.",
+        "confidence": "medium",
+        "why_challengeable": "The final official retained list is not yet fully text-verified in this packet.",
+        "challenge_type": "source_conflict"
+      }
+    ],
+    "completion_note": "First Senegal team_profile is complete enough for a tactical handoff but remains partial because the local data packet is still skeletal and the final official retained list is not fully text-verified in this file."
+  }
+}

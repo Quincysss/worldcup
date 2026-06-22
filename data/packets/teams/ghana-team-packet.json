@@ -1,0 +1,34 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:25:00+08:00",
+  "scope": "L组加纳球队画像；不包含比分、赛果倾向、出线、冠军或投注建议。",
+  "team": {"zh": "加纳", "en": "Ghana", "fifa_code": "GHA", "group": "L", "confederation": "CAF"},
+  "fixtures_context": {
+    "opening_match_status": "pending",
+    "opening_match": "Ghana vs Panama",
+    "group_matches": ["Ghana vs Panama", "Croatia vs Ghana", "England vs Ghana"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Carlos Queiroz",
+    "team_identity": "加纳的上限来自 Kudus、Semenyo、Partey 等人的个人质量和转换速度；Queiroz 接手后更可能先修复防线秩序，但新周期会带来样本和默契不确定性。",
+    "likely_structure": ["4-2-3-1", "4-3-3", "5-4-1"]
+  },
+  "core_players_watch": [
+    {"player": "Mohammed Kudus", "role": "前场持球爆点、半空间推进、远射和反击第一接应"},
+    {"player": "Antoine Semenyo", "role": "纵深冲刺、身体对抗、边中摇摆和转换终结"},
+    {"player": "Thomas Partey", "role": "中场对抗、长传转移、二点保护和节奏切换"},
+    {"player": "Jordan Ayew", "role": "前场经验、造犯规、边路保护和定位球参与"},
+    {"player": "Inaki Williams", "role": "纵深跑动、牵制中卫和反击出口"},
+    {"player": "Tariq Lamptey", "role": "右路速度、边后卫推进和回追覆盖"},
+    {"player": "Mohammed Salisu", "role": "左脚中卫、空中对抗和禁区防守"},
+    {"player": "Alexander Djiku", "role": "中卫对抗、正面拦截和防线沟通"},
+    {"player": "Lawrence Ati-Zigi", "role": "门线反应、禁区指挥和高球处理"}
+  ],
+  "strengths": ["转换速度", "身体对抗", "Kudus个人爆点", "Semenyo直接冲击", "中场抢断", "定位球争顶"],
+  "risks": ["防线注意力波动", "终结稳定性", "教练切换样本小", "中场站位纪律", "情绪和牌面风险", "面对低位防守时的耐心"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "加纳的名气可能低于英克两队，但身体和转换属性会影响盘口深度；需预测阶段再采集。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["fresh injuries", "fresh odds", "confirmed starting XI", "Queiroz final shape"]}
+}

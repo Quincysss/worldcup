@@ -1,0 +1,33 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "卡塔尔", "en": "Qatar", "fifa_code": "QAT", "group": "B"},
+  "status": "deep_partial",
+  "updated_at": "2026-06-12T19:05:00+08:00",
+  "scope": "球队层面模型输入；不含比分、胜平负、出线或投注建议。",
+  "baseline_strength_framework": {
+    "tier_hint": "默契和杯赛经验好于一般弱旅，但跨洲高强度对抗会压低下限。",
+    "recommended_weights": {"elo": 0.30, "fifa_ranking": 0.12, "recent_competitive_form": 0.20, "squad_quality": 0.12, "tactical_fit": 0.14, "pace_physicality_gap": 0.12},
+    "context_note": "亚洲杯/亚洲区样本要折算对抗强度，不能原样搬到世界杯。"
+  },
+  "style_adjustments": {
+    "tempo": "medium",
+    "counter_attack": "positive_if_afif_space",
+    "press_resistance": "risk",
+    "physical_duels": "negative",
+    "set_piece": "medium"
+  },
+  "availability_sensitivity": [
+    {"player": "Akram Afif", "lambda_impact": "very_high", "reason": "创造力、反击推进和定位球/最后一传都高度依赖他。"},
+    {"player": "Almoez Ali", "lambda_impact": "medium", "reason": "影响禁区终结和反击第一落点。"},
+    {"player": "Meshaal Barsham", "lambda_against_impact": "medium", "reason": "门线表现会显著影响弱势脚本。"},
+    {"player": "Assim Madibo", "lambda_against_impact": "medium", "reason": "中场覆盖和防守二点。"}
+  ],
+  "market_signal_placeholder": {
+    "needs_refresh": true,
+    "fields": ["1x2", "asian_handicap", "total_goals", "team_total", "to_qualify"],
+    "warning": "若盘口把卡塔尔视作纯弱旅，需检查 Afif 单点和杯赛经验是否被低估。"
+  },
+  "prediction_input_requirements": ["Afif健康与位置", "是否五后卫/厚中场", "对手压迫强度", "最新盘口水位", "天气与旅途恢复"],
+  "uncertainty_flags": ["被高压持续压制时失误率可能陡升", "反击效率对少数核心依赖强", "落后后阵地战追分路线不稳定"],
+  "model_risk_notes": "卡塔尔适合给较低均值但保留反击单点上限，尤其 Afif 首发且状态正常时。"
+}

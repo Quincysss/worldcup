@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:28:00+08:00",
+  "team": {"zh": "阿根廷", "en": "Argentina", "fifa_code": "ARG", "group": "J"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-3-3", "alternates": ["4-4-2", "4-2-3-1"], "confidence": "medium_high"},
+  "phase_behaviour": {
+    "possession_structure": "Scaloni 的阿根廷会围绕中场三人组控制节奏，Messi 回撤接球改变推进方向，边后卫和半空间球员负责拉开下一脚选择。",
+    "pressing_profile": "不是全场无脑高压，更像有选择地压迫，靠 De Paul、Alvarez 和中场距离控制限制对手第一脚出球。",
+    "defensive_block": "可回到紧凑 4-4-2 或 4-5-1，重点是保护中路和禁区前沿，避免被快速边路反击打到身后。",
+    "attacking_transition": "一旦抢回球，Messi 的第一脚和 Alvarez/Lautaro 的纵深会直接制造高价值机会。",
+    "set_piece": "脚法和禁区对抗都不错，Messi 定位球仍是改变低事件比赛的武器。"
+  },
+  "coach_tendencies": {"coach": "Lionel Scaloni", "risk_appetite": "medium", "game_state": "领先后更擅长管理节奏，落后时会通过前场换人增加纵深和禁区人数。"},
+  "tactical_risks": ["核心年龄和体能", "边路速度防守", "Messi 无球防守负担", "面对高强度压迫时出球失误"],
+  "confidence_notes": {"high": ["比赛管理", "前场创造"], "medium": ["压迫持续性", "边路防守"], "low_or_missing": ["Messi 分钟计划", "T-75m首发"]},
+  "handoff_to_model": {"attack_ceiling": "high", "defensive_floor": "medium_high", "transition_defense_risk": "medium", "set_piece": "high"},
+  "handoff_to_red_team": ["卫冕冠军和 Messi 叙事是否造成热门溢价", "核心体能", "边路身后空间"]
+}

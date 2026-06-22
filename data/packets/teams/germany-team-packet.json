@@ -1,0 +1,32 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:46:00+08:00",
+  "scope": "E组德国队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "德国", "en": "Germany", "fifa_code": "GER", "group": "E", "confederation": "UEFA"},
+  "source_log_path": "K:/worldcup/data/source_logs/germany-team-source-log.json",
+  "fixtures_context": {
+    "round1_result": "德国 7-1 库拉索",
+    "remaining_group_matches": ["德国 vs 科特迪瓦", "厄瓜多尔 vs 德国"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Julian Nagelsmann",
+    "team_identity": "传统强队，首轮大胜后进攻火力和阵容深度被放大；但仍需警惕面对高强度反击队时的防线身后空间。",
+    "likely_structure": ["4-2-3-1", "4-2-2-2", "3-2 build-up variants"]
+  },
+  "core_players_watch": [
+    {"player": "Kai Havertz", "role": "前场支点、点球和禁区终结"},
+    {"player": "Jamal Musiala", "role": "肋部爆点、盘带和最后三区创造"},
+    {"player": "Florian Wirtz", "role": "前场连接、最后一传和节奏变化"},
+    {"player": "Joshua Kimmich", "role": "后场组织、定位球和节奏控制"},
+    {"player": "Felix Nmecha", "role": "中场推进、插上和身体覆盖"},
+    {"player": "Nico Schlotterbeck", "role": "中卫出球和防线侵略性"},
+    {"player": "Deniz Undav", "role": "替补冲击、禁区终结和第二前锋选择"}
+  ],
+  "strengths": ["首轮火力", "中前场技术密度", "阵容深度", "定位球脚法", "压迫和反抢"],
+  "risks": ["首轮大胜导致过度自信", "防线身后空间", "面对科特迪瓦反击速度", "高位丢球后的回追", "热门盘口可能偏热"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "7-1 后德国方向大概率被市场追捧，需防过热。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["official technical report", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

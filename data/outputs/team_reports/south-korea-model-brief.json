@@ -1,0 +1,182 @@
+{
+  "phase": "team_profile",
+  "profile_depth": "deep",
+  "team": {
+    "zh": "韩国",
+    "en": "Korea Republic",
+    "fifa_code": "KOR",
+    "group": "A"
+  },
+  "status": "partial",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-11T17:02:07+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "A组韩国 team_profile 深版模型输入简报；只覆盖强度基线、lambda/xG修正、风格建模、市场校准接口和不确定性，不输出比分、胜平负、出线、冠军或投注建议。",
+  "missing_fields": [
+    "T-24h injury update",
+    "T-75m official lineup",
+    "complete recent structured sample",
+    "exact Elo/FIFA/Opta numeric ratings",
+    "Son workload and fitness state",
+    "Kim Min-jae availability and role state",
+    "closing odds and latest market snapshot",
+    "set-piece map",
+    "pressing and rest-defense sample"
+  ],
+  "uncertainty_flags": [
+    "韩国明星质量很明显，但不能把明星稳定性直接写成全队稳定性。",
+    "孙兴慜负荷和年龄曲线会影响转换强度、冲刺频率和高比分尾部。",
+    "金玟哉状态对防守lambda和零封尾部影响很大，必须独立建模。",
+    "若对手限制转换空间，阵地战创造效率仍需补证。",
+    "边路保护和定位球防守缺样本，当前只能保守占位。"
+  ],
+  "source_log": [
+    {
+      "type": "team_packet",
+      "path": "data/packets/teams/south-korea-team-packet.json",
+      "status_observed": "partial",
+      "used_for": "教练、核心球员观察、转换威胁、防守核心和风险"
+    },
+    {
+      "type": "tactics_packet",
+      "path": "data/packets/tactics/south-korea-tactics-packet.json",
+      "status_observed": "partial",
+      "used_for": "4-2-3-1/4-3-3、孙兴慜转换、李刚仁创造、金玟哉防线锚点"
+    },
+    {
+      "type": "red_team_review",
+      "path": "data/reviews/red_team/south-korea-red-team-review.md",
+      "status_observed": "revise / partial",
+      "used_for": "不要把明星名气写成全队稳定性，重点关注转换空间受限情境"
+    }
+  ],
+  "notes": [
+    "当前文件已按深版 partial 落盘，上游缺口未补齐前不硬凑 complete。",
+    "当前阶段只做 team_profile 模型输入，不进入任何比赛预测。"
+  ],
+  "data": {
+    "model_scope": {
+      "stage": "team_profile",
+      "group_workflow": "A组球队档案阶段",
+      "prediction_policy": "禁止输出具体比分、胜平负、小组出线、冠军或投注建议"
+    },
+    "baseline_strength_framework": {
+      "temporary_band": "competitive_group_contender",
+      "confidence": "medium_low",
+      "recommended_formula": "baseline_z = 0.30*Elo_z + 0.10*FIFA_z + 0.22*OptaPower_z + 0.15*RecentForm_z + 0.10*SquadValue_z + 0.13*StarAvailability_z",
+      "component_notes": [
+        "Elo与Opta应确定韩国的长期竞争力档位，FIFA排名只作辅助锚。",
+        "近期表现要区分强对手、低位防守对手、开放转换比赛和友谊赛。",
+        "阵容身价不能重复计算孙兴慜、李刚仁、金玟哉的个人影响，核心球员可用性要单独修正。",
+        "韩国的强度波动很可能来自核心球员状态与比赛是否有转换空间。"
+      ],
+      "current_packet_facts": {
+        "coach": "Hong Myung-bo",
+        "profile": "亚洲强竞争者，有顶级球星、转换威胁和后防领袖。",
+        "core_players_watch": [
+          "Son Heung-min",
+          "Kim Min-jae",
+          "Lee Kang-in",
+          "Hwang Hee-chan",
+          "Cho Gue-sung"
+        ],
+        "strengths": [
+          "Son-led transition",
+          "Kim Min-jae defensive authority",
+          "technical midfield/half-space creation",
+          "World Cup experience"
+        ],
+        "risks": [
+          "Son workload/age curve",
+          "chance creation if opponents sit deep",
+          "fullback protection"
+        ]
+      }
+    },
+    "lambda_xg_sensitivity": {
+      "core_roles": [
+        {
+          "role": "转换核心与终结/推进",
+          "players": [
+            "Son Heung-min",
+            "Hwang Hee-chan"
+          ],
+          "available_effect": "提升转换xG、纵深威胁、反击第一脚和高价值射门转化。",
+          "limited_or_absent_effect": "进攻lambda和高比分尾部下修，尤其是面对压上对手时。"
+        },
+        {
+          "role": "创造核心",
+          "players": [
+            "Lee Kang-in"
+          ],
+          "available_effect": "提升半空间传球、定位球质量和面对低位防守的机会创造。",
+          "limited_or_absent_effect": "阵地战xG质量下降，转换之外的进攻路径变窄。"
+        },
+        {
+          "role": "后防核心",
+          "players": [
+            "Kim Min-jae"
+          ],
+          "available_effect": "降低对手禁区进入率和转换xG，提升防线前压后的安全边际。",
+          "limited_or_absent_effect": "对手进攻lambda上修，零封尾部和领先后管理下修。"
+        },
+        {
+          "role": "中锋支点",
+          "players": [
+            "Cho Gue-sung"
+          ],
+          "available_effect": "提升禁区支点、传中终结和二点争夺。",
+          "limited_or_absent_effect": "面对低位防守时禁区占位和空中威胁下修。"
+        }
+      ],
+      "placeholder_adjustments": {
+        "son_limited_attack_lambda": [-0.22, -0.10],
+        "lee_limited_low_block_creation": [-0.16, -0.06],
+        "kim_unavailable_opponent_lambda": [0.12, 0.25],
+        "transition_space_available_attack_lambda": [0.10, 0.24]
+      }
+    },
+    "style_modeling_notes": {
+      "attack": "转换和球星牵引是主要上限来源，李刚仁决定一部分阵地战和定位球质量。",
+      "defense": "金玟哉是防线锚点，边后卫保护和中场回收决定整体防守lambda。",
+      "low_block": "若对手低位限制孙兴慜冲刺空间，需要更多依赖李刚仁、边路组合和中锋支点。",
+      "versus_possession_teams": "韩国可通过转换制造高质量机会，但长时间无球会考验边路保护和中场屏障。",
+      "leading_state": "领先后可转入反击形态，但若中场保护不足，后段被压制风险上升。",
+      "set_pieces": "定位球进攻有加分空间，但防守端缺完整地图，必须保留风险。"
+    },
+    "market_calibration": {
+      "current_market_view": "A组有竞争力的出线争夺层级；仅作为市场事实方向，不构成投注建议。",
+      "required_markets": [
+        "outright winner",
+        "group winner",
+        "group qualification",
+        "single match 1X2",
+        "single match totals",
+        "asian handicap"
+      ],
+      "calibration_rules": [
+        "先去水，再拆分明星名气溢价和真实强度。",
+        "若市场高看韩国，要检查是否重复计入孙兴慜、金玟哉和阵容身价。",
+        "若总进球市场偏高，要判断是转换空间打开，还是防守端波动被放大。",
+        "缺 closing odds 时不得输出市场价值判断。"
+      ]
+    },
+    "required_fields_for_next_stage": [
+      "ratings.elo",
+      "ratings.fifa_rank",
+      "ratings.opta_power",
+      "recent_form.sample_split",
+      "son_availability_and_workload",
+      "kim_min_jae_availability",
+      "lee_kang_in_role",
+      "transition_attack_grade",
+      "low_block_creation_grade",
+      "set_piece_attack_defense",
+      "market_fair_probabilities"
+    ],
+    "handoff_notes": [
+      "横向比较时要把韩国的转换上限和阵地战稳定性拆开。",
+      "比赛预测阶段先确认孙兴慜负荷、金玟哉状态和对手是否会让出转换空间。"
+    ]
+  }
+}

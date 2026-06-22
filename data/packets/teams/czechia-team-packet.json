@@ -1,0 +1,56 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "捷克",
+    "en": "Czechia",
+    "fifa_code": "CZE",
+    "group": "A"
+  },
+  "status": "partial_post_match_ready",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-12T15:10:00+08:00",
+  "owner": "main-thread-takeover",
+  "scope": "A组捷克 team_profile；含第一轮赛后上下文和第二轮准备，不输出比分预测、出线预测、冠军预测或投注建议。",
+  "source_log": [
+    {
+      "source": "FIFA Czechia team page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/czechia",
+      "supports_fields": ["team_identity", "competition_context"]
+    },
+    {
+      "source": "ESPN 2026 World Cup squad tracker",
+      "url": "https://www.espn.com/soccer/story/_/id/48757621/2026-world-cup-squad-lists-players-announced-all-48-teams",
+      "supports_fields": ["squad_context"],
+      "confidence": "medium"
+    },
+    {
+      "source": "A组第一轮赛后复盘",
+      "path": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-12_韩国_2-1_捷克_复盘.md",
+      "supports_fields": ["post_match_context", "prediction_audit"]
+    }
+  ],
+  "data": {
+    "coach": "Ivan Hasek",
+    "profile": "欧洲中游硬骨头，空中优势、身体对抗和定位球路线清晰；首轮被韩国逆转后，领先后的控场能力和开放战创造力必须被扣分。",
+    "core_players_watch": ["Patrik Schick", "Tomas Soucek", "Antonin Barak", "Lukas Provod", "David Jurasek"],
+    "style_tags": ["身体对抗", "定位球", "中路压迫", "禁区终结", "长传与二点球"],
+    "strengths": ["高点和定位球威胁", "中场对抗", "Schick终结", "Soucek后插上", "欧洲比赛纪律"],
+    "risks": ["速度型转换防守", "边路被连续冲击", "领先后控球不足", "创造力集中在少数核心", "下半场体能和换人应对"],
+    "post_match_context": {
+      "round_1_result": "捷克 1-2 韩国",
+      "points_after_round_1": 0,
+      "goal_difference_after_round_1": -1,
+      "audit_note": "旧预测把身体和定位球权重给得偏高，未充分覆盖韩国后程提速和捷克领先后管理风险。"
+    },
+    "second_round_preparation": {
+      "must_refresh": ["Schick健康和首发状态", "中后场体能", "T-24h训练", "T-75m首发", "定位球主罚与高点配置"],
+      "model_adjustments": ["降低领先后控场稳定性", "保留定位球进球尾部", "提高被速度型球队冲击的风险"]
+    }
+  },
+  "missing_fields": ["官方完整技术统计", "Schick等核心健康状态", "第二轮T-24h伤停训练", "第二轮T-75m官方首发", "closing_odds_refresh"],
+  "data_quality": {
+    "overall_confidence": "medium",
+    "completion_level": "usable_partial",
+    "reason_not_complete": "核心健康、第二轮临场信息和完整技术统计尚未锁定。"
+  }
+}

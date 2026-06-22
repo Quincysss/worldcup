@@ -1,0 +1,28 @@
+{
+  "model_scope": "Croatia team-profile inputs for L group; no match prediction in this file.",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:40:00+08:00",
+  "team": {"zh": "克罗地亚", "en": "Croatia", "group": "L"},
+  "input_readiness": {
+    "available": ["coach", "group", "opening fixture", "core player pool", "tactical traits", "risk flags"],
+    "missing_or_stale": ["fresh injuries", "confirmed starting XI", "latest odds", "referee", "veteran minutes plan"],
+    "volatile_inputs": ["Modric role", "wide defenders", "front-line order"]
+  },
+  "strength_profile": {
+    "attack_ceiling": "medium",
+    "defensive_floor": "medium_high",
+    "midfield_control": "high",
+    "set_piece": "medium_high",
+    "bench_impact": "medium",
+    "uncertainty": "medium"
+  },
+  "model_features_to_encode": [
+    "midfield press resistance",
+    "late-game game management",
+    "age-related pace risk",
+    "low shot-volume risk",
+    "Gvardiol progression and coverage"
+  ],
+  "calibration_notes": "克罗地亚的大赛韧性应作为降低崩盘概率的因子，而不是简单提高进攻产量；老化风险要单独影响比赛后段。",
+  "handoff_notes": "第一轮建模前刷新首发年龄结构、老将负荷、伤停、赔率和盘口深度。"
+}

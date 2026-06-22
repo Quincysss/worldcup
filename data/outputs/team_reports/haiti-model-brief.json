@@ -1,0 +1,141 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "海地",
+    "en": "Haiti",
+    "fifa_code": "HAI",
+    "group": "C"
+  },
+  "status": "deep_partial",
+  "created_at": "2026-06-12T19:22:02+08:00",
+  "updated_at": "2026-06-12T19:55:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "C组海地 team_profile 深版模型输入简报；只做球队层面的强度基线、变量、敏感度和不确定性，不输出比分、胜平负、出线、冠军或投注建议。",
+  "missing_inputs": [
+    "T-24h injury and training refresh",
+    "T-75m official lineup",
+    "structured odds snapshot",
+    "travel and training-base confirmation"
+  ],
+  "stale_inputs": [
+    "qualification sample quality may overstate robustness versus World Cup-level opponents"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\packets\\teams\\haiti-team-packet.json",
+    "K:\\worldcup\\data\\packets\\tactics\\haiti-tactics-packet.json",
+    "K:\\worldcup\\data\\reviews\\red_team\\haiti-red-team-review.md"
+  ],
+  "notes": [
+    "已按深版 team_profile 口径扩写。",
+    "保留为 deep_partial，等待旅途、训练和首发相关动态信息。"
+  ],
+  "baseline_strength_framework": {
+    "tier_hint": "C组最低基线，但具备弱势脚本下的单场扰动能力。",
+    "rating_field_placeholders": {
+      "elo": "ratings.elo",
+      "fifa": "ratings.fifa_rank",
+      "opta": "ratings.opta_power"
+    },
+    "recommended_weights": {
+      "elo": 0.3,
+      "fifa_ranking": 0.1,
+      "opta_power": 0.14,
+      "recent_competitive_form": 0.18,
+      "squad_value": 0.08,
+      "tactical_fit": 0.1,
+      "logistics_risk": 0.1
+    },
+    "weighting_notes": [
+      "海地的模型不能只看长期排名，近期正式赛韧性和 logistics 风险都要单独入模。",
+      "弱队样本易受对手质量扭曲，必须分层处理。",
+      "阵容价值低并不意味着没有单场防守抵抗或反击路径。"
+    ],
+    "recent_form_treatment": {
+      "window": "近 8 场正式比赛优先",
+      "adjustments": [
+        "资格赛与友谊赛分层",
+        "记录早丢球后的崩盘频率",
+        "低位防守样本与开放对攻样本分开"
+      ]
+    },
+    "squad_value_core_player_logic": {
+      "summary": "海地不是靠整体价值取胜，而是靠门将、前锋单点和弱势脚本纪律性争取窗口。",
+      "core_players": [
+        "Wilson Isidor",
+        "Duckens Nazon",
+        "Frantzdy Pierrot",
+        "Johny Placide",
+        "Danley Jean Jacques",
+        "Ricardo Ade"
+      ]
+    }
+  },
+  "style_adjustments": {
+    "in_possession": "不以控球为主，更依赖直接球和反击出口。",
+    "transition_attack": "medium",
+    "transition_defense_risk": "high",
+    "low_block_breaking": "low",
+    "set_piece_attack": "medium",
+    "set_piece_defense": "medium_low",
+    "game_state_note": "早丢球后模型必须允许比分尾部快速变厚。"
+  },
+  "availability_sensitivity": {
+    "attack_core": [
+      {
+        "player": "Wilson Isidor",
+        "team_lambda_impact": "medium_high",
+        "reason": "反击纵深和速度出口。"
+      },
+      {
+        "player": "Duckens Nazon",
+        "team_lambda_impact": "medium",
+        "reason": "经验、支点和终结。"
+      }
+    ],
+    "midfield_balance": [
+      {
+        "player": "Danley Jean Jacques",
+        "lambda_against_impact": "medium",
+        "reason": "中场对抗和二点保护。"
+      }
+    ],
+    "back_line": [
+      {
+        "player": "Ricardo Ade",
+        "lambda_against_impact": "medium",
+        "reason": "防线指挥和空中对抗。"
+      }
+    ],
+    "goalkeeper": {
+      "player": "Johny Placide",
+      "lambda_against_impact": "high",
+      "reason": "弱势脚本下门将表现对失球尾部影响极大。"
+    }
+  },
+  "market_signal_placeholder": {
+    "markets_to_capture": [
+      "single_match_1x2",
+      "single_match_handicap",
+      "single_match_totals"
+    ],
+    "modeling_note": "海地的盘口容易受公众情绪拖向极端弱势，市场信号更适合做下界校准而非能力锚点。"
+  },
+  "uncertainty_flags": [
+    "qualification sample quality",
+    "travel and training conditions",
+    "early-goal collapse risk",
+    "goalkeeper dependence"
+  ],
+  "prediction_input_requirements": [
+    "T-75m official lineup",
+    "goalkeeper confirmation",
+    "front-two or striker pairing",
+    "latest odds snapshot",
+    "travel and training freshness"
+  ],
+  "model_risk_notes": [
+    "最危险的错误是把海地完全写死，没有留出反击和定位球路径。",
+    "另一个危险是把资格赛韧性直接平移到世界杯强队对抗。",
+    "模型应单独处理早丢球后的失控尾部。"
+  ]
+}

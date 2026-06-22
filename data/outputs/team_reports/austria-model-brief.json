@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:31:00+08:00",
+  "team": {"zh": "奥地利", "en": "Austria", "fifa_code": "AUT", "group": "J"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "J组上中游和出线热门；体系稳定、高压强度强，但对低位队的终结效率需单独复核。", "recommended_weights": {"elo": 0.31, "fifa_ranking": 0.12, "recent_form": 0.18, "squad_quality": 0.16, "tactical_fit": 0.15, "availability": 0.08}, "round1_correction": "not_available_pre_match"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "medium_high", "defensive_floor": "medium_high", "transition_defense_risk": "medium", "set_piece": "medium_high", "market_name_bias": "medium"},
+  "availability_sensitivity": [{"player": "David Alaba", "structure_impact": "high"}, {"player": "Marcel Sabitzer", "creation_impact": "medium_high"}, {"player": "Konrad Laimer", "pressing_impact": "medium_high"}, {"player": "Christoph Baumgartner", "lambda_for_impact": "medium"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals", "group_winner"], "warning": "Rangnick 体系可能让过程优势显眼，但让球价值仍需看首发和破低位效率。"},
+  "uncertainty_flags": ["opening match not played/confirmed", "T-75m lineup", "fresh odds", "Alaba fitness"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "Alaba status", "Jordan defensive shape"],
+  "model_risk_notes": "奥地利对约旦时应把压迫收益、低位破局效率和反击身后风险拆开建模。"
+}

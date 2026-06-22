@@ -1,0 +1,156 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Senegal",
+    "en": "Senegal",
+    "fifa_code": "SEN",
+    "group": "I"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-11T00:35:00+08:00",
+  "updated_at": "2026-06-11T00:35:00+08:00",
+  "owner": "main-thread-recovery",
+  "scope": "Senegal model input brief for team_profile only",
+  "missing_fields": [
+    "complete last-10 structured sample",
+    "exact Opta power-ranking position",
+    "player-level availability and minute-load table",
+    "odds movement history",
+    "T-24h and T-75m matchday inputs"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\packets\\teams\\senegal-team-packet.json",
+    "K:\\worldcup\\data\\packets\\tactics\\senegal-tactics-packet.json",
+    "K:\\worldcup\\data\\reviews\\red_team\\senegal-red-team-review.md"
+  ],
+  "notes": [
+    "Recovered by main thread because the model child thread entered systemError and the file was missing.",
+    "This file is model input only; it does not output match score, W/D/L, group advancement, champion prediction, or betting advice.",
+    "Status remains partial until granular player availability, Opta and market movement data are filled."
+  ],
+  "data": {
+    "baseline_strength_model": {
+      "tier": "strong_non_favorite",
+      "relative_group_position": "behind France by market and broad-strength priors, competitive with Norway depending on matchup and availability, above Iraq by baseline",
+      "inputs_to_weight": [
+        {
+          "factor": "FIFA ranking",
+          "current_value": "around official rank 14",
+          "weight_guidance": "medium"
+        },
+        {
+          "factor": "Elo",
+          "current_value": "about 1867 / rank 18 snapshot",
+          "weight_guidance": "medium_high"
+        },
+        {
+          "factor": "squad market value",
+          "current_value": "about EUR 478.1m",
+          "weight_guidance": "medium"
+        },
+        {
+          "factor": "recent match shape",
+          "current_value": "mixed: dominant qualifying samples, but 0-0 Saudi Arabia and USA 3-2 Senegal warn against over-smoothing",
+          "weight_guidance": "medium_high"
+        },
+        {
+          "factor": "market priors",
+          "current_value": "+12500 winner, +750 Group I winner in one FanDuel/SI snapshot",
+          "weight_guidance": "medium"
+        }
+      ],
+      "confidence": "medium"
+    },
+    "lambda_xg_sensitivity": [
+      {
+        "player_or_unit": "Sadio Mane",
+        "availability_effect": "attack_lambda_minus_0.10_to_0.18_if_limited_or_absent",
+        "reason": "Reduces left-side gravity, transition burst, and late-box threat.",
+        "confidence": "medium"
+      },
+      {
+        "player_or_unit": "Nicolas Jackson / central forward role",
+        "availability_effect": "attack_lambda_minus_0.05_to_0.12_if_role_is_unstable",
+        "reason": "Affects channel running, counter depth, and ability to turn wide attacks into central threat.",
+        "confidence": "medium"
+      },
+      {
+        "player_or_unit": "Kalidou Koulibaly",
+        "availability_effect": "opponent_lambda_plus_0.08_to_0.16_if_limited_or_absent",
+        "reason": "He anchors aerial duels, box defense, line authority and defensive confidence.",
+        "confidence": "medium_high"
+      },
+      {
+        "player_or_unit": "Edouard Mendy",
+        "availability_effect": "opponent_lambda_plus_0.04_to_0.10_if_limited_or_absent",
+        "reason": "Goalkeeper stability matters in low-event matches and set-piece/box-control sequences.",
+        "confidence": "medium"
+      },
+      {
+        "player_or_unit": "Idrissa Gana Gueye / midfield screen",
+        "availability_effect": "opponent_lambda_plus_0.05_to_0.12_if_midfield_screen_is_weakened",
+        "reason": "Impacts second balls, counter-press recovery and central access denial.",
+        "confidence": "medium"
+      }
+    ],
+    "style_modeling_notes": {
+      "transition_attack": "high positive modifier when opponent leaves space behind fullbacks or center-backs.",
+      "settled_attack": "medium; avoid giving Senegal the same low-block-breaking baseline as elite possession teams.",
+      "defensive_floor": "medium_high to high if Koulibaly, Mendy and midfield screen are available.",
+      "pace_and_power": "raises match volatility, especially against teams that play through wide or transitional zones.",
+      "low_event_draw_risk": "non-trivial against organized lower-tempo opponents because Senegal can control territory without reliably converting.",
+      "set_pieces": "positive but incomplete; do not over-credit without taker/target mapping."
+    },
+    "market_calibration": {
+      "interpretation": "Market treats Senegal as dangerous but not an elite tournament favorite. This should temper both underdog-romance and overconfidence.",
+      "winner_market": {
+        "american_odds": 12500,
+        "decimal_odds": 126.0,
+        "raw_implied_probability": 0.00794
+      },
+      "group_winner_market": {
+        "american_odds": 750,
+        "decimal_odds": 8.5,
+        "raw_implied_probability": 0.11765
+      },
+      "model_warning": "Do not translate a long futures price into automatic value. It may reflect real gap to France and general title path difficulty."
+    },
+    "uncertainty_flags": [
+      {
+        "flag": "core aging and workload",
+        "owner": "data",
+        "impact": "medium_high"
+      },
+      {
+        "flag": "final lineup and fitness",
+        "owner": "data",
+        "impact": "high"
+      },
+      {
+        "flag": "low-block chance creation",
+        "owner": "tactics/model",
+        "impact": "medium_high"
+      },
+      {
+        "flag": "wide rest-defense",
+        "owner": "tactics/model",
+        "impact": "medium"
+      },
+      {
+        "flag": "market narrative bias",
+        "owner": "model/summary",
+        "impact": "medium"
+      }
+    ],
+    "needed_for_later_group_prediction": [
+      "France-vs-Senegal expected lineup and injury update",
+      "Senegal-vs-Norway matchup-specific pace/transition assumptions",
+      "Iraq-vs-Senegal low-block and set-piece assumptions",
+      "odds close/open movement by match",
+      "temperature, travel and rest-day context",
+      "T-75m official starters"
+    ],
+    "completion_note": "Usable as first Senegal team_profile model input, but intentionally not a prediction file."
+  }
+}

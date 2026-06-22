@@ -1,0 +1,144 @@
+[
+  {
+    "claim_id": "norway-001",
+    "team": "Norway",
+    "claim": "Norway's stable base shape is 4-2-3-1 with frequent 4-4-2 or 4-4-1-1 defensive phases.",
+    "confidence": "high",
+    "why_challengeable": "Player-specific role changes can alter the effective shape even when the lineup card looks similar.",
+    "challenge_type": "opponent_specific",
+    "required_checks": [
+      "review kickoff and defensive phase shapes across the main 2025 competitive sample",
+      "separate Sorloth-wide starts from Bobb-wide starts"
+    ],
+    "preferred_sources": [
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707581",
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707580",
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707579"
+    ],
+    "invalidate_if": [
+      "video review shows the defensive first line is usually not a two-forward line"
+    ],
+    "recheck_deadline": "2026-06-20"
+  },
+  {
+    "claim_id": "norway-002",
+    "team": "Norway",
+    "claim": "Odegaard is Norway's key open-play organizer and primary set-piece conductor.",
+    "confidence": "high",
+    "why_challengeable": "This should be tested against matches where he is absent or limited.",
+    "challenge_type": "injury_dependency",
+    "required_checks": [
+      "review chance creation and final-ball patterns in matches without a full Odegaard role",
+      "check whether Aasgaard, Thorstvedt, or Bobb has taken over that role in any high-value sample"
+    ],
+    "preferred_sources": [
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707596",
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8981336"
+    ],
+    "invalidate_if": [
+      "competitive samples show Norway can reliably break organized blocks and maintain set-piece quality without Odegaard"
+    ],
+    "recheck_deadline": "2026-06-20"
+  },
+  {
+    "claim_id": "norway-003",
+    "team": "Norway",
+    "claim": "Nusa is Norway's main left-side carrier and transition accelerator.",
+    "confidence": "high",
+    "why_challengeable": "A few standout matches can overstate how consistently that role appears.",
+    "challenge_type": "small_sample",
+    "required_checks": [
+      "compare his role against strong, mid-level, and weak opponents",
+      "check how Norway progresses when he does not start"
+    ],
+    "preferred_sources": [
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707581",
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707580",
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8981343"
+    ],
+    "invalidate_if": [
+      "larger samples show Norway mainly progresses through the right side or central direct play instead"
+    ],
+    "recheck_deadline": "2026-06-20"
+  },
+  {
+    "claim_id": "norway-004",
+    "team": "Norway",
+    "claim": "Sorloth gives Norway a second route through aerial play, box occupation, and narrow two-forward behavior.",
+    "confidence": "high",
+    "why_challengeable": "His impact can differ sharply between central starts and wide-narrow starts.",
+    "challenge_type": "role_mismatch",
+    "required_checks": [
+      "separate central-9 samples from narrow-wide samples",
+      "review touch map, duel map, and shot map in both roles"
+    ],
+    "preferred_sources": [
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707581",
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707596"
+    ],
+    "invalidate_if": [
+      "role review shows his wide starts do not materially improve dual-target box pressure"
+    ],
+    "recheck_deadline": "2026-06-20"
+  },
+  {
+    "claim_id": "norway-005",
+    "team": "Norway",
+    "claim": "Bobb is best described as a right-side variation piece rather than Norway's most stable locked-in starter.",
+    "confidence": "medium",
+    "why_challengeable": "Health, minute-management, and recency make this role unstable.",
+    "challenge_type": "small_sample",
+    "required_checks": [
+      "check his 2026 pre-World-Cup start rate and minute load",
+      "review whether Solbakken treats him as a default starter or matchup tool"
+    ],
+    "preferred_sources": [
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8981343",
+      "https://www.fotball.no/landslag/norge-a-herrer/2026/norges-tropp-mot-nederland-og-sveits/"
+    ],
+    "invalidate_if": [
+      "newer samples show Bobb has become the stable first-choice right-sided starter in high-value matches"
+    ],
+    "recheck_deadline": "2026-06-20"
+  },
+  {
+    "claim_id": "norway-006",
+    "team": "Norway",
+    "claim": "Norway's main defensive risk comes from space behind the fullbacks, recovery defending, and lateral midfield coverage after aggressive attacking phases.",
+    "confidence": "medium",
+    "why_challengeable": "Official match pages confirm lineups and results but do not fully prove the exact defensive failure mode.",
+    "challenge_type": "source_conflict",
+    "required_checks": [
+      "add video review or detailed tactical reports",
+      "separate structural risk from one-off match states"
+    ],
+    "preferred_sources": [
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707581",
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8981336"
+    ],
+    "invalidate_if": [
+      "deeper event or video review shows the main defensive issue is elsewhere"
+    ],
+    "recheck_deadline": "2026-06-20"
+  },
+  {
+    "claim_id": "norway-007",
+    "team": "Norway",
+    "claim": "When leading, Solbakken tends to stabilize the game without fully removing the transition outlet.",
+    "confidence": "medium",
+    "why_challengeable": "This needs more explicit leading-state substitution and shape evidence.",
+    "challenge_type": "small_sample",
+    "required_checks": [
+      "review first and second substitution waves in clear leading states",
+      "check whether a speed or target outlet stays on the pitch"
+    ],
+    "preferred_sources": [
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707581",
+      "https://www.fotball.no/fotballdata/kamp/?fiksId=8707580"
+    ],
+    "invalidate_if": [
+      "larger samples show Norway quickly drops into a much lower and more passive shell once ahead"
+    ],
+    "recheck_deadline": "2026-06-20"
+  }
+]

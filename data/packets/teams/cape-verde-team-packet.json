@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T16:08:00+08:00",
+  "scope": "H组佛得角队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "佛得角", "en": "Cape Verde", "fifa_code": "CPV", "group": "H", "confederation": "CAF"},
+  "source_log_path": "K:/worldcup/data/source_logs/cape-verde-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["西班牙 vs 佛得角", "佛得角 vs 乌拉圭", "佛得角 vs 沙特"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Bubista / Pedro Leitao", "team_identity": "首次世界杯语境下的非洲黑马候选，依赖防守纪律、旅欧球员经验和快速反击。", "likely_structure": ["4-3-3", "4-2-3-1", "5-4-1"]},
+  "core_players_watch": [
+    {"player": "Ryan Mendes", "role": "前场经验、边锋内收和关键球处理"},
+    {"player": "Garry Rodrigues", "role": "转换速度、边路冲击和反击终点"},
+    {"player": "Jovane Cabral", "role": "前场持球突破和弱侧攻击"},
+    {"player": "Jamiro Monteiro", "role": "中场推进、连接和二点球"},
+    {"player": "Logan Costa", "role": "中卫对抗、禁区防空和出球"},
+    {"player": "Roberto Lopes", "role": "后防经验和低位组织"},
+    {"player": "Vozinha", "role": "门线扑救、禁区指挥和心理稳定"}
+  ],
+  "strengths": ["反击速度", "低位纪律", "旅欧球员经验", "定位球机会", "首次世界杯情绪动能"],
+  "risks": ["长时间无球防守消耗", "面对西班牙控球压迫出球困难", "阵容深度不足", "落后后缺少稳定阵地战方案", "边路回防距离过长"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "市场可能低估黑马情绪和反击质量，但也要警惕实力差距被浪漫叙事掩盖。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI", "official final squad"]}
+}

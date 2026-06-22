@@ -1,0 +1,56 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "韩国",
+    "en": "Korea Republic",
+    "fifa_code": "KOR",
+    "group": "A"
+  },
+  "status": "partial_post_match_ready",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-12T15:10:00+08:00",
+  "owner": "main-thread-takeover",
+  "scope": "A组韩国 team_profile；含第一轮赛后上下文和第二轮准备，不输出比分预测、出线预测、冠军预测或投注建议。",
+  "source_log": [
+    {
+      "source": "FIFA Korea Republic team page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/korea-republic",
+      "supports_fields": ["team_identity", "competition_context"]
+    },
+    {
+      "source": "ESPN 2026 World Cup squad tracker",
+      "url": "https://www.espn.com/soccer/story/_/id/48757621/2026-world-cup-squad-lists-players-announced-all-48-teams",
+      "supports_fields": ["squad_context"],
+      "confidence": "medium"
+    },
+    {
+      "source": "A组第一轮赛后复盘",
+      "path": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-12_韩国_2-1_捷克_复盘.md",
+      "supports_fields": ["post_match_context", "prediction_audit"]
+    }
+  ],
+  "data": {
+    "coach": "Hong Myung-bo",
+    "profile": "亚洲强队，核心星味和比赛经验突出；首轮逆转捷克后，韩国的下半场持续施压、技术控制和替补冲击必须在模型里上调。",
+    "core_players_watch": ["Son Heung-min", "Kim Min-jae", "Lee Kang-in", "Hwang Hee-chan", "Cho Gue-sung"],
+    "style_tags": ["快速转换", "半空间创造", "边路推进", "高强度下半场", "明星球员带动"],
+    "strengths": ["孙兴慜牵制", "金玟哉防线权威", "李刚仁创造力", "下半场持续性", "替补冲击"],
+    "risks": ["核心球员负荷", "面对低位密防的耐心", "边后卫身后保护", "定位球防守", "领先后控节奏"],
+    "post_match_context": {
+      "round_1_result": "韩国 2-1 捷克",
+      "points_after_round_1": 3,
+      "goal_difference_after_round_1": 1,
+      "audit_note": "旧预测低估韩国逆转能力和下半场压迫质量；第二轮模型需要修正。"
+    },
+    "second_round_preparation": {
+      "must_refresh": ["孙兴慜和金玟哉体能", "T-24h训练", "T-75m首发", "替补使用倾向", "临场盘口"],
+      "model_adjustments": ["上调下半场强度", "上调替补贡献", "保留定位球防守风险"]
+    }
+  },
+  "missing_fields": ["官方完整技术统计", "第二轮T-24h伤停训练", "第二轮T-75m官方首发", "closing_odds_refresh", "完整近期10场结构化样本"],
+  "data_quality": {
+    "overall_confidence": "medium",
+    "completion_level": "usable_partial",
+    "reason_not_complete": "动态体能、伤停和第二轮临场信息尚未锁定。"
+  }
+}

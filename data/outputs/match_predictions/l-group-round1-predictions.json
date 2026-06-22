@@ -1,0 +1,131 @@
+{
+  "phase": "round_prediction",
+  "status": "partial_pre_match",
+  "updated_at": "2026-06-16T13:25:00+08:00",
+  "group": "L",
+  "scope": "L group first-round score, 1X2 probabilities, odds comparison, and conditional betting leans. No final qualification projection.",
+  "sources": [
+    {
+      "name": "FIFA Group L",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/group-l-focus-teams-fixtures-standings",
+      "supports": ["group teams", "opening fixtures"]
+    },
+    {
+      "name": "FIFA Match Schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["schedule refresh gate"]
+    },
+    {
+      "name": "OddsChecker",
+      "url": "https://www.oddschecker.com/",
+      "supports": ["public odds snapshot"]
+    },
+    {
+      "name": "OddsChecker Ghana vs Panama",
+      "url": "https://www.oddschecker.com/us/soccer/world-cup/ghana-v-panama",
+      "supports": ["Ghana vs Panama 1X2 and totals snapshot"]
+    },
+    {
+      "name": "Guardian",
+      "url": "https://www.theguardian.com/football/2026/jun/15/bukayo-saka-fitness-gamble-england-world-cup",
+      "supports": ["England availability risk context"]
+    }
+  ],
+  "method": {
+    "baseline_inputs": ["team packets", "tactics packets", "model briefs", "red-team reviews", "public odds snapshots"],
+    "calibration_adjustments": [
+      "raised draw baseline after recent group-stage draw-heavy misses",
+      "separated possession dominance from win conversion",
+      "added low-block and set-piece variance",
+      "downweighted favorite public-market premium"
+    ],
+    "odds_treatment": "odds converted to implied probabilities and normalized when complete 1X2 snapshot was available"
+  },
+  "matches": [
+    {
+      "match": "England vs Croatia",
+      "date_label": "2026-06-17",
+      "prediction": {
+        "score": {"england": 1, "croatia": 1},
+        "wdl_lean": "draw first; England unbeaten protection",
+        "confidence": "medium_low"
+      },
+      "model_probabilities": {"england": 46, "draw": 30, "croatia": 24},
+      "market_snapshot": {
+        "public_1x2_range": {
+          "england": "-130 to -138",
+          "draw": "+280",
+          "croatia": "+380 to +420"
+        },
+        "normalized_reference_from_minus138_plus280_plus420": {
+          "england": 56.0,
+          "draw": 25.4,
+          "croatia": 18.6
+        },
+        "market_note": "Market is materially higher on England single win than this model."
+      },
+      "scoreline_rationale": [
+        "England have higher attacking ceiling but uncertain final Tuchel structure.",
+        "Croatia's midfield press resistance and tempo control raise draw probability.",
+        "Saka fitness and England left-side balance require T-75m refresh.",
+        "A low-tempo first-round match state points toward under and draw cover."
+      ],
+      "conditional_betting_lean": [
+        "avoid chasing England moneyline if price remains short",
+        "draw around +280 has discussion value",
+        "Croatia +1 or +1.25 preferred to Croatia outright",
+        "under 2.5 fits model shape"
+      ],
+      "refresh_gates": ["official starting XI", "Saka status", "Croatia veteran minutes plan", "same-book 1X2/AH/totals"]
+    },
+    {
+      "match": "Ghana vs Panama",
+      "date_label": "2026-06-17",
+      "prediction": {
+        "score": {"ghana": 1, "panama": 1},
+        "wdl_lean": "draw first; Ghana slight initiative",
+        "confidence": "medium_low"
+      },
+      "model_probabilities": {"ghana": 43, "draw": 31, "panama": 26},
+      "market_snapshot": {
+        "public_1x2_reference": {
+          "ghana": "+105",
+          "draw": "+260",
+          "panama": "+300"
+        },
+        "normalized_reference_from_plus105_plus260_plus300": {
+          "ghana": 48.0,
+          "draw": 27.4,
+          "panama": 24.6
+        },
+        "totals_reference": {
+          "under_2_5": "-136",
+          "over_2_5": "+120"
+        },
+        "market_note": "Market makes Ghana a slight favorite; model gives more weight to draw and Panama low-block resistance."
+      },
+      "scoreline_rationale": [
+        "Ghana have superior individual upside through Kudus, Semenyo and Partey.",
+        "Queiroz transition adds tactical uncertainty.",
+        "Panama's compact block, set pieces and Carrasquilla progression raise low-score upset/draw paths.",
+        "Totals market aligns with a low-scoring match script."
+      ],
+      "conditional_betting_lean": [
+        "Ghana moneyline at +105 is not a strong edge unless lineup news is excellent",
+        "draw around +260 has discussion value",
+        "under 2.5 is more coherent than Ghana moneyline",
+        "Panama +0.5 or +0.75 can be considered if available at fair price"
+      ],
+      "refresh_gates": ["official starting XI", "Partey/Kudus/Semenyo status", "Panama wingbacks and striker choice", "same-book 1X2/AH/totals"]
+    }
+  ],
+  "validation_targets": {
+    "probability_sums": "each model 1X2 set sums to 100",
+    "market_probability_sums": "normalized references sum to 100",
+    "known_limitations": [
+      "lineups not final",
+      "odds are public snapshot/range, not guaranteed live best price",
+      "injury and suspension data require final matchday refresh"
+    ]
+  }
+}

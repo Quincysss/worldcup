@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:48:00+08:00",
+  "scope": "K组刚果金队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "刚果金", "en": "DR Congo", "fifa_code": "COD", "group": "K", "confederation": "CAF"},
+  "source_log_path": "K:/worldcup/data/source_logs/dr-congo-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["葡萄牙 vs 刚果金", "刚果金 vs 哥伦比亚", "刚果金 vs 乌兹别克斯坦"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Sebastien Desabre", "team_identity": "身体、速度和转换威胁突出的非洲队，能把强队拉进对抗局，但防守组织和出球稳定性要打问号。", "likely_structure": ["4-2-3-1", "4-3-3", "5-4-1"]},
+  "core_players_watch": [
+    {"player": "Cedric Bakambu", "role": "中锋跑位、支点和禁区终结"},
+    {"player": "Yoane Wissa", "role": "前场冲刺、反击和多位置攻击"},
+    {"player": "Silas", "role": "边路速度、纵深和一对一"},
+    {"player": "Samuel Moutoussamy", "role": "中场覆盖、推进和二点球"},
+    {"player": "Chancel Mbemba", "role": "防线领导、对抗和定位球高点"},
+    {"player": "Arthur Masuaku", "role": "左路推进、定位球和传中"},
+    {"player": "Gael Kakuta", "role": "前场创造和定位球脚法"}
+  ],
+  "strengths": ["转换速度", "身体对抗", "前场冲击", "定位球高点", "非洲杯级别韧性"],
+  "risks": ["后场出球压力", "防线集中度", "面对葡萄牙肋部和边路换位", "犯规和牌数", "落后后结构易散"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "刚果金受让方向可能有反击保护，但对葡萄牙时防线承压极大。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

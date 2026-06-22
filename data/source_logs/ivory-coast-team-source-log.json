@@ -1,0 +1,13 @@
+{
+  "team": {"zh": "科特迪瓦", "en": "Côte d'Ivoire", "fifa_code": "CIV", "group": "E"},
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "captured_at": "2026-06-15T12:45:00+08:00",
+  "sources": [
+    {"name": "FIFA World Cup 26 match schedule", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule", "source_type": "official", "supports": ["Group E fixtures"], "freshness": "needs_refresh_before_prediction"},
+    {"name": "The Guardian live report: Côte d'Ivoire 1-0 Ecuador", "url": "https://www.theguardian.com/football/live/2026/jun/14/cote-d-ivoire-v-ecuador-world-cup-2026-live", "source_type": "reputable_media", "supports": ["Round 1 result", "Amad Diallo late winner"], "freshness": "post_match"},
+    {"name": "Fédération Ivoirienne de Football", "url": "https://www.fifciv.com/", "source_type": "official_association", "supports": ["coach", "squad and availability updates"], "freshness": "needs_refresh_before_prediction"}
+  ],
+  "volatile_fields": {"injury_status": "needs_refresh", "suspensions": "needs_refresh", "starting_xi": "T-75m_required", "odds": "needs_refresh", "official_technical_report": "missing"},
+  "data_quality_note": "可用于球队画像；第二轮对德国前需要刷新后防体能、反击配置和盘口。"
+}

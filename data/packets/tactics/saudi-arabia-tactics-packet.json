@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T16:12:00+08:00",
+  "team": {"zh": "沙特", "en": "Saudi Arabia", "fifa_code": "KSA", "group": "H"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-3-3", "4-1-4-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "不宜在乌拉圭压迫下长时间短传冒险，核心是通过 Kanno、Abdulhamid 和 Salem Al-Dawsari 找到快速出球点。",
+    "pressing_profile": "可阶段性前压，但持续高压风险较高，更现实的是中场区域压迫加边路诱导。",
+    "defensive_block": "对乌拉圭时需要保护禁区前沿和二点球，边后卫不能同时压上，避免被 Darwin Nunez 跑身后。",
+    "attacking_transition": "Salem Al-Dawsari 的第一脚推进和 Firas Al-Buraikan 的前场支点决定反击质量。",
+    "set_piece": "攻防两端都是风险与机会并存，面对乌拉圭高点必须控制犯规位置。"
+  },
+  "coach_tendencies": {"coach": "Georgios Donis", "risk_appetite": "medium", "game_state": "更可能先求结构稳定，再利用边路和反击制造不连续的高价值机会。"},
+  "tactical_risks": ["身体对抗劣势", "防线被纵深冲刺拉开", "门将选择不确定", "新帅磨合期", "定位球防守压力"],
+  "confidence_notes": {"high": ["反击核心识别", "对抗风险"], "medium": ["压迫强度"], "low_or_missing": ["T-75m首发", "门将选择", "伤停"]},
+  "handoff_to_model": {"attack_ceiling": "medium", "defensive_floor": "medium_low", "transition_defense_risk": "medium_high", "set_piece": "medium_low"},
+  "handoff_to_red_team": ["不要因 2022 单场爆冷记忆高估稳定性", "确认 Donis 体系是否已磨合", "乌拉圭定位球和二点球压力"]
+}

@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T16:12:00+08:00",
+  "team": {"zh": "乌拉圭", "en": "Uruguay", "fifa_code": "URU", "group": "H"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-3-3", "alternates": ["4-2-3-1", "4-4-2 without ball"], "confidence": "medium_high"},
+  "phase_behaviour": {
+    "possession_structure": "Bielsa 体系强调宽度、快速向前和中场连续接应，Valverde/Bentancur/Ugarte 决定推进和反抢质量。",
+    "pressing_profile": "压迫侵略性强，前场会主动锁边，中场跟进二点，试图让对手在第一、第二脚出球就失误。",
+    "defensive_block": "一旦压迫没成功，高线身后和中卫横移会被考验；Araujo 的覆盖价值非常高。",
+    "attacking_transition": "Darwin Nunez 的纵深、Pellistri 的边路冲刺和 Valverde 的推进构成主要纵向威胁。",
+    "set_piece": "攻防高点质量好，Gimenez/Araujo 的空中对抗是明显加分。"
+  },
+  "coach_tendencies": {"coach": "Marcelo Bielsa", "risk_appetite": "medium_high", "game_state": "即便领先也不会完全保守，强度和压迫会持续影响比赛节奏。"},
+  "tactical_risks": ["高线身后空间", "犯规和黄牌", "高强度体能消耗", "中卫伤病敏感", "机会转化波动"],
+  "confidence_notes": {"high": ["压迫强度", "中场硬度"], "medium": ["高线风险", "终结稳定性"], "low_or_missing": ["T-75m首发", "伤停"]},
+  "handoff_to_model": {"attack_ceiling": "medium_high", "defensive_floor": "medium_high", "transition_defense_risk": "medium", "set_piece": "high"},
+  "handoff_to_red_team": ["Bielsa 高线是否被沙特反击利用", "黄牌和情绪成本", "Darwin Nunez 终结波动"]
+}

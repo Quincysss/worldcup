@@ -1,0 +1,25 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:48:00+08:00",
+  "scope": "K组葡萄牙队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "葡萄牙", "en": "Portugal", "fifa_code": "POR", "group": "K", "confederation": "UEFA"},
+  "source_log_path": "K:/worldcup/data/source_logs/portugal-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["葡萄牙 vs 刚果金", "葡萄牙 vs 乌兹别克斯坦", "哥伦比亚 vs 葡萄牙"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Roberto Martinez", "team_identity": "欧洲顶级阵容深度和前场创造队，边路、肋部和禁区终结都很强，但 Ronaldo 角色、后场保护和热门溢价需复核。", "likely_structure": ["4-3-3", "3-4-2-1", "4-2-3-1"]},
+  "core_players_watch": [
+    {"player": "Cristiano Ronaldo", "role": "禁区终结、空中威胁和大赛经验，出场计划需复核"},
+    {"player": "Bruno Fernandes", "role": "前场创造、远射、定位球和节奏加速"},
+    {"player": "Bernardo Silva", "role": "右路/中路控球、压迫和连接"},
+    {"player": "Rafael Leao", "role": "左路爆点、纵深和一对一"},
+    {"player": "Vitinha", "role": "中场出球、节奏和反压迫"},
+    {"player": "Joao Palhinha", "role": "防守屏障、对抗和二点球"},
+    {"player": "Ruben Dias", "role": "中卫组织、防线领导和防空"},
+    {"player": "Diogo Costa", "role": "门线、出球和点球心理"}
+  ],
+  "strengths": ["阵容深度", "边路爆点", "禁区终结", "定位球脚法", "中场技术密度", "后手换人"],
+  "risks": ["热门队市场溢价", "Ronaldo 角色与压迫平衡", "边后卫身后空间", "面对直接冲击的二点保护", "强队轮换导致节奏不稳"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "葡萄牙名气和 Ronaldo 叙事容易让热门方向偏贵，盘口需和首发强度一起看。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI", "Ronaldo minutes plan"]}
+}

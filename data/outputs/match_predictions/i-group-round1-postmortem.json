@@ -1,0 +1,84 @@
+{
+  "phase": "group_round_postmortem",
+  "status": "completed_match_review",
+  "updated_at": "2026-06-17T10:20:00+08:00",
+  "scope": "Review confirmed completed I group matches from the night of 2026-06-16 Asia/Shanghai.",
+  "group": "I",
+  "sources": [
+    {
+      "name": "Olympics matchday live scores",
+      "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-group-result-tuesday-16-june-live-scores",
+      "supports": ["France 3-1 Senegal", "Iraq 1-4 Norway"]
+    },
+    {
+      "name": "Los Angeles Times live updates",
+      "url": "https://www.latimes.com/sports/soccer/live/fifa-world-cup-live-updates-tv-schedule-results-standings-highlights",
+      "supports": ["Iraq 1-4 Norway result context"]
+    },
+    {
+      "name": "FIFA Match Schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["fixture reference"]
+    }
+  ],
+  "matches": [
+    {
+      "match": "France vs Senegal",
+      "prediction": {
+        "score": "France 2-1 Senegal",
+        "wdl": "France win",
+        "probabilities": {"france": 60, "draw": 24, "senegal": 16}
+      },
+      "actual": {
+        "score": "France 3-1 Senegal",
+        "wdl": "France win"
+      },
+      "evaluation": {
+        "wdl_hit": true,
+        "exact_score_hit": false,
+        "score_error_note": "France late-game scoring and elite finishing were underweighted."
+      },
+      "model_adjustments": [
+        "raise late_game_attack_boost for France",
+        "raise elite_finisher_conversion for France",
+        "raise Senegal late_defensive_fatigue risk"
+      ]
+    },
+    {
+      "match": "Iraq vs Norway",
+      "prediction": {
+        "score": "Iraq 0-2 Norway",
+        "wdl": "Norway win",
+        "probabilities": {"iraq": 10, "draw": 20, "norway": 70}
+      },
+      "actual": {
+        "score": "Iraq 1-4 Norway",
+        "wdl": "Norway win"
+      },
+      "evaluation": {
+        "wdl_hit": true,
+        "exact_score_hit": false,
+        "score_error_note": "Norway conversion, set-piece/aerial pressure, and game-state expansion were underweighted; Iraq scoring path was also underweighted."
+      },
+      "model_adjustments": [
+        "raise haaland_conversion",
+        "raise odegaard_service_quality",
+        "raise norway_set_piece_aerial_edge",
+        "raise iraq_game_state_collapse_risk when trailing",
+        "raise iraq_target_forward_and_set_piece_scoring_path"
+      ]
+    }
+  ],
+  "aggregate_evaluation": {
+    "matches_reviewed": 2,
+    "wdl_hits": 2,
+    "exact_score_hits": 0,
+    "primary_calibration_lesson": "After recent draw-heavy groups, the model correctly retained favorite win direction here but became too conservative on score margin for teams with elite finishers and late-game attacking depth."
+  },
+  "next_round_model_rules": [
+    "Do not overcorrect all favorites downward because of prior draw-heavy samples.",
+    "When favorite has elite finisher plus service creator, keep 3-goal team total paths alive.",
+    "If underdog concedes first, increase collapse-risk and also preserve one-goal response paths through set pieces or target forwards.",
+    "Separate low-block resilience before first concession from resilience after chasing the game."
+  ]
+}

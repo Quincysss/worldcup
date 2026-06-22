@@ -1,0 +1,23 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:19:00+08:00",
+  "scope": "G组伊朗队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "伊朗", "en": "Iran", "fifa_code": "IRN", "group": "G", "confederation": "AFC"},
+  "source_log_path": "K:/worldcup/data/source_logs/iran-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["伊朗 vs 新西兰", "比利时 vs 伊朗", "埃及 vs 伊朗"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Amir Ghalenoei", "team_identity": "亚洲强队，防守组织、身体对抗和老练前场是底盘；但年龄结构、转换速度和外部噪音都要复核。", "likely_structure": ["4-2-3-1", "4-4-2", "4-1-4-1"]},
+  "core_players_watch": [
+    {"player": "Mehdi Taremi", "role": "中锋/二前锋，支点、造犯规和终结"},
+    {"player": "Alireza Jahanbakhsh", "role": "边路经验、定位球和远射"},
+    {"player": "Saeid Ezatolahi", "role": "中场防守和二点保护"},
+    {"player": "Saman Ghoddos", "role": "中前场连接和定位球"},
+    {"player": "Mehdi Ghayedi", "role": "边路突破和反击"},
+    {"player": "Shoja Khalilzadeh", "role": "中卫对抗和防空"}
+  ],
+  "strengths": ["身体对抗", "低位组织", "定位球", "前场经验", "亚洲比赛韧性"],
+  "risks": ["阵容年龄", "速度和转换", "前场核心可用性", "外部噪音", "面对新西兰定位球的防空压力"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "伊朗经验和韧性会被模型看重，但年龄和可用性必须单独折扣。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI", "discipline check"]}
+}

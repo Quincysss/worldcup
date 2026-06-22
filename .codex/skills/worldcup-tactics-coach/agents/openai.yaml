@@ -1,0 +1,4 @@
+interface:
+  display_name: "World Cup Tactics Coach"
+  short_description: "World Cup tactical analysis packets."
+  default_prompt: "Use $worldcup-tactics-coach to turn sourced team data into a tactical and coaching analysis packet."

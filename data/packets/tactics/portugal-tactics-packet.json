@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:52:00+08:00",
+  "team": {"zh": "葡萄牙", "en": "Portugal", "fifa_code": "POR", "group": "K"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-3-3", "alternates": ["3-4-2-1", "4-2-3-1"], "confidence": "medium_high"},
+  "phase_behaviour": {
+    "possession_structure": "以 Vitinha/Bruno/Bernardo 控制中前场节奏，边路通过 Leao、Cancelo 或宽翼位拉开一对一，Ronaldo 或中锋点占禁区。",
+    "pressing_profile": "可高位压迫，但 Ronaldo 角色会影响第一线压迫强度，Palhinha 的二点保护决定攻转守质量。",
+    "defensive_block": "领先后可回到中位 4-4-2 或 5-4-1，关键是边路身后和中卫横移保护。",
+    "attacking_transition": "抢回球后 Bruno 的第一脚和 Leao 的纵深是直接威胁。",
+    "set_piece": "Ronaldo、Dias 等高点加 Bruno 脚法，定位球攻防都是重要强项。"
+  },
+  "coach_tendencies": {"coach": "Roberto Martinez", "risk_appetite": "medium", "game_state": "对弱势队会主动控球和宽度压制，但需要平衡 Ronaldo 终结与前场压迫。"},
+  "tactical_risks": ["热门溢价", "Ronaldo 压迫平衡", "边路身后空间", "直接冲击和二点球防守"],
+  "confidence_notes": {"high": ["阵容深度", "前场创造"], "medium": ["防守转换", "压迫持续性"], "low_or_missing": ["T-75m首发", "Ronaldo 分钟计划"]},
+  "handoff_to_model": {"attack_ceiling": "high", "defensive_floor": "medium_high", "transition_defense_risk": "medium", "set_piece": "high"},
+  "handoff_to_red_team": ["Ronaldo 叙事和热门溢价", "刚果金反击冲击", "葡萄牙轮换强度"]
+}

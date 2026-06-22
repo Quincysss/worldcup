@@ -1,0 +1,118 @@
+{
+  "phase": "group_round_prediction",
+  "status": "refreshed_pre_match",
+  "updated_at": "2026-06-17T11:55:00+08:00",
+  "group": "A",
+  "round": 2,
+  "scope": "A group second-round score, 1X2 probabilities, odds comparison, conditional betting leans, and table implications.",
+  "sources": [
+    {
+      "name": "FIFA Match Schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["fixture reference"]
+    },
+    {
+      "name": "ESPN World Cup fixtures/results",
+      "url": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "supports": ["first-round results and schedule context"]
+    },
+    {
+      "name": "OddsChecker",
+      "url": "https://www.oddschecker.com/",
+      "supports": ["public odds snapshot and market direction"]
+    },
+    {
+      "name": "OddsChecker Mexico vs South Korea",
+      "url": "https://www.oddschecker.com/us/soccer/world-cup/mexico-v-south-korea",
+      "supports": ["Mexico vs South Korea public 1X2 snapshot"]
+    }
+  ],
+  "standings_before_round": [
+    {"team": "Mexico", "points": 3, "goal_difference": 2},
+    {"team": "South Korea", "points": 3, "goal_difference": 1},
+    {"team": "Czechia", "points": 0, "goal_difference": -1},
+    {"team": "South Africa", "points": 0, "goal_difference": -2}
+  ],
+  "matches": [
+    {
+      "match": "Czechia vs South Africa",
+      "date_label": "2026-06-18",
+      "prediction": {
+        "score": {"czechia": 1, "south_africa": 0},
+        "wdl_lean": "Czechia narrow win; draw cover",
+        "confidence": "medium_low"
+      },
+      "model_probabilities": {"czechia": 47, "draw": 30, "south_africa": 23},
+      "market_snapshot": {
+        "public_1x2_range": {
+          "czechia": "+100 to -132",
+          "draw": "+230 reference",
+          "south_africa": "+300 to +361"
+        },
+        "normalized_reference_from_plus100_plus230_plus300": {
+          "czechia": 47.5,
+          "draw": 28.8,
+          "south_africa": 23.7
+        },
+        "market_note": "Model is close to market; edge is more likely in DNB/Asian handicap or under rather than 1X2."
+      },
+      "rationale": [
+        "Czechia's set pieces and aerial pressure directly test South Africa's defense.",
+        "Both teams lost round one, which raises caution and under paths.",
+        "Czechia's game management after leading was downgraded after the South Korea loss.",
+        "South Africa's scoring path remains narrow unless they improve transition quality."
+      ],
+      "conditional_betting_lean": [
+        "Czechia DNB or Czechia no-bet draw structure preferred",
+        "under 2.5 fits match script",
+        "avoid chasing Czechia if price moves deep into negative territory"
+      ]
+    },
+    {
+      "match": "Mexico vs South Korea",
+      "date_label": "2026-06-18",
+      "prediction": {
+        "score": {"mexico": 1, "south_korea": 1},
+        "wdl_lean": "draw; Mexico slight initiative",
+        "confidence": "medium"
+      },
+      "model_probabilities": {"mexico": 43, "draw": 31, "south_korea": 26},
+      "market_snapshot": {
+        "public_1x2_reference": {
+          "mexico": "-130",
+          "draw": "+270",
+          "south_korea": "+380"
+        },
+        "normalized_reference_from_minus130_plus270_plus380": {
+          "mexico": 54.1,
+          "draw": 25.9,
+          "south_korea": 20.0
+        },
+        "market_note": "Market is materially higher on Mexico single win than the model."
+      },
+      "rationale": [
+        "Mexico's home energy and first-round 2-0 win are real positives.",
+        "South Korea's comeback against Czechia raises late-game intensity and technical-control inputs.",
+        "Both teams already have three points, making a draw strategically acceptable.",
+        "Mexico's fullback space can be attacked by Korea's transition speed."
+      ],
+      "conditional_betting_lean": [
+        "avoid chasing Mexico moneyline around -130",
+        "draw around +270 has discussion value",
+        "South Korea +0.5 or +0.75 preferred to South Korea outright",
+        "under/small-score script remains coherent"
+      ]
+    }
+  ],
+  "projected_table_if_predictions_hit": [
+    {"team": "Mexico", "points": 4, "note": "still controls group path"},
+    {"team": "South Korea", "points": 4, "note": "strong qualification position"},
+    {"team": "Czechia", "points": 3, "note": "back in contention before Mexico match"},
+    {"team": "South Africa", "points": 0, "note": "near elimination pressure"}
+  ],
+  "validation_targets": {
+    "probability_sums": "each model 1X2 set sums to 100",
+    "market_probability_sums": "normalized references sum to 100 within rounding tolerance",
+    "known_limitations": ["T-75m lineups pending", "injury and suspension data require final refresh", "odds snapshots are public references, not guaranteed live best price"]
+  }
+}

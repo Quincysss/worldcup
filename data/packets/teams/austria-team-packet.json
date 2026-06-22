@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:23:00+08:00",
+  "scope": "J组奥地利队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "奥地利", "en": "Austria", "fifa_code": "AUT", "group": "J", "confederation": "UEFA"},
+  "source_log_path": "K:/worldcup/data/source_logs/austria-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["奥地利 vs 约旦", "阿根廷 vs 奥地利", "阿尔及利亚 vs 奥地利"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Ralf Rangnick", "team_identity": "欧洲高强度压迫队，体系感强，整体纪律和反抢是主要武器，Alaba 健康与防线配置影响上限。", "likely_structure": ["4-2-3-1", "4-4-2", "4-3-3"]},
+  "core_players_watch": [
+    {"player": "David Alaba", "role": "后场组织、定位球和防线领导力，健康需赛前复核"},
+    {"player": "Marcel Sabitzer", "role": "中前场推进、压迫和远射"},
+    {"player": "Konrad Laimer", "role": "中场压迫、覆盖和对抗"},
+    {"player": "Christoph Baumgartner", "role": "前场连接、二线插上和禁区冲击"},
+    {"player": "Nicolas Seiwald", "role": "中场平衡、反抢和节奏"},
+    {"player": "Michael Gregoritsch", "role": "中锋支点、空中对抗和禁区终结"},
+    {"player": "Kevin Danso", "role": "中卫对抗、防空和防线速度"}
+  ],
+  "strengths": ["高位压迫", "整体纪律", "中场覆盖", "定位球质量", "身体对抗", "欧洲比赛强度"],
+  "risks": ["Alaba 健康不确定", "压迫背后空间", "面对低位队破局效率", "前锋终结稳定性", "被快速反击打身后"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "奥地利体系热度可能被战术爱好者看高，预测时要区分压迫过程优势与进球兑现。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI", "Alaba fitness"]}
+}

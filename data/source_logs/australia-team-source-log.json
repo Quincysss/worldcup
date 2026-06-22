@@ -1,0 +1,42 @@
+{
+  "team": {
+    "zh": "澳大利亚",
+    "en": "Australia",
+    "fifa_code": "AUS",
+    "group": "D"
+  },
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "captured_at": "2026-06-15T12:25:00+08:00",
+  "sources": [
+    {
+      "name": "FIFA World Cup 26 match schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "source_type": "official",
+      "supports": ["group fixtures", "venue and kickoff baseline"],
+      "freshness": "needs_refresh_before_prediction"
+    },
+    {
+      "name": "Football Australia",
+      "url": "https://www.footballaustralia.com.au/",
+      "source_type": "official_association",
+      "supports": ["coach news", "squad and availability updates"],
+      "freshness": "needs_refresh_before_prediction"
+    },
+    {
+      "name": "Project match context",
+      "url": "local://worldcup/thread-state",
+      "source_type": "project_context",
+      "supports": ["Round 1: Australia 2-0 Turkey"],
+      "freshness": "requires_external_match-centre_recheck"
+    }
+  ],
+  "volatile_fields": {
+    "injury_status": "needs_refresh",
+    "suspensions": "needs_refresh",
+    "starting_xi": "T-75m_required",
+    "odds": "needs_refresh",
+    "official_technical_report": "missing"
+  },
+  "data_quality_note": "可用于球队画像和预测前准备；首轮胜利提升状态评价，但不可替代赛前阵容与体能复核。"
+}

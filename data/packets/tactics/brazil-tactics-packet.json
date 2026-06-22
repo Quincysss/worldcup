@@ -1,0 +1,203 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Brazil",
+    "en": "Brazil",
+    "fifa_code": "BRA",
+    "group": "C"
+  },
+  "match": null,
+  "status": "deep_partial",
+  "created_at": "2026-06-12T19:34:00+08:00",
+  "updated_at": "2026-06-15T09:05:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Brazil tactical and coaching team_profile only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "set-piece taker and aerial target map",
+    "final role confirmation under Carlo Ancelotti",
+    "fresh injury and suspension refresh"
+  ],
+  "source_log": [
+    {
+      "source": "local team packet",
+      "url": "K:\\worldcup\\data\\packets\\teams\\brazil-team-packet.json",
+      "note": "Local context exists but includes malformed JSON/encoding damage in current copy."
+    },
+    {
+      "source": "local source log",
+      "url": "K:\\worldcup\\data\\source_logs\\brazil-team-source-log.json",
+      "note": "Fixture, manager-context, and source trace reference."
+    }
+  ],
+  "notes": [
+    "Restored after accidental deletion.",
+    "No score prediction, group projection, champion projection, or betting advice."
+  ],
+  "data": {
+    "coach_profile": {
+      "coach": "Carlo Ancelotti",
+      "default_formation": "4-3-3",
+      "alternate_formation": [
+        "4-2-3-1",
+        "4-4-2 out of possession"
+      ],
+      "system_stability": "medium",
+      "tournament_pragmatism": "high",
+      "summary": "Brazil's ceiling is driven by elite front-line talent, but the tactical question is balance: how much freedom can the wide stars receive without exposing the midfield screen and defensive transition structure."
+    },
+    "possession_structure": {
+      "summary": "Brazil should still be most dangerous when possession creates isolation for wide attackers rather than when it becomes slow circulation for its own sake.",
+      "build_up": "Back four base with one or two midfielders responsible for tempo control and early progression into wide or half-space receivers.",
+      "central_control_level": "medium_high",
+      "width_usage": "high",
+      "confidence": "medium"
+    },
+    "pressing_profile": {
+      "summary": "Expect selective aggression rather than nonstop pressing. Brazil can jump on loose touches and trap near the touchline, but game-state management should matter.",
+      "press_height": "medium_high",
+      "press_orientation": "selective_and_trigger_based",
+      "counterpress_level": "medium",
+      "confidence": "medium"
+    },
+    "defensive_block": {
+      "summary": "Brazil's settled defense can look strong if the midfield screen protects the center-backs, but fullback spaces and rest-defense spacing remain the stress points.",
+      "line_height": "medium",
+      "compactness": "medium_high",
+      "central_screen_quality": "medium_high",
+      "fullback_space_risk": "medium_high",
+      "confidence": "medium"
+    },
+    "attacking_transition": {
+      "summary": "This is one of Brazil's clearest elite phases. If the first release finds Vinicius, Rodrygo, or another runner in stride, they can turn open grass into immediate shot threat.",
+      "speed": "high",
+      "primary_outlets": [
+        "Vinicius Junior",
+        "Rodrygo",
+        "Raphinha"
+      ],
+      "confidence": "high"
+    },
+    "defensive_transition": {
+      "summary": "The main risk comes after Brazil lose the ball with several attackers ahead of it. Recovery structure is more important than individual defending alone.",
+      "rest_defense_quality": "medium",
+      "recovery_risk": "medium_high",
+      "confidence": "medium"
+    },
+    "set_piece_attack": {
+      "summary": "Brazil have enough delivery quality and size to remain dangerous, but the full taker-target hierarchy still needs confirmation.",
+      "threat_level": "medium_high",
+      "confidence": "medium_low"
+    },
+    "set_piece_defense": {
+      "summary": "Goalkeeper level and center-back quality suggest a good floor, though the final verdict depends on lineup-specific marking assignments.",
+      "stability": "medium_high",
+      "confidence": "medium"
+    },
+    "game_state_behaviour": {
+      "leading": "Brazil can become more pragmatic once ahead, preferring control and spacing over constant risk.",
+      "trailing": "When chasing, the shape can become more wing-heavy and talent-driven, with more bodies committed ahead of the ball.",
+      "confidence": "medium"
+    },
+    "substitution_tendency": {
+      "summary": "Bench depth should allow role-for-role refreshes without a major quality drop, but the exact attacking mix may change based on which creator or runner is protected.",
+      "resource_type": "elite_attack_depth",
+      "confidence": "medium"
+    },
+    "key_player_roles": [
+      {
+        "role": "left_side_breaker",
+        "players": [
+          "Vinicius Junior"
+        ],
+        "note": "The clearest one-v-one destabilizer and transition accelerator."
+      },
+      {
+        "role": "inside_forward_connector",
+        "players": [
+          "Rodrygo"
+        ],
+        "note": "Important because he can link attacks instead of only attacking the last line."
+      },
+      {
+        "role": "width_and_delivery",
+        "players": [
+          "Raphinha"
+        ],
+        "note": "Provides right-side width, delivery, and finishing threat."
+      },
+      {
+        "role": "midfield_balance",
+        "players": [
+          "Bruno Guimaraes",
+          "Lucas Paqueta"
+        ],
+        "note": "Crucial for the tempo-versus-security balance."
+      },
+      {
+        "role": "defensive_axis",
+        "players": [
+          "Marquinhos",
+          "Eder Militao",
+          "Alisson"
+        ],
+        "note": "Defines the floor when the match turns transitional."
+      }
+    ],
+    "tactical_risks": [
+      "attacking-role overlap among star forwards",
+      "space left around or behind the fullbacks",
+      "midfield coverage if the game becomes stretched",
+      "overreliance on individual solutions against deep blocks"
+    ],
+    "first_matchday_adjustment_watch": {
+      "summary": "Track whether Brazil protect midfield balance first or lean immediately into maximum attacking width. That choice will shape both defensive floor and totals profile for later matches.",
+      "confidence": "medium"
+    },
+    "data_gaps": [
+      "malformed local team packet limits clean structured extraction",
+      "need refreshed starting-midfield hierarchy",
+      "need confirmed set-piece map",
+      "need final medical and suspension cross-check"
+    ],
+    "confidence_notes": [
+      {
+        "topic": "transition attack ceiling",
+        "confidence": "high",
+        "reason": "Supported by repeated player-role logic and squad talent concentration."
+      },
+      {
+        "topic": "Ancelotti shape stability",
+        "confidence": "medium",
+        "reason": "Manager identity is clear, but final tournament usage still needs lineup-backed repetition."
+      },
+      {
+        "topic": "set-piece hierarchy",
+        "confidence": "low",
+        "reason": "Current local material does not provide a clean taker-target map."
+      }
+    ],
+    "handoff_to_model": {
+      "attack_ceiling": "very_high",
+      "defensive_floor": "medium_high",
+      "set_piece_attack": "medium_high",
+      "tempo_preference": "medium_to_medium_high",
+      "transition_attack": "high",
+      "transition_defense_risk": "medium_high",
+      "key_player_dependency": "high_on_vinicius_and_midfield_balance",
+      "market_relevant_flags": [
+        "Brazil can create a high shot ceiling without needing sustained pressing",
+        "If midfield balance weakens, both opponent counters and totals risk rise",
+        "Against deep blocks, finishing efficiency matters more than raw possession share"
+      ]
+    },
+    "handoff_to_red_team": {
+      "challenge_points": [
+        "Are we overstating structure because of the coach name rather than lineup evidence?",
+        "Does Brazil still need a true control midfielder to avoid chaotic game states?",
+        "Are deep-block creation concerns being hidden by star power assumptions?"
+      ],
+      "priority": "high"
+    }
+  }
+}

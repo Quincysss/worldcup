@@ -1,0 +1,21 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:47:00+08:00",
+  "team": {"zh": "库拉索", "en": "Curaçao", "fifa_code": "CUW", "group": "E"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "5-4-1", "alternates": ["4-5-1", "4-2-3-1 when chasing"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "控球时间通常不会多，重点是安全第一脚和边路反击出口。",
+    "pressing_profile": "更适合阶段性压迫，不宜长期高位。",
+    "defensive_block": "低位密集是生存底盘，首轮后必须修补禁区保护和横移。",
+    "attacking_transition": "依赖 Tahith Chong、Bacuna 系和边路单点，机会少但需要提高第一脚质量。",
+    "set_piece": "弱旅重要破局路径，但防守定位球也会长期承压。"
+  },
+  "coach_tendencies": {"coach": "Dick Advocaat", "risk_appetite": "low", "game_state": "大败后更可能先收紧，优先避免再次早早崩盘。"},
+  "post_round1_update": "1-7 后防守地板和心理稳定性下调；历史性进球保留一点情绪正反馈。",
+  "tactical_risks": ["防线速度", "连续被压后的体能", "门前保护", "被迫压上后的身后空间"],
+  "confidence_notes": {"high": ["低位防守倾向"], "medium": ["反击单点"], "low_or_missing": ["完整伤停", "官方技术报告", "盘口"]},
+  "handoff_to_model": {"attack_ceiling": "low_medium", "defensive_floor": "low_after_round1", "transition_attack": "medium_low", "set_piece": "medium"},
+  "handoff_to_red_team": ["首轮惨败是否造成心理崩盘", "对厄瓜多尔能否顶住身体强度", "市场是否过度低估"]
+}

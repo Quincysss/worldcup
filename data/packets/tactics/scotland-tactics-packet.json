@@ -1,0 +1,52 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "苏格兰", "en": "Scotland", "fifa_code": "SCO", "group": "C"},
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T10:20:00+08:00",
+  "owner": "main-thread",
+  "scope": "Scotland tactical profile only; no match prediction.",
+  "missing_fields": ["T-75m lineup", "striker choice", "Tierney/Robertson role confirmation", "set-piece map"],
+  "data": {
+    "coach_profile": {"coach": "Steve Clarke", "default_formation": "3-4-2-1", "alternate_formation": ["5-4-1", "3-5-2"], "summary": "Clarke 的苏格兰强调纪律、身体对抗、边翼卫推进和中场冲击。"},
+    "possession_structure": "更多通过 Robertson/Tierney 一侧和 McGinn/McTominay 的前插制造纵深，而不是长时间细腻控球。",
+    "pressing_profile": "中位压迫和对抗强度明显，面对强队会更注重阵型完整。",
+    "defensive_block": "五后卫壳子成熟，但面对顶级边锋时边翼卫身后仍是风险。",
+    "attacking_transition": "中等偏强，关键在第一脚能否找到 McGinn/McTominay 或边路。",
+    "set_piece": "重要武器，身体、传中和二点球都能服务弱势/均势比赛。",
+    "key_player_roles": [
+      {"role": "box_crasher", "players": ["Scott McTominay"]},
+      {"role": "pressing_connector", "players": ["John McGinn"]},
+      {"role": "left_side_width", "players": ["Andy Robertson", "Kieran Tierney"]},
+      {"role": "tempo_link", "players": ["Billy Gilmour", "Callum McGregor"]},
+      {"role": "box_reference", "players": ["Che Adams"]}
+    ],
+    "tactical_risks": ["锋线效率波动", "被迫阵地战时创造力不足", "面对巴西边锋速度", "首战必须赢的心理压力"],
+    "handoff_to_model": {"attack_ceiling": "medium", "defensive_floor": "medium_high", "set_piece_attack": "medium_high", "transition_defense_risk": "medium"},
+    "handoff_to_red_team": ["是否高估苏格兰对海地的压制", "锋线终结是否支撑热门身份", "强队战是否只能被动防守"],
+    "post_round1_tactical_update": {
+      "match_context": "海地 0-1 苏格兰",
+      "summary": "苏格兰首轮拿到结果，但过程没有压倒性。McGinn 的制胜球强化了他们的二点球和中场冲击标签，同时也暴露开放战创造力不够稳定。",
+      "confirmed_traits": [
+        "中场冲击和二点球是主要进攻来源",
+        "定位球和传中仍是关键武器",
+        "防守壳子能保住低比分优势",
+        "面对速度反击时边翼卫身后仍会暴露"
+      ],
+      "new_questions": [
+        "对摩洛哥时能否处理 Hakimi/Brahim 的右路与半空间组合",
+        "对巴西时右侧防线如何限制 Vinicius",
+        "McTominay 若影响力不足，苏格兰是否还有稳定进球来源"
+      ],
+      "game_state_notes": {
+        "leading": "会更愿意压低节奏，用五后卫壳和中场对抗保护优势。",
+        "level": "可接受缠斗，但需要定位球制造实质威胁。",
+        "trailing": "追分时可能提高传中和二点球数量，开放战细腻度仍是疑问。"
+      },
+      "confidence_notes": [
+        {"topic": "set_piece_and_second_ball_threat", "confidence": "high"},
+        {"topic": "open_play_creation", "confidence": "medium_low"},
+        {"topic": "defending_elite_wingers", "confidence": "medium"}
+      ]
+    }
+  }
+}

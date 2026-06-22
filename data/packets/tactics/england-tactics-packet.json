@@ -1,0 +1,29 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:35:00+08:00",
+  "team": {"zh": "英格兰", "en": "England", "group": "L"},
+  "tactical_summary": "英格兰的基本盘是高质量球员在多个位置上的可替换性。Tuchel 可以用 4-2-3-1 保持前场明星的空间，也可以用 3-4-2-1 提高出球和边翼卫推进。关键不是缺少创造者，而是如何让 Kane 回撤、Bellingham 前插、Foden/Palmer 内收和 Saka 宽度互不挤压。",
+  "structures": {
+    "base_shapes": ["4-2-3-1", "4-3-3"],
+    "alternate_shapes": ["3-4-2-1"],
+    "in_possession": "Rice 留作攻转守支点，一名边后卫或中卫承担推进，右路通常保留 Saka 的宽度，左路根据 Foden/Bellingham/边后卫组合形成内收或套边。",
+    "out_of_possession": "中前场可形成 4-4-2 或 4-2-3-1 压迫；Kane 的压迫负荷和身后保护会决定整体强度。"
+  },
+  "phase_behaviour": {
+    "build_up": "中卫和 Rice 负责第一推进，Stones 若首发可增加中路出球层次。",
+    "chance_creation": "依赖右路一对一、十号位前插、Kane 回撤分球和定位球。",
+    "transition_attack": "Saka、Bellingham、Palmer/Foden 的第一传和二次接应很有威胁。",
+    "rest_defense": "边后卫压上后，Rice 与中卫距离必须稳定，否则会暴露肋部和身后。",
+    "set_pieces": "英格兰脚法和空中点都强，仍需确认主罚者和中卫搭档。"
+  },
+  "coach_profile": {
+    "coach": "Thomas Tuchel",
+    "selection_stability": "medium",
+    "risk_appetite": "medium",
+    "substitution_pattern": "可用替补质量高，但如何在不破坏结构的情况下换上更多攻击手是看点。",
+    "tournament_note": "新周期大赛整合时间有限，阵型选择对预测影响很大。"
+  },
+  "key_matchup_inputs_for_model": ["front_four_spacing", "left_side_balance", "rest_defense_quality", "set_piece_edge", "public_market_premium"],
+  "confidence_notes": {"overall": "medium_high", "weak_points": ["Tuchel最终首发", "左路结构", "Kane压迫负荷"]}
+}

@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:23:00+08:00",
+  "scope": "J组约旦队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "约旦", "en": "Jordan", "fifa_code": "JOR", "group": "J", "confederation": "AFC"},
+  "source_log_path": "K:/worldcup/data/source_logs/jordan-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["奥地利 vs 约旦", "阿尔及利亚 vs 约旦", "约旦 vs 阿根廷"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Jamal Sellami", "team_identity": "亚洲黑马型球队，依靠纪律、反击和前场双点威胁进入比赛；阵容深度和高强度对抗是短板。", "likely_structure": ["3-4-2-1", "5-4-1", "4-2-3-1"]},
+  "core_players_watch": [
+    {"player": "Musa Al-Taamari", "role": "右路/前场核心、持球突破和反击推进"},
+    {"player": "Yazan Al-Naimat", "role": "中锋跑动、终结和反击接应"},
+    {"player": "Ali Olwan", "role": "前场冲击、二前锋和边路支援"},
+    {"player": "Noor Al-Rawabdeh", "role": "中场覆盖和防守平衡"},
+    {"player": "Nizar Al-Rashdan", "role": "中场对抗、远射和转换"},
+    {"player": "Yazan Al-Arab", "role": "中卫对抗、防空和定位球"},
+    {"player": "Yazeed Abulaila", "role": "门线扑救和禁区指挥"}
+  ],
+  "strengths": ["低位纪律", "反击速度", "前场双点默契", "团队韧性", "定位球防守动员"],
+  "risks": ["被奥地利高压限制出球", "阵容深度", "长时间无球体能", "防线被肋部冲击拉开", "落后后阵地战不足"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "约旦受让方向可能有低比分保护，但必须防止把亚洲杯黑马记忆过度外推到世界杯强度。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

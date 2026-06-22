@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:19:00+08:00",
+  "scope": "G组比利时队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "比利时", "en": "Belgium", "fifa_code": "BEL", "group": "G", "confederation": "UEFA"},
+  "source_log_path": "K:/worldcup/data/source_logs/belgium-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["比利时 vs 埃及", "比利时 vs 伊朗", "新西兰 vs 比利时"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Rudi Garcia", "team_identity": "从黄金一代后期过渡到新核心的欧洲强队，技术底子和中前场创造仍强，但防线年龄结构和稳定性需要复核。", "likely_structure": ["4-2-3-1", "4-3-3"]},
+  "core_players_watch": [
+    {"player": "Kevin De Bruyne", "role": "中前场创造、最后一传和定位球"},
+    {"player": "Romelu Lukaku", "role": "禁区支点、终结和对抗"},
+    {"player": "Jeremy Doku", "role": "边路爆点和一对一"},
+    {"player": "Leandro Trossard", "role": "前场多面手和无球跑动"},
+    {"player": "Youri Tielemans", "role": "中场节奏和远射"},
+    {"player": "Amadou Onana", "role": "防守覆盖和身体对抗"},
+    {"player": "Arthur Theate", "role": "后防多面手和左脚出球"}
+  ],
+  "strengths": ["中前场创造", "边路爆点", "禁区终结", "定位球脚法", "大赛经验"],
+  "risks": ["防线速度", "核心年龄和体能", "面对埃及反击身后空间", "热门队盘口溢价", "中后场转换保护"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "比利时名气会带来默认溢价，需用首发和盘口确认真实优势。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

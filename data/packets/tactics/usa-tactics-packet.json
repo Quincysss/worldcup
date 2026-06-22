@@ -1,0 +1,47 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:26:00+08:00",
+  "team": {"zh": "美国", "en": "United States", "fifa_code": "USA", "group": "D"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {
+    "default": "4-2-3-1",
+    "alternates": ["4-3-3", "4-4-2 pressing shape"],
+    "confidence": "medium"
+  },
+  "phase_behaviour": {
+    "possession_structure": "通过边后卫推进、Reyna/Pulisic 的肋部接球和中场跑动制造纵深，Balogun 提供禁区终点。",
+    "pressing_profile": "中高位压迫倾向明显，依赖 McKennie、Adams、Musah 的运动能力和边锋回追形成连续逼抢。",
+    "defensive_block": "领先后可回到中位防守，但中卫身后空间与门将出球稳定性仍要复核。",
+    "attacking_transition": "强项。Pulisic、Weah、Balogun 在开放空间里的速度和纵深威胁能迅速放大对手失误。",
+    "set_piece": "有身体条件和主罚点，但完整主罚/目标分布需要赛前确认。"
+  },
+  "coach_tendencies": {
+    "coach": "Mauricio Pochettino",
+    "risk_appetite": "medium_high",
+    "substitution_pattern": "needs_recent_sample",
+    "game_state": "首轮大胜后要警惕继续前压导致情绪过热；领先后应更重视控节奏和二点保护。"
+  },
+  "key_roles": [
+    "Pulisic: 进攻核心和关键球终结",
+    "Balogun: 纵深和禁区终点",
+    "Adams: 防守平衡与转换保护",
+    "McKennie: 二点球、插上和对抗",
+    "Robinson/Weah: 边路速度链条"
+  ],
+  "post_round1_update": "美国 4-1 巴拉圭后，进攻效率、主场能量和模型均值上调；但面对澳大利亚时，定位球防守和高空球会被重点检验。",
+  "tactical_risks": ["高位压迫身后空间", "面对低位密集时效率波动", "主场热度导致节奏过快", "澳大利亚定位球与二点球"],
+  "confidence_notes": {
+    "high": ["边路速度", "转换进攻威胁"],
+    "medium": ["压迫稳定性", "领先后的比赛管理"],
+    "low_or_missing": ["T-75m首发", "官方技术报告", "定位球详细映射"]
+  },
+  "handoff_to_model": {
+    "attack_ceiling": "high",
+    "defensive_floor": "medium_high",
+    "transition_attack": "high",
+    "set_piece": "medium",
+    "public_bias_risk": "high"
+  },
+  "handoff_to_red_team": ["首轮大胜是否被高估", "定位球防守是否足够应对澳大利亚", "主场高压是否留下反击空间"]
+}

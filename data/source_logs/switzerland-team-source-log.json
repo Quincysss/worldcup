@@ -1,0 +1,27 @@
+{
+  "phase": "team_profile",
+  "team": "Switzerland",
+  "status": "partial_live_verified",
+  "captured_at": "2026-06-12T15:50:00+08:00",
+  "sources": [
+    {
+      "source": "FIFA Switzerland team page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/switzerland",
+      "supports_fields": ["team_identity", "competition_context"],
+      "tier": 1
+    },
+    {
+      "source": "2026 FIFA World Cup Group B public schedule reference",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B",
+      "supports_fields": ["group_members", "fixture_order"],
+      "tier": 4
+    },
+    {
+      "source": "Swiss Football Association",
+      "url": "https://www.football.ch/",
+      "supports_fields": ["coach_context", "squad_context"],
+      "tier": 2
+    }
+  ],
+  "missing_fields": ["official_matchday_squad_refresh", "T-24h_injury_training", "T-75m_lineup", "closing_odds"]
+}

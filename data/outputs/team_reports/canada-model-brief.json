@@ -1,0 +1,33 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "加拿大", "en": "Canada", "fifa_code": "CAN", "group": "B"},
+  "status": "deep_partial",
+  "updated_at": "2026-06-12T19:05:00+08:00",
+  "scope": "球队层面模型输入；不含比分、胜平负、出线或投注建议。",
+  "baseline_strength_framework": {
+    "tier_hint": "B组竞争上游，但不应仅因东道主身份直接抬到稳定强队档。",
+    "recommended_weights": {"elo": 0.32, "fifa_ranking": 0.12, "recent_competitive_form": 0.18, "squad_quality": 0.16, "tactical_fit": 0.12, "venue_context": 0.10},
+    "home_adjustment_note": "主场加成应拆成气候/旅途/球迷/裁判心理噪声，避免和公众热度重复计入。"
+  },
+  "style_adjustments": {
+    "tempo": "high",
+    "transition_attack": "positive",
+    "settled_attack": "volatile",
+    "defensive_transition": "risk",
+    "set_piece": "medium"
+  },
+  "availability_sensitivity": [
+    {"player": "Alphonso Davies", "lambda_impact": "high", "reason": "左路推进、转换速度和吸引防守的单点价值最高。"},
+    {"player": "Jonathan David", "lambda_impact": "medium_high", "reason": "终结与连接兼具，影响加拿大把转换变成真实射门的效率。"},
+    {"player": "Stephen Eustaquio", "lambda_impact": "medium", "reason": "控节奏和第一脚出球稳定性。"},
+    {"player": "Moise Bombito", "lambda_against_impact": "medium_high", "reason": "回追速度和防线抗冲击。"}
+  ],
+  "market_signal_placeholder": {
+    "needs_refresh": true,
+    "fields": ["1x2", "asian_handicap", "total_goals", "group_winner", "to_qualify"],
+    "warning": "需拆分东道主情绪溢价与真实强度信号。"
+  },
+  "prediction_input_requirements": ["T-24h训练与伤停", "T-75m首发", "最新盘口水位", "对手阵型", "比赛地天气与草皮/场地信息"],
+  "uncertainty_flags": ["主场压力可能正负两面", "高压被打穿后的失球尾部风险", "阵地战低效时比分分布会偏低"],
+  "model_risk_notes": "加拿大适合用较高方差分布处理；不要只给平均实力分，必须保留高节奏带来的上下尾部。"
+}

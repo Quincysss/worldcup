@@ -1,0 +1,107 @@
+{
+    "phase":  "round2_postmortem_summary",
+    "group":  "F",
+    "round":  2,
+    "status":  "partial_source_limited",
+    "player_state_update_status":  "updated",
+    "updated_at":  "2026-06-21T18:28:00+08:00",
+    "matches":  [
+                    {
+                        "match":  "荷兰 5-1 瑞典",
+                        "file":  "比赛\\\\已完成比赛\\\\小组赛\\\\F组\\\\2026-06-20_荷兰_5-1_瑞典_复盘.md",
+                        "file_status":  "complete",
+                        "actual":  "5-1",
+                        "pre_match_prediction":  "荷兰 2-1 瑞典，1-1几乎同权重",
+                        "prediction_contrast":  "胜负方向命中，但严重低估荷兰进攻上限和大比分尾部",
+                        "model_error":  "过度保守处理荷兰进攻状态，瑞典首轮5-1后强度上调过多",
+                        "parameter_adjustments":  [
+                                                      "提高强队二轮反弹上限尾部",
+                                                      "降低瑞典首轮大胜后的可迁移攻击系数",
+                                                      "提高荷兰前场多点进球相关性"
+                                                  ],
+                        "source_gap_backfill_status":  "partial_source_limited",
+                        "source_gap_backfill_note":  "来源缺口补齐：FOX可核验首发、换人/分钟、进球、助攻、黄牌与关键球员摘要；Guardian交叉核验进球序列、伤情观察和比赛走势；FIFA match centre本环境未抽取结构化文本；ESPN仍被JavaScript/机器人校验阻断；FotMob/SofaScore/WhoScored未找到稳定同场逐人评分页，external_rating保留null。",
+                        "source_gap_backfill_captured_at":  "2026-06-21T19:10:00+08:00",
+                        "external_rating_status":  "partial_source_limited",
+                        "external_rating_note":  "同场同源逐人评分不可稳定取得；未填external_rating。",
+                        "match_id":  "2026-06-20_荷兰_5-1_瑞典",
+                        "player_state_update_status":  "updated"
+                    },
+                    {
+                        "match":  "突尼斯 0-4 日本",
+                        "file":  "比赛\\\\已完成比赛\\\\小组赛\\\\F组\\\\2026-06-21_突尼斯_0-4_日本_复盘.md",
+                        "file_status":  "exists_partial",
+                        "actual":  "0-4",
+                        "pre_match_prediction":  "突尼斯 1-2 日本",
+                        "prediction_contrast":  "日本胜方向命中，但低估净胜和突尼斯崩盘风险",
+                        "model_error":  "过高估计突尼斯换帅/保守防守修复效果，低估日本团队进攻冗余",
+                        "parameter_adjustments":  [
+                                                      "突尼斯防守地板继续下调",
+                                                      "日本攻击深度与替代创造力上调",
+                                                      "换帅短期纪律修复不自动提高防守强度"
+                                                  ]
+                    }
+                ],
+    "player_state_linkage":  [
+                                 {
+                                     "team":  "荷兰",
+                                     "player_state":  "parse_ok_26",
+                                     "match_internal_rating_log":  "present_26_for_round2",
+                                     "member_table":  "section_exists",
+                                     "status":  "updated"
+                                 },
+                                 {
+                                     "team":  "瑞典",
+                                     "player_state":  "parse_ok_26",
+                                     "match_internal_rating_log":  "present_26_for_round2",
+                                     "member_table":  "section_exists",
+                                     "status":  "updated"
+                                 },
+                                 {
+                                     "team":  "突尼斯",
+                                     "player_state":  "parse_ok_26",
+                                     "match_internal_rating_log":  "present_26_for_round2",
+                                     "member_table":  "section_exists",
+                                     "status":  "updated"
+                                 },
+                                 {
+                                     "team":  "日本",
+                                     "player_state":  "parse_ok_26",
+                                     "match_internal_rating_log":  "present_26_for_round2",
+                                     "member_table":  "section_exists",
+                                     "status":  "updated"
+                                 }
+                             ],
+    "missing_inputs":  [
+                           "荷兰-瑞典单场复盘正文仍需回补",
+                           "突尼斯-日本单场复盘仍为partial，完整官方逐人外部评分不可稳定取得"
+                       ],
+    "handoff_recommendations":  [
+                                    "荷兰-瑞典单场线程补完复盘正文；player_state联动验收已通过",
+                                    "突尼斯-日本单场线程补完复盘正文；player_state联动验收已通过"
+                                ],
+    "source_gap_backfill_status":  "partial_source_limited",
+    "source_gap_summary":  [
+                               {
+                                   "match":  "荷兰 5-1 瑞典",
+                                   "status":  "partial_source_limited",
+                                   "events_minutes":  "FOX boxscore confirms lineups, substitutions, goals, assists, cards and shape; Guardian cross-checks events and injury observations",
+                                   "external_rating":  "unavailable_or_not_extractable",
+                                   "model_blocking":  false
+                               },
+                               {
+                                   "match":  "突尼斯 0-4 日本",
+                                   "status":  "partial_source_limited",
+                                   "events_minutes":  "ESPN/FOX/Guardian confirm goals, assists, cards, statistics, starters and substitutions; FIFA dynamic page retained as official entry",
+                                   "external_rating":  "unavailable_or_not_extractable",
+                                   "model_blocking":  false
+                               }
+                           ],
+    "validation":  {
+                       "player_state_teams":  "4/4 parse_ok_26",
+                       "round2_match_internal_rating_log":  "4/4 teams 26/26",
+                       "rating_ranges":  "internal_match_rating_1_5 and form_status_1_5 within 1.0-5.0",
+                       "member_tables":  "4/4 have round internal rating section",
+                       "encoding_scan":  "pending_final_validation"
+                   }
+}

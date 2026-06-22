@@ -1,0 +1,114 @@
+{
+  "phase": "group_round_prediction",
+  "status": "refreshed_pre_match",
+  "updated_at": "2026-06-17T12:35:00+08:00",
+  "group": "B",
+  "round": 2,
+  "scope": "B group second-round score, 1X2 probabilities, odds comparison, conditional betting leans, and table implications.",
+  "sources": [
+    {
+      "name": "FIFA Match Schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["fixture reference"]
+    },
+    {
+      "name": "ESPN World Cup fixtures/results",
+      "url": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "supports": ["first-round results and schedule context"]
+    },
+    {
+      "name": "OddsChecker",
+      "url": "https://www.oddschecker.com/",
+      "supports": ["public odds snapshot and market direction"]
+    }
+  ],
+  "standings_before_round": [
+    {"team": "Canada", "points": 1, "goal_difference": 0},
+    {"team": "Bosnia and Herzegovina", "points": 1, "goal_difference": 0},
+    {"team": "Qatar", "points": 1, "goal_difference": 0},
+    {"team": "Switzerland", "points": 1, "goal_difference": 0}
+  ],
+  "matches": [
+    {
+      "match": "Switzerland vs Bosnia and Herzegovina",
+      "date_label": "2026-06-18",
+      "prediction": {
+        "score": {"switzerland": 1, "bosnia_and_herzegovina": 1},
+        "wdl_lean": "draw; Switzerland slight initiative",
+        "confidence": "medium_low"
+      },
+      "model_probabilities": {"switzerland": 49, "draw": 29, "bosnia_and_herzegovina": 22},
+      "market_snapshot": {
+        "public_1x2_reference": {
+          "switzerland": "-170",
+          "draw": "+310",
+          "bosnia_and_herzegovina": "+550"
+        },
+        "normalized_reference_from_minus170_plus310_plus550": {
+          "switzerland": 61.3,
+          "draw": 23.7,
+          "bosnia_and_herzegovina": 15.0
+        },
+        "market_note": "Model is materially lower than market on Switzerland single win."
+      },
+      "rationale": [
+        "Switzerland still have better structure and control.",
+        "First-round 1-1 against Qatar forces a downgrade to Swiss control-to-goal conversion.",
+        "Bosnia's box presence, target forwards and set pieces raise draw and handicap paths.",
+        "B group draw baseline was raised after two first-round draws."
+      ],
+      "conditional_betting_lean": [
+        "avoid chasing Switzerland moneyline below -150",
+        "Bosnia +1 or +1.25 preferred to Bosnia outright",
+        "draw around +300 has discussion value",
+        "under 2.5 fits match script"
+      ]
+    },
+    {
+      "match": "Canada vs Qatar",
+      "date_label": "2026-06-18",
+      "prediction": {
+        "score": {"canada": 2, "qatar": 1},
+        "wdl_lean": "Canada win",
+        "confidence": "medium"
+      },
+      "model_probabilities": {"canada": 61, "draw": 24, "qatar": 15},
+      "market_snapshot": {
+        "public_1x2_reference": {
+          "canada": "-340",
+          "draw": "+425",
+          "qatar": "+900"
+        },
+        "normalized_reference_from_minus340_plus425_plus900": {
+          "canada": 72.7,
+          "draw": 17.9,
+          "qatar": 9.4
+        },
+        "market_note": "Market is much higher on Canada single win than the model; Canada remains the pick but price is short."
+      },
+      "rationale": [
+        "Canada's home setting, speed and pressing make this the clearest favorite spot in B round two.",
+        "Davies absence still discounts Canada's left-side progression.",
+        "Qatar's first-round draw with Switzerland raises low-block and Afif variance.",
+        "If Canada score first, Qatar will be forced out and Canada transition lanes improve."
+      ],
+      "conditional_betting_lean": [
+        "Canada moneyline is too short to chase",
+        "Canada -1 is lineup-dependent",
+        "Qatar +1.5 can protect against Canada narrow win",
+        "score modes 2-1, 1-0, 2-0"
+      ]
+    }
+  ],
+  "projected_table_if_predictions_hit": [
+    {"team": "Canada", "points": 4, "note": "group leader and controls path"},
+    {"team": "Switzerland", "points": 2, "note": "two draws; must push in final round"},
+    {"team": "Bosnia and Herzegovina", "points": 2, "note": "unbeaten but needs final-round result"},
+    {"team": "Qatar", "points": 1, "note": "still alive but under pressure"}
+  ],
+  "validation_targets": {
+    "probability_sums": "each model 1X2 set sums to 100",
+    "market_probability_sums": "normalized references sum to 100 within rounding tolerance",
+    "known_limitations": ["T-75m lineups pending", "injury and suspension data require final refresh", "odds snapshots are public references, not guaranteed live best price"]
+  }
+}

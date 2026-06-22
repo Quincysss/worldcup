@@ -1,0 +1,26 @@
+{
+  "team": {"zh": "海地", "en": "Haiti", "fifa_code": "HAI", "group": "C"},
+  "captured_at": "2026-06-12T19:30:00+08:00",
+  "status": "deep_partial",
+  "sources": [
+    {
+      "name": "FIFA match schedule / Group C fixture references",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["group", "fixtures", "venues"],
+      "confidence": "high"
+    },
+    {
+      "name": "The Sun Haiti vs Scotland preview",
+      "url": "https://www.thesun.co.uk/sport/39371492/haiti-scotland-world-cup-2026-date-time-tv-channel/",
+      "supports": ["Haiti qualification context", "coach", "key players", "opening fixture"],
+      "confidence": "medium"
+    },
+    {
+      "name": "New York Post Group C preview",
+      "url": "https://nypost.com/2026/06/10/sports/world-cup-2026-group-c-preview-prediction-odds-full-team-overviews/",
+      "supports": ["market framing", "team profile", "political/logistical constraints"],
+      "confidence": "medium"
+    }
+  ],
+  "gaps": ["official T-24h injury report", "T-75m lineup", "fresh odds snapshot", "training-base/travel confirmation"]
+}

@@ -1,0 +1,66 @@
+{
+  "phase": "player_state_tracking",
+  "group": "A",
+  "status": "rework_in_progress",
+  "created_at": "2026-06-18T10:15:47.8960396+08:00",
+  "updated_at": "2026-06-18T11:33:59.3743101+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "A组 player state 汇总；用于后续战术、模型和复盘更新。",
+  "missing_fields": [
+    "full_roster_market_values",
+    "full_roster_per_match_ratings",
+    "round2_t24h_refresh",
+    "round2_t75m_refresh"
+  ],
+  "source_log": [
+    {
+      "source": "Generated from team roster/player-state files",
+      "captured_at": "2026-06-18T11:27:28.923430+08:00"
+    }
+  ],
+  "notes": [
+    "A组四队已建立 roster/player_state 第一版体系。",
+    "当前正在按更高质量门槛返工四队完整成员表与球员状态字段。",
+    "捷克 staff 字段存在一处来源冲突，已在队级 packet 中单独标注。"
+  ],
+  "data": {
+    "teams": [
+      {
+        "team": "墨西哥",
+        "roster_path": "K:\\worldcup\\data\\packets\\rosters\\mexico-roster.json",
+        "player_state_path": "K:\\worldcup\\data\\outputs\\player_state\\mexico-player-state.json",
+        "status": "partial_live_verified",
+        "priority_players_count": 6,
+        "full_roster_count": 26
+      },
+      {
+        "team": "南非",
+        "roster_path": "K:\\worldcup\\data\\packets\\rosters\\south-africa-roster.json",
+        "player_state_path": "K:\\worldcup\\data\\outputs\\player_state\\south-africa-player-state.json",
+        "status": "partial_live_verified",
+        "priority_players_count": 6,
+        "full_roster_count": 26
+      },
+      {
+        "team": "韩国",
+        "roster_path": "K:\\worldcup\\data\\packets\\rosters\\south-korea-roster.json",
+        "player_state_path": "K:\\worldcup\\data\\outputs\\player_state\\south-korea-player-state.json",
+        "status": "partial_live_verified",
+        "priority_players_count": 6,
+        "full_roster_count": 26
+      },
+      {
+        "team": "捷克",
+        "roster_path": "K:\\worldcup\\data\\packets\\rosters\\czechia-roster.json",
+        "player_state_path": "K:\\worldcup\\data\\outputs\\player_state\\czechia-player-state.json",
+        "status": "partial_live_verified",
+        "priority_players_count": 6,
+        "full_roster_count": 26
+      }
+    ],
+    "data_gaps": [
+      "大量动态字段仍待比赛日前刷新。",
+      "捷克主教练姓名需继续与官方比赛中心或足协公告交叉复核。"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:23:00+08:00",
+  "scope": "J组阿尔及利亚队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "阿尔及利亚", "en": "Algeria", "fifa_code": "ALG", "group": "J", "confederation": "CAF"},
+  "source_log_path": "K:/worldcup/data/source_logs/algeria-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["阿根廷 vs 阿尔及利亚", "阿尔及利亚 vs 约旦", "阿尔及利亚 vs 奥地利"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Vladimir Petkovic", "team_identity": "北非技术与转换结合的球队，前场个人能力不差，但稳定性、情绪和防线集中度是关键。", "likely_structure": ["4-3-3", "4-2-3-1"]},
+  "core_players_watch": [
+    {"player": "Riyad Mahrez", "role": "右路创造、内切、定位球和节奏控制"},
+    {"player": "Amine Gouiri", "role": "前场连接、移动和终结"},
+    {"player": "Houssem Aouar", "role": "中前场连接、肋部进入和二线进攻"},
+    {"player": "Ismael Bennacer", "role": "中场节奏、防守覆盖和出球"},
+    {"player": "Ramy Bensebaini", "role": "左路防守、对抗和定位球高点"},
+    {"player": "Aissa Mandi", "role": "中卫经验和防线组织"},
+    {"player": "Rayan Ait-Nouri", "role": "左路推进和内收组织"}
+  ],
+  "strengths": ["边路创造", "转换速度", "技术型中场", "定位球脚法", "北非比赛韧性"],
+  "risks": ["防线集中度", "情绪波动", "面对阿根廷控节奏时无球耐心", "中场被压迫后的失误", "关键球员年龄和体能"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "阿尔及利亚有爆冷叙事和球星识别度，但对阿根廷时盘口价值必须看受让深度。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

@@ -1,0 +1,23 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T13:06:00+08:00",
+  "scope": "F组突尼斯队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "突尼斯", "en": "Tunisia", "fifa_code": "TUN", "group": "F", "confederation": "CAF"},
+  "source_log_path": "K:/worldcup/data/source_logs/tunisia-team-source-log.json",
+  "fixtures_context": {"round1_result": "瑞典 5-1 突尼斯", "remaining_group_matches": ["日本 vs 突尼斯", "突尼斯 vs 荷兰"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Sabri Lamouchi", "team_identity": "北非球队的组织纪律、对抗和低位防守是底盘；首轮惨败后，防线修复、心理和纪律是最大问题。", "likely_structure": ["4-3-3", "4-2-3-1", "5-4-1 close"]},
+  "core_players_watch": [
+    {"player": "Hannibal Mejbri", "role": "中场活力、推进和对抗"},
+    {"player": "Elias Saad", "role": "边路速度和反击出口"},
+    {"player": "Anis Ben Slimane", "role": "中场连接和身体对抗"},
+    {"player": "Ellyes Skhiri", "role": "防守覆盖和二点保护"},
+    {"player": "Youssef Msakni", "role": "经验、前场灵感和情绪领袖"},
+    {"player": "Montassar Talbi", "role": "中卫组织和防空"}
+  ],
+  "strengths": ["低位纪律", "中场对抗", "反击边路", "大赛经验", "防守韧性潜力"],
+  "risks": ["首轮 1-5 后心理和防线修复", "速度身后", "进攻创造力不足", "纪律和黄牌", "被迫压上后的空间"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "首轮惨败后市场可能过度惩罚突尼斯，但对日本的低位防守仍可能制造麻烦。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["official technical report", "fresh injuries", "fresh suspensions", "fresh odds", "confirmed starting XI"]}
+}

@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:28:00+08:00",
+  "team": {"zh": "约旦", "en": "Jordan", "fifa_code": "JOR", "group": "J"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "3-4-2-1", "alternates": ["5-4-1", "4-2-3-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "面对奥地利时大概率减少后场冒险，通过中卫长传、边翼卫推进和 Al-Taamari 接球来逃离压迫。",
+    "pressing_profile": "不太可能持续高压，更现实的是中低位保持队形，选择边线回传或门将接球作为触发点。",
+    "defensive_block": "低位五后卫或中场四人线保护禁区前沿，关键是边翼卫能否承受奥地利的连续压迫。",
+    "attacking_transition": "Al-Taamari 和 Al-Naimat 是主要反击出口，第一脚向前质量决定冷门窗口。",
+    "set_piece": "定位球和二点球是重要得分路径，需要最大化 Al-Arab 等高点价值。"
+  },
+  "coach_tendencies": {"coach": "Jamal Sellami", "risk_appetite": "low_to_medium", "game_state": "先保结构，若落后再增加前场人数；领先或平局时会更愿意压低节奏。"},
+  "tactical_risks": ["被高压逼出失误", "长时间无球体能", "落后后阵地战不足", "边翼卫身后空间"],
+  "confidence_notes": {"high": ["反击核心路径", "低位需求"], "medium": ["定位球威胁"], "low_or_missing": ["T-75m首发", "伤停"]},
+  "handoff_to_model": {"attack_ceiling": "medium_low", "defensive_floor": "medium", "transition_defense_risk": "medium_high", "set_piece": "medium"},
+  "handoff_to_red_team": ["亚洲杯黑马记忆是否被过度外推", "奥地利压迫下出球", "低事件守平路径"]
+}

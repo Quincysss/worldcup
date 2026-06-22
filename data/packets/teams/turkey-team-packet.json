@@ -1,0 +1,50 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:25:00+08:00",
+  "scope": "D组土耳其队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {
+    "zh": "土耳其",
+    "en": "Turkey",
+    "fifa_code": "TUR",
+    "group": "D",
+    "confederation": "UEFA"
+  },
+  "source_log_path": "K:/worldcup/data/source_logs/turkey-team-source-log.json",
+  "fixtures_context": {
+    "round1_result_project_context": "澳大利亚 2-0 土耳其",
+    "remaining_group_matches": ["土耳其 vs 巴拉圭", "土耳其 vs 美国"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Vincenzo Montella",
+    "team_identity": "技术型中前场和年轻创造力突出，但首轮失利暴露对抗、定位球防守和比赛管理压力。",
+    "likely_structure": ["4-2-3-1", "4-3-3", "4-1-4-1"]
+  },
+  "core_players_watch": [
+    {"player": "Hakan Calhanoglu", "role": "中场节奏、远射和定位球脚法"},
+    {"player": "Arda Guler", "role": "前场创造、内切和最后一传"},
+    {"player": "Kenan Yildiz", "role": "左路/肋部突破和终结潜力"},
+    {"player": "Baris Alper Yilmaz", "role": "速度、冲击和多位置压迫"},
+    {"player": "Orkun Kokcu", "role": "中场传球和推进"},
+    {"player": "Merih Demiral", "role": "中卫对抗和防线情绪"},
+    {"player": "Mert Muldur", "role": "边后卫推进与防守一对一"}
+  ],
+  "strengths": ["中场脚法", "年轻天赋", "远射", "定位球进攻", "开放空间里的创造力"],
+  "risks": ["防守转换", "身体对抗", "定位球防守", "首轮失利后的情绪波动", "落后时阵型容易拉开"],
+  "availability_and_discipline": {
+    "injuries": "needs_refresh",
+    "suspensions": "needs_refresh",
+    "fitness": "T-24h_training_required",
+    "starting_xi": "T-75m_required"
+  },
+  "market_placeholder": {
+    "odds_needed": ["1x2", "asian_handicap", "total_goals"],
+    "market_note": "土耳其名气和首轮失利会同时拉扯市场定价，模型要单独处理进攻上限与防守下限。"
+  },
+  "data_quality": {
+    "completion_level": "usable_deep_partial",
+    "confidence": "medium",
+    "missing_fields": ["official technical report", "fresh discipline", "fresh injuries", "fresh odds", "confirmed starting XI"]
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "phase": "group_round_prediction",
+  "status": "pre_match_conditional",
+  "captured_at": "2026-06-17T17:25:00+08:00",
+  "group": "G",
+  "round": 2,
+  "scope": "G group round 2 match predictions with betting-risk gates",
+  "risk_gate": {
+    "lineups": "not_confirmed_T_minus_75m",
+    "odds_snapshot": "public_snippets_only_not_full_same-book_snapshot",
+    "red_team_policy": "no steady-banker language when revise/hold gates remain",
+    "purchase_language": "conditional_discussion_only",
+    "special_guard": "G/H round-1 Belgium miss correction is active"
+  },
+  "first_round_context": [
+    {
+      "match": "Belgium vs Egypt",
+      "actual_score": "Belgium 1-1 Egypt",
+      "model_update": [
+        "Belgium attack ceiling retained",
+        "Belgium win conversion down",
+        "Belgium transition-defense risk up",
+        "Egypt counterattack and draw path up"
+      ]
+    },
+    {
+      "match": "Iran vs New Zealand",
+      "actual_score": "Iran 2-2 New Zealand",
+      "model_update": [
+        "Iran response ability retained",
+        "Iran clean-sheet probability down",
+        "New Zealand open-play and set-piece tail up",
+        "Group G draw baseline up"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "match": "Belgium vs Iran",
+      "date": "2026-06-20",
+      "prediction": {
+        "score": "Belgium 2-1 Iran",
+        "lean": "Belgium slight win lean, draw protection required",
+        "confidence": "medium_low",
+        "expected_goals": {
+          "Belgium": 1.60,
+          "Iran": 1.05
+        }
+      },
+      "model_probabilities": {
+        "Belgium": 50,
+        "Draw": 27,
+        "Iran": 23
+      },
+      "market_snapshot": {
+        "type": "public odds snippet, not full same-book live snapshot",
+        "sample_odds_american": {
+          "Belgium": -233,
+          "Draw": 400,
+          "Iran": 733
+        },
+        "normalized_reference_probability": {
+          "Belgium": 68.6,
+          "Draw": 19.6,
+          "Iran": 11.8
+        },
+        "market_note": "Model is materially cooler on Belgium because of round-1 favorite-conversion failure, red-team revise gate, and Iran scoring paths."
+      },
+      "betting_risk": {
+        "purchase_level": "discussion_only_not_banker",
+        "china_sports_lottery_notes": [
+          "Belgium win is a slight first direction, not a steady banker.",
+          "If handicap is Belgium -1, avoid relying on handicap win.",
+          "Main total-goal band is 2/3."
+        ],
+        "invalidate_if": [
+          "Belgium rotates or minutes-limits De Bruyne, Lukaku or Doku",
+          "Iran core attackers are fit and Belgium keeps a high defensive line",
+          "Belgium price shortens further without lineup support"
+        ]
+      }
+    },
+    {
+      "match": "Egypt vs New Zealand",
+      "date": "2026-06-20",
+      "prediction": {
+        "score": "Egypt 1-0 New Zealand",
+        "lean": "Egypt win lean, draw protection high",
+        "confidence": "medium_low",
+        "expected_goals": {
+          "Egypt": 1.25,
+          "New_Zealand": 0.85
+        }
+      },
+      "model_probabilities": {
+        "Egypt": 46,
+        "Draw": 30,
+        "New_Zealand": 24
+      },
+      "market_snapshot": {
+        "type": "public odds snippet, not full same-book live snapshot",
+        "sample_odds_american": {
+          "Egypt": -140,
+          "Draw": 290,
+          "New_Zealand": 410
+        },
+        "normalized_reference_probability": {
+          "Egypt": 56.3,
+          "Draw": 24.8,
+          "New_Zealand": 18.9
+        },
+        "market_note": "Model is cooler on Egypt because Salah/Marmoush status is not locked and New Zealand's attacking tail rose after the 2-2 draw with Iran."
+      },
+      "betting_risk": {
+        "purchase_level": "discussion_only_draw_protection_required",
+        "china_sports_lottery_notes": [
+          "Egypt win is the first direction but not a steady banker.",
+          "If handicap is Egypt -1, avoid relying on handicap win.",
+          "Main total-goal band is 1/2 with 3 as tail cover."
+        ],
+        "invalidate_if": [
+          "Salah or Marmoush are not fully available",
+          "Chris Wood starts at full fitness and New Zealand set-piece setup is strong",
+          "Egypt price shortens sharply without lineup support"
+        ]
+      }
+    }
+  ],
+  "aggregate_notes": [
+    "G group round 2 keeps a higher draw baseline because all four round-1 teams drew.",
+    "Belgium market pricing is much hotter than the model, so Belgium cannot be treated as a betting banker.",
+    "Egypt is a first-direction favorite against New Zealand, but both Egypt and New Zealand red-team gates remain hold until core player status is confirmed."
+  ],
+  "files_written": [
+    "比赛/未开始比赛/小组赛/G组/2026-06-20_比利时_vs_伊朗_预测.md",
+    "比赛/未开始比赛/小组赛/G组/2026-06-20_埃及_vs_新西兰_预测.md",
+    "比赛/未开始比赛/小组赛/G组/G组第二轮预测汇总.md",
+    "data/outputs/match_predictions/g-group-round2-predictions.json"
+  ],
+  "source_urls": [
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+    "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+    "https://www.espn.com/soccer/odds/_/gameId/760451",
+    "https://www.oddschecker.com/"
+  ]
+}

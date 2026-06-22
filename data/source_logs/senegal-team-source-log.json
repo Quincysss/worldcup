@@ -1,0 +1,21 @@
+{
+  "phase": "team_profile",
+  "team": "Senegal",
+  "status": "in_progress",
+  "created_at": "2026-06-10T18:04:12.4091346+08:00",
+  "updated_at": "2026-06-10T18:04:12.4091346+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "2026 FIFA World Cup Senegal national team source log only; no prediction.",
+  "missing_fields": [
+    "official_team_page",
+    "official_squad",
+    "fixtures",
+    "rankings",
+    "market_snapshot"
+  ],
+  "source_log": [],
+  "notes": [
+    "File-first protocol: source log created before full collection.",
+    "Entries will be appended as sources are verified."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:46:00+08:00",
+  "scope": "E组厄瓜多尔队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "厄瓜多尔", "en": "Ecuador", "fifa_code": "ECU", "group": "E", "confederation": "CONMEBOL"},
+  "source_log_path": "K:/worldcup/data/source_logs/ecuador-team-source-log.json",
+  "fixtures_context": {
+    "round1_result": "科特迪瓦 1-0 厄瓜多尔",
+    "remaining_group_matches": ["厄瓜多尔 vs 库拉索", "厄瓜多尔 vs 德国"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Sebastián Beccacece",
+    "team_identity": "南美强度、身体机能和中后场硬度不错，首轮输在终结效率和最后阶段；对库拉索必须把控制转化成进球。",
+    "likely_structure": ["4-2-3-1", "4-3-3", "3-4-2-1 variants"]
+  },
+  "core_players_watch": [
+    {"player": "Moisés Caicedo", "role": "中场覆盖、对抗和推进核心"},
+    {"player": "Piero Hincapié", "role": "左中卫/边卫防守和出球"},
+    {"player": "Willian Pacho", "role": "中卫防空、对抗和防线地板"},
+    {"player": "Pervis Estupiñán", "role": "左路推进和传中"},
+    {"player": "Kendry Paez", "role": "前场创造和年轻变量"},
+    {"player": "Enner Valencia", "role": "中锋经验和禁区终结"}
+  ],
+  "strengths": ["中场对抗", "后防身体素质", "左路推进", "南美比赛强度", "控球和压迫基础"],
+  "risks": ["终结效率", "首轮失利后的抢分压力", "面对低位时创造力", "老将锋线体能", "若久攻不下容易暴露反击空间"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "首轮小负后市场可能下调厄瓜多尔，但对库拉索时实力面仍需重新评估。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["official technical report", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

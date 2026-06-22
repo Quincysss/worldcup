@@ -1,0 +1,154 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "苏格兰",
+    "en": "Scotland",
+    "fifa_code": "SCO",
+    "group": "C"
+  },
+  "status": "deep_partial",
+  "created_at": "2026-06-12T19:22:03+08:00",
+  "updated_at": "2026-06-12T19:55:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "C组苏格兰 team_profile 深版模型输入简报；只做球队层面的强度基线、变量、敏感度和不确定性，不输出比分、胜平负、出线、冠军或投注建议。",
+  "missing_inputs": [
+    "T-24h injury and training refresh",
+    "T-75m official lineup",
+    "structured odds snapshot",
+    "set-piece taker confirmation"
+  ],
+  "stale_inputs": [
+    "Scotland must-win pressure versus Haiti is dynamic and cannot be inferred only from historical sample"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\packets\\teams\\scotland-team-packet.json",
+    "K:\\worldcup\\data\\packets\\tactics\\scotland-tactics-packet.json",
+    "K:\\worldcup\\data\\reviews\\red_team\\scotland-red-team-review.md"
+  ],
+  "notes": [
+    "已按深版 team_profile 口径扩写。",
+    "保留为 deep_partial，等待赛前首发、伤停和盘口刷新。"
+  ],
+  "baseline_strength_framework": {
+    "tier_hint": "C组中游竞争档，首战结果对后续路径影响很大。",
+    "rating_field_placeholders": {
+      "elo": "ratings.elo",
+      "fifa": "ratings.fifa_rank",
+      "opta": "ratings.opta_power"
+    },
+    "recommended_weights": {
+      "elo": 0.31,
+      "fifa_ranking": 0.1,
+      "opta_power": 0.18,
+      "recent_competitive_form": 0.16,
+      "squad_value": 0.09,
+      "tactical_fit": 0.1,
+      "set_piece_edge": 0.06
+    },
+    "weighting_notes": [
+      "苏格兰的真实价值更多来自结构和中场硬度，而不是纯粹球星天赋。",
+      "对弱队时不能只看身体对抗，要把锋线效率和定位球兑现拆开。",
+      "首战压力应作为比赛层变量，不应完全写死在长期基线中。"
+    ],
+    "recent_form_treatment": {
+      "window": "近 8 场正式比赛优先",
+      "adjustments": [
+        "区分面对低位球队和面对强队低位承压的样本",
+        "记录定位球创造和兑现效率",
+        "区分 Robertson/Tierney 同时在场与否"
+      ]
+    },
+    "squad_value_core_player_logic": {
+      "summary": "苏格兰的阵容价值不算顶级，但中场硬度、边翼卫结构和定位球是关键附加值。",
+      "core_players": [
+        "Scott McTominay",
+        "John McGinn",
+        "Andy Robertson",
+        "Kieran Tierney",
+        "Billy Gilmour",
+        "Callum McGregor",
+        "Che Adams",
+        "Angus Gunn"
+      ]
+    }
+  },
+  "style_adjustments": {
+    "in_possession": "更多靠边翼卫和中场前插创造，而非持续细腻控球。",
+    "transition_attack": "medium",
+    "transition_defense_risk": "medium",
+    "low_block_breaking": "medium_low",
+    "set_piece_attack": "medium_high",
+    "set_piece_defense": "medium_high",
+    "game_state_note": "必须赢海地的压力可能导致节奏失真，久攻不下时需放大焦躁风险。"
+  },
+  "availability_sensitivity": {
+    "attack_core": [
+      {
+        "player": "Scott McTominay",
+        "team_lambda_impact": "medium_high",
+        "reason": "后插上、禁区威胁和定位球价值。"
+      },
+      {
+        "player": "John McGinn",
+        "team_lambda_impact": "medium",
+        "reason": "推进连接、压迫和二次进攻。"
+      }
+    ],
+    "midfield_balance": [
+      {
+        "player": "Billy Gilmour",
+        "lambda_against_impact": "medium",
+        "reason": "节奏控制与第一出球。"
+      },
+      {
+        "player": "Callum McGregor",
+        "lambda_against_impact": "medium",
+        "reason": "覆盖范围和结构稳定。"
+      }
+    ],
+    "back_line": [
+      {
+        "player": "Andy Robertson",
+        "team_lambda_impact": "medium_high",
+        "reason": "左路宽度和传中质量。"
+      },
+      {
+        "player": "Kieran Tierney",
+        "lambda_against_impact": "medium",
+        "reason": "左侧防守稳定与推进衔接。"
+      }
+    ],
+    "goalkeeper": {
+      "player": "Angus Gunn",
+      "lambda_against_impact": "medium",
+      "reason": "门线稳定性和高空球处理。"
+    }
+  },
+  "market_signal_placeholder": {
+    "markets_to_capture": [
+      "group_qualification",
+      "single_match_1x2",
+      "single_match_handicap",
+      "single_match_totals"
+    ],
+    "modeling_note": "苏格兰在对海地时可能成为市场热门，盘口深度需要与锋线效率分开看。"
+  },
+  "uncertainty_flags": [
+    "锋线效率波动",
+    "首战必须赢的心理压力",
+    "Robertson/Tierney 角色配置",
+    "面对巴西速度型边路时的防守宽度"
+  ],
+  "prediction_input_requirements": [
+    "T-75m official lineup",
+    "three-center-back combination",
+    "striker choice",
+    "latest odds snapshot",
+    "set-piece taker map"
+  ],
+  "model_risk_notes": [
+    "苏格兰对海地不能只按身体优势建模，终结质量和定位球效率必须拆开。",
+    "对巴西和摩洛哥时，模型要提高低位承压和转换防守权重。",
+    "最容易高估的是“稳定”被误写成“进攻稳定”。"
+  ]
+}

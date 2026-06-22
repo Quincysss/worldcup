@@ -1,0 +1,82 @@
+{
+  "phase": "model_adjustment",
+  "group": "C",
+  "round": 2,
+  "status": "complete_current_stage",
+  "updated_at": "2026-06-20T00:45:00+08:00",
+  "owner": "main-thread",
+  "adjustments": [
+    {
+      "parameter": "brazil_first_half_conversion_after_stalemate",
+      "direction": "raise",
+      "reason": "Brazil converted first-half pressure into a 3-0 lead after a disappointing opening draw."
+    },
+    {
+      "parameter": "matheus_cunha_box_finishing_signal",
+      "direction": "add_or_raise",
+      "reason": "Cunha scored twice and provides a clearer central finishing signal when Neymar is absent."
+    },
+    {
+      "parameter": "brazil_style_cohesion_discount",
+      "direction": "keep",
+      "reason": "Brazil won 3-0 but still showed slow possession, offside-heavy direct balls and limited fluidity."
+    },
+    {
+      "parameter": "brazil_second_half_game_management_drag",
+      "direction": "raise",
+      "reason": "After a large first-half lead, Brazil conserved energy rather than chasing a larger score."
+    },
+    {
+      "parameter": "raphinha_availability_risk_weight",
+      "direction": "raise",
+      "reason": "Raphinha left with a first-half injury; this matters for the Scotland match."
+    },
+    {
+      "parameter": "neymar_return_positive_but_minutes_limited",
+      "direction": "add",
+      "reason": "AP reported Ancelotti expects Neymar back against Scotland, but return timing and minutes remain uncertain."
+    },
+    {
+      "parameter": "morocco_early_strike_probability",
+      "direction": "raise",
+      "reason": "Saibari scored after roughly 70 seconds against Scotland."
+    },
+    {
+      "parameter": "morocco_lead_protection_floor",
+      "direction": "raise",
+      "reason": "Morocco protected a one-goal lead and appear close to qualification."
+    },
+    {
+      "parameter": "scotland_second_half_response_bonus",
+      "direction": "raise",
+      "reason": "Scotland improved after the early setback and created late pressure."
+    },
+    {
+      "parameter": "scotland_open_play_creation_quality",
+      "direction": "lower",
+      "reason": "Scotland had physical pressure and crosses but lacked consistent high-quality open-play chances."
+    },
+    {
+      "parameter": "haiti_attacking_penetration",
+      "direction": "lower",
+      "reason": "Haiti have not scored in two games and struggled to create sustained threat against Brazil."
+    },
+    {
+      "parameter": "high_variance_contact_box_events",
+      "direction": "add_for_scotland_matches",
+      "reason": "The McTominay non-penalty controversy shows contact-box variance can materially affect low-scoring games."
+    }
+  ],
+  "next_round_watchlist": [
+    "Neymar availability and minutes against Scotland",
+    "Raphinha injury status",
+    "Brazil goal-difference motivation",
+    "McTominay role and fitness",
+    "Morocco rotation versus Haiti",
+    "Saibari continued attacking form"
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "applies_to": ["Brazil vs Scotland round3", "Morocco vs Haiti round3", "C group qualification projection"]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "phase": "group_round_prediction",
+  "status": "refreshed_pre_match",
+  "updated_at": "2026-06-17T14:10:00+08:00",
+  "group": "D",
+  "round": 2,
+  "scope": "D group second-round score, 1X2 probabilities, odds/handicap comparison, conditional betting leans, and table implications.",
+  "sources": [
+    {
+      "name": "FIFA Match Schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["fixture reference"]
+    },
+    {
+      "name": "ESPN World Cup fixtures/results",
+      "url": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "supports": ["first-round results and schedule context"]
+    },
+    {
+      "name": "OddsChecker",
+      "url": "https://www.oddschecker.com/",
+      "supports": ["public odds and market direction"]
+    },
+    {
+      "name": "FanDuel",
+      "url": "https://sportsbook.fanduel.com/",
+      "supports": ["public odds page reference"]
+    }
+  ],
+  "standings_before_round": [
+    {"team": "United States", "points": 3, "goal_difference": 3},
+    {"team": "Australia", "points": 3, "goal_difference": 2},
+    {"team": "Turkiye", "points": 0, "goal_difference": -2},
+    {"team": "Paraguay", "points": 0, "goal_difference": -3}
+  ],
+  "matches": [
+    {
+      "match": "United States vs Australia",
+      "date_label": "2026-06-19",
+      "prediction": {
+        "score": {"united_states": 2, "australia": 1},
+        "wdl_lean": "United States narrow win; draw cover",
+        "confidence": "medium"
+      },
+      "model_probabilities": {"united_states": 53, "draw": 27, "australia": 20},
+      "market_snapshot": {
+        "public_reference": {
+          "united_states_moneyline": "-160 to -180 area",
+          "draw": "+300 to +350 area",
+          "australia": "+400 to +500 area"
+        },
+        "normalized_reference_from_minus175_plus300_plus400": {
+          "united_states": 58.3,
+          "draw": 25.5,
+          "australia": 16.2
+        },
+        "market_note": "Market and model agree United States are favored; model gives more draw/Australia set-piece weight."
+      },
+      "rationale": [
+        "United States' 4-1 opener raises host energy and transition attack.",
+        "Australia's 2-0 opener raises defensive floor, set-piece threat and game management.",
+        "A draw is strategically acceptable for Australia and not disastrous for the United States.",
+        "United States have more attacking speed but must manage Australia aerial pressure."
+      ],
+      "conditional_betting_lean": [
+        "United States win is main direction but do not chase deep handicap",
+        "if China Sports Lottery gives United States -1, handicap draw/loss are more attractive than handicap win",
+        "total goals 2 or 3",
+        "score modes 2-1, 1-1, 1-0, 2-0"
+      ]
+    },
+    {
+      "match": "Turkiye vs Paraguay",
+      "date_label": "2026-06-19",
+      "prediction": {
+        "score": {"turkiye": 1, "paraguay": 1},
+        "wdl_lean": "draw; Turkiye slight initiative",
+        "confidence": "medium_low"
+      },
+      "model_probabilities": {"turkiye": 42, "draw": 30, "paraguay": 28},
+      "market_snapshot": {
+        "public_reference": {
+          "turkiye": "+108",
+          "draw": "+240",
+          "paraguay": "+320",
+          "under_2_5": "favored"
+        },
+        "normalized_reference_from_plus108_plus240_plus320": {
+          "turkiye": 47.4,
+          "draw": 29.0,
+          "paraguay": 23.5
+        },
+        "market_note": "Model is lower on Turkiye and higher on Paraguay/draw than market."
+      },
+      "rationale": [
+        "Turkiye have better technical creators but defensive transition and set-piece defending remain fragile.",
+        "Paraguay were badly beaten by the United States but still retain counterattack and set-piece paths.",
+        "Both teams have zero points, increasing urgency but also mistake aversion.",
+        "Low-total market aligns with a tense, narrow match."
+      ],
+      "conditional_betting_lean": [
+        "avoid heavy Turkiye moneyline",
+        "draw is a key cover",
+        "if Turkiye -1 in China Sports Lottery, handicap loss is preferred",
+        "total goals 2 main lane, cover 3"
+      ]
+    }
+  ],
+  "projected_table_if_predictions_hit": [
+    {"team": "United States", "points": 6, "note": "controls group path"},
+    {"team": "Australia", "points": 3, "note": "still in good position"},
+    {"team": "Turkiye", "points": 1, "note": "alive but needs final-round win"},
+    {"team": "Paraguay", "points": 1, "note": "alive but goal difference pressure remains high"}
+  ],
+  "validation_targets": {
+    "probability_sums": "each model 1X2 set sums to 100",
+    "market_probability_sums": "normalized references sum to 100 within rounding tolerance",
+    "known_limitations": [
+      "T-75m lineups pending",
+      "injury and suspension data require final refresh",
+      "public odds snapshots are not guaranteed live best price",
+      "China Sports Lottery official odds and handicap must be checked before ticketing"
+    ]
+  }
+}

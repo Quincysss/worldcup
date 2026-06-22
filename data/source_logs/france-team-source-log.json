@@ -1,0 +1,163 @@
+{
+  "phase": "team_profile",
+  "team": "France",
+  "status": "partial",
+  "created_at": "2026-06-10T17:17:42.6598363+08:00",
+  "updated_at": "2026-06-10T17:17:42.6598363+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "2026 FIFA World Cup France national team source log only; no prediction.",
+  "missing_fields": [
+    "t_minus_24h_training_update",
+    "t_minus_24h_weather_update",
+    "t_minus_75m_official_starting_xi"
+  ],
+  "source_log": [
+    {
+      "source": "French Football Federation",
+      "url": "https://voyages.fff.fr/fr/categorie/coupe-du-monde-2026/equipe-de-france",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "group",
+        "fixtures",
+        "venues",
+        "base_camp",
+        "official_squad_context"
+      ],
+      "reliability_tier": 1,
+      "notes": "Official FFF World Cup travel and team hub page; used for group, fixture cities, base camp and tournament logistics."
+    },
+    {
+      "source": "French Football Federation",
+      "url": "https://www.fff.fr/article/16790-les-26-bleus-pour-le-mondial-2026.html",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "final_squad_announced",
+        "official_squad",
+        "coach"
+      ],
+      "reliability_tier": 1,
+      "notes": "Official squad announcement article titled 'Les 26 Bleus pour le Mondial 2026'."
+    },
+    {
+      "source": "FIFA",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/france",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "team_profile",
+        "fifa_code",
+        "official_tournament_reference"
+      ],
+      "reliability_tier": 1,
+      "notes": "Official tournament team page."
+    },
+    {
+      "source": "French Football Federation",
+      "url": "https://www.fff.fr/selection/2-equipe-de-france/resultats-et-calendrier.html",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "recent_form",
+        "match_results"
+      ],
+      "reliability_tier": 1,
+      "notes": "Official France results-and-calendar page used as baseline for the recent-form window."
+    },
+    {
+      "source": "French Football Federation",
+      "url": "https://www.fff.fr/article/16927-derniere-repetition-a-lille.html",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "recent_form",
+        "fitness_risks"
+      ],
+      "reliability_tier": 1,
+      "notes": "Official match article confirming France 3-1 Northern Ireland and that Saliba had returned to training."
+    },
+    {
+      "source": "French Football Federation",
+      "url": "https://www.fff.fr/article/16907-france-cote-d-ivoire-en-chiffres.html",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "recent_form"
+      ],
+      "reliability_tier": 1,
+      "notes": "Official match context article used to confirm the 1-2 loss to Ivory Coast on 2026-06-04."
+    },
+    {
+      "source": "FIFA Men's World Ranking",
+      "url": "https://inside.fifa.com/tournaments/fifa-world-ranking/men",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "strength_indicators.fifa_rank"
+      ],
+      "reliability_tier": 1,
+      "notes": "Official FIFA ranking reference; FFF team page preview showed France ranked No. 1 as of 2026-04-01."
+    },
+    {
+      "source": "World Football Elo Ratings",
+      "url": "https://eloratings.net/France",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "strength_indicators.elo_rating",
+        "strength_indicators.elo_world_rank"
+      ],
+      "reliability_tier": 4,
+      "notes": "Search result preview showed France Elo 2063 and world rank 3."
+    },
+    {
+      "source": "Transfermarkt",
+      "url": "https://www.transfermarkt.com/frankreich/startseite/verein/3377",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "strength_indicators.squad_market_value_eur"
+      ],
+      "reliability_tier": 4,
+      "notes": "Search result preview showed France squad total market value at EUR 1.42bn."
+    },
+    {
+      "source": "FotMob",
+      "url": "https://www.fotmob.com/teams/6723/squad/france",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "roster_positions",
+        "roster_clubs"
+      ],
+      "reliability_tier": 4,
+      "notes": "Used to map official squad names to current clubs and positions."
+    },
+    {
+      "source": "FOX Sports / FanDuel Sportsbook",
+      "url": "https://www.foxsports.com/stories/soccer/world-cup-odds-2026-group-i-prediction-france-vs-senegal-leads-list",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "market_context.group_winner",
+        "market_context.outright"
+      ],
+      "reliability_tier": 5,
+      "notes": "Search result preview quoted France +500 to win the World Cup and -195 to win Group I."
+    },
+    {
+      "source": "FanDuel Research",
+      "url": "https://www.fanduel.com/research/2026-fifa-world-cup-odds-france-favorites-to-reach-knockout-stage-01jxbck75rtf",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "market_context.advance_from_group"
+      ],
+      "reliability_tier": 5,
+      "notes": "Search result preview quoted France -7000 to reach the knockout stage."
+    },
+    {
+      "source": "Oddschecker",
+      "url": "https://www.oddschecker.com/us/soccer/world-cup/france-v-senegal/winner",
+      "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+      "supports_fields": [
+        "market_context.first_match_1x2"
+      ],
+      "reliability_tier": 5,
+      "notes": "Search result preview quoted France -220, draw +370 and Senegal +650 for the opener."
+    }
+  ],
+  "notes": [
+    "File-first protocol maintained: source log was created before collection and then incrementally filled.",
+    "Current status remains partial because T-24h and T-75m dynamic checks are still pending."
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "phase": "team_profile",
+  "profile_depth": "deep",
+  "team": {
+    "zh": "墨西哥",
+    "en": "Mexico",
+    "fifa_code": "MEX",
+    "group": "A"
+  },
+  "status": "partial",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-11T17:02:07+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "A组墨西哥 team_profile 深版模型输入简报；只覆盖强度基线、lambda/xG修正、风格建模、市场校准接口和不确定性，不输出比分、胜平负、出线、冠军或投注建议。",
+  "missing_fields": [
+    "T-24h injury update",
+    "T-75m official lineup",
+    "complete last-10 structured sample",
+    "exact Elo/FIFA/Opta numeric ratings",
+    "player availability table",
+    "closing odds and latest market snapshot",
+    "full set-piece map",
+    "video-backed rest-defense review"
+  ],
+  "uncertainty_flags": [
+    "东道主优势真实存在，但不能直接等同于稳定赢球能力。",
+    "锋线首发选择会显著影响进攻lambda和高比分尾部。",
+    "公共压力可能改变开局节奏、犯错率和领先后管理。",
+    "压上后的身后空间需要战术包补证，当前只能做风险占位。",
+    "市场若明显看高墨西哥，必须拆分主场因素、名气因素和真实实力因素。"
+  ],
+  "source_log": [
+    {
+      "type": "team_packet",
+      "path": "data/packets/teams/mexico-team-packet.json",
+      "status_observed": "partial",
+      "used_for": "教练、核心球员观察、主场语境、优势和风险"
+    },
+    {
+      "type": "tactics_packet",
+      "path": "data/packets/tactics/mexico-tactics-packet.json",
+      "status_observed": "in_progress",
+      "used_for": "4-3-3/4-2-3-1、边路进攻、中场压迫、身后空间风险"
+    },
+    {
+      "type": "red_team_review",
+      "path": "data/reviews/red_team/mexico-red-team-review.md",
+      "status_observed": "revise / partial",
+      "used_for": "主场热度、终结效率、压上风险和hold条件"
+    }
+  ],
+  "notes": [
+    "当前文件已按深版 partial 落盘，上游缺口未补齐前不硬凑 complete。",
+    "当前阶段只做 team_profile 模型输入，不进入任何比赛预测。"
+  ],
+  "data": {
+    "model_scope": {
+      "stage": "team_profile",
+      "group_workflow": "A组球队档案阶段",
+      "prediction_policy": "禁止输出具体比分、胜平负、小组出线、冠军或投注建议"
+    },
+    "baseline_strength_framework": {
+      "temporary_band": "group_favorite_host",
+      "confidence": "medium_low",
+      "recommended_formula": "baseline_z = 0.28*Elo_z + 0.10*FIFA_z + 0.22*OptaPower_z + 0.15*RecentForm_z + 0.10*SquadValue_z + 0.15*HostContext_z",
+      "component_notes": [
+        "Elo与Opta应承担长期实力主轴，FIFA排名只做低权重锚定。",
+        "近期表现必须按正式赛/友谊赛、强弱对手、主客场语境分层。",
+        "阵容身价只作人才密度代理，不能替代终结效率和防守稳定性。",
+        "东道主因素单独入模，建议影响开局压迫、领土优势、裁判/氛围噪声和心理压力，而不是直接加胜率常数。"
+      ],
+      "current_packet_facts": {
+        "coach": "Javier Aguirre",
+        "profile": "东道主，经验脊梁明显，主场语境强，公众压力也高。",
+        "core_players_watch": [
+          "Edson Alvarez",
+          "Santiago Gimenez",
+          "Raul Jimenez",
+          "Hirving Lozano",
+          "Johan Vasquez",
+          "Luis Malagon"
+        ],
+        "strengths": [
+          "home advantage",
+          "midfield bite",
+          "wide intensity",
+          "set-piece and crowd-driven momentum"
+        ],
+        "risks": [
+          "public pressure",
+          "chance conversion",
+          "aging/role balance in attack",
+          "space behind advanced fullbacks"
+        ]
+      }
+    },
+    "lambda_xg_sensitivity": {
+      "core_roles": [
+        {
+          "role": "中场屏障与压迫核心",
+          "players": [
+            "Edson Alvarez"
+          ],
+          "available_effect": "降低对手转换xG，提升墨西哥压迫后持续进攻的安全边际。",
+          "limited_or_absent_effect": "对手反击lambda上修，墨西哥压上后的失球尾部变厚。"
+        },
+        {
+          "role": "中锋与终结点",
+          "players": [
+            "Santiago Gimenez",
+            "Raul Jimenez"
+          ],
+          "available_effect": "提高禁区触球质量和定位球/传中转化率，影响进攻lambda与2球以上尾部。",
+          "limited_or_absent_effect": "射门量可能保留，但xG质量和转化率下修。"
+        },
+        {
+          "role": "边路推进与纵深",
+          "players": [
+            "Hirving Lozano"
+          ],
+          "available_effect": "提升边路推进、反击第一脚和低位防守外侧撕开能力。",
+          "limited_or_absent_effect": "面对低位防守时横向传导变多，进攻效率下修。"
+        },
+        {
+          "role": "后防与门将稳定",
+          "players": [
+            "Johan Vasquez",
+            "Luis Malagon"
+          ],
+          "available_effect": "提升禁区防守、门线稳定和领先后管理。",
+          "limited_or_absent_effect": "零封尾部下修，定位球和二点防守风险上修。"
+        }
+      ],
+      "placeholder_adjustments": {
+        "attack_core_unavailable_lambda": [-0.25, -0.12],
+        "midfield_screen_unavailable_opponent_lambda": [0.08, 0.20],
+        "home_context_attack_lambda": [0.08, 0.18],
+        "pressure_volatility_modifier": "提高开场和落后状态的方差，不直接改均值"
+      }
+    },
+    "style_modeling_notes": {
+      "attack": "优先建模边路推进、积极边后卫、中锋禁区参考点和主场压迫带来的早段领土优势。",
+      "defense": "中场对抗是底盘，主要风险是压迫失败后的身后空间与边后卫回防。",
+      "low_block": "面对低位防守时，不应只看控球率；要看中锋选择、边路一对一、定位球和禁区二点。",
+      "versus_possession_teams": "若被迫长时间无球，需要上修体能消耗和后段防线波动。",
+      "leading_state": "领先后可能受主场情绪影响继续前压，也可能转入保守管理；需要教练和首发结构确认。",
+      "set_pieces": "定位球是加分项，但缺完整地图，当前只能作为中等正修正。"
+    },
+    "market_calibration": {
+      "current_market_view": "A组热门或共同热门层级；仅作为市场事实方向，不构成投注建议。",
+      "required_markets": [
+        "outright winner",
+        "group winner",
+        "group qualification",
+        "single match 1X2",
+        "single match totals",
+        "asian handicap"
+      ],
+      "calibration_rules": [
+        "先去水，再和模型概率比较。",
+        "主场热度必须从实力差中拆分出来。",
+        "若让球强于1X2，应重点检查净胜球尾部是否被主场叙事高估。",
+        "缺 closing odds 时不得输出市场价值判断。"
+      ]
+    },
+    "required_fields_for_next_stage": [
+      "ratings.elo",
+      "ratings.fifa_rank",
+      "ratings.opta_power",
+      "recent_form.sample_split",
+      "player_availability.core_players",
+      "expected_lineup",
+      "set_piece_profile",
+      "rest_defense_grade",
+      "market_fair_probabilities",
+      "host_context_modifier"
+    ],
+    "handoff_notes": [
+      "横向比较时要把墨西哥的东道主增益和压力波动分开。",
+      "比赛预测阶段应先确认中锋选择、Alvarez状态和边后卫站位。"
+    ]
+  }
+}

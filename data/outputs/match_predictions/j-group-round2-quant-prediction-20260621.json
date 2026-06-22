@@ -1,0 +1,356 @@
+{
+  "model_scope": "J group round 2 quantitative match predictions",
+  "captured_at": "2026-06-21T19:15:00+08:00",
+  "model_version": "worldcup-quant-poisson-market-calibrated-v0.1",
+  "workflow_status": "completed_pre_match_conditional",
+  "input_readiness": {
+    "label": "partial_current",
+    "available_inputs": [
+      "local J group first-round postmatch reviews",
+      "player_state JSON for Argentina, Austria, Jordan, Algeria",
+      "FIFA fixture pages",
+      "public odds and team-news fragments"
+    ],
+    "missing_or_stale_inputs": [
+      "T-75m official lineups",
+      "official Chinese sports lottery odds",
+      "same-book 1X2 plus handicap plus totals live snapshot",
+      "final injury and minutes-limit confirmation"
+    ],
+    "betting_execution_status": "discussion_only_hold"
+  },
+  "matches": [
+    {
+      "match": "Argentina vs Austria",
+      "group": "J",
+      "stage": "group_stage_round2",
+      "date_local": "2026-06-22",
+      "venue_note": "Dallas Stadium, Dallas / Arlington",
+      "factor_inputs": {
+        "base_strength_gap": "Argentina clear advantage",
+        "round1_correction": "Argentina finishing and clean-sheet probability upgraded; Austria high press and late attack upgraded",
+        "player_state_adjustment": {
+          "argentina": 0.18,
+          "austria": 0.08
+        },
+        "injury_adjustment": {
+          "argentina": -0.06,
+          "austria": -0.12
+        },
+        "tactical_matchup_adjustment": {
+          "argentina": 0.05,
+          "austria": 0.12
+        },
+        "schedule_environment_adjustment": {
+          "argentina": 0,
+          "austria": 0
+        },
+        "market_adjustment": {
+          "argentina": 0.04,
+          "austria": -0.02
+        }
+      },
+      "factor_weights": {
+        "base_strength": 0.3,
+        "recent_round1_form": 0.2,
+        "attack_defense_structure": 0.2,
+        "player_availability": 0.1,
+        "tactical_matchup": 0.1,
+        "market_calibration": 0.1
+      },
+      "team_strength_score": {
+        "argentina": 84.4,
+        "austria": 71.5
+      },
+      "attack_score": {
+        "argentina": 84,
+        "austria": 70
+      },
+      "defense_score": {
+        "argentina": 80,
+        "austria": 64
+      },
+      "expected_goals": {
+        "argentina": 1.95,
+        "austria": 0.92
+      },
+      "poisson_score_matrix": {
+        "0-0": 0.0567,
+        "0-1": 0.0522,
+        "0-2": 0.024,
+        "0-3": 0.0074,
+        "0-4": 0.0017,
+        "0-5": 0.0003,
+        "1-0": 0.1106,
+        "1-1": 0.1017,
+        "1-2": 0.0468,
+        "1-3": 0.0143,
+        "1-4": 0.0033,
+        "1-5": 0.0006,
+        "2-0": 0.1078,
+        "2-1": 0.0992,
+        "2-2": 0.0456,
+        "2-3": 0.014,
+        "2-4": 0.0032,
+        "2-5": 0.0006,
+        "3-0": 0.0701,
+        "3-1": 0.0645,
+        "3-2": 0.0297,
+        "3-3": 0.0091,
+        "3-4": 0.0021,
+        "3-5": 0.0004,
+        "4-0": 0.0342,
+        "4-1": 0.0314,
+        "4-2": 0.0145,
+        "4-3": 0.0044,
+        "4-4": 0.001,
+        "4-5": 0.0002,
+        "5-0": 0.0133,
+        "5-1": 0.0123,
+        "5-2": 0.0056,
+        "5-3": 0.0017,
+        "5-4": 0.0004,
+        "5-5": 0.0001,
+        "tail": 0.0152
+      },
+      "probabilities_1x2": {
+        "argentina_win": 0.6144,
+        "draw": 0.2142,
+        "austria_win": 0.1714
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5471,
+        "under_2_5": 0.4529,
+        "over_3_5": 0.3237,
+        "under_3_5": 0.6763
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.1106
+        },
+        {
+          "score": "2-0",
+          "probability": 0.1078
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1017
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0992
+        },
+        {
+          "score": "3-0",
+          "probability": 0.0701
+        }
+      ],
+      "odds_implied_probability": {
+        "source": "JuveFC public odds table",
+        "captured_at": "2026-06-21T19:15:00+08:00",
+        "raw_fractional": {
+          "argentina": "8/13",
+          "draw": "3/1",
+          "austria": "11/2"
+        },
+        "normalized_no_vig": {
+          "argentina_win": 0.6049,
+          "draw": 0.2441,
+          "austria_win": 0.1502
+        }
+      },
+      "model_market_delta": {
+        "argentina_win": 0.0095,
+        "draw": -0.0299,
+        "austria_win": 0.0212
+      },
+      "confidence_interval": {
+        "argentina_win": [0.56, 0.67],
+        "draw": [0.17, 0.26],
+        "austria_win": [0.12, 0.22]
+      },
+      "red_team_status": "revise_for_probability_hold_for_betting",
+      "final_probabilities": {
+        "argentina_win": 0.6144,
+        "draw": 0.2142,
+        "austria_win": 0.1714
+      },
+      "player_state_update_status": null,
+      "player_state_updates": null,
+      "postmatch_error": null,
+      "parameter_updates": null
+    },
+    {
+      "match": "Jordan vs Algeria",
+      "group": "J",
+      "stage": "group_stage_round2",
+      "date_local": "2026-06-22",
+      "venue_note": "San Francisco Bay Area Stadium, Santa Clara",
+      "factor_inputs": {
+        "base_strength_gap": "Algeria advantage but compressed after round 1",
+        "round1_correction": "Jordan scoring path upgraded; Algeria transition and chance conversion downgraded",
+        "player_state_adjustment": {
+          "jordan": 0.1,
+          "algeria": -0.12
+        },
+        "injury_adjustment": {
+          "jordan": 0,
+          "algeria": 0
+        },
+        "tactical_matchup_adjustment": {
+          "jordan": 0.08,
+          "algeria": 0.12
+        },
+        "schedule_environment_adjustment": {
+          "jordan": 0.02,
+          "algeria": 0.02
+        },
+        "market_adjustment": {
+          "jordan": -0.04,
+          "algeria": 0.1
+        }
+      },
+      "factor_weights": {
+        "base_strength": 0.3,
+        "recent_round1_form": 0.2,
+        "attack_defense_structure": 0.2,
+        "player_availability": 0.1,
+        "tactical_matchup": 0.1,
+        "market_calibration": 0.1
+      },
+      "team_strength_score": {
+        "jordan": 53.8,
+        "algeria": 63.4
+      },
+      "attack_score": {
+        "jordan": 50,
+        "algeria": 64
+      },
+      "defense_score": {
+        "jordan": 50,
+        "algeria": 58
+      },
+      "expected_goals": {
+        "jordan": 0.95,
+        "algeria": 1.32
+      },
+      "poisson_score_matrix": {
+        "0-0": 0.1033,
+        "0-1": 0.1364,
+        "0-2": 0.09,
+        "0-3": 0.0396,
+        "0-4": 0.0131,
+        "0-5": 0.0035,
+        "1-0": 0.0981,
+        "1-1": 0.1296,
+        "1-2": 0.0855,
+        "1-3": 0.0376,
+        "1-4": 0.0124,
+        "1-5": 0.0033,
+        "2-0": 0.0466,
+        "2-1": 0.0615,
+        "2-2": 0.0406,
+        "2-3": 0.0179,
+        "2-4": 0.0059,
+        "2-5": 0.0016,
+        "3-0": 0.0148,
+        "3-1": 0.0195,
+        "3-2": 0.0129,
+        "3-3": 0.0057,
+        "3-4": 0.0019,
+        "3-5": 0.0005,
+        "4-0": 0.0035,
+        "4-1": 0.0046,
+        "4-2": 0.0031,
+        "4-3": 0.0013,
+        "4-4": 0.0004,
+        "4-5": 0.0001,
+        "5-0": 0.0007,
+        "5-1": 0.0009,
+        "5-2": 0.0006,
+        "5-3": 0.0003,
+        "5-4": 0.0001,
+        "5-5": 0,
+        "tail": 0.0029
+      },
+      "probabilities_1x2": {
+        "jordan_win": 0.2689,
+        "draw": 0.2796,
+        "algeria_win": 0.4515
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.396,
+        "under_2_5": 0.604,
+        "over_3_5": 0.1946,
+        "under_3_5": 0.8054
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.1364
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1296
+        },
+        {
+          "score": "0-0",
+          "probability": 0.1033
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0981
+        },
+        {
+          "score": "0-2",
+          "probability": 0.09
+        }
+      ],
+      "odds_implied_probability": {
+        "source": "JuveFC public odds table",
+        "captured_at": "2026-06-21T19:15:00+08:00",
+        "raw_fractional": {
+          "jordan": "5/1",
+          "draw": "10/3",
+          "algeria": "4/7"
+        },
+        "normalized_no_vig": {
+          "jordan_win": 0.1612,
+          "draw": 0.2232,
+          "algeria_win": 0.6156
+        }
+      },
+      "model_market_delta": {
+        "jordan_win": 0.1077,
+        "draw": 0.0564,
+        "algeria_win": -0.1641
+      },
+      "confidence_interval": {
+        "jordan_win": [0.21, 0.33],
+        "draw": [0.23, 0.33],
+        "algeria_win": [0.38, 0.52]
+      },
+      "red_team_status": "revise_for_probability_hold_for_betting",
+      "final_probabilities": {
+        "jordan_win": 0.2689,
+        "draw": 0.2796,
+        "algeria_win": 0.4515
+      },
+      "player_state_update_status": null,
+      "player_state_updates": null,
+      "postmatch_error": null,
+      "parameter_updates": null
+    }
+  ],
+  "sources": [
+    "FIFA match centre: Argentina v Austria",
+    "FIFA match centre: Jordan v Algeria",
+    "JuveFC 2026-06-19 Argentina vs Austria odds",
+    "JuveFC 2026-06-19 Jordan vs Algeria odds",
+    "SportsMole 2026-06-21 Argentina vs Austria team news",
+    "RotoWire 2026-06-21 Jordan vs Algeria predicted lineups",
+    "local J group round 1 reviews",
+    "local player_state JSON files"
+  ]
+}

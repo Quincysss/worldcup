@@ -1,0 +1,28 @@
+{
+  "model_scope": "England team-profile inputs for L group; no match prediction in this file.",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:40:00+08:00",
+  "team": {"zh": "英格兰", "en": "England", "group": "L"},
+  "input_readiness": {
+    "available": ["coach", "group", "opening fixture", "core player pool", "tactical traits", "risk flags"],
+    "missing_or_stale": ["fresh injuries", "confirmed starting XI", "latest odds", "referee", "venue-specific climate"],
+    "volatile_inputs": ["Tuchel shape", "front-four selection", "left-back/left-side balance"]
+  },
+  "strength_profile": {
+    "attack_ceiling": "high",
+    "defensive_floor": "medium_high",
+    "midfield_control": "high",
+    "set_piece": "high",
+    "bench_impact": "high",
+    "uncertainty": "medium"
+  },
+  "model_features_to_encode": [
+    "elite attacking depth",
+    "public-market premium risk",
+    "Tuchel integration uncertainty",
+    "Kane pressing-load sensitivity",
+    "rest-defense dependency"
+  ],
+  "calibration_notes": "不要把英格兰的阵容厚度重复计入攻击、替补和市场三个通道；预测阶段需要先确定首发结构，再调进攻转化率。",
+  "handoff_notes": "第一轮建模前刷新 FIFA match centre、伤停、首发、赔率和总进球线。"
+}

@@ -1,0 +1,935 @@
+﻿{
+    "phase":  "postmatch_state_sync_audit",
+    "status":  "incremental_recheck_completed_with_handoffs",
+    "captured_at":  "2026-06-21T01:06:32.3648960+08:00",
+    "coverage":  {
+                     "scope":  "round1_and_round2_completed_or_due_matches",
+                     "groups":  "A-L",
+                     "rounds":  [
+                                    "round1",
+                                    "round2_due_through_2026-06-20_plus08"
+                                ],
+                     "local_single_postmortems":  32,
+                     "local_summary_postmortems":  13,
+                     "local_structured_postmortems":  8,
+                     "external_sources_used":  [
+                                                   "SB Nation schedule/scores updated 2026-06-20: https://www.sbnation.com/soccer/1117513/world-cup-schedule-2026-how-to-watch-every-match-scores-and-more",
+                                                   "Times of India Paraguay 1-0 Turkey report: https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/fifa-world-cup-2026-paraguay-overcome-red-card-setback-grind-out-1-0-win-as-turkey-crash-out-of-tournament/articleshow/131871605.cms",
+                                                   "Guardian Turkey 0-1 Paraguay live report: https://www.theguardian.com/football/live/2026/jun/20/fifa-world-cup-2026-live-turkey-v-paraguay-updates-tur-vs-par-group-d-match-score-latest",
+                                                   "Guardian June 20 matchday schedule preview: https://www.theguardian.com/football/2026/jun/20/how-to-watch-world-cup-netherlands-sweden"
+                                               ]
+                 },
+    "completed_matches_checked":  [
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "A组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-11_墨西哥_2-0_南非_复盘.md",
+                                          "match":  "2026-06-11_墨西哥_2-0_南非_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "A组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-12_韩国_2-1_捷克_复盘.md",
+                                          "match":  "2026-06-12_韩国_2-1_捷克_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "A组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-18_墨西哥_1-0_韩国_复盘.md",
+                                          "match":  "2026-06-18_墨西哥_1-0_韩国_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "A组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-18_捷克_1-1_南非_复盘.md",
+                                          "match":  "2026-06-18_捷克_1-1_南非_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "B组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\2026-06-12_加拿大_1-1_波黑_复盘.md",
+                                          "match":  "2026-06-12_加拿大_1-1_波黑_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "B组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\2026-06-13_卡塔尔_1-1_瑞士_复盘.md",
+                                          "match":  "2026-06-13_卡塔尔_1-1_瑞士_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "B组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\2026-06-18_加拿大_6-0_卡塔尔_复盘.md",
+                                          "match":  "2026-06-18_加拿大_6-0_卡塔尔_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "B组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\2026-06-18_瑞士_4-1_波黑_复盘.md",
+                                          "match":  "2026-06-18_瑞士_4-1_波黑_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "C组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\2026-06-14_巴西_1-1_摩洛哥_复盘.md",
+                                          "match":  "2026-06-14_巴西_1-1_摩洛哥_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "C组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\2026-06-14_海地_0-1_苏格兰_复盘.md",
+                                          "match":  "2026-06-14_海地_0-1_苏格兰_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "C组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\2026-06-19_巴西_3-0_海地_复盘.md",
+                                          "match":  "2026-06-19_巴西_3-0_海地_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "C组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\2026-06-19_苏格兰_0-1_摩洛哥_复盘.md",
+                                          "match":  "2026-06-19_苏格兰_0-1_摩洛哥_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "D组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\D组\\2026-06-12_美国_4-1_巴拉圭_复盘.md",
+                                          "match":  "2026-06-12_美国_4-1_巴拉圭_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "D组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\D组\\2026-06-13_澳大利亚_2-0_土耳其_复盘.md",
+                                          "match":  "2026-06-13_澳大利亚_2-0_土耳其_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "E组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\E组\\2026-06-14_德国_7-1_库拉索_复盘.md",
+                                          "match":  "2026-06-14_德国_7-1_库拉索_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "E组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\E组\\2026-06-14_科特迪瓦_1-0_厄瓜多尔_复盘.md",
+                                          "match":  "2026-06-14_科特迪瓦_1-0_厄瓜多尔_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "F组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\2026-06-14_瑞典_5-1_突尼斯_复盘.md",
+                                          "match":  "2026-06-14_瑞典_5-1_突尼斯_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "F组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\2026-06-14_荷兰_2-2_日本_复盘.md",
+                                          "match":  "2026-06-14_荷兰_2-2_日本_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "G组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\2026-06-15_伊朗_2-2_新西兰_复盘.md",
+                                          "match":  "2026-06-15_伊朗_2-2_新西兰_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "G组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\2026-06-15_比利时_1-1_埃及_复盘.md",
+                                          "match":  "2026-06-15_比利时_1-1_埃及_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "H组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\H组\\2026-06-15_沙特_1-1_乌拉圭_复盘.md",
+                                          "match":  "2026-06-15_沙特_1-1_乌拉圭_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "H组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\H组\\2026-06-15_西班牙_0-0_佛得角_复盘.md",
+                                          "match":  "2026-06-15_西班牙_0-0_佛得角_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "I组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\I组\\2026-06-16_伊拉克_1-4_挪威_复盘.md",
+                                          "match":  "2026-06-16_伊拉克_1-4_挪威_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "I组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\I组\\2026-06-16_法国_3-1_塞内加尔_复盘.md",
+                                          "match":  "2026-06-16_法国_3-1_塞内加尔_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "J组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\J组\\2026-06-16_奥地利_3-1_约旦_复盘.md",
+                                          "match":  "2026-06-16_奥地利_3-1_约旦_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "local_postmortem",
+                                          "group":  "J组",
+                                          "match_file":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\J组\\2026-06-16_阿根廷_3-0_阿尔及利亚_复盘.md",
+                                          "match":  "2026-06-16_阿根廷_3-0_阿尔及利亚_复盘",
+                                          "postmortem_status":  "present",
+                                          "player_state_update_status":  "missing"
+                                      },
+                                      {
+                                          "source":  "external_result_missing_local_postmortem",
+                                          "group":  "D",
+                                          "match":  "美国 2-0 澳大利亚",
+                                          "date":  "2026-06-19",
+                                          "postmortem_status":  "missing",
+                                          "evidence":  "SB Nation schedule/scores lines 444-448 list United States 2, Australia 0."
+                                      },
+                                      {
+                                          "source":  "external_result_missing_local_postmortem",
+                                          "group":  "D",
+                                          "match":  "土耳其 0-1 巴拉圭",
+                                          "date":  "2026-06-19",
+                                          "postmortem_status":  "missing",
+                                          "evidence":  "Times of India and Managing Madrid report Paraguay 1-0 Türkiye."
+                                      },
+                                      {
+                                          "source":  "external_result_missing_local_postmortem",
+                                          "group":  "K",
+                                          "match":  "葡萄牙 1-1 刚果金",
+                                          "date":  "2026-06-17",
+                                          "postmortem_status":  "missing",
+                                          "evidence":  "SB Nation schedule/scores lines 430-435 list Portugal 1, DR Congo 1."
+                                      },
+                                      {
+                                          "source":  "external_result_missing_local_postmortem",
+                                          "group":  "K",
+                                          "match":  "乌兹别克斯坦 1-3 哥伦比亚",
+                                          "date":  "2026-06-17",
+                                          "postmortem_status":  "missing",
+                                          "evidence":  "SB Nation schedule/scores lines 430-435 list Colombia 3, Uzbekistan 1."
+                                      },
+                                      {
+                                          "source":  "external_result_missing_local_postmortem",
+                                          "group":  "L",
+                                          "match":  "英格兰 4-2 克罗地亚",
+                                          "date":  "2026-06-17",
+                                          "postmortem_status":  "missing",
+                                          "evidence":  "SB Nation schedule/scores lines 430-435 list England 4, Croatia 2."
+                                      },
+                                      {
+                                          "source":  "external_result_missing_local_postmortem",
+                                          "group":  "L",
+                                          "match":  "加纳 1-0 巴拿马",
+                                          "date":  "2026-06-17",
+                                          "postmortem_status":  "missing",
+                                          "evidence":  "SB Nation schedule/scores lines 430-435 list Ghana 1, Panama 0."
+                                      }
+                                  ],
+    "missing_postmortems":  [
+                                {
+                                    "group":  "D",
+                                    "round":  2,
+                                    "match":  "D组第二轮",
+                                    "date":  "2026-06-19",
+                                    "missing_artifact":  "round_summary_markdown",
+                                    "target_path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\D组\\D组第二轮复盘.md",
+                                    "evidence":  "Both D round2 matches have completed-result signals."
+                                },
+                                {
+                                    "group":  "D",
+                                    "round":  2,
+                                    "match":  "D组第二轮",
+                                    "date":  "2026-06-19",
+                                    "missing_artifact":  "structured_postmortem_json",
+                                    "target_path":  "E:\\worldcup\\data\\outputs\\match_predictions\\d-group-round2-postmortem.json",
+                                    "evidence":  "No local D round2 postmortem JSON found."
+                                },
+                                {
+                                    "group":  "K",
+                                    "round":  1,
+                                    "match":  "K组第一轮",
+                                    "date":  "2026-06-17",
+                                    "missing_artifact":  "round_summary_markdown",
+                                    "target_path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\K组\\K组第一轮复盘.md",
+                                    "evidence":  "K group first-round results externally verified."
+                                },
+                                {
+                                    "group":  "K",
+                                    "round":  1,
+                                    "match":  "K组第一轮",
+                                    "date":  "2026-06-17",
+                                    "missing_artifact":  "structured_postmortem_json",
+                                    "target_path":  "E:\\worldcup\\data\\outputs\\match_predictions\\k-group-round1-postmortem.json",
+                                    "evidence":  "No local K round1 postmortem JSON found."
+                                },
+                                {
+                                    "group":  "L",
+                                    "round":  1,
+                                    "match":  "L组第一轮",
+                                    "date":  "2026-06-17",
+                                    "missing_artifact":  "round_summary_markdown",
+                                    "target_path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\L组\\L组第一轮复盘.md",
+                                    "evidence":  "L group first-round results externally verified."
+                                },
+                                {
+                                    "group":  "L",
+                                    "round":  1,
+                                    "match":  "L组第一轮",
+                                    "date":  "2026-06-17",
+                                    "missing_artifact":  "structured_postmortem_json",
+                                    "target_path":  "E:\\worldcup\\data\\outputs\\match_predictions\\l-group-round1-postmortem.json",
+                                    "evidence":  "No local L round1 postmortem JSON found."
+                                }
+                            ],
+    "postmortems_without_player_state_update_status":  [
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-11_墨西哥_2-0_南非_复盘.md",
+                                                               "group":  "A组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-12_韩国_2-1_捷克_复盘.md",
+                                                               "group":  "A组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-18_墨西哥_1-0_韩国_复盘.md",
+                                                               "group":  "A组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\2026-06-18_捷克_1-1_南非_复盘.md",
+                                                               "group":  "A组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\2026-06-12_加拿大_1-1_波黑_复盘.md",
+                                                               "group":  "B组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\2026-06-13_卡塔尔_1-1_瑞士_复盘.md",
+                                                               "group":  "B组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\2026-06-18_加拿大_6-0_卡塔尔_复盘.md",
+                                                               "group":  "B组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\2026-06-18_瑞士_4-1_波黑_复盘.md",
+                                                               "group":  "B组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\2026-06-14_巴西_1-1_摩洛哥_复盘.md",
+                                                               "group":  "C组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\2026-06-14_海地_0-1_苏格兰_复盘.md",
+                                                               "group":  "C组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\2026-06-19_巴西_3-0_海地_复盘.md",
+                                                               "group":  "C组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\2026-06-19_苏格兰_0-1_摩洛哥_复盘.md",
+                                                               "group":  "C组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\D组\\2026-06-12_美国_4-1_巴拉圭_复盘.md",
+                                                               "group":  "D组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\D组\\2026-06-13_澳大利亚_2-0_土耳其_复盘.md",
+                                                               "group":  "D组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\E组\\2026-06-14_德国_7-1_库拉索_复盘.md",
+                                                               "group":  "E组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\E组\\2026-06-14_科特迪瓦_1-0_厄瓜多尔_复盘.md",
+                                                               "group":  "E组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\2026-06-14_瑞典_5-1_突尼斯_复盘.md",
+                                                               "group":  "F组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\2026-06-14_荷兰_2-2_日本_复盘.md",
+                                                               "group":  "F组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\2026-06-15_伊朗_2-2_新西兰_复盘.md",
+                                                               "group":  "G组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\2026-06-15_比利时_1-1_埃及_复盘.md",
+                                                               "group":  "G组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\H组\\2026-06-15_沙特_1-1_乌拉圭_复盘.md",
+                                                               "group":  "H组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\H组\\2026-06-15_西班牙_0-0_佛得角_复盘.md",
+                                                               "group":  "H组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\I组\\2026-06-16_伊拉克_1-4_挪威_复盘.md",
+                                                               "group":  "I组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\I组\\2026-06-16_法国_3-1_塞内加尔_复盘.md",
+                                                               "group":  "I组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\J组\\2026-06-16_奥地利_3-1_约旦_复盘.md",
+                                                               "group":  "J组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "single_match_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\J组\\2026-06-16_阿根廷_3-0_阿尔及利亚_复盘.md",
+                                                               "group":  "J组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\A组第二轮复盘.md",
+                                                               "group":  "A组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\B组第一轮赛后复盘.md",
+                                                               "group":  "B组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\B组\\B组第二轮复盘.md",
+                                                               "group":  "B组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\C组第二轮复盘.md",
+                                                               "group":  "C组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\D组\\D组第一轮赛后复盘.md",
+                                                               "group":  "D组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\E组\\E组第一轮赛后复盘.md",
+                                                               "group":  "E组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\F组第一轮赛后复盘.md",
+                                                               "group":  "F组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\G组第一轮复盘.md",
+                                                               "group":  "G组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\H组\\H组第一轮复盘.md",
+                                                               "group":  "H组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\I组\\I组第一轮赛后复盘.md",
+                                                               "group":  "I组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\J组\\J组第一轮复盘.md",
+                                                               "group":  "J组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\A组\\A组第一轮赛后汇总.md",
+                                                               "group":  "A组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "round_summary_markdown",
+                                                               "path":  "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\C组\\C组第一轮赛后汇总.md",
+                                                               "group":  "C组",
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "structured_postmortem_json",
+                                                               "path":  "E:\\worldcup\\data\\outputs\\match_predictions\\a-group-round2-postmortem.json",
+                                                               "group":  null,
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "structured_postmortem_json",
+                                                               "path":  "E:\\worldcup\\data\\outputs\\match_predictions\\b-group-round1-postmortem.json",
+                                                               "group":  null,
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "structured_postmortem_json",
+                                                               "path":  "E:\\worldcup\\data\\outputs\\match_predictions\\b-group-round2-postmortem.json",
+                                                               "group":  null,
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "structured_postmortem_json",
+                                                               "path":  "E:\\worldcup\\data\\outputs\\match_predictions\\c-group-round2-postmortem.json",
+                                                               "group":  null,
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "structured_postmortem_json",
+                                                               "path":  "E:\\worldcup\\data\\outputs\\match_predictions\\d-e-f-round1-postmortem.json",
+                                                               "group":  null,
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "structured_postmortem_json",
+                                                               "path":  "E:\\worldcup\\data\\outputs\\match_predictions\\g-h-round1-postmortem.json",
+                                                               "group":  null,
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "structured_postmortem_json",
+                                                               "path":  "E:\\worldcup\\data\\outputs\\match_predictions\\i-group-round1-postmortem.json",
+                                                               "group":  null,
+                                                               "status":  "missing_player_state_update_status"
+                                                           },
+                                                           {
+                                                               "type":  "structured_postmortem_json",
+                                                               "path":  "E:\\worldcup\\data\\outputs\\match_predictions\\j-group-round1-postmortem.json",
+                                                               "group":  null,
+                                                               "status":  "missing_player_state_update_status"
+                                                           }
+                                                       ],
+    "player_state_update_gaps":  [
+                                     {
+                                         "severity":  "high",
+                                         "match":  "D组 土耳其 0-1 巴拉圭",
+                                         "gap_type":  "partial_player_state_sync",
+                                         "status":  "handed_off",
+                                         "target_files":  [
+                                                              "data\\outputs\\player_state\\turkey-player-state.json",
+                                                              "data\\outputs\\player_state\\paraguay-player-state.json",
+                                                              "data\\packets\\rosters\\paraguay-roster.json",
+                                                              "队伍\\巴拉圭\\成员表.md",
+                                                              "比赛\\已完成比赛\\小组赛\\D组\\2026-06-19_土耳其_0-1_巴拉圭_复盘.md"
+                                                          ],
+                                         "issue":  "Paraguay roster/start XI conflict; review remains partial.",
+                                         "handoff_thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                                         "handoff_at":  "2026-06-21T01:06:32.3648960+08:00"
+                                     },
+                                     {
+                                         "severity":  "high",
+                                         "match":  "K组 乌兹别克斯坦 1-3 哥伦比亚",
+                                         "gap_type":  "partial_player_state_sync",
+                                         "status":  "handed_off",
+                                         "target_files":  [
+                                                              "data\\outputs\\player_state\\uzbekistan-player-state.json",
+                                                              "data\\outputs\\player_state\\colombia-player-state.json",
+                                                              "队伍\\哥伦比亚\\成员表.md",
+                                                              "比赛\\已完成比赛\\小组赛\\K组\\2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md"
+                                                          ],
+                                         "issue":  "Colombia-side sync and official stats/rating notes not fully closed; review remains partial.",
+                                         "handoff_thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                                         "handoff_at":  "2026-06-21T01:06:32.3648960+08:00"
+                                     },
+                                     {
+                                         "severity":  "blocker",
+                                         "match":  "L组 加纳 1-0 巴拿马",
+                                         "gap_type":  "blocked_player_state_sync",
+                                         "status":  "handed_off",
+                                         "target_files":  [
+                                                              "data\\outputs\\player_state\\ghana-player-state.json",
+                                                              "data\\outputs\\player_state\\panama-player-state.json",
+                                                              "队伍\\加纳\\成员表.md",
+                                                              "队伍\\巴拿马\\成员表.md",
+                                                              "比赛\\已完成比赛\\小组赛\\L组\\2026-06-17_加纳_1-0_巴拿马_复盘.md"
+                                                          ],
+                                         "issue":  "Review still says blocked/base missing, but base player_state files now exist; needs real match-state update or downgrade to current partial.",
+                                         "handoff_thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                                         "handoff_at":  "2026-06-21T01:06:32.3648960+08:00"
+                                     }
+                                 ],
+    "pending_fixtures":  [
+                             {
+                                 "group":  "E",
+                                 "round":  2,
+                                 "matches":  "德国 vs 科特迪瓦; 厄瓜多尔 vs 库拉索",
+                                 "reason":  "2026-06-20 ET fixtures are 2026-06-21 +08 kickoffs or later; not counted missing yet."
+                             },
+                             {
+                                 "group":  "F",
+                                 "round":  2,
+                                 "matches":  "荷兰 vs 瑞典; 突尼斯 vs 日本",
+                                 "reason":  "2026-06-20/21 ET fixtures are not completed under +08 audit cutoff; not counted missing yet."
+                             },
+                             {
+                                 "group":  "G",
+                                 "round":  2,
+                                 "matches":  "比利时 vs 伊朗; 新西兰 vs 埃及",
+                                 "reason":  "Scheduled 2026-06-21 ET / later; pending."
+                             },
+                             {
+                                 "group":  "H",
+                                 "round":  2,
+                                 "matches":  "西班牙 vs 沙特; 乌拉圭 vs 佛得角",
+                                 "reason":  "Scheduled 2026-06-21 ET / later; pending."
+                             },
+                             {
+                                 "group":  "I",
+                                 "round":  2,
+                                 "matches":  "法国 vs 伊拉克; 挪威 vs 塞内加尔",
+                                 "reason":  "Scheduled 2026-06-22; pending."
+                             },
+                             {
+                                 "group":  "J",
+                                 "round":  2,
+                                 "matches":  "阿根廷 vs 奥地利; 约旦 vs 阿尔及利亚",
+                                 "reason":  "Scheduled 2026-06-22; pending."
+                             },
+                             {
+                                 "group":  "K",
+                                 "round":  2,
+                                 "matches":  "葡萄牙 vs 乌兹别克斯坦; 哥伦比亚 vs 刚果金",
+                                 "reason":  "Scheduled 2026-06-23; pending."
+                             },
+                             {
+                                 "group":  "L",
+                                 "round":  2,
+                                 "matches":  "英格兰 vs 加纳; 巴拿马 vs 克罗地亚",
+                                 "reason":  "Scheduled 2026-06-23; pending."
+                             }
+                         ],
+    "handoffs_sent":  [
+                          {
+                              "handoff_thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                              "handoff_at":  "2026-06-20T00:00:00+08:00",
+                              "status":  "sent",
+                              "scope":  "missing_postmortem_and_player_state_sync",
+                              "group":  "D",
+                              "match":  "美国 2-0 澳大利亚",
+                              "target_files":  [
+                                                   "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\D组\\2026-06-19_美国_2-0_澳大利亚_复盘.md"
+                                               ],
+                              "requested_fixes":  [
+                                                      "补齐本场单场复盘 Markdown。",
+                                                      "必须写明 player_state_update_status；若无法更新球员状态，标 partial/blocked 并列明字段缺口。",
+                                                      "同步参赛双方 player_state、成员表 Markdown；roster 有动态字段时同步 roster。",
+                                                      "只做事实采集、赛后复盘和状态回写，不做预测、不做竞彩。"
+                                                  ],
+                              "acceptance":  [
+                                                 "复盘 Markdown 存在且 UTF-8 可读。",
+                                                 "player_state_update_status 为 updated/partial/blocked 且有理由。",
+                                                 "若 updated：参赛双方 player_state 记录首发、分钟、换人、进球、助攻、牌、伤停、评分或评分缺失说明、form_status_1_5。",
+                                                 "JSON 可解析，无编码异常/骨架残留。"
+                                             ]
+                          },
+                          {
+                              "handoff_thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                              "handoff_at":  "2026-06-20T00:00:00+08:00",
+                              "status":  "sent",
+                              "scope":  "missing_postmortem_and_player_state_sync",
+                              "group":  "D",
+                              "match":  "土耳其 0-1 巴拉圭",
+                              "target_files":  [
+                                                   "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\D组\\2026-06-19_土耳其_0-1_巴拉圭_复盘.md"
+                                               ],
+                              "requested_fixes":  [
+                                                      "补齐本场单场复盘 Markdown。",
+                                                      "必须写明 player_state_update_status；若无法更新球员状态，标 partial/blocked 并列明字段缺口。",
+                                                      "同步参赛双方 player_state、成员表 Markdown；roster 有动态字段时同步 roster。",
+                                                      "只做事实采集、赛后复盘和状态回写，不做预测、不做竞彩。"
+                                                  ],
+                              "acceptance":  [
+                                                 "复盘 Markdown 存在且 UTF-8 可读。",
+                                                 "player_state_update_status 为 updated/partial/blocked 且有理由。",
+                                                 "若 updated：参赛双方 player_state 记录首发、分钟、换人、进球、助攻、牌、伤停、评分或评分缺失说明、form_status_1_5。",
+                                                 "JSON 可解析，无编码异常/骨架残留。"
+                                             ]
+                          },
+                          {
+                              "handoff_thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                              "handoff_at":  "2026-06-20T00:00:00+08:00",
+                              "status":  "sent",
+                              "scope":  "missing_postmortem_and_player_state_sync",
+                              "group":  "K",
+                              "match":  "葡萄牙 1-1 刚果金",
+                              "target_files":  [
+                                                   "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\K组\\2026-06-17_葡萄牙_1-1_刚果金_复盘.md"
+                                               ],
+                              "requested_fixes":  [
+                                                      "补齐本场单场复盘 Markdown。",
+                                                      "必须写明 player_state_update_status；若无法更新球员状态，标 partial/blocked 并列明字段缺口。",
+                                                      "同步参赛双方 player_state、成员表 Markdown；roster 有动态字段时同步 roster。",
+                                                      "只做事实采集、赛后复盘和状态回写，不做预测、不做竞彩。"
+                                                  ],
+                              "acceptance":  [
+                                                 "复盘 Markdown 存在且 UTF-8 可读。",
+                                                 "player_state_update_status 为 updated/partial/blocked 且有理由。",
+                                                 "若 updated：参赛双方 player_state 记录首发、分钟、换人、进球、助攻、牌、伤停、评分或评分缺失说明、form_status_1_5。",
+                                                 "JSON 可解析，无编码异常/骨架残留。"
+                                             ]
+                          },
+                          {
+                              "handoff_thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                              "handoff_at":  "2026-06-20T00:00:00+08:00",
+                              "status":  "sent",
+                              "scope":  "missing_postmortem_and_player_state_sync",
+                              "group":  "K",
+                              "match":  "乌兹别克斯坦 1-3 哥伦比亚",
+                              "target_files":  [
+                                                   "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\K组\\2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md"
+                                               ],
+                              "requested_fixes":  [
+                                                      "补齐本场单场复盘 Markdown。",
+                                                      "必须写明 player_state_update_status；若无法更新球员状态，标 partial/blocked 并列明字段缺口。",
+                                                      "同步参赛双方 player_state、成员表 Markdown；roster 有动态字段时同步 roster。",
+                                                      "只做事实采集、赛后复盘和状态回写，不做预测、不做竞彩。"
+                                                  ],
+                              "acceptance":  [
+                                                 "复盘 Markdown 存在且 UTF-8 可读。",
+                                                 "player_state_update_status 为 updated/partial/blocked 且有理由。",
+                                                 "若 updated：参赛双方 player_state 记录首发、分钟、换人、进球、助攻、牌、伤停、评分或评分缺失说明、form_status_1_5。",
+                                                 "JSON 可解析，无编码异常/骨架残留。"
+                                             ]
+                          },
+                          {
+                              "handoff_thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                              "handoff_at":  "2026-06-20T00:00:00+08:00",
+                              "status":  "sent",
+                              "scope":  "missing_postmortem_and_player_state_sync",
+                              "group":  "L",
+                              "match":  "英格兰 4-2 克罗地亚",
+                              "target_files":  [
+                                                   "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\L组\\2026-06-17_英格兰_4-2_克罗地亚_复盘.md"
+                                               ],
+                              "requested_fixes":  [
+                                                      "补齐本场单场复盘 Markdown。",
+                                                      "必须写明 player_state_update_status；若无法更新球员状态，标 partial/blocked 并列明字段缺口。",
+                                                      "同步参赛双方 player_state、成员表 Markdown；roster 有动态字段时同步 roster。",
+                                                      "只做事实采集、赛后复盘和状态回写，不做预测、不做竞彩。"
+                                                  ],
+                              "acceptance":  [
+                                                 "复盘 Markdown 存在且 UTF-8 可读。",
+                                                 "player_state_update_status 为 updated/partial/blocked 且有理由。",
+                                                 "若 updated：参赛双方 player_state 记录首发、分钟、换人、进球、助攻、牌、伤停、评分或评分缺失说明、form_status_1_5。",
+                                                 "JSON 可解析，无编码异常/骨架残留。"
+                                             ]
+                          },
+                          {
+                              "handoff_thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                              "handoff_at":  "2026-06-20T00:00:00+08:00",
+                              "status":  "sent",
+                              "scope":  "missing_postmortem_and_player_state_sync",
+                              "group":  "L",
+                              "match":  "加纳 1-0 巴拿马",
+                              "target_files":  [
+                                                   "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\L组\\2026-06-17_加纳_1-0_巴拿马_复盘.md"
+                                               ],
+                              "requested_fixes":  [
+                                                      "补齐本场单场复盘 Markdown。",
+                                                      "必须写明 player_state_update_status；若无法更新球员状态，标 partial/blocked 并列明字段缺口。",
+                                                      "同步参赛双方 player_state、成员表 Markdown；roster 有动态字段时同步 roster。",
+                                                      "只做事实采集、赛后复盘和状态回写，不做预测、不做竞彩。"
+                                                  ],
+                              "acceptance":  [
+                                                 "复盘 Markdown 存在且 UTF-8 可读。",
+                                                 "player_state_update_status 为 updated/partial/blocked 且有理由。",
+                                                 "若 updated：参赛双方 player_state 记录首发、分钟、换人、进球、助攻、牌、伤停、评分或评分缺失说明、form_status_1_5。",
+                                                 "JSON 可解析，无编码异常/骨架残留。"
+                                             ]
+                          },
+                          {
+                              "thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                              "sent_at":  "2026-06-21T01:06:32.3648960+08:00",
+                              "task":  "D 土耳其 0-1 巴拉圭 partial sync closure",
+                              "status":  "sent",
+                              "reason":  "incremental recheck found partial/blocked player_state_update_status after initial handoff"
+                          },
+                          {
+                              "thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                              "sent_at":  "2026-06-21T01:06:32.3648960+08:00",
+                              "task":  "K 乌兹别克斯坦 1-3 哥伦比亚 partial sync closure",
+                              "status":  "sent",
+                              "reason":  "incremental recheck found partial/blocked player_state_update_status after initial handoff"
+                          },
+                          {
+                              "thread_id":  "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+                              "sent_at":  "2026-06-21T01:06:32.3648960+08:00",
+                              "task":  "L 加纳 1-0 巴拿马 blocked sync closure",
+                              "status":  "sent",
+                              "reason":  "incremental recheck found partial/blocked player_state_update_status after initial handoff"
+                          }
+                      ],
+    "handoffs_pending":  [
+                             {
+                                 "gap_type":  "round_summary_markdown",
+                                 "target_file":  "比赛\\已完成比赛\\小组赛\\D组\\D组第二轮复盘.md",
+                                 "status":  "pending_after_single_match_closure"
+                             },
+                             {
+                                 "gap_type":  "round_summary_markdown",
+                                 "target_file":  "比赛\\已完成比赛\\小组赛\\K组\\K组第一轮复盘.md",
+                                 "status":  "pending_after_single_match_closure"
+                             },
+                             {
+                                 "gap_type":  "round_summary_markdown",
+                                 "target_file":  "比赛\\已完成比赛\\小组赛\\L组\\L组第一轮复盘.md",
+                                 "status":  "pending_after_single_match_closure"
+                             },
+                             {
+                                 "gap_type":  "structured_postmortem_json",
+                                 "target_file":  "data\\outputs\\match_predictions\\d-group-round2-postmortem.json",
+                                 "status":  "pending_after_single_match_closure"
+                             },
+                             {
+                                 "gap_type":  "structured_postmortem_json",
+                                 "target_file":  "data\\outputs\\match_predictions\\k-group-round1-postmortem.json",
+                                 "status":  "pending_after_single_match_closure"
+                             },
+                             {
+                                 "gap_type":  "structured_postmortem_json",
+                                 "target_file":  "data\\outputs\\match_predictions\\l-group-round1-postmortem.json",
+                                 "status":  "pending_after_single_match_closure"
+                             }
+                         ],
+    "files_created_or_updated":  [
+                                     "E:\\worldcup\\data\\reviews\\postmatch_state_sync\\postmatch-state-sync-audit.json",
+                                     "E:\\worldcup\\data\\reviews\\postmatch_state_sync\\postmatch-state-sync-audit.md"
+                                 ],
+    "validation":  {
+                       "json_parse":  "passed",
+                       "encoding_scan":  "passed",
+                       "notes":  "Incremental recheck JSON parsed successfully; audit files and cleaned D-group postmortems passed control-character, mojibake, and placeholder scans."
+                   },
+    "incremental_recheck_20260621":  {
+                                         "captured_at":  "2026-06-21T01:06:32.3648960+08:00",
+                                         "local_time":  "2026-06-21T01:03+08 observed by Get-Date",
+                                         "status":  "completed_with_remaining_handoffs",
+                                         "filled_single_postmortems":  6,
+                                         "remaining_missing_postmortems":  6,
+                                         "player_state_base_files_missing":  0,
+                                         "partial_or_blocked_single_reviews":  3,
+                                         "control_char_cleanup":  [
+                                                                      "比赛\\已完成比赛\\小组赛\\D组\\2026-06-19_美国_2-0_澳大利亚_复盘.md",
+                                                                      "比赛\\已完成比赛\\小组赛\\D组\\2026-06-19_土耳其_0-1_巴拉圭_复盘.md"
+                                                                  ],
+                                         "new_completed_match_scope_note":  "At 2026-06-21 01:03 +08, June 20 ET E/F fixtures were not all completed; no new E/F postmortem gap was counted."
+                                     }
+}

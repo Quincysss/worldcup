@@ -1,0 +1,272 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Mexico",
+    "en": "Mexico",
+    "fifa_code": "MEX",
+    "group": "A"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-11T16:46:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Mexico tactical packet only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "complete set-piece taker and target map",
+    "video-backed rest-defense review across a larger sample",
+    "full substitution timeline by game state"
+  ],
+  "source_log": [
+    {
+      "source": "Mexico official World Cup squad article",
+      "url": "https://miseleccion.mx/noticia/6463-Al-Llamado-%7C-Convocatoria-de-la-SNM-para-la-Copa-Mundial-de-la-FIFA-2026",
+      "note": "Official 26-player World Cup squad announced by Javier Aguirre."
+    },
+    {
+      "source": "FIFA Mexico squad page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/mexico/squad",
+      "note": "Current World Cup squad page for Mexico."
+    },
+    {
+      "source": "Mexico official coach comments",
+      "url": "https://miseleccion.mx/noticia/6471-Javier-Aguirre%3A-%E2%80%9CLlegamos-en-buen-punto-al-Mundial%E2%80%9D",
+      "note": "Aguirre says Mexico reached the World Cup in a good place after 22 months of work and closed preparation with a 5-1 win."
+    },
+    {
+      "source": "Mexico official squad for Portugal and Belgium",
+      "url": "https://miseleccion.mx/noticias/6298/Convocatoria-de-M%C3%A9xico-para-enfrentar-a-Portugal-y-B%C3%A9lgica",
+      "note": "Useful pre-World-Cup selection sample under Aguirre."
+    },
+    {
+      "source": "Mexico official Portugal preparation reaction",
+      "url": "https://miseleccion.mx/noticia/6328/Javier-Aguirre-resalt%C3%B3-la-actitud-de-sus-jugadores-ante-la-exigencia",
+      "note": "Confirms a demanding March 2026 test cycle and Aguirre's interpretation of the team's mentality."
+    },
+    {
+      "source": "FIFA Mexico team page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/mexico",
+      "note": "Host-nation context and official tournament team reference."
+    }
+  ],
+  "notes": [
+    "Deepening pass completed on 2026-06-11.",
+    "Current phase is team_profile only; no score, group, champion, or betting output."
+  ],
+  "fan_summary_en": "Mexico under Aguirre look less like a romantic possession project and more like a high-pressure host team built on midfield bite, wide energy, and crowd-fueled momentum swings.",
+  "data": {
+    "analysis_status": "partial",
+    "confidence_overall": "medium_high",
+    "sample_summary": {
+      "primary_window": "2026 pre-World-Cup preparation plus official squad context",
+      "coach": "Javier Aguirre",
+      "sample_quality": "medium",
+      "notes": [
+        "Local team packet is still shallow, so this deepening pass uses official Mexico and FIFA material plus the existing team packet.",
+        "Tactical micro-details remain partial until a larger structured match sample is available."
+      ]
+    },
+    "coach_profile": {
+      "coach": "Javier Aguirre",
+      "system_stability": "medium_high",
+      "selection_stability": "medium",
+      "preferred_systems": [
+        "4-3-3",
+        "4-2-3-1"
+      ],
+      "tournament_pragmatism": "high",
+      "summary": "Aguirre's Mexico is built less around stylistic purity and more around competitive edge, emotional control, and usable game-state flexibility. The host context matters: Mexico are being prepared to start fast, absorb pressure, and ride momentum without losing their midfield bite.",
+      "confidence": "high"
+    },
+    "team_shape": {
+      "nominal_formations": [
+        "4-3-3",
+        "4-2-3-1"
+      ],
+      "in_possession_shape": "Back four base with aggressive fullback support, one holding midfielder protecting central rest-defense, and a front line that can mix direct striker reference play with wide carries.",
+      "out_of_possession_shape": "Often a 4-1-4-1 or compact 4-4-2 pressing shell depending on whether the second forward joins the first line.",
+      "role_asymmetry": [
+        "Mexico can alternate between Santiago Gimenez and Raul Jimenez as the central reference depending on matchup and game plan.",
+        "Wide roles are used to create crossing volume, diagonal runs, and crowd-driven momentum rather than endless sterile possession."
+      ],
+      "confidence": "medium_high"
+    },
+    "key_roles": [
+      {
+        "role": "midfield_screen_and_duel_leader",
+        "players": [
+          "Edson Alvarez"
+        ],
+        "note": "Primary balance piece, ball-winner, and emotional tone-setter. Mexico's defensive floor and pressing bite are closely tied to him.",
+        "confidence": "high"
+      },
+      {
+        "role": "central_striker_reference",
+        "players": [
+          "Santiago Gimenez",
+          "Raul Jimenez"
+        ],
+        "note": "Gimenez offers more running and future-facing vertical pressure; Raul offers link play, hold-up value, and composure. Mexico's attack profile shifts depending on which version Aguirre prefers.",
+        "confidence": "medium_high"
+      },
+      {
+        "role": "wide_momentum_driver",
+        "players": [
+          "Hirving Lozano"
+        ],
+        "note": "Still a key wide accelerator and crowd-energy amplifier when available and trusted for major minutes.",
+        "confidence": "medium"
+      },
+      {
+        "role": "center_back_anchor",
+        "players": [
+          "Johan Vasquez"
+        ],
+        "note": "Important for defensive line authority, left-sided coverage, and keeping the back line from becoming too stretched.",
+        "confidence": "medium_high"
+      },
+      {
+        "role": "goalkeeper_floor",
+        "players": [
+          "Luis Malagon"
+        ],
+        "note": "A key part of match control when Mexico need stability in high-emotion phases.",
+        "confidence": "medium_high"
+      }
+    ],
+    "phase_model": {
+      "attack": {
+        "summary": "Mexico's attack is built around wide attacks, fullback support, and using the center-forward as either a runner or a wall-pass reference. They can create strong momentum bursts, but pure chance conversion remains a live question.",
+        "wide_attack": "high",
+        "fullback_overlap": "medium_high",
+        "transition_attack": "medium_high",
+        "settled_attack_organization": "medium",
+        "set_piece_attack": "medium_high",
+        "notes": [
+          "Host energy and emotional surges can push Mexico into high-volume attacking phases.",
+          "The striker profile choice changes whether Mexico look more vertical or more connective in the final third.",
+          "Set pieces and crowd-driven pressure can raise short-run shot volume."
+        ],
+        "confidence": "medium_high"
+      },
+      "defense": {
+        "summary": "Mexico defend best when the central screen stays intact and the team can press without exposing the space behind aggressive fullback behavior. Their best version is intense but not reckless.",
+        "pressing": "medium_high",
+        "midfield_screen": "high",
+        "center_back_protection": "medium_high",
+        "fullback_space_risk": "medium_high",
+        "recovery_block": "medium",
+        "notes": [
+          "If the press is mistimed, the space behind the line can become a real issue.",
+          "Edson Alvarez is central to restoring order after emotional or chaotic stretches.",
+          "The host setting may amplify both confidence and volatility."
+        ],
+        "confidence": "medium"
+      },
+      "set_pieces": {
+        "attack": "Set pieces are a meaningful support weapon, especially in a home environment where momentum can stack quickly.",
+        "defense": "Defensive set-piece floor is acceptable but still needs a fuller map of takers, markers, and late-game lineups.",
+        "confidence": "medium"
+      }
+    },
+    "coach_tendencies": {
+      "leading_adjustments": "Aguirre is likely to protect the middle first, retain competitive edge, and manage emotion rather than chase extra spectacle once ahead.",
+      "trailing_adjustments": "When trailing, Mexico can add another attacking reference, increase crossing volume, and push the emotional tempo higher.",
+      "substitution_resources": "medium_high",
+      "knockout_conservatism": "high",
+      "summary": "Aguirre's reputation and current messaging point to a pragmatic tournament coach who values resilience and game-state control over stylistic vanity.",
+      "confidence": "medium_high"
+    },
+    "model_features": {
+      "attack_ceiling": {
+        "value": "medium_high",
+        "confidence": "medium_high",
+        "note": "Home energy, wide attacks, and striker flexibility raise Mexico's ceiling, especially in momentum-heavy matches."
+      },
+      "defensive_floor": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "The floor is acceptable when Alvarez anchors the structure, but fullback exposure keeps it from grading higher."
+      },
+      "set_piece_attack": {
+        "value": "medium_high",
+        "confidence": "medium",
+        "note": "Useful secondary route, especially in emotionally charged home settings."
+      },
+      "tempo_preference": {
+        "value": "medium_high",
+        "confidence": "medium",
+        "note": "Mexico can deliberately raise tempo and pressure phases rather than staying at one rhythm."
+      },
+      "transition_attack": {
+        "value": "medium_high",
+        "confidence": "medium",
+        "note": "Transitions are strongest when the striker and wide runners sync well."
+      },
+      "transition_defense_risk": {
+        "value": "medium_high",
+        "confidence": "medium",
+        "note": "This remains a real concern when fullbacks push and the first line is bypassed."
+      },
+      "key_player_dependency": {
+        "value": "medium_high",
+        "confidence": "medium_high",
+        "note": "Alvarez is the balance hinge, while striker selection and wide form shape the attacking version Mexico becomes."
+      },
+      "market_relevant_flags": [
+        {
+          "factor": "Alvarez availability and sharpness",
+          "impact_area": "1x2/handicap",
+          "note": "His presence strongly affects Mexico's midfield control and defensive stability."
+        },
+        {
+          "factor": "Gimenez versus Raul striker choice",
+          "impact_area": "totals/handicap",
+          "note": "This choice changes the final-third profile from more vertical to more connective."
+        },
+        {
+          "factor": "fullback aggression level",
+          "impact_area": "totals",
+          "note": "The more aggressively Mexico push from fullback, the more both chance volume and transition exposure rise."
+        },
+        {
+          "factor": "host-emotion game state",
+          "impact_area": "1x2/totals",
+          "note": "Mexico's home context can magnify positive momentum as well as volatility."
+        }
+      ]
+    },
+    "verification_questions": [
+      {
+        "claim_id": "mexico-001",
+        "claim": "Mexico's deepest tournament version is a pragmatic 4-3-3 or 4-2-3-1 built on Alvarez and wide pressure.",
+        "confidence": "medium_high",
+        "why_challengeable": "Needs more full-match evidence across strong-opponent samples.",
+        "challenge_type": "small_sample"
+      },
+      {
+        "claim_id": "mexico-002",
+        "claim": "Striker selection materially changes the attack profile rather than only changing the name on the team sheet.",
+        "confidence": "medium_high",
+        "why_challengeable": "Requires lineup-linked attacking event comparison.",
+        "challenge_type": "opponent_specific"
+      },
+      {
+        "claim_id": "mexico-003",
+        "claim": "Fullback space behind the press is one of Mexico's main structural risks.",
+        "confidence": "medium",
+        "why_challengeable": "Needs video-backed rest-defense review and a wider match sample.",
+        "challenge_type": "source_conflict"
+      },
+      {
+        "claim_id": "mexico-004",
+        "claim": "Home context meaningfully raises Mexico's attacking momentum and pressure capacity.",
+        "confidence": "medium_high",
+        "why_challengeable": "The emotional effect is real but difficult to isolate cleanly from opponent quality.",
+        "challenge_type": "small_sample"
+      }
+    ],
+    "completion_note": "Deep version completed to a usable handoff level, but packet remains partial pending a fuller structured sample, set-piece map, and official T-75m lineup context."
+  }
+}

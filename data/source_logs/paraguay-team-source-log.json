@@ -1,0 +1,42 @@
+{
+  "team": {
+    "zh": "巴拉圭",
+    "en": "Paraguay",
+    "fifa_code": "PAR",
+    "group": "D"
+  },
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "captured_at": "2026-06-15T12:25:00+08:00",
+  "sources": [
+    {
+      "name": "FIFA World Cup 26 match schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "source_type": "official",
+      "supports": ["group fixtures", "venue and kickoff baseline"],
+      "freshness": "needs_refresh_before_prediction"
+    },
+    {
+      "name": "Asociacion Paraguaya de Futbol",
+      "url": "https://www.apf.org.py/",
+      "source_type": "official_association",
+      "supports": ["coach news", "squad and availability updates"],
+      "freshness": "needs_refresh_before_prediction"
+    },
+    {
+      "name": "Project match context",
+      "url": "local://worldcup/thread-state",
+      "source_type": "project_context",
+      "supports": ["Round 1: United States 4-1 Paraguay"],
+      "freshness": "requires_external_match-centre_recheck"
+    }
+  ],
+  "volatile_fields": {
+    "injury_status": "needs_refresh",
+    "suspensions": "needs_refresh",
+    "starting_xi": "T-75m_required",
+    "odds": "needs_refresh",
+    "official_technical_report": "missing"
+  },
+  "data_quality_note": "可用于球队画像和风险识别；首轮大败后的伤停、停赛、心理和战术调整必须赛前复核。"
+}

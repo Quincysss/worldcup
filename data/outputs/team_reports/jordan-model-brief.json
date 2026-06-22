@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:31:00+08:00",
+  "team": {"zh": "约旦", "en": "Jordan", "fifa_code": "JOR", "group": "J"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "J组下游但具备低位反击方差；直接晋级难度高，第三名路径取决于净胜球和对阿尔及利亚/奥地利拿分。", "recommended_weights": {"elo": 0.30, "fifa_ranking": 0.12, "recent_form": 0.18, "squad_quality": 0.14, "tactical_fit": 0.16, "availability": 0.10}, "round1_correction": "not_available_pre_match"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "medium_low", "defensive_floor": "medium", "transition_defense_risk": "medium_high", "set_piece": "medium", "market_name_bias": "low"},
+  "availability_sensitivity": [{"player": "Musa Al-Taamari", "transition_impact": "high"}, {"player": "Yazan Al-Naimat", "lambda_for_impact": "medium_high"}, {"player": "Noor Al-Rawabdeh", "control_impact": "medium"}, {"player": "Yazeed Abulaila", "shot_stopping_impact": "medium"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals"], "warning": "约旦受让方向可能有低比分保护，但亚洲杯黑马叙事不能直接外推。"},
+  "uncertainty_flags": ["opening match not played/confirmed", "T-75m lineup", "fresh odds", "Al-Taamari fitness"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "Jordan back-five setup", "Austria press lineup"],
+  "model_risk_notes": "约旦的模型方差集中在低位守平、反击第一脚和定位球；若早丢球，下限会明显下降。"
+}

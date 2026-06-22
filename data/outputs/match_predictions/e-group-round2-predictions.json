@@ -1,0 +1,147 @@
+{
+  "phase": "group_round_prediction",
+  "status": "pre_match_conditional",
+  "captured_at": "2026-06-17T16:15:00+08:00",
+  "latest_revision_file": "data/outputs/match_predictions/e-group-round2-quant-revision-20260620.json",
+  "latest_revision_note": "2026-06-20 revision after E group roster/player_state completion and public lineup/odds check: Germany vs Cote d'Ivoire remains 2-1 with Germany probability nudged to 60%; Ecuador vs Curacao remains 2-0 representative score but Ecuador win probability rises to 70% and 3-0 becomes a strong alternate.",
+  "group": "E",
+  "round": 2,
+  "scope": "E group round 2 match predictions with betting-risk gates",
+  "risk_gate": {
+    "lineups": "not_confirmed_T_minus_75m",
+    "odds_snapshot": "public_snippets_only_not_full_same-book_snapshot",
+    "red_team_policy": "no main-pick language as steady banker when hold/revise gates remain",
+    "purchase_language": "conditional_discussion_only"
+  },
+  "first_round_context": [
+    {
+      "match": "Germany vs Curacao",
+      "actual_score": "Germany 7-1 Curacao",
+      "model_update": [
+        "Germany attack ceiling up",
+        "Germany public-bias risk up",
+        "Curacao defensive floor down",
+        "Curacao collapse-after-first-goal risk up"
+      ]
+    },
+    {
+      "match": "Cote d'Ivoire vs Ecuador",
+      "actual_score": "Cote d'Ivoire 1-0 Ecuador",
+      "model_update": [
+        "Cote d'Ivoire defensive floor up",
+        "Cote d'Ivoire transition threat up",
+        "Ecuador chance conversion down",
+        "Ecuador overall strength not over-penalized"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "match": "Germany vs Cote d'Ivoire",
+      "date": "2026-06-20",
+      "prediction": {
+        "score": "Germany 2-1 Cote d'Ivoire",
+        "lean": "Germany win, draw protection required",
+        "confidence": "medium",
+        "expected_goals": {
+          "Germany": 1.85,
+          "Cote d'Ivoire": 0.95
+        }
+      },
+      "model_probabilities": {
+        "Germany": 58,
+        "Draw": 24,
+        "Cote_d_Ivoire": 18
+      },
+      "market_snapshot": {
+        "type": "public odds snippet, not full same-book live snapshot",
+        "sample_odds_american": {
+          "Germany": -180,
+          "Draw": 340,
+          "Cote_d_Ivoire": 475
+        },
+        "normalized_reference_probability": {
+          "Germany": 61.6,
+          "Draw": 21.8,
+          "Cote_d_Ivoire": 16.6
+        },
+        "market_note": "Model is slightly cooler on Germany because of post-7-1 public-bias risk, rotation risk, and Cote d'Ivoire transition threat."
+      },
+      "betting_risk": {
+        "purchase_level": "discussion_only_not_banker",
+        "china_sports_lottery_notes": [
+          "Germany win is the first direction but not a steady banker.",
+          "If handicap is Germany -1, do not rely only on handicap win.",
+          "Main total-goal band is 2/3."
+        ],
+        "invalidate_if": [
+          "Germany rotates multiple core attackers or Kimmich",
+          "Cote d'Ivoire counterattack starters are all fit and market pushes Germany further",
+          "same-book odds move sharply without team-news confirmation"
+        ]
+      }
+    },
+    {
+      "match": "Ecuador vs Curacao",
+      "date": "2026-06-20",
+      "prediction": {
+        "score": "Ecuador 2-0 Curacao",
+        "lean": "Ecuador win, avoid deep handicap",
+        "confidence": "medium",
+        "expected_goals": {
+          "Ecuador": 1.75,
+          "Curacao": 0.55
+        }
+      },
+      "model_probabilities": {
+        "Ecuador": 64,
+        "Draw": 23,
+        "Curacao": 13
+      },
+      "market_snapshot": {
+        "type": "public odds snippet, not full same-book live snapshot",
+        "sample_odds_american": {
+          "Ecuador": -320,
+          "Draw": 450,
+          "Curacao": 900
+        },
+        "normalized_reference_probability": {
+          "Ecuador": 73.0,
+          "Draw": 17.4,
+          "Curacao": 9.6
+        },
+        "market_note": "Model is materially cooler on Ecuador because Ecuador finishing risk remains and Curacao may be over-penalized after 1-7."
+      },
+      "betting_risk": {
+        "purchase_level": "discussion_only_avoid_deep_handicap",
+        "china_sports_lottery_notes": [
+          "Ecuador win is the first direction but low price may reduce value.",
+          "If handicap is Ecuador -1, handicap win and draw both need evaluation; if -2, avoid chasing.",
+          "Main total-goal band is 2 with 3 as cover."
+        ],
+        "invalidate_if": [
+          "Ecuador forward line is weakened",
+          "Curacao changes to a deeper back five and odds over-punish them",
+          "Ecuador market price shortens without lineup support"
+        ]
+      }
+    }
+  ],
+  "aggregate_notes": [
+    "Germany and Ecuador are the first-direction favorites, but neither should be treated as a steady betting banker before lineups and full odds.",
+    "Group E round 2 requires guarding against post-round-1 overreaction: Germany may be overpriced after 7-1; Curacao may be over-punished after 1-7.",
+    "Draw baseline is kept higher than a pure market read because recent G/H process correction requires stronger protection against favorite conversion overconfidence."
+  ],
+  "files_written": [
+    "比赛/未开始比赛/小组赛/E组/2026-06-20_德国_vs_科特迪瓦_预测.md",
+    "比赛/未开始比赛/小组赛/E组/2026-06-20_厄瓜多尔_vs_库拉索_预测.md",
+    "比赛/未开始比赛/小组赛/E组/E组第二轮预测汇总.md",
+    "data/outputs/match_predictions/e-group-round2-predictions.json"
+  ],
+  "source_urls": [
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+    "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+    "https://www.oddschecker.com/",
+    "https://sportsbook.fanduel.com/"
+  ]
+}

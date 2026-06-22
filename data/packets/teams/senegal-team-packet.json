@@ -1,0 +1,259 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Senegal",
+    "en": "Senegal",
+    "fifa_code": "SEN",
+    "group": "I"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-10T18:00:00+08:00",
+  "updated_at": "2026-06-11T00:35:00+08:00",
+  "owner": "main-thread-recovery",
+  "scope": "2026 FIFA World Cup Senegal team_profile data packet only",
+  "missing_fields": [
+    "T-24h training and injury update",
+    "T-75m official starters and bench",
+    "complete match-by-match last-10 structured sample",
+    "exact Opta team power-ranking position",
+    "set-piece taker map",
+    "full market refresh near matchday"
+  ],
+  "source_log": [
+    {
+      "source": "FIFA Senegal squad announcement",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/senegal-world-cup-squad-announcement-pape-thiaw",
+      "captured_at": "2026-06-11T00:35:00+08:00",
+      "use": "final squad, coach, group schedule"
+    },
+    {
+      "source": "FSF official provisional squad article",
+      "url": "https://fsfoot.sn/mondial-2026-pape-thiaw-publie-sa-liste/",
+      "captured_at": "2026-06-11T00:35:00+08:00",
+      "use": "official Senegal federation squad context"
+    },
+    {
+      "source": "FSF official retained squad article",
+      "url": "https://fsfoot.sn/liste-des-lions-retenus-pour-le-mondial-2026/",
+      "captured_at": "2026-06-11T00:35:00+08:00",
+      "use": "official final retained squad article"
+    },
+    {
+      "source": "FSF match report: Senegal 0-0 Sudan",
+      "url": "https://fsfoot.sn/eliminatoires-mondial-2026-le-senegal-fait-match-nul-blanc-contre-le-soudan/",
+      "captured_at": "2026-06-11T00:35:00+08:00",
+      "use": "recent sample and low-block/finishing risk"
+    },
+    {
+      "source": "FSF match report: South Sudan 0-5 Senegal",
+      "url": "https://fsfoot.sn/match-sud-soudan-senegal-les-lions-etrillent-les-bright-stars-5-0-et-conservent-la-tete-du-groupe-b/",
+      "captured_at": "2026-06-11T00:35:00+08:00",
+      "use": "recent high-scoring official sample"
+    },
+    {
+      "source": "FSF match report: Saudi Arabia 0-0 Senegal",
+      "url": "https://fsfoot.sn/preparatifs-mondial-2026-le-senegal-et-larabie-saoudite-se-neutralisent-0-0/",
+      "captured_at": "2026-06-11T00:35:00+08:00",
+      "use": "final warm-up and attack-efficiency warning"
+    },
+    {
+      "source": "Transfermarkt Senegal national team",
+      "url": "https://www.transfermarkt.com/senegal/startseite/verein/3499",
+      "captured_at": "2026-06-11T00:35:00+08:00",
+      "use": "squad value, age, FIFA ranking cross-check"
+    },
+    {
+      "source": "World Football Elo Ratings",
+      "url": "https://www.international-football.net/country?team=Senegal",
+      "captured_at": "2026-06-11T00:35:00+08:00",
+      "use": "Elo rating and rank snapshot"
+    },
+    {
+      "source": "Sports Illustrated betting odds snapshot",
+      "url": "https://www.si.com/betting/2026-world-cup-odds",
+      "captured_at": "2026-06-11T00:35:00+08:00",
+      "use": "futures and Group I market facts"
+    }
+  ],
+  "notes": [
+    "Recovered by main thread because the data-collection child thread entered systemError.",
+    "This packet does not include score predictions, group projection, champion prediction, or betting advice.",
+    "Status remains partial because dynamic matchday inputs and several granular fields cannot be locked yet."
+  ],
+  "data": {
+    "basic_info": {
+      "team_name": "Senegal",
+      "nickname": "Lions of Teranga",
+      "confederation": "CAF",
+      "coach": "Pape Thiaw",
+      "group": "I",
+      "group_opponents": [
+        "France",
+        "Norway",
+        "Iraq"
+      ]
+    },
+    "fixtures": [
+      {
+        "date_local": "2026-06-16",
+        "opponent": "France",
+        "venue": "New York New Jersey Stadium",
+        "city": "East Rutherford / New York-New Jersey area",
+        "status": "scheduled"
+      },
+      {
+        "date_local": "2026-06-22",
+        "opponent": "Norway",
+        "venue": "New York New Jersey Stadium",
+        "city": "East Rutherford / New York-New Jersey area",
+        "status": "scheduled"
+      },
+      {
+        "date_local": "2026-06-26",
+        "opponent": "Iraq",
+        "venue": "Toronto Stadium",
+        "city": "Toronto",
+        "status": "scheduled"
+      }
+    ],
+    "squad_status": {
+      "official_final_squad_status": "available_from_FIFA_article_and_FSF_retained_article",
+      "provisional_list_size": 28,
+      "final_list_size": 26,
+      "reported_cuts_from_provisional": [
+        "Ilay Camara",
+        "Moustapha Mbow"
+      ],
+      "core_players": [
+        {
+          "name": "Sadio Mane",
+          "position_group": "forward",
+          "role": "left-side star, transition reference, big-game attacking gravity",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Kalidou Koulibaly",
+          "position_group": "defender",
+          "role": "defensive leader, aerial/duel anchor, line organizer",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Edouard Mendy",
+          "position_group": "goalkeeper",
+          "role": "No.1 goalkeeper, shot-stopping and box-command reference",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Ismaila Sarr",
+          "position_group": "forward",
+          "role": "right-side pace and depth runner",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Nicolas Jackson",
+          "position_group": "forward",
+          "role": "mobile central forward and channel runner",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Pape Matar Sarr",
+          "position_group": "midfielder",
+          "role": "midfield running power and progression",
+          "availability": "in_squad"
+        },
+        {
+          "name": "Idrissa Gana Gueye",
+          "position_group": "midfielder",
+          "role": "ball-winning screen and experience",
+          "availability": "in_squad_probable_risk_watch"
+        }
+      ],
+      "fitness_notes": [
+        "No complete official T-24h injury list is locked in this packet.",
+        "Idrissa Gana Gueye had a late-season hamstring issue reported around squad announcement context and should remain a watch item.",
+        "Mane, Koulibaly and Mendy are in the squad, but age curve, recent workload and match sharpness need T-24h/T-75m recheck."
+      ]
+    },
+    "recent_samples": [
+      {
+        "date": "2025-03-23",
+        "match": "Sudan 0-0 Senegal",
+        "competition_context": "World Cup qualifying",
+        "takeaway": "Senegal dominated enough territory/chances to frame the match as a finishing/low-block warning rather than a simple poor result."
+      },
+      {
+        "date": "2025-10-10",
+        "match": "South Sudan 0-5 Senegal",
+        "competition_context": "World Cup qualifying",
+        "takeaway": "High-scoring sample confirms ceiling against weaker opposition but should not be over-weighted against World Cup-level opponents."
+      },
+      {
+        "date": "2026-05-31",
+        "match": "United States 3-2 Senegal",
+        "competition_context": "World Cup warm-up",
+        "takeaway": "Open-game vulnerability and high-tempo exposure sample; requires secondary confirmation from full match data."
+      },
+      {
+        "date": "2026-06-10",
+        "match": "Saudi Arabia 0-0 Senegal",
+        "competition_context": "World Cup warm-up",
+        "takeaway": "Final warm-up reinforced that Senegal's threat is real, but settled chance conversion remains a live question."
+      }
+    ],
+    "strength_indicators": {
+      "fifa_ranking": {
+        "value": 14,
+        "basis": "official/squad-page cross-check around pre-tournament window",
+        "confidence": "medium_high"
+      },
+      "elo": {
+        "value": 1867,
+        "rank": 18,
+        "captured_from": "World Football Elo Ratings snapshot",
+        "confidence": "medium"
+      },
+      "transfermarkt": {
+        "squad_value_eur": 478100000,
+        "average_age": 27.1,
+        "squad_size": 26,
+        "confidence": "medium_high"
+      },
+      "opta_power_ranking": {
+        "value": null,
+        "status": "missing_exact_rank"
+      }
+    },
+    "market_facts": [
+      {
+        "bookmaker_or_source": "FanDuel via Sports Illustrated snapshot",
+        "market": "World Cup winner",
+        "american_odds": 12500,
+        "decimal_odds": 126.0,
+        "raw_implied_probability": 0.00794,
+        "captured_at": "2026-06-11T00:35:00+08:00",
+        "note": "Market fact only, not betting advice."
+      },
+      {
+        "bookmaker_or_source": "FanDuel via Sports Illustrated snapshot",
+        "market": "Group I winner",
+        "american_odds": 750,
+        "decimal_odds": 8.5,
+        "raw_implied_probability": 0.11765,
+        "captured_at": "2026-06-11T00:35:00+08:00",
+        "note": "Market fact only, not betting advice."
+      }
+    ],
+    "data_quality": {
+      "overall": "partial_but_usable_for_team_profile",
+      "highest_risk_fields": [
+        "final squad text reconciliation",
+        "injury/fitness recency",
+        "complete last-10 sample",
+        "Opta rank",
+        "market close/open movement",
+        "T-75m starters"
+      ]
+    }
+  }
+}

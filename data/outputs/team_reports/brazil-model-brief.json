@@ -1,0 +1,154 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "巴西",
+    "en": "Brazil",
+    "fifa_code": "BRA",
+    "group": "C"
+  },
+  "status": "deep_partial",
+  "created_at": "2026-06-12T19:21:59+08:00",
+  "updated_at": "2026-06-12T19:55:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "C组巴西 team_profile 深版模型输入简报；只做球队层面的强度基线、变量、敏感度和不确定性，不输出比分、胜平负、出线、冠军或投注建议。",
+  "missing_inputs": [
+    "T-24h injury and training refresh",
+    "T-75m official lineup",
+    "structured odds snapshot",
+    "official suspension and referee context"
+  ],
+  "stale_inputs": [
+    "Ancelotti tournament sample remains short and should not be treated as stable long-cycle evidence"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\packets\\teams\\brazil-team-packet.json",
+    "K:\\worldcup\\data\\packets\\tactics\\brazil-tactics-packet.json",
+    "K:\\worldcup\\data\\reviews\\red_team\\brazil-red-team-review.md"
+  ],
+  "notes": [
+    "已按深版 team_profile 口径扩写。",
+    "保留为 deep_partial，等待赛前动态字段和结构化盘口。"
+  ],
+  "baseline_strength_framework": {
+    "tier_hint": "C组最高基线，世界顶级争冠档。",
+    "rating_field_placeholders": {
+      "elo": "ratings.elo",
+      "fifa": "ratings.fifa_rank",
+      "opta": "ratings.opta_power"
+    },
+    "recommended_weights": {
+      "elo": 0.33,
+      "fifa_ranking": 0.1,
+      "opta_power": 0.23,
+      "recent_competitive_form": 0.14,
+      "squad_value": 0.12,
+      "depth_quality": 0.08
+    },
+    "weighting_notes": [
+      "巴西不应只靠 FIFA 排名和名气定价，Elo 与 Opta 一类 power rating 应共同承担主轴。",
+      "阵容价值和深度对巴西很重要，但不能线性转成净胜球或大胜概率。",
+      "强队样本和弱队样本必须分开，否则 recent_form 容易夸大控场优势。"
+    ],
+    "recent_form_treatment": {
+      "window": "近 8 场正式比赛优先，友谊赛降权",
+      "adjustments": [
+        "按对手强度分层",
+        "按首发轮换程度分层",
+        "单独记录面对低位防守球队的兑现效率"
+      ]
+    },
+    "squad_value_core_player_logic": {
+      "summary": "巴西的阵容深度是真优势，但模型必须把明星兼容性与明星天赋拆开。",
+      "core_players": [
+        "Vinicius Junior",
+        "Rodrygo",
+        "Raphinha",
+        "Bruno Guimaraes",
+        "Lucas Paqueta",
+        "Marquinhos",
+        "Eder Militao",
+        "Alisson"
+      ]
+    }
+  },
+  "style_adjustments": {
+    "in_possession": "高天赋边路和半空间爆点，能通过个人能力解锁低位。",
+    "transition_attack": "elite",
+    "transition_defense_risk": "medium",
+    "low_block_breaking": "high_but_not_automatic",
+    "set_piece_attack": "medium_high",
+    "set_piece_defense": "high",
+    "game_state_note": "领先后若中场平衡不足，仍可能给对手反击窗口。"
+  },
+  "availability_sensitivity": {
+    "attack_core": [
+      {
+        "player": "Vinicius Junior",
+        "team_lambda_impact": "very_high",
+        "reason": "最大单点爆破和纵深威胁来源。"
+      },
+      {
+        "player": "Rodrygo",
+        "team_lambda_impact": "medium_high",
+        "reason": "连接、无球跑动和禁区终结效率。"
+      }
+    ],
+    "midfield_balance": [
+      {
+        "player": "Bruno Guimaraes",
+        "lambda_against_impact": "medium_high",
+        "reason": "攻转守平衡与反抢质量。"
+      },
+      {
+        "player": "Lucas Paqueta",
+        "team_lambda_impact": "medium",
+        "reason": "节奏变化和前场推进连接。"
+      }
+    ],
+    "back_line": [
+      {
+        "player": "Marquinhos",
+        "lambda_against_impact": "high",
+        "reason": "防线组织和开放空间保护。"
+      },
+      {
+        "player": "Eder Militao",
+        "lambda_against_impact": "high",
+        "reason": "速度覆盖与单防地板。"
+      }
+    ],
+    "goalkeeper": {
+      "player": "Alisson",
+      "lambda_against_impact": "medium_high",
+      "reason": "门线稳定性和高压出球容错。"
+    }
+  },
+  "market_signal_placeholder": {
+    "markets_to_capture": [
+      "outright_winner",
+      "group_winner",
+      "single_match_1x2",
+      "single_match_totals",
+      "single_match_handicap"
+    ],
+    "modeling_note": "巴西会天然带来公众热门溢价，市场信号可做校准，但不能直接等于真实价值。"
+  },
+  "uncertainty_flags": [
+    "热门溢价",
+    "明星角色兼容性",
+    "面对低位密防时的效率波动",
+    "Ancelotti 大赛样本尚短"
+  ],
+  "prediction_input_requirements": [
+    "T-75m official lineup",
+    "double-pivot or midfield pairing confirmation",
+    "winger alignment and striker role",
+    "latest odds snapshot",
+    "opponent low-block and transition profile"
+  ],
+  "model_risk_notes": [
+    "最容易犯的错是把阵容价值直接写成大胜概率。",
+    "巴西模型要单独处理热门溢价和比赛节奏折扣。",
+    "对摩洛哥这种防反强队时，攻转守保护的重要性应高于平均值。"
+  ]
+}

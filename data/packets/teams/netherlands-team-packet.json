@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T13:06:00+08:00",
+  "scope": "F组荷兰队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "荷兰", "en": "Netherlands", "fifa_code": "NED", "group": "F", "confederation": "UEFA"},
+  "source_log_path": "K:/worldcup/data/source_logs/netherlands-team-source-log.json",
+  "fixtures_context": {"round1_result": "荷兰 2-2 日本", "remaining_group_matches": ["荷兰 vs 瑞典", "突尼斯 vs 荷兰"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Ronald Koeman", "team_identity": "传统强队，阵容厚度、防线个人能力和边路推进是底盘；首轮被日本逼平后，防守转换和比赛管理需要复核。", "likely_structure": ["4-2-3-1", "4-3-3", "3-4-2-1 variants"]},
+  "core_players_watch": [
+    {"player": "Virgil van Dijk", "role": "防线领袖、制空和定位球目标"},
+    {"player": "Frenkie de Jong", "role": "中场控球、推进和节奏"},
+    {"player": "Xavi Simons", "role": "前场连接、肋部创造和压迫"},
+    {"player": "Cody Gakpo", "role": "左路/中路终结和反击出口"},
+    {"player": "Denzel Dumfries", "role": "右路冲击和后点威胁"},
+    {"player": "Matthijs de Ligt", "role": "中卫对抗和防线深度"},
+    {"player": "Bart Verbruggen", "role": "门将出球和门线稳定性"}
+  ],
+  "strengths": ["防线个人能力", "中场控球", "边翼推进", "定位球高点", "阵容厚度"],
+  "risks": ["首轮被追平后的比赛管理", "防守转换", "面对瑞典双前锋冲击", "进攻效率波动", "热门队盘口溢价"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "被日本逼平后，市场可能从高估回调；第二轮对瑞典需重新定价。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["official technical report", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

@@ -1,0 +1,86 @@
+{
+  "review_id": "rtv-YYYYMMDD-HHMM-001",
+  "status": "in_progress",
+  "created_at": "",
+  "updated_at": "",
+  "owner": "worldcup-red-team-verifier",
+  "review_target": "",
+  "team": "",
+  "group": "",
+  "match": "",
+  "target_type": "team",
+  "phase": "team_profile",
+  "scope": "",
+  "review_scope": {
+    "question": "",
+    "source_window": "",
+    "performed_at": "",
+    "reviewer": "worldcup-red-team-verifier",
+    "output_path": "K:\\worldcup\\data\\reviews\\red_team\\"
+  },
+  "verdict": "hold",
+  "top_concerns": [
+    {
+      "concern": "",
+      "category": "availability",
+      "severity": "blocker",
+      "confidence": "medium",
+      "evidence": "",
+      "evidence_timestamp": "",
+      "why_it_matters": "",
+      "follow_up_check": "",
+      "owner": "data"
+    }
+  ],
+  "upset_or_failure_scenarios": [
+    {
+      "scenario": "",
+      "trigger": "",
+      "impact": "",
+      "confidence": "low"
+    }
+  ],
+  "overconfidence_flags": [
+    {
+      "flag": "",
+      "reason": ""
+    }
+  ],
+  "market_flags": [
+    {
+      "flag": "",
+      "capture_time": "",
+      "why_suspicious": ""
+    }
+  ],
+  "betting_risk": {
+    "posture": "wait_for_lineup",
+    "reason": "",
+    "unsafe_phrasing_found": [],
+    "recommended_rewrite": ""
+  },
+  "missing_data": [
+    {
+      "field": "",
+      "why_missing_matters": "",
+      "owner": "data"
+    }
+  ],
+  "missing_fields": [],
+  "source_log": [],
+  "notes": [],
+  "owner_actions": {
+    "data": [],
+    "tactics": [],
+    "model": [],
+    "main": []
+  },
+  "fan_facing_risk_tips": [
+    {
+      "tip": "",
+      "tone": "球迷评论风格",
+      "use_case": "比赛"
+    }
+  ],
+  "handoff_notes": ""
+}

@@ -1,0 +1,13 @@
+{
+  "team": {"zh": "新西兰", "en": "New Zealand", "fifa_code": "NZL", "group": "G"},
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "captured_at": "2026-06-15T15:18:00+08:00",
+  "sources": [
+    {"name": "FIFA World Cup 26 match schedule", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule", "source_type": "official", "supports": ["Group G fixtures"], "freshness": "needs_refresh_before_prediction"},
+    {"name": "New Zealand Football", "url": "https://www.nzfootball.co.nz/", "source_type": "official_association", "supports": ["coach", "squad and availability updates"], "freshness": "needs_refresh_before_prediction"},
+    {"name": "Project schedule context", "url": "local://worldcup/group-g", "source_type": "project_context", "supports": ["Iran vs New Zealand opening fixture pending"], "freshness": "needs_matchday_refresh"}
+  ],
+  "volatile_fields": {"injury_status": "needs_refresh", "suspensions": "needs_refresh", "starting_xi": "T-75m_required", "odds": "needs_refresh", "official_technical_report": "not_available_pre_match"},
+  "data_quality_note": "可用于赛前球队画像；新西兰依赖 Chris Wood、定位球和低位纪律，预测前必须复核阵容和盘口。"
+}

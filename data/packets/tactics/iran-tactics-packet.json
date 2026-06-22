@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:20:00+08:00",
+  "team": {"zh": "伊朗", "en": "Iran", "fifa_code": "IRN", "group": "G"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-4-2", "4-1-4-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "中后场直接性较强，Taremi 支点和边路传中/二点是常见路径。",
+    "pressing_profile": "更偏中位压迫，依靠身体和对抗限制对手推进。",
+    "defensive_block": "低位组织和禁区保护有经验，但年龄结构可能影响横移速度。",
+    "attacking_transition": "中等偏强，取决于边路第一脚和 Taremi 的支点质量。",
+    "set_piece": "攻防都重要，面对新西兰高空球尤其关键。"
+  },
+  "coach_tendencies": {"coach": "Amir Ghalenoei", "risk_appetite": "medium", "game_state": "对新西兰会争取主动，但不能被对手定位球拖进消耗战。"},
+  "tactical_risks": ["年龄结构", "横移速度", "前场核心可用性", "新西兰高空球", "外部噪音"],
+  "confidence_notes": {"high": ["身体对抗", "低位组织"], "medium": ["主动进攻", "边路效率"], "low_or_missing": ["伤停", "纪律"]},
+  "handoff_to_model": {"attack_ceiling": "medium", "defensive_floor": "medium", "set_piece": "high", "age_fatigue_risk": "medium_high"},
+  "handoff_to_red_team": ["Taremi可用性", "新西兰定位球", "年龄和体能是否被低估"]
+}

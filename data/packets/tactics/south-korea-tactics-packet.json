@@ -1,0 +1,265 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Korea Republic",
+    "en": "Korea Republic",
+    "fifa_code": "KOR",
+    "group": "A"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-11T16:58:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Korea Republic tactical packet only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "full set-piece taker and target map",
+    "video-backed rest-defense review",
+    "full warm-up and qualifying event sample linked to lineups"
+  ],
+  "source_log": [
+    {
+      "source": "FIFA Korea Republic squad page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/korea-republic/squad",
+      "note": "Current World Cup squad page."
+    },
+    {
+      "source": "AFC squad article",
+      "url": "https://www.the-afc.com/en/national/fifa_world_cup.html/news/hong-backs-son-to-lead-korea-republic-challenge",
+      "note": "Hong names squad and publicly backs Son Heung-min."
+    },
+    {
+      "source": "AFC Know your team feature",
+      "url": "https://www.the-afc.com/en/east/korea_republic.html",
+      "note": "Contains pre-World-Cup warm-up references, including wins over Trinidad and Tobago and El Salvador."
+    },
+    {
+      "source": "AFC qualifying report",
+      "url": "https://www.the-afc.com/en/national/asian_qualifiers.html/news/korea-republic%E2%80%99s-hong-remains-focused-on-the-prize",
+      "note": "Kuwait 1-3 Korea Republic and Hong's comments during qualifying."
+    },
+    {
+      "source": "AFC qualifying report",
+      "url": "https://www.the-afc.com/en/national/asian_qualifiers.html/news/hong-hails-youngsters-as-korea-republic-sign-off-in-style",
+      "note": "Korea Republic 4-0 Kuwait, unbeaten qualifying finish, fluidity and squad depth."
+    },
+    {
+      "source": "AFC qualifying report",
+      "url": "https://www.the-afc.com/en/national/asian_qualifiers.html/news/hong-hails-korea-republic-players-for-raising-the-bar",
+      "note": "Jordan 0-2 Korea Republic, strong away performance even with injuries."
+    },
+    {
+      "source": "AFC coach appointment article",
+      "url": "https://www.the-afc.com/en/national/asian_qualifiers/news/hong_myung-bo_named_korea_republic_head_coach.html",
+      "note": "Confirms Hong's return as head coach."
+    }
+  ],
+  "notes": [
+    "Deepening pass completed on 2026-06-11.",
+    "Current phase is team_profile only; no score, group, champion, or betting output."
+  ],
+  "fan_summary_en": "Korea Republic can still scare teams with Son-led transition, but this squad is deeper than a one-man story: Lee Kang-in's craft, Kim Min-jae's authority, and Hong's willingness to trust young pieces give them more than one way to control a match.",
+  "data": {
+    "analysis_status": "partial",
+    "confidence_overall": "medium_high",
+    "sample_summary": {
+      "primary_window": "2024-2026 under Hong Myung-bo, with emphasis on World Cup qualifying and pre-tournament warm-ups",
+      "coach": "Hong Myung-bo",
+      "sample_quality": "medium_high",
+      "notes": [
+        "Uses official FIFA and AFC material plus the local data packet.",
+        "Deeper tactical event mapping remains pending a fuller lineup-linked sample."
+      ]
+    },
+    "coach_profile": {
+      "coach": "Hong Myung-bo",
+      "system_stability": "high",
+      "selection_stability": "medium_high",
+      "preferred_systems": [
+        "4-2-3-1",
+        "4-3-3"
+      ],
+      "tournament_pragmatism": "medium_high",
+      "summary": "Hong has restored structure and continuity while keeping enough attacking freedom for Korea Republic's best players. The public sample suggests he values balance first, but he is not afraid to raise the technical ceiling with young or creative pieces when the platform is secure.",
+      "confidence": "high"
+    },
+    "team_shape": {
+      "nominal_formations": [
+        "4-2-3-1",
+        "4-3-3"
+      ],
+      "in_possession_shape": "Back four base with fullback support, one or two advanced half-space creators, and strong use of diagonal runs from wide or inside-forward positions.",
+      "out_of_possession_shape": "Usually a 4-4-2 or 4-1-4-1 pressing picture, with the central midfield block protecting Kim Min-jae and the back line.",
+      "role_asymmetry": [
+        "Son's side often carries the greatest transition gravity.",
+        "Lee Kang-in and other creators can bend the shape toward a more technical half-space game.",
+        "The rest-defense quality rises sharply when Kim Min-jae is available and protected."
+      ],
+      "confidence": "high"
+    },
+    "key_roles": [
+      {
+        "role": "left_side_or_inside_transition_star",
+        "players": [
+          "Son Heung-min"
+        ],
+        "note": "Still the main gravity source in transition, final-third decision-making, and emotional leadership.",
+        "confidence": "high"
+      },
+      {
+        "role": "creative_half_space_connector",
+        "players": [
+          "Lee Kang-in"
+        ],
+        "note": "Most important advanced creator for line-breaking passes, technical control, and half-space combinations.",
+        "confidence": "high"
+      },
+      {
+        "role": "defensive_anchor",
+        "players": [
+          "Kim Min-jae"
+        ],
+        "note": "Single biggest defensive-floor player. His presence changes how much risk Korea Republic can take in front of and behind the ball.",
+        "confidence": "high"
+      },
+      {
+        "role": "wide_transition_runner",
+        "players": [
+          "Hwang Hee-chan"
+        ],
+        "note": "Important for stretching space, direct running, and turning recoveries into immediate threat.",
+        "confidence": "medium_high"
+      },
+      {
+        "role": "central_reference",
+        "players": [
+          "Cho Gue-sung",
+          "Oh Hyeon-gyu"
+        ],
+        "note": "The center-forward role can tilt the attack toward box presence, first-post runs, or more open-space running depending on the selection.",
+        "confidence": "medium"
+      }
+    ],
+    "phase_model": {
+      "attack": {
+        "summary": "Korea Republic are most dangerous when they can combine technical half-space creation with fast transition release. They can attack with more control than stereotype suggests, but the best version still uses speed and diagonal movement well.",
+        "transition_attack": "high",
+        "technical_creation": "medium_high",
+        "wide_attack": "medium_high",
+        "settled_attack_organization": "medium_high",
+        "set_piece_attack": "medium",
+        "notes": [
+          "Son and Hwang stretch the field vertically.",
+          "Lee Kang-in raises the team's ability to unlock tighter blocks and create cleaner final balls.",
+          "The attack is more versatile when the center-forward role links well instead of only waiting in the box."
+        ],
+        "confidence": "high"
+      },
+      "defense": {
+        "summary": "Korea Republic defend best when their midfield shield and back line spacing stay connected. They can press actively, but the real foundation is the quality of the central defensive spine and the timing of recovery runs.",
+        "pressing": "medium_high",
+        "recovery_block": "medium_high",
+        "center_back_protection": "high",
+        "midfield_screen": "medium_high",
+        "fullback_space_risk": "medium",
+        "notes": [
+          "Kim Min-jae's authority allows the team to be more ambitious.",
+          "If the fullbacks or wide players lose balance, transition defense can become uncomfortable against fast opponents."
+        ],
+        "confidence": "medium_high"
+      },
+      "set_pieces": {
+        "attack": "Set pieces are useful but not the defining route of this team.",
+        "defense": "The floor is respectable when the main defensive spine is healthy, but a fuller taker-target map is still missing.",
+        "confidence": "medium"
+      }
+    },
+    "coach_tendencies": {
+      "leading_adjustments": "Hong is likely to preserve structural balance first and rely on clean counters rather than abandon shape once ahead.",
+      "trailing_adjustments": "When trailing, Korea Republic can add more technical creativity and push the game faster through Son, Lee, and additional attacking runners.",
+      "substitution_resources": "medium_high",
+      "knockout_conservatism": "medium_high",
+      "summary": "Hong is not a chaos coach. His public comments and results point to a manager who wants standards, control, and enough flexibility to raise the bar without losing the shape.",
+      "confidence": "medium_high"
+    },
+    "model_features": {
+      "attack_ceiling": {
+        "value": "medium_high",
+        "confidence": "high",
+        "note": "The combination of Son, Lee Kang-in, and pace runners gives Korea Republic a real multi-route ceiling."
+      },
+      "defensive_floor": {
+        "value": "medium_high_if_kim_available",
+        "confidence": "high",
+        "note": "Kim Min-jae availability is the main condition for the strongest defensive floor."
+      },
+      "set_piece_attack": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "Helpful but not primary."
+      },
+      "tempo_preference": {
+        "value": "medium_high",
+        "confidence": "medium_high",
+        "note": "Korea Republic can play quickly and are especially dangerous when the match opens into transitions."
+      },
+      "transition_attack": {
+        "value": "high",
+        "confidence": "high",
+        "note": "One of the team's clearest high-value phases."
+      },
+      "transition_defense_risk": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "Risk rises when the back line loses support or the fullbacks are forced into repeated recovery sprints."
+      },
+      "key_player_dependency": {
+        "value": "medium_high",
+        "confidence": "high",
+        "note": "Son and Kim remain the two biggest single-point influences in attack and defense respectively."
+      },
+      "market_relevant_flags": [
+        {
+          "factor": "Son form and finishing sharpness",
+          "impact_area": "1x2/totals/handicap",
+          "note": "His version of sharpness strongly affects Korea Republic's transition ceiling."
+        },
+        {
+          "factor": "Kim Min-jae availability",
+          "impact_area": "1x2/handicap",
+          "note": "The back line's authority and spacing security are closely tied to him."
+        },
+        {
+          "factor": "Lee Kang-in advanced role",
+          "impact_area": "totals/handicap",
+          "note": "His influence changes Korea Republic's ability to unlock deeper defensive blocks."
+        }
+      ]
+    },
+    "verification_questions": [
+      {
+        "claim_id": "kor-001",
+        "claim": "Korea Republic's best version combines transition speed with more technical settled creation than in past cycles.",
+        "confidence": "high",
+        "why_challengeable": "Needs lineup-linked event evidence against lower blocks and stronger defensive opponents.",
+        "challenge_type": "small_sample"
+      },
+      {
+        "claim_id": "kor-002",
+        "claim": "Kim Min-jae is the main defensive-floor hinge player.",
+        "confidence": "high",
+        "why_challengeable": "Should be tested against matches where the midfield shield compensated well without him.",
+        "challenge_type": "injury_dependency"
+      },
+      {
+        "claim_id": "kor-003",
+        "claim": "Hong's Korea Republic are structurally more reliable than emotionally volatile.",
+        "confidence": "medium_high",
+        "why_challengeable": "Needs a broader sample of knockout-like game states and stress moments.",
+        "challenge_type": "old_sample"
+      }
+    ],
+    "completion_note": "Deep version completed to a usable handoff level, but packet remains partial pending full lineup-linked sample expansion and set-piece mapping."
+  }
+}

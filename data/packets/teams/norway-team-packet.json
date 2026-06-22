@@ -1,0 +1,303 @@
+{
+  "phase": "team_profile",
+  "status": "complete",
+  "created_at": "2026-06-10T15:48:43.4029243+08:00",
+  "updated_at": "2026-06-10T15:48:43.4029243+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "2026 FIFA World Cup Norway national team profile only; no match prediction, no group prediction.",
+  "missing_fields": [
+    "official_starting_xi_for_iraq_match",
+    "latest_training_availability_24h_before_kickoff",
+    "latest_weather_snapshot_24h_before_kickoff",
+    "latest_market_snapshot_24h_before_kickoff"
+  ],
+  "source_log": "K:\\worldcup\\data\\source_logs\\norway-team-source-log.json",
+  "notes": [
+    "This file follows the file-first protocol and remains usable if a later collection pass is interrupted.",
+    "Current team-analysis phase is limited to team_profile and does not extend into match prediction."
+  ],
+  "team_cn": "挪威队",
+  "team": "Norway",
+  "fifa_code": "NOR",
+  "group": "I",
+  "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+  "last_verified_at": "2026-06-10T15:48:43.4029243+08:00",
+  "data_quality_status": "partial_live_verified",
+  "coach": {
+    "name": "Stale Solbakken",
+    "appointed": null,
+    "source_status": "confirmed"
+  },
+  "competition_context": {
+    "stage": "2026 FIFA World Cup group stage",
+    "base_camp": "Greensboro, North Carolina, USA",
+    "fixtures": [
+      {
+        "opponent": "Iraq",
+        "date_local": "2026-06-16",
+        "kickoff_local": "18:00",
+        "date_norway": "2026-06-17",
+        "kickoff_norway": "00:00",
+        "venue": "Boston Stadium (Gillette Stadium)",
+        "city": "Foxborough / Boston",
+        "source_status": "confirmed"
+      },
+      {
+        "opponent": "Senegal",
+        "date_local": "2026-06-22",
+        "kickoff_local": "20:00",
+        "date_norway": "2026-06-23",
+        "kickoff_norway": "02:00",
+        "venue": "New York/New Jersey Stadium (MetLife Stadium)",
+        "city": "East Rutherford / New York-New Jersey",
+        "source_status": "confirmed"
+      },
+      {
+        "opponent": "France",
+        "date_local": "2026-06-26",
+        "kickoff_local": "15:00",
+        "date_norway": "2026-06-26",
+        "kickoff_norway": "21:00",
+        "venue": "Boston Stadium (Gillette Stadium)",
+        "city": "Foxborough / Boston",
+        "source_status": "confirmed"
+      }
+    ],
+    "rest_days": [
+      {
+        "between": "Iraq -> Senegal",
+        "days": 5
+      },
+      {
+        "between": "Senegal -> France",
+        "days": 3
+      }
+    ],
+    "travel_notes": "官方基地营设在美国北卡罗来纳州格林斯伯勒。小组赛只在美国东海岸作战，时区负担较轻，但需在波士顿地区与纽约/新泽西之间切换。",
+    "environment_risk_note": "首场与第三场在 Boston Stadium，第二场在 MetLife Stadium。6 月美国东海岸存在升温与湿度上行风险，但赛前 24 小时天气仍需复核。"
+  },
+  "strength_indicators": {
+    "fifa_rank": 31,
+    "elo_rating": 1917,
+    "elo_world_rank": 38,
+    "opta_power_rank": 25,
+    "squad_market_value_eur": 589900000,
+    "opta_context_note": "Opta 系来源搜索预览还给出约 3.5% 的夺冠模拟概率，但本包只把它作为强度背景，不作预测使用。",
+    "data_timestamp": "2026-06-10T15:48:43.4029243+08:00"
+  },
+  "recent_form": {
+    "matches_window": "2025-06-06 至 2026-06-07（最新识别到的 10 场正式/官方热身赛样本）",
+    "record": "7胜2平1负",
+    "goals_for": 31,
+    "goals_against": 7,
+    "xg_for": null,
+    "xg_against": null,
+    "sample_matches": [
+      "2025-06-06 挪威 3-0 意大利",
+      "2025-06-09 爱沙尼亚 0-1 挪威",
+      "2025-09-09 挪威 11-1 摩尔多瓦",
+      "2025-10-11 挪威 5-0 以色列",
+      "2025-11-13 挪威 4-1 爱沙尼亚",
+      "2025-11-16 意大利 1-4 挪威",
+      "2026-03-27 荷兰 2-1 挪威",
+      "2026-03-31 挪威 0-0 瑞士",
+      "2026-06-01 挪威 1-1 摩洛哥",
+      "2026-06-07 挪威 3-1 瑞典"
+    ],
+    "important_match_samples": [
+      "双杀意大利：2025-06-06 主场 3-0，2025-11-16 客场 4-1",
+      "2026-03-27 1-2 负荷兰：面对更高强度对手时仍能进球",
+      "2026-03-31 0-0 瑞士：说明中后场控制与零封能力具备样本",
+      "2026-06-07 3-1 胜瑞典：最近一场热身赛输出稳定"
+    ],
+    "opponent_quality_note": "样本里既有爱沙尼亚、摩尔多瓦、以色列等较弱对手，也有意大利、荷兰、瑞士、摩洛哥、瑞典等更高质量对手。最近 10 场总体火力强，但面对较高压迫和高位转换球队时，后场稳定性仍需要继续观察。"
+  },
+  "squad_status": {
+    "final_squad_announced": true,
+    "final_squad_source_status": "confirmed",
+    "key_players": [
+      {
+        "player": "Erling Braut Haaland",
+        "position": "Forward",
+        "club": "Manchester City FC",
+        "role": "starter",
+        "availability_status": "confirmed"
+      },
+      {
+        "player": "Martin Odegaard",
+        "position": "Midfielder",
+        "club": "Arsenal FC",
+        "role": "starter",
+        "availability_status": "confirmed"
+      },
+      {
+        "player": "Alexander Sorloth",
+        "position": "Forward",
+        "club": "Atletico Madrid",
+        "role": "starter",
+        "availability_status": "confirmed"
+      },
+      {
+        "player": "Sander Berge",
+        "position": "Midfielder",
+        "club": "Fulham FC",
+        "role": "starter",
+        "availability_status": "confirmed"
+      },
+      {
+        "player": "Patrick Berg",
+        "position": "Midfielder",
+        "club": "FK Bodo/Glimt",
+        "role": "starter",
+        "availability_status": "confirmed"
+      },
+      {
+        "player": "Kristoffer Ajer",
+        "position": "Defender",
+        "club": "Brentford FC",
+        "role": "starter",
+        "availability_status": "confirmed"
+      },
+      {
+        "player": "Julian Ryerson",
+        "position": "Defender",
+        "club": "Borussia Dortmund",
+        "role": "starter",
+        "availability_status": "confirmed"
+      },
+      {
+        "player": "Antonio Nusa",
+        "position": "Midfielder",
+        "club": "RB Leipzig",
+        "role": "rotation",
+        "availability_status": "confirmed"
+      }
+    ],
+    "roster": [
+      {"no": 1, "player": "Orjan Haskjold Nyland", "position": "Goalkeeper", "club": "Sevilla FC", "role": "starter", "availability_status": "confirmed"},
+      {"no": 2, "player": "Morten Thorsby", "position": "Midfielder", "club": "US Cremonese", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 3, "player": "Kristoffer Ajer", "position": "Defender", "club": "Brentford FC", "role": "starter", "availability_status": "confirmed"},
+      {"no": 4, "player": "Leo Ostigard", "position": "Defender", "club": "Genoa CFC", "role": "starter", "availability_status": "confirmed"},
+      {"no": 5, "player": "David Moller Wolfe", "position": "Defender", "club": "Wolverhampton Wanderers FC", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 6, "player": "Patrick Berg", "position": "Midfielder", "club": "FK Bodo/Glimt", "role": "starter", "availability_status": "confirmed"},
+      {"no": 7, "player": "Alexander Sorloth", "position": "Forward", "club": "Atletico Madrid", "role": "starter", "availability_status": "confirmed"},
+      {"no": 8, "player": "Sander Berge", "position": "Midfielder", "club": "Fulham FC", "role": "starter", "availability_status": "confirmed"},
+      {"no": 9, "player": "Erling Braut Haaland", "position": "Forward", "club": "Manchester City FC", "role": "starter", "availability_status": "confirmed"},
+      {"no": 10, "player": "Martin Odegaard", "position": "Midfielder", "club": "Arsenal FC", "role": "starter", "availability_status": "confirmed"},
+      {"no": 11, "player": "Jorgen Strand Larsen", "position": "Forward", "club": "Crystal Palace FC", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 12, "player": "Sander Tangvik", "position": "Goalkeeper", "club": "Hamburger SV", "role": "depth", "availability_status": "confirmed"},
+      {"no": 13, "player": "Egil Selvik", "position": "Goalkeeper", "club": "Watford FC", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 14, "player": "Fredrik Aursnes", "position": "Midfielder", "club": "SL Benfica", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 15, "player": "Fredrik Andre Bjorkan", "position": "Defender", "club": "FK Bodo/Glimt", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 16, "player": "Marcus Holmgren Pedersen", "position": "Defender", "club": "Torino FC", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 17, "player": "Torbjorn Heggem", "position": "Defender", "club": "Bologna FC 1909", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 18, "player": "Kristian Thorstvedt", "position": "Midfielder", "club": "US Sassuolo", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 19, "player": "Thelonious Aasgaard", "position": "Midfielder", "club": "Rangers FC", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 20, "player": "Antonio Nusa", "position": "Midfielder", "club": "RB Leipzig", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 21, "player": "Andreas Schjelderup", "position": "Midfielder", "club": "Benfica", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 22, "player": "Oscar Bobb", "position": "Midfielder", "club": "Fulham FC", "role": "rotation", "availability_status": "confirmed"},
+      {"no": 23, "player": "Jens Petter Hauge", "position": "Midfielder", "club": "FK Bodo/Glimt", "role": "depth", "availability_status": "confirmed"},
+      {"no": 24, "player": "Sondre Langas", "position": "Defender", "club": "Derby County FC", "role": "depth", "availability_status": "confirmed"},
+      {"no": 25, "player": "Henrik Falchener", "position": "Defender", "club": "Viking FK", "role": "depth", "availability_status": "confirmed"},
+      {"no": 26, "player": "Julian Ryerson", "position": "Defender", "club": "Borussia Dortmund", "role": "starter", "availability_status": "confirmed"}
+    ],
+    "injuries": [],
+    "suspensions": [],
+    "fitness_risks": [
+      {
+        "player": "Martin Odegaard",
+        "status": "probable",
+        "issue": "官方赛前言论显示其刚回到比赛状态，存在比赛节奏恢复观察点，但未见被官方从名单中移除。",
+        "last_update": "2026-06-01",
+        "expected_return": null
+      }
+    ],
+    "depth_notes": "锋线核心明确，哈兰德与瑟洛特是最突出的终结点；中场由厄德高、贝尔格、桑德尔-贝尔赫支撑；边路和边后卫轮换空间较大，首发边锋与边后卫组合仍需赛前 24 小时继续跟踪。"
+  },
+  "market_context": {
+    "capture_time": "2026-06-10T15:48:43.4029243+08:00",
+    "outright": {
+      "bookmaker": "FanDuel",
+      "market": "win_world_cup",
+      "odds_american": "+1600",
+      "decimal_odds": 17.0,
+      "implied_probability": 0.0588235294,
+      "no_vig_probability": null,
+      "source_status": "probable"
+    },
+    "group_winner": {
+      "bookmaker": "FanDuel",
+      "market": "group_i_winner",
+      "odds_american": "+275",
+      "decimal_odds": 3.75,
+      "implied_probability": 0.2666666667,
+      "no_vig_probability": null,
+      "source_status": "probable"
+    },
+    "advance_from_group": {
+      "bookmaker": "FanDuel",
+      "market": "advance_from_group_or_reach_round_of_32",
+      "odds_american": "-900",
+      "decimal_odds": 1.1111111111,
+      "implied_probability": 0.9,
+      "no_vig_probability": null,
+      "source_status": "probable"
+    },
+    "first_match_1x2": [
+      {
+        "bookmaker": "FanDuel",
+        "market": "iraq_vs_norway_1x2",
+        "selection": "Iraq",
+        "odds_american": "+1400",
+        "decimal_odds": 15.0,
+        "implied_probability": 0.0666666667,
+        "no_vig_probability": 0.0625,
+        "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+        "source_status": "probable"
+      },
+      {
+        "bookmaker": "FanDuel",
+        "market": "iraq_vs_norway_1x2",
+        "selection": "Draw",
+        "odds_american": "+550",
+        "decimal_odds": 6.5,
+        "implied_probability": 0.1538461538,
+        "no_vig_probability": 0.1442307692,
+        "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+        "source_status": "probable"
+      },
+      {
+        "bookmaker": "FanDuel",
+        "market": "iraq_vs_norway_1x2",
+        "selection": "Norway",
+        "odds_american": "-550",
+        "decimal_odds": 1.1818181818,
+        "implied_probability": 0.8461538462,
+        "no_vig_probability": 0.7932692308,
+        "captured_at": "2026-06-10T15:48:43.4029243+08:00",
+        "source_status": "probable"
+      }
+    ],
+    "line_movement_note": "同为 FanDuel 系来源，2026-06-02 的媒体引述显示挪威小组头名价格约 +290，2026-06-04 的较新媒体引述显示约 +275，说明市场对挪威的小组前景有轻微收紧。",
+    "odds_quality_note": "当前期货和赛前盘主要来自媒体搜索预览或 sportsbook 结果摘要，属于可用但仍应在赛前 24 小时再抓一次的市场事实层。"
+  },
+  "gaps_and_conflicts": {
+    "missing_or_pending": [
+      "尚未抓取官方首发；只能确认最终名单，不能确认揭幕战首发十一人。",
+      "未见到官方纪律公告中的停赛条目，赛前 24 小时需再核一遍。",
+      "第二、第三场比赛的实时天气预报尚未进入稳定窗口。"
+    ],
+    "conflicts": [
+      "未发现官方名单冲突。",
+      "期货赔率存在不同日期的轻微波动，但属于时间差，不属于事实冲突。"
+    ],
+    "recheck_24h_before_kickoff": [
+      "揭幕战官方首发与替补名单",
+      "Martin Odegaard 的比赛节奏与训练完整度",
+      "边路与边后卫组合",
+      "Iraq vs Norway 1X2 与让球/大小球最新价格",
+      "Boston Stadium 当地天气与体感湿度"
+    ]
+  },
+  "source_log_path": "K:\\worldcup\\data\\source_logs\\norway-team-source-log.json"
+}

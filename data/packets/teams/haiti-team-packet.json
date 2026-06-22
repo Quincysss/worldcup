@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "海地", "en": "Haiti", "fifa_code": "HAI", "group": "C"},
+  "status": "deep_partial",
+  "updated_at": "2026-06-12T19:30:00+08:00",
+  "owner": "main-thread",
+  "scope": "C组海地 team_profile；不输出比分、胜平负、出线、冠军或投注建议。",
+  "source_log_path": "K:\\worldcup\\data\\source_logs\\haiti-team-source-log.json",
+  "fixtures_context": {
+    "group_matches": ["海地 vs 苏格兰", "巴西 vs 海地", "摩洛哥 vs 海地"],
+    "needs_official_time_refresh": true
+  },
+  "data": {
+    "coach": "Sebastien Migne",
+    "profile": "C组最大弱势方，但资格赛表现说明他们有纪律性和反击执行力；现实目标是把比赛压低事件、靠门将和前锋单点争取窗口。",
+    "core_players_watch": ["Wilson Isidor", "Duckens Nazon", "Frantzdy Pierrot", "Johny Placide", "Danley Jean Jacques", "Ricardo Ade"],
+    "style_tags": ["低位防守", "反击", "身体对抗", "门将发挥", "弱势控风险"],
+    "strengths": ["团队韧性", "反击单点", "资格赛信心", "定位球/二点球", "弱势心态包袱小"],
+    "risks": ["阵容深度", "后场出球", "持续受压", "政治/训练/logistics影响", "面对顶级边路的防守宽度"],
+    "data_confidence": "medium"
+  },
+  "missing_fields": ["official_matchday_squad_refresh", "T-24h injury/training", "T-75m lineup", "fresh odds", "travel/training-base confirmation"],
+  "data_quality": {"completion_level": "usable_deep_partial", "reason_not_complete": "训练条件、伤停、首发和盘口仍需赛前复核。"}
+}

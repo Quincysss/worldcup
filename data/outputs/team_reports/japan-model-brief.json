@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T13:08:00+08:00",
+  "team": {"zh": "日本", "en": "Japan", "fifa_code": "JPN", "group": "F"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "F组中上竞争队，首轮逼平荷兰后评价上调。", "recommended_weights": {"elo": 0.30, "fifa_ranking": 0.12, "recent_form": 0.20, "squad_quality": 0.14, "tactical_fit": 0.16, "round1_correction": 0.08}, "round1_correction": "strong-team_resilience_up; market_heat_up"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "medium_high", "defensive_floor": "medium_high", "transition_attack": "high", "set_piece_defense_risk": "medium_high", "low_block_breaking": "key_vs_tunisia"},
+  "availability_sensitivity": [{"player": "Takefusa Kubo", "lambda_for_impact": "high"}, {"player": "Kaoru Mitoma", "lambda_for_impact": "high"}, {"player": "Wataru Endo", "lambda_against_impact": "medium_high"}, {"player": "Ko Itakura", "lambda_against_impact": "medium"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals"], "warning": "逼平荷兰后日本可能从价值方变成偏热方。"},
+  "uncertainty_flags": ["T-75m lineup", "fresh odds", "official technical stats", "wide-player fitness"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "xG/technical report", "Tunisia defensive shape"],
+  "model_risk_notes": "日本上调，但对突尼斯时要注意低位破密集和定位球防守，不能只按强队对抗表现外推。"
+}

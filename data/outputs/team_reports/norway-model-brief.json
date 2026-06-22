@@ -1,0 +1,512 @@
+{
+  "team": "Norway",
+  "report_type": "team_profile",
+  "phase": "team_profile",
+  "status": "partial",
+  "created_at": "2026-06-10",
+  "updated_at": "2026-06-10",
+  "owner": "data-model-agent",
+  "scope": "挪威队 team_profile 模型输入简报；仅覆盖基线实力框架、核心球员敏感度、赔率校准接口、字段需求与不确定性，不扩展到比赛预测",
+  "missing_fields": [
+    {
+      "field": "team_packet",
+      "path": "K:\\worldcup\\data\\packets\\teams\\norway-team-packet.json",
+      "reason": "文件缺失，无法完成长期实力、近期表现和球员可用性数值化"
+    },
+    {
+      "field": "tactics_packet",
+      "path": "K:\\worldcup\\data\\packets\\tactics\\norway-tactics-packet.json",
+      "reason": "文件缺失，无法完成低位破防、转换防守和对位风格修正"
+    },
+    {
+      "field": "odds_packet",
+      "path": "K:\\worldcup\\data\\packets\\markets\\norway-odds-packet.json",
+      "reason": "文件缺失，无法完成正式去水概率与市场一致性校准"
+    }
+  ],
+  "source_log": [
+    {
+      "type": "repo_reference",
+      "path": "K:\\worldcup\\data\\reviews\\red_team\\norway-red-team-review.md",
+      "used_for": "风险提示和仓库内已记录的市场快照"
+    },
+    {
+      "type": "local_output",
+      "path": "K:\\worldcup\\data\\outputs\\team_reports\\norway-model-brief.json",
+      "used_for": "当前 team_profile 持续更新文件"
+    }
+  ],
+  "notes": [
+    "已按主线程协议采用先落文件、再逐步补内容的工作方式",
+    "当前文件状态为 partial，原因是正式 team packet、tactics packet 和 odds packet 均未到位",
+    "后续所有球队任务将先创建最小骨架，再逐步填充并维护 missing_fields"
+  ],
+  "language": "zh-CN",
+  "encoding": "UTF-8",
+  "captured_at": "2026-06-10",
+  "model_version": "norway-preprediction-v1",
+  "model_scope": {
+    "stage": "team_profile",
+    "purpose": "建立挪威队的建模输入框架、强度档案和不确定性标记，供后续小组内团队对比与比赛预测阶段调用",
+    "status": "partial",
+    "ready_for_match_prediction": false,
+    "ready_for_group_simulation": false,
+    "final_result_policy": "本文件仅用于球队档案阶段，不直接输出具体比赛比分、胜平负、小组出线或冠军预测"
+  },
+  "input_readiness": {
+    "status": "partial",
+    "available_inputs": [
+      {
+        "type": "review_snapshot",
+        "path": "K:\\worldcup\\data\\reviews\\red_team\\norway-red-team-review.md",
+        "notes": "可作为风险提醒和已记录市场快照的辅助来源，不替代正式 team packet 或 tactics packet"
+      },
+      {
+        "type": "existing_output_rebuild",
+        "path": "K:\\worldcup\\data\\outputs\\team_reports\\norway-model-brief.json",
+        "notes": "本次已按 UTF-8 重建"
+      }
+    ],
+    "missing_inputs": [
+      {
+        "type": "team_packet",
+        "path": "K:\\worldcup\\data\\packets\\teams\\norway-team-packet.json",
+        "impact": "缺少长期实力、近期表现、球员可用性和样本分层数据，无法给出数值化基线"
+      },
+      {
+        "type": "tactics_packet",
+        "path": "K:\\worldcup\\data\\packets\\tactics\\norway-tactics-packet.json",
+        "impact": "缺少阵型、低位破防、转换防守、定位球和对位风格信息，无法做战术修正"
+      },
+      {
+        "type": "odds_snapshot_structured",
+        "path": "K:\\worldcup\\data\\packets\\markets\\norway-odds-packet.json",
+        "impact": "缺少结构化赔率源，暂时只能引用仓库中已记录的 2026-06-10 市场快照"
+      }
+    ],
+    "stale_inputs": [],
+    "uncertainty_flags": [
+      "当前没有正式 team packet，任何数值强度分都应视为占位而非结论",
+      "当前没有 tactics packet，无法把挪威面对低位防守和强队高压时的差异修正做实",
+      "当前市场信号只适合作为校准方向，不适合作为直接概率输出"
+    ]
+  },
+  "baseline_strength_framework": {
+    "objective": "把挪威的长期实力、近期状态和核心球员依赖拆开建模，避免把球星名气直接写成整队稳定性",
+    "core_formula": {
+      "description": "建议先做标准化后加权汇总，再把核心球员可用性作为独立修正层",
+      "composite_score_formula": "baseline_z = 0.35*Elo_z + 0.10*FIFA_z + 0.25*OptaPower_z + 0.20*RecentForm_z + 0.10*SquadValue_z",
+      "notes": [
+        "Elo 和 Opta 或同类 power rating 共同承担长期强度主轴",
+        "FIFA 排名只做低权重校准，避免排名叙事过度影响模型",
+        "近期表现必须做对手质量修正，且友谊赛单独降权",
+        "阵容身价只反映人才密度和天花板，不直接代表国家队执行质量"
+      ]
+    },
+    "component_roles": [
+      {
+        "factor": "Elo",
+        "priority": "high",
+        "role": "长期对抗强度主轴",
+        "recommended_fields": [
+          "ratings.elo",
+          "ratings.elo_rank",
+          "ratings.elo_source",
+          "ratings.captured_at"
+        ]
+      },
+      {
+        "factor": "FIFA排名",
+        "priority": "medium",
+        "role": "低权重外部校准",
+        "recommended_fields": [
+          "ratings.fifa_rank",
+          "ratings.fifa_points",
+          "ratings.fifa_captured_at"
+        ]
+      },
+      {
+        "factor": "Opta或同类Power Rating",
+        "priority": "high",
+        "role": "补足过程强度和全队质量",
+        "recommended_fields": [
+          "ratings.opta_power",
+          "ratings.opta_rank",
+          "ratings.opta_captured_at"
+        ]
+      },
+      {
+        "factor": "近期表现",
+        "priority": "high",
+        "role": "有限增量修正",
+        "recommended_fields": [
+          "recent_form.window_matches",
+          "recent_form.weighted_points_per_match",
+          "recent_form.weighted_xg_for",
+          "recent_form.weighted_xg_against",
+          "recent_form.friendlies_weight",
+          "recent_form.opponent_strength_adjustment"
+        ]
+      },
+      {
+        "factor": "阵容身价",
+        "priority": "medium",
+        "role": "人才密度和阵容深度代理变量",
+        "recommended_fields": [
+          "squad_value.total_eur",
+          "squad_value.rank",
+          "squad_value.starting_xi_share",
+          "squad_value.bench_share"
+        ]
+      },
+      {
+        "factor": "核心球员影响",
+        "priority": "high",
+        "role": "独立于长期基线的情境修正层",
+        "recommended_fields": [
+          "player_availability.haaland",
+          "player_availability.odegaard",
+          "player_availability.key_attackers",
+          "player_availability.key_defenders",
+          "player_availability.goalkeeper"
+        ]
+      }
+    ],
+    "recent_form_modeling_rules": {
+      "recommended_window": "近 8 场正式比赛为主，友谊赛仅作补充",
+      "decay_hint": "越近权重越高，可采用 0.85 到 0.90 的递减系数",
+      "must_split_samples": [
+        "弱对手样本",
+        "同档对手样本",
+        "强对手样本",
+        "正式比赛样本",
+        "友谊赛样本"
+      ]
+    },
+    "temporary_baseline_without_packet": {
+      "status": "placeholder_only",
+      "output_policy": "不输出挪威数值强度分，不直接给出 win/draw/loss 概率",
+      "working_assumption": "先保留权重结构和修正逻辑，等待正式 packet 到位后再落数值",
+      "confidence": "low"
+    },
+    "norway_specific_notes": [
+      "挪威的长期实力与核心球员可用性必须拆层处理，不能把哈兰德和厄德高的个人上限直接写进长期常数",
+      "如果核心前场齐整，挪威的进攻上限会显著高于同类球队均值；如果核心缺失，比分分布上尾会比胜平负更先塌缩",
+      "阵容深度需要单独检查，避免头部球星质量被误读为全队稳定性"
+    ]
+  },
+  "core_player_sensitivity": {
+    "objective": "为后续把核心球员可用性映射到进攻 lambda 和 xG 过程提供可解释占位带",
+    "method_note": "以下区间属于无正式 packet 情况下的临时敏感度带，属于模型占位，不是事实值；待球员分钟、角色和替代者质量到位后重算",
+    "players": [
+      {
+        "player": "Erling Haaland",
+        "role": "终结点、禁区威胁、反击终点",
+        "sensitivity_placeholder": {
+          "when_confirmed_available": {
+            "team_attack_lambda_delta": [0.2, 0.35],
+            "team_xg_conversion_delta_pct": [5, 10],
+            "high_score_tail": "上调"
+          },
+          "when_minutes_limited": {
+            "team_attack_lambda_delta": [0.08, 0.18],
+            "team_xg_conversion_delta_pct": [2, 5],
+            "high_score_tail": "小幅上调或不变"
+          },
+          "when_unavailable": {
+            "team_attack_lambda_delta": [-0.35, -0.2],
+            "team_xg_conversion_delta_pct": [-10, -5],
+            "high_score_tail": "明显下调"
+          }
+        },
+        "interpretation": [
+          "哈兰德更直接影响高价值射门的兑现和 2 球以上输出尾部",
+          "面对强队或开放比赛时，他对单次转换价值的影响通常比对控球时间更重要",
+          "面对低位防守时，他的作用仍大，但更依赖输送质量而不是单点存在"
+        ],
+        "confidence": "low"
+      },
+      {
+        "player": "Martin Odegaard",
+        "role": "核心组织者、最后一传、定位球质量来源",
+        "sensitivity_placeholder": {
+          "when_confirmed_available": {
+            "team_attack_lambda_delta": [0.12, 0.25],
+            "chance_creation_quality_delta_pct": [6, 12],
+            "set_piece_quality": "上调"
+          },
+          "when_minutes_limited": {
+            "team_attack_lambda_delta": [0.05, 0.12],
+            "chance_creation_quality_delta_pct": [2, 6],
+            "set_piece_quality": "小幅上调"
+          },
+          "when_unavailable": {
+            "team_attack_lambda_delta": [-0.25, -0.12],
+            "chance_creation_quality_delta_pct": [-12, -6],
+            "set_piece_quality": "明显下调"
+          }
+        },
+        "interpretation": [
+          "厄德高更直接影响阵地战拆解低位防守的质量",
+          "他对机会创造和定位球的影响通常大于对反击终结的影响",
+          "如果挪威需要持续控球和最后一传，厄德高缺席的惩罚应高于开放对攻场景"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "combination_logic": [
+      "哈兰德缺席主要打击终结和高比分尾部，厄德高缺席主要打击创造和低位破防",
+      "两人同时缺席时，不建议简单线性相加，建议对 team_attack_lambda 额外增加非线性下修",
+      "无正式数据时，可把双缺席情境的额外非线性惩罚暂放在 -0.08 到 -0.15 lambda 区间，后续再校准"
+    ],
+    "required_packet_fields": [
+      "availability.status",
+      "availability.issue",
+      "availability.last_update",
+      "availability.available_for_squad",
+      "availability.available_to_start",
+      "availability.minutes_risk",
+      "availability.recent_minutes_30d",
+      "availability.training_status",
+      "availability.expected_role",
+      "availability.replacement_quality_band"
+    ]
+  },
+  "scoreline_distribution_notes": {
+    "objective": "提醒后续比分模型不要把挪威误建成稳定低比分队或稳定大开队",
+    "themes": [
+      {
+        "theme": "高比分尾部",
+        "why_it_matters": "挪威有条件在核心前场齐整时抬高 2 球和 3 球输出尾部，但这种上尾依赖核心可用性和对手风格，不应写成常驻属性",
+        "modeling_action": [
+          "允许比分分布上尾比同档球队略厚",
+          "上尾厚度必须跟随核心出场概率、对手防线质量和比赛节奏同步变化",
+          "不要只调均值，要同时检查离散度"
+        ]
+      },
+      {
+        "theme": "面对低位防守",
+        "why_it_matters": "挪威是否能把控球和推进转成持续高质量机会，稳定性可能弱于面对开放比赛",
+        "modeling_action": [
+          "提高对厄德高、定位球质量和边路输送效率的权重",
+          "若 tactics packet 显示对低位破防不稳定，应压缩 3 球以上尾部，保留 1 比 0 和 2 比 0 一类结果权重",
+          "检查是否存在高射门量但 xG 不同步抬升的风险"
+        ]
+      },
+      {
+        "theme": "面对强队时的防反风险",
+        "why_it_matters": "面对高压或强转换球队时，挪威可能在后场出球、二次防守和身后保护上暴露更高失球尾部",
+        "modeling_action": [
+          "对强队样本提高失球分布右尾警惕",
+          "不要只根据球星上限抬升挪威进球，也要同步审视被强队惩罚的概率",
+          "如 tactics packet 明示边后卫身后或中场第一道保护脆弱，应在总进球和双方进球市场上保留更大波动"
+        ]
+      }
+    ],
+    "distribution_cautions": [
+      "比分模型要强依赖对手风格，不宜把挪威写成固定模板",
+      "核心前场齐整时，挪威更像高上限但不完全稳态的队",
+      "核心前场不齐或对手压迫强时，比分上尾和净胜球分布都可能快速收缩"
+    ]
+  },
+  "group_stage_simulation_requirements": {
+    "objective": "定义挪威小组出线模拟的必需输入和模拟口径",
+    "required_inputs": [
+      "group.id",
+      "group.teams",
+      "group.full_fixture_list",
+      "group.tiebreak_rules",
+      "group.advance_rules",
+      "baseline_ratings_for_all_group_teams",
+      "match_level_rest_days",
+      "match_level_travel_context",
+      "match_level_venue_city_kickoff",
+      "match_level_injuries_suspensions_fitness",
+      "match_level_expected_lineup_or_start_probabilities",
+      "match_level_odds_snapshot_if_available"
+    ],
+    "important_optional_inputs": [
+      "weather_and_climate_context",
+      "altitude_or_pitch_context",
+      "tactical_matchup_notes",
+      "set_piece_attack_defense_split",
+      "best_third_place_rules_if_applicable"
+    ],
+    "simulation_design": {
+      "recommended_runs": 50000,
+      "match_engine": "先把单场转换为 expected goals 与 1X2 概率，再通过 Monte Carlo 联动全组赛程",
+      "scenario_layers": [
+        "核心球员齐整情景",
+        "一名核心前场受限情景",
+        "双核心受限情景"
+      ]
+    },
+    "notes": [
+      "挪威的小组出线不能只看纸面强弱，必须联动赛程顺序和关键球员可用性路径",
+      "如果第一轮或第二轮存在关键伤停不确定，至少要做 two-path 模拟",
+      "若末轮存在动力变化，应通过首发强度和节奏层修正，而不是手工指定赛果"
+    ]
+  },
+  "odds_integration_framework": {
+    "objective": "把赔率当作市场信号和校准器，而不是真值",
+    "repo_snapshot_note": "以下市场信息来自仓库内 2026-06-10 红队审查记录，只能视为当日快照，需要正式 odds packet 接管",
+    "repo_snapshot_signals": [
+      {
+        "market": "outright_winner",
+        "snapshot": "约 35-1",
+        "interpretation": "市场把挪威放在有一定上限、但非顶级冠军热门的区间"
+      },
+      {
+        "market": "group_qualification",
+        "snapshot": "约 -900",
+        "interpretation": "市场对挪威小组出线较乐观，但这类价格可能已吸收球星名气溢价"
+      },
+      {
+        "market": "group_winner",
+        "snapshot": "约 +275",
+        "interpretation": "市场承认挪威具备争小组头名能力，但并非压倒性领跑"
+      },
+      {
+        "market": "single_match_vs_iraq_1x2",
+        "snapshot": "无水位隐含胜率约 0.794",
+        "interpretation": "单场市场可以作为后续 match-level 校准样例，但不能反推全程结论"
+      }
+    ],
+    "calibration_steps": [
+      "抓取完整 outcome set 后先去水",
+      "把市场概率与模型概率并列，不直接覆盖模型",
+      "若 model minus market 持续偏离，优先检查重复计权、球星名气溢价和伤停假设",
+      "单场 1X2、让球和总进球要交叉读取，避免只看一个盘口做结论"
+    ],
+    "required_odds_fields": [
+      "bookmaker",
+      "market_type",
+      "selection",
+      "odds_decimal",
+      "captured_at",
+      "opening_odds_decimal",
+      "latest_odds_decimal",
+      "line_value_if_applicable"
+    ],
+    "derived_fields": [
+      "raw_implied_probability",
+      "overround",
+      "fair_probability",
+      "market_consensus",
+      "bookmaker_dispersion",
+      "market_move_delta",
+      "market_move_direction"
+    ],
+    "norway_specific_calibration_notes": [
+      "如果挪威的赛事级赔率明显强于模型，先检查是否存在球星叙事抬价",
+      "如果 1X2 和让球对挪威定价不一致，优先回查平局概率和净胜球分布",
+      "如果总进球市场持续上修，要回看核心前场可用性和对手节奏，而不是直接判定挪威会大开"
+    ]
+  },
+  "required_output_fields_for_next_stage": {
+    "team_packet_fields": [
+      "team.name",
+      "team.coach",
+      "ratings.elo",
+      "ratings.fifa_rank",
+      "ratings.opta_power",
+      "recent_form.matches",
+      "recent_form.weighted_summary",
+      "xg_profile.for",
+      "xg_profile.against",
+      "set_piece_profile.for",
+      "set_piece_profile.against",
+      "squad_value.total_eur",
+      "player_availability.key_players",
+      "goalkeeper.status",
+      "source_log"
+    ],
+    "tactics_packet_fields": [
+      "base_formation",
+      "secondary_formation",
+      "build_up_style",
+      "pressing_height",
+      "transition_attack_profile",
+      "transition_defense_risk",
+      "low_block_breaking_quality",
+      "set_piece_attack_notes",
+      "set_piece_defense_notes",
+      "haaland_service_routes",
+      "odegaard_creation_zones",
+      "fullback_exposure_notes"
+    ],
+    "match_level_output_fields": [
+      "match_id",
+      "input_readiness",
+      "baseline_strength_delta",
+      "adjustment_summary",
+      "expected_goals.team_a",
+      "expected_goals.team_b",
+      "probabilities.team_a_win",
+      "probabilities.draw",
+      "probabilities.team_b_win",
+      "scoreline_distribution",
+      "top_scorelines",
+      "confidence_level",
+      "confidence_interval",
+      "market_fair_probability",
+      "model_minus_market",
+      "risk_grade"
+    ],
+    "group_level_output_fields": [
+      "group_id",
+      "simulation_runs",
+      "avg_points",
+      "finish_1st",
+      "finish_2nd",
+      "finish_3rd",
+      "finish_4th",
+      "advance_probability",
+      "best_third_place_probability_if_applicable",
+      "key_sensitivity_drivers"
+    ],
+    "tournament_level_output_fields": [
+      "round_of_32",
+      "round_of_16",
+      "quarterfinal",
+      "semifinal",
+      "final",
+      "champion"
+    ]
+  },
+  "uncertainty_and_overconfidence_flags": {
+    "do_not_overstate": [
+      "不要把哈兰德和厄德高的俱乐部级输出直接平移到国家队",
+      "不要把预选赛或友谊赛顺风样本直接外推到世界杯高压对位",
+      "不要把市场看好直接写成有投注价值",
+      "不要在没有正式可用性确认前输出高置信比分或净胜球判断"
+    ],
+    "largest_model_risks": [
+      "重复计权风险：球星名气、市场价格、近期进球和身价可能在同一方向重复放大挪威",
+      "样本分层风险：弱对手样本可能高估进攻兑现，强对手样本不足可能低估防守脆弱性",
+      "可用性风险：核心前场的首发与分钟限制会先影响比分尾部，再影响胜平负",
+      "战术缺口风险：没有 tactics packet 时，低位破防与转换防守只能先做保守占位"
+    ],
+    "current_confidence": "low"
+  },
+  "handoff_notes": [
+    "优先等待并读取正式 team packet 和 tactics packet，再把本文件中的占位区间替换为真实数值",
+    "若主线程需要先行讨论挪威，只能使用本文件的框架、风险和字段清单，不应引用为最终概率",
+    "拿到 odds packet 后，先做去水概率和市场一致性检查，再决定是否校准 baseline",
+    "拿到关键球员 T-24h 与 T-75m 可用性后，先重算核心敏感度，再进入具体比赛预测"
+  ],
+  "source_dependencies": [
+    {
+      "type": "missing_primary_input",
+      "path": "K:\\worldcup\\data\\packets\\teams\\norway-team-packet.json"
+    },
+    {
+      "type": "missing_primary_input",
+      "path": "K:\\worldcup\\data\\packets\\tactics\\norway-tactics-packet.json"
+    },
+    {
+      "type": "repo_reference",
+      "path": "K:\\worldcup\\data\\reviews\\red_team\\norway-red-team-review.md"
+    }
+  ]
+}

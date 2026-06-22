@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T16:08:00+08:00",
+  "scope": "H组沙特队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "沙特", "en": "Saudi Arabia", "fifa_code": "KSA", "group": "H", "confederation": "AFC"},
+  "source_log_path": "K:/worldcup/data/source_logs/saudi-arabia-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["沙特 vs 乌拉圭", "西班牙 vs 沙特", "佛得角 vs 沙特"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Georgios Donis", "team_identity": "国内联赛默契强、世界杯经验足的亚洲队，强在速度和阶段性压迫，但对抗强度和防线稳定性是核心考题。", "likely_structure": ["4-2-3-1", "4-3-3"]},
+  "core_players_watch": [
+    {"player": "Salem Al-Dawsari", "role": "左路核心、内切创造和大赛关键球"},
+    {"player": "Firas Al-Buraikan", "role": "前场支点、反击终结和压迫"},
+    {"player": "Saleh Al-Shehri", "role": "禁区抢点和中锋轮换"},
+    {"player": "Saud Abdulhamid", "role": "右路推进、速度和攻守往返"},
+    {"player": "Mohamed Kanno", "role": "中场身体对抗、二点球和远射"},
+    {"player": "Hassan Tambakti", "role": "中卫对抗、补位和禁区防守"},
+    {"player": "Mohammed Al-Owais / Nawaf Al-Aqidi", "role": "门将位置需赛前确认"}
+  ],
+  "strengths": ["国内球员默契", "反击速度", "世界杯经验", "边路推进", "阶段性压迫"],
+  "risks": ["面对乌拉圭身体对抗吃亏", "防线集中度", "高空球和二点保护", "新帅体系磨合", "落入长时间被压制局面"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "沙特有爆冷履历，但不能把单场记忆直接当成稳定强度，需要看盘口是否给足乌拉圭身体优势。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI", "goalkeeper choice"]}
+}

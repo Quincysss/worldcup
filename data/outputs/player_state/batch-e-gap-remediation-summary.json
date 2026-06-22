@@ -1,0 +1,110 @@
+﻿[
+    {
+        "team":  "挪威",
+        "slug":  "norway",
+        "matched":  26,
+        "market_updates":  0,
+        "height_updates":  0,
+        "foot_updates":  1,
+        "bom_removed":  false
+    },
+    {
+        "team":  "法国",
+        "slug":  "france",
+        "matched":  26,
+        "market_updates":  0,
+        "height_updates":  26,
+        "foot_updates":  26,
+        "bom_removed":  false
+    },
+    {
+        "team":  "塞内加尔",
+        "slug":  "senegal",
+        "matched":  26,
+        "market_updates":  0,
+        "height_updates":  52,
+        "foot_updates":  52,
+        "bom_removed":  true
+    },
+    {
+        "team":  "伊拉克",
+        "slug":  "iraq",
+        "matched":  0,
+        "market_updates":  0,
+        "height_updates":  0,
+        "foot_updates":  0,
+        "bom_removed":  true
+    },
+    {
+        "team":  "阿根廷",
+        "slug":  "argentina",
+        "matched":  26,
+        "market_updates":  0,
+        "height_updates":  0,
+        "foot_updates":  0,
+        "bom_removed":  false
+    },
+    {
+        "team":  "阿尔及利亚",
+        "slug":  "algeria",
+        "matched":  25,
+        "market_updates":  0,
+        "height_updates":  24,
+        "foot_updates":  24,
+        "bom_removed":  false
+    },
+    {
+        "team":  "奥地利",
+        "slug":  "austria",
+        "matched":  26,
+        "market_updates":  0,
+        "height_updates":  0,
+        "foot_updates":  0,
+        "bom_removed":  true
+    },
+    {
+        "team":  "约旦",
+        "slug":  "jordan",
+        "matched":  16,
+        "market_updates":  0,
+        "height_updates":  0,
+        "foot_updates":  0,
+        "bom_removed":  true
+    },
+    {
+        "team":  "刚果金",
+        "slug":  "dr-congo",
+        "matched":  23,
+        "market_updates":  23,
+        "height_updates":  0,
+        "foot_updates":  0,
+        "bom_removed":  false
+    },
+    {
+        "team":  "乌兹别克斯坦",
+        "slug":  "uzbekistan",
+        "matched":  20,
+        "market_updates":  0,
+        "height_updates":  0,
+        "foot_updates":  0,
+        "bom_removed":  true
+    },
+    {
+        "team":  "克罗地亚",
+        "slug":  "croatia",
+        "matched":  26,
+        "market_updates":  0,
+        "height_updates":  0,
+        "foot_updates":  0,
+        "bom_removed":  false
+    },
+    {
+        "team":  "加纳",
+        "slug":  "ghana",
+        "matched":  25,
+        "market_updates":  0,
+        "height_updates":  0,
+        "foot_updates":  0,
+        "bom_removed":  true
+    }
+]

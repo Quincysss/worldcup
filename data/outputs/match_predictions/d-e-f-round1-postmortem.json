@@ -1,0 +1,60 @@
+{
+  "phase": "group_round_postmortem",
+  "status": "completed_match_review_no_pre_pick",
+  "updated_at": "2026-06-17T11:15:00+08:00",
+  "scope": "Postmatch reviews for started/completed Groups D, E and F. No local pre-match prediction files were found for these groups, so no hit-rate calculation is reported.",
+  "sources": [
+    {
+      "name": "ESPN World Cup fixtures/results",
+      "url": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "supports": ["Group D/E/F final scores"]
+    },
+    {
+      "name": "FIFA Match Schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["fixture reference"]
+    }
+  ],
+  "groups": [
+    {
+      "group": "D",
+      "matches": [
+        {"match": "United States vs Paraguay", "actual": "United States 4-1 Paraguay", "local_pre_match_prediction": null},
+        {"match": "Australia vs Turkiye", "actual": "Australia 2-0 Turkiye", "local_pre_match_prediction": null}
+      ],
+      "model_rules": [
+        "raise United States host energy and transition attack",
+        "raise Paraguay collapse risk after trailing",
+        "raise Australia physical and set-piece floor",
+        "downgrade Turkiye defensive transition until repaired"
+      ]
+    },
+    {
+      "group": "E",
+      "matches": [
+        {"match": "Germany vs Curacao", "actual": "Germany 7-1 Curacao", "local_pre_match_prediction": null},
+        {"match": "Cote d'Ivoire vs Ecuador", "actual": "Cote d'Ivoire 1-0 Ecuador", "local_pre_match_prediction": null}
+      ],
+      "model_rules": [
+        "raise Germany attack ceiling and press-to-chance conversion",
+        "raise Curacao collapse-after-first-goal risk",
+        "raise Cote d'Ivoire defensive floor and narrow-win path",
+        "downgrade Ecuador chance conversion but keep overall competitiveness alive"
+      ]
+    },
+    {
+      "group": "F",
+      "matches": [
+        {"match": "Netherlands vs Japan", "actual": "Netherlands 2-2 Japan", "local_pre_match_prediction": null},
+        {"match": "Sweden vs Tunisia", "actual": "Sweden 5-1 Tunisia", "local_pre_match_prediction": null}
+      ],
+      "model_rules": [
+        "raise Japan draw-against-favorite path",
+        "raise Netherlands defensive transition risk",
+        "raise Sweden aerial and set-piece edge",
+        "raise Tunisia collapse risk after trailing"
+      ]
+    }
+  ],
+  "aggregate_note": "These groups were missing first-round pre-match predictions, so the postmortem is a calibration baseline rather than prediction accuracy evaluation."
+}

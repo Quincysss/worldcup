@@ -1,0 +1,107 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Iraq",
+    "en": "Iraq",
+    "fifa_code": "IRQ",
+    "group": "I"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-11T00:45:00+08:00",
+  "updated_at": "2026-06-11T15:55:00+08:00",
+  "owner": "main-thread",
+  "scope": "Iraq tactical and coaching team_profile packet only",
+  "missing_fields": [
+    "video-backed pressing height and rest-defense review",
+    "full substitution timeline by match state",
+    "complete set-piece taker and target map",
+    "T-75m lineup"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\packets\\teams\\iraq-team-packet.json"
+  ],
+  "notes": [
+    "Main thread filled a compact tactical packet directly.",
+    "No match score prediction, group projection, champion prediction, or betting advice."
+  ],
+  "data": {
+    "coach_profile": {
+      "coach": "Graham Arnold",
+      "system_stability": "medium",
+      "tournament_pragmatism": "high",
+      "summary": "Arnold's Iraq should be treated as pragmatic first: compact shape, disciplined distances, direct outlets, and emotional control in underdog game states.",
+      "confidence": "medium"
+    },
+    "team_shape": {
+      "nominal_formations": [
+        "4-2-3-1",
+        "4-3-3",
+        "5-4-1 / 4-5-1 defensive variants"
+      ],
+      "in_possession_shape": "Likely cautious build-up with direct access to Aymen Hussein, wide support from Ali Jasim/Ibrahim Bayesh profiles, and Zidane Iqbal as the cleaner connector when Iraq can play through midfield.",
+      "out_of_possession_shape": "Compact medium/low block, often protecting central lanes first and forcing opponents wide.",
+      "confidence": "medium"
+    },
+    "key_roles": [
+      {
+        "player": "Aymen Hussein",
+        "role": "target striker, aerial outlet, penalty-box reference",
+        "confidence": "high"
+      },
+      {
+        "player": "Zidane Iqbal",
+        "role": "midfield connector, tempo relief, progression under pressure",
+        "confidence": "medium_high"
+      },
+      {
+        "player": "Ali Jasim",
+        "role": "wide spark, carrier, counterattack release",
+        "confidence": "medium_high"
+      },
+      {
+        "player": "Jalal Hassan",
+        "role": "experienced goalkeeper and box organizer",
+        "confidence": "medium"
+      }
+    ],
+    "phase_model": {
+      "attack": {
+        "summary": "Iraq's attack should be modeled as lower-volume but potentially efficient through direct play, second balls, set pieces and wide counters.",
+        "settled_attack": "low_medium",
+        "transition_attack": "medium",
+        "set_piece_attack": "medium_high",
+        "confidence": "medium"
+      },
+      "defense": {
+        "summary": "The defensive floor depends on block discipline, goalkeeper performance, and whether Iraq can keep opponents outside central shooting zones.",
+        "compactness": "medium_high",
+        "pressing": "low_medium",
+        "box_defense": "medium",
+        "transition_defense_risk": "medium_high_if_forced_to_chase",
+        "confidence": "medium"
+      }
+    },
+    "model_features": {
+      "attack_ceiling": "low_medium",
+      "defensive_floor": "medium",
+      "set_piece_attack": "medium_high",
+      "tempo_preference": "low_to_medium",
+      "transition_attack": "medium",
+      "transition_defense_risk": "medium_high",
+      "key_player_dependency": "high_on_Aymen_Hussein_and_midfield_outlet_quality",
+      "market_relevant_flags": [
+        "Aymen Hussein availability",
+        "Zidane Iqbal ability to escape pressure",
+        "early goal game-state swing",
+        "set-piece volume"
+      ]
+    },
+    "verification_questions": [
+      "Can Iraq progress the ball if opponents deny direct balls into Aymen Hussein?",
+      "Is the Spain 1-1 warm-up a repeatable defensive signal or friendly-sample noise?",
+      "How much does Ahmed Yahya's injury reduce wide/attacking options?",
+      "Does Iraq's low block survive sustained elite pressure without conceding high-quality cutbacks?"
+    ]
+  }
+}

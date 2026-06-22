@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:48:00+08:00",
+  "team": {"zh": "科特迪瓦", "en": "Côte d'Ivoire", "fifa_code": "CIV", "group": "E"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "E组中上竞争队，首轮 1-0 后积分和信心上调。", "recommended_weights": {"elo": 0.30, "fifa_ranking": 0.12, "recent_form": 0.18, "squad_quality": 0.16, "tactical_fit": 0.14, "round1_correction": 0.10}, "round1_correction": "defensive_confidence_up; transition_threat_up; chance_quality_needs_check"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "medium_high", "defensive_floor": "medium", "transition_attack": "high", "set_piece": "medium_high", "game_state_confidence": "positive"},
+  "availability_sensitivity": [{"player": "Amad Diallo", "lambda_for_impact": "high"}, {"player": "Franck Kessie", "control_and_duel_impact": "high"}, {"player": "Sebastien Haller", "box_presence_impact": "medium_high"}, {"player": "Evan Ndicka", "lambda_against_impact": "medium_high"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals"], "warning": "首轮赢球后反击威胁可能被重估，但对德国仍需校准强弱差。"},
+  "uncertainty_flags": ["T-75m lineup", "fresh odds", "official technical stats", "low-block endurance"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "xG/technical report", "defensive workload", "Germany rotation"],
+  "model_risk_notes": "对德国时科特迪瓦的均值未必高，但反击尾部需要保留；不能只按控球劣势压低冷门路径。"
+}

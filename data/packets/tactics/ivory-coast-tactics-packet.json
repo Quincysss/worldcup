@@ -1,0 +1,21 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:47:00+08:00",
+  "team": {"zh": "科特迪瓦", "en": "Côte d'Ivoire", "fifa_code": "CIV", "group": "E"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-3-3", "4-4-2 defensive phase"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "不一定追求长控球，重点是 Kessie/Fofana 的推进、边路速度和 Haller 支点。",
+    "pressing_profile": "可中前场压迫，但对德国更可能阶段性收缩等待反击。",
+    "defensive_block": "身体和对抗强，中低位防守可形成压迫感；长时间被德国控球时纪律是关键。",
+    "attacking_transition": "强项。Adingra、Amad、Diakite 等速度点能直接攻击德国身后。",
+    "set_piece": "进攻有高点，防守需避免二点保护丢失。"
+  },
+  "coach_tendencies": {"coach": "Emerse Faé", "risk_appetite": "medium", "game_state": "首轮绝杀后士气高，但第二轮对德国更需要控制攻守距离。"},
+  "post_round1_update": "1-0 厄瓜多尔后，比赛韧性和反击威胁上调；机会质量仍需官方数据确认。",
+  "tactical_risks": ["被德国持续压制", "后场出球", "进攻选择偏直接", "边后卫身后空间"],
+  "confidence_notes": {"high": ["反击速度", "身体对抗"], "medium": ["控球稳定性", "低位纪律"], "low_or_missing": ["T-75m首发", "官方技术报告"]},
+  "handoff_to_model": {"attack_ceiling": "medium_high", "defensive_floor": "medium", "transition_attack": "high", "set_piece": "medium_high"},
+  "handoff_to_red_team": ["首轮绝杀是否掩盖创造力问题", "对德国防线能否制造足够反击", "长时间无球后的体能"]
+}

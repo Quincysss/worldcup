@@ -1,0 +1,47 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:26:00+08:00",
+  "team": {"zh": "澳大利亚", "en": "Australia", "fifa_code": "AUS", "group": "D"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {
+    "default": "4-2-3-1",
+    "alternates": ["4-4-2", "5-4-1 defensive close"],
+    "confidence": "medium"
+  },
+  "phase_behaviour": {
+    "possession_structure": "控球不是最强项，更多通过边路传中、二点球、定位球和直接进攻制造威胁。",
+    "pressing_profile": "中位压迫和对抗为主，不宜盲目和美国拼全场高压。",
+    "defensive_block": "中后场身高、对抗和落位纪律是基本盘，Souttar/Ryan 等人提高防守地板。",
+    "attacking_transition": "中等，关键在第一脚能否找到边路或中锋支点。",
+    "set_piece": "重要武器，攻防两端都会影响模型。"
+  },
+  "coach_tendencies": {
+    "coach": "Tony Popovic",
+    "risk_appetite": "medium_low",
+    "substitution_pattern": "needs_recent_sample",
+    "game_state": "领先后倾向收紧空间和加强对抗，风险是退得过深被持续压制。"
+  },
+  "key_roles": [
+    "Souttar: 制空和定位球目标",
+    "Irvine: 中场对抗和二点球",
+    "Ryan: 门将经验与禁区管理",
+    "Goodwin: 传中和定位球脚法",
+    "Duke: 支点和压迫"
+  ],
+  "post_round1_update": "2-0 土耳其后，比赛管理、防守纪律和定位球权重上调；面对美国时必须处理边路速度和高压下出球。",
+  "tactical_risks": ["阵地战创造力有限", "被高压时出球质量", "边路一对一被速度冲击", "领先后过深防守"],
+  "confidence_notes": {
+    "high": ["身体对抗", "定位球重要性", "中低位纪律"],
+    "medium": ["转换质量", "领先后比赛管理"],
+    "low_or_missing": ["T-75m首发", "官方技术报告", "完整定位球图谱"]
+  },
+  "handoff_to_model": {
+    "attack_ceiling": "medium",
+    "defensive_floor": "medium_high",
+    "transition_attack": "medium",
+    "set_piece": "high",
+    "game_management": "positive"
+  },
+  "handoff_to_red_team": ["首轮胜利含金量是否高估", "面对美国边路速度是否吃亏", "领先后过深防守是否变成长期被压"]
+}

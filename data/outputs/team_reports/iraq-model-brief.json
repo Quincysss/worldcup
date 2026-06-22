@@ -1,0 +1,110 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Iraq",
+    "en": "Iraq",
+    "fifa_code": "IRQ",
+    "group": "I"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-11T00:45:00+08:00",
+  "updated_at": "2026-06-11T15:55:00+08:00",
+  "owner": "main-thread",
+  "scope": "Iraq model input brief for team_profile only",
+  "missing_fields": [
+    "full last-10 table",
+    "exact Opta rank",
+    "player-level availability table",
+    "odds movement history",
+    "T-24h and T-75m inputs"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\packets\\teams\\iraq-team-packet.json",
+    "K:\\worldcup\\data\\packets\\tactics\\iraq-tactics-packet.json"
+  ],
+  "notes": [
+    "Model input only; no score, W/D/L, group advancement, champion prediction, or betting advice."
+  ],
+  "data": {
+    "baseline_strength_model": {
+      "tier": "longshot_underdog",
+      "relative_group_position": "market and rating baseline place Iraq below France, Senegal and Norway, but recent warm-ups suggest a non-zero upset-resistance profile.",
+      "inputs_to_weight": [
+        {
+          "factor": "FIFA ranking",
+          "current_value": 57,
+          "weight_guidance": "medium"
+        },
+        {
+          "factor": "Elo",
+          "current_value": "1602 / rank 62 snapshot",
+          "weight_guidance": "medium_high"
+        },
+        {
+          "factor": "squad value",
+          "current_value": "about EUR 17.45m",
+          "weight_guidance": "medium"
+        },
+        {
+          "factor": "recent warm-ups",
+          "current_value": "Spain 1-1, Andorra 0-1 Iraq, Venezuela 1-2 Iraq",
+          "weight_guidance": "medium"
+        },
+        {
+          "factor": "market",
+          "current_value": "+50000 winner, +8000 Group I winner in one snapshot",
+          "weight_guidance": "medium"
+        }
+      ],
+      "confidence": "medium"
+    },
+    "lambda_xg_sensitivity": [
+      {
+        "player_or_unit": "Aymen Hussein",
+        "availability_effect": "attack_lambda_minus_0.12_to_0.22_if_limited_or_absent",
+        "reason": "Iraq's direct play, box occupation and set-piece threat depend heavily on him.",
+        "confidence": "medium_high"
+      },
+      {
+        "player_or_unit": "Zidane Iqbal",
+        "availability_effect": "attack_lambda_minus_0.05_to_0.10_and_turnover_risk_plus_if_absent",
+        "reason": "He is one of the few profiles who can connect under pressure.",
+        "confidence": "medium"
+      },
+      {
+        "player_or_unit": "Ahmed Yahya injury",
+        "availability_effect": "wide_depth_and_rotation_penalty",
+        "reason": "Hamstring injury and replacement reduce certainty around wide/attacking depth.",
+        "confidence": "medium"
+      }
+    ],
+    "style_modeling_notes": {
+      "low_block_resistance": "Iraq can reduce opponent tempo through compactness, but sustained pressure against elite attackers raises late concession risk.",
+      "attack_volume": "Model should not overstate open-play shot volume.",
+      "set_piece_path": "Set pieces and Aymen Hussein aerial threat are important non-open-play paths.",
+      "game_state": "Early concession is especially damaging because Iraq are less suited to chasing high-tempo matches.",
+      "draw_gravity": "Higher than raw squad value would imply when Iraq keep match tempo low."
+    },
+    "market_calibration": {
+      "interpretation": "Market treats Iraq as a major longshot. Do not erase the gap, but do not round them down to zero because compact underdogs can create low-event variance.",
+      "winner_market": {
+        "american_odds": 50000,
+        "decimal_odds": 501.0,
+        "raw_implied_probability": 0.001996
+      },
+      "group_winner_market": {
+        "american_odds": 8000,
+        "decimal_odds": 81.0,
+        "raw_implied_probability": 0.01235
+      }
+    },
+    "uncertainty_flags": [
+      "Friendly sample uncertainty",
+      "Low squad-value baseline vs recent defensive confidence",
+      "Aymen Hussein dependency",
+      "Ahmed Yahya injury and rotation impact",
+      "Ability to chase games"
+    ]
+  }
+}

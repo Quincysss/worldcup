@@ -1,0 +1,255 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Czechia",
+    "en": "Czechia",
+    "fifa_code": "CZE",
+    "group": "A"
+  },
+  "match": null,
+  "status": "partial",
+  "created_at": "2026-06-11T16:25:00+08:00",
+  "updated_at": "2026-06-11T17:06:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Czechia tactical packet only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "full set-piece taker and target map",
+    "video-backed wing-exposure and transition review",
+    "complete lineup-linked qualifying sample"
+  ],
+  "source_log": [
+    {
+      "source": "FIFA Czechia squad page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/czechia/squad",
+      "note": "Current World Cup squad page."
+    },
+    {
+      "source": "UEFA Czechia vs Croatia report",
+      "url": "https://www.uefa.com/european-qualifiers/match/2044257--czechia-vs-croatia/",
+      "note": "Coach comment after the 0-0 draw and match context against a strong opponent."
+    },
+    {
+      "source": "UEFA Czechia vs Croatia line-ups",
+      "url": "https://www.uefa.com/european-qualifiers/match/2044257--czechia-vs-croatia/lineups/",
+      "note": "Lineup reference for a high-value recent match."
+    },
+    {
+      "source": "UEFA Faroe Islands vs Czechia line-ups",
+      "url": "https://www.uefa.com/european-qualifiers/match/2044285--faroe-islands-vs-czechia/lineups/",
+      "note": "Useful for shape comparison against a weaker opponent."
+    },
+    {
+      "source": "UEFA Montenegro vs Czechia line-ups",
+      "url": "https://www.uefa.com/european-qualifiers/match/2044223--montenegro-vs-czechia/lineups/",
+      "note": "Useful recent lineup reference in a competitive away game."
+    },
+    {
+      "source": "UEFA Euro 2024 team guide",
+      "url": "https://es.uefa.com/uefaeuro/history/news/028d-1b058a1a388d-5665645fc203-1000--uefa-euro-2024-meet-the-24-teams/",
+      "note": "Background on Ivan Hasek and positive-attacking intent."
+    }
+  ],
+  "notes": [
+    "Deepening pass completed on 2026-06-11.",
+    "Current phase is team_profile only; no score, group, champion, or betting output."
+  ],
+  "fan_summary_en": "Czechia are the kind of team that can make a match feel old-fashioned in the most dangerous way: crosses, second balls, Soucek chaos, Schick finishing, and enough structure to keep you uncomfortable for 90 minutes.",
+  "data": {
+    "analysis_status": "partial",
+    "confidence_overall": "medium_high",
+    "sample_summary": {
+      "primary_window": "2025-2026 European qualifying sample and current World Cup squad context",
+      "coach": "Ivan Hasek",
+      "sample_quality": "medium_high",
+      "notes": [
+        "Uses FIFA and UEFA official material plus the local data packet.",
+        "A broader event-level sample would sharpen the exact balance between back-three and back-four usage."
+      ]
+    },
+    "coach_profile": {
+      "coach": "Ivan Hasek",
+      "system_stability": "medium",
+      "selection_stability": "medium_high",
+      "preferred_systems": [
+        "3-4-2-1",
+        "4-2-3-1",
+        "4-3-3"
+      ],
+      "tournament_pragmatism": "high",
+      "summary": "Hasek publicly talks about positive football, but in tournament reality Czechia still project as a physically assertive, structure-first side. They can alter the nominal shape, yet the core identity remains direct service, second-ball aggression, and strong central duel presence.",
+      "confidence": "medium_high"
+    },
+    "team_shape": {
+      "nominal_formations": [
+        "3-4-2-1",
+        "4-2-3-1",
+        "4-3-3"
+      ],
+      "in_possession_shape": "Usually built to feed a strong central striker, attack from crossing areas, and keep enough midfield or wingback presence for second phases.",
+      "out_of_possession_shape": "Can defend in a compact mid/low block with strong central duel orientation, whether from a back three or a flatter back four.",
+      "role_asymmetry": [
+        "Schick is the focal point rather than one interchangeable attacker among many.",
+        "Soucek's late-box timing and aerial role distort the midfield shape in attacking phases."
+      ],
+      "confidence": "medium_high"
+    },
+    "key_roles": [
+      {
+        "role": "central_goal_reference",
+        "players": [
+          "Patrik Schick"
+        ],
+        "note": "The clearest single-point attacking reference, combining penalty-box finishing with enough link presence to hold direct service.",
+        "confidence": "high"
+      },
+      {
+        "role": "late_box_and_set_piece_engine",
+        "players": [
+          "Tomas Soucek"
+        ],
+        "note": "Essential for aerial power, second balls, and late-arriving central damage.",
+        "confidence": "high"
+      },
+      {
+        "role": "creative_support",
+        "players": [
+          "Antonin Barak",
+          "Pavel Sulc",
+          "Lukas Provod"
+        ],
+        "note": "This layer determines whether Czechia can create variety beyond early service into Schick and Soucek.",
+        "confidence": "medium"
+      },
+      {
+        "role": "wide_service_and_balance",
+        "players": [
+          "David Jurasek",
+          "Vladimir Coufal"
+        ],
+        "note": "Wide delivery and defensive width management are central to the Czechia game model.",
+        "confidence": "medium_high"
+      }
+    ],
+    "phase_model": {
+      "attack": {
+        "summary": "Czechia's attack is built on Schick finishing, Soucek's secondary threat, and repeated wide service. They are dangerous without needing huge possession shares.",
+        "crossing_attack": "high",
+        "second_ball_attack": "high",
+        "settled_attack_organization": "medium",
+        "transition_attack": "medium",
+        "set_piece_attack": "high",
+        "notes": [
+          "When Schick is well supplied, Czechia can create good-value box pressure quickly.",
+          "Set pieces and restarts are not secondary decorations; they are core tactical weapons."
+        ],
+        "confidence": "high"
+      },
+      "defense": {
+        "summary": "Czechia defend with physical central presence and a willingness to sit in a disciplined block. Their biggest problems appear when quick opponents stretch them wide or force repeated recovery sprints.",
+        "compact_block": "high",
+        "pressing": "medium",
+        "recovery_block": "medium_high",
+        "center_back_protection": "medium_high",
+        "midfield_screen": "medium_high",
+        "wide_transition_risk": "medium",
+        "notes": [
+          "The defensive model is more about structure and duel winning than all-phase front-foot pressing.",
+          "Fast wide overloads can pull Czechia into less comfortable defensive races."
+        ],
+        "confidence": "medium_high"
+      },
+      "set_pieces": {
+        "attack": "One of Czechia's clearest strengths, driven by size, timing, and delivery into crowded central zones.",
+        "defense": "Generally reliable in aerial terms, though the exact full match-state mapping of markers and targets still needs expansion.",
+        "confidence": "high"
+      }
+    },
+    "coach_tendencies": {
+      "leading_adjustments": "When ahead, Czechia are likely to protect central duels, preserve aerial security, and continue to value territory and service rather than chasing stylistic dominance.",
+      "trailing_adjustments": "When trailing, they can increase crossing volume, commit more bodies around Schick and Soucek, and lean even harder on second phases and set pieces.",
+      "substitution_resources": "medium",
+      "knockout_conservatism": "high",
+      "summary": "Hasek may speak about positive football, but the current competitive picture still points to a team more comfortable making matches rugged, direct, and physically loaded than turning them into open technical contests.",
+      "confidence": "medium_high"
+    },
+    "model_features": {
+      "attack_ceiling": {
+        "value": "medium",
+        "confidence": "medium_high",
+        "note": "Good enough to punish teams that lose box control, but less explosive than top transition-heavy sides."
+      },
+      "defensive_floor": {
+        "value": "medium",
+        "confidence": "medium_high",
+        "note": "Structure and physicality help, but pace stress can lower the floor."
+      },
+      "set_piece_attack": {
+        "value": "high",
+        "confidence": "high",
+        "note": "A signature weapon."
+      },
+      "tempo_preference": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "Czechia are comfortable in stoppage-heavy, duel-heavy scripts rather than constant speed."
+      },
+      "transition_attack": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "Useful, but not the team's clearest identity edge."
+      },
+      "transition_defense_risk": {
+        "value": "medium",
+        "confidence": "medium",
+        "note": "The risk rises when wide spaces open and repeated recovery runs are required."
+      },
+      "key_player_dependency": {
+        "value": "high",
+        "confidence": "high",
+        "note": "Schick and Soucek shape the entire game model more than most star pairs on comparable teams."
+      },
+      "market_relevant_flags": [
+        {
+          "factor": "Schick availability and touch quality",
+          "impact_area": "1x2/totals/handicap",
+          "note": "He is the central attacking reference that organizes the rest of the chance profile."
+        },
+        {
+          "factor": "Soucek box influence",
+          "impact_area": "totals/handicap",
+          "note": "His late runs and aerial impact are central to second-phase danger."
+        },
+        {
+          "factor": "whether the opponent can stretch Czechia wide",
+          "impact_area": "totals/1x2",
+          "note": "Wide speed and overload pressure can lower Czechia's defensive comfort."
+        }
+      ]
+    },
+    "verification_questions": [
+      {
+        "claim_id": "cze-001",
+        "claim": "Czechia's core identity remains direct service, second balls, and set-piece pressure regardless of nominal formation.",
+        "confidence": "high",
+        "why_challengeable": "Needs a larger tactical sample to separate shape variation from identity variation.",
+        "challenge_type": "opponent_specific"
+      },
+      {
+        "claim_id": "cze-002",
+        "claim": "Schick and Soucek are the two main structural hinges of the whole attack.",
+        "confidence": "high",
+        "why_challengeable": "Should be tested against matches where the creative layer carried more of the burden.",
+        "challenge_type": "small_sample"
+      },
+      {
+        "claim_id": "cze-003",
+        "claim": "Fast wide attacks are the most reliable way to stress Czechia defensively.",
+        "confidence": "medium",
+        "why_challengeable": "Needs video-backed transition and wing-defense review across a wider sample.",
+        "challenge_type": "source_conflict"
+      }
+    ],
+    "completion_note": "Deep version completed to a usable handoff level, but packet remains partial pending full lineup-linked sample expansion and a complete set-piece map."
+  }
+}

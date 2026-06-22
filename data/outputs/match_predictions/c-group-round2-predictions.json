@@ -1,0 +1,122 @@
+{
+  "phase": "group_round_prediction",
+  "status": "refreshed_after_c_roster_completion",
+  "updated_at": "2026-06-20T00:00:00+08:00",
+  "group": "C",
+  "round": 2,
+  "scope": "C group second-round score and 1X2 probabilities, recalculated after C-group roster/player_state completion. Not betting advice.",
+  "source_log": [
+    {
+      "name": "FIFA Match Schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["fixture reference"]
+    },
+    {
+      "name": "ESPN fixture page Haiti vs Brazil",
+      "url": "https://www.espn.com/soccer/match/_/gameId/760444/haiti-brazil",
+      "supports": ["fixture status check"]
+    },
+    {
+      "name": "FourFourTwo Brazil squad",
+      "url": "https://www.fourfourtwo.com/team/brazil-world-cup-2026-squad",
+      "supports": ["Brazil squad baseline"]
+    },
+    {
+      "name": "FourFourTwo Scotland squad",
+      "url": "https://www.fourfourtwo.com/team/scotland-world-cup-2026-squad",
+      "supports": ["Scotland squad baseline"]
+    },
+    {
+      "name": "Sky Sports Scotland squad numbers",
+      "url": "https://www.skysports.com/football/news/12017/13550179/world-cup-2026-scotland-squad-numbers-revealed-with-angus-gunn-handed-no-1-jersey-ahead-of-craig-gordon",
+      "supports": ["Scotland shirt numbers", "Tyler Fletcher replaces Billy Gilmour"]
+    },
+    {
+      "name": "Local C-group player_state files",
+      "url": "E:\\worldcup\\data\\outputs\\player_state",
+      "supports": ["form_status_1_5", "availability", "local roster completion"]
+    }
+  ],
+  "standings_before_round": [
+    {"team": "Scotland", "points": 3, "goal_difference": 1},
+    {"team": "Brazil", "points": 1, "goal_difference": 0},
+    {"team": "Morocco", "points": 1, "goal_difference": 0},
+    {"team": "Haiti", "points": 0, "goal_difference": -1}
+  ],
+  "matches": [
+    {
+      "match": "Brazil vs Haiti",
+      "date_label": "2026-06-19 local / 2026-06-20 Beijing",
+      "expected_goals": {"brazil": 2.35, "haiti": 0.38},
+      "prediction": {
+        "score": {"brazil": 2, "haiti": 0},
+        "wdl_lean": "Brazil win",
+        "confidence": "medium_high"
+      },
+      "model_probabilities": {"brazil": 82, "draw": 13, "haiti": 5},
+      "scoreline_tiers": [
+        {"score": "2-0", "tier": "main"},
+        {"score": "3-0", "tier": "secondary"},
+        {"score": "1-0", "tier": "efficiency-risk cover"},
+        {"score": "2-1", "tier": "Haiti counter/set-piece cover"},
+        {"score": "4-0", "tier": "early-goal blowout path"}
+      ],
+      "roster_adjustments": [
+        "Neymar marked injury/probable_unavailable, lowering Brazil creative ceiling and deep-handicap confidence.",
+        "Vinicius scored in round one and remains Brazil's clearest positive form signal.",
+        "Haiti showed low-block resistance against Scotland, but attacking conversion remains weak."
+      ],
+      "betting_status": "discussion_only_hold",
+      "quality_notes": [
+        "T-75m lineups missing.",
+        "Official betting odds and China Sports Lottery lines missing.",
+        "If final result is already available, convert this file to post-match review instead of treating it as live forecast."
+      ]
+    },
+    {
+      "match": "Scotland vs Morocco",
+      "date_label": "2026-06-19 local / 2026-06-20 Beijing",
+      "expected_goals": {"scotland": 0.78, "morocco": 1.12},
+      "prediction": {
+        "score": {"scotland": 0, "morocco": 1},
+        "wdl_lean": "Morocco unbeaten; away win slightly preferred; draw cover important",
+        "confidence": "medium_low"
+      },
+      "model_probabilities": {"scotland": 24, "draw": 34, "morocco": 42},
+      "scoreline_tiers": [
+        {"score": "0-1", "tier": "main"},
+        {"score": "1-1", "tier": "key cover"},
+        {"score": "0-0", "tier": "low-tempo cover"},
+        {"score": "1-0", "tier": "Scotland set-piece path"},
+        {"score": "1-2", "tier": "Morocco late-push path"}
+      ],
+      "roster_adjustments": [
+        "Morocco round-one player states are strong, especially Saibari, Bouaddi and Mazraoui.",
+        "Scotland's McGinn and Robertson are clear positive state inputs.",
+        "Billy Gilmour injury and Tyler Fletcher replacement reduce Scotland midfield-control confidence.",
+        "Scotland already have three points, increasing draw acceptance and lowering tempo."
+      ],
+      "betting_status": "discussion_only_hold",
+      "quality_notes": [
+        "T-75m lineups missing.",
+        "Official betting odds and China Sports Lottery lines missing.",
+        "McTominay/McKenna availability needs final pre-match check."
+      ]
+    }
+  ],
+  "projected_table_if_predictions_hit": [
+    {"team": "Brazil", "points": 4, "note": "back in control, but final match versus Scotland still matters"},
+    {"team": "Morocco", "points": 4, "note": "strong qualification position before facing Haiti"},
+    {"team": "Scotland", "points": 3, "note": "still alive, but Brazil match becomes high pressure"},
+    {"team": "Haiti", "points": 0, "note": "near elimination pressure"}
+  ],
+  "validation_targets": {
+    "probability_sums": "each model 1X2 set sums to 100",
+    "known_limitations": [
+      "T-75m lineups pending",
+      "injury and suspension data require final refresh",
+      "public odds snapshots are not used as executable betting signal",
+      "China Sports Lottery official odds and handicap must be checked before ticket discussion"
+    ]
+  }
+}

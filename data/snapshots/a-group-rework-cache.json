@@ -1,0 +1,225 @@
+{
+  "phase": "roster_staff_table_rework",
+  "group": "A",
+  "status": "in_progress",
+  "created_at": "2026-06-18T00:00:00+08:00",
+  "updated_at": "2026-06-18T12:09:00+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "A组成员表返工缓存；用于 ESPN/Wikipedia/Wikidata 拉取与翻译缓存。",
+  "missing_fields": [
+    "wiki_title_cache",
+    "wikidata_entity_cache",
+    "espn_match_cache",
+    "subagent_translation_notes"
+  ],
+  "source_log": [
+    {
+      "source": "subagent researcher",
+      "agent_scope": "south-africa translation/staff",
+      "captured_at": "2026-06-18T12:09:00+08:00"
+    }
+  ],
+  "notes": [
+    "先落缓存骨架，后续逐步写入。",
+    "已写入南非队子agent返回的中文名/中文俱乐部名/staff 线索。"
+  ],
+  "cache": {
+    "wiki_pages": {},
+    "wikidata_entities": {},
+    "espn_matches": {},
+    "subagent_results": {
+      "south-africa": {
+        "captured_at": "2026-06-18T11:27:28+08:00",
+        "roster_translations": {
+          "Ronwen Williams": {
+            "chinese_name": "罗文·威廉姆斯",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "马梅洛迪日落",
+            "club_name_cn_status": "common_translation"
+          },
+          "Thabang Matuludi": {
+            "chinese_name": "塔班·马图鲁迪",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "波洛夸内城",
+            "club_name_cn_status": "transliterated"
+          },
+          "Khulumani Ndamane": {
+            "chinese_name": "库鲁马尼·恩达马内",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "马梅洛迪日落",
+            "club_name_cn_status": "common_translation"
+          },
+          "Teboho Mokoena": {
+            "chinese_name": "特博霍·莫科埃纳",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "马梅洛迪日落",
+            "club_name_cn_status": "common_translation"
+          },
+          "Thalente Mbatha": {
+            "chinese_name": "塔伦特·姆巴塔",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "奥兰多海盗",
+            "club_name_cn_status": "common_translation"
+          },
+          "Aubrey Modiba": {
+            "chinese_name": "奥布雷·莫迪巴",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "马梅洛迪日落",
+            "club_name_cn_status": "common_translation"
+          },
+          "Oswin Appollis": {
+            "chinese_name": "奥斯文·阿波利斯",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "奥兰多海盗",
+            "club_name_cn_status": "common_translation"
+          },
+          "Tshepang Moremi": {
+            "chinese_name": "切邦·莫雷米",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "奥兰多海盗",
+            "club_name_cn_status": "common_translation"
+          },
+          "Lyle Foster": {
+            "chinese_name": "莱尔·福斯特",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "伯恩利",
+            "club_name_cn_status": "common_translation"
+          },
+          "Relebohile Mofokeng": {
+            "chinese_name": "雷勒博希勒·莫福肯",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "奥兰多海盗",
+            "club_name_cn_status": "common_translation"
+          },
+          "Themba Zwane": {
+            "chinese_name": "滕巴·祖瓦内",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "马梅洛迪日落",
+            "club_name_cn_status": "common_translation"
+          },
+          "Thapelo Maseko": {
+            "chinese_name": "塔佩洛·马塞科",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "AEL利马索尔",
+            "club_name_cn_status": "common_translation"
+          },
+          "Sphephelo Sithole": {
+            "chinese_name": "斯菲佩洛·西索勒",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "通德拉",
+            "club_name_cn_status": "common_translation"
+          },
+          "Mbekezeli Mbokazi": {
+            "chinese_name": "姆贝凯泽利·姆博卡齐",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "芝加哥火焰",
+            "club_name_cn_status": "common_translation"
+          },
+          "Iqraam Rayners": {
+            "chinese_name": "伊克拉姆·雷纳斯",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "马梅洛迪日落",
+            "club_name_cn_status": "common_translation"
+          },
+          "Sipho Chaine": {
+            "chinese_name": "西波·夏因",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "奥兰多海盗",
+            "club_name_cn_status": "common_translation"
+          },
+          "Evidence Makgopa": {
+            "chinese_name": "埃维登斯·马科帕",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "奥兰多海盗",
+            "club_name_cn_status": "common_translation"
+          },
+          "Samukele Kabini": {
+            "chinese_name": "萨穆凯莱·卡比尼",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "莫尔德",
+            "club_name_cn_status": "common_translation"
+          },
+          "Nkosinathi Sibisi": {
+            "chinese_name": "恩科西纳提·西比西",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "奥兰多海盗",
+            "club_name_cn_status": "common_translation"
+          },
+          "Khuliso Mudau": {
+            "chinese_name": "库利索·穆道",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "马梅洛迪日落",
+            "club_name_cn_status": "common_translation"
+          },
+          "Ime Okon": {
+            "chinese_name": "伊梅·奥孔",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "汉诺威96",
+            "club_name_cn_status": "common_translation"
+          },
+          "Ricardo Goss": {
+            "chinese_name": "里卡多·戈斯",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "西韦莱莱",
+            "club_name_cn_status": "transliterated"
+          },
+          "Jayden Adams": {
+            "chinese_name": "杰登·亚当斯",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "马梅洛迪日落",
+            "club_name_cn_status": "common_translation"
+          },
+          "Olwethu Makhanya": {
+            "chinese_name": "奥勒韦图·马卡尼亚",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "费城联合",
+            "club_name_cn_status": "common_translation"
+          },
+          "Kamogelo Sebelebele": {
+            "chinese_name": "卡莫格洛·塞贝勒贝勒",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "奥兰多海盗",
+            "club_name_cn_status": "common_translation"
+          },
+          "Bradley Cross": {
+            "chinese_name": "布拉德利·克罗斯",
+            "chinese_name_status": "transliterated",
+            "club_name_cn": "凯萨酋长",
+            "club_name_cn_status": "common_translation"
+          }
+        },
+        "confirmed_staff": [
+          {
+            "role": "head coach",
+            "english_name": "Hugo Broos",
+            "chinese_name": "雨果·布罗斯",
+            "status": "confirmed"
+          },
+          {
+            "role": "assistant coach",
+            "english_name": "Helman Mkhalele",
+            "chinese_name": "赫尔曼·姆卡莱莱",
+            "status": "confirmed"
+          },
+          {
+            "role": "team doctor",
+            "english_name": "Tshepo Molobi",
+            "chinese_name": "切波·莫洛比",
+            "status": "confirmed"
+          },
+          {
+            "role": "head performance analyst",
+            "english_name": "Sinesipho Mali",
+            "chinese_name": "西内西福·马里",
+            "status": "confirmed"
+          }
+        ],
+        "unconfirmed_staff_roles": [
+          "goalkeeping coach",
+          "fitness coach",
+          "physiotherapist"
+        ]
+      }
+    }
+  }
+}

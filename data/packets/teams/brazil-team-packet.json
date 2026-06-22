@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "巴西", "en": "Brazil", "fifa_code": "BRA", "group": "C"},
+  "status": "deep_partial",
+  "updated_at": "2026-06-12T19:30:00+08:00",
+  "owner": "main-thread",
+  "scope": "C组巴西 team_profile；不输出比分、胜平负、出线、冠军或投注建议。",
+  "source_log_path": "K:\\worldcup\\data\\source_logs\\brazil-team-source-log.json",
+  "fixtures_context": {
+    "group_matches": ["巴西 vs 摩洛哥", "巴西 vs 海地", "苏格兰 vs 巴西"],
+    "needs_official_time_refresh": true
+  },
+  "data": {
+    "coach": "Carlo Ancelotti",
+    "profile": "C组纸面最强队，前场天赋和阵容深度非常突出；真正问题不是上限，而是如何把明星攻击线、攻守平衡和淘汰赛级稳定性整合起来。",
+    "core_players_watch": ["Vinicius Junior", "Rodrygo", "Raphinha", "Bruno Guimaraes", "Lucas Paqueta", "Marquinhos", "Eder Militao", "Alisson"],
+    "style_tags": ["边路爆点", "高天赋前场", "阵地战个人破局", "Ancelotti平衡", "高控球上限"],
+    "strengths": ["个人能力", "攻击深度", "边路一对一", "大赛经验", "可调整阵型"],
+    "risks": ["明星角色重叠", "攻转守保护", "中场防守覆盖", "热门压力", "面对强硬低位时效率波动"],
+    "data_confidence": "medium_high"
+  },
+  "missing_fields": ["official_matchday_squad_refresh", "T-24h injury/training", "T-75m lineup", "fresh odds", "official suspension check"],
+  "data_quality": {"completion_level": "usable_deep_partial", "reason_not_complete": "临场名单、伤停、首发与盘口仍需赛前复核。"}
+}

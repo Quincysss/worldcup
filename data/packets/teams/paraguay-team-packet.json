@@ -1,0 +1,50 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:25:00+08:00",
+  "scope": "D组巴拉圭队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {
+    "zh": "巴拉圭",
+    "en": "Paraguay",
+    "fifa_code": "PAR",
+    "group": "D",
+    "confederation": "CONMEBOL"
+  },
+  "source_log_path": "K:/worldcup/data/source_logs/paraguay-team-source-log.json",
+  "fixtures_context": {
+    "round1_result_project_context": "美国 4-1 巴拉圭",
+    "remaining_group_matches": ["土耳其 vs 巴拉圭", "巴拉圭 vs 澳大利亚"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Gustavo Alfaro",
+    "team_identity": "南美对抗、纪律和低位韧性是传统底盘；首轮大败后必须修复防线速度、边路保护和情绪管理。",
+    "likely_structure": ["4-2-3-1", "4-4-2", "5-4-1 close"]
+  },
+  "core_players_watch": [
+    {"player": "Miguel Almiron", "role": "反击推进和右/中路速度点"},
+    {"player": "Julio Enciso", "role": "前场创造、远射和肋部单点"},
+    {"player": "Diego Gomez", "role": "中场推进与禁区前支援"},
+    {"player": "Matias Rojas", "role": "左脚定位球和传中"},
+    {"player": "Gustavo Gomez", "role": "防线领袖和空中对抗"},
+    {"player": "Junior Alonso", "role": "中卫经验和低位落位"},
+    {"player": "Ramon Sosa", "role": "边路冲击和反击出口"}
+  ],
+  "strengths": ["南美身体对抗", "反击单点", "定位球潜力", "中卫经验", "低位防守韧性"],
+  "risks": ["首轮大败心理修复", "防线速度", "边路回防", "黄牌与纪律", "早丢球后阵型容易松动"],
+  "availability_and_discipline": {
+    "injuries": "needs_refresh",
+    "suspensions": "needs_refresh",
+    "fitness": "T-24h_training_required",
+    "starting_xi": "T-75m_required"
+  },
+  "market_placeholder": {
+    "odds_needed": ["1x2", "asian_handicap", "total_goals"],
+    "market_note": "首轮 1-4 后市场可能过度惩罚巴拉圭，模型需要区分结构性问题和单场崩盘。"
+  },
+  "data_quality": {
+    "completion_level": "usable_deep_partial",
+    "confidence": "medium",
+    "missing_fields": ["official technical report", "fresh discipline", "fresh injuries", "fresh odds", "confirmed starting XI"]
+  }
+}

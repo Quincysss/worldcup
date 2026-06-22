@@ -1,0 +1,25 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T18:23:00+08:00",
+  "scope": "J组阿根廷队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "阿根廷", "en": "Argentina", "fifa_code": "ARG", "group": "J", "confederation": "CONMEBOL"},
+  "source_log_path": "K:/worldcup/data/source_logs/argentina-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["阿根廷 vs 阿尔及利亚", "阿根廷 vs 奥地利", "约旦 vs 阿根廷"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Lionel Scaloni", "team_identity": "卫冕冠军底盘仍在，控节奏、情绪管理和关键球处理是最大优势，但核心年龄与 Messi 出场负荷必须单独复核。", "likely_structure": ["4-3-3", "4-4-2", "4-2-3-1"]},
+  "core_players_watch": [
+    {"player": "Lionel Messi", "role": "前场组织、最后一传、定位球和比赛节奏"},
+    {"player": "Lautaro Martinez", "role": "禁区终结、压迫和无球跑动"},
+    {"player": "Julian Alvarez", "role": "前场压迫、纵深和多位置连接"},
+    {"player": "Alexis Mac Allister", "role": "中场推进、节奏和肋部连接"},
+    {"player": "Enzo Fernandez", "role": "中场出球、转换和远射"},
+    {"player": "Rodrigo De Paul", "role": "压迫、覆盖和情绪强度"},
+    {"player": "Cristian Romero", "role": "中卫对抗、前顶和防线侵略性"},
+    {"player": "Emiliano Martinez", "role": "门线、心理强度和大赛稳定性"}
+  ],
+  "strengths": ["比赛管理", "前场创造", "禁区终结", "定位球脚法", "大赛经验", "门将心理优势"],
+  "risks": ["核心年龄结构", "Messi 出场负荷", "面对高强度压迫时中场保护", "边路速度防守", "热门队市场溢价"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "阿根廷卫冕冠军和 Messi 叙事会带来显著公众热度，盘口需警惕品牌溢价。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI", "Messi minutes plan"]}
+}

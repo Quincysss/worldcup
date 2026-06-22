@@ -1,0 +1,52 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:25:00+08:00",
+  "scope": "D组美国队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {
+    "zh": "美国",
+    "en": "United States",
+    "fifa_code": "USA",
+    "group": "D",
+    "confederation": "CONCACAF"
+  },
+  "source_log_path": "K:/worldcup/data/source_logs/usa-team-source-log.json",
+  "fixtures_context": {
+    "round1_result_project_context": "美国 4-1 巴拉圭",
+    "remaining_group_matches": ["美国 vs 澳大利亚", "土耳其 vs 美国"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Mauricio Pochettino",
+    "team_identity": "东道主之一，身体机能、边路速度和主场能量是基本盘；首轮大胜后热度上升，也带来市场过热风险。",
+    "likely_structure": ["4-2-3-1", "4-3-3"]
+  },
+  "core_players_watch": [
+    {"player": "Christian Pulisic", "role": "左路/肋部核心、终结和定位球参与"},
+    {"player": "Folarin Balogun", "role": "纵深中锋、禁区终点"},
+    {"player": "Gio Reyna", "role": "前场连接和最后一传"},
+    {"player": "Weston McKennie", "role": "跑动、二点球和后插上"},
+    {"player": "Tyler Adams", "role": "中场防守保护和节奏平衡"},
+    {"player": "Yunus Musah", "role": "推进和对抗覆盖"},
+    {"player": "Antonee Robinson", "role": "左路推进和回追"},
+    {"player": "Tim Weah", "role": "右路速度和反击出口"},
+    {"player": "Matt Turner", "role": "门线和高压下出球稳定性待复核"}
+  ],
+  "strengths": ["主场氛围", "边路速度", "中前场跑动", "转换进攻", "首轮净胜球和信心"],
+  "risks": ["首轮大胜后的情绪过热", "高位压迫身后空间", "门将与中卫出球失误", "面对低位密集时效率波动", "对澳大利亚高空球与定位球需要复核"],
+  "availability_and_discipline": {
+    "injuries": "needs_refresh",
+    "suspensions": "needs_refresh",
+    "fitness": "T-24h_training_required",
+    "starting_xi": "T-75m_required"
+  },
+  "market_placeholder": {
+    "odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"],
+    "market_note": "首轮 4-1 后公众热度可能抬高美国方向，模型需要防止把热度直接当实力提升。"
+  },
+  "data_quality": {
+    "completion_level": "usable_deep_partial",
+    "confidence": "medium_high",
+    "missing_fields": ["official technical report", "fresh injuries", "fresh suspensions", "fresh odds", "confirmed starting XI"]
+  }
+}

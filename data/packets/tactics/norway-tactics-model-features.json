@@ -1,0 +1,179 @@
+{
+  "team": "Norway",
+  "team_code": "NOR",
+  "generated_at": "2026-06-10",
+  "encoding": "UTF-8",
+  "status": "draft_v1",
+  "fan_summary_en": "Norway can connect Odegaard's passing, Nusa's carrying, and Haaland or Sorloth finishing in the same move, but the space behind the fullbacks can make matches swing fast.",
+  "sample_summary": {
+    "matches_used": 8,
+    "competitive_match_count": 6,
+    "friendly_match_count": 2,
+    "same_coach_match_count": 8,
+    "sample_quality": "medium"
+  },
+  "tactical_features": {
+    "nominal_formations": [
+      "4-2-3-1",
+      "4-3-3"
+    ],
+    "in_possession_shape": "Base back four with frequent 2-3-5 or 2-4-4 attacking occupation; Odegaard advances into the right half-space and Nusa drives the left side.",
+    "out_of_possession_shape": "Usually 4-4-2 or 4-4-1-1 with Odegaard joining the first line.",
+    "alternate_shapes": [
+      "Sorloth starting wide often becomes a narrow second-forward profile",
+      "Without Odegaard the attack becomes more direct and less precise between the lines"
+    ],
+    "build_up_style": [
+      "find Odegaard in the right half-space",
+      "use Nusa as the main left-side carrier",
+      "play early into Haaland or Sorloth when space opens"
+    ],
+    "preferred_progression_zones": [
+      "right half-space",
+      "left wing",
+      "early direct ball behind the line"
+    ],
+    "direct_play_frequency": "medium",
+    "press_height": "variable",
+    "pressing_triggers": [
+      "back pass to goalkeeper",
+      "wide receiver with back to goal",
+      "unstable buildup from weaker opponents"
+    ],
+    "press_orientation": "hybrid",
+    "defensive_block_height": "variable",
+    "compactness": "medium",
+    "transition_attack_speed": "high",
+    "counterpress_level": "medium",
+    "rest_defense_shape": "Often 2+1 or 2+2 when fullbacks push high.",
+    "set_piece_attack_strength": "high",
+    "set_piece_defense_strength": "medium"
+  },
+  "coach_features": {
+    "selection_stability": "high",
+    "flexibility": "medium",
+    "typical_first_sub_minute_band": "mid",
+    "leading_behavior": [
+      "stabilize midfield or back line while keeping one transition outlet",
+      "prefer functional tweaks over full structural reset"
+    ],
+    "drawing_behavior": [
+      "keep the main structure and continue to lean on Odegaard and Nusa chance creation"
+    ],
+    "trailing_behavior": [
+      "likely to add wing dribbling or a second aerial option",
+      "strong evidence for a fixed chase script is still limited"
+    ],
+    "knockout_pragmatism": "medium"
+  },
+  "model_features": {
+    "attacking_ceiling": {
+      "value": "high",
+      "confidence": "high",
+      "note": "Odegaard, Nusa, Haaland, and Sorloth give Norway top-end chance creation and finishing variety."
+    },
+    "defensive_floor": {
+      "value": "medium",
+      "confidence": "medium",
+      "note": "Aggressive fullback positioning can expose recovery defense and lower the floor."
+    },
+    "set_piece_upside": {
+      "value": "high",
+      "confidence": "high",
+      "note": "Delivery plus multiple aerial targets gives Norway strong set-piece upside."
+    },
+    "tempo_profile": {
+      "value": "medium-high",
+      "confidence": "medium",
+      "note": "Norway can control field position against weaker teams and accelerate quickly in transition."
+    },
+    "totals_tendency": {
+      "value": "medium-high",
+      "confidence": "medium",
+      "note": "Matches can become open when Nusa is carrying, fullbacks push high, and Norway attack with multiple box targets."
+    },
+    "player_dependency_risk": {
+      "value": "high",
+      "confidence": "high",
+      "note": "Chance creation depends heavily on Odegaard and Nusa; elite finishing depends on Haaland or Sorloth."
+    }
+  },
+  "market_relevant_tactical_flags": [
+    {
+      "factor": "Odegaard availability",
+      "impact_area": "1x2/totals/handicap",
+      "direction_note": "Without him, Norway loses precision against organized blocks and on set pieces.",
+      "confidence": "high"
+    },
+    {
+      "factor": "Nusa availability and load tolerance",
+      "impact_area": "totals/handicap",
+      "direction_note": "With him fully fit, Norway is more likely to create open-field and one-v-one attacks.",
+      "confidence": "high"
+    },
+    {
+      "factor": "Sorloth role as central striker or narrow wide starter",
+      "impact_area": "totals/1x2",
+      "direction_note": "His role changes cross volume, second-ball pressure, and two-target box presence.",
+      "confidence": "medium"
+    },
+    {
+      "factor": "double-pivot profile",
+      "impact_area": "handicap/totals",
+      "direction_note": "A more controlling pivot tends to raise defensive stability; a more physical profile raises duel and transition volume.",
+      "confidence": "medium"
+    },
+    {
+      "factor": "fullback height",
+      "impact_area": "totals",
+      "direction_note": "The higher the fullbacks, the higher both Norway's attacking ceiling and counterattack exposure.",
+      "confidence": "high"
+    }
+  ],
+  "role_dependencies": [
+    {
+      "role": "primary_organizer",
+      "players": [
+        "Martin Odegaard"
+      ],
+      "impact_if_missing": "Final-ball quality and set-piece delivery drop.",
+      "confidence": "high"
+    },
+    {
+      "role": "transition_carrier",
+      "players": [
+        "Antonio Nusa"
+      ],
+      "impact_if_missing": "The team loses its most explosive self-created progression threat.",
+      "confidence": "high"
+    },
+    {
+      "role": "box_finisher",
+      "players": [
+        "Erling Haaland",
+        "Alexander Sorloth"
+      ],
+      "impact_if_missing": "Penalty-box occupation, finishing, and aerial threat fall.",
+      "confidence": "high"
+    },
+    {
+      "role": "right_side_variation",
+      "players": [
+        "Oscar Bobb"
+      ],
+      "impact_if_missing": "Right-side dribbling and inside-creation variety drop, but the whole attack does not collapse.",
+      "confidence": "medium"
+    }
+  ],
+  "source_references": [
+    "https://www.fotball.no/fotballdata/kamp/?fiksId=8707579",
+    "https://www.fotball.no/fotballdata/kamp/?fiksId=8707580",
+    "https://www.fotball.no/fotballdata/kamp/?fiksId=8707581",
+    "https://www.fotball.no/fotballdata/kamp/?fiksId=8707582",
+    "https://www.fotball.no/fotballdata/kamp/?fiksId=8707596",
+    "https://www.fotball.no/fotballdata/kamp/?fiksId=8981336",
+    "https://www.fotball.no/fotballdata/kamp/?fiksId=8981343",
+    "https://www.fotball.no/landslag/norge-a-herrer/2026/her-er-norges-vm-tropp/",
+    "https://www.fotball.no/landslag/norge-a-herrer/2026/norges-tropp-mot-nederland-og-sveits/"
+  ]
+}

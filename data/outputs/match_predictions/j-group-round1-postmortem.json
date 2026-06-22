@@ -1,0 +1,63 @@
+{
+  "phase": "post_match_review",
+  "status": "completed",
+  "updated_at": "2026-06-18T00:00:00+08:00",
+  "group": "J",
+  "matches": [
+    {
+      "match": "Argentina vs Algeria",
+      "postmortem_file": "K:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-16_阿根廷_3-0_阿尔及利亚_复盘.md",
+      "pre_match_pick": "Argentina 2-1 Algeria",
+      "actual_result": "Argentina 3-0 Algeria",
+      "wdl_hit": true,
+      "score_hit": false,
+      "main_error": "overestimated Algeria scoring path and underestimated Argentina/Messi finishing ceiling",
+      "betting_review": {
+        "hit": ["Argentina win", "Argentina win plus over 2.5"],
+        "miss": ["both teams to score"],
+        "lesson": "Argentina direction was right, but clean-sheet probability was too low in the preview."
+      },
+      "model_adjustments": [
+        "raise Argentina finishing ceiling",
+        "do not mechanically extrapolate Messi hat trick into every future match",
+        "lower Algeria transition conversion against elite control teams"
+      ]
+    },
+    {
+      "match": "Austria vs Jordan",
+      "postmortem_file": "K:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-16_奥地利_3-1_约旦_复盘.md",
+      "pre_match_pick": "Austria 2-0 Jordan",
+      "actual_result": "Austria 3-1 Jordan",
+      "wdl_hit": true,
+      "score_hit": false,
+      "main_error": "underestimated Jordan goal path and late match openness",
+      "betting_review": {
+        "hit": ["Austria win", "Austria handicap -1 direction"],
+        "miss": ["Austria win plus under 3.5", "Jordan +1.5 protection"],
+        "lesson": "Austria pressure and late attacking depth made the game more open than the 2-0 script."
+      },
+      "model_adjustments": [
+        "raise Austria high-press and late-pressure reliability",
+        "raise Jordan one-goal path but lower Jordan +1.5 stability after conceding first",
+        "raise total-goals tail for Austria matches"
+      ]
+    }
+  ],
+  "group_table_after_round1": [
+    {"team": "Argentina", "points": 3, "goal_difference": 3},
+    {"team": "Austria", "points": 3, "goal_difference": 2},
+    {"team": "Jordan", "points": 0, "goal_difference": -2},
+    {"team": "Algeria", "points": 0, "goal_difference": -3}
+  ],
+  "next_round_notes": [
+    "Argentina vs Austria should include Austria press risk and Argentina finishing ceiling.",
+    "Jordan vs Algeria should not default to a dead under; both teams have incentive and visible scoring paths.",
+    "For betting, recheck lineups, injuries, official odds, handicap depth, and totals before any executable recommendation."
+  ],
+  "source_log": [
+    "https://www.espn.com/soccer/report/_/gameId/760433",
+    "https://www.espn.com/soccer/match/_/gameId/760431/jordan-austria",
+    "https://www.aljazeera.com/sports/2026/6/17/austria-vs-jordan-fifa-world-cup-2026-marko-arnautovic-goal-penalty-football",
+    "https://www.sfbayareafwc26.com/welcoming-the-world-to-the-bay/fifa-world-cup-26-sf-bay-area-match-recap-austria-3-jordan-1"
+  ]
+}

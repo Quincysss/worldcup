@@ -1,0 +1,192 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Switzerland",
+    "en": "Switzerland",
+    "fifa_code": "SUI",
+    "group": "B"
+  },
+  "match": null,
+  "status": "deep_partial",
+  "created_at": "2026-06-12T17:05:00+08:00",
+  "updated_at": "2026-06-12T17:34:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Switzerland tactical and coaching team_profile only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "complete set-piece taker and target map",
+    "full recent structured sample linked to shape choice",
+    "video-backed review of pace stress in recovery phases"
+  ],
+  "source_log": [
+    {
+      "source": "local team packet",
+      "url": "K:\\worldcup\\data\\packets\\teams\\switzerland-team-packet.json",
+      "note": "Initial local context"
+    }
+  ],
+  "notes": [
+    "Created first before deepening content.",
+    "No match prediction, group projection, champion projection, or betting advice."
+  ],
+  "data": {
+    "coach_profile": {
+      "coach": "Murat Yakin",
+      "default_formation": "3-4-2-1",
+      "alternate_formation": [
+        "4-2-3-1",
+        "4-3-3"
+      ],
+      "system_stability": "high",
+      "tournament_pragmatism": "high",
+      "summary": "Yakin's Switzerland are structurally mature and emotionally steady. They can toggle between back-three and back-four pictures, but the deeper identity is stable: central control, measured tempo, disciplined spacing, and experienced match management."
+    },
+    "possession_structure": {
+      "summary": "Switzerland are comfortable building through the midfield, especially when Xhaka can dictate rhythm and the center-backs can step into clean first passes. They rarely need to rush if they can control zone occupation.",
+      "build_up": "Back three or back four base with Xhaka/Freuler orchestration and deliberate use of wing or half-space progression.",
+      "central_control_level": "high",
+      "width_usage": "medium_high",
+      "confidence": "high"
+    },
+    "pressing_profile": {
+      "summary": "Pressing is selective rather than frantic. Switzerland prefer to trap smartly and keep shape integrity rather than chase wild high-press volume.",
+      "press_height": "medium",
+      "press_orientation": "controlled_and_shape_first",
+      "counterpress_level": "medium",
+      "confidence": "medium_high"
+    },
+    "defensive_block": {
+      "summary": "One of Switzerland's biggest strengths is a mature defensive block that protects central zones, reads game flow well, and rarely panics in normal match states.",
+      "line_height": "medium",
+      "compactness": "high",
+      "central_screen_quality": "high",
+      "fullback_space_risk": "medium",
+      "confidence": "high"
+    },
+    "attacking_transition": {
+      "summary": "Switzerland can counter effectively, especially if Embolo or Ndoye can carry or receive early, but they are more measured than pure transition-heavy sides.",
+      "speed": "medium",
+      "primary_outlets": [
+        "Breel Embolo",
+        "Dan Ndoye",
+        "Ruben Vargas"
+      ],
+      "confidence": "medium_high"
+    },
+    "defensive_transition": {
+      "summary": "Transition defense is usually stable because the team's spacing is mature, but fast host or wing-heavy opponents can still test the space behind aggressive wing or fullback pushes.",
+      "rest_defense_quality": "medium_high",
+      "recovery_risk": "medium",
+      "confidence": "medium_high"
+    },
+    "set_piece_attack": {
+      "summary": "Useful and structurally sound, though not the only path to threat because Switzerland can also create through midfield control and cutback patterns.",
+      "threat_level": "medium_high",
+      "confidence": "medium"
+    },
+    "set_piece_defense": {
+      "summary": "Generally strong because of experience, goalkeeper quality, and collective discipline.",
+      "stability": "high",
+      "confidence": "medium_high"
+    },
+    "game_state_behaviour": {
+      "leading": "Switzerland are comfortable slowing the game, protecting shape, and forcing the opponent to take the next risk.",
+      "trailing": "When trailing, they can increase wide pressure and runner support, but their comeback route still tends to stay organized rather than chaotic.",
+      "confidence": "high"
+    },
+    "substitution_tendency": {
+      "summary": "Yakin tends to use substitutes to preserve structure and matchup quality rather than to chase stylistic overcorrection.",
+      "resource_type": "structure_and_balance",
+      "confidence": "medium_high"
+    },
+    "key_player_roles": [
+      {
+        "role": "tempo_controller",
+        "players": [
+          "Granit Xhaka"
+        ],
+        "note": "The main rhythm-setter and emotional regulator of the whole side."
+      },
+      {
+        "role": "defensive_leader",
+        "players": [
+          "Manuel Akanji"
+        ],
+        "note": "Key to line authority, recovery quality, and clean buildup from the back."
+      },
+      {
+        "role": "goalkeeping_floor",
+        "players": [
+          "Gregor Kobel"
+        ],
+        "note": "Important for preserving Switzerland's low-error defensive identity."
+      },
+      {
+        "role": "mobile_attack_reference",
+        "players": [
+          "Breel Embolo"
+        ],
+        "note": "Adds carrying power, channel running, and central physicality."
+      },
+      {
+        "role": "wide_breaker",
+        "players": [
+          "Dan Ndoye",
+          "Ruben Vargas",
+          "Fabian Rieder"
+        ],
+        "note": "This layer matters if Switzerland need to open a lower block or attack the back shoulder in transition."
+      }
+    ],
+    "tactical_risks": [
+      "attacking efficiency if the striker line lacks sharp finishing",
+      "pace stress when the game becomes more vertical than planned",
+      "over-conservative spells after taking the lead",
+      "dependence on Xhaka's control to keep the match script favorable"
+    ],
+    "data_gaps": [
+      "shape-by-lineup recent sample across strongest opponents",
+      "exact current attacking hierarchy in final-third substitutions",
+      "complete set-piece map"
+    ],
+    "confidence_notes": [
+      {
+        "topic": "midfield and structural control",
+        "confidence": "high",
+        "reason": "Strongly supported by player profiles and long-cycle team identity."
+      },
+      {
+        "topic": "attacking ceiling against very compact blocks",
+        "confidence": "medium",
+        "reason": "Still depends on final-third sharpness and wing execution."
+      },
+      {
+        "topic": "transition defense under host-pressure tempo",
+        "confidence": "medium",
+        "reason": "Likely stable, but faster opponents can still test the back side."
+      }
+    ],
+    "handoff_to_model": {
+      "attack_ceiling": "medium_high",
+      "defensive_floor": "high",
+      "set_piece_attack": "medium_high",
+      "tempo_preference": "medium",
+      "transition_attack": "medium",
+      "transition_defense_risk": "medium",
+      "key_player_dependency": "high_on_xhaka_akanji_kobel",
+      "market_relevant_flags": [
+        "If Xhaka controls rhythm, Switzerland can flatten game volatility",
+        "If Embolo is sharp, Switzerland gain a better route against open spaces",
+        "If forced into a race rather than a managed game, defensive comfort drops"
+      ]
+    },
+    "handoff_to_red_team": {
+      "challenge_points": [
+        "Are we overstating Switzerland's attacking upside because of structural stability?",
+        "How much does the back-three/back-four toggle really change their chance profile?",
+        "Does protecting leads ever become too passive against faster sides?"
+      ],
+      "priority": "medium_high"
+    }
+  }
+}

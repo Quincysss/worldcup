@@ -1,0 +1,108 @@
+{
+  "phase": "cross_group_jingcai_combo",
+  "status": "hold_not_executable",
+  "updated_at": "2026-06-17T16:45:00+08:00",
+  "scope": "D/E/F/G/H group round 2 cross-group China Sports Lottery candidate combinations",
+  "execution_gates": [
+    "T-75m official lineups",
+    "fresh injury and minutes-limit confirmation",
+    "official China Sports Lottery 1X2 odds",
+    "official handicap and totals snapshots",
+    "no unexplained favorite price shortening"
+  ],
+  "single_candidates": [
+    {
+      "tier": "conservative",
+      "pick": "Ecuador win",
+      "model_probability": 0.64,
+      "condition": "lineups normal and price not overheated"
+    },
+    {
+      "tier": "conservative",
+      "pick": "Japan win",
+      "model_probability": 0.56,
+      "condition": "Japan attack starters available and price not shortened sharply"
+    },
+    {
+      "tier": "balanced",
+      "pick": "Germany win",
+      "model_probability": 0.58,
+      "condition": "no major German rotation; avoid Germany -1"
+    },
+    {
+      "tier": "balanced",
+      "pick": "United States win",
+      "model_probability": 0.53,
+      "condition": "lineups normal; Australia set-piece risk acceptable"
+    },
+    {
+      "tier": "aggressive",
+      "pick": "Turkiye vs Paraguay draw",
+      "model_probability": 0.30,
+      "condition": "small entertainment stake only"
+    },
+    {
+      "tier": "aggressive",
+      "pick": "Egypt vs New Zealand draw",
+      "model_probability": 0.30,
+      "condition": "small entertainment stake only"
+    },
+    {
+      "tier": "aggressive",
+      "pick": "Netherlands vs Sweden draw",
+      "model_probability": 0.27,
+      "condition": "anti-hot-Netherlands angle only"
+    }
+  ],
+  "combo_candidates": [
+    {
+      "type": "2x1",
+      "tier": "conservative",
+      "legs": ["Ecuador win", "Japan win"],
+      "status": "main_candidate_after_gates"
+    },
+    {
+      "type": "2x1",
+      "tier": "balanced",
+      "legs": ["Germany win", "United States win"],
+      "status": "secondary_candidate_after_gates"
+    },
+    {
+      "type": "3x1",
+      "tier": "conservative",
+      "legs": ["Ecuador win", "Japan win", "United States win"],
+      "status": "only_if_all_three_lineups_and_odds_pass"
+    },
+    {
+      "type": "3x1",
+      "tier": "balanced",
+      "legs": ["Germany win", "Ecuador win", "Japan win"],
+      "status": "remove_Germany_if_rotation_or_price_overheats"
+    },
+    {
+      "type": "2x1",
+      "tier": "aggressive",
+      "legs": ["Turkiye vs Paraguay draw", "Egypt vs New Zealand draw"],
+      "status": "entertainment_only"
+    },
+    {
+      "type": "3x1",
+      "tier": "aggressive",
+      "legs": ["Turkiye vs Paraguay draw", "Egypt vs New Zealand draw", "Netherlands vs Sweden draw"],
+      "status": "high_risk_entertainment_only"
+    }
+  ],
+  "delete_or_downgrade": [
+    "Belgium win as banker",
+    "Netherlands win as banker",
+    "Spain win in main combo before H-group hold clears",
+    "Uruguay win in main combo before H-group hold clears",
+    "Germany -1",
+    "Ecuador deep handicap",
+    "Belgium -1",
+    "Netherlands -1",
+    "Egypt -1"
+  ],
+  "red_team_verdict": "hold",
+  "disclaimer": "This is a conditional candidate pool, not an executable betting ticket. If T-75m lineups, injury status, or official odds differ from assumptions, the plan is invalid."
+}

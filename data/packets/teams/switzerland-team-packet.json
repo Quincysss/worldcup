@@ -1,0 +1,33 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "瑞士",
+    "en": "Switzerland",
+    "fifa_code": "SUI",
+    "group": "B"
+  },
+  "status": "partial_team_profile_ready",
+  "created_at": "2026-06-12T15:55:00+08:00",
+  "updated_at": "2026-06-12T15:55:00+08:00",
+  "owner": "main-thread",
+  "scope": "B组瑞士 team_profile；不输出比分预测、出线预测、冠军预测或投注建议。",
+  "source_log_path": "K:\\worldcup\\data\\source_logs\\switzerland-team-source-log.json",
+  "fixtures_context": {
+    "group_matches": ["卡塔尔 vs 瑞士", "瑞士 vs 波黑", "瑞士 vs 加拿大"],
+    "needs_official_time_refresh": true
+  },
+  "data": {
+    "coach": "Murat Yakin",
+    "profile": "B组纸面最稳定的一档，结构成熟、经验丰富，中后场质量和比赛管理都强；主要风险是节奏偏慢、锋线效率波动，以及面对东道主速度时身后保护。",
+    "core_players_watch": ["Granit Xhaka", "Manuel Akanji", "Gregor Kobel", "Breel Embolo", "Dan Ndoye", "Ruben Vargas", "Remo Freuler", "Fabian Rieder"],
+    "style_tags": ["成熟阵地战", "三中卫/四后卫切换", "中场控制", "边翼推进", "比赛管理"],
+    "strengths": ["中后场经验", "Xhaka节奏控制", "Akanji防线质量", "Kobel门线能力", "大赛稳定性"],
+    "risks": ["锋线效率", "节奏偏慢", "面对速度冲击的回追", "阵容年龄与体能", "领先后过保守"],
+    "data_confidence": "medium_high"
+  },
+  "missing_fields": ["official_matchday_squad_refresh", "T-24h injury/training", "T-75m lineup", "fresh odds", "complete recent structured sample"],
+  "data_quality": {
+    "completion_level": "usable_partial",
+    "reason_not_complete": "临场名单、伤停、首发和盘口仍需赛前复核。"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "model_scope": "H group round 2 match predictions",
+  "captured_at": "2026-06-17T16:15:00+08:00",
+  "model_version": "worldcup-simple-strength-v0.4-anti-disconnect",
+  "workflow_status": "completed_pre_match_conditional",
+  "input_readiness": {
+    "label": "partial",
+    "available_inputs": [
+      "local team profiles",
+      "H group round 1 postmatch review",
+      "subagent tactical review",
+      "subagent red-team review",
+      "fixture and public market fragments"
+    ],
+    "missing_or_stale_inputs": [
+      "T-75m official lineups",
+      "complete same-book 1X2 odds",
+      "Asian handicap snapshot",
+      "totals snapshot",
+      "fresh injury and minutes-limit confirmation"
+    ],
+    "betting_execution_status": "hold"
+  },
+  "matches": [
+    {
+      "match": "Spain vs Saudi Arabia",
+      "group": "H",
+      "stage": "group_stage_round2",
+      "date_local": "2026-06-21",
+      "venue_note": "Atlanta, 12:00 local / 12 p.m. ET",
+      "headline_pick": "Spain 1-0 Saudi Arabia",
+      "probabilities": {
+        "team_a_win": 0.58,
+        "draw": 0.27,
+        "team_b_win": 0.15
+      },
+      "expected_goals": {
+        "team_a": 1.45,
+        "team_b": 0.62
+      },
+      "scoreline_modes": [
+        "1-0",
+        "1-1",
+        "2-0"
+      ],
+      "confidence": "medium_low",
+      "main_drivers": [
+        "Spain control and counterpress",
+        "Saudi set-piece and transition resistance upgraded after round 1",
+        "Spain low-block conversion downgraded after 0-0 vs Cape Verde"
+      ],
+      "risk_flags": [
+        "draw tail elevated",
+        "deep handicap not supported before lineups",
+        "complete match odds unavailable"
+      ],
+      "market_snapshot": {
+        "status": "fragment_only",
+        "source": "NY Post Group H preview",
+        "fragments": {
+          "Spain_group_winner": "-475",
+          "Saudi_Arabia_group_winner": "30/1"
+        },
+        "usable_as_match_1x2": false,
+        "notes": "Group winner prices are long-horizon market signal only, not same-book match odds."
+      },
+      "red_team_verdict": "hold"
+    },
+    {
+      "match": "Cape Verde vs Uruguay",
+      "group": "H",
+      "stage": "group_stage_round2",
+      "date_local": "2026-06-21",
+      "venue_note": "Miami, 18:00 local / 6 p.m. ET",
+      "headline_pick": "Cape Verde 0-1 Uruguay",
+      "probabilities": {
+        "team_a_win": 0.22,
+        "draw": 0.3,
+        "team_b_win": 0.48
+      },
+      "expected_goals": {
+        "team_a": 0.7,
+        "team_b": 1.2
+      },
+      "scoreline_modes": [
+        "0-1",
+        "1-1",
+        "0-0"
+      ],
+      "confidence": "medium_low",
+      "main_drivers": [
+        "Uruguay pressure and duel edge",
+        "Cape Verde low-block survival upgraded after 0-0 vs Spain",
+        "Uruguay conversion and clean-sheet reliability downgraded after 1-1 vs Saudi Arabia"
+      ],
+      "risk_flags": [
+        "draw tail elevated",
+        "Uruguay deep handicap not supported before lineups",
+        "complete match odds unavailable"
+      ],
+      "market_snapshot": {
+        "status": "fragment_only",
+        "source": "NY Post Group H preview",
+        "fragments": {
+          "Uruguay_group_winner": "+400",
+          "Cape_Verde_group_winner": "60/1"
+        },
+        "usable_as_match_1x2": false,
+        "notes": "Group winner prices are long-horizon market signal only, not same-book match odds."
+      },
+      "red_team_verdict": "hold"
+    }
+  ],
+  "disclaimer": "Pre-match conditional forecast only. If T-75m official lineups, injury status, or odds differ from expectations, betting guidance is invalid."
+}

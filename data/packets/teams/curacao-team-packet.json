@@ -1,0 +1,31 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:46:00+08:00",
+  "scope": "E组库拉索队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "库拉索", "en": "Curaçao", "fifa_code": "CUW", "group": "E", "confederation": "CONCACAF"},
+  "source_log_path": "K:/worldcup/data/source_logs/curacao-team-source-log.json",
+  "fixtures_context": {
+    "round1_result": "德国 7-1 库拉索",
+    "remaining_group_matches": ["厄瓜多尔 vs 库拉索", "库拉索 vs 科特迪瓦"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Dick Advocaat",
+    "team_identity": "世界杯新军和最小参赛国叙事很强，团队纪律和情绪凝聚力是底盘；首轮大败后防线和体能恢复是核心问题。",
+    "likely_structure": ["5-4-1", "4-5-1", "4-2-3-1 when chasing"]
+  },
+  "core_players_watch": [
+    {"player": "Tahith Chong", "role": "边路/肋部推进和反击出口"},
+    {"player": "Livano Comenencia", "role": "首轮进球者，右路活力和历史性情绪点"},
+    {"player": "Leandro Bacuna", "role": "经验、中场/后场多面手和定位球"},
+    {"player": "Juninho Bacuna", "role": "中场推进和转换连接"},
+    {"player": "Eloy Room", "role": "门将经验和禁区承压"},
+    {"player": "Brandley Kuwas", "role": "边路技术和反击传中"}
+  ],
+  "strengths": ["低姿态防守", "团队凝聚力", "反击单点", "Advocaat经验", "弱旅心理包袱相对小"],
+  "risks": ["首轮 1-7 后心理和防线修复", "整体速度和对抗差距", "连续被压后的体能", "门前防守质量", "被迫压上后的身后空间"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "首轮惨败后市场可能极度看低库拉索，需要区分德国强度和库拉索自身底线。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["official technical report", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

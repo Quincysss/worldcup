@@ -1,0 +1,29 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:35:00+08:00",
+  "team": {"zh": "巴拿马", "en": "Panama", "group": "L"},
+  "tactical_summary": "巴拿马的比赛方式更强调整体性：中低位收缩、边翼卫推进、定位球和身体对抗。Christiansen 的队伍不会追求长时间控球压制，更现实的路径是把比赛切碎，减少禁区前沿被连续冲击，再让 Carrasquilla 找到推进和转移窗口。",
+  "structures": {
+    "base_shapes": ["5-4-1", "3-4-2-1"],
+    "alternate_shapes": ["4-4-2"],
+    "in_possession": "Carrasquilla 是中路推进核心，翼卫提供宽度，锋线更多承担背身和第二落点。",
+    "out_of_possession": "五后卫或四后卫低位切换，重点保护肋部和禁区弧顶。"
+  },
+  "phase_behaviour": {
+    "build_up": "被压迫时可能更多长传找支点和边路第二点。",
+    "chance_creation": "定位球、边路传中和 Carrasquilla 的直塞/推进是主要来源。",
+    "transition_attack": "速度不一定顶级，但第一脚转移到边路后能制造混乱。",
+    "rest_defense": "翼卫压上后，中卫横移和后腰保护决定防线稳定。",
+    "set_pieces": "身体对抗和争顶是加分项，纪律和落点保护需刷新。"
+  },
+  "coach_profile": {
+    "coach": "Thomas Christiansen",
+    "selection_stability": "medium_high",
+    "risk_appetite": "medium_low",
+    "substitution_pattern": "常见思路是先维持紧凑度，再根据比分换上速度或支点。",
+    "tournament_note": "连续硬仗里阵容厚度和牌面管理会影响后续轮次。"
+  },
+  "key_matchup_inputs_for_model": ["low_block_resilience", "carrasquilla_progression", "set_piece_threat", "discipline_risk", "bench_depth"],
+  "confidence_notes": {"overall": "medium", "weak_points": ["锋线效率", "翼卫选择", "最终伤停"]}
+}

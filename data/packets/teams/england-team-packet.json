@@ -1,0 +1,34 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:25:00+08:00",
+  "scope": "L组英格兰球队画像；不包含比分、赛果倾向、出线、冠军或投注建议。",
+  "team": {"zh": "英格兰", "en": "England", "fifa_code": "ENG", "group": "L", "confederation": "UEFA"},
+  "fixtures_context": {
+    "opening_match_status": "pending",
+    "opening_match": "England vs Croatia",
+    "group_matches": ["England vs Croatia", "England vs Ghana", "England vs Panama"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Thomas Tuchel",
+    "team_identity": "顶级纸面阵容与成熟大赛班底叠加新教练周期，前场天赋和中场覆盖都很强，但真正难点是把一堆最佳位置相近的攻击手放进同一个稳定结构。",
+    "likely_structure": ["4-2-3-1", "4-3-3", "3-4-2-1"]
+  },
+  "core_players_watch": [
+    {"player": "Harry Kane", "role": "九号位支点、禁区终结、回撤串联和定位球威胁"},
+    {"player": "Jude Bellingham", "role": "前插八号/十号位，肋部冲击、对抗和二次进攻"},
+    {"player": "Bukayo Saka", "role": "右路宽度、一对一、内切和回防纪律"},
+    {"player": "Phil Foden", "role": "半空间接应、短传渗透和弱侧内收"},
+    {"player": "Declan Rice", "role": "中场屏障、转换保护、推进和定位球二点"},
+    {"player": "Cole Palmer", "role": "右中路创造、点球/定位球候选、替补改变节奏"},
+    {"player": "John Stones", "role": "中卫出球、向中场推进和防线组织"},
+    {"player": "Marc Guehi", "role": "正面防守、覆盖和防线稳定器"},
+    {"player": "Jordan Pickford", "role": "门线反应、长传发动和大赛经验"}
+  ],
+  "strengths": ["前场创造力", "中场身体和技术平衡", "定位球质量", "替补深度", "大赛经验", "多套阵型储备"],
+  "risks": ["Tuchel体系磨合时间", "左路平衡", "攻转守保护", "明星攻击手共存", "Kane压迫负荷", "公众预期和热门溢价"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "英格兰天然会有公众热度；预测阶段需要把市场热度和真实首发强度拆开。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["fresh injuries", "fresh odds", "confirmed starting XI", "Tuchel final shape"]}
+}

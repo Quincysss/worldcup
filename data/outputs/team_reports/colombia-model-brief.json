@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:55:00+08:00",
+  "team": {"zh": "哥伦比亚", "en": "Colombia", "fifa_code": "COL", "group": "K"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "K组出线热门；边路和定位球强，南美强度好，但破低位和情绪牌数需复核。", "recommended_weights": {"elo": 0.31, "fifa_ranking": 0.12, "recent_form": 0.18, "squad_quality": 0.17, "tactical_fit": 0.14, "availability": 0.08}, "round1_correction": "not_available_pre_match"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "medium_high", "defensive_floor": "medium_high", "transition_defense_risk": "medium", "set_piece": "high", "market_name_bias": "medium_high"},
+  "availability_sensitivity": [{"player": "Luis Diaz", "transition_impact": "high"}, {"player": "James Rodriguez", "creation_impact": "high"}, {"player": "Jhon Duran", "lambda_for_impact": "medium_high"}, {"player": "Jefferson Lerma", "control_impact": "medium"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals", "group_winner"], "warning": "哥伦比亚热门方向需要防低位守分和首次世界杯方差。"},
+  "uncertainty_flags": ["opening match not played/confirmed", "T-75m lineup", "fresh odds", "James role"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "James/Luis Diaz fitness", "Uzbekistan defensive shape"],
+  "model_risk_notes": "哥伦比亚优势在边路和定位球，但对低位队不能自动假设大胜。"
+}

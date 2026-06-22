@@ -1,0 +1,389 @@
+{
+  "phase": "group_round_prediction",
+  "status": "pre_match_conditional_quant_revision",
+  "captured_at": "2026-06-20T21:10:00+08:00",
+  "group": "E",
+  "round": 2,
+  "scope": "E group round 2 quantitative revision after roster/player_state completion and June 20 public lineup/odds check",
+  "previous_prediction_file": "data/outputs/match_predictions/e-group-round2-predictions.json",
+  "risk_gate": {
+    "lineups": "not_confirmed_T_minus_75m",
+    "injury_check": "public_predicted_lineups_and_injury_table_only",
+    "odds_snapshot": "public_sources_not_official_jingcai_not_full_same-source_1x2_handicap_totals",
+    "red_team_policy": "revise",
+    "purchase_language": "discussion_only"
+  },
+  "matches": [
+    {
+      "match": "Germany vs Cote d'Ivoire",
+      "date": "2026-06-20",
+      "factor_inputs": {
+        "baseline_strength": {
+          "Germany": 84,
+          "Cote_d_Ivoire": 72,
+          "notes": "Germany remain clear favorite after 7-1; Cote d'Ivoire upgraded for 1-0 defensive win over Ecuador."
+        },
+        "attack": {
+          "Germany": 84,
+          "Cote_d_Ivoire": 70,
+          "notes": "Germany expected front four remains strong; Cote d'Ivoire retain Amad/Diomande/Kessie transition route."
+        },
+        "defense": {
+          "Germany": 76,
+          "Cote_d_Ivoire": 70,
+          "notes": "Cote d'Ivoire clean sheet respected, but Ndicka expected absence slightly lowers defensive ceiling."
+        },
+        "player_state": {
+          "Germany": 0.08,
+          "Cote_d_Ivoire": 0.04,
+          "notes": "Both won opening round; Germany attacking form gets the larger boost."
+        },
+        "availability": {
+          "Germany": 0.02,
+          "Cote_d_Ivoire": -0.06,
+          "notes": "Germany no listed injury concern in public preview; Ndicka not expected fit and Wahi misses for Cote d'Ivoire."
+        },
+        "tactical_matchup": {
+          "Germany": 0.03,
+          "Cote_d_Ivoire": 0.02,
+          "notes": "Germany pocket play should create chances; Cote d'Ivoire pace behind Germany full-backs remains a live counterpunch."
+        },
+        "schedule_environment": {
+          "Germany": 0,
+          "Cote_d_Ivoire": 0,
+          "notes": "No decisive rest/travel/environment edge applied."
+        },
+        "market": {
+          "Germany": 0.02,
+          "Cote_d_Ivoire": -0.01,
+          "notes": "Public market remains Germany-favorable around low 60s after vig removal; model stays slightly cooler."
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.28,
+        "attack": 0.18,
+        "defense": 0.16,
+        "player_state": 0.12,
+        "injury_availability": 0.1,
+        "tactical_matchup": 0.1,
+        "schedule_environment": 0.03,
+        "market_calibration": 0.03
+      },
+      "team_strength_score": {
+        "Germany": 81.2,
+        "Cote_d_Ivoire": 70.5
+      },
+      "attack_score": {
+        "Germany": 84,
+        "Cote_d_Ivoire": 70
+      },
+      "defense_score": {
+        "Germany": 76,
+        "Cote_d_Ivoire": 70
+      },
+      "player_state_adjustment": {
+        "Germany": 0.08,
+        "Cote_d_Ivoire": 0.04
+      },
+      "injury_adjustment": {
+        "Germany": 0.02,
+        "Cote_d_Ivoire": -0.06
+      },
+      "tactical_matchup_adjustment": {
+        "Germany": 0.03,
+        "Cote_d_Ivoire": 0.02
+      },
+      "schedule_environment_adjustment": {
+        "Germany": 0,
+        "Cote_d_Ivoire": 0
+      },
+      "market_adjustment": {
+        "Germany": 0.02,
+        "Draw": -0.01,
+        "Cote_d_Ivoire": -0.01
+      },
+      "expected_goals": {
+        "pre_market": {
+          "Germany": 1.92,
+          "Cote_d_Ivoire": 0.9
+        },
+        "final": {
+          "Germany": 1.95,
+          "Cote_d_Ivoire": 0.88
+        }
+      },
+      "poisson_score_matrix": {
+        "home_team": "Germany",
+        "away_team": "Cote d'Ivoire",
+        "probability_unit": "percent",
+        "scores_0_to_5": {
+          "0": {"0": 5.9, "1": 5.19, "2": 2.28, "3": 0.67, "4": 0.15, "5": 0.03},
+          "1": {"0": 11.51, "1": 10.13, "2": 4.46, "3": 1.31, "4": 0.29, "5": 0.05},
+          "2": {"0": 11.22, "1": 9.87, "2": 4.34, "3": 1.27, "4": 0.28, "5": 0.05},
+          "3": {"0": 7.29, "1": 6.42, "2": 2.82, "3": 0.83, "4": 0.18, "5": 0.03},
+          "4": {"0": 3.56, "1": 3.13, "2": 1.38, "3": 0.4, "4": 0.09, "5": 0.02},
+          "5": {"0": 1.39, "1": 1.22, "2": 0.54, "3": 0.16, "4": 0.03, "5": 0.01}
+        },
+        "matrix_mass": 98.49,
+        "tail_probability": 1.51
+      },
+      "probabilities_1x2": {
+        "poisson_raw": {
+          "Germany": 60.9,
+          "Draw": 21.3,
+          "Cote_d_Ivoire": 16.3
+        },
+        "final": {
+          "Germany": 60,
+          "Draw": 22,
+          "Cote_d_Ivoire": 18
+        }
+      },
+      "totals_probabilities": {
+        "over_2_5": 52.3,
+        "under_2_5": 46.2
+      },
+      "top_scorelines": [
+        {"score": "1-0", "probability": 11.51},
+        {"score": "2-0", "probability": 11.22},
+        {"score": "1-1", "probability": 10.13},
+        {"score": "2-1", "probability": 9.87},
+        {"score": "3-0", "probability": 7.29}
+      ],
+      "odds_implied_probability": {
+        "source": "RotoWire public odds table, captured 2026-06-20",
+        "sample_books": {
+          "BetMGM": {"Germany": -185, "Draw": 360, "Cote_d_Ivoire": 490},
+          "DraftKings": {"Germany": -185, "Draw": 333, "Cote_d_Ivoire": 450},
+          "FanDuel": {"Germany": -185, "Draw": 360, "Cote_d_Ivoire": 450},
+          "bet365": {"Germany": -190, "Draw": 360, "Cote_d_Ivoire": 490},
+          "Kalshi": {"Germany": -188, "Draw": 333, "Cote_d_Ivoire": 475}
+        },
+        "vig_removed_reference": {
+          "Germany": 62,
+          "Draw": 22,
+          "Cote_d_Ivoire": 16
+        }
+      },
+      "model_market_delta": {
+        "Germany": -2,
+        "Draw": 0,
+        "Cote_d_Ivoire": 2
+      },
+      "red_team_status": "revise",
+      "final_probabilities": {
+        "Germany": 60,
+        "Draw": 22,
+        "Cote_d_Ivoire": 18
+      },
+      "representative_score": "Germany 2-1 Cote d'Ivoire",
+      "confidence_interval": {
+        "Germany": [55, 64],
+        "Draw": [19, 25],
+        "Cote_d_Ivoire": [15, 22]
+      },
+      "postmatch_error": null,
+      "parameter_updates": null
+    },
+    {
+      "match": "Ecuador vs Curacao",
+      "date": "2026-06-20",
+      "factor_inputs": {
+        "baseline_strength": {
+          "Ecuador": 75,
+          "Curacao": 56,
+          "notes": "Ecuador remain far stronger despite opening loss; Curacao were heavily exposed against Germany."
+        },
+        "attack": {
+          "Ecuador": 72,
+          "Curacao": 52,
+          "notes": "Ecuador expected to push more bodies forward; Curacao counter route exists but volume is limited."
+        },
+        "defense": {
+          "Ecuador": 75,
+          "Curacao": 48,
+          "notes": "Ecuador defense stayed solid against Cote d'Ivoire; Curacao conceded seven and have no confirmed structural fix yet."
+        },
+        "player_state": {
+          "Ecuador": -0.01,
+          "Curacao": -0.09,
+          "notes": "Ecuador finishing concern remains; Curacao confidence and defensive stability are penalized."
+        },
+        "availability": {
+          "Ecuador": 0.03,
+          "Curacao": 0,
+          "notes": "No Ecuador or Curacao players appear on the cited injury table in the latest public preview."
+        },
+        "tactical_matchup": {
+          "Ecuador": 0.07,
+          "Curacao": -0.05,
+          "notes": "Ecuador left-side/control game and advanced 4-2-3-1 profile target a Curacao back line low on confidence."
+        },
+        "schedule_environment": {
+          "Ecuador": 0,
+          "Curacao": 0,
+          "notes": "No decisive rest/travel/environment edge applied."
+        },
+        "market": {
+          "Ecuador": 0.06,
+          "Curacao": -0.03,
+          "notes": "Public market moved Ecuador to heavy favorite around -750/-800; model partially follows but guards against overreaction."
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.28,
+        "attack": 0.18,
+        "defense": 0.16,
+        "player_state": 0.12,
+        "injury_availability": 0.1,
+        "tactical_matchup": 0.1,
+        "schedule_environment": 0.03,
+        "market_calibration": 0.03
+      },
+      "team_strength_score": {
+        "Ecuador": 73.2,
+        "Curacao": 51.4
+      },
+      "attack_score": {
+        "Ecuador": 72,
+        "Curacao": 52
+      },
+      "defense_score": {
+        "Ecuador": 75,
+        "Curacao": 48
+      },
+      "player_state_adjustment": {
+        "Ecuador": -0.01,
+        "Curacao": -0.09
+      },
+      "injury_adjustment": {
+        "Ecuador": 0.03,
+        "Curacao": 0
+      },
+      "tactical_matchup_adjustment": {
+        "Ecuador": 0.07,
+        "Curacao": -0.05
+      },
+      "schedule_environment_adjustment": {
+        "Ecuador": 0,
+        "Curacao": 0
+      },
+      "market_adjustment": {
+        "Ecuador": 0.06,
+        "Draw": -0.02,
+        "Curacao": -0.03
+      },
+      "expected_goals": {
+        "pre_market": {
+          "Ecuador": 1.96,
+          "Curacao": 0.53
+        },
+        "final": {
+          "Ecuador": 2.05,
+          "Curacao": 0.5
+        }
+      },
+      "poisson_score_matrix": {
+        "home_team": "Ecuador",
+        "away_team": "Curacao",
+        "probability_unit": "percent",
+        "scores_0_to_5": {
+          "0": {"0": 7.81, "1": 3.9, "2": 0.98, "3": 0.16, "4": 0.02, "5": 0},
+          "1": {"0": 16.01, "1": 8, "2": 2, "3": 0.33, "4": 0.04, "5": 0},
+          "2": {"0": 16.41, "1": 8.2, "2": 2.05, "3": 0.34, "4": 0.04, "5": 0},
+          "3": {"0": 11.21, "1": 5.61, "2": 1.4, "3": 0.23, "4": 0.03, "5": 0},
+          "4": {"0": 5.75, "1": 2.87, "2": 0.72, "3": 0.12, "4": 0.01, "5": 0},
+          "5": {"0": 2.36, "1": 1.18, "2": 0.29, "3": 0.05, "4": 0.01, "5": 0}
+        },
+        "matrix_mass": 98.15,
+        "tail_probability": 1.85
+      },
+      "probabilities_1x2": {
+        "poisson_raw": {
+          "Ecuador": 72.2,
+          "Draw": 18.1,
+          "Curacao": 7.9
+        },
+        "final": {
+          "Ecuador": 70,
+          "Draw": 20,
+          "Curacao": 10
+        }
+      },
+      "totals_probabilities": {
+        "over_2_5": 45,
+        "under_2_5": 53.1
+      },
+      "top_scorelines": [
+        {"score": "2-0", "probability": 16.41},
+        {"score": "1-0", "probability": 16.01},
+        {"score": "3-0", "probability": 11.21},
+        {"score": "2-1", "probability": 8.2},
+        {"score": "1-1", "probability": 8}
+      ],
+      "odds_implied_probability": {
+        "source": "RotoWire public odds table, captured 2026-06-20",
+        "sample_books": {
+          "BetMGM": {"Ecuador": -800, "Draw": 850, "Curacao": 1800},
+          "DraftKings": {"Ecuador": -750, "Draw": 800, "Curacao": 2000},
+          "FanDuel": {"Ecuador": -800, "Draw": 800, "Curacao": 2000},
+          "bet365": {"Ecuador": -800, "Draw": 800, "Curacao": 1800},
+          "Kalshi": {"Ecuador": -719, "Draw": 837, "Curacao": 1767}
+        },
+        "vig_removed_reference": {
+          "Ecuador": 83,
+          "Draw": 11,
+          "Curacao": 6
+        }
+      },
+      "model_market_delta": {
+        "Ecuador": -13,
+        "Draw": 9,
+        "Curacao": 4
+      },
+      "red_team_status": "revise",
+      "final_probabilities": {
+        "Ecuador": 70,
+        "Draw": 20,
+        "Curacao": 10
+      },
+      "representative_score": "Ecuador 2-0 Curacao",
+      "confidence_interval": {
+        "Ecuador": [65, 75],
+        "Draw": [16, 23],
+        "Curacao": [7, 13]
+      },
+      "postmatch_error": null,
+      "parameter_updates": null
+    }
+  ],
+  "red_team_review": {
+    "verdict": "revise",
+    "top_concerns": [
+      "Official T-75m lineups are not confirmed.",
+      "Germany and Ecuador are public favorites after extreme first-round scorelines.",
+      "Poisson model may underweight early-goal game-state effects, especially if Curacao concede first.",
+      "Ecuador market price is extremely hot; model should not fully chase odds without official lineups and same-source handicap/totals."
+    ],
+    "recommended_probability_adjustment": "Keep Germany and Ecuador as first directions, but preserve draw/underdog tails and keep betting language discussion_only."
+  },
+  "quality_notes": [
+    "This file is the 2026-06-20 quantitative revision, not the original 2026-06-17 prediction.",
+    "Odds are public sportsbook references, not official竞彩 and not a same-source 1X2/handicap/totals snapshot.",
+    "Use discussion_only until official lineups, latest injury checks, and market snapshots are complete."
+  ],
+  "sources": [
+    "E:/worldcup/比赛/未开始比赛/小组赛/E组/E组第二轮预测汇总.md",
+    "E:/worldcup/比赛/已完成比赛/小组赛/E组/E组第一轮赛后复盘.md",
+    "E:/worldcup/data/packets/rosters/germany-roster.json",
+    "E:/worldcup/data/packets/rosters/ivory-coast-roster.json",
+    "E:/worldcup/data/packets/rosters/ecuador-roster.json",
+    "E:/worldcup/data/packets/rosters/curacao-roster.json",
+    "https://www.rotowire.com/soccer/article/germany-vs-ivory-coast-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-e-118798",
+    "https://www.rotowire.com/soccer/article/ecuador-vs-curacao-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-e-118799"
+  ],
+  "files_written": [
+    "比赛/未开始比赛/小组赛/E组/E组第二轮预测_20260620量化修订.md",
+    "data/outputs/match_predictions/e-group-round2-quant-revision-20260620.json"
+  ]
+}

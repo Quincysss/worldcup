@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:20:00+08:00",
+  "team": {"zh": "新西兰", "en": "New Zealand", "fifa_code": "NZL", "group": "G"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-4-2", "alternates": ["5-4-1", "4-2-3-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "控球不追求复杂，尽快找 Chris Wood 支点、二点球和边路传中。",
+    "pressing_profile": "更适合阶段性压迫，整体会优先保持阵型距离。",
+    "defensive_block": "低位/中低位为主，重点保护禁区和二点。",
+    "attacking_transition": "依赖 Wood 的支点和 Cacace/Singh 的传球质量。",
+    "set_piece": "核心武器，攻防两端都要高权重。"
+  },
+  "coach_tendencies": {"coach": "Darren Bazeley", "risk_appetite": "medium_low", "game_state": "对伊朗要把比赛拖入身体和定位球节奏。"},
+  "tactical_risks": ["开放战创造力", "长期无球承压", "防线速度", "Chris Wood依赖", "被迫压上后的身后空间"],
+  "confidence_notes": {"high": ["定位球", "支点进攻"], "medium": ["低位纪律", "二点保护"], "low_or_missing": ["T-75m首发", "伤停"]},
+  "handoff_to_model": {"attack_ceiling": "low_medium", "defensive_floor": "medium_low", "set_piece": "high", "low_block": "expected_vs_iran"},
+  "handoff_to_red_team": ["Wood状态", "伊朗身体对抗是否压制", "市场是否低估定位球"]
+}

@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:21:00+08:00",
+  "team": {"zh": "新西兰", "en": "New Zealand", "fifa_code": "NZL", "group": "G"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "G组下游挑战者，定位球和支点路径是主要上限来源。", "recommended_weights": {"elo": 0.35, "fifa_ranking": 0.12, "recent_form": 0.14, "squad_quality": 0.10, "tactical_fit": 0.17, "availability": 0.12}, "round1_correction": "not_available_pre_match"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "low_medium", "defensive_floor": "medium_low", "set_piece": "high", "low_block": "expected_vs_iran", "open_play_creation": "low"},
+  "availability_sensitivity": [{"player": "Chris Wood", "lambda_for_impact": "very_high"}, {"player": "Liberato Cacace", "wide_progression_impact": "medium"}, {"player": "Joe Bell", "control_impact": "medium"}, {"player": "Max Crocombe", "lambda_against_impact": "medium_high"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals"], "warning": "新西兰可能被市场低估定位球，但开放战创造力需折扣。"},
+  "uncertainty_flags": ["opening match not played/confirmed", "T-75m lineup", "fresh odds", "Chris Wood fitness"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "Wood status", "Iran defensive set-piece setup"],
+  "model_risk_notes": "新西兰均值不高，但定位球和 Chris Wood 能让低比分分布保留冷门尾部。"
+}

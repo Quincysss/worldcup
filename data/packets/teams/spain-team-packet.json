@@ -1,0 +1,25 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T16:08:00+08:00",
+  "scope": "H组西班牙队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "西班牙", "en": "Spain", "fifa_code": "ESP", "group": "H", "confederation": "UEFA"},
+  "source_log_path": "K:/worldcup/data/source_logs/spain-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["西班牙 vs 佛得角", "西班牙 vs 沙特", "乌拉圭 vs 西班牙"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Luis de la Fuente", "team_identity": "欧洲顶级控传和边路冲击结合体，年轻边锋提供爆点，中场仍是控节奏核心。", "likely_structure": ["4-3-3", "4-2-3-1"]},
+  "core_players_watch": [
+    {"player": "Rodri", "role": "中场控制、反抢保护和出球轴心"},
+    {"player": "Pedri", "role": "肋部组织、节奏变化和最后一传"},
+    {"player": "Lamine Yamal", "role": "右路一对一、内切创造和弱侧转移"},
+    {"player": "Nico Williams", "role": "左路速度、纵深和边路爆点"},
+    {"player": "Alvaro Morata", "role": "中锋牵制、禁区终结和压迫触发"},
+    {"player": "Dani Olmo", "role": "前场连接、二线插上和定位球脚法"},
+    {"player": "Dani Carvajal", "role": "右后卫经验、压迫和对抗"},
+    {"player": "Unai Simon", "role": "门线稳定和后场出球"}
+  ],
+  "strengths": ["控球耐心", "边路一对一", "中场反抢", "高位压迫", "技术密度", "大赛经验"],
+  "risks": ["过度控球导致终结效率不足", "边后卫身后空间", "被强力反击直接打穿", "定位球防守对抗", "年轻核心情绪波动"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "西班牙名气和控球观感容易形成热门溢价，盘口需要和首发、进攻效率一起看。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

@@ -1,0 +1,184 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Qatar",
+    "en": "Qatar",
+    "fifa_code": "QAT",
+    "group": "B"
+  },
+  "match": null,
+  "status": "deep_partial",
+  "created_at": "2026-06-12T17:05:00+08:00",
+  "updated_at": "2026-06-12T17:31:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Qatar tactical and coaching team_profile only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "complete set-piece taker and target map",
+    "clean sample under current coach against varied opponent levels",
+    "video-backed review of buildup under sustained pressing"
+  ],
+  "source_log": [
+    {
+      "source": "local team packet",
+      "url": "K:\\worldcup\\data\\packets\\teams\\qatar-team-packet.json",
+      "note": "Initial local context"
+    }
+  ],
+  "notes": [
+    "Created first before deepening content.",
+    "No match prediction, group projection, champion projection, or betting advice."
+  ],
+  "data": {
+    "coach_profile": {
+      "coach": "Julen Lopetegui",
+      "default_formation": "4-2-3-1",
+      "alternate_formation": [
+        "4-3-3",
+        "4-5-1 defensive shell"
+      ],
+      "system_stability": "medium",
+      "tournament_pragmatism": "medium_high",
+      "summary": "Qatar still project as a tournament-savvy side built on familiar combinations, but with Lopetegui there is likely a stronger preference for organized buildup and cleaner positional occupation than a purely reactive model."
+    },
+    "possession_structure": {
+      "summary": "Qatar are more comfortable than stereotype suggests when they can settle on the ball, especially if Afif can drift into freedom zones. The issue is not basic structure but how well that structure survives high-intensity pressing.",
+      "build_up": "Back four base, midfield support close to the center-backs, and a clear search for Afif or a forward-facing wide connector.",
+      "central_control_level": "medium",
+      "width_usage": "medium",
+      "confidence": "medium"
+    },
+    "pressing_profile": {
+      "summary": "Qatar can press in planned moments, but they are not best described as a relentless pressing team against stronger athletic opposition.",
+      "press_height": "medium",
+      "press_orientation": "situational",
+      "counterpress_level": "medium_low",
+      "confidence": "medium"
+    },
+    "defensive_block": {
+      "summary": "Their more trusted defensive picture is an organized mid/low block that protects central access and invites the game into more manageable channels.",
+      "line_height": "medium_low",
+      "compactness": "medium_high",
+      "central_screen_quality": "medium",
+      "fullback_space_risk": "medium",
+      "confidence": "medium"
+    },
+    "attacking_transition": {
+      "summary": "Qatar are dangerous when Afif receives early and the next runner attacks depth immediately. They do not need many touches to create a real threat if the first transition pass is clean.",
+      "speed": "medium_high",
+      "primary_outlets": [
+        "Akram Afif",
+        "Almoez Ali"
+      ],
+      "confidence": "medium_high"
+    },
+    "defensive_transition": {
+      "summary": "The biggest issue appears when Qatar lose the ball under heavy pressure and cannot secure the second action. Against faster teams, transition defense can become fragile.",
+      "rest_defense_quality": "medium_low",
+      "recovery_risk": "medium_high",
+      "confidence": "medium"
+    },
+    "set_piece_attack": {
+      "summary": "Useful support route, especially because Qatar can create second-ball moments and feed technical executors.",
+      "threat_level": "medium",
+      "confidence": "medium"
+    },
+    "set_piece_defense": {
+      "summary": "Acceptable in compact setups, but the exact level is still dependent on lineup and physical matchup quality.",
+      "stability": "medium",
+      "confidence": "medium_low"
+    },
+    "game_state_behaviour": {
+      "leading": "Qatar are likely to become more compact, trust organization, and attack mainly through selective counters once ahead.",
+      "trailing": "When trailing, they tend to become more dependent on Afif's creativity and direct action quality rather than overwhelming opponents with pure volume.",
+      "confidence": "medium"
+    },
+    "substitution_tendency": {
+      "summary": "Bench changes are more likely to chase fresh legs and role clarity than to transform the whole tactical identity.",
+      "resource_type": "fresh width and support runners",
+      "confidence": "medium_low"
+    },
+    "key_player_roles": [
+      {
+        "role": "free_attacking_reference",
+        "players": [
+          "Akram Afif"
+        ],
+        "note": "The biggest creative ceiling raiser and the player most capable of breaking a script with one action."
+      },
+      {
+        "role": "central_finisher",
+        "players": [
+          "Almoez Ali"
+        ],
+        "note": "Important for box timing and finishing continuity."
+      },
+      {
+        "role": "midfield_screen",
+        "players": [
+          "Assim Madibo"
+        ],
+        "note": "Useful for restoring balance when the game becomes more physical."
+      },
+      {
+        "role": "defensive_experience_axis",
+        "players": [
+          "Pedro Miguel",
+          "Meshaal Barsham",
+          "Hassan Al-Haydos"
+        ],
+        "note": "Leadership and game management still matter heavily in this squad's identity."
+      }
+    ],
+    "tactical_risks": [
+      "sustained pressure on buildup",
+      "defensive foot-race issues against faster opponents",
+      "too much creative burden on Afif",
+      "difficulty raising the pace if chasing a stronger team"
+    ],
+    "data_gaps": [
+      "clear lineup-linked proof of Lopetegui's preferred tournament shape",
+      "larger sample of Qatar against non-Asian high-intensity opponents",
+      "set-piece mapping"
+    ],
+    "confidence_notes": [
+      {
+        "topic": "Afif-centric creativity",
+        "confidence": "high",
+        "reason": "Strongly supported by squad construction and prior team identity."
+      },
+      {
+        "topic": "coach-shape stability under Lopetegui",
+        "confidence": "medium_low",
+        "reason": "Current packet lacks a broad structured sample under the present setup."
+      },
+      {
+        "topic": "defensive transition floor against stronger teams",
+        "confidence": "medium",
+        "reason": "High-plausibility risk, but still needs fresher match evidence."
+      }
+    ],
+    "handoff_to_model": {
+      "attack_ceiling": "medium",
+      "defensive_floor": "medium_low_to_medium",
+      "set_piece_attack": "medium",
+      "tempo_preference": "medium_low",
+      "transition_attack": "medium_high_if_afif_receives_cleanly",
+      "transition_defense_risk": "medium_high",
+      "key_player_dependency": "very_high_on_afif",
+      "market_relevant_flags": [
+        "If Afif is well-contained, Qatar's chance creation can collapse sharply",
+        "If buildup is stressed early, Qatar become much less comfortable",
+        "Compact low-event scripts help Qatar more than stretched tempo"
+      ]
+    },
+    "handoff_to_red_team": {
+      "challenge_points": [
+        "How much of this profile belongs to Qatar's legacy core versus the new coach?",
+        "Are we overstating controlled-possession ability against stronger pressing teams?",
+        "Can Almoez still carry enough finishing weight if Afif is neutralized?"
+      ],
+      "priority": "high"
+    }
+  }
+}

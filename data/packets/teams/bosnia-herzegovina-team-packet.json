@@ -1,0 +1,33 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "波黑",
+    "en": "Bosnia and Herzegovina",
+    "fifa_code": "BIH",
+    "group": "B"
+  },
+  "status": "partial_team_profile_ready",
+  "created_at": "2026-06-12T15:55:00+08:00",
+  "updated_at": "2026-06-12T15:55:00+08:00",
+  "owner": "main-thread",
+  "scope": "B组波黑 team_profile；不输出比分预测、出线预测、冠军预测或投注建议。",
+  "source_log_path": "K:\\worldcup\\data\\source_logs\\bosnia-herzegovina-team-source-log.json",
+  "fixtures_context": {
+    "group_matches": ["加拿大 vs 波黑", "瑞士 vs 波黑", "波黑 vs 卡塔尔"],
+    "needs_official_time_refresh": true
+  },
+  "data": {
+    "coach": "Sergej Barbarez",
+    "profile": "经验与情绪浓度都很高的欧洲球队，进攻端有中锋和二前锋路线，但整体速度、转换防守和阵容年龄结构是主要疑问。",
+    "core_players_watch": ["Edin Dzeko", "Ermedin Demirovic", "Amar Dedic", "Sead Kolasinac", "Rade Krunic", "Benjamin Tahirovic"],
+    "style_tags": ["中锋支点", "二点球", "边路传中", "情绪驱动", "中低位防守"],
+    "strengths": ["经验", "禁区终结", "身体对抗", "定位球", "关键球员个人能力"],
+    "risks": ["老化与体能", "防线速度", "中场覆盖范围", "落后局提速能力", "情绪和纪律波动"],
+    "data_confidence": "medium_low"
+  },
+  "missing_fields": ["official_matchday_squad_refresh", "T-24h injury/training", "T-75m lineup", "fresh odds", "complete recent structured sample"],
+  "data_quality": {
+    "completion_level": "usable_partial",
+    "reason_not_complete": "核心球员可用性、近期样本和临场配置仍需复核。"
+  }
+}

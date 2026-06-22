@@ -1,0 +1,21 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:47:00+08:00",
+  "team": {"zh": "德国", "en": "Germany", "fifa_code": "GER", "group": "E"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-2-2-2", "3-2 build-up"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "中后场由 Kimmich/中卫出球控节奏，Wirtz、Musiala 在肋部接球，Havertz 提供前场支点和禁区占位。",
+    "pressing_profile": "前场压迫和丢球反抢强，首轮大胜后执行感上调。",
+    "defensive_block": "可高位压制弱队，但面对科特迪瓦速度时，身后空间和边卫回追是重点。",
+    "attacking_transition": "强，技术点多，二次进攻和前场反抢后打门效率高。",
+    "set_piece": "主罚质量和高点都不错，需补官方定位球数据。"
+  },
+  "coach_tendencies": {"coach": "Julian Nagelsmann", "risk_appetite": "medium_high", "game_state": "领先后仍可能继续压迫，但第二轮需要控制消耗和反击风险。"},
+  "post_round1_update": "7-1 后进攻上限和替补深度评价上调；红队重点是防止过度奖励单场大胜。",
+  "tactical_risks": ["身后空间", "热门心态", "对科特迪瓦反击速度", "高位丢球后的回追"],
+  "confidence_notes": {"high": ["技术密度", "压迫和前场反抢"], "medium": ["防线稳定性", "领先后管理"], "low_or_missing": ["T-75m首发", "官方技术报告"]},
+  "handoff_to_model": {"attack_ceiling": "very_high", "defensive_floor": "medium_high", "transition_attack": "high", "public_bias_risk": "high"},
+  "handoff_to_red_team": ["7-1 是否造成市场过热", "面对科特迪瓦速度时防线是否退得及时", "轮换会否降低默契"]
+}

@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:20:00+08:00",
+  "team": {"zh": "比利时", "en": "Belgium", "fifa_code": "BEL", "group": "G"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-3-3", "3-4-2-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "De Bruyne/Tielemans 负责节奏和最后一传，Doku/Trossard 提供边路或肋部突破，Lukaku 占禁区。",
+    "pressing_profile": "可中高位压迫，但老核心体能和中后场回追决定持续性。",
+    "defensive_block": "个人经验足，但防线速度和转换保护要被埃及反击考验。",
+    "attacking_transition": "强，Doku 和 De Bruyne 的第一脚能直接制造高价值机会。",
+    "set_piece": "主罚点和高点都有，进攻定位球加分。"
+  },
+  "coach_tendencies": {"coach": "Rudi Garcia", "risk_appetite": "medium", "game_state": "对埃及时大概率控球占优，但要防 Salah 一侧反击。"},
+  "tactical_risks": ["防线速度", "核心体能", "埃及反击", "热门心态", "边后卫身后空间"],
+  "confidence_notes": {"high": ["中前场创造", "禁区支点"], "medium": ["防守转换", "压迫持续性"], "low_or_missing": ["T-75m首发", "伤停"]},
+  "handoff_to_model": {"attack_ceiling": "high", "defensive_floor": "medium", "transition_defense_risk": "medium_high", "set_piece": "medium_high"},
+  "handoff_to_red_team": ["Salah反击是否打穿身后", "De Bruyne/Lukaku体能", "名气盘口溢价"]
+}

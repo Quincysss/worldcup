@@ -1,0 +1,21 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T13:07:00+08:00",
+  "team": {"zh": "日本", "en": "Japan", "fifa_code": "JPN", "group": "F"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["3-4-2-1", "4-3-3"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "短传、边路换位和肋部接球清晰，Kubo/Mitoma 是制造错位的关键。",
+    "pressing_profile": "团队压迫纪律好，能用前场触发和中场补位限制强队出球。",
+    "defensive_block": "整体移动强，但防守定位球和身体对抗仍是被针对点。",
+    "attacking_transition": "强，边路速度和第一脚出球质量高。",
+    "set_piece": "进攻端脚法有质量，防守端需防高点劣势。"
+  },
+  "coach_tendencies": {"coach": "Hajime Moriyasu", "risk_appetite": "medium", "game_state": "首轮逼平荷兰后，第二轮对突尼斯会更主动，但不能急躁。"},
+  "post_round1_update": "2-2 荷兰后，日本强队对抗能力上调；面对突尼斯低位时，破密集和定位球防守成为重点。",
+  "tactical_risks": ["身体对抗", "定位球防守", "低位破密集", "边路核心体能"],
+  "confidence_notes": {"high": ["战术纪律", "边路创造"], "medium": ["禁区终结", "防守高点"], "low_or_missing": ["伤停", "官方技术报告"]},
+  "handoff_to_model": {"attack_ceiling": "medium_high", "defensive_floor": "medium_high", "transition_attack": "high", "set_piece_defense_risk": "medium_high"},
+  "handoff_to_red_team": ["逼平荷兰后是否市场过热", "突尼斯低位是否让日本久攻不下", "身体和定位球是否被针对"]
+}

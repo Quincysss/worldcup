@@ -1,0 +1,540 @@
+{
+  "phase": "team_profile",
+  "team": "France",
+  "status": "partial",
+  "created_at": "2026-06-10T17:16:20.4497734+08:00",
+  "updated_at": "2026-06-10T17:19:00.2835079+08:00",
+  "owner": "data-model-agent",
+  "scope": "法国队 team_profile 模型输入简报；当前仅建立基线实力框架、核心球员敏感度、赔率校准接口、I组后续横向比较所需字段和不确定性标记，不输出具体比赛比分、胜平负、小组出线或冠军预测",
+  "inputs_expected": [
+    "france-team-packet",
+    "france-tactics-packet",
+    "market_snapshot"
+  ],
+  "missing_fields": [
+    {
+      "field": "france-team-packet.data",
+      "path": "K:\\worldcup\\data\\packets\\teams\\france-team-packet.json",
+      "reason": "文件已创建但仍为空骨架，缺少 Elo、FIFA、Opta、近期表现、阵容价值、球员可用性和来源记录"
+    },
+    {
+      "field": "france-tactics-packet.data",
+      "path": "K:\\worldcup\\data\\packets\\tactics\\france-tactics-packet.json",
+      "reason": "文件已创建但仍为空骨架，缺少阵型、角色分工、低位破防、反击防守、领先后管理和替补轮换信息"
+    },
+    {
+      "field": "market_snapshot",
+      "path": "K:\\worldcup\\data\\packets\\markets\\france-odds-packet.json",
+      "reason": "尚无结构化赔率包，暂时只能保留校准接口和字段需求，不能落市场事实值"
+    }
+  ],
+  "source_log": [
+    {
+      "type": "upstream_packet",
+      "path": "K:\\worldcup\\data\\packets\\teams\\france-team-packet.json",
+      "status_observed": "in_progress",
+      "used_for": "确认 team packet 已创建但内容未填"
+    },
+    {
+      "type": "upstream_packet",
+      "path": "K:\\worldcup\\data\\packets\\tactics\\france-tactics-packet.json",
+      "status_observed": "in_progress",
+      "used_for": "确认 tactics packet 已创建但内容未填"
+    },
+    {
+      "type": "review_reference",
+      "path": "K:\\worldcup\\data\\reviews\\red_team\\france-red-team-review.md",
+      "status_observed": "in_progress",
+      "used_for": "确认红队核验文件已建骨架但尚未提供可用内容"
+    },
+    {
+      "type": "local_output",
+      "path": "K:\\worldcup\\data\\outputs\\team_reports\\france-model-brief.json",
+      "status_observed": "partial",
+      "used_for": "当前法国队模型输入简报持续更新文件"
+    }
+  ],
+  "notes": [
+    "已按主线程协议先落文件再填内容",
+    "当前两个上游 packet 均只有骨架，没有可直接建模的事实数据，因此本简报以框架、字段契约和临时占位逻辑为主",
+    "本文件当前状态必须保持为 partial，待上游补齐后再收敛为 complete"
+  ],
+  "data": {
+    "language": "zh-CN",
+    "encoding": "UTF-8",
+    "model_version": "france-team-profile-v1",
+    "model_scope": {
+      "stage": "team_profile",
+      "purpose": "建立法国队的模型输入框架、强度档案接口和不确定性标记，供后续 I 组横向比较与逐轮比赛预测阶段调用",
+      "final_result_policy": "当前阶段仅做球队档案，不输出任何具体比赛概率或比分结论"
+    },
+    "input_readiness": {
+      "status": "partial",
+      "available_inputs": [
+        {
+          "type": "team_packet_skeleton",
+          "path": "K:\\worldcup\\data\\packets\\teams\\france-team-packet.json",
+          "owner": "data-collector-agent",
+          "notes": "只有骨架字段，没有事实数据"
+        },
+        {
+          "type": "tactics_packet_skeleton",
+          "path": "K:\\worldcup\\data\\packets\\tactics\\france-tactics-packet.json",
+          "owner": "tactics-coach-agent",
+          "notes": "只有骨架字段，没有战术内容"
+        }
+      ],
+      "missing_inputs": [
+        "baseline ratings and ranking values",
+        "recent form window and sample split",
+        "official squad and player availability states",
+        "tactical structure and matchup notes",
+        "structured market odds snapshot"
+      ],
+      "uncertainty_flags": [
+        "当前不能给法国落任何已验证数值强度分",
+        "当前不能把法国的球星名气直接映射为稳定执行力",
+        "当前不能把市场热度直接映射为模型概率"
+      ]
+    },
+    "baseline_strength_framework": {
+      "objective": "把法国队的长期绝对强度、近期状态、阵容深度和关键球员依赖拆层建模，避免把豪门身份直接写成固定常数",
+      "temporary_team_band": {
+        "label": "elite_placeholder",
+        "usage_rule": "在正式 packet 到位前，只允许把法国视为高档位强队模板，不允许落任何具体强度分或与其他球队的最终差值",
+        "confidence": "low"
+      },
+      "composite_formula": {
+        "description": "建议先标准化，再做加权合成；关键球员可用性和战术执行放在独立修正层，不直接写进长期 baseline",
+        "formula": "baseline_z = 0.30*Elo_z + 0.10*FIFA_z + 0.25*OptaPower_z + 0.15*RecentForm_z + 0.10*SquadValue_z + 0.10*DepthScore_z",
+        "why_this_shape": [
+          "法国这类顶级强队的长期实力可由 Elo 和 Opta 或同类 power rating 主导",
+          "FIFA 排名只做低权重锚定，避免头衔和叙事过度计权",
+          "近期表现用于调整短周期状态，但必须对对手质量和比赛性质降噪",
+          "阵容身价和深度评分对法国尤为重要，因为其替补深度可能显著改变比赛后段强度"
+        ]
+      },
+      "component_roles": [
+        {
+          "factor": "Elo",
+          "priority": "high",
+          "role": "长期对抗强度主轴",
+          "required_fields": [
+            "ratings.elo",
+            "ratings.elo_rank",
+            "ratings.elo_source",
+            "ratings.captured_at"
+          ]
+        },
+        {
+          "factor": "FIFA排名",
+          "priority": "medium",
+          "role": "低权重外部校准",
+          "required_fields": [
+            "ratings.fifa_rank",
+            "ratings.fifa_points",
+            "ratings.fifa_captured_at"
+          ]
+        },
+        {
+          "factor": "Opta或同类Power Rating",
+          "priority": "high",
+          "role": "过程强度与全队质量确认",
+          "required_fields": [
+            "ratings.opta_power",
+            "ratings.opta_rank",
+            "ratings.opta_captured_at"
+          ]
+        },
+        {
+          "factor": "近期表现",
+          "priority": "high",
+          "role": "短期状态修正",
+          "required_fields": [
+            "recent_form.window_matches",
+            "recent_form.weighted_points_per_match",
+            "recent_form.weighted_xg_for",
+            "recent_form.weighted_xg_against",
+            "recent_form.sample_split",
+            "recent_form.opponent_strength_adjustment"
+          ]
+        },
+        {
+          "factor": "阵容身价",
+          "priority": "medium",
+          "role": "头部质量与整体人才密度代理变量",
+          "required_fields": [
+            "squad_value.total_eur",
+            "squad_value.rank",
+            "squad_value.starting_xi_value",
+            "squad_value.bench_value"
+          ]
+        },
+        {
+          "factor": "替补深度",
+          "priority": "high",
+          "role": "法国特有的重要修正项",
+          "required_fields": [
+            "depth_score.top_16_quality",
+            "depth_score.roles_covered",
+            "depth_score.backline_coverage",
+            "depth_score.midfield_coverage",
+            "depth_score.attack_coverage"
+          ]
+        },
+        {
+          "factor": "核心球员影响",
+          "priority": "high",
+          "role": "与长期 baseline 分离的情境修正层",
+          "required_fields": [
+            "player_availability.attack_core",
+            "player_availability.midfield_screen",
+            "player_availability.backline_core",
+            "player_availability.goalkeeper"
+          ]
+        }
+      ],
+      "recent_form_rules": {
+        "recommended_window": "近 8 场正式比赛为主，友谊赛只作补充",
+        "sample_split_required": [
+          "对低位防守球队样本",
+          "对高转换球队样本",
+          "对高位压迫球队样本",
+          "强对手样本",
+          "正式比赛与友谊赛分层"
+        ],
+        "notes": [
+          "法国若对弱队长期占优，近期样本容易高估控场和压制力，需要按对手级别削峰",
+          "若近期轮换较多，样本要区分主力强度与实验阵强度"
+        ]
+      },
+      "france_specific_notes": [
+        "法国的 baseline 不能只看首发上限，替补深度和替换后强度保持能力是核心特征",
+        "法国的长期强度与关键球员个体可用性仍然必须拆层；豪门标签不能替代可用性验证",
+        "若未来 packet 显示前场火力很强，也要同步审查中场屏障和后场推进稳定性，防止只建进攻模型"
+      ]
+    },
+    "core_player_sensitivity": {
+      "objective": "把法国关键位置可用性拆成进攻核心、后防核心、中场屏障和门将四条敏感度主线，为后续 lambda/xG 修正提供接口",
+      "method_note": "下述区间是占位框架，用于表示方向和强弱；只有上游 packet 提供真实球员状态、分钟风险和替代者质量后才能转成事实数值",
+      "role_groups": [
+        {
+          "role_group": "进攻核心",
+          "examples_as_role": [
+            "主攻侧一对一突破点",
+            "纵深冲刺或中锋终结点",
+            "高价值最后一传制造者"
+          ],
+          "primary_effects": [
+            "team_attack_lambda",
+            "transition_xg",
+            "high_score_tail"
+          ],
+          "placeholder_delta": {
+            "confirmed_available": {
+              "team_attack_lambda_delta": [0.18, 0.35],
+              "chance_creation_quality_delta_pct": [5, 12],
+              "high_score_tail": "上调"
+            },
+            "minutes_limited": {
+              "team_attack_lambda_delta": [0.06, 0.16],
+              "chance_creation_quality_delta_pct": [2, 6],
+              "high_score_tail": "小幅上调或不变"
+            },
+            "unavailable": {
+              "team_attack_lambda_delta": [-0.35, -0.18],
+              "chance_creation_quality_delta_pct": [-12, -5],
+              "high_score_tail": "明显下调"
+            }
+          },
+          "notes": [
+            "法国进攻核心缺席时，首先受影响的是单点爆破、纵深威胁和 2 球以上尾部",
+            "如果法国仍有高质量替补攻击手，平均进攻值未必塌得很深，但离散度和爆发上限通常会下降"
+          ]
+        },
+        {
+          "role_group": "中场屏障",
+          "examples_as_role": [
+            "单后腰保护者",
+            "第一道反抢与回收屏障",
+            "攻守转换节奏稳定器"
+          ],
+          "primary_effects": [
+            "opponent_transition_xg",
+            "own_build_up_stability",
+            "match_volatility"
+          ],
+          "placeholder_delta": {
+            "confirmed_available": {
+              "opponent_xg_allowed_delta": [-0.18, -0.08],
+              "transition_control": "改善",
+              "volatility": "下降"
+            },
+            "minutes_limited": {
+              "opponent_xg_allowed_delta": [-0.08, 0.0],
+              "transition_control": "小幅改善",
+              "volatility": "略降或不变"
+            },
+            "unavailable": {
+              "opponent_xg_allowed_delta": [0.08, 0.22],
+              "transition_control": "恶化",
+              "volatility": "上升"
+            }
+          },
+          "notes": [
+            "对法国这类高控球队，中场屏障的重要性不只是防守，还直接影响领先后管理和丢球后的二次保护",
+            "中场屏障缺失时，总进球波动和对手反击质量往往比胜平负更早恶化"
+          ]
+        },
+        {
+          "role_group": "后防核心",
+          "examples_as_role": [
+            "高空与一对一核心中卫",
+            "指挥线与补位核心",
+            "后场出球稳定点"
+          ],
+          "primary_effects": [
+            "opponent_set_piece_xg",
+            "opponent_box_entry_rate",
+            "clean_sheet_tail"
+          ],
+          "placeholder_delta": {
+            "confirmed_available": {
+              "opponent_xg_allowed_delta": [-0.15, -0.05],
+              "clean_sheet_tail": "上调",
+              "late_game_control": "改善"
+            },
+            "minutes_limited": {
+              "opponent_xg_allowed_delta": [-0.05, 0.03],
+              "clean_sheet_tail": "小幅上调或不变",
+              "late_game_control": "基本不变"
+            },
+            "unavailable": {
+              "opponent_xg_allowed_delta": [0.06, 0.20],
+              "clean_sheet_tail": "下调",
+              "late_game_control": "恶化"
+            }
+          },
+          "notes": [
+            "后防核心缺席对法国的影响通常体现在防线组织、定位球防守和领先后的稳定性",
+            "若替补出球能力与速度覆盖不足，面对高转换球队的惩罚会被放大"
+          ]
+        },
+        {
+          "role_group": "门将",
+          "examples_as_role": [
+            "高球与禁区控制者",
+            "近距离扑救核心",
+            "后场出球第一点"
+          ],
+          "primary_effects": [
+            "post_shot_prevention",
+            "set_piece_defense",
+            "build_up_security"
+          ],
+          "placeholder_delta": {
+            "confirmed_available": {
+              "opponent_goals_prevented_delta": [-0.10, -0.03],
+              "set_piece_defense": "改善"
+            },
+            "minutes_limited": {
+              "opponent_goals_prevented_delta": [-0.04, 0.02],
+              "set_piece_defense": "基本不变"
+            },
+            "unavailable": {
+              "opponent_goals_prevented_delta": [0.03, 0.12],
+              "set_piece_defense": "恶化"
+            }
+          },
+          "notes": [
+            "门将位置对法国的影响常被低估，尤其是在领先后管理和定位球防守里",
+            "如果法国后场推进依赖门将第一传，门将可用性还会影响 build-up 风险"
+          ]
+        }
+      ],
+      "combination_logic": [
+        "进攻核心缺席主要压缩进球上尾，中场屏障与后防核心缺席主要抬升对手 xG 和比赛波动",
+        "若进攻核心与中场屏障同时受限，法国可能从高控制高上限队，变成高天赋但高波动队",
+        "若后防核心与门将同时受限，不建议只下修零封概率，还应上修定位球和比赛末段失球风险"
+      ],
+      "required_packet_fields": [
+        "availability.status",
+        "availability.available_for_squad",
+        "availability.available_to_start",
+        "availability.minutes_risk",
+        "availability.recent_minutes_30d",
+        "availability.expected_role",
+        "availability.replacement_quality_band",
+        "availability.last_update"
+      ]
+    },
+    "france_match_modeling_notes": {
+      "objective": "定义法国队在不同比赛形态下的建模注意点，供后续 group_comparison 和 match_prediction 阶段调用",
+      "themes": [
+        {
+          "theme": "面对低位防守",
+          "why_it_matters": "法国即使长期控场，也不能默认对低位防守一定稳定兑现，需要分辨边路爆破、肋部直塞、远射和定位球四类破局手段是否同时在线",
+          "modeling_actions": [
+            "提高对边路一对一成功率、禁区触球密度和定位球质量的权重",
+            "若上游 tactics packet 显示法国更多依赖个人爆破而非稳定结构推进，应压低稳定大胜尾部，保留 1 球和 2 球优势分布",
+            "检查是否存在射门量大但 xG 结构被低位拖慢的风险"
+          ]
+        },
+        {
+          "theme": "面对反击型球队",
+          "why_it_matters": "法国高压控球时，最容易被忽略的是丢球后的第一时间保护和中后场身后空间管理",
+          "modeling_actions": [
+            "提高对中场屏障、边后卫站位和中卫回追覆盖的权重",
+            "不要只抬高法国进球均值，也要同步检查对手转换 xG 的右尾",
+            "若对手擅长长传身后和快速边路推进，应上修双方进球和比赛波动风险"
+          ]
+        },
+        {
+          "theme": "领先后管理",
+          "why_it_matters": "法国的比赛经常会进入领先后控节奏、换人保强度或转守反击的阶段，这会明显改变比分分布和失球尾部",
+          "modeling_actions": [
+            "区分领先前 60 分钟与领先后 30 分钟的节奏和风险结构",
+            "若法国替补深度强，领先后未必降强度，而可能通过换人继续制造边际压制",
+            "若中场屏障或后防核心受限，领先后管理要显著降级"
+          ]
+        },
+        {
+          "theme": "替补深度",
+          "why_it_matters": "法国与多数球队最不同的地方之一，是替补深度本身就能改变比赛后段期望值，而不是简单维持现状",
+          "modeling_actions": [
+            "把替补深度独立建模，不能只当作阵容身价的附属项",
+            "对下半场和末段的法国进攻或控场能力预留单独修正接口",
+            "若上游 packet 显示替补与主力差距明显缩小，可在后续比赛模型中上调法国末段强度保持能力"
+          ]
+        }
+      ],
+      "distribution_cautions": [
+        "不要把法国误建成固定大开或固定碾压模板，比分分布仍应受对手风格约束",
+        "法国的高天赋和高深度可能抬高上尾，但同样可能掩盖中场屏障和转换防守风险",
+        "若上游数据证实主力和替补差距大于预期，应及时下修末段稳定性"
+      ]
+    },
+    "required_output_fields_for_next_stage": {
+      "for_group_comparison": [
+        "team.name",
+        "baseline_strength_score",
+        "baseline_strength_band",
+        "recent_form_strength_split",
+        "attack_core_availability_band",
+        "midfield_screen_availability_band",
+        "backline_core_availability_band",
+        "depth_score",
+        "transition_defense_risk_band",
+        "low_block_breaking_band",
+        "set_piece_attack_band",
+        "set_piece_defense_band",
+        "market_consensus_strength_band"
+      ],
+      "for_match_prediction_inputs": [
+        "match_id",
+        "opponent_style_tag",
+        "expected_lineup_or_start_probabilities",
+        "attack_lambda_base",
+        "defense_lambda_base",
+        "attack_core_delta",
+        "midfield_screen_delta",
+        "backline_core_delta",
+        "goalkeeper_delta",
+        "rest_days",
+        "travel_context",
+        "weather_context",
+        "market_1x2_fair_probs",
+        "market_totals_fair_probs",
+        "market_handicap_fair_probs"
+      ],
+      "for_roster_and_context": [
+        "coach",
+        "base_formation",
+        "secondary_formation",
+        "build_up_style",
+        "pressing_height",
+        "leading_state_management_notes",
+        "sub_depth_notes",
+        "source_dependencies",
+        "assumption_log"
+      ]
+    },
+    "odds_integration_framework": {
+      "objective": "把法国相关赔率作为市场事实和校准器使用，而不是作为自动正确答案或投注建议",
+      "current_packet_state": "缺少结构化赔率包，当前只能定义读取逻辑和字段需求，不能写入具体市场事实值",
+      "markets_to_capture": [
+        {
+          "market": "outright_winner",
+          "use": "用于校准法国赛事级市场定位是否与长期 baseline 一致",
+          "warning": "豪门热度可能导致价格压缩，不能直接把热门程度写成价值判断"
+        },
+        {
+          "market": "group_winner_and_qualification",
+          "use": "用于校准法国在 I 组中的相对定位和出线市场共识",
+          "warning": "若组内对手信息未统一更新，不能单看法国价格下结论"
+        },
+        {
+          "market": "single_match_1x2",
+          "use": "用于后续单场胜平负校准",
+          "warning": "必须去水并与对手风格、伤停和首发概率共同读取"
+        },
+        {
+          "market": "single_match_totals",
+          "use": "用于校准比赛总进球环境与法国是否被市场视为高压制比赛",
+          "warning": "总进球上修不等于法国必然大胜，可能只是比赛更开放"
+        },
+        {
+          "market": "single_match_asian_handicap",
+          "use": "用于交叉检查法国相对强弱差映射是否一致",
+          "warning": "若 1X2 与让球不一致，优先回查平局概率和净胜球分布"
+        }
+      ],
+      "required_odds_fields": [
+        "bookmaker",
+        "market_type",
+        "selection",
+        "line_value_if_applicable",
+        "odds_decimal",
+        "captured_at",
+        "opening_odds_decimal",
+        "latest_odds_decimal"
+      ],
+      "derived_fields": [
+        "raw_implied_probability",
+        "overround",
+        "fair_probability",
+        "market_consensus",
+        "bookmaker_dispersion",
+        "market_move_delta",
+        "market_move_direction"
+      ],
+      "calibration_rules": [
+        "先去水，再做模型与市场对照",
+        "若市场显著强于模型，优先检查法国豪门热度溢价、重复计权和伤停信息是否滞后",
+        "若市场显著弱于模型，优先检查是否高估了法国替补深度或低估了对手反击威胁",
+        "任何市场信号都只能作为校准输入，不能直接输出投注建议"
+      ]
+    },
+    "uncertainty_and_overconfidence_flags": {
+      "do_not_overstate": [
+        "不要把法国的豪门身份直接写成稳定大胜能力",
+        "不要把阵容名气和市场热门程度重复计权",
+        "不要在没有正式球员可用性和战术包的前提下给法国落高置信度强势判断",
+        "不要把替补深度想象成自动成立，必须有 packet 支撑"
+      ],
+      "largest_model_risks": [
+        "重复计权风险：豪门标签、身价、市场热度和历史名气可能在同一方向多次放大法国",
+        "执行偏差风险：法国理论上限很高，但缺少战术包时，无法确认具体如何把优势稳定转成比赛过程",
+        "状态分层风险：若近期样本混入大量轮换或友谊赛，可能误判真实主力强度",
+        "对手风格风险：面对高转换和低位防守球队时，法国的建模方式不应相同"
+      ],
+      "current_confidence": "low"
+    },
+    "handoff_notes": [
+      "优先等待数据采集 agent 补齐 france-team-packet.json 的 ratings、recent_form、availability、source_log",
+      "优先等待战术 agent 补齐 france-tactics-packet.json 的 formation、player_roles、attack、defense、set_pieces、risk_flags",
+      "拿到结构化 odds packet 后，再把赔率校准接口从字段清单升级为市场事实层",
+      "四支 I 组球队 team_profile 都完成后，再进入 group_comparison 或 match_prediction 阶段"
+    ]
+  }
+}

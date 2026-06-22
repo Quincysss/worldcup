@@ -1,0 +1,21 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T13:07:00+08:00",
+  "team": {"zh": "突尼斯", "en": "Tunisia", "fifa_code": "TUN", "group": "F"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-3-3", "alternates": ["4-2-3-1", "5-4-1 close"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "控球不是绝对强项，更现实的是中场对抗后找边路反击或 Msakni 的经验处理。",
+    "pressing_profile": "可阶段性前压，但首轮大败后更可能先修复中低位。",
+    "defensive_block": "低位纪律是底盘，但首轮 1-5 暴露了身后和禁区保护问题。",
+    "attacking_transition": "依赖 Saad、Hannibal 等球员的第一脚推进。",
+    "set_piece": "弱势局里的重要破局点，同时也要防守端避免再次失血。"
+  },
+  "coach_tendencies": {"coach": "Sabri Lamouchi", "risk_appetite": "medium_low_after_round1", "game_state": "第二轮对日本更可能先稳住，不让比赛过早失控。"},
+  "post_round1_update": "1-5 瑞典后，防守地板、心理稳定性和纪律风险下调；低位反弹路径仍保留。",
+  "tactical_risks": ["防线速度", "定位球防守", "黄牌纪律", "低位被持续围攻", "反击质量不足"],
+  "confidence_notes": {"high": ["低位倾向", "中场对抗"], "medium": ["反击质量", "心理修复"], "low_or_missing": ["停赛", "官方技术报告"]},
+  "handoff_to_model": {"attack_ceiling": "low_medium", "defensive_floor": "volatile_after_5_1", "transition_attack": "medium_low", "discipline_risk": "high"},
+  "handoff_to_red_team": ["首轮惨败是否导致心理崩盘", "日本边路是否持续打穿", "市场是否过度惩罚"]
+}

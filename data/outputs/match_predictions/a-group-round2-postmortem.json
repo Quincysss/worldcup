@@ -1,0 +1,108 @@
+{
+  "phase": "group_round_postmortem",
+  "status": "complete",
+  "updated_at": "2026-06-19T00:00:00+08:00",
+  "group": "A",
+  "round": 2,
+  "scope": "A group second-round results, forecast audit, table impact, and model adjustment handoff.",
+  "sources": [
+    {
+      "name": "ESPN Mexico vs South Korea match centre",
+      "url": "https://www.espn.com/soccer/match/_/gameId/760441/south-korea-mexico",
+      "supports": ["Mexico 1-0 South Korea result", "Luis Romo goal", "formations", "match stats", "standings"]
+    },
+    {
+      "name": "AP Mexico vs South Korea report",
+      "url": "https://apnews.com/article/world-cup-mexico-south-korea-score-31e17a499d793f415c1214610b29ffb5",
+      "supports": ["Mexico qualification context", "match result"]
+    },
+    {
+      "name": "The Guardian Czechia vs South Africa live",
+      "url": "https://www.theguardian.com/football/live/2026/jun/18/czechia-v-south-africa-world-cup-live",
+      "supports": ["Czechia 1-1 South Africa result", "Sadilek goal", "Mokoena penalty", "match script"]
+    },
+    {
+      "name": "Al Jazeera Czechia vs South Africa live",
+      "url": "https://www.aljazeera.com/sports/liveblog/2026/6/18/czechia-vs-south-africa-live-world-cup-2026",
+      "supports": ["Czechia 1-1 South Africa result"]
+    }
+  ],
+  "standings_after_round": [
+    {"team": "Mexico", "points": 6, "goal_difference": 3, "status_note": "qualified/advanced per match reports"},
+    {"team": "South Korea", "points": 3, "goal_difference": 0, "status_note": "qualification path remains active"},
+    {"team": "Czechia", "points": 1, "goal_difference": -1, "status_note": "must improve game management before final match"},
+    {"team": "South Africa", "points": 1, "goal_difference": -2, "status_note": "still alive after late equalizer"}
+  ],
+  "matches": [
+    {
+      "match": "Mexico vs South Korea",
+      "postmortem_file": "比赛/已完成比赛/小组赛/A组/2026-06-18_墨西哥_1-0_韩国_复盘.md",
+      "prediction": {
+        "score": {"mexico": 1, "south_korea": 1},
+        "model_probabilities": {"mexico": 43, "draw": 31, "south_korea": 26},
+        "confidence": "medium"
+      },
+      "actual": {
+        "score": {"mexico": 1, "south_korea": 0},
+        "goal_events": [{"team": "Mexico", "player": "Luis Romo", "minute": 50}],
+        "formations": {"mexico": "4-3-3", "south_korea": "3-4-2-1"},
+        "stats": {
+          "possession": {"mexico": 42.4, "south_korea": 57.6},
+          "shots": {"mexico": 8, "south_korea": 9},
+          "shots_on_goal": {"mexico": 4, "south_korea": 2}
+        }
+      },
+      "forecast_audit": {
+        "wdl": "missed draw lean; Mexico win probability was too low",
+        "scoreline": "near miss; one-goal low-event script correct, Korea goal overestimated",
+        "total_goals": "under/small-score direction hit",
+        "script": "risk-management script hit, but Mexico's 1-0 conversion was underweighted"
+      },
+      "model_adjustments": [
+        "raise mexico_low_event_win_conversion",
+        "apply possession_to_xg discount for Korea against physical low-block/pressing teams",
+        "reduce draw_acceptance weight when host can qualify with a narrow win"
+      ]
+    },
+    {
+      "match": "Czechia vs South Africa",
+      "postmortem_file": "比赛/已完成比赛/小组赛/A组/2026-06-18_捷克_1-1_南非_复盘.md",
+      "prediction": {
+        "score": {"czechia": 1, "south_africa": 0},
+        "model_probabilities": {"czechia": 47, "draw": 30, "south_africa": 23},
+        "confidence": "medium_low"
+      },
+      "actual": {
+        "score": {"czechia": 1, "south_africa": 1},
+        "goal_events": [
+          {"team": "Czechia", "player": "Michal Sadilek", "minute": 5},
+          {"team": "South Africa", "player": "Teboho Mokoena", "minute": 83, "type": "penalty"}
+        ]
+      },
+      "forecast_audit": {
+        "wdl": "missed Czechia win lean; draw warning was valid",
+        "scoreline": "Czechia one-goal output hit; South Africa late scoring path underweighted",
+        "total_goals": "under 2.5 direction hit",
+        "script": "Czechia game-management risk correctly identified but not penalized enough"
+      },
+      "model_adjustments": [
+        "raise czechia_game_management_penalty",
+        "raise south_africa_late_resilience_bonus",
+        "raise draw_weight_in_survival_matches"
+      ]
+    }
+  ],
+  "model_update_summary": {
+    "main_lessons": [
+      "Low-event matches can still favor the host/favorite if first-goal conversion and defensive management are strong.",
+      "Czechia's aerial and set-piece edge should be separated from its ability to close matches.",
+      "South Korea possession volume must be discounted when shot quality is low.",
+      "South Africa should retain a late-draw path in survival games even when attacking baseline is modest."
+    ],
+    "handoff_to_round3": [
+      "Mexico final-round motivation and rotation must be modeled separately after qualification.",
+      "South Korea remain favored against South Africa but need finishing-quality checks.",
+      "Czechia vs Mexico must combine Czechia urgency with Mexico rotation and home-field control."
+    ]
+  }
+}

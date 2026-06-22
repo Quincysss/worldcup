@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:19:00+08:00",
+  "scope": "G组新西兰队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "新西兰", "en": "New Zealand", "fifa_code": "NZL", "group": "G", "confederation": "OFC"},
+  "source_log_path": "K:/worldcup/data/source_logs/new-zealand-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["伊朗 vs 新西兰", "埃及 vs 新西兰", "新西兰 vs 比利时"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Darren Bazeley", "team_identity": "OFC 代表队，低位防守、身体对抗、Chris Wood 支点和定位球是核心路径；阵地战创造力有限。", "likely_structure": ["4-4-2", "5-4-1", "4-2-3-1"]},
+  "core_players_watch": [
+    {"player": "Chris Wood", "role": "中锋支点、禁区终结和定位球目标"},
+    {"player": "Winston Reid", "role": "防线经验和精神领袖"},
+    {"player": "Liberato Cacace", "role": "左路推进和传中"},
+    {"player": "Joe Bell", "role": "中场节奏和防守覆盖"},
+    {"player": "Marko Stamenic", "role": "中场推进和对抗"},
+    {"player": "Sarpreet Singh", "role": "前场创造和定位球"},
+    {"player": "Max Crocombe", "role": "门将承压和禁区管理"}
+  ],
+  "strengths": ["Chris Wood 支点", "定位球", "低位纪律", "身体对抗", "弱队心态"],
+  "risks": ["控球创造有限", "防线长期承压", "边路速度", "被迫压上后的身后空间", "对核心中锋依赖"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "新西兰可能被低估定位球和支点价值，但开放战创造力需打折。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

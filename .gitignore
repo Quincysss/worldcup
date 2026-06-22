@@ -1,0 +1,18 @@
+# Local runtime/session state
+.omx/
+.agents/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Windows local shortcuts and temp files
+*.lnk
+Thumbs.db
+Desktop.ini
+
+# Editor / OS noise
+.DS_Store
+*.tmp
+*.temp

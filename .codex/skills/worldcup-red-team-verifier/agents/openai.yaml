@@ -1,0 +1,4 @@
+interface:
+  display_name: "World Cup Red Team Verifier"
+  short_description: "Challenges World Cup forecasts."
+  default_prompt: "Use -red-team-verifier to audit a 2026 World Cup prediction for blind spots and weak evidence."

@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T13:06:00+08:00",
+  "scope": "F组日本队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "日本", "en": "Japan", "fifa_code": "JPN", "group": "F", "confederation": "AFC"},
+  "source_log_path": "K:/worldcup/data/source_logs/japan-team-source-log.json",
+  "fixtures_context": {"round1_result": "荷兰 2-2 日本", "remaining_group_matches": ["日本 vs 突尼斯", "日本 vs 瑞典"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Hajime Moriyasu", "team_identity": "技术纪律、团队移动、边路小快灵和战术执行力很强；首轮逼平荷兰后，心理和模型评价上调。", "likely_structure": ["4-2-3-1", "3-4-2-1", "4-3-3"]},
+  "core_players_watch": [
+    {"player": "Takefusa Kubo", "role": "右路/肋部创造、定位球和最后一传"},
+    {"player": "Kaoru Mitoma", "role": "左路一对一和突破"},
+    {"player": "Daichi Kamada", "role": "前场连接和二线插上"},
+    {"player": "Wataru Endo", "role": "中场防守、对抗和节奏稳定"},
+    {"player": "Hidemasa Morita", "role": "中场衔接和控球"},
+    {"player": "Ko Itakura", "role": "中卫出球和防线组织"},
+    {"player": "Ayase Ueda", "role": "禁区终结和前场压迫"}
+  ],
+  "strengths": ["战术纪律", "边路一对一", "中前场技术", "压迫执行", "强队对抗心理"],
+  "risks": ["身体对抗劣势", "定位球防守", "面对突尼斯低位时破密集", "边路核心体能", "热门反弹后的市场升温"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "逼平荷兰后日本方向热度上升，需防盘口从低估转为偏热。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["official technical report", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

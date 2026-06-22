@@ -1,0 +1,21 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T13:07:00+08:00",
+  "team": {"zh": "荷兰", "en": "Netherlands", "fifa_code": "NED", "group": "F"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-3-3", "3-4-2-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "依靠 Frenkie de Jong 的推进和 Xavi Simons/Gakpo 的肋部接应，边路由 Dumfries 提供后点和宽度。",
+    "pressing_profile": "可中高位压迫，但首轮被日本逼平后，压迫后的回收和二点保护需要复核。",
+    "defensive_block": "个人能力强，van Dijk 提供防线地板；问题是转换时中场身后和边路回追。",
+    "attacking_transition": "中高，Gakpo、Simons 和边翼卫推进能快速拉开空间。",
+    "set_piece": "高点明显，进攻定位球加分；防守定位球仍需官方数据。"
+  },
+  "coach_tendencies": {"coach": "Ronald Koeman", "risk_appetite": "medium", "game_state": "被日本逼平后，第二轮对瑞典可能更重视控制节奏和防反击。"},
+  "post_round1_update": "2-2 日本后，荷兰进攻质量保留，但比赛管理、防守转换和热门稳定性下调。",
+  "tactical_risks": ["瑞典双前锋冲击", "中场身后空间", "边路回追", "热门队节奏焦躁"],
+  "confidence_notes": {"high": ["防线个人能力", "中场推进"], "medium": ["压迫稳定性", "进攻效率"], "low_or_missing": ["T-75m首发", "官方技术报告"]},
+  "handoff_to_model": {"attack_ceiling": "high", "defensive_floor": "medium_high", "transition_defense_risk": "medium_high", "set_piece": "high"},
+  "handoff_to_red_team": ["被日本逼平是否暴露结构问题", "瑞典前锋冲击是否会放大身后空间", "盘口是否仍高估荷兰"]
+}

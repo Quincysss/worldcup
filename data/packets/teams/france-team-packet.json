@@ -1,0 +1,325 @@
+{
+  "phase": "team_profile",
+  "team": "France",
+  "status": "partial",
+  "created_at": "2026-06-10T17:16:20.4497734+08:00",
+  "updated_at": "2026-06-10T17:17:42.6598363+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "法国队事实数据采集包，仅限 2026 世界杯 team_profile，不包含比分预测、小组预测、冠军预测或投注建议。",
+  "inputs_expected": [
+    "official_team_page",
+    "official_squad",
+    "fixtures",
+    "injury_status",
+    "rankings",
+    "market_snapshot"
+  ],
+  "missing_fields": [
+    "official_starting_xi_t_minus_75m_for_france_vs_senegal",
+    "latest_training_availability_t_minus_24h",
+    "latest_weather_snapshot_t_minus_24h",
+    "latest_market_refresh_t_minus_24h",
+    "exact_opta_power_rank_if_published"
+  ],
+  "source_log": "K:\\worldcup\\data\\source_logs\\france-team-source-log.json",
+  "notes": [
+    "先落文件骨架，后逐步填充；当前阶段严格限定为法国队 team_profile。",
+    "role 字段结合官方名单与近况做轻度归类，不等同于官方首发确认。",
+    "当前无明确官方伤停公告显示关键缺席，但仍需赛前 24 小时与 T-75m 再核。"
+  ],
+  "data": {
+    "team_cn": "法国队",
+    "team_en": "France",
+    "fifa_code": "FRA",
+    "group": "I",
+    "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+    "last_verified_at": "2026-06-10T17:17:42.6598363+08:00",
+    "data_quality_status": "partial_live_verified",
+    "coach": {
+      "name": "Didier Deschamps",
+      "appointed": null,
+      "source_status": "confirmed"
+    },
+    "competition_context": {
+      "stage": "2026 FIFA World Cup group stage",
+      "base_camp": "Boston, Massachusetts, USA",
+      "fixtures": [
+        {
+          "opponent": "Senegal",
+          "date_local": "2026-06-16",
+          "kickoff_local": "15:00",
+          "venue": "New York New Jersey Stadium (MetLife Stadium)",
+          "city": "East Rutherford / New York-New Jersey",
+          "source_status": "confirmed"
+        },
+        {
+          "opponent": "Iraq",
+          "date_local": "2026-06-22",
+          "kickoff_local": "15:00",
+          "venue": "Philadelphia Stadium (Lincoln Financial Field)",
+          "city": "Philadelphia",
+          "source_status": "confirmed"
+        },
+        {
+          "opponent": "Norway",
+          "date_local": "2026-06-26",
+          "kickoff_local": "15:00",
+          "venue": "Boston Stadium (Gillette Stadium)",
+          "city": "Foxborough / Boston",
+          "source_status": "confirmed"
+        }
+      ],
+      "rest_days": [
+        {
+          "between": "Senegal -> Iraq",
+          "days": 5
+        },
+        {
+          "between": "Iraq -> Norway",
+          "days": 3
+        }
+      ],
+      "travel_notes": "法国队官方世界杯基地营设在波士顿。三场小组赛都在美国东海岸，首场在纽约/新泽西，第二场去费城，第三场回到波士顿附近，跨城移动存在但时区成本低。",
+      "environment_risk_note": "6 月美国东海岸午后开球存在热度、湿度和草皮负荷风险，尤其是第三场前只有 3 天休整。具体天气需在 T-24h 再抓取。"
+    },
+    "strength_indicators": {
+      "fifa_rank": 1,
+      "elo_rating": 2063,
+      "elo_world_rank": 3,
+      "opta_power_rank": null,
+      "opta_context_note": "可获取到的权威 Opta/Analyst 素材更偏世界杯模拟胜率与强队层级，未稳定拿到精确国家队 power ranking 名次，因此先留空待补。",
+      "squad_market_value_eur": 1420000000,
+      "data_timestamp": "2026-06-10T17:17:42.6598363+08:00"
+    },
+    "recent_form": {
+      "matches_window": "2025-09-05 至 2026-06-08（最近 10 场正式/官方热身样本）",
+      "record": "8胜1平1负",
+      "goals_for": 25,
+      "goals_against": 9,
+      "xg_for": null,
+      "xg_against": null,
+      "sample_matches": [
+        "2025-09-05 乌克兰 0-2 法国",
+        "2025-09-09 法国 2-1 冰岛",
+        "2025-10-10 法国 3-0 阿塞拜疆",
+        "2025-10-13 冰岛 2-2 法国",
+        "2025-11-13 法国 4-0 乌克兰",
+        "2025-11-16 阿塞拜疆 1-3 法国",
+        "2026-03-26 巴西 1-2 法国",
+        "2026-03-29 哥伦比亚 1-3 法国",
+        "2026-06-04 法国 1-2 科特迪瓦",
+        "2026-06-08 法国 3-1 北爱尔兰"
+      ],
+      "important_match_samples": [
+        "2026-03-26 2-1 巴西：高强度样本下仍能赢球",
+        "2026-03-29 3-1 哥伦比亚：连续对高质量对手保持进攻效率",
+        "2026-06-04 1-2 科特迪瓦：最近热身赛暴露出状态波动",
+        "2026-06-08 3-1 北爱尔兰：最终热身赛及时反弹"
+      ],
+      "opponent_quality_note": "样本里既有乌克兰、冰岛、阿塞拜疆等世预赛对手，也有巴西、哥伦比亚、科特迪瓦等高质量热身赛样本。法国近 10 场整体稳定，强强对话质量高，但世界杯前最后两场热身赛仍显示其状态并非完全线性上升。"
+    },
+    "squad_status": {
+      "final_squad_announced": true,
+      "final_squad_source_status": "confirmed",
+      "key_players": [
+        {
+          "player": "Kylian Mbappe",
+          "position": "Forward",
+          "club": "Real Madrid",
+          "role": "starter",
+          "availability_status": "confirmed"
+        },
+        {
+          "player": "Ousmane Dembele",
+          "position": "Forward",
+          "club": "Paris Saint-Germain",
+          "role": "starter",
+          "availability_status": "confirmed"
+        },
+        {
+          "player": "Michael Olise",
+          "position": "Forward",
+          "club": "Bayern Munich",
+          "role": "starter",
+          "availability_status": "confirmed"
+        },
+        {
+          "player": "Aurelien Tchouameni",
+          "position": "Midfielder",
+          "club": "Real Madrid",
+          "role": "starter",
+          "availability_status": "confirmed"
+        },
+        {
+          "player": "N'Golo Kante",
+          "position": "Midfielder",
+          "club": "Al-Ittihad",
+          "role": "starter",
+          "availability_status": "confirmed"
+        },
+        {
+          "player": "William Saliba",
+          "position": "Defender",
+          "club": "Arsenal",
+          "role": "starter",
+          "availability_status": "confirmed"
+        },
+        {
+          "player": "Jules Kounde",
+          "position": "Defender",
+          "club": "Barcelona",
+          "role": "starter",
+          "availability_status": "confirmed"
+        },
+        {
+          "player": "Mike Maignan",
+          "position": "Goalkeeper",
+          "club": "AC Milan",
+          "role": "starter",
+          "availability_status": "confirmed"
+        }
+      ],
+      "roster": [
+        { "player": "Mike Maignan", "position": "Goalkeeper", "club": "AC Milan", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Brice Samba", "position": "Goalkeeper", "club": "Rennes", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Lucas Chevalier", "position": "Goalkeeper", "club": "Paris Saint-Germain", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Robin Risser", "position": "Goalkeeper", "club": "Lens", "role": "depth", "availability_status": "confirmed" },
+        { "player": "Jules Kounde", "position": "Defender", "club": "Barcelona", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Theo Hernandez", "position": "Defender", "club": "AC Milan", "role": "starter", "availability_status": "confirmed" },
+        { "player": "William Saliba", "position": "Defender", "club": "Arsenal", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Ibrahima Konate", "position": "Defender", "club": "Liverpool", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Dayot Upamecano", "position": "Defender", "club": "Bayern Munich", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Clement Lenglet", "position": "Defender", "club": "Atletico Madrid", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Malo Gusto", "position": "Defender", "club": "Chelsea", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Lucas Digne", "position": "Defender", "club": "Aston Villa", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "N'Golo Kante", "position": "Midfielder", "club": "Al-Ittihad", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Aurelien Tchouameni", "position": "Midfielder", "club": "Real Madrid", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Eduardo Camavinga", "position": "Midfielder", "club": "Real Madrid", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Adrien Rabiot", "position": "Midfielder", "club": "Marseille", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Warren Zaire-Emery", "position": "Midfielder", "club": "Paris Saint-Germain", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Corentin Tolisso", "position": "Midfielder", "club": "Lyon", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Kylian Mbappe", "position": "Forward", "club": "Real Madrid", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Marcus Thuram", "position": "Forward", "club": "Inter", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Desire Doue", "position": "Forward", "club": "Paris Saint-Germain", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Bradley Barcola", "position": "Forward", "club": "Paris Saint-Germain", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Jean-Philippe Mateta", "position": "Forward", "club": "Crystal Palace", "role": "rotation", "availability_status": "confirmed" },
+        { "player": "Ousmane Dembele", "position": "Forward", "club": "Paris Saint-Germain", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Michael Olise", "position": "Forward", "club": "Bayern Munich", "role": "starter", "availability_status": "confirmed" },
+        { "player": "Maghnes Akliouche", "position": "Forward", "club": "Monaco", "role": "depth", "availability_status": "confirmed" }
+      ],
+      "injuries": [],
+      "suspensions": [],
+      "fitness_risks": [
+        {
+          "player": "William Saliba",
+          "status": "probable",
+          "issue": "背部不适后已恢复训练，官方赛前报道表示其在最后一场热身赛前已重新合练。",
+          "last_update": "2026-06-08",
+          "expected_return": null
+        },
+        {
+          "player": "Ousmane Dembele",
+          "status": "probable",
+          "issue": "世界杯前热身阶段存在负荷管理痕迹，但已回到合练和比赛名单中。",
+          "last_update": "2026-06-08",
+          "expected_return": null
+        },
+        {
+          "player": "Desire Doue",
+          "status": "probable",
+          "issue": "热身赛期间存在负荷管理和轮换迹象，目前未见官方缺席公告。",
+          "last_update": "2026-06-08",
+          "expected_return": null
+        }
+      ],
+      "depth_notes": "法国队门将和中卫资源极深，边后卫与前场多面手选择也非常充足。最值得继续追踪的是边锋搭配、9 号位使用方式，以及中场由坎特、琼阿梅尼、拉比奥还是更年轻组合主导。"
+    },
+    "market_context": {
+      "capture_time": "2026-06-10T17:17:42.6598363+08:00",
+      "outright": {
+        "bookmaker": "FanDuel",
+        "market": "win_world_cup",
+        "odds_american": "+500",
+        "decimal_odds": 6.0,
+        "implied_probability": 0.1666666667,
+        "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+        "source_status": "probable"
+      },
+      "group_winner": {
+        "bookmaker": "FanDuel",
+        "market": "group_i_winner",
+        "odds_american": "-195",
+        "decimal_odds": 1.5128205128,
+        "implied_probability": 0.6610169492,
+        "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+        "source_status": "probable"
+      },
+      "advance_from_group": {
+        "bookmaker": "FanDuel",
+        "market": "advance_from_group_or_reach_round_of_32",
+        "odds_american": "-7000",
+        "decimal_odds": 1.0142857143,
+        "implied_probability": 0.985915493,
+        "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+        "source_status": "probable"
+      },
+      "first_match_1x2": [
+        {
+          "bookmaker": "Oddschecker consensus",
+          "market": "france_vs_senegal_1x2",
+          "selection": "France",
+          "odds_american": "-220",
+          "decimal_odds": 1.4545454545,
+          "implied_probability": 0.6875,
+          "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+          "source_status": "probable"
+        },
+        {
+          "bookmaker": "Oddschecker consensus",
+          "market": "france_vs_senegal_1x2",
+          "selection": "Draw",
+          "odds_american": "+370",
+          "decimal_odds": 4.7,
+          "implied_probability": 0.2127659574,
+          "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+          "source_status": "probable"
+        },
+        {
+          "bookmaker": "Oddschecker consensus",
+          "market": "france_vs_senegal_1x2",
+          "selection": "Senegal",
+          "odds_american": "+650",
+          "decimal_odds": 7.5,
+          "implied_probability": 0.1333333333,
+          "captured_at": "2026-06-10T17:17:42.6598363+08:00",
+          "source_status": "probable"
+        }
+      ],
+      "line_movement_note": "小组头名与夺冠价格均显示法国处于 I 组和全赛事最前列，但这里仅记录市场事实，不延伸为预测结论。",
+      "odds_quality_note": "当前赔率来自 FanDuel/FOX/研究页与 Oddschecker 最新摘要，适合做第一版市场快照；T-24h 仍需抓一次更新价。"
+    },
+    "gaps_and_conflicts": {
+      "missing_or_pending": [
+        "尚未获取法国对塞内加尔的官方首发与替补名单。",
+        "尚未进入 T-24h 天气窗口，东海岸午后气候细节待补。",
+        "精确 Opta power ranking 名次未稳定拿到，暂留空。"
+      ],
+      "conflicts": [
+        "未发现官方名单冲突。",
+        "不同赔率源存在正常时间差和报价微差，不视为事实冲突。"
+      ],
+      "recheck_24h_before_kickoff": [
+        "法国对塞内加尔训练名单与伤停通报",
+        "William Saliba、Ousmane Dembele、Desire Doue 的最终可用性",
+        "法国对塞内加尔的最新 1X2、让球、大小球价格",
+        "纽约/新泽西场地天气、体感温度与湿度"
+      ],
+      "recheck_t_minus_75m": [
+        "官方首发十一人与替补名单",
+        "边锋组合与 9 号位配置",
+        "中场首发是否为 Kante-Tchouameni-Rabiot 主轴"
+      ]
+    },
+    "source_log_path": "K:\\worldcup\\data\\source_logs\\france-team-source-log.json"
+  }
+}

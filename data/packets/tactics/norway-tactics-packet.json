@@ -1,0 +1,119 @@
+{
+  "phase": "team_profile",
+  "team": "Norway",
+  "team_cn": "挪威队",
+  "group": "I",
+  "match": null,
+  "status": "in_progress",
+  "created_at": "2026-06-10",
+  "updated_at": "2026-06-10",
+  "owner": "worldcup-tactics-coach",
+  "scope": "team_profile_only",
+  "missing_fields": [
+    "recent_match_samples structured packet from data collection agent",
+    "confirmed set-piece taker map across full recent competitive sample",
+    "full substitution timeline by match state across main sample",
+    "video-backed verification for defensive weak-side and recovery patterns",
+    "stable 2026 Oscar Bobb role sample"
+  ],
+  "source_log": [
+    {
+      "source": "Norges Fotballforbund match page",
+      "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8707579",
+      "note": "Moldova vs Norway, 2025-03-22"
+    },
+    {
+      "source": "Norges Fotballforbund match page",
+      "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8707580",
+      "note": "Israel vs Norway, 2025-03-25"
+    },
+    {
+      "source": "Norges Fotballforbund match page",
+      "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8707581",
+      "note": "Norway vs Italy, 2025-06-06"
+    },
+    {
+      "source": "Norges Fotballforbund match page",
+      "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8707582",
+      "note": "Estonia vs Norway, 2025-06-09"
+    },
+    {
+      "source": "Norges Fotballforbund match page",
+      "url": "https://www.fotball.no/fotballdata/kamp/?fiksId=8707596",
+      "note": "Italy vs Norway, 2025-11-17"
+    },
+    {
+      "source": "Norges Fotballforbund article",
+      "url": "https://www.fotball.no/landslag/norge-a-herrer/2026/her-er-norges-vm-tropp/",
+      "note": "Norway World Cup squad article, 2026-05-28"
+    }
+  ],
+  "notes": [
+    "Created first to satisfy project rule: write file before full research is complete.",
+    "Current task is team profile only; no match prediction fields should be added here."
+  ],
+  "fan_summary": "这支挪威最危险的地方是能把厄德高的传球、努萨的推进和哈兰德或索尔洛特的终结串成一条线，但边后卫身后和回防空间也会让比赛波动变大。",
+  "confidence_overall": "medium",
+  "sample_summary": {
+    "matches_used": 8,
+    "competitive_match_count": 6,
+    "friendly_match_count": 2,
+    "same_coach_match_count": 8,
+    "sample_quality": "medium"
+  },
+  "team_shape": {
+    "nominal_formations": [
+      "4-2-3-1",
+      "4-3-3"
+    ],
+    "in_possession_shape": "四后卫底稿，常见为2-3-5或2-4-4的前场占位；厄德高前提到右半空间，努萨承担左路推进。",
+    "out_of_possession_shape": "常见为4-4-2或4-4-1-1，厄德高靠近中锋形成第一线。",
+    "alternate_shapes": [
+      "索尔洛特从边路内收时更接近双前锋",
+      "无厄德高时进攻更直接、10号位创造性下降"
+    ],
+    "confidence": "high"
+  },
+  "key_roles": [
+    {
+      "role": "primary_finisher",
+      "players": [
+        "Erling Haaland"
+      ],
+      "note": "主要终结点和最后一线冲刺点。",
+      "confidence": "high"
+    },
+    {
+      "role": "primary_organizer",
+      "players": [
+        "Martin Odegaard"
+      ],
+      "note": "第一组织者、右半空间节拍器、定位球主罚核心。",
+      "confidence": "high"
+    },
+    {
+      "role": "secondary_finisher_aerial_target",
+      "players": [
+        "Alexander Sorloth"
+      ],
+      "note": "高点、支点、二前锋式终结者，也可从右路或偏内位置起步。",
+      "confidence": "high"
+    },
+    {
+      "role": "left_side_carrier",
+      "players": [
+        "Antonio Nusa"
+      ],
+      "note": "左路爆点、推进器、转换期第一持球点。",
+      "confidence": "high"
+    },
+    {
+      "role": "right_side_variation_piece",
+      "players": [
+        "Oscar Bobb"
+      ],
+      "note": "右路内切创造者和节奏变化点，但稳定性样本还不够完整。",
+      "confidence": "medium"
+    }
+  ]
+}

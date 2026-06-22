@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T16:14:00+08:00",
+  "team": {"zh": "佛得角", "en": "Cape Verde", "fifa_code": "CPV", "group": "H"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "H组黑马和低位反击队；纸面深度有限，但反击、定位球和情绪动能不可忽略。", "recommended_weights": {"elo": 0.30, "fifa_ranking": 0.12, "recent_form": 0.18, "squad_quality": 0.16, "tactical_fit": 0.16, "availability": 0.08}, "round1_correction": "not_available_pre_match"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "medium_low", "defensive_floor": "medium", "transition_defense_risk": "medium_high", "set_piece": "medium", "market_name_bias": "low"},
+  "availability_sensitivity": [{"player": "Ryan Mendes", "creation_impact": "medium_high"}, {"player": "Garry Rodrigues", "transition_impact": "medium_high"}, {"player": "Logan Costa", "lambda_against_impact": "medium_high"}, {"player": "Vozinha", "shot_stopping_impact": "medium"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals"], "warning": "黑马方向容易被故事感拉高热度，也可能被大众忽视，需要看盘口真实让步。"},
+  "uncertainty_flags": ["opening match not played/confirmed", "T-75m lineup", "fresh odds", "official final squad depth"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "low block shape", "set-piece takers"],
+  "model_risk_notes": "佛得角的模型方差高；若首发边锋和中卫状态齐整，防守时间管理和定位球会明显影响单场分布。"
+}

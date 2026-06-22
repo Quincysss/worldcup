@@ -1,0 +1,15 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:21:00+08:00",
+  "team": {"zh": "比利时", "en": "Belgium", "fifa_code": "BEL", "group": "G"},
+  "scope": "球队层面模型输入；不输出具体比分、胜平负、出线、冠军或投注建议。",
+  "baseline_strength_framework": {"tier_hint": "G组上游热门，赛前强度高但防线有年龄和速度疑问。", "recommended_weights": {"elo": 0.32, "fifa_ranking": 0.12, "recent_form": 0.18, "squad_quality": 0.18, "tactical_fit": 0.12, "availability": 0.08}, "round1_correction": "not_available_pre_match"},
+  "rating_placeholders": {"elo": "needs_refresh", "fifa_ranking": "needs_refresh", "opta_power": "needs_refresh", "squad_value": "needs_refresh"},
+  "style_adjustments": {"attack_ceiling": "high", "defensive_floor": "medium", "transition_defense_risk": "medium_high", "set_piece": "medium_high", "market_name_bias": "high"},
+  "availability_sensitivity": [{"player": "Kevin De Bruyne", "lambda_for_impact": "high"}, {"player": "Romelu Lukaku", "lambda_for_impact": "high"}, {"player": "Jeremy Doku", "transition_impact": "medium_high"}, {"player": "Amadou Onana", "lambda_against_impact": "medium_high"}],
+  "market_signal_placeholder": {"needs_refresh": true, "markets": ["1x2", "asian_handicap", "total_goals", "group_winner"], "warning": "比利时名气溢价可能让热门方向偏贵。"},
+  "uncertainty_flags": ["opening match not played/confirmed", "T-75m lineup", "fresh odds", "injury status"],
+  "prediction_input_requirements": ["confirmed lineups", "fresh odds snapshot", "Salah fitness", "Belgium defensive line setup"],
+  "model_risk_notes": "比利时进攻均值高，但对埃及时必须保留被 Salah/Marmoush 反击打身后的尾部。"
+}

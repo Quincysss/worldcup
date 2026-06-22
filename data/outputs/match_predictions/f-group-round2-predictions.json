@@ -1,0 +1,148 @@
+{
+  "phase": "group_round_prediction",
+  "status": "pre_match_conditional",
+  "captured_at": "2026-06-17T16:50:00+08:00",
+  "latest_revision_file": "data/outputs/match_predictions/f-group-round2-quant-revision-20260620.json",
+  "latest_revision_note": "2026-06-20 after F group roster/player_state completion: Netherlands vs Sweden remains Netherlands slight first direction with lower certainty; Tunisia vs Japan revised from 0-2 to 1-2 representative score due Kubo knee flag and Tunisia coach-change uncertainty.",
+  "group": "F",
+  "round": 2,
+  "scope": "F group round 2 match predictions with betting-risk gates",
+  "risk_gate": {
+    "lineups": "not_confirmed_T_minus_75m",
+    "odds_snapshot": "public_snippets_only_not_full_same-book_snapshot",
+    "red_team_policy": "no steady-banker language when revise/hold gates remain",
+    "purchase_language": "conditional_discussion_only"
+  },
+  "first_round_context": [
+    {
+      "match": "Netherlands vs Japan",
+      "actual_score": "Netherlands 2-2 Japan",
+      "model_update": [
+        "Netherlands attack ceiling retained",
+        "Netherlands defensive transition risk up",
+        "Japan press resistance and technical stability up",
+        "Japan draw-against-favorite path up"
+      ]
+    },
+    {
+      "match": "Sweden vs Tunisia",
+      "actual_score": "Sweden 5-1 Tunisia",
+      "model_update": [
+        "Sweden aerial and wide-delivery edge up",
+        "Sweden multi-goal path up",
+        "Tunisia collapse-after-trailing risk up",
+        "Tunisia box-defense risk up"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "match": "Netherlands vs Sweden",
+      "date": "2026-06-20",
+      "prediction": {
+        "score": "Netherlands 2-1 Sweden",
+        "lean": "Netherlands slight win lean, Sweden/draw protection required",
+        "confidence": "medium_low",
+        "expected_goals": {
+          "Netherlands": 1.65,
+          "Sweden": 1.35
+        }
+      },
+      "model_probabilities": {
+        "Netherlands": 46,
+        "Draw": 27,
+        "Sweden": 27
+      },
+      "market_snapshot": {
+        "type": "public odds snippet, not full same-book live snapshot",
+        "sample_odds_american": {
+          "Netherlands": -150,
+          "Draw": 300,
+          "Sweden": 410
+        },
+        "normalized_reference_probability": {
+          "Netherlands": 57.4,
+          "Draw": 23.9,
+          "Sweden": 18.7
+        },
+        "market_note": "Model is materially cooler on Netherlands because Sweden's striker quality and Netherlands defensive-transition risk are high."
+      },
+      "betting_risk": {
+        "purchase_level": "discussion_only_not_banker",
+        "china_sports_lottery_notes": [
+          "Netherlands win is only a slight first direction.",
+          "If handicap is Netherlands -1, avoid relying on handicap win.",
+          "Main total-goal band is 2/3, with 3 higher if both attacks are full strength."
+        ],
+        "invalidate_if": [
+          "Sweden starts Isak, Gyokeres and Kulusevski with no restrictions and market still overprices Netherlands",
+          "Netherlands defensive setup remains aggressive without extra transition cover",
+          "same-book odds move sharply without lineup confirmation"
+        ]
+      }
+    },
+    {
+      "match": "Tunisia vs Japan",
+      "date": "2026-06-20",
+      "prediction": {
+        "score": "Tunisia 0-2 Japan",
+        "lean": "Japan win, draw protection required if price shortens",
+        "confidence": "medium",
+        "expected_goals": {
+          "Tunisia": 0.60,
+          "Japan": 1.55
+        }
+      },
+      "model_probabilities": {
+        "Tunisia": 17,
+        "Draw": 27,
+        "Japan": 56
+      },
+      "market_snapshot": {
+        "type": "public odds snippets with disagreement, not full same-book live snapshot",
+        "sample_odds_american": {
+          "Tunisia": 350,
+          "Draw": 245,
+          "Japan": -115
+        },
+        "normalized_reference_probability": {
+          "Tunisia": 21.2,
+          "Draw": 27.7,
+          "Japan": 51.1
+        },
+        "alternate_market_note": "Some public snippets price Japan much shorter, around -193 with Tunisia near +575; model does not chase that hotter Japan price before lineups.",
+        "market_note": "Model is slightly higher on Japan than the conservative sample because Japan's round-1 technical stability was strong, but low-block risk remains."
+      },
+      "betting_risk": {
+        "purchase_level": "discussion_only_avoid_deep_handicap",
+        "china_sports_lottery_notes": [
+          "Japan win is the first direction but not a steady banker.",
+          "If handicap is Japan -1, avoid relying only on handicap win.",
+          "Main total-goal band is 2 with 3 as cover."
+        ],
+        "invalidate_if": [
+          "Kubo or Mitoma are rotated or minutes-limited",
+          "Tunisia switches to a stable back five and market over-punishes the 1-5 loss",
+          "Japan price shortens sharply without lineup support"
+        ]
+      }
+    }
+  ],
+  "aggregate_notes": [
+    "Netherlands and Japan are first-direction favorites, but neither should be treated as a steady betting banker before lineups and full odds.",
+    "Group F requires guarding against two overreactions: Sweden after 5-1 may be over-upgraded, while Tunisia after 1-5 may be over-punished.",
+    "Japan's draw against Netherlands is a strong signal, but Tunisia presents a low-block problem rather than an open transition game."
+  ],
+  "files_written": [
+    "比赛/未开始比赛/小组赛/F组/2026-06-20_荷兰_vs_瑞典_预测.md",
+    "比赛/未开始比赛/小组赛/F组/2026-06-20_突尼斯_vs_日本_预测.md",
+    "比赛/未开始比赛/小组赛/F组/F组第二轮预测汇总.md",
+    "data/outputs/match_predictions/f-group-round2-predictions.json"
+  ],
+  "source_urls": [
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+    "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+    "https://www.oddschecker.com/",
+    "https://sportsbook.fanduel.com/"
+  ]
+}

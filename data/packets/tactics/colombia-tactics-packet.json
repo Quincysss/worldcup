@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:52:00+08:00",
+  "team": {"zh": "哥伦比亚", "en": "Colombia", "fifa_code": "COL", "group": "K"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "4-2-3-1", "alternates": ["4-3-3", "4-4-2"], "confidence": "medium_high"},
+  "phase_behaviour": {
+    "possession_structure": "James 负责前场节奏和最后一传，Luis Diaz 拉开左路一对一，Arias 提供另一侧连接和跑动。",
+    "pressing_profile": "可中高位压迫，重点锁定对手边路和后腰第一脚，避免给乌兹别克斯坦轻松找支点。",
+    "defensive_block": "中位防守时依靠 Lerma 等中场对抗和中卫速度保护转换。",
+    "attacking_transition": "Luis Diaz 的第一脚推进和 Duran/前锋点的纵深冲刺能快速制造威胁。",
+    "set_piece": "James 脚法、哥伦比亚高点和二点球抢夺是重要破局方式。"
+  },
+  "coach_tendencies": {"coach": "Nestor Lorenzo", "risk_appetite": "medium", "game_state": "对弱势队会主动压制边路和定位球，领先后仍保留反击出口。"},
+  "tactical_risks": ["James 体能", "情绪与牌数", "破低位效率", "中卫身后空间"],
+  "confidence_notes": {"high": ["边路爆点", "定位球脚法"], "medium": ["低位破局", "防守转换"], "low_or_missing": ["T-75m首发", "伤停"]},
+  "handoff_to_model": {"attack_ceiling": "medium_high", "defensive_floor": "medium_high", "transition_defense_risk": "medium", "set_piece": "high"},
+  "handoff_to_red_team": ["哥伦比亚热门溢价", "乌兹别克斯坦低位守分", "James 体能和首发"]
+}

@@ -1,0 +1,20 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:52:00+08:00",
+  "team": {"zh": "乌兹别克斯坦", "en": "Uzbekistan", "fifa_code": "UZB", "group": "K"},
+  "scope": "战术/教练画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "formation": {"default": "3-4-2-1", "alternates": ["5-4-1", "4-2-3-1"], "confidence": "medium"},
+  "phase_behaviour": {
+    "possession_structure": "面对哥伦比亚时会更重视安全出球和第二落点，Shomurodov 提供前场支点，Fayzullaev 负责前场创造。",
+    "pressing_profile": "不太可能长时间高压，更可能以中位阻断和边线诱导为主。",
+    "defensive_block": "三中卫/五后卫能提升中路防守，但边翼卫身后会被 Luis Diaz 和 Arias 持续考验。",
+    "attacking_transition": "第一脚向前找 Shomurodov 或 Fayzullaev，争取把哥伦比亚压上后的空间变成反击。",
+    "set_piece": "Khusanov 等高点有防空和进攻定位球价值。"
+  },
+  "coach_tendencies": {"coach": "Fabio Cannavaro", "risk_appetite": "low_to_medium", "game_state": "首次世界杯更可能先稳结构，落后后再增加前场人数。"},
+  "tactical_risks": ["世界杯经验不足", "边翼卫身后", "被高压限制出球", "落后后进攻办法不足"],
+  "confidence_notes": {"high": ["低位需求", "防线核心"], "medium": ["反击路径", "定位球"], "low_or_missing": ["Cannavaro 首发体系", "T-75m首发"]},
+  "handoff_to_model": {"attack_ceiling": "medium_low", "defensive_floor": "medium", "transition_defense_risk": "medium_high", "set_piece": "medium"},
+  "handoff_to_red_team": ["首次世界杯情绪动能", "哥伦比亚边路压制", "低位守分路径"]
+}

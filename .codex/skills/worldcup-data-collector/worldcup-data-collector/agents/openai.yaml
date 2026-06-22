@@ -1,0 +1,4 @@
+interface:
+  display_name: "World Cup Data Collector"
+  short_description: "Verified World Cup data packets."
+  default_prompt: "Use $worldcup-data-collector to build a sourced 2026 World Cup data packet for assigned teams."

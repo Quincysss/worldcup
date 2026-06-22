@@ -1,0 +1,146 @@
+{
+  "phase": "model_adjustment",
+  "status": "complete",
+  "updated_at": "2026-06-19T00:00:00+08:00",
+  "group": "A",
+  "round": 2,
+  "scope": "A group second-round forecast audit and parameter updates for future match modeling.",
+  "source_results": [
+    {
+      "match": "Mexico 1-0 South Korea",
+      "result_sources": [
+        "https://www.espn.com/soccer/match/_/gameId/760441/south-korea-mexico",
+        "https://apnews.com/article/world-cup-mexico-south-korea-score-31e17a499d793f415c1214610b29ffb5"
+      ]
+    },
+    {
+      "match": "Czechia 1-1 South Africa",
+      "result_sources": [
+        "https://www.espn.com/soccer/match/_/gameId/760438/south-africa-czechia",
+        "https://www.theguardian.com/football/live/2026/jun/18/czechia-v-south-africa-world-cup-live",
+        "https://www.aljazeera.com/sports/liveblog/2026/6/18/czechia-vs-south-africa-live-world-cup-2026"
+      ]
+    }
+  ],
+  "forecast_audit": [
+    {
+      "match": "Mexico 1-0 South Korea",
+      "pre_match_prediction": {
+        "score": "Mexico 1-1 South Korea",
+        "probabilities": {"mexico": 43, "draw": 31, "south_korea": 26},
+        "confidence": "medium"
+      },
+      "actual": "Mexico 1-0 South Korea",
+      "audit": {
+        "direction": "missed draw lean; Mexico single-win probability was too low",
+        "score": "near miss; one-goal, low-event script was close",
+        "total_goals": "under/small-score path hit",
+        "script": "Mexico initiative and risk-management script hit; Korea final-third quality was overestimated"
+      }
+    },
+    {
+      "match": "Czechia 1-1 South Africa",
+      "pre_match_prediction": {
+        "score": "Czechia 1-0 South Africa",
+        "probabilities": {"czechia": 47, "draw": 30, "south_africa": 23},
+        "confidence": "medium_low"
+      },
+      "actual": "Czechia 1-1 South Africa",
+      "audit": {
+        "direction": "missed Czechia win lean; draw protection was correct but underweighted",
+        "score": "Czechia one-goal output hit; South Africa late goal path was too low",
+        "total_goals": "under 2.5 path hit",
+        "script": "Czechia set-piece/early-lead path hit; game-management penalty was too small"
+      }
+    }
+  ],
+  "parameter_updates": [
+    {
+      "parameter": "mexico_home_control_bonus",
+      "old": "+2pp Mexico win probability",
+      "new": "+3.5pp Mexico win probability, conditional on lineup motivation",
+      "reason": "Mexico won despite 42.4% possession; home control showed through pressure, key moments, and game management rather than ball share.",
+      "applies_to": "Mexico home matches against technical or possession-heavy opponents",
+      "round3_active": true,
+      "round3_constraint": "If Mexico rotate heavily after qualifying, cap at +1pp."
+    },
+    {
+      "parameter": "mexico_low_event_win_conversion",
+      "old": "baseline",
+      "new": "+4pp Mexico win probability; -2pp draw probability",
+      "reason": "Mexico converted another low-event match into a controlled one-goal win.",
+      "applies_to": "Expected total goals <= 2.35 when Mexico are not an underdog",
+      "round3_active": true
+    },
+    {
+      "parameter": "south_korea_final_third_penalty_against_physical_blocks",
+      "old": "-1pp South Korea win probability",
+      "new": "-3pp South Korea win probability and -0.08 xG",
+      "reason": "South Korea had 57.6% possession but only two shots on goal against Mexico.",
+      "applies_to": "South Korea versus physical, compact, or disciplined defensive blocks",
+      "round3_active": true
+    },
+    {
+      "parameter": "south_korea_possession_quality_discount",
+      "old": "0",
+      "new": "-0.10 attack-quality multiplier",
+      "reason": "Possession volume did not translate into sufficient shot quality.",
+      "applies_to": "South Korea possession >=55% with weak shot-on-goal or box-entry indicators",
+      "round3_active": true
+    },
+    {
+      "parameter": "czechia_game_management_penalty",
+      "old": "-3pp Czechia win probability",
+      "new": "-6pp Czechia win probability; +3pp draw probability",
+      "reason": "Czechia again failed to turn a lead/control spell into a win, after also losing from a favorable position against South Korea.",
+      "applies_to": "Czechia when leading or expected to defend a narrow advantage",
+      "round3_active": true
+    },
+    {
+      "parameter": "south_africa_late_resilience_bonus",
+      "old": "0",
+      "new": "+3pp draw/non-loss probability; +0.07 xG after 75 minutes",
+      "reason": "South Africa kept the match alive and equalized late through Teboho Mokoena's penalty.",
+      "applies_to": "South Africa trailing by one goal or level late in low-event survival matches",
+      "round3_active": true
+    },
+    {
+      "parameter": "draw_in_relegation_pressure_match",
+      "old": "+1pp draw probability",
+      "new": "+3pp draw probability",
+      "reason": "Two teams under elimination pressure did not become an open shootout; caution preserved the draw path.",
+      "applies_to": "Both teams on 0-1 points where a loss is highly damaging",
+      "round3_active": true
+    },
+    {
+      "parameter": "market_alignment_weight_when_low_event",
+      "old": "0.45",
+      "new": "0.35",
+      "reason": "Low-event matches require preserving draw and late-event tails instead of over-following the market favorite.",
+      "applies_to": "Expected total goals <= 2.35 with unstable finishing indicators",
+      "round3_active": true
+    },
+    {
+      "parameter": "favorite_moneyline_discount_after_host_signal",
+      "old": "-4pp favorite win-probability discount",
+      "new": "-1pp for Mexico-like validated host signals; keep -4pp for non-host public favorites",
+      "reason": "Mexico's public/host signal had real match conversion value; mechanical anti-favorite discount was too harsh.",
+      "applies_to": "Strong host signal plus repeated low-event win conversion",
+      "round3_active": true,
+      "sensitivity": "high"
+    }
+  ],
+  "model_lessons": [
+    "Mexico's control should be modeled through key-moment conversion and game management, not possession share.",
+    "South Korea possession needs a final-third quality discount against physical compact blocks.",
+    "Czechia's set-piece and aerial edge must be separated from its ability to close games.",
+    "South Africa remain limited in open-play attack but should retain a late draw path in survival games.",
+    "Low-event matches can amplify either a host's 1-0 conversion or an underdog's late equalizer; both tails must remain live."
+  ],
+  "handoff_to_round3": [
+    "Mexico's qualification creates a new rotation/motivation variable before modeling Mexico vs Czechia.",
+    "South Korea should remain stronger than South Africa on baseline quality, but finishing-quality and physical-block discounts must be checked.",
+    "Czechia urgency against Mexico raises attacking volume but also exposes game-management and transition risk.",
+    "South Africa's draw/non-loss tail against South Korea should be higher than after round one."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "瑞士", "en": "Switzerland", "fifa_code": "SUI", "group": "B"},
+  "status": "deep_partial",
+  "updated_at": "2026-06-12T19:05:00+08:00",
+  "scope": "球队层面模型输入；不含比分、胜平负、出线或投注建议。",
+  "baseline_strength_framework": {
+    "tier_hint": "B组最稳定的高地板球队，强项在结构、经验和比赛管理。",
+    "recommended_weights": {"elo": 0.36, "fifa_ranking": 0.12, "recent_competitive_form": 0.18, "squad_quality": 0.16, "tactical_fit": 0.12, "game_management": 0.06},
+    "stability_note": "稳定性应提升防守地板，但不能自动等同于锋线高效率。"
+  },
+  "style_adjustments": {
+    "tempo": "medium",
+    "possession_control": "positive",
+    "defensive_floor": "strong_positive",
+    "attacking_ceiling": "medium_high",
+    "lead_protection": "positive_but_can_be_passive"
+  },
+  "availability_sensitivity": [
+    {"player": "Granit Xhaka", "lambda_impact": "medium_high", "reason": "控节奏、推进选择和情绪稳定器。"},
+    {"player": "Manuel Akanji", "lambda_against_impact": "high", "reason": "防线领导、回追和出球。"},
+    {"player": "Gregor Kobel", "lambda_against_impact": "medium_high", "reason": "门线与低失误率提高防守地板。"},
+    {"player": "Breel Embolo", "lambda_impact": "medium", "reason": "提供中路身体和转换支点。"}
+  ],
+  "market_signal_placeholder": {
+    "needs_refresh": true,
+    "fields": ["1x2", "asian_handicap", "total_goals", "clean_sheet", "group_winner", "to_qualify"],
+    "warning": "市场可能正确看重瑞士稳定性，但若过度压低进球方差，需要警惕锋线效率波动。"
+  },
+  "prediction_input_requirements": ["Yakin三中卫/四后卫选择", "Embolo锐度", "Xhaka身体状态", "最新盘口水位", "对手速度点首发"],
+  "uncertainty_flags": ["领先后过保守可能制造尾部风险", "锋线终结效率波动", "面对东道主速度冲击时身后空间需要复核"],
+  "model_risk_notes": "瑞士应获得 B 组最高稳定性加成，但比分分布不宜过度大胜化，更多是控局型优势。"
+}

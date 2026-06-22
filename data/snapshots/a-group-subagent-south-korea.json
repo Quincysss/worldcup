@@ -1,0 +1,82 @@
+{
+  "team": "South Korea",
+  "fifa_code": "KOR",
+  "group": "A",
+  "data_timestamp": "2026-06-18T16:11:21.5152492+08:00",
+  "players": [
+    {"english_name": "Kim Seung-gyu", "chinese_name": "金承奎", "chinese_name_status": "common_translation", "club_name_en": "FC Tokyo", "club_name_cn": "FC东京", "club_name_cn_status": "common_translation"},
+    {"english_name": "Lee Han-beom", "chinese_name": "李韩范", "chinese_name_status": "transliterated", "club_name_en": "Midtjylland", "club_name_cn": "中日德兰", "club_name_cn_status": "common_translation"},
+    {"english_name": "Lee Gi-hyuk", "chinese_name": "李基赫", "chinese_name_status": "transliterated", "club_name_en": "Gangwon FC", "club_name_cn": "江原FC", "club_name_cn_status": "common_translation"},
+    {"english_name": "Kim Min-jae", "chinese_name": "金玟哉", "chinese_name_status": "common_translation", "club_name_en": "Bayern Munich", "club_name_cn": "拜仁慕尼黑", "club_name_cn_status": "common_translation"},
+    {"english_name": "Kim Tae-hyeon", "chinese_name": "金泰贤", "chinese_name_status": "transliterated", "club_name_en": "Kashima Antlers", "club_name_cn": "鹿岛鹿角", "club_name_cn_status": "common_translation"},
+    {"english_name": "Hwang In-beom", "chinese_name": "黄仁范", "chinese_name_status": "common_translation", "club_name_en": "Feyenoord", "club_name_cn": "费耶诺德", "club_name_cn_status": "common_translation"},
+    {"english_name": "Son Heung-min", "chinese_name": "孙兴慜", "chinese_name_status": "common_translation", "club_name_en": "Los Angeles FC", "club_name_cn": "洛杉矶FC", "club_name_cn_status": "common_translation"},
+    {"english_name": "Paik Seung-ho", "chinese_name": "白昇浩", "chinese_name_status": "common_translation", "club_name_en": "Birmingham City", "club_name_cn": "伯明翰城", "club_name_cn_status": "common_translation"},
+    {"english_name": "Cho Gue-sung", "chinese_name": "曹圭成", "chinese_name_status": "common_translation", "club_name_en": "Midtjylland", "club_name_cn": "中日德兰", "club_name_cn_status": "common_translation"},
+    {"english_name": "Lee Jae-sung", "chinese_name": "李在成", "chinese_name_status": "common_translation", "club_name_en": "Mainz 05", "club_name_cn": "美因茨05", "club_name_cn_status": "common_translation"},
+    {"english_name": "Hwang Hee-chan", "chinese_name": "黄喜灿", "chinese_name_status": "common_translation", "club_name_en": "Wolverhampton Wanderers", "club_name_cn": "狼队", "club_name_cn_status": "common_translation"},
+    {"english_name": "Song Bum-keun", "chinese_name": "宋范根", "chinese_name_status": "common_translation", "club_name_en": "Jeonbuk Hyundai Motors", "club_name_cn": "全北现代汽车", "club_name_cn_status": "common_translation"},
+    {"english_name": "Lee Tae-seok", "chinese_name": "李太锡", "chinese_name_status": "transliterated", "club_name_en": "Austria Wien", "club_name_cn": "奥地利维也纳", "club_name_cn_status": "common_translation"},
+    {"english_name": "Cho Wi-je", "chinese_name": "赵玮济", "chinese_name_status": "transliterated", "club_name_en": "Jeonbuk Hyundai Motors", "club_name_cn": "全北现代汽车", "club_name_cn_status": "common_translation"},
+    {"english_name": "Kim Moon-hwan", "chinese_name": "金文焕", "chinese_name_status": "transliterated", "club_name_en": "Daejeon Hana Citizen", "club_name_cn": "大田韩亚市民", "club_name_cn_status": "common_translation"},
+    {"english_name": "Park Jin-seob", "chinese_name": "朴镇燮", "chinese_name_status": "transliterated", "club_name_en": "Zhejiang", "club_name_cn": "浙江", "club_name_cn_status": "common_translation"},
+    {"english_name": "Bae Jun-ho", "chinese_name": "裴峻浩", "chinese_name_status": "transliterated", "club_name_en": "Stoke City", "club_name_cn": "斯托克城", "club_name_cn_status": "common_translation"},
+    {"english_name": "Oh Hyeon-gyu", "chinese_name": "吴贤奎", "chinese_name_status": "common_translation", "club_name_en": "Beşiktaş", "club_name_cn": "贝希克塔什", "club_name_cn_status": "common_translation"},
+    {"english_name": "Lee Kang-in", "chinese_name": "李刚仁", "chinese_name_status": "common_translation", "club_name_en": "Paris Saint-Germain", "club_name_cn": "巴黎圣日耳曼", "club_name_cn_status": "common_translation"},
+    {"english_name": "Yang Hyun-jun", "chinese_name": "梁贤俊", "chinese_name_status": "transliterated", "club_name_en": "Celtic", "club_name_cn": "凯尔特人", "club_name_cn_status": "common_translation"},
+    {"english_name": "Jo Hyeon-woo", "chinese_name": "赵贤佑", "chinese_name_status": "common_translation", "club_name_en": "Ulsan HD", "club_name_cn": "蔚山HD", "club_name_cn_status": "common_translation"},
+    {"english_name": "Seol Young-woo", "chinese_name": "薛英佑", "chinese_name_status": "common_translation", "club_name_en": "Red Star Belgrade", "club_name_cn": "贝尔格莱德红星", "club_name_cn_status": "common_translation"},
+    {"english_name": "Jens Castrop", "chinese_name": "延斯·卡斯特罗普", "chinese_name_status": "transliterated", "club_name_en": "Borussia Mönchengladbach", "club_name_cn": "门兴格拉德巴赫", "club_name_cn_status": "common_translation"},
+    {"english_name": "Kim Jin-gyu", "chinese_name": "金镇圭", "chinese_name_status": "transliterated", "club_name_en": "Jeonbuk Hyundai Motors", "club_name_cn": "全北现代汽车", "club_name_cn_status": "common_translation"},
+    {"english_name": "Eom Ji-sung", "chinese_name": "严智星", "chinese_name_status": "transliterated", "club_name_en": "Swansea City", "club_name_cn": "斯旺西城", "club_name_cn_status": "common_translation"},
+    {"english_name": "Lee Dong-gyeong", "chinese_name": "李东景", "chinese_name_status": "transliterated", "club_name_en": "Ulsan HD", "club_name_cn": "蔚山HD", "club_name_cn_status": "common_translation"}
+  ],
+  "staff": {
+    "confirmed_staff": [
+      {"english_name": "Hong Myung-bo", "role": "head coach", "source_status": "confirmed"},
+      {"english_name": "João Aroso", "role": "assistant coach", "source_status": "confirmed"},
+      {"english_name": "Tiago Maia", "role": "tactical coach", "source_status": "confirmed"},
+      {"english_name": "Kim Dong-jin", "role": "coach", "source_status": "confirmed"},
+      {"english_name": "Kim Jin-kyu", "role": "coach", "source_status": "confirmed"},
+      {"english_name": "Pedro Roma", "role": "goalkeeping coach", "source_status": "confirmed"},
+      {"english_name": "Lee Jae-hong", "role": "fitness coach", "source_status": "confirmed"},
+      {"english_name": "Nuno Matias", "role": "fitness coach", "source_status": "confirmed"}
+    ],
+    "unconfirmed_staff_roles": [
+      "analyst",
+      "performance analyst",
+      "team doctor",
+      "physiotherapist"
+    ]
+  },
+  "source_log": [
+    {
+      "source": "local roster packet",
+      "url": "K:\\worldcup\\data\\packets\\rosters\\south-korea-roster.json",
+      "captured_at": "2026-06-18T11:27:28.923430+08:00",
+      "supports_fields": ["english_name", "current_club"]
+    },
+    {
+      "source": "FIFA team page",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/korea-republic",
+      "captured_at": "2026-06-18T16:11:21.5152492+08:00",
+      "supports_fields": ["team_identity", "squad_baseline"]
+    },
+    {
+      "source": "South Korea national football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/South_Korea_national_football_team",
+      "captured_at": "2026-06-18T16:11:21.5152492+08:00",
+      "supports_fields": ["coaching_staff"]
+    },
+    {
+      "source": "Wikidata",
+      "url": "https://www.wikidata.org/",
+      "captured_at": "2026-06-18T16:11:21.5152492+08:00",
+      "supports_fields": ["Chinese player/club label cross-check"]
+    }
+  ],
+  "gaps_and_conflicts": [
+    "Lower-profile player Chinese names are transliterated from standard Korean romanization rather than independently cross-checked against a Chinese-language federation list.",
+    "Publicly confirmed non-head staff roles beyond the coaching staff remain incomplete."
+  ]
+}

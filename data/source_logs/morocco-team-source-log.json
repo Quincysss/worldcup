@@ -1,0 +1,20 @@
+{
+  "team": {"zh": "摩洛哥", "en": "Morocco", "fifa_code": "MAR", "group": "C"},
+  "captured_at": "2026-06-12T19:30:00+08:00",
+  "status": "deep_partial",
+  "sources": [
+    {
+      "name": "FIFA match schedule / Group C fixture references",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "supports": ["group", "fixtures", "venues"],
+      "confidence": "high"
+    },
+    {
+      "name": "New York Post Group C preview",
+      "url": "https://nypost.com/2026/06/10/sports/world-cup-2026-group-c-preview-prediction-odds-full-team-overviews/",
+      "supports": ["group composition", "manager context", "market framing", "key players"],
+      "confidence": "medium"
+    }
+  ],
+  "gaps": ["official T-24h injury report", "T-75m lineup", "fresh odds snapshot", "official final squad cross-check"]
+}

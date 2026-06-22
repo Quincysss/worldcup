@@ -1,0 +1,192 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "Canada",
+    "en": "Canada",
+    "fifa_code": "CAN",
+    "group": "B"
+  },
+  "match": null,
+  "status": "deep_partial",
+  "created_at": "2026-06-12T17:05:00+08:00",
+  "updated_at": "2026-06-12T17:18:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Canada tactical and coaching team_profile only",
+  "missing_fields": [
+    "T-75m official lineup",
+    "complete set-piece taker and target map",
+    "full lineup-linked recent sample",
+    "video-backed rest-defense review against strong transition teams"
+  ],
+  "source_log": [
+    {
+      "source": "local team packet",
+      "url": "K:\\worldcup\\data\\packets\\teams\\canada-team-packet.json",
+      "note": "Initial local context"
+    }
+  ],
+  "notes": [
+    "Created first before deepening content.",
+    "No match prediction, group projection, champion projection, or betting advice."
+  ],
+  "data": {
+    "coach_profile": {
+      "coach": "Jesse Marsch",
+      "default_formation": "4-2-3-1",
+      "alternate_formation": [
+        "4-3-3",
+        "4-4-2 pressing shell"
+      ],
+      "system_stability": "medium_high",
+      "tournament_pragmatism": "medium",
+      "summary": "Marsch's Canada are built on intensity, vertical running, and front-foot pressing habits. The shape can look flexible, but the identity is clear: force speed, attack space, and make the match physically uncomfortable."
+    },
+    "possession_structure": {
+      "summary": "Canada do not need long sterile possession. Their best controlled possession often exists to trigger width, isolate a defender, or create a lane for Davies, Buchanan, or a central runner.",
+      "build_up": "Back four base with Eustaquio/Alvarez-type central control, then quick release to wide or inside runners.",
+      "central_control_level": "medium",
+      "width_usage": "high",
+      "confidence": "medium_high"
+    },
+    "pressing_profile": {
+      "summary": "Aggressive pressing remains a signature trait under Marsch, especially when Canada can trap on the flank or attack a loose first touch.",
+      "press_height": "medium_high",
+      "press_orientation": "vertical_and_wide_trap_oriented",
+      "counterpress_level": "medium_high",
+      "confidence": "medium_high"
+    },
+    "defensive_block": {
+      "summary": "When the first press is broken, Canada can retreat into a workable mid-block, but their comfort level drops if the opponent can repeatedly force recovery runs behind the fullbacks or outside center-backs.",
+      "line_height": "medium",
+      "compactness": "medium",
+      "central_screen_quality": "medium_high",
+      "fullback_space_risk": "high",
+      "confidence": "medium"
+    },
+    "attacking_transition": {
+      "summary": "This is one of Canada's clearest strengths. The team are most dangerous when the first forward pass is clean and the next wave arrives with pace.",
+      "speed": "high",
+      "primary_outlets": [
+        "Alphonso Davies",
+        "Jonathan David",
+        "Tajon Buchanan",
+        "Cyle Larin"
+      ],
+      "confidence": "high"
+    },
+    "defensive_transition": {
+      "summary": "Canada's main risk phase is the moment after their own aggressive attack or press fails. If the first recovery duel is lost, the back line can be stretched quickly.",
+      "rest_defense_quality": "medium_low",
+      "recovery_risk": "high",
+      "confidence": "medium"
+    },
+    "set_piece_attack": {
+      "summary": "Useful support weapon rather than primary identity. Delivery and second-phase chaos matter, but a full taker-target map is still missing.",
+      "threat_level": "medium",
+      "confidence": "medium_low"
+    },
+    "set_piece_defense": {
+      "summary": "Generally acceptable, though the strongest judgment still depends on final lineup combinations and keeper command in traffic.",
+      "stability": "medium",
+      "confidence": "medium_low"
+    },
+    "game_state_behaviour": {
+      "leading": "Canada are still more comfortable keeping a transition outlet live than dropping into a purely passive shell.",
+      "trailing": "They can become even more vertical, raise crossing volume, and use host emotion to increase tempo.",
+      "confidence": "medium"
+    },
+    "substitution_tendency": {
+      "summary": "Marsch tends to use bench energy to preserve running power and pressing intensity rather than to completely rewire the game model.",
+      "resource_type": "pace_and_intensity",
+      "confidence": "medium"
+    },
+    "key_player_roles": [
+      {
+        "role": "left_side_super_outlet",
+        "players": [
+          "Alphonso Davies"
+        ],
+        "note": "The biggest single transition accelerator and open-field mismatch."
+      },
+      {
+        "role": "central_finisher_and_connector",
+        "players": [
+          "Jonathan David"
+        ],
+        "note": "Important because he can finish, drift, and connect rather than only attack one zone."
+      },
+      {
+        "role": "midfield_controller",
+        "players": [
+          "Stephen Eustaquio"
+        ],
+        "note": "A key stabilizer for tempo and release quality."
+      },
+      {
+        "role": "wide_runner",
+        "players": [
+          "Tajon Buchanan"
+        ],
+        "note": "Adds width, dribbling, and depth on the break."
+      },
+      {
+        "role": "duel_and_recovery_defender",
+        "players": [
+          "Moise Bombito",
+          "Alistair Johnston"
+        ],
+        "note": "Critical when the game turns into repeated defensive races."
+      }
+    ],
+    "tactical_risks": [
+      "rest-defense exposure behind aggressive pressing",
+      "chance conversion volatility",
+      "host-emotion volatility if the game becomes chaotic",
+      "heavy dependence on transition efficiency against better-set blocks"
+    ],
+    "data_gaps": [
+      "fresh injury confirmation for Davies and Bombito near kickoff",
+      "lineup-linked review of striker usage by game state",
+      "clean set-piece map"
+    ],
+    "confidence_notes": [
+      {
+        "topic": "transition attack quality",
+        "confidence": "high",
+        "reason": "Supported by both coach identity and player profile."
+      },
+      {
+        "topic": "settled-possession ceiling",
+        "confidence": "medium",
+        "reason": "More sample is needed against compact opponents."
+      },
+      {
+        "topic": "set-piece impact",
+        "confidence": "medium_low",
+        "reason": "Current packet lacks a full taker-target mapping."
+      }
+    ],
+    "handoff_to_model": {
+      "attack_ceiling": "medium_high",
+      "defensive_floor": "medium",
+      "set_piece_attack": "medium",
+      "tempo_preference": "high_if_emotionally_positive_else_medium_high",
+      "transition_attack": "high",
+      "transition_defense_risk": "high",
+      "key_player_dependency": "high_on_davies_eustaquio_david",
+      "market_relevant_flags": [
+        "Davies fitness materially changes Canada's mismatch profile",
+        "Bombito availability matters for recovery defending",
+        "If Canada score first, the match can tilt into their preferred transition script"
+      ]
+    },
+    "handoff_to_red_team": {
+      "challenge_points": [
+        "Is the settled-attack ceiling being overstated because of host narrative?",
+        "How often does the press actually recover if Davies or Buchanan are not at full burst?",
+        "Does striker selection meaningfully shift the chance profile?"
+      ],
+      "priority": "high"
+    }
+  }
+}

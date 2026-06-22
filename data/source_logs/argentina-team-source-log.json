@@ -1,0 +1,13 @@
+{
+  "team": {"zh": "阿根廷", "en": "Argentina", "fifa_code": "ARG", "group": "J"},
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "captured_at": "2026-06-15T18:20:00+08:00",
+  "sources": [
+    {"name": "FIFA World Cup 26 match schedule", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule", "source_type": "official", "supports": ["Group J fixture context"], "freshness": "needs_refresh_before_prediction"},
+    {"name": "Asociacion del Futbol Argentino", "url": "https://www.afa.com.ar/", "source_type": "official_association", "supports": ["coach", "squad and availability updates"], "freshness": "needs_refresh_before_prediction"},
+    {"name": "Project schedule context", "url": "local://worldcup/group-j", "source_type": "project_context", "supports": ["Argentina vs Algeria opening fixture pending"], "freshness": "needs_matchday_refresh"}
+  ],
+  "volatile_fields": {"injury_status": "needs_refresh", "suspensions": "needs_refresh", "starting_xi": "T-75m_required", "odds": "needs_refresh", "official_technical_report": "not_available_pre_match"},
+  "data_quality_note": "可用于赛前球队画像；阿根廷首轮预测前需刷新 Lionel Messi 出场负荷、首发、伤停和盘口。"
+}

@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "team": {"zh": "摩洛哥", "en": "Morocco", "fifa_code": "MAR", "group": "C"},
+  "status": "deep_partial",
+  "updated_at": "2026-06-12T19:30:00+08:00",
+  "owner": "main-thread",
+  "scope": "C组摩洛哥 team_profile；不输出比分、胜平负、出线、冠军或投注建议。",
+  "source_log_path": "K:\\worldcup\\data\\source_logs\\morocco-team-source-log.json",
+  "fixtures_context": {
+    "group_matches": ["巴西 vs 摩洛哥", "苏格兰 vs 摩洛哥", "摩洛哥 vs 海地"],
+    "needs_official_time_refresh": true
+  },
+  "data": {
+    "coach": "Mohamed Ouahbi",
+    "profile": "2022年四强底色还在，边路和中后场质量很高；换帅后最大变量是体系延续性和临场保守程度。",
+    "core_players_watch": ["Achraf Hakimi", "Brahim Diaz", "Hakim Ziyech", "Sofyan Amrabat", "Youssef En-Nesyri", "Noussair Mazraoui", "Nayef Aguerd", "Yassine Bounou"],
+    "style_tags": ["强边路", "紧凑防守", "反击效率", "身体对抗", "杯赛经验"],
+    "strengths": ["防守纪律", "边后卫推进", "门将质量", "反击速度", "对强队心理韧性"],
+    "risks": ["换帅磨合", "阵地战创造力", "部分核心年龄/状态", "若先丢球的主动进攻", "右路身后空间"],
+    "data_confidence": "medium_high"
+  },
+  "missing_fields": ["official_matchday_squad_refresh", "T-24h injury/training", "T-75m lineup", "fresh odds", "coach tactical confirmation"],
+  "data_quality": {"completion_level": "usable_deep_partial", "reason_not_complete": "换帅后的正式赛样本和临场阵容仍需复核。"}
+}

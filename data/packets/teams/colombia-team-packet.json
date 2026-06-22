@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T10:48:00+08:00",
+  "scope": "K组哥伦比亚队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "哥伦比亚", "en": "Colombia", "fifa_code": "COL", "group": "K", "confederation": "CONMEBOL"},
+  "source_log_path": "K:/worldcup/data/source_logs/colombia-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["乌兹别克斯坦 vs 哥伦比亚", "刚果金 vs 哥伦比亚", "哥伦比亚 vs 葡萄牙"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Nestor Lorenzo", "team_identity": "南美强队，边路爆点、反击和定位球质量很高，James 的创造与 Luis Diaz 的纵深是核心变量。", "likely_structure": ["4-2-3-1", "4-3-3"]},
+  "core_players_watch": [
+    {"player": "Luis Diaz", "role": "左路爆点、纵深和一对一"},
+    {"player": "James Rodriguez", "role": "前场创造、定位球和节奏"},
+    {"player": "Jhon Arias", "role": "右路/中路连接、跑动和压迫"},
+    {"player": "Jhon Duran", "role": "中锋冲击、终结和替补爆点"},
+    {"player": "Jefferson Lerma", "role": "中场对抗、二点球和防守覆盖"},
+    {"player": "Davinson Sanchez", "role": "中卫速度、对抗和防空"},
+    {"player": "Camilo Vargas", "role": "门线和禁区指挥"}
+  ],
+  "strengths": ["边路爆点", "定位球脚法", "南美对抗", "反击速度", "中前场创造", "比赛韧性"],
+  "risks": ["James 体能和角色", "情绪与牌数", "面对低位队破局效率", "中卫身后空间", "热门方向溢价"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "哥伦比亚对乌兹别克斯坦会被市场看高，但低位防守和首次世界杯方差要纳入。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium_high", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

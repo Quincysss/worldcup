@@ -1,0 +1,29 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:35:00+08:00",
+  "team": {"zh": "加纳", "en": "Ghana", "group": "L"},
+  "tactical_summary": "加纳的最强武器是转换速度和个人爆点。Queiroz 接手后，理论上会先要求阵型距离、回防纪律和禁区保护，然后把 Kudus、Semenyo、Inaki Williams 的纵深作为主要进攻出口。这个版本的最大未知是短时间内能否把防守秩序和攻击自由度同时立住。",
+  "structures": {
+    "base_shapes": ["4-2-3-1", "4-3-3"],
+    "alternate_shapes": ["5-4-1"],
+    "in_possession": "Partey 负责第一推进和转移，Kudus 在右中路或十号位拿球，边锋拉开后寻找纵深。",
+    "out_of_possession": "Queiroz 倾向的紧凑中低位可能成为基础，前场压迫会更场景化。"
+  },
+  "phase_behaviour": {
+    "build_up": "中卫到 Partey 的连接很关键，被高压时可能更快找边路或锋线身后。",
+    "chance_creation": "靠 Kudus 持球、Semenyo 冲击、Jordan Ayew 经验和定位球二点。",
+    "transition_attack": "第一推进速度快，适合打对手边后卫身后和中卫转身。",
+    "rest_defense": "两名后腰/中场的距离决定防线承压程度。",
+    "set_pieces": "身体条件不错，但防守定位球专注度仍需赛前和近期样本确认。"
+  },
+  "coach_profile": {
+    "coach": "Carlos Queiroz",
+    "selection_stability": "medium_low",
+    "risk_appetite": "medium_low",
+    "substitution_pattern": "预计先守结构，后手增加速度点或身体对抗。",
+    "tournament_note": "教练切换带来纪律提升空间，也带来默契和进攻自动化不足。"
+  },
+  "key_matchup_inputs_for_model": ["coach_transition_uncertainty", "transition_speed", "defensive_concentration", "kudus_role", "set_piece_variance"],
+  "confidence_notes": {"overall": "medium", "weak_points": ["Queiroz实战样本", "Partey健康", "防线组合"]}
+}

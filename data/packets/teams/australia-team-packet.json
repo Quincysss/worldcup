@@ -1,0 +1,51 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_post_round1",
+  "updated_at": "2026-06-15T12:25:00+08:00",
+  "scope": "D组澳大利亚队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {
+    "zh": "澳大利亚",
+    "en": "Australia",
+    "fifa_code": "AUS",
+    "group": "D",
+    "confederation": "AFC"
+  },
+  "source_log_path": "K:/worldcup/data/source_logs/australia-team-source-log.json",
+  "fixtures_context": {
+    "round1_result_project_context": "澳大利亚 2-0 土耳其",
+    "remaining_group_matches": ["美国 vs 澳大利亚", "巴拉圭 vs 澳大利亚"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Tony Popovic",
+    "team_identity": "纪律、身体、空中优势、定位球和比赛管理是核心；首轮赢土耳其后，防守底盘与心理状态均上调。",
+    "likely_structure": ["4-2-3-1", "4-4-2", "5-4-1 close"]
+  },
+  "core_players_watch": [
+    {"player": "Jackson Irvine", "role": "中场对抗、领导力和二点球"},
+    {"player": "Mathew Ryan", "role": "门将经验和禁区管理"},
+    {"player": "Harry Souttar", "role": "中卫制空和定位球目标"},
+    {"player": "Kye Rowles", "role": "中卫保护和落位"},
+    {"player": "Craig Goodwin", "role": "传中、定位球和左路服务"},
+    {"player": "Riley McGree", "role": "中前场连接和压迫"},
+    {"player": "Martin Boyle", "role": "边路速度和转换出口"},
+    {"player": "Mitchell Duke", "role": "支点、压迫和禁区冲击"}
+  ],
+  "strengths": ["防守纪律", "高空球", "定位球", "身体对抗", "领先后的比赛管理"],
+  "risks": ["阵地战创造力上限", "被高压时出球", "面对美国速度时边路一对一", "领先后过深防守", "二点保护若松动会被连续压制"],
+  "availability_and_discipline": {
+    "injuries": "needs_refresh",
+    "suspensions": "needs_refresh",
+    "fitness": "T-24h_training_required",
+    "starting_xi": "T-75m_required"
+  },
+  "market_placeholder": {
+    "odds_needed": ["1x2", "asian_handicap", "total_goals"],
+    "market_note": "首轮 2-0 后澳大利亚防守和定位球权重上调，但面对美国速度时不能只看首轮胜利。"
+  },
+  "data_quality": {
+    "completion_level": "usable_deep_partial",
+    "confidence": "medium_high",
+    "missing_fields": ["official technical report", "fresh injuries", "fresh suspensions", "fresh odds", "confirmed starting XI"]
+  }
+}

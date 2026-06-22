@@ -1,0 +1,89 @@
+{
+  "model_scope": "I group round 1 detailed match predictions",
+  "captured_at": "2026-06-15T17:50:00+08:00",
+  "model_version": "worldcup-simple-strength-v0.3",
+  "input_readiness": {
+    "label": "partial",
+    "available_inputs": ["team profiles", "team packets", "tactical packets", "model briefs", "red-team reviews", "public schedule and market snippets"],
+    "missing_or_stale_inputs": ["official T-75m lineups", "fresh complete bookmaker odds snapshot", "same-day injury confirmation", "official match-centre final status"],
+    "uncertainty_flags": ["France lineup and risk management", "Senegal transition threat", "Norway market premium", "Iraq low-block and set-piece variance"]
+  },
+  "method": {
+    "baseline": "qualitative strength tier plus tactical matchup adjustment",
+    "adjustments": ["favorite tax", "low-block variance", "transition threat", "set-piece risk", "lineup uncertainty"],
+    "odds_treatment": "No complete verified live odds snapshot captured; market notes are conditional, not bookmaker-specific.",
+    "confidence_policy": "Probabilities are rounded to avoid false precision."
+  },
+  "matches": [
+    {
+      "match": "France vs Senegal",
+      "stage": "group_stage_round1",
+      "group": "I",
+      "captured_at": "2026-06-15T17:50:00+08:00",
+      "input_readiness": "partial",
+      "model_version": "worldcup-simple-strength-v0.3",
+      "probabilities": {
+        "team_a_win": 0.60,
+        "draw": 0.24,
+        "team_b_win": 0.16,
+        "team_a_advance": null,
+        "team_b_advance": null
+      },
+      "expected_goals": {"team_a": 1.65, "team_b": 0.95},
+      "scoreline_modes": ["2-1", "1-0", "1-1", "2-0"],
+      "headline_pick": "France 2-1 Senegal",
+      "confidence": "medium_low",
+      "main_drivers": ["France attacking depth", "France late-game bench strength", "Senegal transition speed", "Senegal center-back and goalkeeper floor"],
+      "risk_flags": ["France favorite tax", "Senegal counterattack path", "France fullback space", "official lineups pending"],
+      "market_comparison": {
+        "included": false,
+        "bookmakers": [],
+        "market_implied": {},
+        "model_minus_market": {},
+        "overround": null,
+        "notes": "Conditional lean only: France direction around AH -0.75 to -1; avoid chasing -1.25/-1.5 without lineup confirmation."
+      },
+      "source_dependencies": [
+        "K:/worldcup/队伍/法国/正式球队档案.md",
+        "K:/worldcup/队伍/塞内加尔/正式球队档案.md",
+        "K:/worldcup/data/packets/teams/france-team-packet.json",
+        "K:/worldcup/data/packets/teams/senegal-team-packet.json"
+      ]
+    },
+    {
+      "match": "Iraq vs Norway",
+      "stage": "group_stage_round1",
+      "group": "I",
+      "captured_at": "2026-06-15T17:50:00+08:00",
+      "input_readiness": "partial",
+      "model_version": "worldcup-simple-strength-v0.3",
+      "probabilities": {
+        "team_a_win": 0.10,
+        "draw": 0.20,
+        "team_b_win": 0.70,
+        "team_a_advance": null,
+        "team_b_advance": null
+      },
+      "expected_goals": {"team_a": 0.55, "team_b": 1.85},
+      "scoreline_modes": ["0-2", "0-1", "1-2", "1-3"],
+      "headline_pick": "Iraq 0-2 Norway",
+      "confidence": "medium",
+      "main_drivers": ["Norway elite finishing", "Odegaard chance creation", "Iraq low-block resistance", "Iraq set-piece path"],
+      "risk_flags": ["Norway market premium", "Norway national-team automation gap", "low-event draw path", "official lineups pending"],
+      "market_comparison": {
+        "included": false,
+        "bookmakers": [],
+        "market_implied": {},
+        "model_minus_market": {},
+        "overround": null,
+        "notes": "Conditional lean only: Norway direction around AH -1; avoid chasing -1.5 or deeper without lineup and price confirmation."
+      },
+      "source_dependencies": [
+        "K:/worldcup/队伍/伊拉克/正式球队档案.md",
+        "K:/worldcup/队伍/挪威/正式球队档案.md",
+        "K:/worldcup/data/packets/teams/iraq-team-packet.json",
+        "K:/worldcup/data/packets/teams/norway-team-packet.json"
+      ]
+    }
+  ]
+}

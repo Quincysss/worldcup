@@ -1,0 +1,33 @@
+{
+  "phase": "team_profile",
+  "team": {
+    "zh": "卡塔尔",
+    "en": "Qatar",
+    "fifa_code": "QAT",
+    "group": "B"
+  },
+  "status": "partial_team_profile_ready",
+  "created_at": "2026-06-12T15:55:00+08:00",
+  "updated_at": "2026-06-12T15:55:00+08:00",
+  "owner": "main-thread",
+  "scope": "B组卡塔尔 team_profile；不输出比分预测、出线预测、冠军预测或投注建议。",
+  "source_log_path": "K:\\worldcup\\data\\source_logs\\qatar-team-source-log.json",
+  "fixtures_context": {
+    "group_matches": ["卡塔尔 vs 瑞士", "加拿大 vs 卡塔尔", "波黑 vs 卡塔尔"],
+    "needs_official_time_refresh": true
+  },
+  "data": {
+    "coach": "Julen Lopetegui",
+    "profile": "亚洲杯经验和熟悉体系是卡塔尔的底盘，Akram Afif 是进攻上限；但面对欧洲和北美高强度对抗时，防线速度、身体对抗和持续压迫下的出球仍是风险。",
+    "core_players_watch": ["Akram Afif", "Almoez Ali", "Hassan Al-Haydos", "Assim Madibo", "Pedro Miguel", "Meshaal Barsham"],
+    "style_tags": ["Afif自由攻击点", "快速反击", "中低位组织", "边路推进", "亚洲赛事经验"],
+    "strengths": ["核心默契", "Afif创造力", "反击效率", "杯赛经验", "定位球和二点球"],
+    "risks": ["高强度对抗适应", "防线速度", "被持续压迫后的出球", "阵容年龄结构", "面对高位逼抢时失误"],
+    "data_confidence": "medium"
+  },
+  "missing_fields": ["official_matchday_squad_refresh", "T-24h injury/training", "T-75m lineup", "fresh odds", "complete recent structured sample"],
+  "data_quality": {
+    "completion_level": "usable_partial",
+    "reason_not_complete": "临场名单、伤停、首发和对抗强度样本仍需复核。"
+  }
+}

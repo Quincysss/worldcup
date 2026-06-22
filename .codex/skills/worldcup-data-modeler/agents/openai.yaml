@@ -1,0 +1,4 @@
+interface:
+  display_name: "World Cup Data Modeler"
+  short_description: "Builds World Cup probability models."
+  default_prompt: "Use $worldcup-data-modeler to design and evaluate a 2026 World Cup prediction model."

@@ -1,0 +1,78 @@
+{
+  "team": "Czech Republic",
+  "summary": {
+    "roster_size": 26,
+    "confirmed_staff_count": 13,
+    "normalization_note": "chinese_name and club_name_cn are normalized transliterations/common translations produced in this pass."
+  },
+  "data_timestamp": "2026-06-18T16:11:49.3863107+08:00",
+  "players": [
+    {"english_name": "Matěj Kovář", "chinese_name": "马捷·科瓦日", "chinese_name_status": "transliterated", "club_name_en": "PSV Eindhoven", "club_name_cn": "埃因霍温PSV", "club_name_cn_status": "common_translation"},
+    {"english_name": "David Zima", "chinese_name": "大卫·齐马", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Tomáš Holeš", "chinese_name": "托马什·霍莱什", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Robin Hranáč", "chinese_name": "罗宾·赫拉纳奇", "chinese_name_status": "transliterated", "club_name_en": "TSG Hoffenheim", "club_name_cn": "霍芬海姆", "club_name_cn_status": "common_translation"},
+    {"english_name": "Vladimír Coufal", "chinese_name": "弗拉基米尔·库法尔", "chinese_name_status": "transliterated", "club_name_en": "TSG Hoffenheim", "club_name_cn": "霍芬海姆", "club_name_cn_status": "common_translation"},
+    {"english_name": "Štěpán Chaloupek", "chinese_name": "斯捷潘·查洛乌佩克", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Ladislav Krejčí", "chinese_name": "拉迪斯拉夫·克雷奇伊", "chinese_name_status": "transliterated", "club_name_en": "Wolverhampton Wanderers", "club_name_cn": "狼队", "club_name_cn_status": "common_translation"},
+    {"english_name": "Vladimír Darida", "chinese_name": "弗拉基米尔·达里达", "chinese_name_status": "transliterated", "club_name_en": "Hradec Králové", "club_name_cn": "赫拉德茨·克拉洛韦", "club_name_cn_status": "transliterated"},
+    {"english_name": "Adam Hložek", "chinese_name": "亚当·赫洛热克", "chinese_name_status": "transliterated", "club_name_en": "TSG Hoffenheim", "club_name_cn": "霍芬海姆", "club_name_cn_status": "common_translation"},
+    {"english_name": "Patrik Schick", "chinese_name": "帕特里克·希克", "chinese_name_status": "transliterated", "club_name_en": "Bayer Leverkusen", "club_name_cn": "勒沃库森", "club_name_cn_status": "common_translation"},
+    {"english_name": "Jan Kuchta", "chinese_name": "扬·库赫塔", "chinese_name_status": "transliterated", "club_name_en": "Sparta Prague", "club_name_cn": "布拉格斯巴达", "club_name_cn_status": "common_translation"},
+    {"english_name": "Lukáš Červ", "chinese_name": "卢卡什·切尔夫", "chinese_name_status": "transliterated", "club_name_en": "Viktoria Plzeň", "club_name_cn": "比尔森胜利", "club_name_cn_status": "common_translation"},
+    {"english_name": "Mojmír Chytil", "chinese_name": "莫伊米尔·希蒂尔", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "David Jurásek", "chinese_name": "大卫·尤拉塞克", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Pavel Šulc", "chinese_name": "帕维尔·舒尔茨", "chinese_name_status": "transliterated", "club_name_en": "Olympique Lyonnais", "club_name_cn": "里昂", "club_name_cn_status": "common_translation"},
+    {"english_name": "Jindřich Staněk", "chinese_name": "因德日赫·斯塔涅克", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Lukáš Provod", "chinese_name": "卢卡什·普罗沃德", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Michal Sadílek", "chinese_name": "米哈尔·萨迪莱克", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Tomáš Chorý", "chinese_name": "托马什·霍里", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Jaroslav Zelený", "chinese_name": "亚罗斯拉夫·泽莱内", "chinese_name_status": "transliterated", "club_name_en": "Sparta Prague", "club_name_cn": "布拉格斯巴达", "club_name_cn_status": "common_translation"},
+    {"english_name": "David Douděra", "chinese_name": "大卫·杜德拉", "chinese_name_status": "transliterated", "club_name_en": "Slavia Prague", "club_name_cn": "布拉格斯拉维亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Tomáš Souček", "chinese_name": "托马什·索切克", "chinese_name_status": "transliterated", "club_name_en": "West Ham United", "club_name_cn": "西汉姆联", "club_name_cn_status": "common_translation"},
+    {"english_name": "Lukáš Horníček", "chinese_name": "卢卡什·霍尔尼切克", "chinese_name_status": "transliterated", "club_name_en": "Braga", "club_name_cn": "布拉加", "club_name_cn_status": "transliterated"},
+    {"english_name": "Alexandr Sojka", "chinese_name": "亚历山德尔·索伊卡", "chinese_name_status": "transliterated", "club_name_en": "Viktoria Plzeň", "club_name_cn": "比尔森胜利", "club_name_cn_status": "common_translation"},
+    {"english_name": "Hugo Sochůrek", "chinese_name": "雨果·索胡雷克", "chinese_name_status": "transliterated", "club_name_en": "Sparta Prague", "club_name_cn": "布拉格斯巴达", "club_name_cn_status": "common_translation"},
+    {"english_name": "Denis Višinský", "chinese_name": "德尼斯·维欣斯基", "chinese_name_status": "transliterated", "club_name_en": "Viktoria Plzeň", "club_name_cn": "比尔森胜利", "club_name_cn_status": "common_translation"}
+  ],
+  "staff": {
+    "confirmed_staff": [
+      {"english_name": "Miroslav Koubek", "chinese_name": "米罗斯拉夫·库贝克", "role_en": "head coach", "role_cn": "主教练"},
+      {"english_name": "Jan Suchopárek", "chinese_name": "扬·苏霍帕雷克", "role_en": "assistant coach", "role_cn": "助理教练"},
+      {"english_name": "Jaroslav Plašil", "chinese_name": "亚罗斯拉夫·普拉希尔", "role_en": "assistant coach", "role_cn": "助理教练"},
+      {"english_name": "Jan Rezek", "chinese_name": "扬·雷泽克", "role_en": "assistant coach", "role_cn": "助理教练"},
+      {"english_name": "Radek Černý", "chinese_name": "拉德克·切尔内", "role_en": "goalkeeper coach", "role_cn": "门将教练"},
+      {"english_name": "Matúš Kozáčik", "chinese_name": "马图什·科扎奇克", "role_en": "goalkeeper coach", "role_cn": "门将教练"},
+      {"english_name": "Martin Kojnok", "chinese_name": "马丁·科伊诺克", "role_en": "fitness coach", "role_cn": "体能教练"},
+      {"english_name": "Štefan Pánik", "chinese_name": "斯捷凡·帕尼克", "role_en": "fitness coach", "role_cn": "体能教练"},
+      {"english_name": "Adam Průša", "chinese_name": "亚当·普鲁沙", "role_en": "analyst", "role_cn": "分析师"},
+      {"english_name": "Petr Krejčí", "chinese_name": "彼得·克雷奇", "role_en": "team doctor", "role_cn": "队医"},
+      {"english_name": "MUDr. Petr Krejčí ml.", "chinese_name": "彼得·克雷奇（小）", "role_en": "team doctor", "role_cn": "队医"},
+      {"english_name": "MUDr. Petr Čechal", "chinese_name": "彼得·切哈尔", "role_en": "team doctor", "role_cn": "队医"},
+      {"english_name": "MUDr. Petr Zeman", "chinese_name": "彼得·泽曼", "role_en": "team doctor", "role_cn": "队医"}
+    ],
+    "unconfirmed_staff_roles": []
+  },
+  "source_log": [
+    {
+      "source": "FOTBAL.CZ final squad announcement",
+      "url": "https://www.fotbal.cz/repre/finalni-nominace-reprezentace-na-mistrovstvi-sveta-2026/a24171",
+      "captured_at": "2026-06-18T16:11:49.3863107+08:00",
+      "supports_fields": ["final squad announcement", "coach", "26-man squad"],
+      "notes": "Official Czech FA announcement cited by the squad page."
+    },
+    {
+      "source": "FOTBAL.CZ staff page",
+      "url": "https://www.fotbal.cz/repre/tym/realizacni-tym/1",
+      "captured_at": "2026-06-18T16:11:49.3863107+08:00",
+      "supports_fields": ["confirmed_staff"],
+      "notes": "Official current Czech A-team staff page."
+    },
+    {
+      "source": "Wikipedia raw squad page",
+      "url": "https://en.wikipedia.org/w/index.php?title=2026_FIFA_World_Cup_squads&action=raw",
+      "captured_at": "2026-06-18T16:11:49.3863107+08:00",
+      "supports_fields": ["player english_name", "player club_name_en", "26-man squad order"],
+      "notes": "Derived from the Czech Republic section; squad cites the official FAČR final squad announcement."
+    }
+  ]
+}

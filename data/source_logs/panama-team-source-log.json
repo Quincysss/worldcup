@@ -1,0 +1,44 @@
+{
+  "team": {"zh": "巴拿马", "en": "Panama", "group": "L"},
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "captured_at": "2026-06-16T12:20:00+08:00",
+  "scope_guard": "球队画像阶段；不写比分、赛果倾向、出线结论、冠军判断或投注建议。",
+  "sources": [
+    {
+      "name": "FIFA - Group L focus",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/group-l-focus-teams-fixtures-standings",
+      "tier": "official",
+      "supports": ["group assignment", "opening fixture Ghana vs Panama", "high-level team context"]
+    },
+    {
+      "name": "FIFA - Match schedule",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
+      "tier": "official",
+      "supports": ["fixture calendar", "match-centre refresh gate"]
+    },
+    {
+      "name": "FEPAFUT",
+      "url": "https://fepafut.com/",
+      "tier": "official_association",
+      "supports": ["national-team announcements", "coach and squad refresh gate", "injury/training follow-up"]
+    }
+  ],
+  "verified_facts": {
+    "coach": {"value": "Thomas Christiansen", "confidence": "high", "needs_refresh": false},
+    "opening_match": {"value": "Ghana vs Panama", "confidence": "high", "needs_refresh": true},
+    "core_player_pool": {
+      "value": ["Anibal Godoy", "Adalberto Carrasquilla", "Michael Amir Murillo", "Jose Luis Rodriguez", "Cecilio Waterman", "Ismael Diaz", "Fidel Escobar", "Orlando Mosquera"],
+      "confidence": "medium",
+      "needs_refresh": true,
+      "note": "球员池用于画像，不等同于官方首发或最终可用名单。"
+    }
+  },
+  "gaps_and_conflicts": [
+    "需要确认最后名单里的锋线排序和翼卫选择。",
+    "T-24h 训练、伤停和发布会信息待刷新。",
+    "T-75m 官方首发待刷新。",
+    "盘口和实时市场不在球队画像阶段采集。"
+  ],
+  "handoff_notes": "战术端重点看 Christiansen 的五后卫/三中卫切换、Carrasquilla 的推进自由度和定位球威胁；模型端不要低估 CONCACAF 强对抗样本里的韧性。"
+}

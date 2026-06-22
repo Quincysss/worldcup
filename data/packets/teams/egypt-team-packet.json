@@ -1,0 +1,24 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-15T15:19:00+08:00",
+  "scope": "G组埃及队球队画像；不包含比分预测、胜平负、出线、冠军或投注建议。",
+  "team": {"zh": "埃及", "en": "Egypt", "fifa_code": "EGY", "group": "G", "confederation": "CAF"},
+  "source_log_path": "K:/worldcup/data/source_logs/egypt-team-source-log.json",
+  "fixtures_context": {"opening_match_status": "pending", "group_matches": ["比利时 vs 埃及", "埃及 vs 新西兰", "埃及 vs 伊朗"], "needs_official_match_centre_refresh": true},
+  "staff_and_identity": {"coach": "Hossam Hassan", "team_identity": "纪律、防守韧性和 Salah 反击单点是核心，强队局可压低节奏，但进攻过度依赖明星。", "likely_structure": ["4-3-3", "4-2-3-1", "4-5-1 defensive phase"]},
+  "core_players_watch": [
+    {"player": "Mohamed Salah", "role": "右路反击、终结和全队进攻重心"},
+    {"player": "Omar Marmoush", "role": "前场速度、反击和二前锋变化"},
+    {"player": "Mostafa Mohamed", "role": "中锋支点和禁区终结"},
+    {"player": "Trezeguet", "role": "边路跑动和转换"},
+    {"player": "Mohamed Elneny", "role": "中场经验和节奏保护"},
+    {"player": "Hamdi Fathi", "role": "中场对抗和二点保护"},
+    {"player": "Mohamed Abdelmonem", "role": "中卫对抗和防空"}
+  ],
+  "strengths": ["Salah 单点", "反击速度", "低位纪律", "大赛经验", "定位球潜力"],
+  "risks": ["进攻依赖 Salah", "控球创造不足", "边路防守承压", "早丢球后主动进攻能力", "核心体能和伤停敏感"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals"], "market_note": "Salah 相关状态会显著影响埃及盘口和模型 lambda。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["confirmed opening result", "fresh injuries", "fresh odds", "confirmed starting XI"]}
+}

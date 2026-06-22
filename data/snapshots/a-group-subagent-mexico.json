@@ -1,0 +1,41 @@
+{
+  "team": "Mexico",
+  "players": [
+    {"english_name": "Raúl Rangel", "chinese_name": "劳尔·兰赫尔", "chinese_name_status": "transliterated", "club_name_en": "Guadalajara", "club_name_cn": "瓜达拉哈拉", "club_name_cn_status": "transliterated"},
+    {"english_name": "Jorge Sánchez", "chinese_name": "豪尔赫·桑切斯", "chinese_name_status": "transliterated", "club_name_en": "PAOK", "club_name_cn": "帕奥克", "club_name_cn_status": "transliterated"},
+    {"english_name": "César Montes", "chinese_name": "塞萨尔·蒙特斯", "chinese_name_status": "transliterated", "club_name_en": "Lokomotiv Moscow", "club_name_cn": "莫斯科火车头", "club_name_cn_status": "common_translation"},
+    {"english_name": "Edson Álvarez", "chinese_name": "埃德松·阿尔瓦雷斯", "chinese_name_status": "transliterated", "club_name_en": "Fenerbahçe", "club_name_cn": "费内巴切", "club_name_cn_status": "transliterated"},
+    {"english_name": "Johan Vásquez", "chinese_name": "约翰·巴斯克斯", "chinese_name_status": "transliterated", "club_name_en": "Genoa", "club_name_cn": "热那亚", "club_name_cn_status": "common_translation"},
+    {"english_name": "Érik Lira", "chinese_name": "埃里克·利拉", "chinese_name_status": "transliterated", "club_name_en": "Cruz Azul", "club_name_cn": "蓝十字", "club_name_cn_status": "common_translation"},
+    {"english_name": "Luis Romo", "chinese_name": "路易斯·罗莫", "chinese_name_status": "transliterated", "club_name_en": "Guadalajara", "club_name_cn": "瓜达拉哈拉", "club_name_cn_status": "transliterated"},
+    {"english_name": "Álvaro Fidalgo", "chinese_name": "阿尔瓦罗·菲达尔戈", "chinese_name_status": "transliterated", "club_name_en": "Real Betis", "club_name_cn": "皇家贝蒂斯", "club_name_cn_status": "common_translation"},
+    {"english_name": "Raúl Jiménez", "chinese_name": "劳尔·希门尼斯", "chinese_name_status": "transliterated", "club_name_en": "Fulham", "club_name_cn": "富勒姆", "club_name_cn_status": "transliterated"},
+    {"english_name": "Alexis Vega", "chinese_name": "亚历克西斯·贝加", "chinese_name_status": "transliterated", "club_name_en": "Toluca", "club_name_cn": "托卢卡", "club_name_cn_status": "transliterated"},
+    {"english_name": "Santiago Giménez", "chinese_name": "圣地亚哥·希门尼斯", "chinese_name_status": "transliterated", "club_name_en": "Milan", "club_name_cn": "AC米兰", "club_name_cn_status": "common_translation"},
+    {"english_name": "Carlos Acevedo", "chinese_name": "卡洛斯·阿塞韦多", "chinese_name_status": "transliterated", "club_name_en": "Santos Laguna", "club_name_cn": "桑托斯拉古纳", "club_name_cn_status": "transliterated"},
+    {"english_name": "Guillermo Ochoa", "chinese_name": "吉列尔莫·奥乔亚", "chinese_name_status": "transliterated", "club_name_en": "AEL Limassol", "club_name_cn": "AEL利马索尔", "club_name_cn_status": "transliterated"},
+    {"english_name": "Armando González", "chinese_name": "阿曼多·冈萨雷斯", "chinese_name_status": "transliterated", "club_name_en": "Guadalajara", "club_name_cn": "瓜达拉哈拉", "club_name_cn_status": "transliterated"},
+    {"english_name": "Israel Reyes", "chinese_name": "伊斯雷尔·雷耶斯", "chinese_name_status": "transliterated", "club_name_en": "América", "club_name_cn": "美洲队", "club_name_cn_status": "common_translation"},
+    {"english_name": "Julián Quiñones", "chinese_name": "胡利安·基诺内斯", "chinese_name_status": "transliterated", "club_name_en": "Al-Qadsiah", "club_name_cn": "卡迪西亚", "club_name_cn_status": "transliterated"},
+    {"english_name": "Orbelín Pineda", "chinese_name": "奥尔贝林·皮内达", "chinese_name_status": "transliterated", "club_name_en": "AEK Athens", "club_name_cn": "雅典AEK", "club_name_cn_status": "common_translation"},
+    {"english_name": "Obed Vargas", "chinese_name": "奥贝德·巴尔加斯", "chinese_name_status": "transliterated", "club_name_en": "Atlético Madrid", "club_name_cn": "马德里竞技", "club_name_cn_status": "common_translation"},
+    {"english_name": "Gilberto Mora", "chinese_name": "吉尔伯托·莫拉", "chinese_name_status": "transliterated", "club_name_en": "Tijuana", "club_name_cn": "蒂华纳", "club_name_cn_status": "transliterated"},
+    {"english_name": "Mateo Chávez", "chinese_name": "马特奥·查韦斯", "chinese_name_status": "transliterated", "club_name_en": "AZ", "club_name_cn": "阿尔克马尔", "club_name_cn_status": "common_translation"},
+    {"english_name": "César Huerta", "chinese_name": "塞萨尔·韦尔塔", "chinese_name_status": "transliterated", "club_name_en": "Anderlecht", "club_name_cn": "安德莱赫特", "club_name_cn_status": "transliterated"},
+    {"english_name": "Guillermo Martínez", "chinese_name": "吉列尔莫·马丁内斯", "chinese_name_status": "transliterated", "club_name_en": "Pumas UNAM", "club_name_cn": "普马斯UNAM", "club_name_cn_status": "transliterated"},
+    {"english_name": "Jesús Gallardo", "chinese_name": "赫苏斯·加拉多", "chinese_name_status": "transliterated", "club_name_en": "Toluca", "club_name_cn": "托卢卡", "club_name_cn_status": "transliterated"},
+    {"english_name": "Luis Chávez", "chinese_name": "路易斯·查韦斯", "chinese_name_status": "transliterated", "club_name_en": "Dynamo Moscow", "club_name_cn": "莫斯科迪纳摩", "club_name_cn_status": "common_translation"},
+    {"english_name": "Roberto Alvarado", "chinese_name": "罗伯托·阿尔瓦拉多", "chinese_name_status": "transliterated", "club_name_en": "Guadalajara", "club_name_cn": "瓜达拉哈拉", "club_name_cn_status": "transliterated"},
+    {"english_name": "Brian Gutiérrez", "chinese_name": "布赖恩·古铁雷斯", "chinese_name_status": "transliterated", "club_name_en": "Guadalajara", "club_name_cn": "瓜达拉哈拉", "club_name_cn_status": "transliterated"}
+  ],
+  "confirmed_staff": [
+    {"role": "head coach", "english_name": "Javier Aguirre", "chinese_name": "哈维尔·阿吉雷", "chinese_name_status": "transliterated"}
+  ],
+  "unconfirmed_staff_roles": [
+    "assistant coach",
+    "goalkeeping coach",
+    "fitness coach",
+    "analyst",
+    "doctor"
+  ]
+}

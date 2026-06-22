@@ -1,0 +1,33 @@
+{
+  "phase": "team_profile",
+  "status": "deep_partial_pre_round1",
+  "updated_at": "2026-06-16T12:25:00+08:00",
+  "scope": "L组巴拿马球队画像；不包含比分、赛果倾向、出线、冠军或投注建议。",
+  "team": {"zh": "巴拿马", "en": "Panama", "fifa_code": "PAN", "group": "L", "confederation": "CONCACAF"},
+  "fixtures_context": {
+    "opening_match_status": "pending",
+    "opening_match": "Ghana vs Panama",
+    "group_matches": ["Ghana vs Panama", "England vs Panama", "Croatia vs Panama"],
+    "needs_official_match_centre_refresh": true
+  },
+  "staff_and_identity": {
+    "coach": "Thomas Christiansen",
+    "team_identity": "巴拿马更像一支靠团队组织、对抗和纪律维持比赛生命线的队伍，Carrasquilla 的推进和 Godoy 的秩序感是中场关键，锋线效率和阵容厚度是主要限制。",
+    "likely_structure": ["5-4-1", "3-4-2-1", "4-4-2"]
+  },
+  "core_players_watch": [
+    {"player": "Anibal Godoy", "role": "中场经验、防守站位、节奏降速和二点保护"},
+    {"player": "Adalberto Carrasquilla", "role": "中场推进、摆脱、转移和前场连接"},
+    {"player": "Michael Amir Murillo", "role": "右路推进、翼卫覆盖和后点冲击"},
+    {"player": "Jose Luis Rodriguez", "role": "边路速度、传中和反击宽度"},
+    {"player": "Cecilio Waterman", "role": "锋线支点、禁区终结和空中对抗"},
+    {"player": "Ismael Diaz", "role": "前场机动、边中转换和抢点"},
+    {"player": "Fidel Escobar", "role": "中卫对抗、防线指挥和定位球争顶"},
+    {"player": "Orlando Mosquera", "role": "门线反应、禁区控制和长传发动"}
+  ],
+  "strengths": ["团队纪律", "中低位防守", "翼卫宽度", "Carrasquilla推进", "定位球身体优势", "CONCACAF硬仗经验"],
+  "risks": ["阵容厚度", "开放空间防守", "进攻产量", "被高压后的出球", "犯规和牌面", "追分阶段替补火力"],
+  "availability_and_discipline": {"injuries": "needs_refresh", "suspensions": "needs_refresh", "fitness": "T-24h_training_required", "starting_xi": "T-75m_required"},
+  "market_placeholder": {"odds_needed": ["1x2", "asian_handicap", "total_goals", "group_winner"], "market_note": "巴拿马在强队叙事下可能被低估防守韧性；预测阶段要看让球深度和总进球线。"},
+  "data_quality": {"completion_level": "usable_deep_partial", "confidence": "medium", "missing_fields": ["fresh injuries", "fresh odds", "confirmed starting XI", "front-line role order"]}
+}
