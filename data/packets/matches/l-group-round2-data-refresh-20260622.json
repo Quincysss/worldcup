@@ -1,0 +1,276 @@
+{
+  "phase": "pre_match_data_refresh",
+  "group": "L",
+  "round": 2,
+  "status": "partial_source_limited",
+  "created_at": "2026-06-22T23:58:00+08:00",
+  "updated_at": "2026-06-23T00:25:00+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "L group round 2 pre-prediction factual data refresh only; no score prediction, no WDL lean, no betting advice.",
+  "captured_at": "2026-06-23T00:25:00+08:00",
+  "factor_inputs_ready": "partial",
+  "model_ready_status": "partial",
+  "betting_gate_status": "discussion_only_hold",
+  "first_round_postmortem_interpretation": {
+    "england_attack_conversion_and_second_half_intensity": {
+      "status": "model_input_flag",
+      "evidence": [
+        "England beat Croatia 4-2 after the local pre-match file had a lower-scoring 1-1 baseline.",
+        "England scored through Kane 12 pen, Kane 42, Bellingham 47 and Rashford 85.",
+        "Local review and Group L page both record a faster England second-half restart and late substitute contribution from Saka to Rashford."
+      ],
+      "data_reminder": "Raise attention on England chance conversion, set-piece second phase and post-interval intensity; keep defensive transition risk visible."
+    },
+    "croatia_transition_threat_but_defense_breached": {
+      "status": "model_input_flag",
+      "evidence": [
+        "Croatia scored twice through Baturina 36 and Musa 45+5, with Sucic and Perisic assist paths.",
+        "Croatia also conceded four and made multiple second-half changes after England regained control."
+      ],
+      "data_reminder": "Keep Croatia attacking transition and veteran passing value, but flag defensive-line and wide-space risk after conceding 4."
+    },
+    "ghana_low_score_breakthrough_and_sub_impact": {
+      "status": "model_input_flag",
+      "evidence": [
+        "Ghana beat Panama 1-0 through Caleb Yirenkyi at 90+5, assisted by Brandon Thomas-Asante from the bench.",
+        "Local review notes a low-scoring game state and late direct attack pattern."
+      ],
+      "data_reminder": "Track Ghana substitute impact, direct counterattacks and late-game scoring path without treating it as a prediction."
+    },
+    "panama_low_block_resistance_limited_attack": {
+      "status": "model_input_flag",
+      "evidence": [
+        "Panama held Ghana scoreless until stoppage time but produced no goal in the opener.",
+        "Panama cards recorded locally: Cesar Blackman 72, Carlos Harvey 90+9."
+      ],
+      "data_reminder": "Preserve Panama low-block resistance but mark attacking production as limited after round 1."
+    },
+    "ati_zigi_next_match_availability_risk": {
+      "status": "uncertain_needs_recheck",
+      "evidence": [
+        "Ghana goalkeeper Lawrence Ati-Zigi started vs Panama and was replaced by Benjamin Asare at 46/47 in the local review and Group L page lineups.",
+        "No final official Ghana medical bulletin was retrieved in this pass."
+      ],
+      "data_reminder": "Mark Ghana goalkeeper availability as a T-24/T-75 recheck item; do not assume full availability."
+    }
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-23_england_vs_ghana",
+      "match": "England vs Ghana",
+      "date_local": "2026-06-23",
+      "kickoff_local": "16:00 UTC-4 / Boston local",
+      "kickoff_beijing": "2026-06-24T04:00:00+08:00",
+      "venue": "Boston Stadium / Gillette Stadium",
+      "host_city": "Foxborough, Massachusetts / Boston market",
+      "home_away_display": "neutral_tournament_listing_team1_england_team2_ghana",
+      "fixture_source_status": "confirmed_by_group_l_schedule_secondary_fifa_referenced",
+      "source_conflict": null,
+      "rest_days": {
+        "england": "Round 1 on 2026-06-17 in Arlington/Dallas vs Croatia; about 5 full rest days before Boston kickoff.",
+        "ghana": "Round 1 on 2026-06-17 in Toronto vs Panama; about 5 full rest days before Boston kickoff."
+      },
+      "travel": {
+        "england": "Arlington/Dallas to Boston/Foxborough long domestic transfer; exact team travel itinerary not verified.",
+        "ghana": "Toronto to Boston/Foxborough cross-border transfer; exact team travel itinerary not verified."
+      },
+      "environment": {
+        "weather_status": "partial_source_limited",
+        "stadium_notes": "Gillette Stadium is an outdoor venue listed as Boston Stadium for the tournament. Regional same-day stadium forecast was not retrieved.",
+        "altitude_m": null
+      },
+      "official_lineup_status": "not_available_yet",
+      "latest_injury_status": "partial_source_limited",
+      "market_snapshot_status": {
+        "official_china_jingcai": null,
+        "same_source_1x2_handicap_totals": null,
+        "status": "missing",
+        "note": "No official China lottery or single-source live 1X2/handicap/totals snapshot retrieved; no betting advice."
+      },
+      "key_availability_watch": [
+        "England: Declan Rice trained after hamstring/back discomfort and publicly said he was ready for Ghana; still a load-risk watch item.",
+        "England: Bukayo Saka has an Achilles management issue and is reported likely to remain a bench option rather than a full-90 starter.",
+        "England: Marcus Rashford returned to training after a minor muscular/tight hamstring concern but remains a minutes-risk watch item.",
+        "Ghana: Lawrence Ati-Zigi was substituted at half-time/46 vs Panama; final medical status was not confirmed in this pass.",
+        "Ghana: Thomas Partey was unavailable for the Canada-based Panama match due visa/admissibility reporting but Guardian reported he was allowed into the United States for Ghana's Boston and Philadelphia games."
+      ],
+      "source_log": [
+        {
+          "source": "2026 FIFA World Cup Group L page",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_L",
+          "captured_at": "2026-06-23T00:25:00+08:00",
+          "supports_fields": ["fixture", "kickoff", "venue", "round1_events", "lineups", "standings"],
+          "source_status": "secondary_fifa_referenced"
+        },
+        {
+          "source": "Guardian England team news",
+          "url": "https://www.theguardian.com/football/2026/jun/20/rashford-and-rice-give-england-boost-for-ghana-but-saka-set-for-bench-again",
+          "captured_at": "2026-06-23T00:25:00+08:00",
+          "supports_fields": ["Rice", "Rashford", "Saka", "England training status"],
+          "source_status": "reputable_reporting"
+        },
+        {
+          "source": "Guardian Thomas Partey visa report",
+          "url": "https://www.theguardian.com/football/2026/jun/17/ghana-thomas-partey-visa-appeal-rejected-canadian-judge-world-cup-panama",
+          "captured_at": "2026-06-23T00:25:00+08:00",
+          "supports_fields": ["Partey Canada absence", "United States entry note"],
+          "source_status": "reputable_reporting"
+        }
+      ]
+    },
+    {
+      "match_id": "2026-06-23_panama_vs_croatia",
+      "match": "Panama vs Croatia",
+      "date_local": "2026-06-23",
+      "kickoff_local": "19:00 UTC-4 / Toronto local",
+      "kickoff_beijing": "2026-06-24T07:00:00+08:00",
+      "venue": "Toronto Stadium / BMO Field",
+      "host_city": "Toronto, Ontario",
+      "home_away_display": "neutral_tournament_listing_team1_panama_team2_croatia",
+      "fixture_source_status": "confirmed_by_group_l_schedule_secondary_fifa_referenced",
+      "source_conflict": null,
+      "rest_days": {
+        "panama": "Round 1 on 2026-06-17 in Toronto vs Ghana; about 5 full rest days and no city change.",
+        "croatia": "Round 1 on 2026-06-17 in Arlington/Dallas vs England; about 5 full rest days before Toronto kickoff."
+      },
+      "travel": {
+        "panama": "Same-city Toronto sequence from round 1 to round 2; lowest travel load among L group teams.",
+        "croatia": "Arlington/Dallas to Toronto cross-border transfer; exact team travel itinerary not verified."
+      },
+      "environment": {
+        "weather_status": "partial_source_limited",
+        "stadium_notes": "BMO Field / Toronto Stadium is an outdoor venue with temporary World Cup expansion; official hourly stadium forecast was not retrieved.",
+        "altitude_m": null
+      },
+      "official_lineup_status": "not_available_yet",
+      "latest_injury_status": "partial_source_limited",
+      "market_snapshot_status": {
+        "official_china_jingcai": null,
+        "same_source_1x2_handicap_totals": null,
+        "status": "missing",
+        "note": "No official China lottery or single-source live 1X2/handicap/totals snapshot retrieved; no betting advice."
+      },
+      "key_availability_watch": [
+        "Panama: no red card in local round-1 review; Blackman and Harvey yellows recorded, no confirmed suspension found.",
+        "Croatia: no red card in local round-1 review; complete official disciplinary table should be rechecked at T-24/T-75.",
+        "Croatia: veteran minutes load from Modric, Perisic and Gvardiol remains a model input after the 4-2 loss."
+      ],
+      "source_log": [
+        {
+          "source": "2026 FIFA World Cup Group L page",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_L",
+          "captured_at": "2026-06-23T00:25:00+08:00",
+          "supports_fields": ["fixture", "kickoff", "venue", "round1_events", "lineups", "standings"],
+          "source_status": "secondary_fifa_referenced"
+        },
+        {
+          "source": "BMO Field venue page",
+          "url": "https://en.wikipedia.org/wiki/BMO_Field",
+          "captured_at": "2026-06-23T00:25:00+08:00",
+          "supports_fields": ["Toronto Stadium venue context", "June 23 Group L slot"],
+          "source_status": "secondary_venue_context"
+        }
+      ]
+    }
+  ],
+  "teams": {
+    "england": {
+      "team": "England",
+      "player_state_file": "data/outputs/player_state/england-player-state.json",
+      "roster_file": "data/packets/rosters/england-roster.json",
+      "member_table": "teams/England/member-table.md",
+      "local_files_exist": true,
+      "local_json_parse_status": "parse_failed_due_existing_encoding_corruption",
+      "player_entry_signal": {"player_state_english_name_hits": 78, "roster_english_name_hits": 27},
+      "round1_record": "England 4-2 Croatia",
+      "round1_model_inputs": ["Kane 2 goals", "Bellingham goal", "Rashford substitute goal", "Saka substitute assist", "Rice assist/set-piece input", "two goals conceded in transition/set-piece-like situations"],
+      "form_status_source_status": "local_file_present_but_json_parse_failed",
+      "minutes_risk": ["Rice hamstring/back nerve pain managed", "Saka Achilles management", "Rashford minor muscle concern returned to training"],
+      "suspension_status": "no confirmed red-card suspension found in this pass"
+    },
+    "ghana": {
+      "team": "Ghana",
+      "player_state_file": "data/outputs/player_state/ghana-player-state.json",
+      "roster_file": "data/packets/rosters/ghana-roster.json",
+      "member_table": "teams/Ghana/member-table.md",
+      "local_files_exist": true,
+      "local_json_parse_status": "parse_failed_due_existing_encoding_corruption",
+      "player_entry_signal": {"player_state_english_name_hits": 78, "roster_english_name_hits": 32},
+      "round1_record": "Ghana 1-0 Panama",
+      "round1_model_inputs": ["Caleb Yirenkyi 90+5 goal", "Brandon Thomas-Asante substitute assist", "Semenyo man-of-match/transition flag in local and public reporting", "Ati-Zigi injury substitution at 46/47"],
+      "form_status_source_status": "local_file_present_but_json_parse_failed",
+      "minutes_risk": ["Ati-Zigi next-match availability uncertain", "Partey cross-border availability context needs final team sheet confirmation"],
+      "suspension_status": "Yirenkyi yellow recorded; no confirmed suspension found"
+    },
+    "panama": {
+      "team": "Panama",
+      "player_state_file": "data/outputs/player_state/panama-player-state.json",
+      "roster_file": "data/packets/rosters/panama-roster.json",
+      "member_table": "teams/Panama/member-table.md",
+      "local_files_exist": true,
+      "local_json_parse_status": "parse_failed_due_existing_encoding_corruption",
+      "player_entry_signal": {"player_state_english_name_hits": 78, "roster_english_name_hits": 54},
+      "round1_record": "Ghana 1-0 Panama",
+      "round1_model_inputs": ["held Ghana until 90+5", "no goal scored", "Blackman yellow 72", "Carlos Harvey yellow 90+9", "same-city Toronto second match"],
+      "form_status_source_status": "local_file_present_but_json_parse_failed",
+      "minutes_risk": ["no specific latest injury confirmed in this pass"],
+      "suspension_status": "no confirmed red-card suspension found"
+    },
+    "croatia": {
+      "team": "Croatia",
+      "player_state_file": "data/outputs/player_state/croatia-player-state.json",
+      "roster_file": "data/packets/rosters/croatia-roster.json",
+      "member_table": "teams/Croatia/member-table.md",
+      "local_files_exist": true,
+      "local_json_parse_status": "parse_failed_due_existing_encoding_corruption",
+      "player_entry_signal": {"player_state_english_name_hits": 78, "roster_english_name_hits": 29},
+      "round1_record": "England 4-2 Croatia",
+      "round1_model_inputs": ["Baturina goal", "Musa goal", "Sucic assist", "Perisic assist", "conceded 4", "Modric substituted 58", "Musa/Vuskovic substituted 66"],
+      "form_status_source_status": "local_file_present_but_json_parse_failed",
+      "minutes_risk": ["veteran core load and recovery after Dallas to Toronto transfer"],
+      "suspension_status": "no confirmed red-card suspension found in this pass"
+    }
+  },
+  "group_state_after_round1": {
+    "source_status": "secondary_fifa_referenced_plus_local_reviews",
+    "table": [
+      {"team": "England", "points": 3, "gf": 4, "ga": 2, "gd": 2},
+      {"team": "Ghana", "points": 3, "gf": 1, "ga": 0, "gd": 1},
+      {"team": "Panama", "points": 0, "gf": 0, "ga": 1, "gd": -1},
+      {"team": "Croatia", "points": 0, "gf": 2, "ga": 4, "gd": -2}
+    ]
+  },
+  "local_data_quality": {
+    "status": "partial_source_limited",
+    "details": [
+      "Four player_state JSON files exist and contain repeated english_name/form/internal rating field signals, but ConvertFrom-Json failed because existing Chinese text appears encoding-corrupted and has broken string delimiters.",
+      "Four roster JSON files exist and contain player-entry signals, but ConvertFrom-Json failed for the same existing encoding corruption pattern.",
+      "Four member-table Markdown files exist.",
+      "This refresh packet therefore uses local postmortem facts plus external fixture/team-news sources and marks detailed per-player state extraction as partial."
+    ]
+  },
+  "gaps_and_conflicts": [
+    {"field": "official_lineups", "status": "not_available_yet", "detail": "Capture time is before T-75m official lineup window for both June 23 local matches."},
+    {"field": "official_final_injuries", "status": "partial_source_limited", "detail": "England training reports found; Ghana Ati-Zigi final medical status and Panama/Croatia final bulletins not obtained."},
+    {"field": "official_china_jingcai", "status": "missing", "detail": "No official China lottery odds snapshot retrieved."},
+    {"field": "same_source_market_snapshot", "status": "missing", "detail": "No complete same-source 1X2, handicap and totals snapshot retrieved."},
+    {"field": "stadium_weather", "status": "partial_source_limited", "detail": "Venue context available; official hourly stadium weather not retrieved for Boston/Foxborough or Toronto."},
+    {"field": "local_player_state_json", "status": "conflicting", "detail": "Files exist and appear populated, but current JSON parser fails because of existing encoding/string corruption; do not treat detailed player_state extraction as fully machine-ready until remediated."}
+  ],
+  "source_log": [
+    {"source": "Local England 4-2 Croatia postmatch review", "url": "E:/worldcup/matches/completed/group-stage/L/2026-06-17_England_4-2_Croatia_review.md", "captured_at": "2026-06-23T00:25:00+08:00", "supports_fields": ["round1 interpretation", "events", "lineups", "player_state_update_status"], "source_status": "local_baseline"},
+    {"source": "Local Ghana 1-0 Panama postmatch review", "url": "E:/worldcup/matches/completed/group-stage/L/2026-06-17_Ghana_1-0_Panama_review.md", "captured_at": "2026-06-23T00:25:00+08:00", "supports_fields": ["round1 interpretation", "events", "lineups", "player_state_update_status", "Ati-Zigi risk"], "source_status": "local_baseline"},
+    {"source": "l-group-round1-predictions.json", "url": "E:/worldcup/data/outputs/match_predictions/l-group-round1-predictions.json", "captured_at": "2026-06-23T00:25:00+08:00", "supports_fields": ["pre-round1 baseline", "model miss interpretation"], "source_status": "local_baseline"},
+    {"source": "2026 FIFA World Cup Group L page", "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_L", "captured_at": "2026-06-23T00:25:00+08:00", "supports_fields": ["round2 fixtures", "kickoff", "venues", "round1 standings", "round1 lineups/events"], "source_status": "secondary_fifa_referenced"},
+    {"source": "Guardian England team news", "url": "https://www.theguardian.com/football/2026/jun/20/rashford-and-rice-give-england-boost-for-ghana-but-saka-set-for-bench-again", "captured_at": "2026-06-23T00:25:00+08:00", "supports_fields": ["Rice", "Rashford", "Saka", "England training"], "source_status": "reputable_reporting"},
+    {"source": "Guardian Thomas Partey visa report", "url": "https://www.theguardian.com/football/2026/jun/17/ghana-thomas-partey-visa-appeal-rejected-canadian-judge-world-cup-panama", "captured_at": "2026-06-23T00:25:00+08:00", "supports_fields": ["Partey availability context", "Canada restriction", "US entry note"], "source_status": "reputable_reporting"},
+    {"source": "BMO Field venue page", "url": "https://en.wikipedia.org/wiki/BMO_Field", "captured_at": "2026-06-23T00:25:00+08:00", "supports_fields": ["Toronto venue context", "June 23 Group L slot"], "source_status": "secondary_venue_context"},
+    {"source": "Gillette Stadium venue page", "url": "https://en.wikipedia.org/wiki/Gillette_Stadium", "captured_at": "2026-06-23T00:25:00+08:00", "supports_fields": ["Boston venue context", "June 23 Group L slot"], "source_status": "secondary_venue_context"}
+  ],
+  "handoff_notes": [
+    "Modeler can use fixture, first-round interpretation, team-level event signals and key availability watch items as partial inputs.",
+    "Before final prediction publication, remediate or regenerate four L group player_state/roster JSON files so ConvertFrom-Json succeeds.",
+    "Recheck T-75 official lineups, Ati-Zigi status, Saka/Rice/Rashford minutes risk, official discipline and same-source market snapshots.",
+    "Betting gate remains discussion_only_hold."
+  ]
+}

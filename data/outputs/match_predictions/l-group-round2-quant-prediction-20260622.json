@@ -1,0 +1,227 @@
+{
+  "model_scope": "L group round 2 quantitative match predictions",
+  "phase": "group_stage_round2_quant_prediction",
+  "group": "L",
+  "round": 2,
+  "status": "completed_pre_match_partial",
+  "created_at": "2026-06-22T23:59:00+08:00",
+  "updated_at": "2026-06-23T00:36:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "model_version": "worldcup-quant-poisson-partial-v0.2",
+  "scope": "L组第二轮英格兰vs加纳、巴拿马vs克罗地亚量化预测；不进入出线预测，不给投注建议。",
+  "input_readiness": {
+    "label": "partial_source_limited",
+    "upstream_status": {
+      "data_refresh": "partial_source_limited",
+      "tactical_refresh": "partial_source_limited"
+    },
+    "available_inputs": [
+      "L group round 1 postmatch reviews",
+      "L group round 1 prediction JSON",
+      "England/Ghana/Panama/Croatia player_state files",
+      "England/Ghana/Panama/Croatia roster files",
+      "England/Ghana/Panama/Croatia team packets",
+      "England/Ghana/Panama/Croatia tactics packets",
+      "England/Ghana/Panama/Croatia model briefs"
+    ],
+    "missing_or_stale_inputs": [
+      "T-75m official lineups",
+      "official final injury and medical bulletins",
+      "official Chinese sports lottery odds",
+      "same-source live 1X2/handicap/totals snapshot",
+      "official venue weather and travel confirmation"
+    ],
+    "fixture_confirmation": {
+      "england_vs_ghana": "2026-06-23 local date, Boston Stadium / Gillette Stadium, kickoff Beijing 2026-06-24T04:00:00+08:00",
+      "panama_vs_croatia": "2026-06-23 local date, Toronto Stadium / BMO Field, kickoff Beijing 2026-06-24T07:00:00+08:00"
+    },
+    "betting_gate_status": "discussion_only_hold",
+    "betting_execution_status": "discussion_only_hold"
+  },
+  "method": {
+    "summary": "Partial-current quant model using first-round postmatch interpretation, local player_state, team/tactics packets, model briefs and Poisson score matrix. Market fields are null because no official/live same-source odds snapshot is available.",
+    "double_counting_guard": "Round-one results are reflected once through parameter_updates and player_state adjustments; no first-round betting snapshot is reused as live second-round market truth.",
+    "poisson_policy": "Expected goals are converted to an independent Poisson matrix from 0-0 through 5-5, with remaining mass stored as tail_probability."
+  },
+  "factor_weights": {
+    "base_strength": 0.28,
+    "recent_round1_form": 0.22,
+    "attack_defense_structure": 0.20,
+    "player_availability": 0.10,
+    "tactical_matchup": 0.12,
+    "schedule_environment": 0.03,
+    "market_calibration": 0.05
+  },
+  "parameter_updates": [
+    {"parameter": "england_second_half_attack_acceleration", "old": 0.00, "new": 0.08, "reason": "England scored twice after halftime vs Croatia and raised tempo immediately through Bellingham and late Rashford/Saka impact.", "applies_to": ["England"], "entered_round2_model": true},
+    {"parameter": "england_kane_bellingham_wide_bench_synergy", "old": 0.00, "new": 0.07, "reason": "Kane two goals, Bellingham goal, Saka assist and Rashford goal increased attacking-chain confidence.", "applies_to": ["England"], "entered_round2_model": true},
+    {"parameter": "england_set_piece_second_phase_bonus", "old": 0.00, "new": 0.04, "reason": "Rice corner to Kane and repeated second-ball pressure improved set-piece conversion expectation.", "applies_to": ["England"], "entered_round2_model": true},
+    {"parameter": "england_transition_defense_risk", "old": 0.00, "new": 0.05, "reason": "Croatia scored twice from transition/central-space moments despite England territorial edge.", "applies_to": ["England opponents"], "entered_round2_model": true},
+    {"parameter": "croatia_experience_transition_threat", "old": 0.00, "new": 0.04, "reason": "Baturina/Musa goals preserved Croatia's experience and first-pass threat even in a 4-2 loss.", "applies_to": ["Croatia"], "entered_round2_model": true},
+    {"parameter": "croatia_late_pressure_resistance", "old": 0.00, "new": -0.08, "reason": "Croatia conceded quickly after halftime and again late, exposing fatigue and game-management stress.", "applies_to": ["Croatia"], "entered_round2_model": true},
+    {"parameter": "croatia_wide_halfspace_defense", "old": 0.00, "new": -0.06, "reason": "England's wide and half-space runners repeatedly created separation after Croatia were stretched.", "applies_to": ["Croatia"], "entered_round2_model": true},
+    {"parameter": "ghana_low_score_retention", "old": 0.00, "new": 0.05, "reason": "Ghana-Panama stayed 0-0 until 90+5, validating low-event baseline.", "applies_to": ["Ghana"], "entered_round2_model": true},
+    {"parameter": "ghana_bench_breakthrough_and_direct_counter_tail", "old": 0.00, "new": 0.06, "reason": "Yirenkyi 90+5 winner assisted by Thomas-Asante raised late substitute and direct attack tail.", "applies_to": ["Ghana"], "entered_round2_model": true},
+    {"parameter": "ghana_ati_zigi_availability_risk", "old": 0.00, "new": -0.04, "reason": "Ati-Zigi was substituted around halftime; next-match goalkeeper availability remains a model risk.", "applies_to": ["Ghana"], "entered_round2_model": true},
+    {"parameter": "panama_low_block_resilience", "old": 0.00, "new": 0.06, "reason": "Panama held Ghana scoreless until stoppage time and suppressed tempo effectively.", "applies_to": ["Panama"], "entered_round2_model": true},
+    {"parameter": "panama_set_attack_and_chase_mode_penalty", "old": 0.00, "new": -0.07, "reason": "Panama created limited settled possession threat and showed little evidence of a strong late chase profile.", "applies_to": ["Panama"], "entered_round2_model": true}
+  ],
+  "matches": [
+    {
+      "match": "England vs Ghana",
+      "match_cn": "英格兰 vs 加纳",
+      "date_local": "2026-06-23",
+      "group": "L",
+      "stage": "group_stage_round2",
+      "input_readiness": "partial_source_limited",
+      "upstream_status": "partial_source_limited",
+      "kickoff_beijing": "2026-06-24T04:00:00+08:00",
+      "venue": "Boston Stadium / Gillette Stadium",
+      "factor_inputs": {
+        "team_a": "England",
+        "team_b": "Ghana",
+        "baseline_strength": {"england": 0.86, "ghana": 0.58, "notes": "England retain elite squad strength and beat Croatia 4-2; Ghana are lower baseline but have defensive and transition paths."},
+        "recent_round1_form": {"england": 0.82, "ghana": 0.58, "notes": "England attack overperformed the old 1-1 forecast; Ghana validated a low-score win script."},
+        "attack_defense_structure": {"england_attack": 0.83, "england_defense": 0.66, "ghana_attack": 0.55, "ghana_defense": 0.60},
+        "player_state": {"england": "Avg form 3.00; Kane 4.5, Madueke 4.0, Anderson 4.0, Bellingham/Saka/Rashford 3.5.", "ghana": "Avg form 2.58; Yirenkyi and Thomas-Asante 4.0; Ati-Zigi substitution creates goalkeeper availability risk."},
+        "availability_and_injury": {"england": "Rice and Rashford minor postmatch physical signals require T-75m check; no official lineup yet.", "ghana": "Ati-Zigi next-match status not confirmed; final lineup and goalkeeper order missing."},
+        "tactical_matchup": {"england": "Tactical refresh raises England second-half acceleration, transition attack, wide-channel advantage, central control and set-piece second phase; transition-defense risk remains visible.", "ghana": "Tactical refresh keeps Ghana low-block/direct-counter path, late substitute disruption, transition attack tail and Ati-Zigi/Partey availability uncertainty."},
+        "schedule_environment": {"england": "Arlington/Dallas to Boston/Foxborough long domestic transfer after about five full rest days.", "ghana": "Toronto to Boston/Foxborough cross-border transfer after about five full rest days.", "weather_status": "partial_source_limited"},
+        "market_signal": {"status": "not_available_yet", "model_policy": "market_adjustment set to 0.00; discussion_only_hold"}
+      },
+      "factor_weights": {"base_strength": 0.28, "recent_round1_form": 0.22, "attack_defense_structure": 0.20, "player_availability": 0.10, "tactical_matchup": 0.12, "schedule_environment": 0.03, "market_calibration": 0.05},
+      "team_strength_score": {"england": 82.5, "ghana": 61.0},
+      "attack_score": {"england": 83.0, "ghana": 56.5},
+      "defense_score": {"england": 66.0, "ghana": 60.0},
+      "player_state_adjustment": {"england": 0.09, "ghana": 0.02},
+      "injury_adjustment": {"england": -0.02, "ghana": -0.05},
+      "tactical_matchup_adjustment": {"england": 0.13, "ghana": 0.06},
+      "schedule_environment_adjustment": {"england": -0.01, "ghana": -0.01},
+      "market_adjustment": {"england": 0.00, "ghana": 0.00},
+      "expected_goals": {"pre_market": {"england": 2.05, "ghana": 0.86}, "final": {"england": 2.05, "ghana": 0.86}},
+      "poisson_score_matrix": {
+        "0-0": 0.0545, "0-1": 0.0468, "0-2": 0.0201, "0-3": 0.0058, "0-4": 0.0012, "0-5": 0.0002,
+        "1-0": 0.1117, "1-1": 0.0960, "1-2": 0.0413, "1-3": 0.0118, "1-4": 0.0025, "1-5": 0.0004,
+        "2-0": 0.1145, "2-1": 0.0984, "2-2": 0.0423, "2-3": 0.0121, "2-4": 0.0026, "2-5": 0.0004,
+        "3-0": 0.0782, "3-1": 0.0673, "3-2": 0.0289, "3-3": 0.0083, "3-4": 0.0018, "3-5": 0.0003,
+        "4-0": 0.0401, "4-1": 0.0345, "4-2": 0.0148, "4-3": 0.0042, "4-4": 0.0009, "4-5": 0.0002,
+        "5-0": 0.0164, "5-1": 0.0141, "5-2": 0.0061, "5-3": 0.0017, "5-4": 0.0004, "5-5": 0.0001,
+        "tail_probability": 0.0187
+      },
+      "probabilities_1x2": {"england_win": 0.6498, "draw": 0.2021, "ghana_win": 0.1480},
+      "totals_probabilities": {"over_2_5": 0.5563, "under_2_5": 0.4437, "over_3_5": 0.3326, "under_3_5": 0.6674},
+      "top_scorelines": [
+        {"score": "2-0", "probability": 0.1145},
+        {"score": "1-0", "probability": 0.1117},
+        {"score": "2-1", "probability": 0.0984},
+        {"score": "1-1", "probability": 0.0960},
+        {"score": "3-0", "probability": 0.0782}
+      ],
+      "odds_implied_probability": {"status": "not_available_yet", "england_win": null, "draw": null, "ghana_win": null, "overround": null, "captured_at": null},
+      "model_market_delta": null,
+      "confidence": "medium_low",
+      "confidence_interval": {"england_win": [0.58, 0.71], "draw": [0.16, 0.25], "ghana_win": [0.10, 0.21], "xg_england": [1.68, 2.42], "xg_ghana": [0.58, 1.18]},
+      "red_team_status": "pending_red_team",
+      "final_probabilities": {"status": "pre_red_team", "england_win": 0.6498, "draw": 0.2021, "ghana_win": 0.1480},
+      "postmatch_error": null,
+      "player_state_update_status": "not_applicable_pre_match",
+      "parameter_updates": ["england_second_half_attack_acceleration", "england_kane_bellingham_wide_bench_synergy", "england_set_piece_second_phase_bonus", "england_transition_defense_risk", "ghana_low_score_retention", "ghana_bench_breakthrough_and_direct_counter_tail", "ghana_ati_zigi_availability_risk"],
+      "quality_notes": ["Data and tactical refresh are partial_source_limited, not final T-75m inputs.", "England are first direction, but Ghana direct counter, Partey status and goalkeeper uncertainty keep the upset tail visible.", "No official odds or T-75m lineup, so market calibration is withheld.", "discussion_only_hold; no executable betting language."],
+      "sensitivity": [
+        {"variable": "Ghana_goalkeeper_status_Ati_Zigi_or_Asare", "impact": "Confirmed Ati-Zigi absence or uncertainty can move Ghana defensive xGA by roughly +0.08 to +0.15."},
+        {"variable": "England_front_four_selection", "impact": "Kane/Bellingham/Saka/Rashford or Madueke mix can move England xG by roughly +/-0.18."},
+        {"variable": "Ghana_block_height", "impact": "Deep 5-4-1 lowers total goals and raises 1-0/1-1; more open chasing increases England transition goals."}
+      ]
+    },
+    {
+      "match": "Panama vs Croatia",
+      "match_cn": "巴拿马 vs 克罗地亚",
+      "date_local": "2026-06-23",
+      "group": "L",
+      "stage": "group_stage_round2",
+      "input_readiness": "partial_source_limited",
+      "upstream_status": "partial_source_limited",
+      "kickoff_beijing": "2026-06-24T07:00:00+08:00",
+      "venue": "Toronto Stadium / BMO Field",
+      "factor_inputs": {
+        "team_a": "Panama",
+        "team_b": "Croatia",
+        "baseline_strength": {"panama": 0.43, "croatia": 0.69, "notes": "Croatia remain higher baseline, while Panama's defensive organization is upgraded after a narrow stoppage-time loss."},
+        "recent_round1_form": {"panama": 0.46, "croatia": 0.44, "notes": "Panama defended well but lacked chase offense; Croatia scored twice vs England but faded badly after halftime."},
+        "attack_defense_structure": {"panama_attack": 0.39, "panama_defense": 0.57, "croatia_attack": 0.66, "croatia_defense": 0.54},
+        "player_state": {"panama": "Avg form 2.42; many starters at 3.0, but no clear high-form attacking spike.", "croatia": "Avg form 2.85; Livakovic 4.5, Perisic/Baturina/Stanisic/Vuskovic/Sucic/Musa 3.5, veteran minutes risk remains."},
+        "availability_and_injury": {"panama": "Blackman and Harvey yellow-card context requires official refresh; no final lineup.", "croatia": "Veteran minutes plan and full injury/discipline confirmation missing after high-intensity England match."},
+        "tactical_matchup": {"panama": "Tactical refresh upgrades low-tempo block and physical resistance but downgrades build-up resistance, central control and chase-state quality.", "croatia": "Tactical refresh upgrades central control, build-up resistance and experience-driven transition while preserving late-game, wide-channel and veteran-load risks."},
+        "schedule_environment": {"panama": "Same-city Toronto sequence from round 1 to round 2, lowest travel load in the matchup.", "croatia": "Arlington/Dallas to Toronto cross-border transfer after England match; exact itinerary unverified.", "weather_status": "partial_source_limited"},
+        "market_signal": {"status": "not_available_yet", "model_policy": "market_adjustment set to 0.00; discussion_only_hold"}
+      },
+      "factor_weights": {"base_strength": 0.28, "recent_round1_form": 0.22, "attack_defense_structure": 0.20, "player_availability": 0.10, "tactical_matchup": 0.12, "schedule_environment": 0.03, "market_calibration": 0.05},
+      "team_strength_score": {"panama": 48.0, "croatia": 67.5},
+      "attack_score": {"panama": 40.5, "croatia": 66.0},
+      "defense_score": {"panama": 57.0, "croatia": 54.0},
+      "player_state_adjustment": {"panama": -0.03, "croatia": 0.01},
+      "injury_adjustment": {"panama": -0.01, "croatia": -0.03},
+      "tactical_matchup_adjustment": {"panama": 0.04, "croatia": 0.05},
+      "schedule_environment_adjustment": {"panama": 0.03, "croatia": -0.03},
+      "market_adjustment": {"panama": 0.00, "croatia": 0.00},
+      "expected_goals": {"pre_market": {"panama": 0.72, "croatia": 1.43}, "final": {"panama": 0.72, "croatia": 1.43}},
+      "poisson_score_matrix": {
+        "0-0": 0.1165, "0-1": 0.1666, "0-2": 0.1191, "0-3": 0.0568, "0-4": 0.0203, "0-5": 0.0058,
+        "1-0": 0.0839, "1-1": 0.1199, "1-2": 0.0858, "1-3": 0.0409, "1-4": 0.0146, "1-5": 0.0042,
+        "2-0": 0.0302, "2-1": 0.0432, "2-2": 0.0309, "2-3": 0.0147, "2-4": 0.0053, "2-5": 0.0015,
+        "3-0": 0.0072, "3-1": 0.0104, "3-2": 0.0074, "3-3": 0.0035, "3-4": 0.0013, "3-5": 0.0004,
+        "4-0": 0.0013, "4-1": 0.0019, "4-2": 0.0013, "4-3": 0.0006, "4-4": 0.0002, "4-5": 0.0001,
+        "5-0": 0.0002, "5-1": 0.0003, "5-2": 0.0002, "5-3": 0.0001, "5-4": 0.0000, "5-5": 0.0000,
+        "tail_probability": 0.0037
+      },
+      "probabilities_1x2": {"panama_win": 0.1883, "draw": 0.2711, "croatia_win": 0.5407},
+      "totals_probabilities": {"over_2_5": 0.3639, "under_2_5": 0.6361, "over_3_5": 0.1709, "under_3_5": 0.8291},
+      "top_scorelines": [
+        {"score": "0-1", "probability": 0.1666},
+        {"score": "1-1", "probability": 0.1199},
+        {"score": "0-2", "probability": 0.1191},
+        {"score": "0-0", "probability": 0.1165},
+        {"score": "1-2", "probability": 0.0858}
+      ],
+      "odds_implied_probability": {"status": "not_available_yet", "panama_win": null, "draw": null, "croatia_win": null, "overround": null, "captured_at": null},
+      "model_market_delta": null,
+      "confidence": "low_to_medium",
+      "confidence_interval": {"panama_win": [0.13, 0.25], "draw": [0.22, 0.33], "croatia_win": [0.46, 0.61], "xg_panama": [0.48, 0.98], "xg_croatia": [1.10, 1.78]},
+      "red_team_status": "pending_red_team",
+      "final_probabilities": {"status": "pre_red_team", "panama_win": 0.1883, "draw": 0.2711, "croatia_win": 0.5407},
+      "postmatch_error": null,
+      "player_state_update_status": "not_applicable_pre_match",
+      "parameter_updates": ["croatia_experience_transition_threat", "croatia_late_pressure_resistance", "croatia_wide_halfspace_defense", "panama_low_block_resilience", "panama_set_attack_and_chase_mode_penalty"],
+      "quality_notes": ["Data and tactical refresh are partial_source_limited, not final T-75m inputs.", "Croatia remain the stronger direction, but Panama's same-city rest, low block and low-event profile raise draw and under tails.", "Croatia's late-game, veteran-load and wide-channel penalties prevent a high-confidence favorite output.", "discussion_only_hold; no executable betting language."],
+      "sensitivity": [
+        {"variable": "Croatia_veteran_minutes_plan", "impact": "If Modric/Perisic/Gvardiol minutes are managed or freshness is poor, Croatia xG can fall by roughly 0.12-0.20."},
+        {"variable": "Panama_low_block_duration", "impact": "Long 5-4-1/4-4-2 compact phase raises 0-0, 0-1 and 1-1 paths."},
+        {"variable": "Croatia_first_goal_timing", "impact": "Early Croatia goal opens 0-2/1-2; a scoreless first hour sharply lifts draw probability."}
+      ]
+    }
+  ],
+  "aggregate_quality_notes": [
+    "Data and tactical refresh packets are both partial_source_limited; output remains pre-red-team and pre-T-75m.",
+    "Odds fields are null because official Chinese sports lottery odds and same-source live odds/handicap/totals are missing.",
+    "All outputs are probability discussion only and marked discussion_only_hold."
+  ],
+  "source_log": [
+    "比赛/已完成比赛/小组赛/L组/2026-06-17_英格兰_4-2_克罗地亚_复盘.md",
+    "比赛/已完成比赛/小组赛/L组/2026-06-17_加纳_1-0_巴拿马_复盘.md",
+    "data/outputs/match_predictions/l-group-round1-predictions.json",
+    "data/packets/matches/l-group-round2-data-refresh-20260622.json",
+    "data/packets/matchup_tactics/l-group-round2-tactical-refresh-20260622.json",
+    "data/outputs/player_state/england-player-state.json",
+    "data/outputs/player_state/ghana-player-state.json",
+    "data/outputs/player_state/panama-player-state.json",
+    "data/outputs/player_state/croatia-player-state.json",
+    "data/packets/teams/england-team-packet.json",
+    "data/packets/teams/ghana-team-packet.json",
+    "data/packets/teams/panama-team-packet.json",
+    "data/packets/teams/croatia-team-packet.json",
+    "data/packets/tactics/england-tactics-packet.json",
+    "data/packets/tactics/ghana-tactics-packet.json",
+    "data/packets/tactics/panama-tactics-packet.json",
+    "data/packets/tactics/croatia-tactics-packet.json"
+  ]
+}

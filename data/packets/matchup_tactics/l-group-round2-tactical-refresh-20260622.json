@@ -1,0 +1,440 @@
+{
+  "phase": "matchup_tactics_refresh",
+  "group": "L",
+  "round": 2,
+  "status": "partial_source_limited",
+  "updated_at": "2026-06-23T00:32:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "L group round 2 tactical, coaching and matchup factor recalibration only; no scoreline, outcome probability or wagering advice.",
+  "fixture_confirmation_status": "confirmed_by_data_refresh_partial_source_limited",
+  "fixture_confirmation_basis": [
+    "data/packets/matches/l-group-round2-data-refresh-20260622.json closed as partial_source_limited at 2026-06-23T00:25:00+08:00 and confirmed both L group round 2 fixtures",
+    "data/reviews/postmatch_state_sync/postmatch-state-sync-audit.md lists L组 R2 as 英格兰 vs 加纳; 巴拿马 vs 克罗地亚; Scheduled 2026-06-23; pending",
+    "team packets list the same group-match pairings across England, Ghana, Panama and Croatia profiles"
+  ],
+  "source_inputs": [
+    "data/packets/matches/l-group-round2-data-refresh-20260622.json",
+    "比赛/已完成比赛/小组赛/L组/2026-06-17_英格兰_4-2_克罗地亚_复盘.md",
+    "比赛/已完成比赛/小组赛/L组/2026-06-17_加纳_1-0_巴拿马_复盘.md",
+    "data/outputs/match_predictions/l-group-round1-predictions.json",
+    "data/packets/tactics/england-tactics-packet.json",
+    "data/packets/tactics/croatia-tactics-packet.json",
+    "data/packets/tactics/ghana-tactics-packet.json",
+    "data/packets/tactics/panama-tactics-packet.json",
+    "data/packets/teams/england-team-packet.json",
+    "data/packets/teams/croatia-team-packet.json",
+    "data/packets/teams/ghana-team-packet.json",
+    "data/packets/teams/panama-team-packet.json",
+    "data/outputs/player_state/england-player-state.json",
+    "data/outputs/player_state/croatia-player-state.json",
+    "data/outputs/player_state/ghana-player-state.json",
+    "data/outputs/player_state/panama-player-state.json",
+    "data/packets/rosters/england-roster.json",
+    "data/packets/rosters/croatia-roster.json",
+    "data/packets/rosters/ghana-roster.json",
+    "data/packets/rosters/panama-roster.json"
+  ],
+  "first_round_postmortem_interpretation": {
+    "england": {
+      "summary": "英格兰4-2暴露旧模型低估了下半场提速、Kane/Bellingham/边路和替补冲击；同时首轮两次被克罗地亚打穿转换与二点，防线转换仍有丢球风险。",
+      "confidence": "high",
+      "sample_and_uncertainty": "样本来自单场首轮复盘、英格兰player_state和旧预测偏差；Tuchel第二轮是否轮换、Rice/Saka/Rashford分钟风险仍需赛前刷新。"
+    },
+    "croatia": {
+      "summary": "克罗地亚上半场经验、第一脚出球和转换能制造进球，但后程抗压、边肋防守、换人后强度与老将负荷是第二轮风险。",
+      "confidence": "high",
+      "sample_and_uncertainty": "样本来自英格兰4-2克罗地亚复盘与克罗地亚player_state；第二轮对手强度低于英格兰，但老将分钟计划未确认。"
+    },
+    "ghana": {
+      "summary": "加纳低位/直接反击和替补破局有效，Caleb Yirenkyi与Brandon Thomas-Asante的补时链条提升后手价值；但阵地战创造力、Partey角色和门将Ati-Zigi可用性要谨慎。",
+      "confidence": "medium_high",
+      "sample_and_uncertainty": "样本来自加纳1-0巴拿马复盘与player_state；同源逐人评分、Ati-Zigi伤情和Partey可用性仍缺。"
+    },
+    "panama": {
+      "summary": "巴拿马低位抗压和身体对抗能压低节奏，但持续出球、禁区前质量和落后后追分能力偏弱，牌面风险也会限制反扑强度。",
+      "confidence": "medium_high",
+      "sample_and_uncertainty": "样本来自加纳1-0巴拿马复盘、战术包和player_state；完整技术统计与最终首发仍需刷新。"
+    }
+  },
+  "factor_scale": {
+    "magnitude": "model-facing tactical adjustment on a -1.0 to +1.0 scale, not a probability and not a score forecast",
+    "direction": "increase means raise the named tactical factor for that team; decrease means reduce it; mixed means cap or split by game state"
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-23_england_vs_ghana",
+      "date": "2026-06-23",
+      "match": "England vs Ghana",
+      "match_cn": "英格兰 vs 加纳",
+      "kickoff_local": "16:00 UTC-4 / Boston local",
+      "kickoff_beijing": "2026-06-24T04:00:00+08:00",
+      "venue": "Boston Stadium / Gillette Stadium",
+      "fixture_status": "confirmed_by_data_refresh_partial_source_limited",
+      "data_refresh_context": {
+        "rest_travel": "Both teams have about five full rest days; England transfer from Arlington/Dallas to Boston/Foxborough, Ghana from Toronto to Boston/Foxborough.",
+        "availability_watch": ["Declan Rice load risk managed", "Bukayo Saka Achilles management and possible bench role", "Marcus Rashford minor muscle concern returned to training", "Lawrence Ati-Zigi final medical status missing", "Thomas Partey US entry context requires final team sheet confirmation"]
+      },
+      "teams": {
+        "england": {
+          "team_cn": "英格兰",
+          "base_shape_reference": ["4-2-3-1", "4-3-3", "3-4-2-1"],
+          "confidence_overall": "medium_high",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "increase",
+              "magnitude": 0.45,
+              "evidence": "首轮下半场提速和压迫强度明显上修；Ghana在Queiroz框架下可能更直接，英格兰前场压迫可逼迫其提前长传。",
+              "confidence": "medium",
+              "model_note": "只上调场景化压迫，不把Kane/Bellingham首轮进球再计入压迫强度；若Rice/Saka/Rashford分钟受限，限幅到+0.25。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "increase",
+              "magnitude": 0.55,
+              "evidence": "Stones、Rice、Anderson和Bellingham构成中路出球与抗压层次；Ghana首轮更多低位/直接反击，持续高压样本不足。",
+              "confidence": "medium_high",
+              "model_note": "与球员总体能力可能重复计权，模型侧建议作为结构稳定度小幅上修而非进攻评分上修。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "increase",
+              "magnitude": 0.75,
+              "evidence": "首轮第47分钟快速推进和第85分钟替补连线显示英格兰转换与二次进攻高于旧预测；Ghana边后卫压上后回收距离会被测试。",
+              "confidence": "high",
+              "model_note": "Kane、Bellingham、Saka、Rashford、Madueke的状态已在player_state体现，建议避免与个体进攻form双重叠加。"
+            },
+            "transition_defense_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.40,
+              "evidence": "首轮被克罗地亚在禁区弧与左路摆渡链条两次惩罚；Ghana的Semenyo、Kudus/边路速度适合打英格兰边后卫身后。",
+              "confidence": "medium_high",
+              "model_note": "该项是防守风险上修，不应被英格兰整体实力优势抵消；若英格兰降线控制，风险回落。"
+            },
+            "wide_channel_advantage": {
+              "direction": "increase",
+              "magnitude": 0.70,
+              "evidence": "Madueke造点、Saka替补助攻、Gordon/Rashford左路深度说明英格兰双边可持续换速；Ghana首轮边路进攻效率一般。",
+              "confidence": "high",
+              "model_note": "与Saka/Rashford/Madueke player_state存在重复计权风险，建议只给对位宽度因子，不再提高单人评分。"
+            },
+            "central_control_advantage": {
+              "direction": "increase",
+              "magnitude": 0.60,
+              "evidence": "Rice、Anderson、Bellingham的中路覆盖和推进对Ghana的中场站位纪律构成压力；Ghana若Partey未满状态，抗压会下降。",
+              "confidence": "medium_high",
+              "model_note": "Partey可用性是关键开关；若赛前确认Partey高分钟可用，英格兰中路优势限幅到+0.40。"
+            },
+            "set_piece_advantage": {
+              "direction": "increase",
+              "magnitude": 0.45,
+              "evidence": "首轮Rice角球助攻Kane头球，英格兰定位球脚法和禁区点稳定；Ghana身体条件好但防守定位球专注度需刷新。",
+              "confidence": "medium_high",
+              "model_note": "Kane首轮头球已经进入player_state/进球事件，模型侧只作为定位球结构优势，避免再加终结权重。"
+            },
+            "defensive_line_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.30,
+              "evidence": "英格兰主动压上后Rice与中卫间距需要稳定；Ghana直接找纵深和二点的方式比阵地战更有威胁。",
+              "confidence": "medium",
+              "model_note": "风险依赖英格兰是否高位控场；若Tuchel选择保守结构，限幅到+0.15。"
+            },
+            "coach_substitution_risk": {
+              "direction": "decrease_risk",
+              "magnitude": -0.45,
+              "evidence": "首轮72分钟三换与85分钟替补连线显示Tuchel后手质量高，Saka/Rashford/Rogers等可改变比赛节奏。",
+              "confidence": "medium_high",
+              "model_note": "这是教练后手风险下降，不是进攻概率直接增加；与替补球员form重复时取较小值。"
+            },
+            "game_state_tendency": {
+              "direction": "increase_second_half_acceleration",
+              "magnitude": 0.60,
+              "evidence": "旧预测低估英格兰下半场提速；首轮从47分钟开始显著提高推进速度和压迫强度。",
+              "confidence": "high",
+              "model_note": "建议模型把英格兰后程强度上修，但不要转成比分或结果倾向；若早段领先，节奏可能转为控场。"
+            }
+          }
+        },
+        "ghana": {
+          "team_cn": "加纳",
+          "base_shape_reference": ["4-4-1-1", "4-2-3-1", "4-3-3", "5-4-1"],
+          "confidence_overall": "medium",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "mixed",
+              "magnitude": -0.10,
+              "evidence": "Queiroz倾向先保结构，首轮加纳更依赖中低位和直接反击；面对英格兰强出球，高压持续性风险大。",
+              "confidence": "medium",
+              "model_note": "不要把低压迫等同于低防守强度；应转成中低位紧凑度而非整体防守扣分。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "decrease",
+              "magnitude": -0.45,
+              "evidence": "Ghana首轮阵地推进一般，Partey未出场且Ati-Zigi伤退；面对英格兰前场压迫，后场出球更可能早找纵深。",
+              "confidence": "medium",
+              "model_note": "Partey与门将可用性已在player_state有风险标记，模型侧只限幅调整结构抗压。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "increase",
+              "magnitude": 0.55,
+              "evidence": "Ghana战术包强调Semenyo/Kudus/边锋纵深，首轮替补Thomas-Asante助攻补时破局；英格兰首轮转换防守仍有裂缝。",
+              "confidence": "medium_high",
+              "model_note": "不要把首轮补时进球直接复制为进攻效率；只上调快速转换路径的可用性。"
+            },
+            "transition_defense_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.65,
+              "evidence": "英格兰边路和替补速度强，Ghana若边路跟出或后腰距离拉大，会暴露肋部和二点。",
+              "confidence": "high",
+              "model_note": "此项可能与英格兰transition_attack重复，模型聚合时建议二选一或半权重叠加。"
+            },
+            "wide_channel_advantage": {
+              "direction": "decrease",
+              "magnitude": -0.35,
+              "evidence": "Ghana有Semenyo、Sulemana和Nuamah速度，但英格兰边路深度、轮换和一对一质量更高；Ghana更适合打反向空间而非持续宽度优势。",
+              "confidence": "medium",
+              "model_note": "保留反击宽度，不把该负向因子误解为完全没有边路威胁。"
+            },
+            "central_control_advantage": {
+              "direction": "decrease",
+              "magnitude": -0.55,
+              "evidence": "Ghana首轮中路控制有限，主要靠纪律和后手；面对Rice/Anderson/Bellingham的覆盖，中路持球时间可能被压缩。",
+              "confidence": "medium_high",
+              "model_note": "若Partey赛前确认首发且健康，负向调整降到-0.30。"
+            },
+            "set_piece_advantage": {
+              "direction": "mixed",
+              "magnitude": 0.10,
+              "evidence": "Ghana身体对抗和争顶条件不错，首轮低位防守也能制造胶着；但英格兰定位球脚法和禁区点更稳定。",
+              "confidence": "medium",
+              "model_note": "只保留方差项，不建议额外叠加到进攻评分。"
+            },
+            "defensive_line_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.55,
+              "evidence": "Ghana面对英格兰若长期低位，禁区前沿和远端边路会被连续冲击；若压出，身后空间更危险。",
+              "confidence": "medium_high",
+              "model_note": "与transition_defense_risk有关，聚合时用较高者主导，避免双扣。"
+            },
+            "coach_substitution_risk": {
+              "direction": "decrease_risk",
+              "magnitude": -0.20,
+              "evidence": "首轮58分钟双换与90+5替补链条破局，说明Queiroz后手有效；但面对英格兰，替补质量差距仍在。",
+              "confidence": "medium",
+              "model_note": "替补破局已体现在Thomas-Asante/Yirenkyi状态，建议仅小幅降低教练换人风险。"
+            },
+            "game_state_tendency": {
+              "direction": "low_block_counter_then_late_direct",
+              "magnitude": 0.35,
+              "evidence": "首轮加纳能忍耐低节奏并在末段用替补链条解决问题；面对英格兰更可能先控风险，再寻找转换和定位球二点。",
+              "confidence": "medium_high",
+              "model_note": "适合作为比赛状态脚本输入，不对应任何最终结果。"
+            }
+          }
+        }
+      }
+    },
+    {
+      "match_id": "2026-06-23_panama_vs_croatia",
+      "date": "2026-06-23",
+      "match": "Panama vs Croatia",
+      "match_cn": "巴拿马 vs 克罗地亚",
+      "kickoff_local": "19:00 UTC-4 / Toronto local",
+      "kickoff_beijing": "2026-06-24T07:00:00+08:00",
+      "venue": "Toronto Stadium / BMO Field",
+      "fixture_status": "confirmed_by_data_refresh_partial_source_limited",
+      "data_refresh_context": {
+        "rest_travel": "Panama stays in Toronto from round 1 to round 2; Croatia transfers from Arlington/Dallas to Toronto, exact itinerary unverified.",
+        "availability_watch": ["Panama no confirmed red-card suspension; Blackman and Harvey yellow cards noted", "Croatia no confirmed red-card suspension; veteran load for Modric, Perisic and Gvardiol remains a model input"]
+      },
+      "teams": {
+        "panama": {
+          "team_cn": "巴拿马",
+          "base_shape_reference": ["4-4-2", "5-4-1", "3-4-2-1"],
+          "confidence_overall": "medium",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "decrease",
+              "magnitude": -0.35,
+              "evidence": "巴拿马首轮以低位抗压和身体对抗压节奏为主；面对克罗地亚中场抗压，持续高压收益不高。",
+              "confidence": "medium_high",
+              "model_note": "下调压迫不等于防守质量下调，应转为低位密度与犯规管理。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "decrease",
+              "magnitude": -0.55,
+              "evidence": "首轮持续出球和禁区前质量偏弱，Carrasquilla推进未稳定释放；克罗地亚中场拦截和节奏控制会压缩其连接。",
+              "confidence": "medium_high",
+              "model_note": "Carrasquilla个人推进已在team packet体现，模型侧不要同时大幅扣个人能力和结构抗压。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "mixed",
+              "magnitude": 0.15,
+              "evidence": "巴拿马可通过边路转移和Waterman支点制造混乱，但首轮落后后追分质量偏弱，转换第一脚不稳定。",
+              "confidence": "medium",
+              "model_note": "保留小幅反击方差，不建议转成常规进攻上修。"
+            },
+            "transition_defense_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.45,
+              "evidence": "翼卫/边后卫一旦压上，身后横移和后腰保护会被克罗地亚弱侧转移与二点攻击测试。",
+              "confidence": "medium",
+              "model_note": "与defensive_line_risk相关，聚合时建议按同一防守通道限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "decrease",
+              "magnitude": -0.25,
+              "evidence": "Murillo、Rodriguez可提供宽度，但首轮边路最后一传质量不足；克罗地亚Perisic/Stanisic经验足，能管理边路节奏。",
+              "confidence": "medium",
+              "model_note": "不要完全抹除巴拿马边路身体优势，特别是定位球与传中二点。"
+            },
+            "central_control_advantage": {
+              "direction": "decrease",
+              "magnitude": -0.65,
+              "evidence": "克罗地亚的Modric/Sucic/Kovacic/Baturina组合在控节奏和第一脚出球上强于巴拿马中场，巴拿马首轮禁区前质量不足。",
+              "confidence": "high",
+              "model_note": "这是结构性中路劣势，避免再用控球率代理重复扣分。"
+            },
+            "set_piece_advantage": {
+              "direction": "mixed",
+              "magnitude": 0.10,
+              "evidence": "巴拿马身体对抗和争顶能制造定位球方差，但克罗地亚定位球脚法和禁区跑位成熟。",
+              "confidence": "medium",
+              "model_note": "作为方差项保留；不要与身体对抗评分和定位球进攻评分三重叠加。"
+            },
+            "defensive_line_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.50,
+              "evidence": "巴拿马低位能抗压，但若被连续横向转移拉开，禁区弧和远端后点会暴露；首轮末段追分也显示阵型打开后质量下降。",
+              "confidence": "medium_high",
+              "model_note": "风险主要来自长期防守后的位移，不应简单映射为高位身后风险。"
+            },
+            "coach_substitution_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.25,
+              "evidence": "首轮Christiansen换上进攻点后仍未明显提升禁区前质量；阵容厚度和追分替补火力有限。",
+              "confidence": "medium",
+              "model_note": "只小幅上调，因赛前首发与替补排序仍缺。"
+            },
+            "game_state_tendency": {
+              "direction": "low_tempo_block_then_direct_chase_if_needed",
+              "magnitude": 0.40,
+              "evidence": "首轮低位抗压和身体对抗可压低节奏，但落后后追分能力偏弱；面对克罗地亚更可能先降速。",
+              "confidence": "medium_high",
+              "model_note": "用于节奏和场景脚本，不输出任何比分或结果倾向。"
+            }
+          }
+        },
+        "croatia": {
+          "team_cn": "克罗地亚",
+          "base_shape_reference": ["3-4-2-1", "4-3-3", "4-2-3-1"],
+          "confidence_overall": "medium_high",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "mixed",
+              "magnitude": 0.15,
+              "evidence": "克罗地亚通常避免长期高压消耗，但面对巴拿马出球弱点可阶段性前压，尤其在门将和边中卫第一脚上施压。",
+              "confidence": "medium",
+              "model_note": "不要把阶段性压迫写成全场高压；老将负荷限制压迫上限。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "increase",
+              "magnitude": 0.55,
+              "evidence": "首轮上半场仍能通过Sucic、Modric、Perisic链条制造进球；巴拿马持续高压样本不足。",
+              "confidence": "medium_high",
+              "model_note": "与中场球员基础能力有重复风险，模型侧建议作为抗压结构因子小幅上修。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "increase",
+              "magnitude": 0.30,
+              "evidence": "克罗地亚不是纯速度反击，但第一脚出球、Baturina远射和Musa/Perisic二点说明转换质量可惩罚巴拿马阵型打开。",
+              "confidence": "medium",
+              "model_note": "不把首轮两个进球直接外推；只上调经验型转换和二点处理。"
+            },
+            "transition_defense_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.25,
+              "evidence": "首轮后程边肋防守和换人后强度下降，但巴拿马转换质量有限，风险低于对英格兰场景。",
+              "confidence": "medium",
+              "model_note": "风险应低于首轮对英格兰暴露值；若克罗地亚排出老化边路，维持+0.25。"
+            },
+            "wide_channel_advantage": {
+              "direction": "increase",
+              "magnitude": 0.35,
+              "evidence": "Perisic首轮助攻并持续制造左路后点，Stanisic与Gvardiol也能管理边路推进；巴拿马边路最后一传不稳。",
+              "confidence": "medium_high",
+              "model_note": "Perisic首轮助攻已在player_state体现，模型侧不应再次大幅提高个人进攻评分。"
+            },
+            "central_control_advantage": {
+              "direction": "increase",
+              "magnitude": 0.70,
+              "evidence": "Modric/Sucic/Kovacic/Baturina的传控和节奏管理明显优于巴拿马中路；巴拿马首轮阵地战创造力不足。",
+              "confidence": "high",
+              "model_note": "这是本场最主要战术上修；需与控球率、传球成功率等模型特征去重。"
+            },
+            "set_piece_advantage": {
+              "direction": "increase",
+              "magnitude": 0.25,
+              "evidence": "克罗地亚定位球脚法、跑位和二点处理稳定；巴拿马身体强但纪律和落点保护仍需刷新。",
+              "confidence": "medium",
+              "model_note": "只小幅上修，避免与Perisic/Modric脚法和中卫身高重复。"
+            },
+            "defensive_line_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.20,
+              "evidence": "首轮被英格兰下半场持续压制显示后程防线压力，但巴拿马缺少同等级速度与持续压迫。",
+              "confidence": "medium",
+              "model_note": "风险存在但限幅；主要依赖克罗地亚是否轮换老将和边路。"
+            },
+            "coach_substitution_risk": {
+              "direction": "increase_risk",
+              "magnitude": 0.30,
+              "evidence": "首轮58/66/79分钟调整后未能恢复强度，后程抗压和换人后连接是风险；Dalic经验稳定但节奏改变慢。",
+              "confidence": "medium_high",
+              "model_note": "该风险与老将分钟计划重叠，若首发年轻化或早轮换，限幅到+0.15。"
+            },
+            "game_state_tendency": {
+              "direction": "control_tempo_first_then_manage_load",
+              "magnitude": 0.45,
+              "evidence": "克罗地亚战术包和首轮上半场显示其更擅长把比赛拖入控节奏、转移和二点处理；第二轮可能更重视降耗和后程管理。",
+              "confidence": "medium_high",
+              "model_note": "用于节奏与换人时间窗，不导出结果或比分。"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "double_counting_warnings": [
+    "England transition_attack_adjustment and Ghana transition_defense_risk describe the same channel; model aggregation should half-weight one side or use max-risk logic.",
+    "Croatia central_control_advantage overlaps with team strength, midfield ratings and possession proxies; avoid triple counting Modric/Sucic/Kovacic baseline ability.",
+    "Set-piece factors overlap with Kane, Rice, Perisic, Modric and aerial-profile player features; apply only as small matchup modifiers.",
+    "First-round goals and assists are already represented in player_state; this packet uses them as tactical evidence, not as additional player form boosts.",
+    "Ati-Zigi, Partey, Rice, Saka and Rashford availability/minute flags are already in player_state; tactical factors should be capped until T-75m lineups confirm roles."
+  ],
+  "data_gaps": [
+    "data refresh packet closed as partial_source_limited; fixtures, venues and key availability watches are usable, but detailed final player extraction remains limited",
+    "T-75m official starting lineups and final formations",
+    "final injuries, suspensions and minute limits, especially Ati-Zigi, Partey, Rice, Saka and Rashford",
+    "official China lottery odds and same-source market snapshots, if the modeling thread requires market comparison",
+    "official complete card table and set-piece event map",
+    "same-source player ratings for Ghana vs Panama remained incomplete",
+    "official hourly stadium weather for Boston/Foxborough and Toronto"
+  ],
+  "model_handoff": [
+    "Apply England second-half acceleration and wide-channel upgrades, but cap if key wide players or Rice are not high-minute available.",
+    "Apply Ghana as low-block/direct-counter profile with elevated transition-defense risk versus England, not as a generic defensive downgrade.",
+    "Apply Croatia central-control upgrade versus Panama, while keeping late-game and substitution-risk penalties from the first-round postmortem.",
+    "Apply Panama low-tempo block and physicality as pace-suppression factors, but keep build-up resistance and chase-state quality negative."
+  ],
+  "red_team_challenge_points": [
+    "Challenge whether local audit confirmation is enough for fixture status before official match-centre refresh.",
+    "Challenge whether England first-round finishing and substitute impact are being overfit from a single match.",
+    "Challenge whether Croatia's first-round defensive fatigue should be damped more strongly against Panama's lower transition quality.",
+    "Challenge Ghana goalkeeper and Partey uncertainty before allowing medium-confidence central/build-up adjustments."
+  ],
+  "validation": {
+    "required_factor_count_per_team": 10,
+    "matches_count": 2,
+    "teams_count": 4,
+    "no_scoreline_or_outcome_probability": true,
+    "no_wagering_advice": true
+  }
+}

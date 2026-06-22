@@ -1,0 +1,363 @@
+{
+  "review_id": "l-group-round2-prediction-red-team-20260622",
+  "role": "worldcup-red-team-verifier",
+  "phase": "group_stage_round2_quant_prediction_review",
+  "group": "L",
+  "round": 2,
+  "created_at": "2026-06-22T23:59:00+08:00",
+  "updated_at": "2026-06-23T01:05:00+08:00",
+  "status": "completed",
+  "red_team_status": "complete_red_team_review_after_model_fill",
+  "overall_verdict": "hold",
+  "verdict": "hold",
+  "scope": "Red-team review only. No primary prediction, no replacement model probability, no betting advice.",
+  "inputs_reviewed": [
+    "data/packets/matches/l-group-round2-data-refresh-20260622.json",
+    "data/packets/matchup_tactics/l-group-round2-tactical-refresh-20260622.json",
+    "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+    "比赛/未开始比赛/小组赛/L组/2026-06-23_英格兰_vs_加纳_量化预测.md",
+    "比赛/未开始比赛/小组赛/L组/2026-06-24_巴拿马_vs_克罗地亚_量化预测.md",
+    "比赛/未开始比赛/小组赛/L组/L组第二轮量化预测汇总_20260622.md",
+    "比赛/已完成比赛/小组赛/L组/2026-06-17_英格兰_4-2_克罗地亚_复盘.md",
+    "比赛/已完成比赛/小组赛/L组/2026-06-17_加纳_1-0_巴拿马_复盘.md"
+  ],
+  "blocking_items": [
+    {
+      "item": "T-75m official lineups and formations are unavailable for both matches.",
+      "severity": "high",
+      "confidence": "high",
+      "owner": "worldcup-data-collector"
+    },
+    {
+      "item": "Final injury, suspension and minute-limit confirmation is incomplete, especially Ati-Zigi, Partey, Rice, Saka, Rashford, Croatia veteran minutes and Panama card/rotation status.",
+      "severity": "high",
+      "confidence": "high",
+      "owner": "worldcup-data-collector"
+    },
+    {
+      "item": "Official China Sports Lottery and same-source 1X2/handicap/totals snapshots are missing; market calibration is null and betting gate must remain blocked.",
+      "severity": "high",
+      "confidence": "high",
+      "owner": "market-odds / main-thread"
+    },
+    {
+      "item": "Official hourly venue weather and complete discipline table are not refreshed.",
+      "severity": "medium",
+      "confidence": "high",
+      "owner": "worldcup-data-collector"
+    },
+    {
+      "item": "Local L-group player_state/roster JSON files are source-limited because detailed machine parsing failed from existing encoding/string corruption; per-player extraction should not be treated as fully clean.",
+      "severity": "medium",
+      "confidence": "medium_high",
+      "owner": "worldcup-data-collector"
+    }
+  ],
+  "blocking_gates": [
+    "T-75m official lineups",
+    "final injuries/minutes",
+    "official Chinese sports lottery odds",
+    "same-source 1X2/handicap/totals"
+  ],
+  "probability_discount_suggestion": {
+    "england_vs_ghana": {
+      "base_england_win": 0.6498,
+      "provisional_cap_or_review_band_before_lineups": "59-62%",
+      "draw_tail_uncertainty": "raise draw and Ghana transition tail until lineup, injury and market gates clear"
+    },
+    "panama_vs_croatia": {
+      "base_croatia_win": 0.5407,
+      "provisional_cap_or_review_band_before_lineups": "49-52%",
+      "draw_tail_uncertainty": "raise draw/under and Panama low-block tail until lineup, veteran-minute and market gates clear"
+    }
+  },
+  "owner_followups": {
+    "data_team_news": "Refresh official lineups, final injuries/minutes, Ati-Zigi, Rice/Rashford/Saka, Croatia veteran minutes and Panama cards/rotation.",
+    "model_cap": "Cap first-round overfit and de-duplicate player_state, tactical factors, first-round goals and set-piece edge.",
+    "betting_hold": "Keep betting gate blocked until official Chinese sports lottery and same-source 1X2/handicap/totals snapshots are available."
+  },
+  "betting_language_blocked": true,
+  "matches": [
+    {
+      "match": "England vs Ghana",
+      "match_cn": "英格兰 vs 加纳",
+      "verdict": "hold",
+      "model_summary": {
+        "xg": {"england": 2.05, "ghana": 0.86},
+        "probabilities_1x2": {"england_win": 0.6498, "draw": 0.2021, "ghana_win": 0.1480},
+        "totals": {"over_2_5": 0.5563, "under_2_5": 0.4437},
+        "top_score": "2-0",
+        "confidence": "medium_low"
+      },
+      "top_concerns": [
+        {
+          "concern": "England's 4-2 opener may be over-extrapolated through recent_round1_form, attack_structure, player_state and tactical_matchup at the same time.",
+          "severity": "high",
+          "confidence": "medium_high"
+        },
+        {
+          "concern": "Ghana low-block, direct-counter and late-substitution tails are acknowledged but may be too thin in a 64.98% England win output with independent Poisson.",
+          "severity": "high",
+          "confidence": "medium"
+        },
+        {
+          "concern": "Ati-Zigi goalkeeper status and Partey final role remain unresolved; England Rice/Saka/Rashford minutes also remain lineup-gated.",
+          "severity": "high",
+          "confidence": "high"
+        },
+        {
+          "concern": "No official China lottery or same-source market snapshot exists, so public-team premium, favorite tax and handicap-depth risk cannot be checked.",
+          "severity": "high",
+          "confidence": "high"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        {
+          "scenario": "Ghana defend in a deep 5-4-1/4-4-1-1, keep the first hour low-event, and push the match toward 1-0, 1-1 or a late transition sequence.",
+          "severity": "medium_high",
+          "confidence": "medium"
+        },
+        {
+          "scenario": "England rotate or cap minutes for Rice, Saka or Rashford, reducing the wide-channel and second-half acceleration assumptions embedded in the model.",
+          "severity": "high",
+          "confidence": "medium"
+        },
+        {
+          "scenario": "Ati-Zigi is confirmed fit and Ghana's goalkeeper/low-block structure is stronger than the current risk penalty assumes; England xG may be inflated.",
+          "severity": "medium",
+          "confidence": "medium"
+        },
+        {
+          "scenario": "An early booking, penalty, set piece or red-card event breaks independent-Poisson assumptions and widens Ghana's tail or England's blowout tail.",
+          "severity": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "overconfidence_flags": [
+        {
+          "flag": "The model labels confidence medium_low, but the displayed win probability is precise to four decimals despite major lineup and market gaps.",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "flag": "Top-score cluster includes 2-0, 1-0, 2-1 and 1-1 close together; wording should not imply a narrow score path is robust.",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "flag": "England attack upgrades from Kane/Bellingham/wide bench and set pieces are plausible, but they are derived from one match and already reflected in player_state.",
+          "severity": "high",
+          "confidence": "medium_high"
+        }
+      ],
+      "market_flags": [
+        {
+          "flag": "Official China Sports Lottery odds missing.",
+          "severity": "high",
+          "confidence": "high"
+        },
+        {
+          "flag": "Same-source 1X2, handicap and totals snapshots missing; no check for England public-team premium, deep-handicap trap or totals disagreement.",
+          "severity": "high",
+          "confidence": "high"
+        },
+        {
+          "flag": "Market_adjustment is 0.00 because of missing odds; this is not evidence that market and model agree.",
+          "severity": "medium_high",
+          "confidence": "high"
+        }
+      ],
+      "quant_chain_flags": [
+        {
+          "flag": "Potential duplicate counting among first-round goals, player_state form, attack_structure, tactical_matchup and set-piece bonus.",
+          "severity": "high",
+          "confidence": "medium_high"
+        },
+        {
+          "flag": "Independent Poisson does not model correlated event states: early goal, penalty, red card, low block tempo compression, late substitutions and chase mode.",
+          "severity": "medium_high",
+          "confidence": "high"
+        },
+        {
+          "flag": "Ghana's transition tail is partly represented, but 0.86 xG may still understate direct counters if England's fullbacks and midfield spacing stretch.",
+          "severity": "medium",
+          "confidence": "medium"
+        }
+      ],
+      "recommended_probability_adjustment": {
+        "type": "red_team_discount_not_replacement_probability",
+        "base": {"england_win": 0.6498, "draw": 0.2021, "ghana_win": 0.1480},
+        "suggested_discount": {
+          "england_win": "-4 to -7 percentage points until lineup, final injury and market gates clear",
+          "draw": "+2 to +4 percentage points",
+          "ghana_win": "+1 to +3 percentage points"
+        },
+        "xg_sensitivity": {
+          "england_xg": "-0.10 to -0.25 if Ghana low block and key England minutes are capped; reverse part of this if Ati-Zigi is confirmed out",
+          "ghana_xg": "+0.05 to +0.15 for direct-counter, set-piece and late-substitution tail"
+        }
+      },
+      "missing_data": [
+        "T-75m official starting lineups and confirmed formations",
+        "Final medical/minute-limit updates for Ati-Zigi, Partey, Rice, Saka and Rashford",
+        "Official China Sports Lottery odds",
+        "Same-source live 1X2/handicap/totals snapshot",
+        "Official hourly Boston/Foxborough venue weather",
+        "Clean machine-parseable L-group player_state/roster extraction"
+      ],
+      "handoff_notes": [
+        "Hold all betting-language publication until official lineup, final injury and official/same-source market gates clear.",
+        "Modeler should cap England first-round attack upgrades and de-duplicate player_state, tactical and set-piece channels.",
+        "Data collector should recheck Ati-Zigi and Partey before kickoff-window publication.",
+        "Main thread should describe the output as pre-red-team/pre-T-75 discussion only."
+      ]
+    },
+    {
+      "match": "Panama vs Croatia",
+      "match_cn": "巴拿马 vs 克罗地亚",
+      "verdict": "hold",
+      "model_summary": {
+        "xg": {"panama": 0.72, "croatia": 1.43},
+        "probabilities_1x2": {"panama_win": 0.1883, "draw": 0.2711, "croatia_win": 0.5407},
+        "totals": {"over_2_5": 0.3639, "under_2_5": 0.6361},
+        "top_score": "0-1",
+        "confidence": "low_to_medium"
+      },
+      "top_concerns": [
+        {
+          "concern": "Croatia's 54.07% win probability may still be too assertive before veteran minutes, rotation and late-game load are confirmed.",
+          "severity": "high",
+          "confidence": "medium_high"
+        },
+        {
+          "concern": "Panama's same-city rest, low block and low-tempo game state can suppress Croatia's edge and raise draw paths beyond the current central estimate.",
+          "severity": "medium_high",
+          "confidence": "medium_high"
+        },
+        {
+          "concern": "The model correctly retains Croatia attacking experience while downgrading late pressure resistance, but the split depends heavily on unconfirmed starting midfield and veteran usage.",
+          "severity": "high",
+          "confidence": "medium"
+        },
+        {
+          "concern": "No official/same-source market exists to test whether Croatia are carrying name premium after a 4-2 loss or whether draw/totals are priced differently.",
+          "severity": "high",
+          "confidence": "high"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        {
+          "scenario": "Panama keep the match 0-0 into the second half, forcing Croatia into a lower-tempo possession grind where 0-0, 1-1 and late set-piece variance grow.",
+          "severity": "medium_high",
+          "confidence": "high"
+        },
+        {
+          "scenario": "Croatia veteran core is rotated or minute-managed after the England match and Dallas-to-Toronto transfer, weakening the 1.43 xG and central-control assumptions.",
+          "severity": "high",
+          "confidence": "medium"
+        },
+        {
+          "scenario": "Panama cards or aggressive low-block defending create either a red-card downside or a dead-ball upset path not captured by independent Poisson.",
+          "severity": "medium",
+          "confidence": "medium"
+        },
+        {
+          "scenario": "Croatia score early and validate the experience/control edge; this is the model's success path, but it is highly timing-dependent.",
+          "severity": "medium",
+          "confidence": "medium_high"
+        }
+      ],
+      "overconfidence_flags": [
+        {
+          "flag": "Croatia top-score paths 0-1, 1-1, 0-2 and 0-0 are tightly clustered; a single-score narrative should be avoided.",
+          "severity": "medium",
+          "confidence": "high"
+        },
+        {
+          "flag": "Draw probability is already 27.11%, but Panama's low-event profile and same-city schedule may warrant further draw sensitivity before publication.",
+          "severity": "medium_high",
+          "confidence": "medium_high"
+        },
+        {
+          "flag": "Croatia's first-round two goals and experienced midfield could be double counted through player_state, central control, build-up resistance and transition threat.",
+          "severity": "medium_high",
+          "confidence": "medium"
+        }
+      ],
+      "market_flags": [
+        {
+          "flag": "Official China Sports Lottery odds missing.",
+          "severity": "high",
+          "confidence": "high"
+        },
+        {
+          "flag": "Same-source 1X2, handicap and totals snapshots missing; no validation of draw suppression, Croatia name premium or low-total market signal.",
+          "severity": "high",
+          "confidence": "high"
+        },
+        {
+          "flag": "Market_adjustment is 0.00 because odds are missing, not because the model has been market-calibrated.",
+          "severity": "medium_high",
+          "confidence": "high"
+        }
+      ],
+      "quant_chain_flags": [
+        {
+          "flag": "Croatia central-control advantage overlaps with baseline strength, player_state and tactical_matchup; use de-duplication or cap logic.",
+          "severity": "medium_high",
+          "confidence": "medium_high"
+        },
+        {
+          "flag": "Independent Poisson likely underweights low-block tempo compression, first-goal timing, red cards and late substitute/fatigue correlation.",
+          "severity": "medium_high",
+          "confidence": "high"
+        },
+        {
+          "flag": "Panama chase-mode penalty is supported by first round, but one-match attacking weakness should not eliminate late set-piece and second-ball variance.",
+          "severity": "medium",
+          "confidence": "medium_high"
+        }
+      ],
+      "recommended_probability_adjustment": {
+        "type": "red_team_discount_not_replacement_probability",
+        "base": {"panama_win": 0.1883, "draw": 0.2711, "croatia_win": 0.5407},
+        "suggested_discount": {
+          "croatia_win": "-3 to -5 percentage points until lineup, veteran minutes and market gates clear",
+          "draw": "+2 to +4 percentage points",
+          "panama_win": "+1 to +2 percentage points"
+        },
+        "xg_sensitivity": {
+          "croatia_xg": "-0.08 to -0.18 if veteran minutes are capped or Panama hold a compact block for 60+ minutes",
+          "panama_xg": "+0.03 to +0.08 for set-piece, card-state and late direct-play tail"
+        }
+      },
+      "missing_data": [
+        "T-75m official starting lineups and confirmed formations",
+        "Final Croatia veteran minute plan and injury/discipline table",
+        "Final Panama card/rotation and suspension confirmation",
+        "Official China Sports Lottery odds",
+        "Same-source live 1X2/handicap/totals snapshot",
+        "Official hourly Toronto venue weather",
+        "Clean machine-parseable L-group player_state/roster extraction"
+      ],
+      "handoff_notes": [
+        "Hold all betting-language publication until official lineup, final injury/discipline and official/same-source market gates clear.",
+        "Modeler should run a draw-sensitivity branch for long 0-0 state and Croatia veteran-minute caps.",
+        "Data collector should refresh Panama card/suspension status and Croatia rotation/minute reports.",
+        "Main thread should keep Croatia direction language conditional and avoid any executable betting framing."
+      ]
+    }
+  ],
+  "overall_handoff_notes": [
+    "Overall verdict is hold, not because the model chain is missing, but because the current chain remains pre-T-75m, source-limited and unmarket-calibrated.",
+    "If the main thread publishes before gates clear, it should block terms such as 主推, 稳胆, 可小注, 值博 or any equivalent executable betting language.",
+    "Recommended discounts are red-team stress ranges, not replacement final probabilities.",
+    "Owners: data collector for official lineup/injury/weather/discipline/player_state remediation; market-odds or main-thread for official China lottery and same-source odds; modeler for de-duplication and tail/draw sensitivity."
+  ],
+  "validation": {
+    "json_parse_required": true,
+    "markdown_final_content_required": true,
+    "no_betting_advice": true,
+    "verdict_values_used": ["hold"]
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "schema_version": "betting_risk_v1",
+  "generated_at": "2026-06-22T00:00:00+08:00",
+  "scope": "L组第二轮竞彩风险观察",
+  "betting_gate_status": "hold_not_executable",
+  "status_reason": "T-75m官方首发、最终伤停/分钟限制、官方中国竞彩赔率、同源1X2/让球/大小球快照均未满足，且红队verdict=hold。",
+  "source_files": [
+    "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+    "data/reviews/red_team/l-group-round2-prediction-red-team-20260622.json",
+    "data/packets/matches/l-group-round2-data-refresh-20260622.json",
+    "data/packets/matchup_tactics/l-group-round2-tactical-refresh-20260622.json",
+    "比赛/未开始比赛/小组赛/L组/L组第二轮量化预测汇总_20260622.md"
+  ],
+  "market_capture": {
+    "official_china_jingcai_odds": {
+      "status": "official_jingcai_odds_missing",
+      "captured_at": null,
+      "source": null,
+      "note": "未取得官方中国竞彩即时赔率。"
+    },
+    "same_source_1x2_handicap_totals_snapshot": {
+      "status": "same_source_market_snapshot_missing",
+      "captured_at": null,
+      "source": null,
+      "note": "未取得同源1X2、让球、大小球快照。"
+    }
+  },
+  "gate_checks": {
+    "t_minus_75_official_lineups": {
+      "met": false,
+      "status": "missing"
+    },
+    "final_injuries_suspensions_minutes": {
+      "met": false,
+      "status": "not_verifiably_final"
+    },
+    "official_china_jingcai_live_odds": {
+      "met": false,
+      "status": "missing"
+    },
+    "same_source_market_snapshot": {
+      "met": false,
+      "status": "missing"
+    },
+    "red_team_verdict": {
+      "met": false,
+      "status": "hold",
+      "betting_language_blocked": true
+    }
+  },
+  "red_team_controls": {
+    "overall_verdict": "hold",
+    "england_win_pre_lineup_cap_review_band": "59-62%",
+    "croatia_win_pre_lineup_cap_review_band": "49-52%",
+    "required_adjustment": "两场均提高平局和尾部不确定性。"
+  },
+  "matches": [
+    {
+      "match": "英格兰 vs 加纳",
+      "kickoff_beijing": "2026-06-24T04:00:00+08:00",
+      "model_snapshot": {
+        "xg": {
+          "england": 2.05,
+          "ghana": 0.86
+        },
+        "one_x_two": {
+          "england": 0.6498,
+          "draw": 0.2021,
+          "ghana": 0.148
+        },
+        "over_under_2_5": {
+          "over": 0.5563,
+          "under": 0.4437
+        },
+        "top_scorelines": [
+          {
+            "score": "2-0",
+            "probability": 0.1145
+          },
+          {
+            "score": "1-0",
+            "probability": 0.1117
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0984
+          },
+          {
+            "score": "1-1",
+            "probability": 0.096
+          },
+          {
+            "score": "3-0",
+            "probability": 0.0782
+          }
+        ]
+      },
+      "discussion_observations": [
+        "模型给出英格兰明显优势，但红队要求临场前将英格兰胜方向压到59-62%复核带。",
+        "英格兰热度和强队公众溢价可能放大赔率补偿不足风险。",
+        "加纳低位防守和直接转换保留尾部路径，平局和受让方向不能在缺盘口时被忽略。"
+      ],
+      "risk_points": [
+        "Rice负荷、Saka跟腱管理、Rashford回归后的分钟安排仍需最终确认。",
+        "Ati-Zigi半场被换下与Partey相关可用性信息未形成最终可核验版本。",
+        "无官方中国竞彩即时赔率和同源盘口，无法判断模型优势是否被市场价格充分反映。"
+      ],
+      "waiting_items": [
+        "T-75m官方首发与替补名单。",
+        "最终伤停、停赛和分钟限制。",
+        "官方中国竞彩即时赔率，含来源和capture time。",
+        "同源1X2、让球、大小球盘口快照，含来源和capture time。",
+        "比赛地天气和场地临场条件。"
+      ],
+      "future_review_only_if_gates_clear": [
+        "复核英格兰首发强度、边路爆点和中场控制是否支撑模型基础优势。",
+        "复核加纳门将、中场屏障和反击速度点是否抬高平局及尾部概率。",
+        "复核让球深度和总进球盘口是否已吸收英格兰热度。"
+      ],
+      "invalidation_conditions": [
+        "英格兰出现明显轮换、关键攻击点限时或中场控制下降。",
+        "加纳关键防线或转换点确认可用，且首发结构偏稳守。",
+        "官方赔率显示英格兰方向过热、补偿不足，或红队继续维持hold。"
+      ],
+      "status": "hold_not_executable"
+    },
+    {
+      "match": "巴拿马 vs 克罗地亚",
+      "kickoff_beijing": "2026-06-24T07:00:00+08:00",
+      "model_snapshot": {
+        "xg": {
+          "panama": 0.72,
+          "croatia": 1.43
+        },
+        "one_x_two": {
+          "panama": 0.1883,
+          "draw": 0.2711,
+          "croatia": 0.5407
+        },
+        "over_under_2_5": {
+          "over": 0.3639,
+          "under": 0.6361
+        },
+        "top_scorelines": [
+          {
+            "score": "0-1",
+            "probability": 0.1666
+          },
+          {
+            "score": "1-1",
+            "probability": 0.1199
+          },
+          {
+            "score": "0-2",
+            "probability": 0.1191
+          },
+          {
+            "score": "0-0",
+            "probability": 0.1165
+          },
+          {
+            "score": "1-2",
+            "probability": 0.0858
+          }
+        ]
+      },
+      "discussion_observations": [
+        "模型给克罗地亚优势，但红队要求临场前将克罗地亚胜方向压到49-52%复核带。",
+        "巴拿马低位与同城休整条件抬高低比分和平局尾部。",
+        "克罗地亚中场经验优势存在，但老将负荷、轮换和比赛节奏可能削弱胜出确定性。"
+      ],
+      "risk_points": [
+        "Modric、Perisic、Gvardiol等关键点的分钟计划和身体负荷需临场确认。",
+        "巴拿马若持续低位压缩空间，克罗地亚的优势可能转化为控球而非高质量机会。",
+        "无官方中国竞彩即时赔率和同源盘口，无法判断克罗地亚方向是否存在名气溢价。"
+      ],
+      "waiting_items": [
+        "T-75m官方首发与替补名单。",
+        "克罗地亚老将分钟计划、轮换强度和最终伤停。",
+        "巴拿马黄牌、停赛、首发防守结构和反击点。",
+        "官方中国竞彩即时赔率，含来源和capture time。",
+        "同源1X2、让球、大小球盘口快照，含来源和capture time。"
+      ],
+      "future_review_only_if_gates_clear": [
+        "复核克罗地亚首发是否保留足够中场控制和前场终结质量。",
+        "复核巴拿马低位强度是否继续抬高平局和小比分路径。",
+        "复核让球与总进球盘口是否低估低节奏风险。"
+      ],
+      "invalidation_conditions": [
+        "克罗地亚出现大幅轮换、关键老将限时或前场终结点下降。",
+        "巴拿马首发呈现更完整低位防守结构，且比赛条件支持慢节奏。",
+        "官方赔率显示克罗地亚方向过热、补偿不足，或红队继续维持hold。"
+      ],
+      "status": "hold_not_executable"
+    }
+  ],
+  "non_purchase_option": {
+    "status": "available",
+    "text": "不买/等待官方首发和赔率。"
+  },
+  "global_avoid_items": [
+    "缺少官方中国竞彩即时赔率时，不将任何方向写成可执行组合。",
+    "红队verdict=hold时，不输出串关出票结构、金额安排或确定性表达。",
+    "缺少同源1X2、让球、大小球快照时，不比较不同玩法的真实赔率补偿。"
+  ],
+  "final_status": "hold_not_executable"
+}
