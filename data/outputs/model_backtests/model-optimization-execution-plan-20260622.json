@@ -1,0 +1,74 @@
+{
+  "phase": "model_optimization_execution",
+  "status": "in_progress",
+  "created_at": "2026-06-23T02:50:00+08:00",
+  "owner": "main-thread",
+  "scope": "Execute the post-backtest optimization plan through coordinated data, tactical, model, red-team and betting-risk threads.",
+  "baseline_backtest": "data/outputs/model_backtests/prediction-hit-rate-backtest-20260622.json",
+  "threads": {
+    "data_collector": {
+      "thread_id": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+      "task": "Audit prediction/result linkage, create model-ready backtest table, flag missing top5/prediction-chain fields and player-state update gaps.",
+      "expected_outputs": [
+        "data/packets/model_optimization/backtest-data-quality-audit-20260622.json",
+        "汇总/预测回测数据质量审计_20260622.md"
+      ]
+    },
+    "tactics": {
+      "thread_id": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+      "task": "Convert observed error patterns into tactical volatility and draw-floor factors with direction, magnitude, evidence and confidence.",
+      "expected_outputs": [
+        "data/packets/model_optimization/tactical-volatility-factors-20260622.json",
+        "汇总/战术波动因子优化_20260622.md"
+      ]
+    },
+    "modeler": {
+      "thread_id": "019edb8f-536a-7100-84da-e13bfecb0def",
+      "task": "Produce parameter update proposal: draw floor, event volatility, favorite ceiling tail, market calibration split and reporting contract.",
+      "expected_outputs": [
+        "data/outputs/model_backtests/model-parameter-update-20260622.json",
+        "汇总/模型参数优化方案_20260622.md"
+      ]
+    },
+    "red_team": {
+      "thread_id": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+      "task": "Review the optimization proposal for overfitting, small sample bias, double counting, market misuse and betting-language leakage.",
+      "expected_outputs": [
+        "data/reviews/red_team/model-optimization-red-team-20260622.json",
+        "data/reviews/red_team/model-optimization-red-team-20260622.md"
+      ]
+    },
+    "betting_risk": {
+      "thread_id": "019edb8f-cd0d-7393-bf92-d637962a67e4",
+      "task": "Translate the optimization into stricter竞彩 risk gates; no purchase advice, only discussion_only/hold rules.",
+      "expected_outputs": [
+        "data/outputs/betting_risk/model-optimization-betting-gates-20260622.json",
+        "赔率与投注/模型优化后竞彩风险闸门_20260622.md"
+      ]
+    }
+  },
+  "main_thread_outputs": [
+    "data/outputs/model_backtests/prediction-hit-rate-backtest-20260622.json",
+    "data/outputs/model_backtests/model-optimization-execution-plan-20260622.json",
+    "汇总/模型优化执行方案_20260622.md"
+  ],
+  "required_changes_for_future_predictions": [
+    "Use a formal top5 scoreline list for every match.",
+    "Separate highest single scoreline from aggregate 1X2 direction.",
+    "Apply a dynamic draw floor before final probability publication.",
+    "Apply event-volatility multipliers for red cards, early goals, goalkeeper overperformance, set-piece streaks and collapse risk.",
+    "Apply favorite-ceiling-tail expansion after strong favorite early-goal or discipline-disruption scenarios.",
+    "Split market calibration into direction signal and tail-risk signal.",
+    "Run red-team review before any final prediction or betting-risk file is published.",
+    "Backtest every completed prediction with WDL hit, top3 score hit, Brier/log-loss where probabilities are available, xG error and parameter update notes."
+  ],
+  "completion_gate": {
+    "required": [
+      "All expected JSON files parse.",
+      "Markdown files have no skeleton/TODO/in_progress residue.",
+      "Red-team verdict is not hold for the model-optimization contract.",
+      "线程状态.md is appended at the end with final optimization status."
+    ],
+    "betting_boundary": "No executable betting recommendation is allowed. Keep竞彩 outputs at discussion_only or hold unless official lineups, latest injuries, official竞彩 odds and same-source market snapshots are captured."
+  }
+}

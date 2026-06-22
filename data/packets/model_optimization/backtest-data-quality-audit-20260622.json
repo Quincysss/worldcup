@@ -1,0 +1,1701 @@
+{
+  "phase": "model_optimization_data_quality_audit",
+  "status": "complete",
+  "created_at": "2026-06-23T02:50:00+08:00",
+  "updated_at": "2026-06-23T03:05:00+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "Data-quality audit only: pre-match prediction -> postmatch review -> actual score traceability and metric eligibility.",
+  "baseline_inputs": {
+    "hit_rate_backtest": "data/outputs/model_backtests/prediction-hit-rate-backtest-20260622.json",
+    "human_summary": "汇总/预测命中率回测_20260622.md",
+    "optimization_plan": "data/outputs/model_backtests/model-optimization-execution-plan-20260622.json",
+    "baseline_metrics": {
+      "matches_count": 32,
+      "wdl_hits": 15,
+      "wdl_accuracy": 0.469,
+      "top3_score_hits_all_sample": 7,
+      "top3_score_accuracy_all_sample": 0.219,
+      "top3_score_hits_when_top3_available": 7,
+      "top3_score_available_matches": 18,
+      "top3_score_accuracy_when_top3_available": 0.389,
+      "primary_score_hits": 4,
+      "primary_score_accuracy": 0.125
+    },
+    "plan_status": "source_plan_status_open_at_capture"
+  },
+  "inventory": {
+    "structured_prediction_json_files": 34,
+    "prediction_markdown_files": 71,
+    "completed_single_match_reviews": 40,
+    "reviews_by_player_state_status": {
+      "missing": 30,
+      "partial": 3,
+      "updated": 6,
+      "partial_source_limited": 1
+    }
+  },
+  "prediction_quality": {
+    "counts_by_quality": {
+      "legacy_or_prose": 36,
+      "wdl_probabilities_only": 14,
+      "partial_quant": 2,
+      "full_quant_top5_poisson_xg_1x2": 14
+    },
+    "full_quant_matches": [
+      {
+        "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "match": "Belgium vs Iran",
+        "match_id": "2026-06-21_belgium_vs_iran"
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "match": "New Zealand vs Egypt",
+        "match_id": "2026-06-21_new_zealand_vs_egypt"
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "match": "Spain vs Saudi Arabia",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "match": "Cape Verde vs Uruguay",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "match": "France vs Iraq",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "match": "Norway vs Senegal",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "match": "France vs Iraq",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "match": "Norway vs Senegal",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "match": "Argentina vs Austria",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "match": "Jordan vs Algeria",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "match": "Portugal vs Uzbekistan",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "match": "Colombia vs DR Congo",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+        "match": "England vs Ghana",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+        "match": "Panama vs Croatia",
+        "match_id": null
+      }
+    ],
+    "brier_logloss_eligible_matches": [
+      {
+        "prediction_file": "data/outputs/match_predictions/a-group-round2-predictions.json",
+        "match": "Czechia vs South Africa",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/a-group-round2-predictions.json",
+        "match": "Mexico vs South Korea",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/b-group-round2-predictions.json",
+        "match": "Switzerland vs Bosnia and Herzegovina",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/b-group-round2-predictions.json",
+        "match": "Canada vs Qatar",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/c-group-round2-predictions.json",
+        "match": "Brazil vs Haiti",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/c-group-round2-predictions.json",
+        "match": "Scotland vs Morocco",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/d-group-round2-predictions.json",
+        "match": "United States vs Australia",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/d-group-round2-predictions.json",
+        "match": "Turkiye vs Paraguay",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/e-group-round2-predictions.json",
+        "match": "Germany vs Cote d'Ivoire",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/e-group-round2-predictions.json",
+        "match": "Ecuador vs Curacao",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/f-group-round2-predictions.json",
+        "match": "Netherlands vs Sweden",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/f-group-round2-predictions.json",
+        "match": "Tunisia vs Japan",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/g-group-round2-predictions.json",
+        "match": "Belgium vs Iran",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/g-group-round2-predictions.json",
+        "match": "Egypt vs New Zealand",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "match": "Belgium vs Iran",
+        "match_id": "2026-06-21_belgium_vs_iran"
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "match": "New Zealand vs Egypt",
+        "match_id": "2026-06-21_new_zealand_vs_egypt"
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "match": "Spain vs Saudi Arabia",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "match": "Cape Verde vs Uruguay",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "match": "France vs Iraq",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "match": "Norway vs Senegal",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "match": "France vs Iraq",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "match": "Norway vs Senegal",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "match": "Argentina vs Austria",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "match": "Jordan vs Algeria",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "match": "Portugal vs Uzbekistan",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "match": "Colombia vs DR Congo",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/l-group-round1-predictions.json",
+        "match": "England vs Croatia",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/l-group-round1-predictions.json",
+        "match": "Ghana vs Panama",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+        "match": "England vs Ghana",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+        "match": "Panama vs Croatia",
+        "match_id": null
+      }
+    ],
+    "top3_score_eligible_matches": [
+      {
+        "prediction_file": "data/outputs/match_predictions/e-group-round2-quant-revision-20260620.json",
+        "match": "Germany vs Cote d'Ivoire",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/e-group-round2-quant-revision-20260620.json",
+        "match": "Ecuador vs Curacao",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/f-group-round2-quant-revision-20260620.json",
+        "match": "Netherlands vs Sweden",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/f-group-round2-quant-revision-20260620.json",
+        "match": "Tunisia vs Japan",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "match": "Belgium vs Iran",
+        "match_id": "2026-06-21_belgium_vs_iran"
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "match": "New Zealand vs Egypt",
+        "match_id": "2026-06-21_new_zealand_vs_egypt"
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "match": "Spain vs Saudi Arabia",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "match": "Cape Verde vs Uruguay",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "match": "France vs Iraq",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "match": "Norway vs Senegal",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "match": "France vs Iraq",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "match": "Norway vs Senegal",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "match": "Argentina vs Austria",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "match": "Jordan vs Algeria",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "match": "Portugal vs Uzbekistan",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "match": "Colombia vs DR Congo",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+        "match": "England vs Ghana",
+        "match_id": null
+      },
+      {
+        "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+        "match": "Panama vs Croatia",
+        "match_id": null
+      }
+    ],
+    "structured_json_without_match_level_quant_rows": [
+      "data/outputs/match_predictions/c-group-round2-postmortem.json",
+      "data/outputs/match_predictions/d-e-f-round1-postmortem.json"
+    ]
+  },
+  "markdown_prediction_quality": {
+    "files_scanned": 71,
+    "likely_legacy_prose_only_count": 0,
+    "likely_legacy_prose_only_files": []
+  },
+  "review_player_state_quality": {
+    "updated_reviews": [
+      {
+        "review_file": "比赛/已完成比赛/小组赛/D组/2026-06-19_美国_2-0_澳大利亚_复盘.md",
+        "group": "D组",
+        "date": "2026-06-19",
+        "team_a": "美国",
+        "team_b": "澳大利亚",
+        "actual_score": "2-0",
+        "actual_result_label": "美国 2-0 澳大利亚",
+        "player_state_update_status": "updated",
+        "review_quality": "updated"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/F组/2026-06-20_荷兰_5-1_瑞典_复盘.md",
+        "group": "F组",
+        "date": "2026-06-20",
+        "team_a": "荷兰",
+        "team_b": "瑞典",
+        "actual_score": "5-1",
+        "actual_result_label": "荷兰 5-1 瑞典",
+        "player_state_update_status": "updated",
+        "review_quality": "updated"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/F组/2026-06-21_突尼斯_0-4_日本_复盘.md",
+        "group": "F组",
+        "date": "2026-06-21",
+        "team_a": "突尼斯",
+        "team_b": "日本",
+        "actual_score": "0-4",
+        "actual_result_label": "突尼斯 0-4 日本",
+        "player_state_update_status": "updated",
+        "review_quality": "updated"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/K组/2026-06-17_葡萄牙_1-1_刚果金_复盘.md",
+        "group": "K组",
+        "date": "2026-06-17",
+        "team_a": "葡萄牙",
+        "team_b": "刚果金",
+        "actual_score": "1-1",
+        "actual_result_label": "葡萄牙 1-1 刚果金",
+        "player_state_update_status": "updated",
+        "review_quality": "updated"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/L组/2026-06-17_加纳_1-0_巴拿马_复盘.md",
+        "group": "L组",
+        "date": "2026-06-17",
+        "team_a": "加纳",
+        "team_b": "巴拿马",
+        "actual_score": "1-0",
+        "actual_result_label": "加纳 1-0 巴拿马",
+        "player_state_update_status": "updated",
+        "review_quality": "updated"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/L组/2026-06-17_英格兰_4-2_克罗地亚_复盘.md",
+        "group": "L组",
+        "date": "2026-06-17",
+        "team_a": "英格兰",
+        "team_b": "克罗地亚",
+        "actual_score": "4-2",
+        "actual_result_label": "英格兰 4-2 克罗地亚",
+        "player_state_update_status": "updated",
+        "review_quality": "updated"
+      }
+    ],
+    "partial_or_limited_reviews": [
+      {
+        "review_file": "比赛/已完成比赛/小组赛/A组/2026-06-11_墨西哥_2-0_南非_复盘.md",
+        "group": "A组",
+        "date": "2026-06-11",
+        "team_a": "墨西哥",
+        "team_b": "南非",
+        "actual_score": "2-0",
+        "actual_result_label": "墨西哥 2-0 南非",
+        "player_state_update_status": "missing",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/A组/2026-06-12_韩国_2-1_捷克_复盘.md",
+        "group": "A组",
+        "date": "2026-06-12",
+        "team_a": "韩国",
+        "team_b": "捷克",
+        "actual_score": "2-1",
+        "actual_result_label": "韩国 2-1 捷克",
+        "player_state_update_status": "missing",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/A组/2026-06-18_墨西哥_1-0_韩国_复盘.md",
+        "group": "A组",
+        "date": "2026-06-18",
+        "team_a": "墨西哥",
+        "team_b": "韩国",
+        "actual_score": "1-0",
+        "actual_result_label": "墨西哥 1-0 韩国",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/A组/2026-06-18_捷克_1-1_南非_复盘.md",
+        "group": "A组",
+        "date": "2026-06-18",
+        "team_a": "捷克",
+        "team_b": "南非",
+        "actual_score": "1-1",
+        "actual_result_label": "捷克 1-1 南非",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/B组/2026-06-12_加拿大_1-1_波黑_复盘.md",
+        "group": "B组",
+        "date": "2026-06-12",
+        "team_a": "加拿大",
+        "team_b": "波黑",
+        "actual_score": "1-1",
+        "actual_result_label": "加拿大 1-1 波黑",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/B组/2026-06-13_卡塔尔_1-1_瑞士_复盘.md",
+        "group": "B组",
+        "date": "2026-06-13",
+        "team_a": "卡塔尔",
+        "team_b": "瑞士",
+        "actual_score": "1-1",
+        "actual_result_label": "卡塔尔 1-1 瑞士",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/B组/2026-06-18_加拿大_6-0_卡塔尔_复盘.md",
+        "group": "B组",
+        "date": "2026-06-18",
+        "team_a": "加拿大",
+        "team_b": "卡塔尔",
+        "actual_score": "6-0",
+        "actual_result_label": "加拿大 6-0 卡塔尔",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/B组/2026-06-18_瑞士_4-1_波黑_复盘.md",
+        "group": "B组",
+        "date": "2026-06-18",
+        "team_a": "瑞士",
+        "team_b": "波黑",
+        "actual_score": "4-1",
+        "actual_result_label": "瑞士 4-1 波黑",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/C组/2026-06-14_巴西_1-1_摩洛哥_复盘.md",
+        "group": "C组",
+        "date": "2026-06-14",
+        "team_a": "巴西",
+        "team_b": "摩洛哥",
+        "actual_score": "1-1",
+        "actual_result_label": "巴西 1-1 摩洛哥",
+        "player_state_update_status": "missing",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/C组/2026-06-14_海地_0-1_苏格兰_复盘.md",
+        "group": "C组",
+        "date": "2026-06-14",
+        "team_a": "海地",
+        "team_b": "苏格兰",
+        "actual_score": "0-1",
+        "actual_result_label": "海地 0-1 苏格兰",
+        "player_state_update_status": "missing",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/C组/2026-06-19_巴西_3-0_海地_复盘.md",
+        "group": "C组",
+        "date": "2026-06-19",
+        "team_a": "巴西",
+        "team_b": "海地",
+        "actual_score": "3-0",
+        "actual_result_label": "巴西 3-0 海地",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/C组/2026-06-19_苏格兰_0-1_摩洛哥_复盘.md",
+        "group": "C组",
+        "date": "2026-06-19",
+        "team_a": "苏格兰",
+        "team_b": "摩洛哥",
+        "actual_score": "0-1",
+        "actual_result_label": "苏格兰 0-1 摩洛哥",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/D组/2026-06-12_美国_4-1_巴拉圭_复盘.md",
+        "group": "D组",
+        "date": "2026-06-12",
+        "team_a": "美国",
+        "team_b": "巴拉圭",
+        "actual_score": "4-1",
+        "actual_result_label": "美国 4-1 巴拉圭",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/D组/2026-06-13_澳大利亚_2-0_土耳其_复盘.md",
+        "group": "D组",
+        "date": "2026-06-13",
+        "team_a": "澳大利亚",
+        "team_b": "土耳其",
+        "actual_score": "2-0",
+        "actual_result_label": "澳大利亚 2-0 土耳其",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/D组/2026-06-19_土耳其_0-1_巴拉圭_复盘.md",
+        "group": "D组",
+        "date": "2026-06-19",
+        "team_a": "土耳其",
+        "team_b": "巴拉圭",
+        "actual_score": "0-1",
+        "actual_result_label": "土耳其 0-1 巴拉圭",
+        "player_state_update_status": "partial",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-14_德国_7-1_库拉索_复盘.md",
+        "group": "E组",
+        "date": "2026-06-14",
+        "team_a": "德国",
+        "team_b": "库拉索",
+        "actual_score": "7-1",
+        "actual_result_label": "德国 7-1 库拉索",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-14_科特迪瓦_1-0_厄瓜多尔_复盘.md",
+        "group": "E组",
+        "date": "2026-06-14",
+        "team_a": "科特迪瓦",
+        "team_b": "厄瓜多尔",
+        "actual_score": "1-0",
+        "actual_result_label": "科特迪瓦 1-0 厄瓜多尔",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-20_厄瓜多尔_0-0_库拉索_复盘.md",
+        "group": "E组",
+        "date": "2026-06-20",
+        "team_a": "厄瓜多尔",
+        "team_b": "库拉索",
+        "actual_score": "0-0",
+        "actual_result_label": "厄瓜多尔 0-0 库拉索",
+        "player_state_update_status": "partial_source_limited",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-20_德国_2-1_科特迪瓦_复盘.md",
+        "group": "E组",
+        "date": "2026-06-20",
+        "team_a": "德国",
+        "team_b": "科特迪瓦",
+        "actual_score": "2-1",
+        "actual_result_label": "德国 2-1 科特迪瓦",
+        "player_state_update_status": "partial",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/F组/2026-06-14_瑞典_5-1_突尼斯_复盘.md",
+        "group": "F组",
+        "date": "2026-06-14",
+        "team_a": "瑞典",
+        "team_b": "突尼斯",
+        "actual_score": "5-1",
+        "actual_result_label": "瑞典 5-1 突尼斯",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/F组/2026-06-14_荷兰_2-2_日本_复盘.md",
+        "group": "F组",
+        "date": "2026-06-14",
+        "team_a": "荷兰",
+        "team_b": "日本",
+        "actual_score": "2-2",
+        "actual_result_label": "荷兰 2-2 日本",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/G组/2026-06-15_伊朗_2-2_新西兰_复盘.md",
+        "group": "G组",
+        "date": "2026-06-15",
+        "team_a": "伊朗",
+        "team_b": "新西兰",
+        "actual_score": "2-2",
+        "actual_result_label": "伊朗 2-2 新西兰",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/G组/2026-06-15_比利时_1-1_埃及_复盘.md",
+        "group": "G组",
+        "date": "2026-06-15",
+        "team_a": "比利时",
+        "team_b": "埃及",
+        "actual_score": "1-1",
+        "actual_result_label": "比利时 1-1 埃及",
+        "player_state_update_status": "missing",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/G组/2026-06-21_新西兰_1-3_埃及_复盘.md",
+        "group": "G组",
+        "date": "2026-06-21",
+        "team_a": "新西兰",
+        "team_b": "埃及",
+        "actual_score": "1-3",
+        "actual_result_label": "新西兰 1-3 埃及",
+        "player_state_update_status": "missing",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/G组/2026-06-21_比利时_0-0_伊朗_复盘.md",
+        "group": "G组",
+        "date": "2026-06-21",
+        "team_a": "比利时",
+        "team_b": "伊朗",
+        "actual_score": "0-0",
+        "actual_result_label": "比利时 0-0 伊朗",
+        "player_state_update_status": "missing",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/H组/2026-06-15_沙特_1-1_乌拉圭_复盘.md",
+        "group": "H组",
+        "date": "2026-06-15",
+        "team_a": "沙特",
+        "team_b": "乌拉圭",
+        "actual_score": "1-1",
+        "actual_result_label": "沙特 1-1 乌拉圭",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/H组/2026-06-15_西班牙_0-0_佛得角_复盘.md",
+        "group": "H组",
+        "date": "2026-06-15",
+        "team_a": "西班牙",
+        "team_b": "佛得角",
+        "actual_score": "0-0",
+        "actual_result_label": "西班牙 0-0 佛得角",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/H组/2026-06-21_乌拉圭_2-2_佛得角_复盘.md",
+        "group": "H组",
+        "date": "2026-06-21",
+        "team_a": "乌拉圭",
+        "team_b": "佛得角",
+        "actual_score": "2-2",
+        "actual_result_label": "乌拉圭 2-2 佛得角",
+        "player_state_update_status": "missing",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/H组/2026-06-21_西班牙_4-0_沙特_复盘.md",
+        "group": "H组",
+        "date": "2026-06-21",
+        "team_a": "西班牙",
+        "team_b": "沙特",
+        "actual_score": "4-0",
+        "actual_result_label": "西班牙 4-0 沙特",
+        "player_state_update_status": "missing",
+        "review_quality": "partial_or_source_limited"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/I组/2026-06-16_伊拉克_1-4_挪威_复盘.md",
+        "group": "I组",
+        "date": "2026-06-16",
+        "team_a": "伊拉克",
+        "team_b": "挪威",
+        "actual_score": "1-4",
+        "actual_result_label": "伊拉克 1-4 挪威",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/I组/2026-06-16_法国_3-1_塞内加尔_复盘.md",
+        "group": "I组",
+        "date": "2026-06-16",
+        "team_a": "法国",
+        "team_b": "塞内加尔",
+        "actual_score": "3-1",
+        "actual_result_label": "法国 3-1 塞内加尔",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/J组/2026-06-16_奥地利_3-1_约旦_复盘.md",
+        "group": "J组",
+        "date": "2026-06-16",
+        "team_a": "奥地利",
+        "team_b": "约旦",
+        "actual_score": "3-1",
+        "actual_result_label": "奥地利 3-1 约旦",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/J组/2026-06-16_阿根廷_3-0_阿尔及利亚_复盘.md",
+        "group": "J组",
+        "date": "2026-06-16",
+        "team_a": "阿根廷",
+        "team_b": "阿尔及利亚",
+        "actual_score": "3-0",
+        "actual_result_label": "阿根廷 3-0 阿尔及利亚",
+        "player_state_update_status": "missing",
+        "review_quality": "unknown"
+      },
+      {
+        "review_file": "比赛/已完成比赛/小组赛/K组/2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md",
+        "group": "K组",
+        "date": "2026-06-17",
+        "team_a": "乌兹别克斯坦",
+        "team_b": "哥伦比亚",
+        "actual_score": "1-3",
+        "actual_result_label": "乌兹别克斯坦 1-3 哥伦比亚",
+        "player_state_update_status": "partial",
+        "review_quality": "partial_or_source_limited"
+      }
+    ]
+  },
+  "traceability_table": [
+    {
+      "actual_result": "墨西哥 2-0 南非",
+      "review_file": "比赛/已完成比赛/小组赛/A组/2026-06-11_墨西哥_2-0_南非_复盘.md",
+      "actual_score": "2-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/a-group-round2-postmortem.json",
+        "data/outputs/match_predictions/a-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/A组/2026-06-11_墨西哥_vs_南非_预测.md",
+        "比赛/未开始比赛/小组赛/A组/2026-06-18_墨西哥_vs_韩国_预测.md",
+        "比赛/未开始比赛/小组赛/A组/2026-06-18_捷克_vs_南非_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "韩国 2-1 捷克",
+      "review_file": "比赛/已完成比赛/小组赛/A组/2026-06-12_韩国_2-1_捷克_复盘.md",
+      "actual_score": "2-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/a-group-round2-postmortem.json",
+        "data/outputs/match_predictions/a-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/A组/2026-06-13_韩国_vs_捷克_预测.md",
+        "比赛/未开始比赛/小组赛/A组/2026-06-18_墨西哥_vs_韩国_预测.md",
+        "比赛/未开始比赛/小组赛/A组/2026-06-18_捷克_vs_南非_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "墨西哥 1-0 韩国",
+      "review_file": "比赛/已完成比赛/小组赛/A组/2026-06-18_墨西哥_1-0_韩国_复盘.md",
+      "actual_score": "1-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/a-group-round2-postmortem.json",
+        "data/outputs/match_predictions/a-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/A组/2026-06-11_墨西哥_vs_南非_预测.md",
+        "比赛/未开始比赛/小组赛/A组/2026-06-13_韩国_vs_捷克_预测.md",
+        "比赛/未开始比赛/小组赛/A组/2026-06-18_墨西哥_vs_韩国_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "捷克 1-1 南非",
+      "review_file": "比赛/已完成比赛/小组赛/A组/2026-06-18_捷克_1-1_南非_复盘.md",
+      "actual_score": "1-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/a-group-round2-postmortem.json",
+        "data/outputs/match_predictions/a-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/A组/2026-06-11_墨西哥_vs_南非_预测.md",
+        "比赛/未开始比赛/小组赛/A组/2026-06-13_韩国_vs_捷克_预测.md",
+        "比赛/未开始比赛/小组赛/A组/2026-06-18_捷克_vs_南非_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "加拿大 1-1 波黑",
+      "review_file": "比赛/已完成比赛/小组赛/B组/2026-06-12_加拿大_1-1_波黑_复盘.md",
+      "actual_score": "1-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/b-group-round1-postmortem.json",
+        "data/outputs/match_predictions/b-group-round2-postmortem.json",
+        "data/outputs/match_predictions/b-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/B组/2026-06-12_加拿大_vs_波黑_预测.md",
+        "比赛/未开始比赛/小组赛/B组/2026-06-18_加拿大_vs_卡塔尔_预测.md",
+        "比赛/未开始比赛/小组赛/B组/2026-06-18_瑞士_vs_波黑_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "卡塔尔 1-1 瑞士",
+      "review_file": "比赛/已完成比赛/小组赛/B组/2026-06-13_卡塔尔_1-1_瑞士_复盘.md",
+      "actual_score": "1-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/b-group-round1-postmortem.json",
+        "data/outputs/match_predictions/b-group-round2-postmortem.json",
+        "data/outputs/match_predictions/b-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/B组/2026-06-13_卡塔尔_vs_瑞士_预测.md",
+        "比赛/未开始比赛/小组赛/B组/2026-06-18_加拿大_vs_卡塔尔_预测.md",
+        "比赛/未开始比赛/小组赛/B组/2026-06-18_瑞士_vs_波黑_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "加拿大 6-0 卡塔尔",
+      "review_file": "比赛/已完成比赛/小组赛/B组/2026-06-18_加拿大_6-0_卡塔尔_复盘.md",
+      "actual_score": "6-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/b-group-round1-postmortem.json",
+        "data/outputs/match_predictions/b-group-round2-postmortem.json",
+        "data/outputs/match_predictions/b-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/B组/2026-06-12_加拿大_vs_波黑_预测.md",
+        "比赛/未开始比赛/小组赛/B组/2026-06-13_卡塔尔_vs_瑞士_预测.md",
+        "比赛/未开始比赛/小组赛/B组/2026-06-18_加拿大_vs_卡塔尔_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "瑞士 4-1 波黑",
+      "review_file": "比赛/已完成比赛/小组赛/B组/2026-06-18_瑞士_4-1_波黑_复盘.md",
+      "actual_score": "4-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/b-group-round1-postmortem.json",
+        "data/outputs/match_predictions/b-group-round2-postmortem.json",
+        "data/outputs/match_predictions/b-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/B组/2026-06-12_加拿大_vs_波黑_预测.md",
+        "比赛/未开始比赛/小组赛/B组/2026-06-13_卡塔尔_vs_瑞士_预测.md",
+        "比赛/未开始比赛/小组赛/B组/2026-06-18_瑞士_vs_波黑_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "巴西 1-1 摩洛哥",
+      "review_file": "比赛/已完成比赛/小组赛/C组/2026-06-14_巴西_1-1_摩洛哥_复盘.md",
+      "actual_score": "1-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/c-group-round2-postmortem.json",
+        "data/outputs/match_predictions/c-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/C组/2026-06-19_巴西_vs_海地_预测.md",
+        "比赛/未开始比赛/小组赛/C组/2026-06-19_苏格兰_vs_摩洛哥_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "海地 0-1 苏格兰",
+      "review_file": "比赛/已完成比赛/小组赛/C组/2026-06-14_海地_0-1_苏格兰_复盘.md",
+      "actual_score": "0-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/c-group-round2-postmortem.json",
+        "data/outputs/match_predictions/c-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/C组/2026-06-19_巴西_vs_海地_预测.md",
+        "比赛/未开始比赛/小组赛/C组/2026-06-19_苏格兰_vs_摩洛哥_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "巴西 3-0 海地",
+      "review_file": "比赛/已完成比赛/小组赛/C组/2026-06-19_巴西_3-0_海地_复盘.md",
+      "actual_score": "3-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/c-group-round2-postmortem.json",
+        "data/outputs/match_predictions/c-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/C组/2026-06-19_巴西_vs_海地_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "苏格兰 0-1 摩洛哥",
+      "review_file": "比赛/已完成比赛/小组赛/C组/2026-06-19_苏格兰_0-1_摩洛哥_复盘.md",
+      "actual_score": "0-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/c-group-round2-postmortem.json",
+        "data/outputs/match_predictions/c-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/C组/2026-06-19_苏格兰_vs_摩洛哥_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "美国 4-1 巴拉圭",
+      "review_file": "比赛/已完成比赛/小组赛/D组/2026-06-12_美国_4-1_巴拉圭_复盘.md",
+      "actual_score": "4-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/d-e-f-round1-postmortem.json",
+        "data/outputs/match_predictions/d-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/D组/2026-06-19_土耳其_vs_巴拉圭_预测.md",
+        "比赛/未开始比赛/小组赛/D组/2026-06-19_美国_vs_澳大利亚_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "澳大利亚 2-0 土耳其",
+      "review_file": "比赛/已完成比赛/小组赛/D组/2026-06-13_澳大利亚_2-0_土耳其_复盘.md",
+      "actual_score": "2-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/d-e-f-round1-postmortem.json",
+        "data/outputs/match_predictions/d-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/D组/2026-06-19_土耳其_vs_巴拉圭_预测.md",
+        "比赛/未开始比赛/小组赛/D组/2026-06-19_美国_vs_澳大利亚_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "土耳其 0-1 巴拉圭",
+      "review_file": "比赛/已完成比赛/小组赛/D组/2026-06-19_土耳其_0-1_巴拉圭_复盘.md",
+      "actual_score": "0-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/d-e-f-round1-postmortem.json",
+        "data/outputs/match_predictions/d-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/D组/2026-06-19_土耳其_vs_巴拉圭_预测.md"
+      ],
+      "player_state_update_status": "partial",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "美国 2-0 澳大利亚",
+      "review_file": "比赛/已完成比赛/小组赛/D组/2026-06-19_美国_2-0_澳大利亚_复盘.md",
+      "actual_score": "2-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/d-e-f-round1-postmortem.json",
+        "data/outputs/match_predictions/d-group-round2-predictions.json",
+        "比赛/未开始比赛/小组赛/D组/2026-06-19_美国_vs_澳大利亚_预测.md"
+      ],
+      "player_state_update_status": "updated",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "德国 7-1 库拉索",
+      "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-14_德国_7-1_库拉索_复盘.md",
+      "actual_score": "7-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/e-group-round2-postmortem.json",
+        "data/outputs/match_predictions/e-group-round2-predictions.json",
+        "data/outputs/match_predictions/e-group-round2-quant-revision-20260620.json",
+        "比赛/未开始比赛/小组赛/E组/2026-06-20_厄瓜多尔_vs_库拉索_预测.md",
+        "比赛/未开始比赛/小组赛/E组/2026-06-20_德国_vs_科特迪瓦_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "科特迪瓦 1-0 厄瓜多尔",
+      "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-14_科特迪瓦_1-0_厄瓜多尔_复盘.md",
+      "actual_score": "1-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/e-group-round2-postmortem.json",
+        "data/outputs/match_predictions/e-group-round2-predictions.json",
+        "data/outputs/match_predictions/e-group-round2-quant-revision-20260620.json",
+        "比赛/未开始比赛/小组赛/E组/2026-06-20_厄瓜多尔_vs_库拉索_预测.md",
+        "比赛/未开始比赛/小组赛/E组/2026-06-20_德国_vs_科特迪瓦_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "厄瓜多尔 0-0 库拉索",
+      "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-20_厄瓜多尔_0-0_库拉索_复盘.md",
+      "actual_score": "0-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/e-group-round2-postmortem.json",
+        "data/outputs/match_predictions/e-group-round2-predictions.json",
+        "data/outputs/match_predictions/e-group-round2-quant-revision-20260620.json",
+        "比赛/未开始比赛/小组赛/E组/2026-06-20_厄瓜多尔_vs_库拉索_预测.md"
+      ],
+      "player_state_update_status": "partial_source_limited",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "德国 2-1 科特迪瓦",
+      "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-20_德国_2-1_科特迪瓦_复盘.md",
+      "actual_score": "2-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/e-group-round2-postmortem.json",
+        "data/outputs/match_predictions/e-group-round2-predictions.json",
+        "data/outputs/match_predictions/e-group-round2-quant-revision-20260620.json",
+        "比赛/未开始比赛/小组赛/E组/2026-06-20_德国_vs_科特迪瓦_预测.md"
+      ],
+      "player_state_update_status": "partial",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "瑞典 5-1 突尼斯",
+      "review_file": "比赛/已完成比赛/小组赛/F组/2026-06-14_瑞典_5-1_突尼斯_复盘.md",
+      "actual_score": "5-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/f-group-round2-postmortem.json",
+        "data/outputs/match_predictions/f-group-round2-predictions.json",
+        "data/outputs/match_predictions/f-group-round2-quant-revision-20260620.json",
+        "比赛/未开始比赛/小组赛/F组/2026-06-20_突尼斯_vs_日本_预测.md",
+        "比赛/未开始比赛/小组赛/F组/2026-06-20_荷兰_vs_瑞典_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "荷兰 2-2 日本",
+      "review_file": "比赛/已完成比赛/小组赛/F组/2026-06-14_荷兰_2-2_日本_复盘.md",
+      "actual_score": "2-2",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/f-group-round2-postmortem.json",
+        "data/outputs/match_predictions/f-group-round2-predictions.json",
+        "data/outputs/match_predictions/f-group-round2-quant-revision-20260620.json",
+        "比赛/未开始比赛/小组赛/F组/2026-06-20_突尼斯_vs_日本_预测.md",
+        "比赛/未开始比赛/小组赛/F组/2026-06-20_荷兰_vs_瑞典_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "荷兰 5-1 瑞典",
+      "review_file": "比赛/已完成比赛/小组赛/F组/2026-06-20_荷兰_5-1_瑞典_复盘.md",
+      "actual_score": "5-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/f-group-round2-postmortem.json",
+        "data/outputs/match_predictions/f-group-round2-predictions.json",
+        "data/outputs/match_predictions/f-group-round2-quant-revision-20260620.json",
+        "比赛/未开始比赛/小组赛/F组/2026-06-20_荷兰_vs_瑞典_预测.md"
+      ],
+      "player_state_update_status": "updated",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "突尼斯 0-4 日本",
+      "review_file": "比赛/已完成比赛/小组赛/F组/2026-06-21_突尼斯_0-4_日本_复盘.md",
+      "actual_score": "0-4",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/f-group-round2-postmortem.json",
+        "data/outputs/match_predictions/f-group-round2-predictions.json",
+        "data/outputs/match_predictions/f-group-round2-quant-revision-20260620.json",
+        "比赛/未开始比赛/小组赛/F组/2026-06-20_突尼斯_vs_日本_预测.md"
+      ],
+      "player_state_update_status": "updated",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "伊朗 2-2 新西兰",
+      "review_file": "比赛/已完成比赛/小组赛/G组/2026-06-15_伊朗_2-2_新西兰_复盘.md",
+      "actual_score": "2-2",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/g-group-round2-postmortem-20260622.json",
+        "data/outputs/match_predictions/g-group-round2-predictions.json",
+        "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "data/outputs/match_predictions/g-h-round1-postmortem.json",
+        "比赛/未开始比赛/小组赛/G组/2026-06-15_伊朗_vs_新西兰_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-20_埃及_vs_新西兰_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-20_比利时_vs_伊朗_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-21_新西兰_vs_埃及_量化修订预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "比利时 1-1 埃及",
+      "review_file": "比赛/已完成比赛/小组赛/G组/2026-06-15_比利时_1-1_埃及_复盘.md",
+      "actual_score": "1-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/g-group-round2-postmortem-20260622.json",
+        "data/outputs/match_predictions/g-group-round2-predictions.json",
+        "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "data/outputs/match_predictions/g-h-round1-postmortem.json",
+        "比赛/未开始比赛/小组赛/G组/2026-06-15_比利时_vs_埃及_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-20_埃及_vs_新西兰_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-20_比利时_vs_伊朗_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-21_新西兰_vs_埃及_量化修订预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "新西兰 1-3 埃及",
+      "review_file": "比赛/已完成比赛/小组赛/G组/2026-06-21_新西兰_1-3_埃及_复盘.md",
+      "actual_score": "1-3",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/g-group-round2-postmortem-20260622.json",
+        "data/outputs/match_predictions/g-group-round2-predictions.json",
+        "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "data/outputs/match_predictions/g-h-round1-postmortem.json",
+        "比赛/未开始比赛/小组赛/G组/2026-06-15_伊朗_vs_新西兰_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-15_比利时_vs_埃及_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-20_埃及_vs_新西兰_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-21_新西兰_vs_埃及_量化修订预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "比利时 0-0 伊朗",
+      "review_file": "比赛/已完成比赛/小组赛/G组/2026-06-21_比利时_0-0_伊朗_复盘.md",
+      "actual_score": "0-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/g-group-round2-postmortem-20260622.json",
+        "data/outputs/match_predictions/g-group-round2-predictions.json",
+        "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "data/outputs/match_predictions/g-h-round1-postmortem.json",
+        "比赛/未开始比赛/小组赛/G组/2026-06-15_伊朗_vs_新西兰_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-15_比利时_vs_埃及_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-20_比利时_vs_伊朗_预测.md",
+        "比赛/未开始比赛/小组赛/G组/2026-06-21_比利时_vs_伊朗_量化修订预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "沙特 1-1 乌拉圭",
+      "review_file": "比赛/已完成比赛/小组赛/H组/2026-06-15_沙特_1-1_乌拉圭_复盘.md",
+      "actual_score": "1-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/h-group-round1-predictions.json",
+        "data/outputs/match_predictions/h-group-round2-postmortem-20260622.json",
+        "data/outputs/match_predictions/h-group-round2-predictions.json",
+        "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "比赛/未开始比赛/小组赛/H组/2026-06-15_沙特_vs_乌拉圭_预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_佛得角_vs_乌拉圭_量化修订预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_佛得角_vs_乌拉圭_预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_西班牙_vs_沙特_量化修订预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "西班牙 0-0 佛得角",
+      "review_file": "比赛/已完成比赛/小组赛/H组/2026-06-15_西班牙_0-0_佛得角_复盘.md",
+      "actual_score": "0-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/h-group-round1-predictions.json",
+        "data/outputs/match_predictions/h-group-round2-postmortem-20260622.json",
+        "data/outputs/match_predictions/h-group-round2-predictions.json",
+        "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "比赛/未开始比赛/小组赛/H组/2026-06-15_西班牙_vs_佛得角_预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_佛得角_vs_乌拉圭_量化修订预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_佛得角_vs_乌拉圭_预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_西班牙_vs_沙特_量化修订预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "乌拉圭 2-2 佛得角",
+      "review_file": "比赛/已完成比赛/小组赛/H组/2026-06-21_乌拉圭_2-2_佛得角_复盘.md",
+      "actual_score": "2-2",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/h-group-round1-predictions.json",
+        "data/outputs/match_predictions/h-group-round2-postmortem-20260622.json",
+        "data/outputs/match_predictions/h-group-round2-predictions.json",
+        "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "比赛/未开始比赛/小组赛/H组/2026-06-15_沙特_vs_乌拉圭_预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-15_西班牙_vs_佛得角_预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_佛得角_vs_乌拉圭_量化修订预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_佛得角_vs_乌拉圭_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "西班牙 4-0 沙特",
+      "review_file": "比赛/已完成比赛/小组赛/H组/2026-06-21_西班牙_4-0_沙特_复盘.md",
+      "actual_score": "4-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/h-group-round1-predictions.json",
+        "data/outputs/match_predictions/h-group-round2-postmortem-20260622.json",
+        "data/outputs/match_predictions/h-group-round2-predictions.json",
+        "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "比赛/未开始比赛/小组赛/H组/2026-06-15_沙特_vs_乌拉圭_预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-15_西班牙_vs_佛得角_预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_西班牙_vs_沙特_量化修订预测.md",
+        "比赛/未开始比赛/小组赛/H组/2026-06-21_西班牙_vs_沙特_预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "伊拉克 1-4 挪威",
+      "review_file": "比赛/已完成比赛/小组赛/I组/2026-06-16_伊拉克_1-4_挪威_复盘.md",
+      "actual_score": "1-4",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/i-group-round1-postmortem.json",
+        "data/outputs/match_predictions/i-group-round1-predictions.json",
+        "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "比赛/未开始比赛/小组赛/I组/2026-06-14_伊拉克_vs_挪威_预测.md",
+        "比赛/未开始比赛/小组赛/I组/2026-06-16_伊拉克_vs_挪威_详细预测.md",
+        "比赛/未开始比赛/小组赛/I组/2026-06-22_挪威_vs_塞内加尔_量化再预测.md",
+        "比赛/未开始比赛/小组赛/I组/2026-06-22_挪威_vs_塞内加尔_量化预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "法国 3-1 塞内加尔",
+      "review_file": "比赛/已完成比赛/小组赛/I组/2026-06-16_法国_3-1_塞内加尔_复盘.md",
+      "actual_score": "3-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/i-group-round1-postmortem.json",
+        "data/outputs/match_predictions/i-group-round1-predictions.json",
+        "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "比赛/未开始比赛/小组赛/I组/2026-06-16_法国_vs_塞内加尔_详细预测.md",
+        "比赛/未开始比赛/小组赛/I组/2026-06-16_法国_vs_塞内加尔_预测.md",
+        "比赛/未开始比赛/小组赛/I组/2026-06-22_挪威_vs_塞内加尔_量化再预测.md",
+        "比赛/未开始比赛/小组赛/I组/2026-06-22_挪威_vs_塞内加尔_量化预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "奥地利 3-1 约旦",
+      "review_file": "比赛/已完成比赛/小组赛/J组/2026-06-16_奥地利_3-1_约旦_复盘.md",
+      "actual_score": "3-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/j-group-round1-postmortem.json",
+        "data/outputs/match_predictions/j-group-round1-predictions.json",
+        "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "比赛/未开始比赛/小组赛/J组/2026-06-16_奥地利_vs_约旦_预测.md",
+        "比赛/未开始比赛/小组赛/J组/2026-06-22_约旦_vs_阿尔及利亚_量化预测.md",
+        "比赛/未开始比赛/小组赛/J组/2026-06-22_阿根廷_vs_奥地利_量化预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "阿根廷 3-0 阿尔及利亚",
+      "review_file": "比赛/已完成比赛/小组赛/J组/2026-06-16_阿根廷_3-0_阿尔及利亚_复盘.md",
+      "actual_score": "3-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/j-group-round1-postmortem.json",
+        "data/outputs/match_predictions/j-group-round1-predictions.json",
+        "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "比赛/未开始比赛/小组赛/J组/2026-06-16_阿根廷_vs_阿尔及利亚_预测.md",
+        "比赛/未开始比赛/小组赛/J组/2026-06-22_约旦_vs_阿尔及利亚_量化预测.md",
+        "比赛/未开始比赛/小组赛/J组/2026-06-22_阿根廷_vs_奥地利_量化预测.md"
+      ],
+      "player_state_update_status": "missing",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "乌兹别克斯坦 1-3 哥伦比亚",
+      "review_file": "比赛/已完成比赛/小组赛/K组/2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md",
+      "actual_score": "1-3",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/k-group-round1-predictions.json",
+        "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "比赛/未开始比赛/小组赛/K组/2026-06-17_乌兹别克斯坦_vs_哥伦比亚_预测.md",
+        "比赛/未开始比赛/小组赛/K组/2026-06-23_哥伦比亚_vs_刚果金_量化预测.md",
+        "比赛/未开始比赛/小组赛/K组/2026-06-23_葡萄牙_vs_乌兹别克斯坦_量化预测.md"
+      ],
+      "player_state_update_status": "partial",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "葡萄牙 1-1 刚果金",
+      "review_file": "比赛/已完成比赛/小组赛/K组/2026-06-17_葡萄牙_1-1_刚果金_复盘.md",
+      "actual_score": "1-1",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/k-group-round1-predictions.json",
+        "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "比赛/未开始比赛/小组赛/K组/2026-06-17_葡萄牙_vs_刚果金_预测.md",
+        "比赛/未开始比赛/小组赛/K组/2026-06-23_哥伦比亚_vs_刚果金_量化预测.md",
+        "比赛/未开始比赛/小组赛/K组/2026-06-23_葡萄牙_vs_乌兹别克斯坦_量化预测.md"
+      ],
+      "player_state_update_status": "updated",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "加纳 1-0 巴拿马",
+      "review_file": "比赛/已完成比赛/小组赛/L组/2026-06-17_加纳_1-0_巴拿马_复盘.md",
+      "actual_score": "1-0",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/l-group-round1-predictions.json",
+        "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+        "比赛/未开始比赛/小组赛/L组/2026-06-17_加纳_vs_巴拿马_预测.md",
+        "比赛/未开始比赛/小组赛/L组/2026-06-23_英格兰_vs_加纳_量化预测.md",
+        "比赛/未开始比赛/小组赛/L组/2026-06-24_巴拿马_vs_克罗地亚_量化预测.md"
+      ],
+      "player_state_update_status": "updated",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    },
+    {
+      "actual_result": "英格兰 4-2 克罗地亚",
+      "review_file": "比赛/已完成比赛/小组赛/L组/2026-06-17_英格兰_4-2_克罗地亚_复盘.md",
+      "actual_score": "4-2",
+      "prediction_file_candidates": [
+        "data/outputs/match_predictions/l-group-round1-predictions.json",
+        "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+        "比赛/未开始比赛/小组赛/L组/2026-06-17_英格兰_vs_克罗地亚_预测.md",
+        "比赛/未开始比赛/小组赛/L组/2026-06-23_英格兰_vs_加纳_量化预测.md",
+        "比赛/未开始比赛/小组赛/L组/2026-06-24_巴拿马_vs_克罗地亚_量化预测.md"
+      ],
+      "player_state_update_status": "updated",
+      "metric_eligibility_note": "Use structured candidate quality table to select latest pre-match version; if only Markdown/prose candidate exists, WDL/top3 only when explicit fields can be extracted."
+    }
+  ],
+  "metric_eligibility": {
+    "brier_logloss": {
+      "rule": "Requires match-level 1X2 probabilities in the selected latest pre-match structured file.",
+      "eligible_prediction_files": [
+        "data/outputs/match_predictions/a-group-round2-predictions.json",
+        "data/outputs/match_predictions/b-group-round2-predictions.json",
+        "data/outputs/match_predictions/c-group-round2-predictions.json",
+        "data/outputs/match_predictions/d-group-round2-predictions.json",
+        "data/outputs/match_predictions/e-group-round2-predictions.json",
+        "data/outputs/match_predictions/f-group-round2-predictions.json",
+        "data/outputs/match_predictions/g-group-round2-predictions.json",
+        "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "data/outputs/match_predictions/l-group-round1-predictions.json",
+        "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json"
+      ],
+      "eligible_match_rows": [
+        {
+          "prediction_file": "data/outputs/match_predictions/a-group-round2-predictions.json",
+          "match": "Czechia vs South Africa",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/a-group-round2-predictions.json",
+          "match": "Mexico vs South Korea",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/b-group-round2-predictions.json",
+          "match": "Switzerland vs Bosnia and Herzegovina",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/b-group-round2-predictions.json",
+          "match": "Canada vs Qatar",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/c-group-round2-predictions.json",
+          "match": "Brazil vs Haiti",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/c-group-round2-predictions.json",
+          "match": "Scotland vs Morocco",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/d-group-round2-predictions.json",
+          "match": "United States vs Australia",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/d-group-round2-predictions.json",
+          "match": "Turkiye vs Paraguay",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/e-group-round2-predictions.json",
+          "match": "Germany vs Cote d'Ivoire",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/e-group-round2-predictions.json",
+          "match": "Ecuador vs Curacao",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/f-group-round2-predictions.json",
+          "match": "Netherlands vs Sweden",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/f-group-round2-predictions.json",
+          "match": "Tunisia vs Japan",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/g-group-round2-predictions.json",
+          "match": "Belgium vs Iran",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/g-group-round2-predictions.json",
+          "match": "Egypt vs New Zealand",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+          "match": "Belgium vs Iran",
+          "match_id": "2026-06-21_belgium_vs_iran"
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+          "match": "New Zealand vs Egypt",
+          "match_id": "2026-06-21_new_zealand_vs_egypt"
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+          "match": "Spain vs Saudi Arabia",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+          "match": "Cape Verde vs Uruguay",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+          "match": "France vs Iraq",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+          "match": "Norway vs Senegal",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+          "match": "France vs Iraq",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+          "match": "Norway vs Senegal",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+          "match": "Argentina vs Austria",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+          "match": "Jordan vs Algeria",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+          "match": "Portugal vs Uzbekistan",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+          "match": "Colombia vs DR Congo",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/l-group-round1-predictions.json",
+          "match": "England vs Croatia",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/l-group-round1-predictions.json",
+          "match": "Ghana vs Panama",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+          "match": "England vs Ghana",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+          "match": "Panama vs Croatia",
+          "match_id": null
+        }
+      ],
+      "not_eligible_reason": "Legacy prose/Markdown-only predictions without explicit 1X2 probabilities cannot support Brier/log-loss."
+    },
+    "wdl_top3_only": {
+      "rule": "Use when there is explicit WDL direction and/or top score candidates but no full probability vector.",
+      "top3_eligible_prediction_files": [
+        "data/outputs/match_predictions/e-group-round2-quant-revision-20260620.json",
+        "data/outputs/match_predictions/f-group-round2-quant-revision-20260620.json",
+        "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+        "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+        "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+        "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+        "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+        "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+        "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json"
+      ],
+      "markdown_candidates_require_manual_extraction": []
+    },
+    "full_score_distribution": {
+      "rule": "Requires xG, Poisson 0-0 through 5-5/tail, 1X2 and top5 scorelines.",
+      "eligible_match_rows": [
+        {
+          "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+          "match": "Belgium vs Iran",
+          "match_id": "2026-06-21_belgium_vs_iran"
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+          "match": "New Zealand vs Egypt",
+          "match_id": "2026-06-21_new_zealand_vs_egypt"
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+          "match": "Spain vs Saudi Arabia",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+          "match": "Cape Verde vs Uruguay",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+          "match": "France vs Iraq",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+          "match": "Norway vs Senegal",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+          "match": "France vs Iraq",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+          "match": "Norway vs Senegal",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+          "match": "Argentina vs Austria",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+          "match": "Jordan vs Algeria",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+          "match": "Portugal vs Uzbekistan",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+          "match": "Colombia vs DR Congo",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+          "match": "England vs Ghana",
+          "match_id": null
+        },
+        {
+          "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260622.json",
+          "match": "Panama vs Croatia",
+          "match_id": null
+        }
+      ]
+    }
+  },
+  "data_gaps_for_model_thread": [
+    "Normalize every future prediction to match-level xG, probabilities_1x2, top_scorelines>=5, Poisson matrix and tail fields.",
+    "Backfill older prose predictions only for WDL/top3 if explicit score candidates are present; do not fabricate probabilities for Brier/log-loss.",
+    "Postmatch reviews with player_state_update_status not updated should remain partial in player-state-sensitive model audits.",
+    "Use latest pre-kickoff revision when both prose and quant files exist; keep superseded drafts out of scoring.",
+    "Some project Markdown files display historical encoding corruption in terminal output, so metric extraction should prefer parseable JSON when available."
+  ],
+  "source_log": [
+    {
+      "source": "prediction-hit-rate-backtest-20260622.json",
+      "url": "data/outputs/model_backtests/prediction-hit-rate-backtest-20260622.json",
+      "captured_at": "2026-06-23T03:05:00+08:00",
+      "supports_fields": [
+        "baseline sample policy",
+        "hit-rate metrics",
+        "known data-quality limits"
+      ]
+    },
+    {
+      "source": "model-optimization-execution-plan-20260622.json",
+      "url": "data/outputs/model_backtests/model-optimization-execution-plan-20260622.json",
+      "captured_at": "2026-06-23T03:05:00+08:00",
+      "supports_fields": [
+        "expected audit outputs",
+        "future reporting requirements"
+      ]
+    },
+    {
+      "source": "local prediction/review file scan",
+      "url": "E:/worldcup/data/outputs/match_predictions; E:/worldcup/比赛",
+      "captured_at": "2026-06-23T03:05:00+08:00",
+      "supports_fields": [
+        "prediction inventory",
+        "review inventory",
+        "player_state_update_status scan"
+      ]
+    }
+  ]
+}

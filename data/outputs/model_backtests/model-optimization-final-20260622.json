@@ -1,0 +1,143 @@
+{
+  "phase": "model_optimization_final_execution_package",
+  "status": "implemented_revise_shadow_mode",
+  "created_at": "2026-06-23T03:50:00+08:00",
+  "updated_at": "2026-06-23T03:50:00+08:00",
+  "owner": "main-thread",
+  "scope": "Integrate data audit, tactical volatility factors, model parameter update, red-team review, betting gates, and prediction contract v2.",
+  "baseline_backtest": {
+    "matches_count": 32,
+    "wdl_accuracy": 0.469,
+    "top3_score_accuracy_all_sample": 0.219,
+    "top3_score_accuracy_when_top3_available": 0.389,
+    "primary_score_accuracy": 0.125,
+    "main_error_codes": [
+      "draw_tail_underweighted",
+      "event_volatility_underweighted",
+      "favorite_ceiling_tail_underweighted",
+      "single_score_vs_1x2_confusion"
+    ]
+  },
+  "thread_outputs": {
+    "data_quality_audit": {
+      "status": "complete",
+      "json": "data/packets/model_optimization/backtest-data-quality-audit-20260622.json",
+      "markdown": "汇总/预测回测数据质量审计_20260622.md",
+      "use": "Separate quant-complete samples from legacy prose samples; decide which matches are eligible for Brier, log-loss, top3, and WDL-only review."
+    },
+    "tactical_volatility": {
+      "status": "complete_partial_backtest_basis",
+      "json": "data/packets/model_optimization/tactical-volatility-factors-20260622.json",
+      "markdown": "汇总/战术波动因子优化_20260622.md",
+      "core_factors": {
+        "draw_floor_tactical_triggers": {
+          "source_magnitude_0_1": 0.35,
+          "model_use": "Increase draw-floor and low-event score quality only when tactical triggers co-occur."
+        },
+        "event_volatility_triggers": {
+          "source_magnitude_0_1": 0.45,
+          "model_use": "Adjust score-matrix tail shape for red cards, early goals, keeper extremes, set pieces, and collapse risk."
+        },
+        "favorite_ceiling_tail_triggers": {
+          "source_magnitude_0_1": 0.40,
+          "model_use": "Expand strong-favorite high-score tail only under scenario gates."
+        }
+      }
+    },
+    "model_parameter_update": {
+      "status": "completed_pending_red_team",
+      "json": "data/outputs/model_backtests/model-parameter-update-20260622.json",
+      "markdown": "汇总/模型参数优化方案_20260622.md",
+      "caps": {
+        "max_single_parameter_probability_shift": 0.06,
+        "max_combined_pre_red_team_probability_shift": 0.10
+      },
+      "deployment_mode": "shadow_mode_first"
+    },
+    "red_team_review": {
+      "status": "second_review_complete",
+      "verdict": "revise",
+      "json": "data/reviews/red_team/model-optimization-red-team-20260622.json",
+      "markdown": "data/reviews/red_team/model-optimization-red-team-20260622.md",
+      "pass_requirements": [
+        "Run v2 parameters in shadow mode on the next quant-complete matches.",
+        "Log per-match de-duplication between event volatility, tactics, player_state, injury, and market factors.",
+        "Keep separate metrics for all-sample, top3-available, and quant-complete subsets.",
+        "Prove market-gate compliance before market calibration changes final probabilities."
+      ]
+    },
+    "betting_gates": {
+      "status": "hold",
+      "json": "data/outputs/betting_risk/model-optimization-betting-gates-20260622.json",
+      "markdown": "赔率与投注/模型优化后竞彩风险闸门_20260622.md",
+      "allowed_states": [
+        "hold",
+        "discussion_only",
+        "risk_observation"
+      ]
+    }
+  },
+  "final_execution_rules": {
+    "prediction_contract": "data/templates/prediction-contract-v2.json",
+    "postmatch_checklist": "data/templates/postmatch-backtest-checklist-v2.md",
+    "future_match_prediction_must_include": [
+      "factor_inputs",
+      "factor_weights",
+      "team_strength_score",
+      "attack_score",
+      "defense_score",
+      "player_state_adjustment",
+      "injury_adjustment",
+      "tactical_matchup_adjustment",
+      "schedule_environment_adjustment",
+      "market_adjustment",
+      "expected_goals",
+      "poisson_score_matrix_0_0_to_5_5",
+      "tail_probability",
+      "probabilities_1x2",
+      "totals_probabilities",
+      "top_scorelines_top5",
+      "odds_implied_probability",
+      "model_market_delta",
+      "red_team_status",
+      "final_probabilities",
+      "postmatch_error",
+      "parameter_updates"
+    ],
+    "future_postmatch_must_update": [
+      "actual_result",
+      "wdl_hit",
+      "top3_score_hit",
+      "top5_score_hit",
+      "brier_score_when_available",
+      "log_loss_when_available",
+      "xg_error",
+      "total_goal_error",
+      "player_state_updates",
+      "member_table_internal_match_rating_1_5",
+      "parameter_update_notes"
+    ],
+    "model_adjustments": {
+      "draw_floor_dynamic": "Enabled only with triggers and caps; primarily reallocates low-score draw mass.",
+      "event_volatility_layer": "Enabled as score-distribution tail layer; not a direct xG boost.",
+      "favorite_ceiling_tail": "Enabled only under scenario gates; expands high-score tail without automatically raising favorite 1X2.",
+      "market_calibration_split": "Direction signal and tail signal are separated; odds missing or same-source gaps block market adjustment."
+    },
+    "betting_boundary": {
+      "default_status": "hold",
+      "can_leave_hold_only_if": [
+        "T-75m official lineups are captured.",
+        "Latest injuries, suspensions, and minutes risks are captured.",
+        "Official China sports lottery odds are captured.",
+        "Same-source 1X2, handicap, and totals snapshot is captured with time.",
+        "Red-team verdict is pass."
+      ]
+    }
+  },
+  "validation": {
+    "json_parse_checked": true,
+    "markdown_encoding_checked": true,
+    "residue_scan_checked": true,
+    "known_remaining_limit": "Red-team verdict is revise, so this package is implemented as shadow-mode optimization rather than pass-level permanent default."
+  }
+}

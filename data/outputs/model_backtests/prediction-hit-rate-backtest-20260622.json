@@ -1,0 +1,109 @@
+{
+  "phase": "model_backtest_summary",
+  "status": "baseline_for_optimization",
+  "created_at": "2026-06-23T02:50:00+08:00",
+  "owner": "main-thread",
+  "scope": "All completed matches with both pre-match prediction files and final postmatch result files available locally as of 2026-06-22.",
+  "sample_policy": {
+    "included": "Matches with a local pre-match prediction and a local final-score postmatch review.",
+    "excluded": [
+      "Completed matches without a matching pre-match prediction file.",
+      "Unplayed or not-yet-reviewed predictions.",
+      "Duplicate earlier drafts when a later pre-match revision exists."
+    ],
+    "prediction_version_policy": "Use the latest available pre-match version for the same fixture; when a quant revision exists before kickoff, it supersedes the older prose prediction."
+  },
+  "metrics": {
+    "matches_count": 32,
+    "wdl_hits": 15,
+    "wdl_accuracy": 0.469,
+    "top3_score_hits_all_sample": 7,
+    "top3_score_accuracy_all_sample": 0.219,
+    "top3_score_hits_when_top3_available": 7,
+    "top3_score_available_matches": 18,
+    "top3_score_accuracy_when_top3_available": 0.389,
+    "primary_score_hits": 4,
+    "primary_score_accuracy": 0.125
+  },
+  "hit_lists": {
+    "wdl_hit_matches": [
+      "Mexico 2-0 South Africa",
+      "Canada 1-1 Bosnia and Herzegovina",
+      "Iraq 1-4 Norway",
+      "France 3-1 Senegal",
+      "Austria 3-1 Jordan",
+      "Argentina 3-0 Algeria",
+      "Canada 6-0 Qatar",
+      "Brazil 3-0 Haiti",
+      "Scotland 0-1 Morocco",
+      "USA 2-0 Australia",
+      "Germany 2-1 Ivory Coast",
+      "Netherlands 5-1 Sweden",
+      "Tunisia 0-4 Japan",
+      "New Zealand 1-3 Egypt",
+      "Spain 4-0 Saudi Arabia"
+    ],
+    "top3_score_hit_matches": [
+      "Mexico 2-0 South Africa",
+      "South Korea 2-1 Czechia",
+      "Canada 1-1 Bosnia and Herzegovina",
+      "Czechia 1-1 South Africa",
+      "Brazil 3-0 Haiti",
+      "Scotland 0-1 Morocco",
+      "Germany 2-1 Ivory Coast"
+    ]
+  },
+  "diagnosis": {
+    "major_error_types": [
+      {
+        "code": "draw_tail_underweighted",
+        "description": "Model missed several low-event or strategically acceptable draws, especially early group-stage matches.",
+        "examples": [
+          "Belgium 1-1 Egypt",
+          "Iran 2-2 New Zealand",
+          "Spain 0-0 Cape Verde",
+          "Saudi Arabia 1-1 Uruguay",
+          "Belgium 0-0 Iran"
+        ]
+      },
+      {
+        "code": "event_volatility_underweighted",
+        "description": "Red cards, early goals, goalkeeper overperformance and late collapse were not strong enough as tail multipliers.",
+        "examples": [
+          "Canada 6-0 Qatar",
+          "Switzerland 4-1 Bosnia and Herzegovina",
+          "Netherlands 5-1 Sweden",
+          "Tunisia 0-4 Japan"
+        ]
+      },
+      {
+        "code": "favorite_ceiling_tail_underweighted",
+        "description": "Strong favorites were directionally correct but large-win tails were too thin after an early breakthrough.",
+        "examples": [
+          "Spain 4-0 Saudi Arabia",
+          "Netherlands 5-1 Sweden",
+          "Canada 6-0 Qatar"
+        ]
+      },
+      {
+        "code": "single_score_vs_1x2_confusion",
+        "description": "The highest single scoreline can be a draw while aggregate 1X2 probability still favors one side; future reports must separate these concepts."
+      }
+    ],
+    "data_quality_limits": [
+      "Older predictions often lack a formal top5 scoreline list.",
+      "Some early predictions were prose-first and not full quant-chain outputs.",
+      "Several postmatch files have partial player-state updates because full official minutes and same-source external ratings were unavailable."
+    ]
+  },
+  "optimization_targets": {
+    "target_wdl_accuracy_next_20_matches": 0.58,
+    "target_top3_score_accuracy_when_top3_available": 0.45,
+    "required_reporting_standard": "Every future prediction must include xG, 0-0 through 5-5 Poisson matrix, tail probability, top5 scorelines, 1X2, totals, market delta, red-team status and postmatch error fields."
+  },
+  "handoff_files": {
+    "human_summary": "汇总/预测命中率回测_20260622.md",
+    "execution_plan": "data/outputs/model_backtests/model-optimization-execution-plan-20260622.json",
+    "execution_summary": "汇总/模型优化执行方案_20260622.md"
+  }
+}

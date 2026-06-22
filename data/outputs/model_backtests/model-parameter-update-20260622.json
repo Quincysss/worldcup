@@ -1,0 +1,365 @@
+{
+  "phase": "model_parameter_update",
+  "status": "completed_pending_red_team",
+  "created_at": "2026-06-23T03:05:00+08:00",
+  "updated_at": "2026-06-23T03:38:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "Parameter optimization proposal and prediction contract v2 after 32-match backtest baseline; no betting advice.",
+  "input_readiness": {
+    "baseline_backtest": "available",
+    "execution_plan": "available",
+    "execution_summary": "available",
+    "tactical_volatility_packet": "available_complete_partial_backtest_basis",
+    "tactical_volatility_packet_status": "complete_partial_backtest_basis",
+    "reason": "data/packets/model_optimization/tactical-volatility-factors-20260622.json has been read and its draw_floor/event_volatility/favorite_ceiling magnitudes are incorporated as tactical-strength inputs while probability shifts remain capped conservatively."
+  },
+  "baseline_metrics": {
+    "matches_count": 32,
+    "wdl_hits": 15,
+    "wdl_accuracy": 0.469,
+    "top3_score_hits_all_sample": 7,
+    "top3_score_accuracy_all_sample": 0.219,
+    "top3_score_hits_when_top3_available": 7,
+    "top3_score_available_matches": 18,
+    "top3_score_accuracy_when_top3_available": 0.389,
+    "primary_score_hits": 4,
+    "primary_score_accuracy": 0.125
+  },
+  "sample_size_policy": {
+    "stance": "conservative",
+    "reason": "Only 32 completed predictions are in the current baseline, with mixed legacy prose and quant-chain formats.",
+    "max_single_parameter_probability_shift": 0.06,
+    "max_combined_pre_red_team_probability_shift": 0.10,
+    "apply_as_distribution_shape_first": true,
+    "notes": [
+      "Prefer reallocating scoreline/tail mass before changing 1X2 headline probabilities.",
+      "Do not learn team-specific permanent parameters from one match.",
+      "Require red-team review before making these defaults permanent."
+    ]
+  },
+  "parameter_updates": {
+    "draw_floor_dynamic": {
+      "status": "proposal_v2",
+      "purpose": "Prevent low-event strategic draws from being compressed by favorite reputation or market heat.",
+      "trigger_conditions": {
+        "minimum_required": 3,
+        "conditions": [
+          "group_stage_round_1_or_2",
+          "both_teams_can_accept_one_point_or_underdog_priority_is_survival",
+          "combined_final_xg_between_1_6_and_2_7",
+          "favorite_win_probability_before_floor_between_0_42_and_0_64",
+          "low_block_or_mid_block_evidence_for_at_least_one_team",
+          "goalkeeper_form_or_box_protection_positive_signal",
+          "market_favorite_heat_exceeds_model_by_0_08_or_more",
+          "red_team_flags_favorite_conversion_or_lineup_uncertainty"
+        ]
+      },
+      "probability_floor_and_adjustment": {
+        "tactical_factor_alignment": {
+          "source_factor": "draw_floor_tactical_triggers",
+          "source_magnitude_0_1": 0.35,
+          "source_total_cap_0_1": 0.45,
+          "model_probability_shift_cap": 0.06,
+          "integration_note": "The 0.35 tactical magnitude permits normal/strong low-event draw-floor activation, but final probability movement remains capped at +0.06 before red-team review."
+        },
+        "draw_probability_floor": {
+          "normal": 0.245,
+          "strong_low_event": 0.275,
+          "extreme_zero_inflation": 0.300
+        },
+        "draw_probability_delta_range": [0.02, 0.06],
+        "score_matrix_method": [
+          "Reallocate mass from favorite narrow wins and non-favorite low-probability 3+ tails into 0-0, 1-1 and 2-2.",
+          "Default split of added draw mass: 0-0 30%, 1-1 55%, 2-2 15%.",
+          "If combined xG is above 2.6, reduce 0-0 split to 15% and raise 2-2 split to 25%."
+        ],
+        "normalization": "After reallocation, renormalize 1X2 and totals from the adjusted score matrix."
+      },
+      "counterexamples_and_no_apply": [
+        "Clear favorite xG >= 2.0 and opponent xG <= 0.65 with strong lineup continuity.",
+        "Known red-card, suspension, or defensive injury against the underdog before kickoff.",
+        "Favorite has high set-piece mismatch plus confirmed aerial starters.",
+        "Match state or standings make a draw materially poor for both teams.",
+        "Market is favorite-heavy but local tactical model also gives favorite win probability >= 0.70."
+      ],
+      "overfit_guard": "Use as a floor only when multiple triggers co-occur; never add draw mass because prior rounds had many draws in isolation.",
+      "red_team_review_note": "Tactical draw-floor evidence is now incorporated, but red team must still check whether the match actually permits a draw tactically and standings-wise.",
+      "primary_backtest_examples": ["Belgium 0-0 Iran", "Spain 0-0 Cape Verde", "Saudi Arabia 1-1 Uruguay", "Belgium 1-1 Egypt"]
+    },
+    "event_volatility_layer": {
+      "status": "proposal_v2_tactical_factors_absorbed_pending_red_team",
+      "purpose": "Separate event-driven variance from linear xG adjustments.",
+      "trigger_conditions": {
+        "pre_match_risk_triggers": [
+          "discipline_risk_high_or_team_has_recent_red_card_pattern",
+          "aggressive_press_vs_weak_buildout",
+          "goalkeeper_mismatch_or_goalkeeper_form_extreme",
+          "set_piece_edge_large",
+          "late_collapse_or_fatigue_risk_from_recent_match",
+          "must_win_chase_state_likely_for_one_team"
+        ],
+        "in_match_backtest_tags": [
+          "red_card",
+          "early_goal_before_20",
+          "goalkeeper_overperformance",
+          "set_piece_streak",
+          "injury_substitution_key_spine",
+          "late_collapse_after_70"
+        ]
+      },
+      "score_matrix_tail_adjustment": {
+        "tactical_factor_alignment": {
+          "source_factor": "event_volatility_triggers",
+          "source_magnitude_0_1": 0.45,
+          "source_total_cap_0_1": 0.60,
+          "model_single_parameter_shift_cap": 0.06,
+          "integration_note": "The 0.45 tactical magnitude maps to medium/high variance handling, but the model tail mass shift remains capped at 0.055 normally and 0.06 before red-team approval."
+        },
+        "event_volatility_index": "0.00 to 1.00",
+        "low": {"range": [0.00, 0.25], "tail_mass_shift": 0.00},
+        "medium": {"range": [0.25, 0.55], "tail_mass_shift": [0.015, 0.030]},
+        "high": {"range": [0.55, 0.80], "tail_mass_shift": [0.030, 0.055]},
+        "extreme": {"range": [0.80, 1.00], "tail_mass_shift": [0.055, 0.060]},
+        "redistribution_rules": [
+          "Move tail_mass_shift from central scores around each team's Poisson mode into 3+ total-goal outcomes.",
+          "If volatility is discipline/collapse driven, favor one-sided 3-0, 4-0, 4-1, 5-1 style tails for the advantaged team.",
+          "If volatility is both-teams-open driven, favor 2-2, 3-2, 2-3, 3-3 tails.",
+          "If goalkeeper_overperformance is tagged, move mass toward 0 goals for the attacking favorite and raise 0-0/0-1/1-0 as appropriate."
+        ],
+        "normalization": "All adjusted score probabilities must sum to 1 including tail_probability."
+      },
+      "counterexamples_and_no_apply": [
+        "Stable low-block match with low card risk and no pressing mismatch.",
+        "High technical favorite likely to control tempo after lead rather than keep attacking.",
+        "Volatility trigger already fully represented by an injury or lineup xG adjustment."
+      ],
+      "overfit_guard": "Event layer changes distribution shape, not team quality. Do not permanently raise team attack/defense ratings from one volatile result.",
+      "red_team_review_note": "Tactical volatility factors are incorporated, but red team must audit duplicate counting with red cards, goalkeeper form and set-piece factors already in player_state or matchup tactics.",
+      "primary_backtest_examples": ["Canada 6-0 Qatar", "Switzerland 4-1 Bosnia and Herzegovina", "Netherlands 5-1 Sweden", "Tunisia 0-4 Japan", "Uruguay 2-2 Cape Verde"]
+    },
+    "favorite_ceiling_tail": {
+      "status": "proposal_v2",
+      "purpose": "Raise large-win exact-score tails when a strong favorite has credible breakthrough and accumulation paths.",
+      "trigger_conditions": {
+        "minimum_required": 3,
+        "conditions": [
+          "favorite_pre_adjusted_win_probability >= 0.62",
+          "favorite_xg >= 1.85",
+          "opponent_xg <= 0.85",
+          "favorite_has_substitution_or_late_attack_depth_advantage",
+          "opponent_low_block_has_chase_mode_weakness",
+          "market_direction_signal_supports_favorite",
+          "tactical_mismatch_in_wide_channel_set_piece_or_pressing",
+          "opponent_discipline_or_fatigue_risk"
+        ]
+      },
+      "tail_expansion_method": {
+        "tactical_factor_alignment": {
+          "source_factor": "favorite_ceiling_tail_triggers",
+          "source_magnitude_0_1": 0.40,
+          "source_total_cap_0_1": 0.55,
+          "model_probability_shift_cap": 0.06,
+          "integration_note": "The 0.40 tactical magnitude supports ceiling-tail activation when multiple favorite triggers fire; exact-score tail expansion is still capped at 0.06."
+        },
+        "default_mass_shift": [0.02, 0.05],
+        "maximum_mass_shift": 0.06,
+        "source_of_mass": [
+          "favorite 1-goal narrow wins",
+          "draw scores with low tactical support",
+          "opponent low-probability 2+ goal tails when opponent attack evidence is weak"
+        ],
+        "target_scores": [
+          "3-0",
+          "4-0",
+          "4-1",
+          "5-0",
+          "5-1"
+        ],
+        "tail_probability_handling": "If 5+ score tail is material, keep explicit tail_probability and add a note that exact-score top5 may not capture all blowout mass."
+      },
+      "counterexamples_and_no_apply": [
+        "Favorite win probability is high mostly from market heat but local xG remains below 1.65.",
+        "Favorite has known rotation/minutes restriction for main finishers.",
+        "Opponent has strong goalkeeper and compact low-block evidence with low chase exposure.",
+        "Draw is strategically valuable for favorite and coach has history of slowing games after lead."
+      ],
+      "overfit_guard": "Apply only to tail, not as a blanket favorite win bump. Review red-team challenge before publishing high-ceiling language.",
+      "red_team_review_note": "Tactical favorite-ceiling factors are incorporated, but red team must confirm T-75m attacking lineup, bench depth and that market heat is not being used as tactical evidence.",
+      "primary_backtest_examples": ["Spain 4-0 Saudi Arabia", "Netherlands 5-1 Sweden", "Canada 6-0 Qatar"]
+    },
+    "market_calibration_split": {
+      "status": "proposal_v2",
+      "purpose": "Use markets as signals without letting favorite heat erase local draw or upset tails.",
+      "inputs_required": [
+        "market_source",
+        "captured_at",
+        "odds_1x2",
+        "odds_totals",
+        "odds_handicap_if_available",
+        "overround",
+        "normalized_no_vig_probabilities"
+      ],
+      "split_components": {
+        "market_direction_signal": {
+          "meaning": "How strongly market supports 1X2 direction after overround removal.",
+          "default_weight": 0.04,
+          "max_weight_public_snippet": 0.06,
+          "max_weight_official_same_source_snapshot": 0.10,
+          "use_when": "Market, local xG and tactical mismatch point the same way."
+        },
+        "market_tail_signal": {
+          "meaning": "What market totals/handicap imply about blowout, low-event, or draw tails.",
+          "default_weight": 0.02,
+          "max_weight_public_snippet": 0.04,
+          "max_weight_official_same_source_snapshot": 0.07,
+          "use_when": "Totals and handicap lines are available from same source and timestamp."
+        }
+      },
+      "conflict_rules": [
+        "If market favorite probability exceeds model by >=0.12 but model has conversion-risk or low-block flags, do not raise favorite direction; record favorite_heat_conflict.",
+        "If market and model agree on favorite and total goals, allow small favorite_ceiling_tail adjustment.",
+        "If only moneyline is available, do not infer totals or blowout tail.",
+        "If source is public article snippet rather than official/same-source snapshot, cap combined market effect at 0.06."
+      ],
+      "primary_backtest_examples": {
+        "market_helped": ["New Zealand 1-3 Egypt", "Spain 4-0 Saudi Arabia"],
+        "market_misled_or_overheated": ["Belgium 0-0 Iran", "Uruguay 2-2 Cape Verde"]
+      }
+    }
+  },
+  "prediction_contract_v2": {
+    "status": "required_for_all_future_match_predictions",
+    "output_schema_minimum": [
+      "match_metadata",
+      "input_readiness",
+      "factor_inputs",
+      "factor_weights",
+      "team_strength_score",
+      "attack_score",
+      "defense_score",
+      "player_state_adjustment",
+      "injury_adjustment",
+      "tactical_matchup_adjustment",
+      "schedule_environment_adjustment",
+      "market_adjustment",
+      "expected_goals",
+      "poisson_score_matrix_0_0_to_5_5",
+      "tail_probability",
+      "probabilities_1x2",
+      "totals_probabilities",
+      "top_scorelines_top5",
+      "odds_implied_probability",
+      "model_market_delta",
+      "red_team_status",
+      "final_probabilities",
+      "quality_notes",
+      "sensitivity",
+      "postmatch_error"
+    ],
+    "reporting_rules": [
+      "Separate highest single scoreline from aggregate 1X2 direction.",
+      "Always list top5 scorelines; top3 may be derived from top5 for backtest.",
+      "Write market source, capture time and overround when market is used.",
+      "If official or same-source odds are missing, set odds_implied_probability and model_market_delta to null with not_available_yet note.",
+      "If T-75m lineups are missing, mark confidence and betting/risk output as discussion_only_hold.",
+      "Do not output betting recommendations in model files."
+    ],
+    "postmatch_error_fields": [
+      "actual_score",
+      "actual_1x2",
+      "wdl_hit",
+      "primary_score_hit",
+      "top3_score_hit",
+      "top5_score_hit",
+      "brier_1x2",
+      "log_loss_1x2",
+      "xg_error_by_team",
+      "total_goal_error",
+      "goal_difference_error",
+      "totals_direction_result",
+      "market_calibration_result",
+      "parameter_update_tags",
+      "player_state_backtest_link"
+    ],
+    "validation_rules": [
+      "1X2 probabilities sum within [0.995, 1.005].",
+      "Poisson 0-0 to 5-5 plus tail sums within [0.995, 1.005].",
+      "Top5 probabilities are sorted descending.",
+      "No placeholder or unfinished drafting residue before final report."
+    ]
+  },
+  "backtest_metrics_v2": {
+    "required_metrics": {
+      "wdl": {
+        "fields": ["actual_1x2", "model_1x2_first_direction", "wdl_hit"],
+        "aggregate": ["accuracy", "calibration_by_probability_bucket"]
+      },
+      "top3": {
+        "fields": ["top3_scorelines", "actual_score", "top3_score_hit"],
+        "aggregate": ["top3_accuracy_all_matches", "top3_accuracy_when_available"]
+      },
+      "brier": {
+        "definition": "sum over 1X2 classes of (predicted_probability - actual_one_hot)^2",
+        "aggregate": ["mean_brier", "by_group", "by_probability_bucket"]
+      },
+      "log_loss": {
+        "definition": "-ln(probability_assigned_to_actual_1x2)",
+        "clip_probability_min": 0.01,
+        "aggregate": ["mean_log_loss", "outlier_matches"]
+      },
+      "xg_error": {
+        "fields": ["team_a_xg_minus_actual_goals", "team_b_xg_minus_actual_goals", "absolute_xg_error"],
+        "aggregate": ["mean_absolute_xg_error", "bias_by_favorite_underdog"]
+      },
+      "total_goal_error": {
+        "fields": ["predicted_total_xg", "actual_total_goals", "absolute_total_goal_error"],
+        "aggregate": ["mean_total_goal_error", "over_under_direction_accuracy"]
+      }
+    },
+    "optional_metrics": [
+      "goal_difference_error",
+      "market_delta_error",
+      "tail_event_hit_rate",
+      "draw_floor_trigger_precision",
+      "favorite_ceiling_tail_trigger_precision"
+    ]
+  },
+  "implementation_sequence": [
+    {
+      "step": 1,
+      "name": "schema_contract_enforcement",
+      "action": "Apply prediction_contract_v2 to every new prediction before red-team review.",
+      "blocking": true
+    },
+    {
+      "step": 2,
+      "name": "conservative_parameter_shadow_mode",
+      "action": "For the next 12 to 20 matches, store both base probabilities and v2-adjusted probabilities for backtest comparison.",
+      "blocking": false
+    },
+    {
+      "step": 3,
+      "name": "red_team_review",
+      "action": "Send this parameter proposal to red-team for overfitting, double-counting and market-misuse review.",
+      "blocking": true
+    },
+    {
+      "step": 4,
+      "name": "postmatch_backtest_update",
+      "action": "After each completed match, write WDL/top3/Brier/log-loss/xG/total-goal error and parameter trigger outcomes.",
+      "blocking": true
+    }
+  ],
+  "quality_notes": [
+    "This proposal is intentionally conservative because the baseline has only 32 matches and mixed prediction formats.",
+    "Tactical volatility factors are incorporated from the complete_partial_backtest_basis packet, but red-team revise/pass review is still required before permanent default use.",
+    "Conservative caps remain unchanged: max single parameter probability shift <= 0.06 and max combined pre-red-team probability shift <= 0.10.",
+    "No betting advice is included; market treatment is calibration-only."
+  ],
+  "source_log": [
+    "data/outputs/model_backtests/prediction-hit-rate-backtest-20260622.json",
+    "data/outputs/model_backtests/model-optimization-execution-plan-20260622.json",
+    "汇总/模型优化执行方案_20260622.md",
+    "data/packets/model_optimization/tactical-volatility-factors-20260622.json"
+  ]
+}

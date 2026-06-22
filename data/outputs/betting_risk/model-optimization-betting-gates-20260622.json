@@ -1,0 +1,236 @@
+{
+  "schema_version": "betting_gate_contract_v1",
+  "generated_at": "2026-06-23T03:10:00+08:00",
+  "scope": "模型优化后的竞彩风险闸门",
+  "overall_status": "hold",
+  "status_reason": "模型优化暴露出平局尾部、事件波动和热门大胜尾部低估问题；竞彩侧必须提高降级阈值，仅允许hold、discussion_only或risk_observation。",
+  "source_files": [
+    "data/outputs/model_backtests/prediction-hit-rate-backtest-20260622.json",
+    "data/outputs/model_backtests/model-optimization-execution-plan-20260622.json",
+    "汇总/模型优化执行方案_20260622.md"
+  ],
+  "allowed_conclusion_states": [
+    "hold",
+    "discussion_only",
+    "risk_observation"
+  ],
+  "hard_gates": {
+    "t_minus_75_official_lineups": {
+      "required": true,
+      "missing_action": "hold",
+      "note": "未取得T-75m官方首发与替补名单时，不能升级出讨论状态。"
+    },
+    "latest_injuries_suspensions_minutes": {
+      "required": true,
+      "missing_action": "hold",
+      "note": "最新伤停、停赛和分钟限制未核验时，所有候选仅能作为风险观察。"
+    },
+    "official_china_jingcai_odds": {
+      "required": true,
+      "missing_action": "hold",
+      "note": "未取得官方中国竞彩即时赔率时，不进行赔率补偿判断。"
+    },
+    "same_source_1x2_handicap_totals_snapshot": {
+      "required": true,
+      "missing_action": "hold",
+      "note": "1X2、让球和大小球必须来自同一快照并记录capture time，否则不得比较玩法价值。"
+    },
+    "red_team_verdict": {
+      "required": true,
+      "allowed_to_leave_hold": [
+        "pass"
+      ],
+      "blocking_verdicts": [
+        "hold",
+        "revise"
+      ],
+      "missing_action": "hold",
+      "note": "红队未通过时，竞彩文件只能保留hold或discussion_only。"
+    }
+  },
+  "optimization_gate_rules": {
+    "draw_floor_dynamic": {
+      "trigger_context": [
+        "小组赛前两轮",
+        "双方拿分均可接受",
+        "低节奏或低位防守证据强",
+        "门将状态、保守换人或赛程压力支持低事件场景",
+        "最高单比分为平局或0-0、1-1尾部被模型低估"
+      ],
+      "betting_risk_action": "discussion_only",
+      "mandatory_downgrade": {
+        "from": "risk_observation",
+        "to": "discussion_only",
+        "stronger_if_market_missing": "hold"
+      },
+      "play_type_effects": {
+        "one_x_two": "强队胜方向必须降低确定性表达，并显式列出平局尾部。",
+        "handicap": "让球方向标记为高不确定，尤其是一球或深让场景。",
+        "totals": "大小球只能写成风险观察，避免把低事件场景压缩成单一方向。",
+        "correct_score": "比分玩法必须列出0-0、1-1、低比分平局的覆盖缺口。"
+      },
+      "allowed_output_state": [
+        "discussion_only",
+        "hold",
+        "risk_observation"
+      ],
+      "required_language": [
+        "平局底线触发",
+        "强队方向降级观察",
+        "等待官方首发和赔率快照"
+      ]
+    },
+    "event_volatility_layer": {
+      "trigger_context": [
+        "红牌风险或纪律波动升高",
+        "早球会改变比赛脚本",
+        "门将超常或低级失误风险显著",
+        "定位球连续兑现或防守定位球弱点明显",
+        "心理崩盘、体能断点或替补质量差异明显"
+      ],
+      "betting_risk_action": "risk_observation",
+      "play_type_effects": {
+        "handicap": {
+          "risk_label": "high_risk",
+          "reason": "事件波动会扩大比分分布两端，容易同时破坏让球正反两侧的静态解释。"
+        },
+        "totals": {
+          "risk_label": "high_risk",
+          "reason": "早球、红牌和崩盘会使总进球从低事件路径跳到尾部路径。"
+        },
+        "correct_score": {
+          "risk_label": "high_risk",
+          "reason": "事件层改变比分簇形态，单比分覆盖缺口显著扩大。"
+        },
+        "half_full_time": {
+          "risk_label": "high_risk",
+          "reason": "早球和红牌直接改变半场与全场脚本。"
+        }
+      },
+      "mandatory_notes": [
+        "不得把事件波动当作普通xG线性修正。",
+        "必须列出早球、红牌、门将、定位球和崩盘路径。",
+        "缺少临场信息时保持hold。"
+      ],
+      "allowed_output_state": [
+        "risk_observation",
+        "discussion_only",
+        "hold"
+      ]
+    },
+    "favorite_ceiling_tail": {
+      "trigger_context": [
+        "强队方向概率高",
+        "早球、对手红牌、阵地压制和替补强度同时成立",
+        "历史回测显示强队方向命中但大比分尾部偏薄",
+        "市场深让或公众热度可能放大大胜叙事"
+      ],
+      "betting_risk_action": "discussion_only",
+      "tail_control": {
+        "must_separate": [
+          "强队胜方向",
+          "大胜尾部",
+          "让球穿透",
+          "具体比分"
+        ],
+        "prohibited_conversion": "不得因大胜尾部扩展就转成可执行投注表达。",
+        "market_check_required": "必须有官方中国竞彩赔率和同源盘口快照后，才能讨论赔率是否已吸收强队大胜尾部。"
+      },
+      "play_type_effects": {
+        "handicap": "深让方向标记为高风险观察，需同时写明早球依赖和失效条件。",
+        "totals": "高总进球尾部仅能作为分布扩展说明，不单独升级。",
+        "correct_score": "4+球和胜其它只记录覆盖风险，不转成执行项。"
+      },
+      "allowed_output_state": [
+        "discussion_only",
+        "hold",
+        "risk_observation"
+      ]
+    },
+    "market_calibration_split": {
+      "trigger_context": [
+        "模型与市场方向一致但尾部差异大",
+        "深热盘口压低冷门或平局尾部",
+        "大小球盘口与本地事件分布不一致"
+      ],
+      "betting_risk_action": "risk_observation",
+      "required_split": {
+        "direction_signal": "只说明市场是否支持胜平负大方向。",
+        "tail_risk_signal": "单独说明平局、冷门、大胜、低比分或崩盘尾部。",
+        "no_direct_absorption": "不能因为市场深热就吞掉本地平局或冷门尾部。"
+      },
+      "allowed_output_state": [
+        "risk_observation",
+        "discussion_only",
+        "hold"
+      ]
+    },
+    "single_score_vs_aggregate_1x2": {
+      "trigger_context": [
+        "最高概率单比分与胜平负第一方向不一致",
+        "1-1、0-0等单比分最高但三项合计偏一方"
+      ],
+      "betting_risk_action": "risk_observation",
+      "required_reporting": [
+        "分开写最高单比分和胜平负合计方向。",
+        "比分玩法必须强调覆盖缺口。",
+        "不得用单一比分替代1X2概率解释。"
+      ],
+      "allowed_output_state": [
+        "risk_observation",
+        "discussion_only",
+        "hold"
+      ]
+    }
+  },
+  "workflow_requirements": {
+    "odds_capture_fields": [
+      "source",
+      "captured_at",
+      "play_type",
+      "odds",
+      "market_snapshot_id_or_url_if_available"
+    ],
+    "lineup_capture_fields": [
+      "source",
+      "captured_at",
+      "official_lineups",
+      "bench",
+      "minute_limits_or_absence_notes"
+    ],
+    "red_team_required_fields": [
+      "verdict",
+      "major_risks",
+      "required_revisions",
+      "betting_language_blocked"
+    ]
+  },
+  "publication_rules": [
+    {
+      "condition": "任一硬闸门缺失",
+      "allowed_state": "hold",
+      "output_limit": "只能写风险观察、等待项、失效条件。"
+    },
+    {
+      "condition": "draw_floor_dynamic触发且官方赔率或同源盘口缺失",
+      "allowed_state": "hold",
+      "output_limit": "强队方向、让球和比分全部降级。"
+    },
+    {
+      "condition": "event_volatility_layer触发",
+      "allowed_state": "risk_observation",
+      "output_limit": "让球、大小球、比分和半全场标记高风险。"
+    },
+    {
+      "condition": "favorite_ceiling_tail触发",
+      "allowed_state": "discussion_only",
+      "output_limit": "只说明大胜尾部扩展和覆盖风险。"
+    },
+    {
+      "condition": "red_team_verdict为hold或revise",
+      "allowed_state": "hold",
+      "output_limit": "阻断投注化语言。"
+    }
+  ],
+  "final_conclusion": "hold"
+}

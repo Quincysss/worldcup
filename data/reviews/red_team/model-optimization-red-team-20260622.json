@@ -1,0 +1,217 @@
+{
+  "review_target": "model_optimization_execution_plan_20260622",
+  "role": "worldcup-red-team-verifier",
+  "phase": "model_optimization_red_team_review",
+  "status": "second_review_complete",
+  "created_at": "2026-06-22T00:00:00+08:00",
+  "updated_at": "2026-06-23T03:45:00+08:00",
+  "verdict": "revise",
+  "model_parameter_file_status": "available_reviewed",
+  "tactical_volatility_file_status": "available_reviewed",
+  "review_basis": {
+    "baseline_backtest": "data/outputs/model_backtests/prediction-hit-rate-backtest-20260622.json",
+    "execution_plan": "data/outputs/model_backtests/model-optimization-execution-plan-20260622.json",
+    "execution_summary": "汇总/模型优化执行方案_20260622.md",
+    "modeler_output": "data/outputs/model_backtests/model-parameter-update-20260622.json",
+    "tactical_volatility_packet": "data/packets/model_optimization/tactical-volatility-factors-20260622.json"
+  },
+  "summary": "Second red-team review after model and tactical files became available. The optimization directions are usable in shadow mode, but verdict remains revise because the next live predictions must prove the caps, de-duplication rules, schema gate and market gates before this becomes a pass-level default.",
+  "top_concerns": [
+    {
+      "concern": "The 32-match backtest is too small and heterogeneous for direct parameter tuning without shrinkage or holdout validation.",
+      "category": "data",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "Baseline uses 32 matches, with only 18 matches having formal top3 score availability; older predictions include prose-first and partial quant-chain formats.",
+      "why_it_matters": "Draw floor, volatility and favorite-tail updates may fit this specific tournament slice instead of improving the next 20 matches.",
+      "follow_up_check": "Require out-of-sample or rolling validation, parameter caps, and separate reporting for quant-complete vs prose-era samples.",
+      "owner": "model"
+    },
+    {
+      "concern": "Dynamic draw floor could turn a correction for underweighted draws into systematic over-buying of draws.",
+      "category": "model",
+      "severity": "high",
+      "confidence": "medium_high",
+      "evidence": "Draw floor now has trigger conditions, floors at 0.245/0.275/0.300, +0.02 to +0.06 delta and no-apply cases, while tactical packet recommends increase_draw_floor magnitude 0.35.",
+      "why_it_matters": "The cap is more controlled, but broad group-stage and low-tempo triggers can still fire too often if no verified tactical plus incentive trigger is required.",
+      "follow_up_check": "Require at least one verified low/mid-block or slow-tempo tactical trigger plus one match-state incentive trigger, and log no-apply reasons when favorite xG gap or lineup continuity is strong.",
+      "owner": "model"
+    },
+    {
+      "concern": "Event volatility layer may duplicate tactical and player_state adjustments.",
+      "category": "model",
+      "severity": "high",
+      "confidence": "medium_high",
+      "evidence": "Both model and tactical files now say overlapping goalkeeper, set-piece, card, injury and player_state evidence should be capped or half-weighted.",
+      "why_it_matters": "The de-duplication intent is good, but each prediction still needs a machine-readable fired-trigger ledger showing overlap group, cap and excluded duplicate factors.",
+      "follow_up_check": "Require fired triggers, evidence source, overlap group, applied weight after cap and excluded duplicate factors in every v2 prediction.",
+      "owner": "model"
+    },
+    {
+      "concern": "Market calibration split is good in principle but still vulnerable to deep favorite and public-team lines.",
+      "category": "market",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": "The split now requires source, timestamp, 1X2, totals, handicap when available, overround and no-vig probabilities, but official/same-source gates remain necessary.",
+      "why_it_matters": "Deep hot handicaps can still push both direction and tail channels if public snippets or weak sources are allowed normal weight.",
+      "follow_up_check": "Keep market adjustment null or capped as public snippet unless same-source 1X2/handicap/totals and official China-lottery gates are present.",
+      "owner": "main"
+    },
+    {
+      "concern": "Favorite ceiling tail may overreact to blowouts and chase large-win scorelines.",
+      "category": "model",
+      "severity": "medium_high",
+      "confidence": "medium_high",
+      "evidence": "Favorite tail now has default 0.02-0.05 shift, max 0.06, trigger list and no-apply cases; tactical packet also warns early-goal and collapse triggers must share weight.",
+      "why_it_matters": "Large-win tails are rare and state-dependent; market agreement, xG strength and tactical mismatch must not all count as independent evidence.",
+      "follow_up_check": "Allow full favorite-ceiling activation only with confirmed attacking availability or bench depth and at least two non-market tactical triggers.",
+      "owner": "model"
+    },
+    {
+      "concern": "Betting-language leakage remains a contract risk.",
+      "category": "market",
+      "severity": "blocker",
+      "confidence": "high",
+      "evidence": "Execution plan involves betting-risk gates and market calibration; red-team verdict is not pass, and the modeler parameter file still requires shadow-mode validation before permanent default use.",
+      "why_it_matters": "Any wording implying executable purchase advice would violate project gates while optimization is still under review.",
+      "follow_up_check": "Keep all optimization and betting-risk outputs discussion_only/hold until red-team pass and market gates are complete.",
+      "owner": "main"
+    }
+  ],
+  "upset_or_failure_scenarios": [
+    "The optimized model raises draw probabilities across too many low-event matches and loses clear favorite direction accuracy.",
+    "Event-volatility and tactical/player_state layers both react to the same red-card, set-piece or goalkeeper signal, inflating tails twice.",
+    "A deep public favorite line is treated as both direction evidence and tail evidence, causing a model-market feedback loop.",
+    "Favorite-ceiling logic overweights a few memorable blowouts and starts over-listing 4+ scorelines without conditional triggers.",
+    "Reports become clearer structurally but still leak executable betting language through market-delta wording."
+  ],
+  "overconfidence_flags": [
+    {
+      "flag": "Targeting 58% WDL accuracy over the next 20 matches from a 32-match mixed-quality sample is aspirational, not yet validated.",
+      "severity": "medium_high",
+      "confidence": "high"
+    },
+    {
+      "flag": "Top3 score improvement target depends on only 18 matches with top3 availability; scoreline calibration claims should be heavily caveated.",
+      "severity": "medium_high",
+      "confidence": "high"
+    },
+    {
+      "flag": "Model parameter file still describes the tactical packet as not filled, while the tactical packet is now available; this status drift should be corrected before pass.",
+      "severity": "high",
+      "confidence": "high"
+    }
+  ],
+  "market_flags": [
+    {
+      "flag": "Market calibration must require same-source 1X2, handicap and totals, not isolated odds snippets.",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "flag": "Official Chinese sports lottery odds should remain a separate gate for any竞彩-facing output.",
+      "severity": "blocker",
+      "confidence": "high"
+    },
+    {
+      "flag": "Direction signal and tail-risk signal need explicit overround normalization and line-movement catalyst logging.",
+      "severity": "high",
+      "confidence": "medium_high"
+    },
+    {
+      "flag": "Public-team premium, favorite tax and star-name premium can still leak into both split market channels.",
+      "severity": "medium_high",
+      "confidence": "medium"
+    }
+  ],
+  "quant_chain_flags": [
+    {
+      "flag": "Require separate calibration pools for quant-complete predictions and older prose-first predictions.",
+      "severity": "high",
+      "confidence": "high"
+    },
+    {
+      "flag": "Draw floor has triggers and caps, but each match must expose trigger ledger and no-apply checks before default deployment.",
+      "severity": "high",
+      "confidence": "medium_high"
+    },
+    {
+      "flag": "Event volatility is defined as a distribution-shape layer, but outputs must prove it did not also boost tactics/player_state from the same evidence.",
+      "severity": "high",
+      "confidence": "medium_high"
+    },
+    {
+      "flag": "Favorite ceiling tail should be scenario-gated and reported as tail mass change, not as a new preferred scoreline.",
+      "severity": "medium_high",
+      "confidence": "medium_high"
+    },
+    {
+      "flag": "Future reports should include Brier/log-loss only where original probabilities exist; do not backfill implied certainty into prose predictions.",
+      "severity": "medium",
+      "confidence": "high"
+    }
+  ],
+  "recommended_probability_adjustment": "No replacement probabilities. Use model-parameter-update-20260622.json only in shadow mode with shrinkage/cap rules: single parameter shift <=0.06, combined pre-red-team shift <=0.10, and no betting-language upgrade while verdict is revise.",
+  "caps_review": {
+    "verdict": "usable_in_shadow_mode",
+    "notes": [
+      "Single-parameter max shift 0.06 and combined max shift 0.10 are appropriately conservative for trial use.",
+      "Draw floor delta 0.02-0.06 is acceptable only with trigger logging and no-apply checks.",
+      "Event tail shift up to 0.08 requires explicit evidence and overlap controls.",
+      "Favorite tail max 0.06 is acceptable only as score-matrix tail redistribution, not a favorite win boost."
+    ]
+  },
+  "draw_floor_review": {
+    "verdict": "revise_before_default",
+    "risk": "Can still over-lift group-stage draws if broad triggers are counted without checking xG gap, lineup continuity and must-win incentives.",
+    "required_condition_for_pass": "Require verified tactical structure plus match-state incentive triggers, with no-apply reasons logged."
+  },
+  "event_volatility_review": {
+    "verdict": "revise_operational_controls",
+    "risk": "Overlap with player_state, tactics, injuries, cards, goalkeeper form and set-piece edge remains possible.",
+    "required_condition_for_pass": "Add machine-readable overlap groups and applied_weight_after_cap for each fired trigger."
+  },
+  "favorite_ceiling_tail_review": {
+    "verdict": "shadow_mode_only",
+    "risk": "Tail expansion can become large-win chasing if early breakthrough, market agreement and tactical mismatch stack at full strength.",
+    "required_condition_for_pass": "Require confirmed favorite attacking availability or bench depth and at least two non-market triggers before full activation."
+  },
+  "prediction_contract_v2_review": {
+    "verdict": "mostly_pass_with_validation_gate",
+    "remaining_gap": "The contract is complete on paper, but publication must fail if required schema fields are absent.",
+    "required_condition_for_pass": "Add automated schema validation before final prediction publication."
+  },
+  "missing_data": [
+    "Out-of-sample evidence that draw_floor_dynamic improves the next quant-complete sample",
+    "Executed de-duplication logs proving event_volatility did not double count tactics/player_state/injury",
+    "Live-match evidence that favorite_ceiling_tail does not over-expand 4+ score tails",
+    "Market calibration source contract: odds source, timestamp, overround, same-source 1X2/handicap/totals and line-move catalyst",
+    "Rolling validation results for the next-match deployment sample"
+  ],
+  "required_revisions_before_pass": [
+    "Correct stale tactical packet status in the model parameter update.",
+    "Run model-parameter-update-20260622.json in shadow mode on the next quant-complete matches.",
+    "Separate evidence drawn from 32-match all-sample, 18-match top3-available sample and quant-complete-only subset.",
+    "Keep shrinkage caps for draw floor, volatility layer and favorite ceiling tail.",
+    "Log explicit de-duplication between event volatility, tactics, player_state, injury and market factors in each prediction.",
+    "Add a market-use contract that blocks calibration when same-source and official竞彩 snapshots are missing.",
+    "Add language guardrails blocking purchase-framed wording while verdict is revise or hold."
+  ],
+  "conditions_to_pass": [
+    "At least 12-20 match shadow-mode sample shows v2 improves calibration or tail coverage without materially degrading WDL direction.",
+    "Every v2 prediction exposes base probability, adjusted probability, triggers fired, evidence source, caps and excluded overlaps.",
+    "Market inputs include source, timestamp, overround, no-vig probabilities and same-source 1X2/handicap/totals when normal market weights are used.",
+    "Schema validation prevents prose-only prediction files from being marked final.",
+    "Betting-facing gates remain hold unless official lineup, final injury/minute, official China-lottery and same-source market snapshots are captured."
+  ],
+  "handoff_notes": {
+    "verdict": "revise",
+    "blocking_status": "Not a full hold because this is an optimization contract review rather than a match publication; however, pass is blocked until shadow-mode results, de-duplication logs and market-gate compliance are proven.",
+    "owner_followups": {
+      "model": "Run v2 parameters in shadow mode with formulas, caps, validation split and de-duplication logs visible.",
+      "main": "Keep execution status revise and prevent betting-language leakage.",
+      "market_or_betting_risk": "Define official竞彩 and same-source odds gates before market calibration is used."
+    }
+  },
+  "betting_language_blocked": true
+}

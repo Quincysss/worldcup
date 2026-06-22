@@ -1,0 +1,273 @@
+{
+  "phase": "tactical_volatility_factor_optimization",
+  "status": "complete_partial_backtest_basis",
+  "created_at": "2026-06-23T01:55:00+08:00",
+  "updated_at": "2026-06-23T02:05:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Convert tactical postmortem observations into model volatility factors; no score prediction, WDL probability or betting advice.",
+  "input_files": [
+    "data/outputs/model_backtests/prediction-hit-rate-backtest-20260622.json",
+    "汇总/预测命中率回测_20260622.md",
+    "汇总/模型优化执行方案_20260622.md"
+  ],
+  "backtest_context": {
+    "matches_count": 32,
+    "wdl_accuracy": 0.469,
+    "top3_score_accuracy_all_sample": 0.219,
+    "top3_score_accuracy_when_top3_available": 0.389,
+    "primary_score_accuracy": 0.125,
+    "main_error_codes": [
+      "draw_tail_underweighted",
+      "event_volatility_underweighted",
+      "favorite_ceiling_tail_underweighted",
+      "single_score_vs_1x2_confusion"
+    ]
+  },
+  "factor_scale": {
+    "magnitude": "Recommended model adjustment strength on a 0.00 to 1.00 scale. It should modify distribution shape or floor/tail allocation, not raw team strength directly.",
+    "direction": "increase means raise the named volatility layer; decrease means suppress it; mixed means split by match state.",
+    "application_stage": "Apply after baseline xG and attack/defense ratings, before final Poisson/tail scoreline normalization."
+  },
+  "tactical_volatility_factors": {
+    "draw_floor_tactical_triggers": {
+      "direction": "increase_draw_floor",
+      "magnitude": 0.35,
+      "evidence": "Backtest diagnosis lists Belgium 1-1 Egypt, Iran 2-2 New Zealand, Spain 0-0 Cape Verde, Saudi Arabia 1-1 Uruguay and Belgium 0-0 Iran as draw-tail misses. Human summary specifically recommends a dynamic draw floor for early group-stage matches, acceptable points states, low tempo and strong defensive evidence.",
+      "confidence": "high",
+      "model_note": "Raise low-event and strategically acceptable draw mass without directly changing team attack or defense ratings. Cap at medium strength unless at least two tactical triggers are present and one is match-state related.",
+      "double_counting_guard": "Do not add this on top of an already inflated market draw adjustment and a separate low xG total adjustment at full weight. If total xG is already lowered by tempo, use this factor mainly to redistribute 0-0/1-1 rather than reduce goals again.",
+      "trigger_definitions": [
+        {
+          "trigger": "low_block_compactness",
+          "direction": "increase_draw_floor",
+          "magnitude": 0.15,
+          "evidence": "Spain 0-0 Cape Verde and Belgium 0-0 Iran show compact blocks can convert favorite pressure into low-event score states.",
+          "confidence": "high",
+          "model_note": "Use only when recent postmatch or tactics packet confirms compact low/mid block and box protection.",
+          "avoid_double_counting": "If team defense_score already includes clean-sheet form, apply as distribution-shape floor, not another defensive rating boost."
+        },
+        {
+          "trigger": "defensive_discipline_no_red_flag",
+          "direction": "increase_draw_floor",
+          "magnitude": 0.10,
+          "evidence": "Cape Verde and Iran examples show disciplined blocks can survive pressure when card/discipline risk does not break structure.",
+          "confidence": "medium_high",
+          "model_note": "Requires no active red-card/suspension/discipline warning from data or red-team packets.",
+          "avoid_double_counting": "Do not stack with event_volatility red-card risk in the same direction; discipline either supports draw floor or suppresses collapse tail."
+        },
+        {
+          "trigger": "mutual_points_acceptability",
+          "direction": "increase_draw_floor",
+          "magnitude": 0.12,
+          "evidence": "Backtest summary flags group-stage first/second-round risk management and acceptable points states as draw-tail drivers.",
+          "confidence": "medium",
+          "model_note": "Use when standings context makes one point tactically acceptable for both, especially after both teams have avoided losing or when a favorite does not need to chase margin.",
+          "avoid_double_counting": "Keep separate from market calibration. This is a tactical game-state prior, not a market-implied draw price."
+        },
+        {
+          "trigger": "goalkeeper_form_or_shot_stopping_signal",
+          "direction": "increase_draw_floor",
+          "magnitude": 0.10,
+          "evidence": "Belgium 0-0 Iran notes Beiranvand saves; Spain 0-0 Cape Verde first-round review credited keeper/blocks.",
+          "confidence": "medium",
+          "model_note": "Use as a cap on favorite conversion when goalkeeper state is verified in player_state or postmatch.",
+          "avoid_double_counting": "If goalkeeper player_state already raises defense, apply no more than half magnitude."
+        },
+        {
+          "trigger": "slow_tempo_or_low_transition_exchange",
+          "direction": "increase_draw_floor",
+          "magnitude": 0.13,
+          "evidence": "Human backtest summary points to low-event and slow-tempo draws being underweighted.",
+          "confidence": "medium_high",
+          "model_note": "Redistribute mass toward 0-0, 1-1 and narrow one-goal states after xG construction.",
+          "avoid_double_counting": "If xG total has already been reduced for pace, do not reduce xG again; only alter draw covariance."
+        }
+      ]
+    },
+    "event_volatility_triggers": {
+      "direction": "increase_tail_variance",
+      "magnitude": 0.45,
+      "evidence": "Backtest diagnosis says red cards, early goals, goalkeeper overperformance and late collapse were not strong enough tail multipliers. Examples include Canada 6-0 Qatar, Switzerland 4-1 Bosnia and Herzegovina, Netherlands 5-1 Sweden and Tunisia 0-4 Japan.",
+      "confidence": "high",
+      "model_note": "Apply as a variance/tail layer that redistributes probability into high-total, lopsided or chaotic score states. It should not blindly raise both teams' attack_score.",
+      "double_counting_guard": "When an event is already reflected in player_state form or injury/suspension adjustment, use the larger of the two or half-weight both. This layer models distribution shape after an event, not the base likelihood of the event.",
+      "trigger_definitions": [
+        {
+          "trigger": "red_card_or_high_card_risk",
+          "direction": "increase_tail_variance",
+          "magnitude": 0.18,
+          "evidence": "Backtest explicitly lists red cards as a tail multiplier; Belgium 0-0 Iran also shows red-card game-state distortion.",
+          "confidence": "high",
+          "model_note": "Use discipline history, referee profile if available, and matchup stress. Red-card risk should widen scoreline tails and reduce confidence bands.",
+          "avoid_double_counting": "Do not also apply full defensive collapse penalty unless a red card actually occurred in postmatch mode."
+        },
+        {
+          "trigger": "early_goal_state_change",
+          "direction": "increase_tail_variance",
+          "magnitude": 0.20,
+          "evidence": "Spain 4-0 Saudi Arabia and Canada 6-0 Qatar show early favorite breakthrough can destroy low-block assumptions and expand 4+ goal tails.",
+          "confidence": "high",
+          "model_note": "Pre-match: encode as early-goal sensitivity. Live/postmatch: if early goal occurs, shift from median scoreline to ceiling/tail state.",
+          "avoid_double_counting": "If favorite_ceiling_tail also triggers from early goal, route early-goal magnitude there and keep event_volatility for residual chaos only."
+        },
+        {
+          "trigger": "set_piece_cluster_pressure",
+          "direction": "increase_tail_variance",
+          "magnitude": 0.14,
+          "evidence": "Backtest and recent postmortems flag set-piece chains: Spain fourth via corner sequence, Cape Verde free-kick, Egypt corner header, New Zealand aerial threat.",
+          "confidence": "medium_high",
+          "model_note": "Raise volatility when one team repeatedly produces corners/free-kicks or the opponent has aerial/second-ball weakness.",
+          "avoid_double_counting": "If set_piece_advantage already exists in matchup tactics, cap combined value at the higher factor plus 0.05."
+        },
+        {
+          "trigger": "goalkeeper_overperformance_or_underperformance",
+          "direction": "mixed",
+          "magnitude": 0.12,
+          "evidence": "Backtest lists goalkeeper overperformance; Belgium 0-0 Iran and Spain 0-0 Cape Verde are keeper/block examples.",
+          "confidence": "medium",
+          "model_note": "Overperformance raises draw/underdog survival; underperformance raises collapse tail. Require player_state or postmatch signal.",
+          "avoid_double_counting": "Half-weight if goalkeeper form_status_1_5 is already outside neutral band."
+        },
+        {
+          "trigger": "psychological_or_discipline_collapse",
+          "direction": "increase_tail_variance",
+          "magnitude": 0.22,
+          "evidence": "Large misses such as Netherlands 5-1 Sweden, Tunisia 0-4 Japan and Canada 6-0 Qatar indicate post-event collapse tails were too thin.",
+          "confidence": "medium_high",
+          "model_note": "Use when early concession, tactical mismatch, cards, heat/fatigue or repeated set-piece failures combine. This is a nonlinear tail switch.",
+          "avoid_double_counting": "Do not apply from reputation alone. Require at least two supporting triggers or postmatch evidence."
+        }
+      ]
+    },
+    "favorite_ceiling_tail_triggers": {
+      "direction": "increase_favorite_high_score_tail",
+      "magnitude": 0.40,
+      "evidence": "Backtest diagnosis says strong favorites were directionally correct but large-win tails were too thin. Examples: Spain 4-0 Saudi Arabia, Netherlands 5-1 Sweden and Canada 6-0 Qatar.",
+      "confidence": "high",
+      "model_note": "Expand favorite 3+ and 4+ goal tail only when tactical dominance can plausibly survive beyond initial lead. Do not raise favorite win probability mechanically; redistribute within favorite-win scorelines.",
+      "double_counting_guard": "Avoid stacking with baseline_strength, attack_score and market favorite premium. This factor is a conditional ceiling/tail switch, not another team-quality score.",
+      "trigger_definitions": [
+        {
+          "trigger": "sustained_territorial_press_and_counterpress",
+          "direction": "increase_favorite_high_score_tail",
+          "magnitude": 0.14,
+          "evidence": "Spain 4-0 Saudi Arabia showed early pressure, Rodri control and counterpress preventing relief.",
+          "confidence": "high",
+          "model_note": "Use when favorite can both create and immediately recover possession after clearances.",
+          "avoid_double_counting": "If pressing_adjustment is already high, use this as tail-shape only, not xG increase."
+        },
+        {
+          "trigger": "early_breakthrough_against_low_block",
+          "direction": "increase_favorite_high_score_tail",
+          "magnitude": 0.20,
+          "evidence": "Spain scored early after a prior low-block failure; early goal forced Saudi Arabia out of damage-control structure.",
+          "confidence": "high",
+          "model_note": "Pre-match: encode sensitivity to favorite early goal. Live/postmatch: activate strongly once early goal occurs.",
+          "avoid_double_counting": "Share weight with event_volatility early_goal trigger; never apply both at full strength."
+        },
+        {
+          "trigger": "bench_quality_and_late_pressure_gap",
+          "direction": "increase_favorite_high_score_tail",
+          "magnitude": 0.12,
+          "evidence": "Backtest summary flags strong favorites and large-win tails; tactical files repeatedly show favorites with stronger substitution waves converting late pressure.",
+          "confidence": "medium",
+          "model_note": "Use when favorite can add equal-or-better attackers after 60 minutes and opponent depth is thin.",
+          "avoid_double_counting": "If player_state already boosts substitutes, cap coach_substitution_risk and this trigger combined."
+        },
+        {
+          "trigger": "opponent_discipline_or_shape_breakdown",
+          "direction": "increase_favorite_high_score_tail",
+          "magnitude": 0.18,
+          "evidence": "Canada 6-0 Qatar and Netherlands 5-1 Sweden examples indicate tactical/discipline collapse after pressure can create non-Poisson lopsided tails.",
+          "confidence": "medium_high",
+          "model_note": "Activate when opponent has cards, repeated rest-defense failures, conceded early, or lost compactness.",
+          "avoid_double_counting": "Coordinate with event_volatility collapse trigger; if both fire, ceiling-tail receives the favorite-specific share and event_volatility handles residual total-goal variance."
+        },
+        {
+          "trigger": "wide_plus_central_dual_access",
+          "direction": "increase_favorite_high_score_tail",
+          "magnitude": 0.12,
+          "evidence": "Spain's Yamal/Oyarzabal/Rodri pattern shows favorites become more explosive when width and central control are both active.",
+          "confidence": "medium_high",
+          "model_note": "Use when favorite has both wide-channel advantage and central-control advantage above threshold.",
+          "avoid_double_counting": "Do not add full wide_channel_advantage plus central_control_advantage plus this trigger; use this only as interaction term."
+        }
+      ]
+    }
+  },
+  "implementation_rules": {
+    "minimum_trigger_count": {
+      "draw_floor_tactical_triggers": "Require at least two triggers; one must be tactical structure or game-state motivation.",
+      "event_volatility_triggers": "Require one strong event trigger or two medium triggers before widening tails.",
+      "favorite_ceiling_tail_triggers": "Require favorite strength gap plus at least two tactical triggers; early breakthrough can serve as one trigger."
+    },
+    "recommended_caps": {
+      "draw_floor_total_cap": 0.45,
+      "event_volatility_total_cap": 0.60,
+      "favorite_ceiling_tail_total_cap": 0.55,
+      "combined_volatility_cap_without_t75_lineups": 0.50
+    },
+    "model_integration": [
+      "Compute baseline xG and 1X2 first.",
+      "Apply tactical volatility factors to redistribute scoreline mass, not to overwrite baseline team strength.",
+      "For draw floor, add covariance between team goal counts and lift 0-0/1-1/2-2 only where total-goal context supports it.",
+      "For event volatility, widen distribution tails and increase uncertainty intervals.",
+      "For favorite ceiling tail, move mass from narrow favorite wins into 3+ and 4+ favorite-win tails when triggers are active.",
+      "Always report highest single scoreline separately from aggregate 1X2 leader."
+    ]
+  },
+  "double_counting_controls": [
+    "Attack/defense ratings describe baseline team quality; these factors describe game-state distribution shape.",
+    "Player_state captures individual form, injuries, cards and goalkeeper state; volatility factors should be capped or half-weighted when using the same evidence.",
+    "Set-piece events should not be counted as both set_piece_advantage and event_volatility at full weight.",
+    "Market calibration should not erase local draw floor; if market adjustment already boosts draw, use tactical draw floor as confirmation only.",
+    "Early goal triggers in event_volatility and favorite_ceiling_tail are mutually aware and should share weight rather than stack."
+  ],
+  "handoff_to_model_agent": [
+    "Add these factors as named post-baseline distribution modifiers in future match prediction JSON.",
+    "Expose which triggers fired, their evidence, total magnitude after caps and the scoreline-mass redistribution method.",
+    "Keep all future prediction reports clear that single most likely scoreline can differ from aggregate 1X2 direction.",
+    "Backtest these factors by group stage round and favorite strength band to avoid overfitting to 32-match sample."
+  ],
+  "red_team_challenge_points": [
+    "Challenge sample size and overfitting, especially large-win examples.",
+    "Challenge whether draw floor is being applied to teams that actually need to chase points.",
+    "Challenge duplicate use of goalkeeper, set-piece and red-card evidence already stored in player_state.",
+    "Challenge favorite ceiling tail when favorite lacks confirmed T-75m attacking lineup or bench depth.",
+    "Challenge whether market deep-favorite signals are being treated as tactical evidence."
+  ],
+  "data_gaps": [
+    "Referee profiles and card propensity are not consistently available.",
+    "Official T-75m lineups and bench quality are needed before full favorite-ceiling activation.",
+    "Set-piece event maps and corner/free-kick sequence counts are incomplete in older matches.",
+    "Goalkeeper post-shot data and same-source ratings are not complete across all teams.",
+    "Psychological collapse indicators are inferred from match state and events; require red-team review before strong pre-match use."
+  ],
+  "source_log": [
+    {
+      "source": "prediction-hit-rate-backtest-20260622.json",
+      "path": "data/outputs/model_backtests/prediction-hit-rate-backtest-20260622.json",
+      "supports": ["error codes", "examples", "accuracy baseline", "optimization targets"]
+    },
+    {
+      "source": "预测命中率回测_20260622.md",
+      "path": "汇总/预测命中率回测_20260622.md",
+      "supports": ["human diagnosis", "draw floor", "event volatility", "reporting changes"]
+    },
+    {
+      "source": "模型优化执行方案_20260622.md",
+      "path": "汇总/模型优化执行方案_20260622.md",
+      "supports": ["thread assignment", "parameter directions", "execution gates"]
+    }
+  ],
+  "validation": {
+    "no_score_prediction": true,
+    "no_wdl_probability": true,
+    "no_betting_advice": true,
+    "required_main_factors_present": [
+      "draw_floor_tactical_triggers",
+      "event_volatility_triggers",
+      "favorite_ceiling_tail_triggers"
+    ]
+  }
+}
