@@ -1,0 +1,320 @@
+{
+  "phase": "match_prediction_red_team_review",
+  "group": "K组",
+  "status": "complete_red_team_review_after_tactical_fill",
+  "created_at": "2026-06-22T21:53:12+08:00",
+  "updated_at": "2026-06-22T23:20:00+08:00",
+  "owner": "worldcup-red-team-verifier",
+  "scope": "K组第二轮完整量化链红队复审；只做反方审查，不生成主预测、不替代模型、不做投注建议。",
+  "inputs_expected": [
+    "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+    "data/packets/matches/k-group-round2-data-refresh-20260622.json",
+    "data/packets/matchup_tactics/k-group-round2-tactical-refresh-20260622.json",
+    "K组第一轮复盘",
+    "Portugal/DR Congo/Uzbekistan/Colombia player_state and roster files"
+  ],
+  "missing_inputs": [
+    "lineup-dependent tactical confirmation after official XI",
+    "T-75m official lineups",
+    "final injury, suspension and minutes-limit confirmation",
+    "official China Sports Lottery odds",
+    "same-book 1X2, handicap and totals snapshot",
+    "official hourly stadium weather forecast"
+  ],
+  "source_log": [
+    "README.md",
+    "线程状态.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    ".codex/skills/worldcup-red-team-verifier/SKILL.md",
+    ".codex/skills/worldcup-red-team-verifier/references/review-checklist.md",
+    ".codex/skills/worldcup-red-team-verifier/references/market-risk.md",
+    "data/packets/matches/k-group-round2-data-refresh-20260622.json",
+    "data/packets/matchup_tactics/k-group-round2-tactical-refresh-20260622.json",
+    "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_葡萄牙_1-1_刚果金_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md",
+    "four team roster/player_state summaries"
+  ],
+  "verdict": "hold",
+  "top_concerns": [
+    {
+      "concern": "The numeric model is now filled, but upstream live gates are not cleared.",
+      "category": "availability",
+      "severity": "blocker",
+      "confidence": "high",
+      "evidence": "The model status is completed_pre_match_partial and lists T-75m official lineups, official Chinese sports lottery odds, same-source live odds board, final injury/minutes confirmation and official hourly weather as missing_or_stale_inputs.",
+      "why_it_matters": "The probability chain can be discussed, but lineup, minutes and price moves can materially shift match xG and confidence.",
+      "follow_up_check": "Capture T-75m lineups, final availability and official market snapshots before release.",
+      "owner": "data/main"
+    },
+    {
+      "concern": "Data refresh is only partial_source_limited.",
+      "category": "availability",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "Data refresh has factor_inputs_ready partial and lists official lineups, final injuries, official China sports lottery, same-source live market board, official hourly stadium weather and Uzbekistan source completeness as missing.",
+      "why_it_matters": "The current model is a conditional pre-match estimate, not a fully live forecast.",
+      "follow_up_check": "Data owner must update final availability, weather and market fields.",
+      "owner": "data"
+    },
+    {
+      "concern": "Tactical refresh is now filled but remains source-limited and must be capped against duplicate counting.",
+      "category": "tactical",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "k-group-round2-tactical-refresh-20260622.json is partial_source_limited and includes both matchups, but it explicitly warns not to add magnitudes linearly and to cap overlap with player_state, attack/defense scores, round-one goals, injuries and set-piece events.",
+      "why_it_matters": "The tactical inputs are usable, but the model's tactical_matchup_adjustment can still double-count wide, transition, set-piece and player-state signals.",
+      "follow_up_check": "Model owner should rerun sensitivity with tactical caps and avoid linear addition of overlapping factors.",
+      "owner": "tactics"
+    },
+    {
+      "concern": "First-round results create high risk of overcorrection.",
+      "category": "data",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "Portugal were held 1-1 by DR Congo; Colombia beat Uzbekistan 3-1; Uzbekistan review remains partial; DR Congo player state is partial.",
+      "why_it_matters": "Portugal underperformance, DR Congo set-piece success, Colombia late finishing, and Uzbekistan defensive stress can be overfit from one match.",
+      "follow_up_check": "Model owner must show how round-one performance is separated from player_state, tactical and market factors.",
+      "owner": "model"
+    },
+    {
+      "concern": "Market gate is not cleared.",
+      "category": "market",
+      "severity": "blocker",
+      "confidence": "high",
+      "evidence": "No official China Sports Lottery odds and no same-book 1X2/handicap/totals snapshot are present in the reviewed files.",
+      "why_it_matters": "Favorite tax, star-name premium and line-movement traps cannot be checked.",
+      "follow_up_check": "Capture official odds and same-source market board before any betting-language publication.",
+      "owner": "data/main"
+    }
+  ],
+  "matches": [
+    {
+      "review_target": "Portugal vs Uzbekistan",
+      "verdict": "hold",
+      "model_summary": {
+        "xg": {
+          "portugal": 1.90,
+          "uzbekistan": 0.78
+        },
+        "probabilities_1x2": {
+          "portugal_win": 0.6385,
+          "draw": 0.2146,
+          "uzbekistan_win": 0.1469
+        },
+        "totals_probabilities": {
+          "over_2_5": 0.5015,
+          "under_2_5": 0.4985,
+          "over_3_5": 0.2815,
+          "under_3_5": 0.7185
+        },
+        "top_scorelines": [
+          {"score": "1-0", "probability": 0.1303},
+          {"score": "2-0", "probability": 0.1238},
+          {"score": "1-1", "probability": 0.1016},
+          {"score": "2-1", "probability": 0.0965},
+          {"score": "3-0", "probability": 0.0784}
+        ],
+        "confidence": "medium_low"
+      },
+      "top_concerns": [
+        {
+          "concern": "Portugal favorite probability is plausible but should not publish at full strength before lineup and tactical refresh.",
+          "category": "availability",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "Model gives Portugal xG 1.90 and win 63.85%, but also notes Ruben Dias status conflict, Ronaldo minutes/role uncertainty, and missing T-75m official lineups.",
+          "why_it_matters": "Portugal xG can move materially if center-back stability or front-line role allocation changes.",
+          "follow_up_check": "Confirm Portugal XI, Ronaldo/Ramos/Leao/Conceicao roles and Ruben Dias status.",
+          "owner": "data/model"
+        },
+        {
+          "concern": "Portugal favorite status is vulnerable to first-round and star-name market traps.",
+          "category": "market",
+          "severity": "high",
+          "confidence": "medium",
+          "evidence": "Portugal 1-1 DR Congo review shows early lead without sustained second-goal pressure; Ronaldo played 90 with no goal/assist; Rúben Dias availability had conflicting notes.",
+          "why_it_matters": "Portugal may still be stronger, but headline favorite language can overstate reliability, especially for handicap or exact-score expressions.",
+          "follow_up_check": "Confirm Portugal XI, Ronaldo/Ramos/Leao roles, Rúben Dias status, and official market board.",
+          "owner": "data/model"
+        },
+        {
+          "concern": "Tactical adjustment is now backed by a source-limited packet but overlaps with player_state and attack structure.",
+          "category": "tactical",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "The tactical packet identifies Portugal wide/build-up/control edges and Uzbekistan counter route through Shomurodov/Fayzullaev, but also flags high double-counting risk with player_state and attack score.",
+          "why_it_matters": "Portugal +0.12 and Uzbekistan +0.06 tactical adjustments should be capped because the same evidence is already reflected in player form and attack/defense structure.",
+          "follow_up_check": "Model owner should stress test capped tactical adjustments and preserve Uzbekistan counter/set-piece tails.",
+          "owner": "tactics/model"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "Portugal dominate territory but fail to turn possession into clear chances, repeating the DR Congo draw pattern.",
+        "Uzbekistan stay in a back five long enough to raise 0-0, 1-1 or narrow-loss paths.",
+        "Portugal rotation or unresolved defender availability increases transition and set-piece risk.",
+        "An early Uzbekistan set piece or counter goal forces Portugal into a high-variance chase."
+      ],
+      "overconfidence_flags": [
+        "Portugal win 63.85% should not be rounded into high confidence; model's own confidence is medium_low.",
+        "1-1 is the third top scoreline at 10.16%, close enough to matter in publication language.",
+        "Market comparison is unavailable, so there is no protection against Portugal favorite tax."
+      ],
+      "market_flags": [
+        "odds_implied_probability is null.",
+        "model_market_delta is null.",
+        "official China Sports Lottery and same-source 1X2/handicap/totals are missing.",
+        "Portugal star-name and rebound narratives may create public favorite premium."
+      ],
+      "quant_chain_flags": [
+        "factor_weights are generic and not match-specific; recent_round1_form at 0.20 may be too high for a single-match sample.",
+        "Tactical matchup is traceable now, but several tactical factors overlap with player_state and attack/defense scores.",
+        "Poisson tail_probability 0.0134 likely underrepresents red cards, early goals and set-piece/state correlation.",
+        "Market_adjustment is 0.00 by missing-data policy, not evidence of fair price."
+      ],
+      "recommended_probability_adjustment": {
+        "portugal_win": "-3 to -6 percentage points until XI, tactical and market gates clear",
+        "draw": "+2 to +4 percentage points",
+        "uzbekistan_win": "+1 to +2 percentage points",
+        "xg_note": "Stress test Portugal xG down by 0.10-0.20 if Ronaldo/Ramos/Leao/Conceicao roles or Ruben Dias status reduce balance.",
+        "owner": "model"
+      },
+      "missing_data": [
+        "T-75m official lineups",
+        "Ruben Dias final availability",
+        "Portugal front-line role and minutes plan",
+        "lineup-dependent tactical confirmation after official XI",
+        "official China Sports Lottery odds",
+        "same-source 1X2/handicap/totals snapshot",
+        "official hourly stadium weather"
+      ],
+      "handoff_notes": "Model can remain discussion-only, but publication should discount Portugal favorite confidence and block betting language."
+    },
+    {
+      "review_target": "Colombia vs DR Congo",
+      "verdict": "hold",
+      "model_summary": {
+        "xg": {
+          "colombia": 1.58,
+          "dr_congo": 1.08
+        },
+        "probabilities_1x2": {
+          "colombia_win": 0.4893,
+          "draw": 0.2510,
+          "dr_congo_win": 0.2597
+        },
+        "totals_probabilities": {
+          "over_2_5": 0.4965,
+          "under_2_5": 0.5035,
+          "over_3_5": 0.2771,
+          "under_3_5": 0.7229
+        },
+        "top_scorelines": [
+          {"score": "1-1", "probability": 0.1194},
+          {"score": "1-0", "probability": 0.1105},
+          {"score": "2-1", "probability": 0.0943},
+          {"score": "2-0", "probability": 0.0873},
+          {"score": "0-1", "probability": 0.0755}
+        ],
+        "confidence": "low_to_medium"
+      },
+      "top_concerns": [
+        {
+          "concern": "Colombia are only a modest first direction, not a publishable strong favorite.",
+          "category": "data",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "Colombia win is 48.93%, while draw plus DR Congo win is 51.07%; 1-1 is the single highest scoreline.",
+          "why_it_matters": "Publication language must foreground draw/DR Congo tails rather than overstate Colombia's first-round 3-1.",
+          "follow_up_check": "Keep 1-1, 0-1 and set-piece upset scenarios visible in final copy.",
+          "owner": "main/model"
+        },
+        {
+          "concern": "Colombia first-round 3-1 can be over-extrapolated.",
+          "category": "data",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "Colombia scored at 41, 65 and 90+9; the review notes late transition and substitute finishing.",
+          "why_it_matters": "A late third goal and game-state chase can inflate expected finishing edge if treated as stable dominance.",
+          "follow_up_check": "Separate open-play control from transition and late-game chasing effects.",
+          "owner": "model"
+        },
+        {
+          "concern": "DR Congo upset path is live through set pieces and direct play.",
+          "category": "tactical",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "DR Congo equalized Portugal from a corner/second-phase header and held a major favorite to 1-1.",
+          "why_it_matters": "Poisson models often underweight set-piece clusters and early-goal state changes.",
+          "follow_up_check": "Keep DR Congo set-piece, aerial and transition paths explicit in lineup-based sensitivity checks.",
+          "owner": "tactics/model"
+        },
+        {
+          "concern": "Tactical factors are filled but have explicit double-counting risk.",
+          "category": "tactical",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "The tactical packet backs Colombia transition/wide/channel edges and DR Congo set-piece/counter routes, while warning to cap overlap with Luis Diaz/Campaz/Cucho, Wissa/Bakambu and set-piece player_state.",
+          "why_it_matters": "Colombia +0.08 and DR Congo +0.10 tactical adjustments can duplicate first-round goals, player_state and attack scores if applied linearly.",
+          "follow_up_check": "Model owner should cap Colombia transition/wide/substitution overlap and preserve DR Congo set-piece/counter tails.",
+          "owner": "tactics/model"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "DR Congo repeat the Portugal script: survive pressure, score from a set piece or second ball, and compress the match into a draw.",
+        "Colombia lead but game state opens transition lanes both ways, making 1-1, 2-1 and 2-2 tails more important.",
+        "James/Luis Diaz usage or minutes plan changes Colombia chance creation.",
+        "A physical, card-heavy match creates red-card or penalty tail risk."
+      ],
+      "overconfidence_flags": [
+        "Colombia win below 50% should be treated as a lean, not a confident favorite.",
+        "1-1 is the top scoreline and 0-1 is a top-five scoreline.",
+        "Market comparison is absent, so no price-based confirmation exists."
+      ],
+      "market_flags": [
+        "odds_implied_probability is null.",
+        "model_market_delta is null.",
+        "No official China Sports Lottery or same-source live market board.",
+        "Colombia first-round 3-1 can create recency premium; DR Congo draw with Portugal can also distort underdog narrative."
+      ],
+      "quant_chain_flags": [
+        "recent_round1_form and player_state may both reflect the same first-round events.",
+        "Poisson tail_probability 0.0066 is likely too thin for red card, early goal, set-piece and game-state correlation.",
+        "Over/under 2.5 is near 50/50; goal-market confidence should be low.",
+        "Market_adjustment is 0.00 due missing market data, not because market risk is neutral."
+      ],
+      "recommended_probability_adjustment": {
+        "colombia_win": "-3 to -5 percentage points until XI, tactical and market gates clear",
+        "draw": "+2 to +3 percentage points",
+        "dr_congo_win": "+1 to +3 percentage points",
+        "xg_note": "Stress test Colombia xG down by 0.10-0.18 if James/Diaz minutes or roles are limited; keep DR Congo xG near or above 1.0 if Wissa/Bakambu/Mbemba set-piece/counter roles are intact.",
+        "owner": "model"
+      },
+      "missing_data": [
+        "T-75m official lineups",
+        "James/Luis Diaz/Duran roles and minutes",
+        "Wissa/Bakambu/Mbemba latest availability",
+        "lineup-dependent tactical confirmation after official XI",
+        "official China Sports Lottery odds",
+        "same-source 1X2/handicap/totals snapshot",
+        "official hourly stadium weather"
+      ],
+      "handoff_notes": "Model can remain discussion-only, but final language should emphasize Colombia lean with high draw/DR Congo tail."
+    }
+  ],
+  "recommended_probability_adjustment": {
+    "overall": "Keep verdict hold. Use the model as discussion-only until official lineups, final availability, official weather and market snapshots are complete; tactical packet is usable but source-limited and must be capped for overlap.",
+    "portugal_vs_uzbekistan": "Discount Portugal win from 63.85% by 3-6 points; shift mostly to draw and a smaller amount to Uzbekistan tail.",
+    "colombia_vs_dr_congo": "Discount Colombia win from 48.93% by 3-5 points; lift draw by 2-3 and DR Congo by 1-3."
+  },
+  "blocked_publication_language": [
+    "主推",
+    "稳胆",
+    "可小注",
+    "稳",
+    "深让信心",
+    "可执行投注建议"
+  ],
+  "handoff_notes": "总体 verdict: hold。阻断 owner：data 负责临场首发/伤停/天气/赔率，tactics 负责官方 XI 后的对位复核，model 负责折扣后敏感性复算，main 负责阻断投注化表达。"
+}

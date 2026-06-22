@@ -1,0 +1,171 @@
+{
+  "phase": "matchup_tactical_refresh",
+  "group": "K",
+  "round": 2,
+  "status": "partial_source_limited",
+  "created_at": "2026-06-22T21:53:01+08:00",
+  "updated_at": "2026-06-22T21:56:50+08:00",
+  "owner": "worldcup-tactics-coach",
+  "boundary": {
+    "no_score_prediction": true,
+    "no_1x2_probability": true,
+    "no_betting_advice": true
+  },
+  "fixture_confirmation": {
+    "status": "confirmed_by_data_thread",
+    "data_refresh_path": "data/packets/matches/k-group-round2-data-refresh-20260622.json",
+    "data_refresh_status": "partial_source_limited",
+    "confirmed_matches": [
+      "2026-06-23 Portugal vs Uzbekistan",
+      "2026-06-23 Colombia vs DR Congo"
+    ],
+    "remaining_limits": [
+      "T-75m official lineups missing",
+      "official China sports lottery odds missing",
+      "same-source live 1X2/handicap/totals snapshot missing",
+      "final injury and minutes-limit confirmation incomplete"
+    ]
+  },
+  "scale_definition": {
+    "magnitude_scale": "-2.0 to +2.0",
+    "positive": "favorable tactical adjustment for the named team",
+    "negative": "unfavorable adjustment or higher tactical risk for the named team",
+    "cap_rule": "Do not add magnitudes linearly. Cap overlap with player_state, attack/defense scores, round-1 goals/concessions, injuries and set-piece events."
+  },
+  "inputs_read": [
+    "data/packets/matches/k-group-round2-data-refresh-20260622.json",
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_葡萄牙_1-1_刚果金_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md",
+    "data/packets/tactics/portugal-tactics-packet.json",
+    "data/packets/tactics/dr-congo-tactics-packet.json",
+    "data/packets/tactics/uzbekistan-tactics-packet.json",
+    "data/packets/tactics/colombia-tactics-packet.json",
+    "data/outputs/player_state/portugal-player-state.json",
+    "data/outputs/player_state/dr-congo-player-state.json",
+    "data/outputs/player_state/uzbekistan-player-state.json",
+    "data/outputs/player_state/colombia-player-state.json",
+    "队伍/葡萄牙/成员表.md",
+    "队伍/刚果金/成员表.md",
+    "队伍/乌兹别克斯坦/成员表.md",
+    "队伍/哥伦比亚/成员表.md"
+  ],
+  "source_status": {
+    "data_refresh_packet": "partial_source_limited",
+    "player_state": {
+      "portugal": "26/26 updated",
+      "uzbekistan": "26/26 partial_postmatch_synced",
+      "colombia": "26/26 updated",
+      "dr_congo": "26/26 updated, status partial"
+    }
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-23_portugal_vs_uzbekistan",
+      "match": "Portugal vs Uzbekistan",
+      "match_cn": "葡萄牙 vs 乌兹别克斯坦",
+      "date_local": "2026-06-23",
+      "fixture_status": "confirmed_by_data_thread",
+      "team_a": "Portugal",
+      "team_b": "Uzbekistan",
+      "tactical_summary": "Portugal's control, wide depth and set-piece quality should stress Uzbekistan's 3-4-3/5-4-1 block. Uzbekistan's credible route is to keep the match compact, then use Shomurodov as a target and Fayzullaev/Khamdamov as transition or second-phase creators. Houston heat/humidity and Portugal's Ronaldo/Dias role uncertainty keep the package source-limited.",
+      "teams": {
+        "Portugal": {
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.4, "evidence": ["Portugal can press from a 4-2-3-1/4-3-3 base.", "Uzbekistan's first-round build-up was limited and improved only after halftime changes."], "confidence": "medium", "model_note": "Small territory/regain boost only; Ronaldo role can cap first-line pressure.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Do not double-count Ronaldo/pressing-role adjustments."}},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.8, "evidence": ["Portugal use Vitinha, Bruno Fernandes, Bernardo Silva and Joao Neves for control.", "Uzbekistan do not profile as a sustained high-press side."], "confidence": "medium_high", "model_note": "Use to lower Portugal turnover risk; cap against baseline team-strength and control score.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Joao Neves and Pedro Neto round-1 form already raise state inputs."}},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.5, "evidence": ["Portugal have Leao, Neto and Conceicao as direct runners.", "Uzbekistan wing-back spaces and post-turnover recovery were stressed by Colombia."], "confidence": "medium", "model_note": "Moderate boost; stronger only if Portugal start more pace and fewer static attackers.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Overlaps with Neto assist and attacking-depth score."}},
+            "transition_defense_risk": {"direction": "mixed", "magnitude": -0.5, "evidence": ["Portugal tactics packet flags fullback-space and second-ball defense risk.", "Uzbekistan keep Shomurodov and Fayzullaev as direct outlets."], "confidence": "medium", "model_note": "Preserve Uzbekistan counter tail when Portugal fullbacks push high.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Overlap with Fayzullaev/Shomurodov player-state."}},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.8, "evidence": ["Portugal's wide options include Neto, Leao, Conceicao, Cancelo and Nuno Mendes.", "Uzbekistan tactics packet identifies wing-back-behind risk."], "confidence": "medium_high", "model_note": "Main Portugal matchup edge; cap if lineup is slower or Uzbekistan stay in a deep back five.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Wide events from round 1 are already in Portugal player_state."}},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.7, "evidence": ["Portugal have Vitinha/Bruno/Joao Neves control profiles.", "Uzbekistan's midfield was more reactive against Colombia."], "confidence": "medium_high", "model_note": "Use as possession stability, not an automatic chance-quality add.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Joao Neves goal and midfield form can be counted twice."}},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.5, "evidence": ["Portugal tactics packet marks set pieces high with Ronaldo/Dias/Bruno profiles.", "Uzbekistan have Khusanov and back-three height but conceded pressure from wide/dead-ball phases."], "confidence": "medium", "model_note": "Keep as capped secondary edge because first-round Portugal heading/set-piece evidence already exists.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Joao Neves headed goal and Portugal set-piece strength overlap."}},
+            "defensive_line_risk": {"direction": "mixed", "magnitude": -0.3, "evidence": ["Portugal conceded from a set-piece second phase to DR Congo.", "Uzbekistan have Shomurodov and Fayzullaev for direct/second-ball attacks."], "confidence": "medium", "model_note": "Small clean-sheet-tail risk; do not turn it into a broad defense downgrade.", "double_counting_risk": {"with_player_state": false, "with_attack_score": false, "note": "May overlap with Portugal round-1 concession adjustment."}},
+            "coach_substitution_risk": {"direction": "mixed", "magnitude": 0.2, "evidence": ["Portugal used Conceicao, Leao, Semedo and Ramos but did not turn first-round control into a win.", "Martinez has deep bench but must balance Ronaldo minutes and pressure intensity."], "confidence": "medium", "model_note": "Bench depth is positive; game-management risk caps the number.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Bench attackers' state and attack depth may already be encoded."}},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.2, "evidence": ["Portugal led early in round 1 but did not sustain separation.", "Uzbekistan improved after halftime changes when chasing."], "confidence": "medium", "model_note": "Condition on first goal and halftime state; do not use as unconditional boost.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Can double-count round-1 narrative and Portugal favorite strength."}}
+          }
+        },
+        "Uzbekistan": {
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "negative", "magnitude": -0.5, "evidence": ["Uzbekistan tactics packet says long high press is unlikely.", "First round used 3-4-3 dropping to 5-4-1."], "confidence": "medium", "model_note": "Do not assign high-regain value unless official XI changes shape.", "double_counting_risk": {"with_player_state": false, "with_attack_score": false, "note": "Mostly structural."}},
+            "build_up_resistance_adjustment": {"direction": "negative", "magnitude": -0.8, "evidence": ["Uzbekistan first-round progression was limited before halftime changes.", "Portugal can crowd first passes through midfield and wide traps."], "confidence": "medium", "model_note": "Increase long-ball/clearance assumptions; soften if Khamdamov/Sayfiev start.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Overlap with Yusupov/Shomurodov/Fayzullaev state only if modeled separately."}},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.5, "evidence": ["Fayzullaev scored and was more active after halftime.", "Shomurodov created the first-round goal action but also had a turnover before Colombia's second."], "confidence": "medium", "model_note": "Preserve underdog counter route; cap because it is already in player_state.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "High overlap with Fayzullaev/Shomurodov form_status."}},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.8, "evidence": ["Uzbekistan conceded after a midfield turnover and late wide-cross sequence vs Colombia.", "Portugal have multiple wide runners and second-wave midfielders."], "confidence": "medium_high", "model_note": "Apply when Uzbekistan chase or wing-backs advance.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Can double-count Portugal wide/transition factors."}},
+            "wide_channel_advantage": {"direction": "negative", "magnitude": -0.7, "evidence": ["Uzbekistan tactics packet flags wing-back-behind risk.", "Portugal wide depth is one of the clearest matchup stresses."], "confidence": "medium_high", "model_note": "Net defensive weakness; keep some attacking wing-back value if Khamdamov/Sayfiev start.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Overlap with Portugal wide_channel_advantage."}},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.6, "evidence": ["Portugal midfield profiles are stronger in control.", "Uzbekistan central midfield had limited first-round control."], "confidence": "medium", "model_note": "Lower settled possession value but keep low-block resistance separate.", "double_counting_risk": {"with_player_state": false, "with_attack_score": true, "note": "May overlap with baseline strength gap."}},
+            "set_piece_advantage": {"direction": "mixed", "magnitude": 0.2, "evidence": ["Uzbekistan have Khusanov and back-three aerial value.", "Portugal also carry stronger high-point and delivery profiles."], "confidence": "low", "model_note": "Small tail only; set-piece map incomplete.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Could overlap with Khusanov defensive/offensive state."}},
+            "defensive_line_risk": {"direction": "negative", "magnitude": -0.7, "evidence": ["Back five protects the box but can be pulled wide.", "Colombia punished Uzbekistan in transition and late wide delivery."], "confidence": "medium", "model_note": "Risk rises if trailing; lower if compact 5-4-1 holds early.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Overlap with conceded-goals and defender form states."}},
+            "coach_substitution_risk": {"direction": "mixed", "magnitude": 0.2, "evidence": ["Cannavaro halftime changes improved progression and created the first-round goal spell.", "Initial setup was passive and official second-round XI is unknown."], "confidence": "medium", "model_note": "Small positive for adjustment capacity, but do not boost starting baseline.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Khamdamov/Sayfiev substitute states can be double-counted."}},
+            "game_state_tendency": {"direction": "mixed", "magnitude": -0.5, "evidence": ["Uzbekistan were competitive after equalizing but conceded again quickly.", "Low-block path improves if level early; chasing exposes wing-backs."], "confidence": "medium", "model_note": "Bimodal: reduce risk in low-event level state, increase sharply when chasing.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Can double-count transition_defense_risk and round-1 concession narrative."}}
+          }
+        }
+      }
+    },
+    {
+      "match_id": "2026-06-23_colombia_vs_dr_congo",
+      "match": "Colombia vs DR Congo",
+      "match_cn": "哥伦比亚 vs 刚果金",
+      "date_local": "2026-06-23",
+      "fixture_status": "confirmed_by_data_thread",
+      "team_a": "Colombia",
+      "team_b": "DR Congo",
+      "tactical_summary": "Colombia's strongest provisional edges are Luis Diaz-led wide/transition attacks, James service, set pieces and late bench impact. DR Congo's credible route is compact 5-3-2 defending, Wissa/Bakambu direct transition and set-piece second balls; travel to Guadalajara and altitude/weather gaps keep confidence capped.",
+      "teams": {
+        "Colombia": {
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.5, "evidence": ["Colombia tactics packet supports mid/high press on wide and first-pass lanes.", "DR Congo prefer direct release under pressure."], "confidence": "medium", "model_note": "Use for territory and forced direct play; not a pure shot boost.", "double_counting_risk": {"with_player_state": false, "with_attack_score": false, "note": "Mostly structural."}},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.5, "evidence": ["Colombia have James, Lerma and center-back speed/protection.", "DR Congo pressing profile is not sustained high."], "confidence": "medium", "model_note": "Small possession-security boost; cap for physical duel pressure.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "James/Lerma state may overlap."}},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 1.0, "evidence": ["Luis Diaz scored/assisted and is Colombia's primary left-channel accelerator.", "Campaz and Cucho produced a late substitute goal chain."], "confidence": "high", "model_note": "Largest Colombia edge; cap because player_state already strongly upgrades Diaz/Campaz/Cucho.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Very high overlap with first-round goals and attacking player form."}},
+            "transition_defense_risk": {"direction": "mixed", "magnitude": -0.4, "evidence": ["DR Congo have Wissa/Bakambu/Sadiki direct routes.", "Colombia fullbacks can push high, creating counter space."], "confidence": "medium", "model_note": "Preserve DR Congo counter tail; lower if Colombia keep fullback restraint.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Overlap with Wissa/Bakambu player_state."}},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.9, "evidence": ["Luis Diaz, Munoz and Arias provide strong wide/right-left pressure.", "DR Congo wing-backs defended well but can be pinned and forced deep."], "confidence": "medium_high", "model_note": "Key Colombia matchup edge; cap with transition_attack_adjustment.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Diaz/Munoz first-round goal chain already counted."}},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.6, "evidence": ["James sets tempo and set pieces; Lerma/Puerta give duel/control base.", "DR Congo are more reactive in settled phases."], "confidence": "medium", "model_note": "Use as field tilt and chance-supply support, not duplicate wide attack.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "James/Puerta/Lerma states can overlap with attack score."}},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.6, "evidence": ["Colombia tactics packet marks James delivery and aerial targets as high-value.", "DR Congo also have set-piece strength, reducing net edge."], "confidence": "medium", "model_note": "Moderate edge only; avoid double-counting James creation and Colombia goals.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Set-piece service overlaps with James and team attack grade."}},
+            "defensive_line_risk": {"direction": "mixed", "magnitude": -0.3, "evidence": ["Colombia fullbacks and wide players can leave counter lanes.", "DR Congo transition route through Wissa/Bakambu is credible."], "confidence": "medium", "model_note": "Small opponent-tail adjustment only.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Overlap with DR Congo transition_attack_adjustment."}},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.4, "evidence": ["Campaz scored after coming on; Cucho assisted late vs Uzbekistan.", "Lorenzo kept a counter outlet while rotating late."], "confidence": "medium_high", "model_note": "Late-bench positive, but cap because substitute output is already in player_state.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Campaz/Cucho first-round events already reflected."}},
+            "game_state_tendency": {"direction": "positive", "magnitude": 0.5, "evidence": ["Colombia scored after Uzbekistan equalized and again late through substitutes.", "Lorenzo profile keeps counter outlet when leading."], "confidence": "medium", "model_note": "Use as resilience/late-threat factor, capped against transition and substitution boosts.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "May double-count first-round late goal and substitute impact."}}
+          }
+        },
+        "DR Congo": {
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "mixed", "magnitude": 0.1, "evidence": ["DR Congo mainly defended compactly vs Portugal.", "They can still make phase pressure and physical contests matter."], "confidence": "medium", "model_note": "Tiny disruption value only; do not model sustained high press.", "double_counting_risk": {"with_player_state": false, "with_attack_score": false, "note": "Mostly structural."}},
+            "build_up_resistance_adjustment": {"direction": "negative", "magnitude": -0.4, "evidence": ["DR Congo tactics packet discourages risky short build-up against stronger pressure.", "Colombia can lock wide/DM first passes."], "confidence": "medium", "model_note": "Increase direct-play share and second-ball variance.", "double_counting_risk": {"with_player_state": false, "with_attack_score": false, "note": "Not primarily player-state driven."}},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.7, "evidence": ["Wissa scored and remained active in counters.", "Bakambu hit the post and Sadiki added direct progression after coming on."], "confidence": "medium_high", "model_note": "Primary DR Congo upside; cap because Wissa/Bakambu/Sadiki player states already capture it.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "High overlap with round-1 player_state and counter-path notes."}},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.7, "evidence": ["Colombia's first-round goals included wide/transition and substitute late impact.", "DR Congo wing-backs can be pinned or stretched."], "confidence": "medium_high", "model_note": "Main downside if DR Congo chase or wing-backs step high.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Overlaps with Colombia transition and wide-channel factors."}},
+            "wide_channel_advantage": {"direction": "mixed", "magnitude": 0.1, "evidence": ["Wan-Bissaka and Masuaku give defensive wing-back value.", "Colombia's Diaz/Munoz/Arias profile is stronger in the same lanes."], "confidence": "medium", "model_note": "Do not give DR Congo a net wide edge; keep only counter-release value.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "May overlap with wing-back defensive form."}},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.6, "evidence": ["Colombia have James/Lerma/Puerta/Rios control and duel options.", "DR Congo were more comfortable without the ball vs Portugal."], "confidence": "medium", "model_note": "Lower settled-possession assumptions, not counter threat.", "double_counting_risk": {"with_player_state": false, "with_attack_score": true, "note": "Partly overlaps with Colombia strength and DR Congo attack ceiling."}},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.5, "evidence": ["DR Congo equalized through corner/second-phase header vs Portugal.", "Mbemba, Bakambu and Wissa give aerial/box presence."], "confidence": "medium_high", "model_note": "Keep as important underdog tail but cap heavily due first-round goal already in player_state.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Wissa goal and set-piece path already reflected."}},
+            "defensive_line_risk": {"direction": "negative", "magnitude": -0.5, "evidence": ["DR Congo defended well in a 5-3-2 but absorbed long pressure.", "Colombia have quicker wide runners than Portugal's first-round rhythm showed."], "confidence": "medium", "model_note": "Risk is moderate, reduced if five-back stays compact.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Defender form from Portugal draw may already be credited."}},
+            "coach_substitution_risk": {"direction": "mixed", "magnitude": 0.0, "evidence": ["Desabre added Sadiki and late defensive/forward changes vs Portugal.", "Full substitution tendencies by state remain incomplete."], "confidence": "low", "model_note": "No net adjustment; wait for lineup and bench plan.", "double_counting_risk": {"with_player_state": true, "with_attack_score": false, "note": "Sadiki late impact may already be encoded."}},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.2, "evidence": ["DR Congo proved they can stay compact and use set-piece/counter windows.", "If trailing, their structure opens and Colombia transition risk rises."], "confidence": "medium", "model_note": "Positive only in level/low-event state; negative if forced to chase.", "double_counting_risk": {"with_player_state": true, "with_attack_score": true, "note": "Can double-count transition and set-piece factors if applied unconditionally."}}
+          }
+        }
+      }
+    }
+  ],
+  "data_gaps": [
+    {"gap": "T-75m official lineups missing", "impact": "Portugal Ronaldo/Dias plan, Uzbekistan back-five personnel, Colombia James/Diaz load and DR Congo 5-3-2 personnel cannot be locked.", "priority": "high"},
+    {"gap": "official China sports lottery odds missing", "impact": "No betting or market execution language is allowed.", "priority": "high"},
+    {"gap": "same-source live 1X2/handicap/totals snapshot missing", "impact": "Model cannot do final market calibration from this tactical packet alone.", "priority": "high"},
+    {"gap": "fresh injury and minutes-limit confirmation incomplete", "impact": "Ruben Dias conflict, Ronaldo load, Uzbekistan partial player_state, DR Congo travel recovery and Colombia creator minutes remain uncertain.", "priority": "high"},
+    {"gap": "complete set-piece taker/target maps incomplete", "impact": "Portugal, DR Congo and Colombia set-piece factors need caps because round-1 goals/events already inform player_state.", "priority": "medium"},
+    {"gap": "roster JSON schemas nested for Uzbekistan/Colombia", "impact": "Facts are available through player_state and member tables, but automated roster parsers should recurse into nested player arrays.", "priority": "low"}
+  ],
+  "handoff_notes": {
+    "model_agent": [
+      "Fixtures are confirmed by data refresh, but packet remains partial_source_limited because lineups, official odds and final injury/minute updates are missing.",
+      "Portugal vs Uzbekistan: strongest tactical modifiers are Portugal wide_channel_advantage, Portugal build_up_resistance, Uzbekistan transition_defense_risk and Uzbekistan counter tail through Fayzullaev/Shomurodov.",
+      "Colombia vs DR Congo: strongest modifiers are Colombia transition_attack, Colombia wide_channel_advantage, DR Congo set_piece_advantage and DR Congo transition_attack.",
+      "Cap all set-piece factors because first-round goals already entered player_state and postmatch narratives.",
+      "Do not linearly add Colombia transition_attack, wide_channel_advantage and coach_substitution_risk; they share Diaz/Campaz/Cucho evidence."
+    ],
+    "red_team": [
+      "Challenge Portugal favorite/brand and Ronaldo role double counting.",
+      "Challenge whether Uzbekistan's second-half improvement is being over-weighted from a short sample.",
+      "Challenge DR Congo defensive resilience after the Portugal draw: compactness was real but may not transfer to Colombia's wide-speed profile.",
+      "Challenge Colombia first-round goals, player_state and tactical factors for triple-counting Luis Diaz/Campaz/Cucho.",
+      "Challenge environment adjustments: Houston heat and Guadalajara altitude are partial context, not lineup-quality facts."
+    ]
+  },
+  "notes": [
+    "Filled after data refresh confirmed fixtures.",
+    "No final score, win/draw/loss probability, or betting recommendation is provided."
+  ]
+}

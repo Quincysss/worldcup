@@ -1,0 +1,296 @@
+{
+  "phase": "pre_match_data_refresh",
+  "group": "K",
+  "round": 2,
+  "status": "partial_source_limited",
+  "created_at": "2026-06-22T01:40:00+08:00",
+  "updated_at": "2026-06-22T02:35:00+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "K group round 2 pre-prediction factual data refresh only; no prediction and no betting advice.",
+  "factor_inputs_ready": "partial",
+  "factor_inputs_reason": "Round 2 fixtures, venues, post-round-1 local player_state/roster summaries and public pre-match context are refreshed. Official lineups, final official injury bulletins, official China lottery odds, same-source live market snapshot and official hourly stadium weather remain unavailable.",
+  "betting_gate_status": "discussion_only_hold",
+  "captured_at": "2026-06-22T02:35:00+08:00",
+  "matches": [
+    {
+      "match_id": "2026-06-23_portugal_vs_uzbekistan",
+      "match": "Portugal vs Uzbekistan",
+      "date_local": "2026-06-23",
+      "kickoff_local": "12:00 UTC-5 / Houston local",
+      "kickoff_beijing": "2026-06-24T01:00:00+08:00",
+      "venue": "Houston Stadium / NRG Stadium",
+      "host_city": "Houston, Texas",
+      "home_away_display": "neutral_tournament_listing_team1_portugal_team2_uzbekistan",
+      "fixture_source_status": "confirmed_by_group_k_schedule_secondary_fifa_referenced",
+      "source_conflict": null,
+      "rest_days": {
+        "portugal": "Round 1 was on 2026-06-17 at Houston Stadium vs DR Congo. Approx 5 full rest days and no city change.",
+        "uzbekistan": "Round 1 was on 2026-06-17 in Mexico City vs Colombia. Approx 5 full rest days and a Mexico City to Houston transfer."
+      },
+      "travel": {
+        "portugal": "Same-city Houston sequence; lowest travel load. Training-base commute not verified.",
+        "uzbekistan": "Mexico City to Houston international transfer, approx 1200 km class estimate."
+      },
+      "climate_weather_risk": {
+        "status": "partial_source_limited",
+        "facts": [
+          "Houston regional reporting indicates a building heat dome, low-to-mid 90s F temperatures and high humidity with possible triple-digit heat index.",
+          "NRG/Houston Stadium has a closable roof, so in-stadium weather delay risk is lower than an open-air venue; outdoor transit, fan events and training exposure still carry heat/humidity risk.",
+          "Official hourly stadium forecast was not retrieved."
+        ]
+      },
+      "official_lineup_status": "not_available_yet",
+      "latest_injury_status": "partial_source_limited",
+      "odds_snapshot_status": {
+        "official_china_jingcai": null,
+        "same_source_1x2_handicap_totals": null,
+        "note": "No official China lottery or same-source live 1X2/handicap/totals snapshot retrieved; no betting advice."
+      },
+      "source_log": [
+        {
+          "source": "2026 FIFA World Cup Group K schedule page",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_K",
+          "captured_at": "2026-06-22T02:35:00+08:00",
+          "supports_fields": ["fixture", "kickoff", "venue", "round1_standings"],
+          "source_status": "secondary_fifa_referenced"
+        },
+        {
+          "source": "SF Chronicle sports calendar",
+          "url": "https://www.sfchronicle.com/sports/article/sportscal-22313634.php",
+          "captured_at": "2026-06-22T02:35:00+08:00",
+          "supports_fields": ["US time cross-check"],
+          "source_status": "secondary_cross_check"
+        }
+      ]
+    },
+    {
+      "match_id": "2026-06-23_colombia_vs_dr_congo",
+      "match": "Colombia vs DR Congo",
+      "date_local": "2026-06-23",
+      "kickoff_local": "20:00 UTC-6 / Guadalajara local",
+      "kickoff_beijing": "2026-06-24T10:00:00+08:00",
+      "venue": "Estadio Guadalajara / Estadio Akron",
+      "host_city": "Zapopan / Guadalajara, Jalisco",
+      "home_away_display": "neutral_tournament_listing_team1_colombia_team2_dr_congo",
+      "fixture_source_status": "confirmed_by_group_k_schedule_secondary_fifa_referenced",
+      "source_conflict": null,
+      "rest_days": {
+        "colombia": "Round 1 was on 2026-06-17 in Mexico City vs Uzbekistan. Approx 5 full rest days and a short transfer to Guadalajara.",
+        "dr_congo": "Round 1 was on 2026-06-17 in Houston vs Portugal. Approx 5 full rest days and a Houston to Guadalajara transfer."
+      },
+      "travel": {
+        "colombia": "Mexico City to Guadalajara, approx 460 km class estimate.",
+        "dr_congo": "Houston to Guadalajara cross-border transfer, approx 1300 km class estimate."
+      },
+      "climate_weather_risk": {
+        "status": "partial_source_limited",
+        "facts": [
+          "Estadio Akron / Guadalajara is in a high-altitude city context, approx 1500 m class; this may affect feel and recovery.",
+          "Official hourly stadium forecast was not retrieved."
+        ]
+      },
+      "official_lineup_status": "not_available_yet",
+      "latest_injury_status": "partial_source_limited",
+      "odds_snapshot_status": {
+        "official_china_jingcai": null,
+        "same_source_1x2_handicap_totals": null,
+        "note": "No official China lottery or same-source live 1X2/handicap/totals snapshot retrieved; no betting advice."
+      },
+      "source_log": [
+        {
+          "source": "2026 FIFA World Cup Group K schedule page",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_K",
+          "captured_at": "2026-06-22T02:35:00+08:00",
+          "supports_fields": ["fixture", "kickoff", "venue", "round1_standings"],
+          "source_status": "secondary_fifa_referenced"
+        },
+        {
+          "source": "SF Chronicle sports calendar",
+          "url": "https://www.sfchronicle.com/sports/article/sportscal-22313634.php",
+          "captured_at": "2026-06-22T02:35:00+08:00",
+          "supports_fields": ["US time cross-check"],
+          "source_status": "secondary_cross_check"
+        }
+      ]
+    }
+  ],
+  "teams": {
+    "portugal": {
+      "player_state_file": "data/outputs/player_state/portugal-player-state.json",
+      "roster_file": "data/packets/rosters/portugal-roster.json",
+      "member_table": "teams/portugal/member-table.md",
+      "player_count": 26,
+      "player_state_status": "updated",
+      "roster_status": "available",
+      "avg_form_status_1_5": 2.81,
+      "first_round_record": "Portugal 1-1 DR Congo",
+      "key_player_state": [
+        "Joao Neves: round-1 goal, positive status input.",
+        "Pedro Neto: round-1 assist, wide output available.",
+        "Cristiano Ronaldo: 90 minutes in round 1 with no goal or assist; role and load remain pre-match watch points.",
+        "Bruno Fernandes, Vitinha and Joao Cancelo: main build-up/progression inputs remain usable."
+      ],
+      "cards_suspension": "Round-1 yellows: Bernardo Silva, Nelson Semedo, Tomas Araujo. No confirmed red card or suspension found.",
+      "injury_minutes_risk": "Ruben Dias injury wording is conflicting in local review. Ronaldo starting role and Leao/Conceicao rotation are public pre-match watch points.",
+      "source_status": "partial_current"
+    },
+    "dr_congo": {
+      "player_state_file": "data/outputs/player_state/dr-congo-player-state.json",
+      "roster_file": "data/packets/rosters/dr-congo-roster.json",
+      "member_table": "teams/dr-congo/member-table.md",
+      "player_count": 26,
+      "player_state_status": "updated",
+      "roster_status": "available",
+      "avg_form_status_1_5": 2.69,
+      "first_round_record": "Portugal 1-1 DR Congo",
+      "key_player_state": [
+        "Yoane Wissa: round-1 goal, transition and box-finishing signal available.",
+        "Arthur Masuaku: round-1 assist, left-side crossing input available.",
+        "Axel Tuanzebe, Samuel Moutoussamy and Aaron Wan-Bissaka: defensive/duel inputs available."
+      ],
+      "cards_suspension": "Round-1 yellow: Chancel Mbemba. No confirmed red card or suspension found.",
+      "injury_minutes_risk": "Several starters were substituted after 70 minutes in round 1; Houston to Guadalajara travel recovery needs pre-match recheck.",
+      "source_status": "partial_current"
+    },
+    "uzbekistan": {
+      "player_state_file": "data/outputs/player_state/uzbekistan-player-state.json",
+      "roster_file": "data/packets/rosters/uzbekistan-roster.json",
+      "member_table": "teams/uzbekistan/member-table.md",
+      "player_count": 26,
+      "player_state_status": "partial",
+      "roster_status": "available",
+      "avg_form_status_1_5": 2.27,
+      "first_round_record": "Uzbekistan 1-3 Colombia",
+      "key_player_state": [
+        "Abbosbek Fayzullaev: round-1 goal, positive attacking input.",
+        "Eldor Shomurodov: round-1 assist, front-line link and transition input available.",
+        "Otabek Shukurov and Dostonbek Khamdamov: midfield/front-line involvement available."
+      ],
+      "cards_suspension": "Round-1 yellow: Abdukodir Khusanov. Complete official card table remains a gap; no confirmed suspension found.",
+      "injury_minutes_risk": "Round-1 review remains partial due missing complete official card table and same-source player ratings. Usable for model input but needs red-team caution.",
+      "source_status": "partial_current"
+    },
+    "colombia": {
+      "player_state_file": "data/outputs/player_state/colombia-player-state.json",
+      "roster_file": "data/packets/rosters/colombia-roster.json",
+      "member_table": "teams/colombia/member-table.md",
+      "player_count": 26,
+      "player_state_status": "updated",
+      "roster_status": "available",
+      "avg_form_status_1_5": 3.22,
+      "first_round_record": "Uzbekistan 1-3 Colombia",
+      "key_player_state": [
+        "Luis Diaz: round-1 goal, left-side finishing and ball-carrying input up.",
+        "Daniel Munoz: round-1 goal, right-side forward-run input up.",
+        "Jaminton Campaz: substitute goal, bench scoring input up.",
+        "Cucho Hernandez: substitute assist, front-line rotation input available."
+      ],
+      "cards_suspension": "Round-1 yellow: Johan Mojica. No confirmed red card or suspension found.",
+      "injury_minutes_risk": "Luis Diaz and Arias carried 90-minute-class round-1 load. Short Mexico City to Guadalajara transfer.",
+      "source_status": "partial_current"
+    }
+  },
+  "group_state_after_round1": {
+    "source": "2026 FIFA World Cup Group K page, FIFA-referenced schedule/standings",
+    "table": [
+      {"team": "Colombia", "points": 3, "gf": 3, "ga": 1, "gd": 2},
+      {"team": "DR Congo", "points": 1, "gf": 1, "ga": 1, "gd": 0},
+      {"team": "Portugal", "points": 1, "gf": 1, "ga": 1, "gd": 0},
+      {"team": "Uzbekistan", "points": 0, "gf": 1, "ga": 3, "gd": -2}
+    ],
+    "fair_play_notes": "Group K schedule/standings source lists DR Congo -1, Portugal -3, Uzbekistan -1, Colombia -1 after matchday 1. Local review notes Uzbekistan complete official card table still needs recheck."
+  },
+  "model_input_summary": {
+    "baseline_strength": "Portugal and Colombia remain higher baseline teams; DR Congo draw against Portugal improves resistance signal; Uzbekistan debut loss leaves defensive risk but keeps Fayzullaev/Shomurodov attacking path.",
+    "recent_form": "Colombia strongest first-round result; Portugal and DR Congo drew; Uzbekistan lost 1-3 but generated a verified scoring event.",
+    "attack_signals": "Portugal: Joao Neves/Neto chain; Colombia: Luis Diaz/Munoz/Campaz; DR Congo: Wissa/Masuaku cross path; Uzbekistan: Fayzullaev/Shomurodov.",
+    "defense_signals": "Portugal conceded equalizer; DR Congo held Portugal but must travel; Uzbekistan conceded 3; Colombia conceded once but finished strongly.",
+    "player_state": "All four teams have 26-player files; Uzbekistan player_state_update_status remains partial due source gaps.",
+    "injury_minutes_risk": "Ruben Dias conflict, Ronaldo role/minutes debate, Colombia and Portugal attacking-player load, DR Congo/Uzbekistan travel recovery.",
+    "schedule_environment": "Houston heat/humidity for Portugal-Uzbekistan; Guadalajara altitude/travel context for Colombia-DR Congo. Official hourly weather missing."
+  },
+  "missing_fields": [
+    "T-75m official lineups",
+    "official final injury or medical bulletins",
+    "official China sports lottery odds",
+    "same-source live 1X2, handicap and totals snapshot",
+    "official hourly stadium weather forecast",
+    "complete official cards and technical stats for Uzbekistan-Colombia remain partial locally"
+  ],
+  "source_log": [
+    {
+      "source": "2026 FIFA World Cup Group K schedule page",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_K",
+      "captured_at": "2026-06-22T02:35:00+08:00",
+      "supports_fields": ["round2_fixtures", "kickoff_times", "venues", "standings", "discipline", "first_round_events"],
+      "status": "FIFA-referenced_secondary_schedule"
+    },
+    {
+      "source": "SF Chronicle sports calendar",
+      "url": "https://www.sfchronicle.com/sports/article/sportscal-22313634.php",
+      "captured_at": "2026-06-22T02:35:00+08:00",
+      "supports_fields": ["US TV schedule time cross-check"],
+      "status": "secondary_schedule_cross_check"
+    },
+    {
+      "source": "talkSPORT Portugal vs Uzbekistan preview",
+      "url": "https://talksport.com/football/world-cup/4353040/where-to-watch-portugal-vs-uzbekistan-tv-channel-live-stream-commentary/",
+      "captured_at": "2026-06-22T02:35:00+08:00",
+      "supports_fields": ["Portugal team news context", "kickoff UK time", "rotation signals"],
+      "status": "secondary_team_news"
+    },
+    {
+      "source": "Guardian Ronaldo role analysis",
+      "url": "https://www.theguardian.com/football/2026/jun/22/cristiano-ronaldo-portugal-world-cup",
+      "captured_at": "2026-06-22T02:35:00+08:00",
+      "supports_fields": ["Portugal Ronaldo role risk", "round1 context"],
+      "status": "analysis_context_not_injury_source"
+    },
+    {
+      "source": "Houston Chronicle heat dome forecast",
+      "url": "https://www.houstonchronicle.com/news/houston-weather/forecast/article/houston-heat-dome-builds-22314041.php",
+      "captured_at": "2026-06-22T02:35:00+08:00",
+      "supports_fields": ["Houston heat and humidity context"],
+      "status": "regional_weather_context"
+    },
+    {
+      "source": "Local K group first-round reviews/player_state/rosters",
+      "url": "E:/worldcup/matches/completed/group-stage/K; E:/worldcup/data/outputs/player_state; E:/worldcup/data/packets/rosters",
+      "captured_at": "2026-06-22T02:35:00+08:00",
+      "supports_fields": ["round1 minutes and events", "form_status", "internal_match_rating", "local gaps"],
+      "status": "local_baseline"
+    }
+  ],
+  "gaps_and_conflicts": [
+    {
+      "field": "official_lineups",
+      "status": "not_available_yet",
+      "detail": "Capture time is before the T-75m official lineup window for both June 23 matches."
+    },
+    {
+      "field": "official_china_jingcai_odds",
+      "status": "missing",
+      "detail": "No official China Sports Lottery odds page retrieved."
+    },
+    {
+      "field": "same_source_market_snapshot",
+      "status": "missing",
+      "detail": "No same-source live 1X2, handicap and totals snapshot retrieved."
+    },
+    {
+      "field": "weather",
+      "status": "partial_source_limited",
+      "detail": "Houston regional heat/humidity context available; Guadalajara official hourly forecast unavailable."
+    },
+    {
+      "field": "uzbekistan_player_state",
+      "status": "partial",
+      "detail": "Local Uzbekistan postmatch sync remains partial due missing complete official cards/technical stats and external ratings."
+    }
+  ],
+  "handoff_notes": [
+    "Modeler can use this as conditional K group round 2 input, but not final T-75 packet.",
+    "Red team should review Portugal Ronaldo/Ruben Dias role-risk conflict and Uzbekistan partial source status.",
+    "Betting gate remains discussion_only_hold until official lineups and odds snapshots are captured."
+  ]
+}

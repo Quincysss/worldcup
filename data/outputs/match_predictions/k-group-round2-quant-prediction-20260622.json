@@ -1,0 +1,448 @@
+{
+  "model_scope": "K group round 2 quantitative match predictions",
+  "phase": "group_stage_round2_quant_prediction",
+  "group": "K",
+  "round": 2,
+  "status": "completed_pre_match_partial",
+  "created_at": "2026-06-22T22:35:00+08:00",
+  "updated_at": "2026-06-22T23:20:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "model_version": "worldcup-quant-poisson-partial-v0.2",
+  "scope": "K组第二轮葡萄牙vs乌兹别克斯坦、哥伦比亚vs刚果金量化预测；不进入出线预测，不给投注建议。",
+  "input_readiness": {
+    "label": "partial_source_limited",
+    "available_inputs": [
+      "K group round 2 data refresh packet with partial_source_limited status",
+      "K group round 1 prediction JSON",
+      "K group round 1 postmatch reviews",
+      "Portugal/Uzbekistan/Colombia/DR Congo team packets",
+      "Portugal/Uzbekistan/Colombia/DR Congo tactics packets",
+      "Portugal/Uzbekistan/Colombia/DR Congo roster and player_state files",
+      "Portugal/Uzbekistan/Colombia/DR Congo model briefs",
+      "postmatch state sync audit confirming K group round 2 fixtures"
+    ],
+    "missing_or_stale_inputs": [
+      "T-75m official lineups",
+      "official Chinese sports lottery odds",
+      "same-source 1X2/handicap/totals live odds snapshot",
+      "final injury and minutes-limit confirmation",
+      "official hourly stadium weather forecast",
+      "K group tactical refresh packet remains tactical_refresh_partial",
+      "complete official cards/technical stats for Uzbekistan-Colombia remains partial locally"
+    ],
+    "upstream_status": {
+      "data_refresh": "partial_source_limited",
+      "tactical_refresh": "tactical_refresh_partial"
+    },
+    "fixture_confirmation": {
+      "source": "data/reviews/postmatch_state_sync/postmatch-state-sync-audit.md and team packet group_matches",
+      "round2_matches": [
+        "葡萄牙 vs 乌兹别克斯坦",
+        "哥伦比亚 vs 刚果金"
+      ],
+      "date_policy": "local audit lists K group round 2 as scheduled 2026-06-23; filenames use 2026-06-23"
+    },
+    "betting_execution_status": "discussion_only_hold"
+  },
+  "method": {
+    "summary": "Partial-current quant model using the K group round 2 data refresh packet, local team strength, first-round postmatch player_state, tactical priors and Poisson score matrix. Market fields are null because no official/live same-source odds snapshot is available.",
+    "double_counting_guard": "Round-one results are reflected through player_state and form adjustment once; odds snippets from round one are not reused as live round-two market truth."
+  },
+  "factor_weights": {
+    "base_strength": 0.30,
+    "recent_round1_form": 0.20,
+    "attack_defense_structure": 0.20,
+    "player_availability": 0.10,
+    "tactical_matchup": 0.10,
+    "market_calibration": 0.10
+  },
+  "matches": [
+    {
+      "match": "Portugal vs Uzbekistan",
+      "date_local": "2026-06-23",
+      "group": "K",
+      "stage": "group_stage_round2",
+      "input_readiness": "partial_source_limited",
+      "factor_inputs": {
+        "team_a": "Portugal",
+        "team_b": "Uzbekistan",
+        "baseline_strength": {
+          "portugal": 0.84,
+          "uzbekistan": 0.50,
+          "notes": "Portugal retain much higher squad strength, but round-one 1-1 vs DR Congo lowers conversion confidence."
+        },
+        "recent_round1_form": {
+          "portugal": 0.58,
+          "uzbekistan": 0.46,
+          "notes": "Portugal drew 1-1 after early lead; Uzbekistan lost 1-3 but Fayzullaev/Shomurodov path worked."
+        },
+        "attack_defense_structure": {
+          "portugal_attack": 0.78,
+          "portugal_defense": 0.70,
+          "uzbekistan_attack": 0.47,
+          "uzbekistan_defense": 0.48
+        },
+        "player_state": {
+          "portugal": "Avg form 2.81; Joao Neves 4.0, Pedro Neto 3.5; Ronaldo 2.5 and Ruben Dias availability conflict noted.",
+          "uzbekistan": "Avg form 2.27; Fayzullaev 4.0, Shomurodov/Fayzullaev second-half route positive; Yusupov error and back line pressure negative."
+        },
+        "availability_and_injury": {
+          "portugal": "Ruben Dias status conflicting in local review; Ronaldo minutes/role and attacking rotation need T-75m confirmation.",
+          "uzbekistan": "Khusanov yellow and defensive workload noted; official lineup and full card list still missing."
+        },
+        "schedule_environment": {
+          "portugal": "Same Houston venue after round one; lowest travel burden. Houston heat/humidity risk is moderated by NRG roof but still affects training and commute.",
+          "uzbekistan": "Mexico City to Houston transfer after round one; travel and acclimation create a small negative adjustment."
+        },
+        "tactical_matchup": {
+          "portugal": "Width, half-space creators and set pieces should create territorial edge.",
+          "uzbekistan": "Likely 3-4-3/5-4-1 block, counter through Shomurodov/Fayzullaev, better after halftime adjustments."
+        },
+        "market_signal": {
+          "status": "no official/live same-source odds snapshot",
+          "model_policy": "market_adjustment set to 0.00; no executable betting language"
+        }
+      },
+      "factor_weights": {
+        "base_strength": 0.30,
+        "recent_round1_form": 0.20,
+        "attack_defense_structure": 0.20,
+        "player_availability": 0.10,
+        "tactical_matchup": 0.10,
+        "market_calibration": 0.10
+      },
+      "team_strength_score": {
+        "portugal": 80.5,
+        "uzbekistan": 55.8
+      },
+      "attack_score": {
+        "portugal": 77.0,
+        "uzbekistan": 51.0
+      },
+      "defense_score": {
+        "portugal": 70.0,
+        "uzbekistan": 50.0
+      },
+      "player_state_adjustment": {
+        "portugal": -0.04,
+        "uzbekistan": 0.02
+      },
+      "injury_adjustment": {
+        "portugal": -0.04,
+        "uzbekistan": -0.02
+      },
+      "tactical_matchup_adjustment": {
+        "portugal": 0.12,
+        "uzbekistan": 0.06
+      },
+      "schedule_environment_adjustment": {
+        "portugal": 0.03,
+        "uzbekistan": -0.03
+      },
+      "market_adjustment": {
+        "portugal": 0.00,
+        "uzbekistan": 0.00
+      },
+      "expected_goals": {
+        "pre_market": {
+          "portugal": 1.90,
+          "uzbekistan": 0.78
+        },
+        "final": {
+          "portugal": 1.90,
+          "uzbekistan": 0.78
+        }
+      },
+      "poisson_score_matrix": {
+        "0-0": 0.0686,
+        "0-1": 0.0535,
+        "0-2": 0.0209,
+        "0-3": 0.0054,
+        "0-4": 0.0011,
+        "0-5": 0.0002,
+        "1-0": 0.1303,
+        "1-1": 0.1016,
+        "1-2": 0.0396,
+        "1-3": 0.0103,
+        "1-4": 0.0020,
+        "1-5": 0.0003,
+        "2-0": 0.1238,
+        "2-1": 0.0965,
+        "2-2": 0.0376,
+        "2-3": 0.0098,
+        "2-4": 0.0019,
+        "2-5": 0.0003,
+        "3-0": 0.0784,
+        "3-1": 0.0611,
+        "3-2": 0.0238,
+        "3-3": 0.0062,
+        "3-4": 0.0012,
+        "3-5": 0.0002,
+        "4-0": 0.0372,
+        "4-1": 0.0290,
+        "4-2": 0.0113,
+        "4-3": 0.0029,
+        "4-4": 0.0006,
+        "4-5": 0.0001,
+        "5-0": 0.0141,
+        "5-1": 0.0110,
+        "5-2": 0.0043,
+        "5-3": 0.0011,
+        "5-4": 0.0002,
+        "5-5": 0.0000,
+        "tail_probability": 0.0134
+      },
+      "probabilities_1x2": {
+        "portugal_win": 0.6385,
+        "draw": 0.2146,
+        "uzbekistan_win": 0.1469
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5015,
+        "under_2_5": 0.4985,
+        "over_3_5": 0.2815,
+        "under_3_5": 0.7185
+      },
+      "top_scorelines": [
+        {"score": "1-0", "probability": 0.1303},
+        {"score": "2-0", "probability": 0.1238},
+        {"score": "1-1", "probability": 0.1016},
+        {"score": "2-1", "probability": 0.0965},
+        {"score": "3-0", "probability": 0.0784}
+      ],
+      "odds_implied_probability": null,
+      "model_market_delta": null,
+      "market_comparison_note": "No official Chinese sports lottery odds or same-source live 1X2/handicap/totals snapshot is available in local inputs; odds calibration is withheld.",
+      "confidence": "medium_low",
+      "confidence_interval": {
+        "portugal_win": [0.56, 0.70],
+        "draw": [0.17, 0.27],
+        "uzbekistan_win": [0.10, 0.21],
+        "xg_portugal": [1.55, 2.25],
+        "xg_uzbekistan": [0.52, 1.05]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "portugal_win": 0.6385,
+        "draw": 0.2146,
+        "uzbekistan_win": 0.1469
+      },
+      "player_state_update_status": "not_applicable_pre_match",
+      "quality_notes": [
+        "Partial model because data refresh is source-limited and tactical refresh is tactical_refresh_partial.",
+        "Portugal are favored, but round-one 1-1 limits blowout confidence.",
+        "Uzbekistan's first goal route through Fayzullaev/Shomurodov keeps draw and 1-goal tail visible.",
+        "discussion_only_hold; no executable betting language."
+      ],
+      "sensitivity": [
+        {"variable": "Ronaldo_minutes_and_front_line_rotation", "impact": "Portugal xG can move +/-0.15 depending on striker/creator plan."},
+        {"variable": "Ruben_Dias_or_center_back_availability", "impact": "If Portugal center-back stability is weaker, Uzbekistan scoring tail rises."},
+        {"variable": "Uzbekistan_block_height", "impact": "Deep 5-4-1 raises under/draw; more aggressive chase raises Portugal transition goals."}
+      ]
+    },
+    {
+      "match": "Colombia vs DR Congo",
+      "date_local": "2026-06-23",
+      "group": "K",
+      "stage": "group_stage_round2",
+      "input_readiness": "partial_source_limited",
+      "factor_inputs": {
+        "team_a": "Colombia",
+        "team_b": "DR Congo",
+        "baseline_strength": {
+          "colombia": 0.73,
+          "dr_congo": 0.58,
+          "notes": "Colombia have higher technical and wide-attacking quality; DR Congo proved high-resilience upset path vs Portugal."
+        },
+        "recent_round1_form": {
+          "colombia": 0.78,
+          "dr_congo": 0.66,
+          "notes": "Colombia beat Uzbekistan 3-1; DR Congo drew Portugal 1-1 with Wissa set-piece route."
+        },
+        "attack_defense_structure": {
+          "colombia_attack": 0.76,
+          "colombia_defense": 0.63,
+          "dr_congo_attack": 0.62,
+          "dr_congo_defense": 0.62
+        },
+        "player_state": {
+          "colombia": "Avg form 3.22; Luis Diaz 4.9, Munoz 4.4, Campaz 4.2; broad positive postmatch state.",
+          "dr_congo": "Avg form 2.69; Wissa 4.0, Tuanzebe/Mbemba/Wan-Bissaka positive; set-piece and transition confidence up."
+        },
+        "availability_and_injury": {
+          "colombia": "James/Luis Diaz/Duran roles still need T-75m confirmation; no live official lineup.",
+          "dr_congo": "Wissa/Bakambu/Mbemba roles need T-75m confirmation; full card/injury list missing."
+        },
+        "schedule_environment": {
+          "colombia": "Mexico City to Guadalajara short transfer; altitude context known but official hourly stadium weather missing.",
+          "dr_congo": "Houston to Guadalajara cross-border transfer plus altitude adjustment create a small recovery concern."
+        },
+        "tactical_matchup": {
+          "colombia": "Wide threat, James service, Luis Diaz carry and late Campaz option.",
+          "dr_congo": "Compact defense, direct counters, set-piece second balls, physical duel edge in moments."
+        },
+        "market_signal": {
+          "status": "no official/live same-source odds snapshot",
+          "model_policy": "market_adjustment set to 0.00; no executable betting language"
+        }
+      },
+      "factor_weights": {
+        "base_strength": 0.30,
+        "recent_round1_form": 0.20,
+        "attack_defense_structure": 0.20,
+        "player_availability": 0.10,
+        "tactical_matchup": 0.10,
+        "market_calibration": 0.10
+      },
+      "team_strength_score": {
+        "colombia": 73.2,
+        "dr_congo": 64.0
+      },
+      "attack_score": {
+        "colombia": 74.5,
+        "dr_congo": 63.0
+      },
+      "defense_score": {
+        "colombia": 63.0,
+        "dr_congo": 62.5
+      },
+      "player_state_adjustment": {
+        "colombia": 0.10,
+        "dr_congo": 0.07
+      },
+      "injury_adjustment": {
+        "colombia": -0.02,
+        "dr_congo": -0.02
+      },
+      "tactical_matchup_adjustment": {
+        "colombia": 0.08,
+        "dr_congo": 0.10
+      },
+      "schedule_environment_adjustment": {
+        "colombia": 0.01,
+        "dr_congo": -0.02
+      },
+      "market_adjustment": {
+        "colombia": 0.00,
+        "dr_congo": 0.00
+      },
+      "expected_goals": {
+        "pre_market": {
+          "colombia": 1.58,
+          "dr_congo": 1.08
+        },
+        "final": {
+          "colombia": 1.58,
+          "dr_congo": 1.08
+        }
+      },
+      "poisson_score_matrix": {
+        "0-0": 0.0699,
+        "0-1": 0.0755,
+        "0-2": 0.0408,
+        "0-3": 0.0147,
+        "0-4": 0.0040,
+        "0-5": 0.0009,
+        "1-0": 0.1105,
+        "1-1": 0.1194,
+        "1-2": 0.0645,
+        "1-3": 0.0232,
+        "1-4": 0.0063,
+        "1-5": 0.0014,
+        "2-0": 0.0873,
+        "2-1": 0.0943,
+        "2-2": 0.0509,
+        "2-3": 0.0183,
+        "2-4": 0.0049,
+        "2-5": 0.0011,
+        "3-0": 0.0460,
+        "3-1": 0.0497,
+        "3-2": 0.0268,
+        "3-3": 0.0097,
+        "3-4": 0.0026,
+        "3-5": 0.0006,
+        "4-0": 0.0182,
+        "4-1": 0.0196,
+        "4-2": 0.0106,
+        "4-3": 0.0038,
+        "4-4": 0.0010,
+        "4-5": 0.0002,
+        "5-0": 0.0057,
+        "5-1": 0.0062,
+        "5-2": 0.0033,
+        "5-3": 0.0012,
+        "5-4": 0.0003,
+        "5-5": 0.0001,
+        "tail_probability": 0.0066
+      },
+      "probabilities_1x2": {
+        "colombia_win": 0.4893,
+        "draw": 0.2510,
+        "dr_congo_win": 0.2597
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4965,
+        "under_2_5": 0.5035,
+        "over_3_5": 0.2771,
+        "under_3_5": 0.7229
+      },
+      "top_scorelines": [
+        {"score": "1-1", "probability": 0.1194},
+        {"score": "1-0", "probability": 0.1105},
+        {"score": "2-1", "probability": 0.0943},
+        {"score": "2-0", "probability": 0.0873},
+        {"score": "0-1", "probability": 0.0755}
+      ],
+      "odds_implied_probability": null,
+      "model_market_delta": null,
+      "market_comparison_note": "No official Chinese sports lottery odds or same-source live 1X2/handicap/totals snapshot is available in local inputs; odds calibration is withheld.",
+      "confidence": "low_to_medium",
+      "confidence_interval": {
+        "colombia_win": [0.41, 0.56],
+        "draw": [0.20, 0.31],
+        "dr_congo_win": [0.20, 0.33],
+        "xg_colombia": [1.24, 1.92],
+        "xg_dr_congo": [0.78, 1.42]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "colombia_win": 0.4893,
+        "draw": 0.2510,
+        "dr_congo_win": 0.2597
+      },
+      "player_state_update_status": "not_applicable_pre_match",
+      "quality_notes": [
+        "Partial model because data refresh is source-limited and tactical refresh is tactical_refresh_partial.",
+        "Colombia are first direction, but DR Congo's Portugal draw materially raises draw/underdog tail.",
+        "1-1 is the single most likely scoreline even though Colombia lead aggregate win probability.",
+        "discussion_only_hold; no executable betting language."
+      ],
+      "sensitivity": [
+        {"variable": "Luis_Diaz_and_James_roles", "impact": "If both start without restrictions, Colombia xG can rise by 0.10-0.18."},
+        {"variable": "DR_Congo_counter_and_set_piece_repeatability", "impact": "If Wissa/Mbemba/Bakambu roles are intact, DR Congo scoring tail remains near or above 1.0 xG."},
+        {"variable": "Colombia_game_state_after_first_goal", "impact": "Early Colombia goal can open 2-0/2-1 paths; slow start keeps 1-1 and 0-1 live."}
+      ]
+    }
+  ],
+  "aggregate_quality_notes": [
+    "K group data refresh is partial_source_limited and tactical refresh is tactical_refresh_partial; this is not a complete live prediction.",
+    "Odds fields are null because official Chinese sports lottery odds and same-source live odds/handicap/totals are missing.",
+    "All outputs are probability discussion only and marked discussion_only_hold."
+  ],
+  "source_log": [
+    "data/packets/matches/k-group-round2-data-refresh-20260622.json",
+    "data/packets/matchup_tactics/k-group-round2-tactical-refresh-20260622.json",
+    "data/outputs/match_predictions/k-group-round1-predictions.json",
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_葡萄牙_1-1_刚果金_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md",
+    "data/reviews/postmatch_state_sync/postmatch-state-sync-audit.md",
+    "data/outputs/player_state/portugal-player-state.json",
+    "data/outputs/player_state/uzbekistan-player-state.json",
+    "data/outputs/player_state/colombia-player-state.json",
+    "data/outputs/player_state/dr-congo-player-state.json",
+    "data/packets/teams/portugal-team-packet.json",
+    "data/packets/teams/uzbekistan-team-packet.json",
+    "data/packets/teams/colombia-team-packet.json",
+    "data/packets/teams/dr-congo-team-packet.json"
+  ]
+}

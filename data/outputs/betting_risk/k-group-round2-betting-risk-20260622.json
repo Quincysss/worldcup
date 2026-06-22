@@ -1,0 +1,131 @@
+{
+  "phase": "betting_risk_observation",
+  "group": "K",
+  "round": 2,
+  "status": "hold_not_executable",
+  "betting_execution_status": "discussion_only_hold",
+  "created_at": "2026-06-22T00:00:00+08:00",
+  "updated_at": "2026-06-22T22:25:00+08:00",
+  "owner": "竞彩/投注风险 agent",
+  "scope": "K group round 2 betting risk observation; no executable betting advice.",
+  "inputs_expected": [
+    "data/outputs/match_predictions/k-group-round2-quant-prediction-20260622.json",
+    "data/reviews/red_team/k-group-round2-prediction-red-team-20260622.json",
+    "data/packets/matches/k-group-round2-data-refresh-20260622.json",
+    "official China Jingcai odds",
+    "same-source 1X2/handicap/totals snapshot",
+    "T-75m official lineups"
+  ],
+  "missing_inputs": [
+    "model_file_missing",
+    "red_team_file_missing",
+    "data_refresh_file_missing",
+    "official_jingcai_odds_missing",
+    "same_source_market_snapshot_missing",
+    "t_minus_75_lineups_missing",
+    "latest_injury_suspension_minutes_missing"
+  ],
+  "source_log": [
+    {
+      "path": "README.md",
+      "status": "read"
+    },
+    {
+      "path": "线程状态.md",
+      "status": "read",
+      "context": "K group round 2 threads dispatched; expected outputs listed"
+    },
+    {
+      "path": "工作流纪律.md",
+      "status": "read"
+    },
+    {
+      "path": "项目架构.md",
+      "status": "read"
+    },
+    {
+      "path": ".codex/skills/worldcup-red-team-verifier/references/market-risk.md",
+      "status": "read"
+    },
+    {
+      "source": "web_search",
+      "status": "no_official_jingcai_odds_captured",
+      "captured_at": "2026-06-22T22:25:00+08:00"
+    }
+  ],
+  "gate_status": {
+    "model": "missing",
+    "red_team": "missing",
+    "data_refresh": "missing",
+    "official_jingcai_odds": "official_jingcai_odds_missing",
+    "same_source_market_snapshot": "same_source_market_snapshot_missing",
+    "t_minus_75_official_lineups": "missing",
+    "latest_injury_suspension_minutes": "missing",
+    "overall": "hold_pending_model_or_red_team"
+  },
+  "matches": [
+    {
+      "match": "Portugal vs Uzbekistan",
+      "match_status": "fixture_inferred_from_group_context_pending_data_refresh_confirmation",
+      "observation_items": [
+        "Portugal may carry public-team and star-name premium after a first-round draw with DR Congo.",
+        "Uzbekistan's 1-3 first-round loss can create both market discount and tactical urgency; without model probabilities, no market side can be upgraded."
+      ],
+      "risk_points": [
+        "favorite tax on Portugal if market prices reputation rather than first-round conversion issues",
+        "Uzbekistan forced-response game state could raise totals volatility",
+        "lineup and minutes risk unknown"
+      ],
+      "waiting_items": [
+        "confirmed fixture and kickoff data",
+        "T-75m official lineups",
+        "latest injuries, suspensions, and minutes limits",
+        "official Jingcai odds and same-source 1X2/handicap/totals snapshot",
+        "model probabilities and red-team verdict"
+      ],
+      "avoid_items": [
+        "any Portugal handicap or scoreline stance before model and market snapshot",
+        "any totals stance without lineup and same-source totals odds"
+      ],
+      "failure_conditions": [
+        "Portugal rotates or key attackers are minutes-limited",
+        "Uzbekistan starts a more aggressive transition unit",
+        "market shortens Portugal without team-news support"
+      ]
+    },
+    {
+      "match": "DR Congo vs Colombia",
+      "match_status": "fixture_inferred_from_group_context_pending_data_refresh_confirmation",
+      "observation_items": [
+        "Colombia's 3-1 first-round win can create recency premium.",
+        "DR Congo's draw with Portugal keeps physical and defensive-resistance paths live; without model probabilities, Colombia cannot be treated as a low-risk leg."
+      ],
+      "risk_points": [
+        "recency bias after Colombia's first-round win",
+        "draw suppression if market underprices DR Congo's resistance",
+        "set-piece and transition volatility unknown until data refresh"
+      ],
+      "waiting_items": [
+        "confirmed fixture and kickoff data",
+        "T-75m official lineups",
+        "official Jingcai odds and same-source market snapshot",
+        "red-team verdict"
+      ],
+      "avoid_items": [
+        "any Colombia single-side upgrade before red-team pass",
+        "any combo construction before official odds"
+      ],
+      "failure_conditions": [
+        "Colombia lineup rotation or midfield control downgrade",
+        "DR Congo starts a high-duel, set-piece-heavy lineup",
+        "market overreacts to Colombia's 3-1 first-round result"
+      ]
+    }
+  ],
+  "no_bet_option": "Do not buy / wait for official lineups and odds.",
+  "handoff_notes": [
+    "No executable betting advice.",
+    "Re-run this risk observation after model, red team, and data refresh files land.",
+    "Status must remain hold_not_executable until all gates clear and red-team verdict is pass."
+  ]
+}
