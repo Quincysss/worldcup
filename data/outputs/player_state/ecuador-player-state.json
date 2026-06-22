@@ -275,7 +275,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -299,7 +299,7 @@
           "internal_match_rating_1_5": 3.4,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 3,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -338,12 +338,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -358,7 +360,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 3.4,
         "postmatch_form_status_1_5": 3,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -405,7 +407,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -424,7 +428,7 @@
       "round1_red_cards": 0,
       "round1_rating": null,
       "round1_note": "首轮未登场或公开静态源未确认登场。",
-      "form_status_1_5": 1,
+      "form_status_1_5": 2,
       "form_status_reason": "首轮未登场，状态值按使用量保守记录。",
       "source_log": [
         {
@@ -552,7 +556,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -573,10 +577,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 1,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-          "postmatch_form_status_1_5": 1,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+          "postmatch_form_status_1_5": 2,
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -615,12 +619,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -633,9 +639,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 1,
-        "postmatch_form_status_1_5": 1,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2,
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -644,7 +650,7 @@
         "player": "菲利克斯·托雷斯",
         "english_name": "Félix Torres",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -682,7 +688,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -829,7 +837,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -853,7 +861,7 @@
           "internal_match_rating_1_5": 3,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 2.8,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -892,12 +900,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -912,7 +922,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 3,
         "postmatch_form_status_1_5": 2.8,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -959,7 +969,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -1106,7 +1118,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -1127,10 +1139,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 2,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
           "postmatch_form_status_1_5": 2,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -1169,12 +1181,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -1187,9 +1201,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 2,
+        "internal_match_rating_1_5": 2.6,
         "postmatch_form_status_1_5": 2,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -1198,7 +1212,7 @@
         "player": "乔尔·奥尔多涅斯",
         "english_name": "Joel Ordóñez",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -1236,7 +1250,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -1383,7 +1399,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -1407,7 +1423,7 @@
           "internal_match_rating_1_5": 2.4,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 1.8,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -1446,12 +1462,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -1466,7 +1484,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 2.4,
         "postmatch_form_status_1_5": 1.8,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -1513,7 +1531,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -1660,7 +1680,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -1684,7 +1704,7 @@
           "internal_match_rating_1_5": 3.1,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 2.8,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -1723,12 +1743,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -1743,7 +1765,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 3.1,
         "postmatch_form_status_1_5": 2.8,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -1790,7 +1812,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -1937,7 +1961,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -1961,7 +1985,7 @@
           "internal_match_rating_1_5": 3,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 2.6,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -2000,12 +2024,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -2020,7 +2046,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 3,
         "postmatch_form_status_1_5": 2.6,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -2067,7 +2093,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -2086,7 +2114,7 @@
       "round1_red_cards": 0,
       "round1_rating": null,
       "round1_note": "首轮未登场或公开静态源未确认登场。",
-      "form_status_1_5": 1,
+      "form_status_1_5": 2,
       "form_status_reason": "首轮未登场，状态值按使用量保守记录。",
       "source_log": [
         {
@@ -2214,7 +2242,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -2235,10 +2263,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 1,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-          "postmatch_form_status_1_5": 1,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+          "postmatch_form_status_1_5": 2,
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -2277,12 +2305,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -2295,9 +2325,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 1,
-        "postmatch_form_status_1_5": 1,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2,
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -2306,7 +2336,7 @@
         "player": "安东尼·巴伦西亚",
         "english_name": "Anthony Valencia",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -2344,7 +2374,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -2491,7 +2523,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -2515,7 +2547,7 @@
           "internal_match_rating_1_5": 2.8,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 2.4,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -2554,12 +2586,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -2574,7 +2608,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 2.8,
         "postmatch_form_status_1_5": 2.4,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -2621,7 +2655,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -2640,7 +2676,7 @@
       "round1_red_cards": 0,
       "round1_rating": null,
       "round1_note": "首轮未登场或公开静态源未确认登场。",
-      "form_status_1_5": 1,
+      "form_status_1_5": 2,
       "form_status_reason": "首轮未登场，状态值按使用量保守记录。",
       "source_log": [
         {
@@ -2768,7 +2804,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -2789,10 +2825,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 1,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-          "postmatch_form_status_1_5": 1,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+          "postmatch_form_status_1_5": 2,
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -2831,12 +2867,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -2849,9 +2887,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 1,
-        "postmatch_form_status_1_5": 1,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2,
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -2860,7 +2898,7 @@
         "player": "肯德里·帕埃斯",
         "english_name": "Kendry Páez",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -2898,7 +2936,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -3045,7 +3085,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -3069,7 +3109,7 @@
           "internal_match_rating_1_5": 3,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 2.7,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -3108,12 +3148,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -3128,7 +3170,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 3,
         "postmatch_form_status_1_5": 2.7,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -3175,7 +3217,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -3194,7 +3238,7 @@
       "round1_red_cards": 0,
       "round1_rating": null,
       "round1_note": "首轮未登场或公开静态源未确认登场。",
-      "form_status_1_5": 1,
+      "form_status_1_5": 2,
       "form_status_reason": "首轮未登场，状态值按使用量保守记录。",
       "source_log": [
         {
@@ -3322,7 +3366,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -3343,10 +3387,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 1,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-          "postmatch_form_status_1_5": 1,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+          "postmatch_form_status_1_5": 2,
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -3385,12 +3429,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -3403,9 +3449,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 1,
-        "postmatch_form_status_1_5": 1,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2,
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -3414,7 +3460,7 @@
         "player": "莫伊塞斯·拉米雷斯",
         "english_name": "Moisés Ramírez",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -3452,7 +3498,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -3599,7 +3647,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -3623,7 +3671,7 @@
           "internal_match_rating_1_5": 2.2,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 1.8,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -3662,12 +3710,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -3682,7 +3732,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 2.2,
         "postmatch_form_status_1_5": 1.8,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -3729,7 +3779,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -3876,7 +3928,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -3897,10 +3949,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 2,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
           "postmatch_form_status_1_5": 2,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -3939,12 +3991,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -3957,9 +4011,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 2,
+        "internal_match_rating_1_5": 2.6,
         "postmatch_form_status_1_5": 2,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -3968,7 +4022,7 @@
         "player": "阿兰·明达",
         "english_name": "Alan Minda",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -4006,7 +4060,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -4153,7 +4209,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -4177,7 +4233,7 @@
           "internal_match_rating_1_5": 3,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 3,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -4216,12 +4272,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -4236,7 +4294,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 3,
         "postmatch_form_status_1_5": 3,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -4283,7 +4341,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -4430,7 +4490,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -4454,7 +4514,7 @@
           "internal_match_rating_1_5": 2.7,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 1.8,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -4493,12 +4553,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -4513,7 +4575,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 2.7,
         "postmatch_form_status_1_5": 1.8,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -4560,7 +4622,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -4707,7 +4771,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -4731,7 +4795,7 @@
           "internal_match_rating_1_5": 3.1,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 2.8,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -4770,12 +4834,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -4790,7 +4856,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 3.1,
         "postmatch_form_status_1_5": 2.8,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -4837,7 +4903,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -4856,7 +4924,7 @@
       "round1_red_cards": 0,
       "round1_rating": null,
       "round1_note": "首轮未登场或公开静态源未确认登场。",
-      "form_status_1_5": 1,
+      "form_status_1_5": 2,
       "form_status_reason": "首轮未登场，状态值按使用量保守记录。",
       "source_log": [
         {
@@ -4984,7 +5052,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -5005,10 +5073,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 1,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-          "postmatch_form_status_1_5": 1,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+          "postmatch_form_status_1_5": 2,
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -5047,12 +5115,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -5065,9 +5135,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 1,
-        "postmatch_form_status_1_5": 1,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2,
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -5076,7 +5146,7 @@
         "player": "德尼尔·卡斯蒂略",
         "english_name": "Denil Castillo",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -5114,7 +5184,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -5261,7 +5333,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -5285,7 +5357,7 @@
           "internal_match_rating_1_5": 3,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 3,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -5324,12 +5396,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -5344,7 +5418,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 3,
         "postmatch_form_status_1_5": 3,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -5391,7 +5465,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -5538,7 +5614,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -5562,7 +5638,7 @@
           "internal_match_rating_1_5": 2.9,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 2.5,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -5601,12 +5677,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -5621,7 +5699,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 2.9,
         "postmatch_form_status_1_5": 2.5,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -5668,7 +5746,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -5815,7 +5895,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -5839,7 +5919,7 @@
           "internal_match_rating_1_5": 2.8,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 2.4,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -5878,12 +5958,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -5898,7 +5980,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 2.8,
         "postmatch_form_status_1_5": 2.4,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -5945,7 +6027,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -5964,7 +6048,7 @@
       "round1_red_cards": 0,
       "round1_rating": null,
       "round1_note": "首轮未登场或公开静态源未确认登场。",
-      "form_status_1_5": 1,
+      "form_status_1_5": 2,
       "form_status_reason": "首轮未登场，状态值按使用量保守记录。",
       "source_log": [
         {
@@ -6092,7 +6176,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -6113,10 +6197,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 1,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-          "postmatch_form_status_1_5": 1,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+          "postmatch_form_status_1_5": 2,
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -6155,12 +6239,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -6173,9 +6259,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 1,
-        "postmatch_form_status_1_5": 1,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2,
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -6184,7 +6270,7 @@
         "player": "贡萨洛·巴列",
         "english_name": "Gonzalo Valle",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -6222,7 +6308,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -6369,7 +6457,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -6393,7 +6481,7 @@
           "internal_match_rating_1_5": 3.1,
           "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
           "postmatch_form_status_1_5": 3,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -6432,12 +6520,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": true,
@@ -6452,7 +6542,7 @@
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
         "internal_match_rating_1_5": 3.1,
         "postmatch_form_status_1_5": 3,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -6499,7 +6589,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -6518,7 +6610,7 @@
       "round1_red_cards": 0,
       "round1_rating": null,
       "round1_note": "首轮未登场或公开静态源未确认登场。",
-      "form_status_1_5": 1,
+      "form_status_1_5": 2,
       "form_status_reason": "首轮未登场，状态值按使用量保守记录。",
       "source_log": [
         {
@@ -6646,7 +6738,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -6667,10 +6759,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 1,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-          "postmatch_form_status_1_5": 1,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+          "postmatch_form_status_1_5": 2,
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -6709,12 +6801,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -6727,9 +6821,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 1,
-        "postmatch_form_status_1_5": 1,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2,
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -6738,7 +6832,7 @@
         "player": "杰里米·阿雷瓦洛",
         "english_name": "Jeremy Arévalo",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -6776,7 +6870,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -6923,7 +7019,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -6944,10 +7040,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 2,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
           "postmatch_form_status_1_5": 2,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -6986,12 +7082,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -7004,9 +7102,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 2,
+        "internal_match_rating_1_5": 2.6,
         "postmatch_form_status_1_5": 2,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -7015,7 +7113,7 @@
         "player": "杰克逊·波罗索",
         "english_name": "Jackson Porozo",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -7053,7 +7151,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     },
     {
@@ -7072,7 +7172,7 @@
       "round1_red_cards": 0,
       "round1_rating": null,
       "round1_note": "首轮未登场或公开静态源未确认登场。",
-      "form_status_1_5": 1,
+      "form_status_1_5": 2,
       "form_status_reason": "首轮未登场，状态值按使用量保守记录。",
       "source_log": [
         {
@@ -7200,7 +7300,7 @@
           "captured_at": "2026-06-21T03:20:00+08:00"
         },
         {
-          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+          "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
           "match": "厄瓜多尔 0-0 库拉索",
           "date": "2026-06-20",
           "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7221,10 +7321,10 @@
           "external_rating": null,
           "rating_source_status": "unavailable_or_not_extractable",
           "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-          "internal_match_rating_1_5": 1,
-          "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-          "postmatch_form_status_1_5": 1,
-          "captured_at": "2026-06-21T05:55:00+08:00",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+          "postmatch_form_status_1_5": 2,
+          "captured_at": "2026-06-22T09:25:00+08:00",
           "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
           "rating_source": null,
           "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7263,12 +7363,14 @@
               ],
               "source_status": "confirmed_static"
             }
-          ]
+          ],
+          "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+          "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
         }
       ],
       "round2": {
         "match": "厄瓜多尔 0-0 库拉索",
-        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+        "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
         "date": "2026-06-20",
         "opponent": "库拉索",
         "started": false,
@@ -7281,9 +7383,9 @@
         "external_rating": null,
         "rating_source_status": "unavailable_or_not_extractable",
         "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-        "internal_match_rating_1_5": 1,
-        "postmatch_form_status_1_5": 1,
-        "captured_at": "2026-06-21T05:55:00+08:00",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2,
+        "captured_at": "2026-06-22T09:25:00+08:00",
         "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
         "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
         "group": "E",
@@ -7292,7 +7394,7 @@
         "player": "雅伊马尔·梅迪纳",
         "english_name": "Yaimar Medina",
         "started_display": "否",
-        "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+        "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
         "rating_source": null,
         "rating_captured_at": "2026-06-21T18:35:00+08:00",
         "rating_attempted_sources": [
@@ -7330,7 +7432,9 @@
             ],
             "source_status": "confirmed_static"
           }
-        ]
+        ],
+        "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+        "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
       }
     }
   ],
@@ -7342,17 +7446,18 @@
     "批次C：身高/惯用脚/身价按Transfermarkt可匹配项补齐；未匹配球员或未取得同源评分保持missing并有逐人source_log。",
     "评分字段口径更新：external_rating非硬性必填；本批次未找到全队同场同源外部评分时保留null，并补rating_source_status/rating_missing_note。",
     "Ecuador 0-0 Curacao: FIFA dynamic page and ESPN bot check limited static verification; complete official starting XI/minutes/external ratings remain partial.",
-    "Ecuador 0-0 Curacao source gap backfill 2026-06-21T18:35:00+08:00: FOX补到首发/换人/牌，Guardian补统计；同场外部评分未稳定取得，状态partial_source_limited。"
+    "Ecuador 0-0 Curacao source gap backfill 2026-06-21T18:35:00+08:00: FOX补到首发/换人/牌，Guardian补统计；同场外部评分未稳定取得，状态partial_source_limited。",
+    "Deep review update 2026-06-22T09:25:00+08:00: player logs remain 26/26; external same-source ratings unavailable; source status partial_source_limited; model not blocked."
   ],
   "rating_policy_updated_at": "2026-06-21T03:35:00+08:00",
   "rating_policy_note": "external_rating is nullable and only populated when a reliable same-match same-source rating is available; otherwise rating_source_status/rating_missing_note explain the gap and internal_rating_proxy may mirror form_status_1_5 as a non-external model helper.",
   "internal_match_rating_policy_updated_at": "2026-06-21T03:55:00+08:00",
   "internal_match_rating_policy_note": "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating.",
-  "updated_at": "2026-06-21T18:35:00+08:00",
+  "updated_at": "2026-06-22T09:25:00+08:00",
   "match_internal_rating_backfill_status": "updated",
   "match_internal_rating_log": [
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7376,7 +7481,7 @@
       "internal_match_rating_1_5": 3.4,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 3,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7415,10 +7520,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7439,10 +7546,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 1,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-      "postmatch_form_status_1_5": 1,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+      "postmatch_form_status_1_5": 2,
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7481,10 +7588,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7508,7 +7617,7 @@
       "internal_match_rating_1_5": 3,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 2.8,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7547,10 +7656,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7571,10 +7682,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 2,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
       "postmatch_form_status_1_5": 2,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7613,10 +7724,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7640,7 +7753,7 @@
       "internal_match_rating_1_5": 2.4,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 1.8,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7679,10 +7792,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7706,7 +7821,7 @@
       "internal_match_rating_1_5": 3.1,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 2.8,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7745,10 +7860,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7772,7 +7889,7 @@
       "internal_match_rating_1_5": 3,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 2.6,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7811,10 +7928,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7835,10 +7954,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 1,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-      "postmatch_form_status_1_5": 1,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+      "postmatch_form_status_1_5": 2,
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7877,10 +7996,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7904,7 +8025,7 @@
       "internal_match_rating_1_5": 2.8,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 2.4,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -7943,10 +8064,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -7967,10 +8090,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 1,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-      "postmatch_form_status_1_5": 1,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+      "postmatch_form_status_1_5": 2,
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8009,10 +8132,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8036,7 +8161,7 @@
       "internal_match_rating_1_5": 3,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 2.7,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8075,10 +8200,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8099,10 +8226,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 1,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-      "postmatch_form_status_1_5": 1,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+      "postmatch_form_status_1_5": 2,
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8141,10 +8268,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8168,7 +8297,7 @@
       "internal_match_rating_1_5": 2.2,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 1.8,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8207,10 +8336,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8231,10 +8362,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 2,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
       "postmatch_form_status_1_5": 2,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8273,10 +8404,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8300,7 +8433,7 @@
       "internal_match_rating_1_5": 3,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 3,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8339,10 +8472,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8366,7 +8501,7 @@
       "internal_match_rating_1_5": 2.7,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 1.8,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8405,10 +8540,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8432,7 +8569,7 @@
       "internal_match_rating_1_5": 3.1,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 2.8,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8471,10 +8608,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8495,10 +8634,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 1,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-      "postmatch_form_status_1_5": 1,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+      "postmatch_form_status_1_5": 2,
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8537,10 +8676,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8564,7 +8705,7 @@
       "internal_match_rating_1_5": 3,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 3,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8603,10 +8744,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8630,7 +8773,7 @@
       "internal_match_rating_1_5": 2.9,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 2.5,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8669,10 +8812,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8696,7 +8841,7 @@
       "internal_match_rating_1_5": 2.8,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 2.4,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8735,10 +8880,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8759,10 +8906,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 1,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-      "postmatch_form_status_1_5": 1,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+      "postmatch_form_status_1_5": 2,
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8801,10 +8948,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8828,7 +8977,7 @@
       "internal_match_rating_1_5": 3.1,
       "rating_reason": "内部模型评分，依据本场可核验分钟/事件/角色、0-0赛果、Room高扑救和终结效率证据生成；不是外部评分。",
       "postmatch_form_status_1_5": 3,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_lineup_events_guardian_stats",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8867,10 +9016,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8891,10 +9042,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 1,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-      "postmatch_form_status_1_5": 1,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+      "postmatch_form_status_1_5": 2,
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8933,10 +9084,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -8957,10 +9110,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 2,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
       "postmatch_form_status_1_5": 2,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -8999,10 +9152,12 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     },
     {
-      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+      "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
       "match": "厄瓜多尔 0-0 库拉索",
       "date": "2026-06-20",
       "date_note": "本地文件日期为2026-06-20；FOX页面显示Jun 21，Guardian首发于Sat 20 Jun 23:24 BST并于Sun 21 Jun更新，保留时区口径冲突。",
@@ -9023,10 +9178,10 @@
       "external_rating": null,
       "rating_source_status": "unavailable_or_not_extractable",
       "rating_missing_note": "FIFA match centre仍为动态页难以静态抽取；ESPN页面触发反机器人校验；FOX boxscore可取得首发/阵型/换人/牌/部分关键球员统计但无逐人评分；Guardian live/report可确认统计、Room扑救和关键事件；FotMob/SofaScore/WhoScored搜索未取得稳定同场评分页。 因此external_rating保留null，不用内部评分冒充外部评分。",
-      "internal_match_rating_1_5": 1,
-      "rating_reason": "内部模型低权重记录：本场逐人事实缺口未补齐，按既有状态与角色延续，等待官方首发/分钟表复核。",
-      "postmatch_form_status_1_5": 1,
-      "captured_at": "2026-06-21T05:55:00+08:00",
+      "internal_match_rating_1_5": 2.6,
+      "rating_reason": "内部模型低权重记录：本场未登场，状态证据不足，按可用性和角色延续给2.6基线；不是外部评分。",
+      "postmatch_form_status_1_5": 2,
+      "captured_at": "2026-06-22T09:25:00+08:00",
       "source_status": "partial_source_limited_fox_unused_or_unconfirmed",
       "rating_source": null,
       "rating_captured_at": "2026-06-21T18:35:00+08:00",
@@ -9065,17 +9220,23 @@
           ],
           "source_status": "confirmed_static"
         }
-      ]
+      ],
+      "deep_review_update_at": "2026-06-22T09:25:00+08:00",
+      "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
     }
   ],
   "latest_match_update": {
-    "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索_复盘",
+    "match_id": "2026-06-20_厄瓜多尔_0-0_库拉索",
     "result": "厄瓜多尔 0-0 库拉索",
-    "updated_at": "2026-06-21T05:55:00+08:00",
-    "player_state_update_status": "partial",
-    "summary": "厄瓜多尔28射15正未进球，控球与射门优势未转化，终结效率和心理焦躁是主要负向信号。"
+    "updated_at": "2026-06-22T09:25:00+08:00",
+    "player_state_update_status": "partial_source_limited",
+    "summary": "厄瓜多尔28射15正未进球，控球与射门优势未转化，终结效率和心理焦躁是主要负向信号。",
+    "model_blocking": false,
+    "deep_review_note": "深度复盘校准：厄瓜多尔在3-5-2/后场三中卫基础上持续压制，但禁区内终结选择和二点球再处理未能突破库拉索低位。"
   },
-  "player_state_update_status": "partial",
+  "player_state_update_status": "partial_source_limited",
   "source_gap_backfill_status": "partial_source_limited",
-  "source_gap_backfill_updated_at": "2026-06-21T18:35:00+08:00"
+  "source_gap_backfill_updated_at": "2026-06-21T18:35:00+08:00",
+  "deep_review_update_status": "partial_source_limited",
+  "deep_review_updated_at": "2026-06-22T09:25:00+08:00"
 }

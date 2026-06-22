@@ -155,7 +155,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -185,7 +186,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -218,13 +219,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -315,7 +318,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -345,7 +349,7 @@
                         "internal_match_rating_1_5":  3.1,
                         "postmatch_form_status_1_5":  3.1,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -378,13 +382,15 @@
                                                               "event_summary":  "首发门将；球队先丢一球后2-1逆转，完整官方分钟未稳定抽取。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  3.1,
                                                               "rating_reason":  "首发胜利但被对手先入球，状态小幅正向。",
                                                               "postmatch_form_status_1_5":  3.1,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -475,7 +481,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -505,7 +512,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -538,13 +545,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -635,7 +644,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -665,7 +675,7 @@
                         "internal_match_rating_1_5":  2.6,
                         "postmatch_form_status_1_5":  2.8,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -698,13 +708,15 @@
                                                               "event_summary":  "首发中卫；Guardian直播早段提到身体不适/可能需要处理，最终官方分钟未稳定抽取。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.6,
                                                               "rating_reason":  "存在赛中身体风险信号，赛后状态略降。",
                                                               "postmatch_form_status_1_5":  2.8,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -795,7 +807,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -825,7 +838,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -858,13 +871,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -955,7 +970,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -985,7 +1001,7 @@
                         "internal_match_rating_1_5":  3,
                         "postmatch_form_status_1_5":  3,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -1018,13 +1034,15 @@
                                                               "event_summary":  "首发中卫；完整官方分钟、牌未稳定抽取。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  3,
                                                               "rating_reason":  "球队逆转取胜但防线被先破门，保持中性。",
                                                               "postmatch_form_status_1_5":  3,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -1115,7 +1133,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -1145,7 +1164,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -1178,13 +1197,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -1275,7 +1296,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -1305,7 +1327,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -1338,13 +1360,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -1435,7 +1459,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -1465,7 +1490,7 @@
                         "internal_match_rating_1_5":  3.2,
                         "postmatch_form_status_1_5":  3.2,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -1498,13 +1523,15 @@
                                                               "event_summary":  "首发左后卫；Kessié进球前封堵Diallo射门，随后补射破门；末段射门被扑。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  3.2,
                                                               "rating_reason":  "有防守介入和进攻参与，但丢球链条中仍被惩罚。",
                                                               "postmatch_form_status_1_5":  3.2,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -1595,7 +1622,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -1625,7 +1653,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -1658,13 +1686,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -1755,7 +1785,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -1785,7 +1816,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.8,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -1818,13 +1849,15 @@
                                                               "event_summary":  "首发，约60分钟被换下；德国三换后比赛走势改善。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "被战术调整替换，表现证据偏弱。",
                                                               "postmatch_form_status_1_5":  2.8,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -1915,7 +1948,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -1945,7 +1979,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -1978,13 +2012,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -2075,7 +2111,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -2105,7 +2142,7 @@
                         "internal_match_rating_1_5":  2.9,
                         "postmatch_form_status_1_5":  3,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -2138,13 +2175,15 @@
                                                               "event_summary":  "首发右路/中后场；Guardian记录Yan Diomande从其防区摆脱后制造进球链条。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.9,
                                                               "rating_reason":  "胜利加成被丢球链条抵消，维持中性。",
                                                               "postmatch_form_status_1_5":  3,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -2235,7 +2274,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -2265,7 +2305,7 @@
                         "internal_match_rating_1_5":  4,
                         "postmatch_form_status_1_5":  3.8,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -2298,13 +2338,15 @@
                                                               "event_summary":  "首发中场；Guardian记录90+4为Undav制胜球送出传球。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  4,
                                                               "rating_reason":  "制胜球直接参与，内部状态上调。",
                                                               "postmatch_form_status_1_5":  3.8,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -2395,7 +2437,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -2425,7 +2468,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -2458,13 +2501,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -2555,7 +2600,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -2585,7 +2631,7 @@
                         "internal_match_rating_1_5":  4.1,
                         "postmatch_form_status_1_5":  3.9,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -2618,13 +2664,15 @@
                                                               "event_summary":  "约60分钟替补登场；Guardian记录68分钟挑传助攻Undav扳平，末段射门被扑。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  4.1,
                                                               "rating_reason":  "替补后直接改变比赛并贡献助攻。",
                                                               "postmatch_form_status_1_5":  3.9,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -2715,7 +2763,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -2745,7 +2794,7 @@
                         "internal_match_rating_1_5":  3.1,
                         "postmatch_form_status_1_5":  3,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -2778,13 +2827,15 @@
                                                               "event_summary":  "85分钟替补Havertz登场；完整官方分钟未稳定抽取。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  3.1,
                                                               "rating_reason":  "短时间替补，球队完成绝杀，状态小幅正向。",
                                                               "postmatch_form_status_1_5":  3,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -2875,7 +2926,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -2905,7 +2957,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -2938,13 +2990,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -3047,7 +3101,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -3077,7 +3132,7 @@
                         "internal_match_rating_1_5":  2.8,
                         "postmatch_form_status_1_5":  3,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -3110,13 +3165,15 @@
                                                               "event_summary":  "首发前场，约60分钟被换下；未见公开进球/助攻事件。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.8,
                                                               "rating_reason":  "核心角色仍在，但本场决定性影响有限。",
                                                               "postmatch_form_status_1_5":  3,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -3219,7 +3276,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -3249,7 +3307,7 @@
                         "internal_match_rating_1_5":  3,
                         "postmatch_form_status_1_5":  3.2,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -3282,13 +3340,15 @@
                                                               "event_summary":  "首发前场；完整官方分钟与关键数据未稳定抽取。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  3,
                                                               "rating_reason":  "球队逆转但个人决定性事件缺口，保持略正。",
                                                               "postmatch_form_status_1_5":  3.2,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -3379,7 +3439,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -3409,7 +3470,7 @@
                         "internal_match_rating_1_5":  3.2,
                         "postmatch_form_status_1_5":  3.1,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -3442,13 +3503,15 @@
                                                               "event_summary":  "约60分钟替补登场，参与德国扳回走势。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  3.2,
                                                               "rating_reason":  "替补出场后球队走势改善，内部评分小幅正向。",
                                                               "postmatch_form_status_1_5":  3.1,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -3551,7 +3614,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -3581,7 +3645,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.8,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -3614,13 +3678,15 @@
                                                               "event_summary":  "首发，约60分钟被换下；德国三换后由替补改变比赛。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "进攻端未形成决定性事件，赛后状态略低。",
                                                               "postmatch_form_status_1_5":  2.8,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -3734,7 +3800,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -3764,7 +3831,7 @@
                         "internal_match_rating_1_5":  2.8,
                         "postmatch_form_status_1_5":  3,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -3797,13 +3864,15 @@
                                                               "event_summary":  "首发中锋；Guardian记录头球被Yahia Fofana扑出，85分钟被Goretzka换下。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.8,
                                                               "rating_reason":  "有机会但未转化，状态中性偏低。",
                                                               "postmatch_form_status_1_5":  3,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -3894,7 +3963,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -3924,7 +3994,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -3957,13 +4027,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -4054,7 +4126,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -4084,7 +4157,7 @@
                         "internal_match_rating_1_5":  2.7,
                         "postmatch_form_status_1_5":  2.7,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -4117,13 +4190,15 @@
                                                               "event_summary":  "未登场或公开事件未见；状态证据不足/角色未变化。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  2.7,
                                                               "rating_reason":  "0分钟健康未登场，低权重内部评分；不得冒充外部评分。",
                                                               "postmatch_form_status_1_5":  2.7,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -4226,7 +4301,8 @@
                                            "match_internal_rating_log_backfill：德国 7-1 库拉索；依据已落盘player_state分钟/事件/form_status追溯；captured_at=2026-06-21T03:20:00+08:00；非外部评分",
                                            "round2_postmatch_update：德国 2-1 科特迪瓦；Guardian核验首发/进球/部分换人，FIFA/ESPN页面尝试核验但未稳定抽取全量逐人技术表；captured_at=2026-06-21T17:59:02+08:00；source_status=partial",
                                            "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:05+08:00",
-                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00"
+                                           "round2_source_backfill：德国 2-1 科特迪瓦；来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。 captured_at=2026-06-21T18:12:14+08:00",
+                                           "round2_deep_review_sync：德国 2-1 科特迪瓦；ESPN补入基础统计/90+4助攻口径，Guardian补入比赛走势/首发/换人；官方全量逐人分钟和外部评分仍partial_source_limited；captured_at=2026-06-22T21:04:20+08:00"
                                        ],
                         "external_rating":  null,
                         "internal_rating_proxy":  {
@@ -4256,7 +4332,7 @@
                         "internal_match_rating_1_5":  4.8,
                         "postmatch_form_status_1_5":  4.6,
                         "rating_source_status":  "partial_source_limited",
-                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                        "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                         "match_internal_rating_log":  [
                                                           {
                                                               "match_id":  "2026-06-14_德国_7-1_库拉索",
@@ -4289,13 +4365,15 @@
                                                               "event_summary":  "约60分钟替补登场；68分钟扳平，90+4分钟打入制胜球。",
                                                               "external_rating":  null,
                                                               "rating_source_status":  "partial_source_limited",
-                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA文本层空、ESPN JS/机器人验证、Guardian无逐人评分、FOX/FotMob/SofaScore/WhoScored未能稳定取得本场评分页；Bavarian Football Works为评论/奖项文章非数字评分源。external_rating保留null，来源状态=partial_source_limited。",
+                                                              "rating_missing_note":  "同场同源外部逐人评分未取得：FIFA Match Centre文本层未暴露全量逐人技术表；ESPN主摘要可抽取基础统计和90+4助攻，但commentary/lineups/matchstats子页仍受JS/机器人验证限制；Guardian提供首发、进球、部分换人和比赛走势但无逐人数字评分；FOX/FotMob/SofaScore/WhoScored未取得稳定同场评分页。external_rating保留null；内部评分不冒充外部评分。",
                                                               "internal_match_rating_1_5":  4.8,
                                                               "rating_reason":  "替补梅开二度并完成绝杀，本场德国最高内部评分。",
                                                               "postmatch_form_status_1_5":  4.6,
                                                               "source_status":  "partial_source_limited",
                                                               "captured_at":  "2026-06-21T17:59:02+08:00",
-                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00"
+                                                              "source_backfill_captured_at":  "2026-06-21T18:12:14+08:00",
+                                                              "deep_review_synced_at":  "2026-06-22T21:04:20+08:00",
+                                                              "deep_review_status":  "synced_partial_source_limited"
                                                           }
                                                       ],
                         "rating_source_attempted":  [
@@ -4315,7 +4393,8 @@
                                "公开评分源未稳定返回全队同源评分；Havertz保留POTM说明，其余rating多为null。",
                                "Assan Ouédraogo为Lennart Karl伤退后的递补入选，递补事实保留。",
                                "德国 2-1 科特迪瓦：Guardian可核验首发、进球与部分换人；FIFA/ESPN页面未稳定抽取全量官方分钟、牌、助攻口径和逐人外部评分，因此本场player_state_update_status=partial。captured_at=2026-06-21T17:59:02+08:00",
-                               "来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。"
+                               "来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。",
+                               "德国 德国 2-1 科特迪瓦 深度复盘已同步26/26 match_internal_rating_log；ESPN可核验基础统计和90+4助攻，Guardian可核验首发/进球/部分换人，FIFA/ESPN子页/外部评分源仍限制，故player_state_update_status=partial、source_gap_status=partial_source_limited。captured_at=2026-06-22T21:04:20+08:00"
                            ],
     "notes":  [
                   "26/26必填字段完成；form_status_1_5为模型输入，不是投注结论。"
@@ -4324,9 +4403,11 @@
     "rating_policy_note":  "external_rating is nullable and only populated when a reliable same-match same-source rating is available; otherwise rating_source_status/rating_missing_note explain the gap and internal_rating_proxy may mirror form_status_1_5 as a non-external model helper.",
     "internal_match_rating_policy_updated_at":  "2026-06-21T03:55:00+08:00",
     "internal_match_rating_policy_note":  "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating.",
-    "updated_at":  "2026-06-21T18:12:14+08:00",
+    "updated_at":  "2026-06-22T21:04:20+08:00",
     "match_internal_rating_backfill_status":  "updated",
-    "player_state_update_status":  "partial_source_limited",
+    "player_state_update_status":  "partial",
     "match_internal_rating_round2_status":  "partial",
-    "source_gap_backfill_status":  "partial_source_limited"
+    "source_gap_backfill_status":  "partial_source_limited",
+    "source_gap_status":  "partial_source_limited",
+    "deep_review_sync_status":  "synced"
 }

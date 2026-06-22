@@ -1,103 +1,130 @@
 {
-  "phase": "round2_postmortem_summary",
-  "group": "E",
-  "round": 2,
-  "status": "partial_source_limited",
-  "player_state_update_status": "updated",
-  "updated_at": "2026-06-21T18:35:00+08:00",
-  "matches": [
-    {
-      "match": "德国 2-1 科特迪瓦",
-      "file": "比赛\\\\已完成比赛\\\\小组赛\\\\E组\\\\2026-06-20_德国_2-1_科特迪瓦_复盘.md",
-      "file_status": "partial_source_limited",
-      "actual": "2-1",
-      "pre_match_prediction": "德国 2-1 科特迪瓦",
-      "prediction_contrast": "比分与胜负方向命中",
-      "model_error": "小胜路径判断正确，但单场复盘正文仍需补完",
-      "parameter_adjustments": [
-        "限制德国首轮大胜外推",
-        "保留科特迪瓦反击/定位球威胁因子"
-      ],
-      "player_state_update_status": "partial_source_limited",
-      "source_gap_backfill_status": "partial_source_limited",
-      "source_gap_backfill_note": "来源缺口补齐复核：FIFA Match Centre页面文本层仍无法稳定抽取全量逐人技术表；ESPN页面返回JavaScript/机器人验证；Guardian report/live可核验首发、进球、部分换人和关键事件但不提供同场逐人评分；FOX/FotMob/SofaScore/WhoScored未检索到可稳定抽取的本场同源数字评分；Bavarian Football Works/Cadena SER/Times of India/Welt仅作事件交叉验证或二级报道，不作为external_rating。",
-      "source_gap_backfill_captured_at": "2026-06-21T18:12:14+08:00"
-    },
-    {
-      "match": "厄瓜多尔 0-0 库拉索",
-      "file": "比赛\\\\已完成比赛\\\\小组赛\\\\E组\\\\2026-06-20_厄瓜多尔_0-0_库拉索_复盘.md",
-      "file_status": "exists_partial",
-      "actual": "0-0",
-      "pre_match_prediction": "厄瓜多尔 2-0 库拉索，3-0强备选",
-      "prediction_contrast": "胜负方向和进球数明显偏差",
-      "model_error": "高估厄瓜多尔终结与破密集能力，低估库拉索止血/门将表现和0-0尾部",
-      "parameter_adjustments": [
-        "提高热门低位破防不确定性",
-        "加入惨败后保守修正路径",
-        "下调只看射门量的转化假设"
-      ]
-    }
-  ],
-  "player_state_linkage": [
-    {
-      "team": "德国",
-      "player_state": "parse_ok_26",
-      "match_internal_rating_log": "present_26_for_round2",
-      "member_table": "section_exists",
-      "status": "partial_source_limited"
-    },
-    {
-      "team": "科特迪瓦",
-      "player_state": "parse_ok_26",
-      "match_internal_rating_log": "present_26_for_round2",
-      "member_table": "section_exists",
-      "status": "partial_source_limited"
-    },
-    {
-      "team": "厄瓜多尔",
-      "player_state": "parse_ok_26",
-      "match_internal_rating_log": "present_26_for_round2",
-      "member_table": "section_exists",
-      "status": "updated"
-    },
-    {
-      "team": "库拉索",
-      "player_state": "parse_ok_26",
-      "match_internal_rating_log": "present_26_for_round2",
-      "member_table": "section_exists",
-      "status": "updated"
-    }
-  ],
-  "missing_inputs": [
-    "德国-科特迪瓦单场复盘正文仍需回补",
-    "厄瓜多尔-库拉索单场复盘仍为partial，完整官方逐人外部评分不可稳定取得"
-  ],
-  "handoff_recommendations": [
-    "德国-科特迪瓦单场线程补完复盘正文；player_state联动验收已通过",
-    "厄瓜多尔-库拉索单场线程继续补完正文细节；player_state联动验收已通过"
-  ],
-  "source_gap_backfill_status": "partial_source_limited",
-  "source_gap_summary": [
-    {
-      "match": "德国 2-1 科特迪瓦",
-      "status": "partial_source_limited",
-      "events_minutes": "Guardian confirms starters, goals, key substitutions and injury observation; FIFA/ESPN full official player table not stably extractable",
-      "external_rating": "unavailable_or_not_extractable",
-      "model_blocking": false
-    },
-    {
-      "match": "厄瓜多尔 0-0 库拉索",
-      "status": "partial_source_limited",
-      "events_minutes": "Guardian confirms result, main stats, Room saves, key chances, substitutions and late yellow; FIFA/ESPN static extraction limited",
-      "external_rating": "unavailable_or_not_extractable",
-      "model_blocking": false
-    }
-  ],
-  "validation": {
-    "player_state_teams": "4/4 parse_ok_26",
-    "round2_match_internal_rating_log": "4/4 teams 26/26",
-    "rating_ranges": "internal_match_rating_1_5 and form_status_1_5 within 1.0-5.0",
-    "member_tables": "4/4 have round internal rating section",
-    "encoding_scan": "pending_final_validation"
-  }
+    "phase":  "round2_postmortem_summary",
+    "group":  "E",
+    "round":  2,
+    "status":  "partial_source_limited_completed",
+    "player_state_update_status":  "updated",
+    "updated_at":  "2026-06-22T00:25:00+08:00",
+    "source_gap_backfill_status":  "partial_source_limited",
+    "model_blocking":  false,
+    "matches":  [
+                    {
+                        "match":  "德国 2-1 科特迪瓦",
+                        "file":  "比赛\\\\已完成比赛\\\\小组赛\\\\E组\\\\2026-06-20_德国_2-1_科特迪瓦_复盘.md",
+                        "file_status":  "partial_source_limited",
+                        "actual":  "2-1",
+                        "deep_review_requirements":  [
+                                                         "result",
+                                                         "event_chain",
+                                                         "prediction_contrast",
+                                                         "tactical_review",
+                                                         "model_error",
+                                                         "parameter_adjustment",
+                                                         "red_team_risks",
+                                                         "player_state_update_status"
+                                                     ],
+                        "pre_match_prediction":  "德国 2-1 科特迪瓦",
+                        "prediction_contrast":  "比分与胜负方向命中，但德国过程优势低于首轮外推预期",
+                        "model_error":  "小胜路径判断正确，首发压制力低于预期，替补贡献被低估",
+                        "parameter_adjustments":  [
+                                                      "限制德国首轮大胜外推",
+                                                      "上修德国替补/后段进攻贡献",
+                                                      "保留科特迪瓦转换和二点进攻威胁"
+                                                  ],
+                        "red_team_risks":  [
+                                               "德国大胜外推风险",
+                                               "Singo疑似身体问题需复核",
+                                               "官方全量逐人表和外部评分不可稳定抽取"
+                                           ],
+                        "source_limits":  [
+                                              "FIFA/ESPN全量逐人技术表不可稳定抽取",
+                                              "外部逐人评分不可稳定取得"
+                                          ],
+                        "player_state_update_status":  "updated"
+                    },
+                    {
+                        "match":  "厄瓜多尔 0-0 库拉索",
+                        "file":  "比赛\\\\已完成比赛\\\\小组赛\\\\E组\\\\2026-06-20_厄瓜多尔_0-0_库拉索_复盘.md",
+                        "file_status":  "partial_source_limited",
+                        "actual":  "0-0",
+                        "deep_review_requirements":  [
+                                                         "result",
+                                                         "event_chain",
+                                                         "prediction_contrast",
+                                                         "tactical_review",
+                                                         "model_error",
+                                                         "parameter_adjustment",
+                                                         "red_team_risks",
+                                                         "player_state_update_status"
+                                                     ],
+                        "pre_match_prediction":  "厄瓜多尔 2-0 库拉索，3-0强备选",
+                        "prediction_contrast":  "胜负方向和进球数明显偏差，低估0-0尾部",
+                        "model_error":  "高估厄瓜多尔破低位与终结转化，低估库拉索保守修复和门将状态",
+                        "parameter_adjustments":  [
+                                                      "提高热门低位破防不确定性",
+                                                      "上调惨败后保守修正路径",
+                                                      "下调只看射门量的转化假设"
+                                                  ],
+                        "red_team_risks":  [
+                                               "高射门量不等于高进球兑现",
+                                               "Room高扑救不可直接视为常态",
+                                               "热门平局尾部需要保留"
+                                           ],
+                        "source_limits":  [
+                                              "FIFA/ESPN静态抽取受限",
+                                              "外部逐人评分不可稳定取得"
+                                          ],
+                        "player_state_update_status":  "updated"
+                    }
+                ],
+    "player_state_linkage":  [
+                                 {
+                                     "team":  "德国",
+                                     "player_state":  "parse_ok_26",
+                                     "match_internal_rating_log":  "26/26",
+                                     "member_table":  "round2_record_exists",
+                                     "rating_range":  "1.0-5.0",
+                                     "external_rating_note":  "26/26 rating_source_status/rating_missing_note present"
+                                 },
+                                 {
+                                     "team":  "科特迪瓦",
+                                     "player_state":  "parse_ok_26",
+                                     "match_internal_rating_log":  "26/26",
+                                     "member_table":  "round2_record_exists",
+                                     "rating_range":  "1.0-5.0",
+                                     "external_rating_note":  "26/26 rating_source_status/rating_missing_note present"
+                                 },
+                                 {
+                                     "team":  "厄瓜多尔",
+                                     "player_state":  "parse_ok_26",
+                                     "match_internal_rating_log":  "26/26",
+                                     "member_table":  "round2_record_exists",
+                                     "rating_range":  "1.0-5.0",
+                                     "external_rating_note":  "26/26 rating_source_status/rating_missing_note present"
+                                 },
+                                 {
+                                     "team":  "库拉索",
+                                     "player_state":  "parse_ok_26",
+                                     "match_internal_rating_log":  "26/26",
+                                     "member_table":  "round2_record_exists",
+                                     "rating_range":  "1.0-5.0",
+                                     "external_rating_note":  "26/26 rating_source_status/rating_missing_note present"
+                                 }
+                             ],
+    "non_blocking_source_limits":  [
+                                       "同场同源外部逐人评分不可稳定取得，external_rating保留null",
+                                       "FIFA/ESPN动态页或验证限制导致全量逐人技术表不可稳定抽取"
+                                   ],
+    "followup_data_collection":  [
+                                     "若官方PDF/静态match report出现，回补官方全量分钟、牌、助攻和逐人技术表",
+                                     "若FotMob/SofaScore/WhoScored稳定评分页出现，回补external_rating"
+                                 ],
+    "validation":  {
+                       "postmortem_json_parse":  "ok",
+                       "teams_26":  "4/4",
+                       "round2_match_internal_rating_log":  "4/4 teams 26/26",
+                       "rating_ranges":  "pass",
+                       "member_tables":  "4/4",
+                       "encoding_scan":  "pass_after_final_validation"
+                   }
 }
