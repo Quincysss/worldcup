@@ -1,0 +1,129 @@
+{
+  "phase": "postmatch_model_review",
+  "status": "completed_revise",
+  "group": "I",
+  "round": 2,
+  "updated_at": "2026-06-23T23:10:00+08:00",
+  "source_prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+  "matches": [
+    {
+      "match": "France vs Iraq",
+      "actual_score": {
+        "france": 3,
+        "iraq": 0
+      },
+      "prematch_pick": "France 3-0 Iraq",
+      "prematch_xg": {
+        "france": 2.55,
+        "iraq": 0.58
+      },
+      "prematch_1x2": {
+        "france_win": 0.7999,
+        "draw": 0.1366,
+        "iraq_win": 0.0634
+      },
+      "backtest": {
+        "result_direction_hit": true,
+        "exact_score_hit": true,
+        "total_goals_error": 0,
+        "home_team_goal_error": 0,
+        "away_team_goal_error": 0,
+        "clean_sheet_path_hit": true
+      },
+      "key_lessons": [
+        "France strong-favorite baseline and clean-sheet path were well calibrated.",
+        "Rotation penalty should not be over-applied when France keeps Mbappe, Olise or Dembele-level creation available.",
+        "Storm interruption should be tracked as a restart-focus factor, but not overfit from one match."
+      ],
+      "parameter_updates": [
+        {
+          "feature": "france_rotation_attack_penalty",
+          "action": "shadow_downweight",
+          "max_shift": 0.03
+        },
+        {
+          "feature": "france_right_side_creation_chain",
+          "action": "revise_up",
+          "max_shift": 0.05
+        },
+        {
+          "feature": "iraq_possession_to_threat_conversion",
+          "action": "revise_down",
+          "max_shift": 0.04
+        }
+      ],
+      "red_team_status": "revise",
+      "player_state_update_status": "partial_patch_written"
+    },
+    {
+      "match": "Norway vs Senegal",
+      "actual_score": {
+        "norway": 3,
+        "senegal": 2
+      },
+      "prematch_pick": "Norway 2-1 Senegal",
+      "prematch_xg": {
+        "norway": 1.75,
+        "senegal": 1.25
+      },
+      "prematch_1x2": {
+        "norway_win": 0.4914,
+        "draw": 0.2349,
+        "senegal_win": 0.2737
+      },
+      "backtest": {
+        "result_direction_hit": true,
+        "exact_score_hit": false,
+        "total_goals_error": 2,
+        "norway_goal_error": 1,
+        "senegal_goal_error": 1,
+        "over_2_5_path_hit": true
+      },
+      "key_lessons": [
+        "Norway win direction was correct, but static Poisson distribution was too narrow.",
+        "Haaland-Odegaard conversion chain needs a higher ceiling when opponents must open up.",
+        "Senegal's trailing-game transition threat should not be suppressed despite two defeats.",
+        "Norway late-game defensive risk should remain active against elite opponents."
+      ],
+      "parameter_updates": [
+        {
+          "feature": "i_group_open_game_tail_probability",
+          "action": "revise_up",
+          "max_shift": 0.06
+        },
+        {
+          "feature": "norway_elite_finisher_conversion",
+          "action": "revise_up",
+          "max_shift": 0.05
+        },
+        {
+          "feature": "senegal_trailing_transition_attack",
+          "action": "revise_up",
+          "max_shift": 0.05
+        },
+        {
+          "feature": "norway_late_game_defensive_stability",
+          "action": "shadow_down",
+          "max_shift": 0.04
+        }
+      ],
+      "red_team_status": "revise",
+      "player_state_update_status": "partial_patch_written"
+    }
+  ],
+  "next_round_model_risks": [
+    {
+      "match": "France vs Norway",
+      "risk": "Do not model as simple France brand dominance; Norway scoring path is live through Haaland, Odegaard, set pieces and high-point attacks."
+    },
+    {
+      "match": "Senegal vs Iraq",
+      "risk": "Low-total default is dangerous because both teams have defensive issues, but motivation, rotation and injury confirmation must be weighted heavily."
+    }
+  ],
+  "global_red_team_notes": [
+    "All player ratings are internal proxy scores on a 1-5 or 10-point scale and are not official ratings.",
+    "Injury statuses for Aymen Hussein, Julian Ryerson and Edouard Mendy remain pending review.",
+    "Betting conclusions remain discussion-only and must not be upgraded from postmatch accuracy alone."
+  ]
+}
