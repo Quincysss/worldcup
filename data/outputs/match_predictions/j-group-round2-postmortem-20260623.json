@@ -1,0 +1,121 @@
+{
+  "schema_version": "worldcup_match_postmortem.v1",
+  "status": "completed",
+  "group": "J",
+  "round": 2,
+  "updated_at": "2026-06-23T11:00:00+08:00",
+  "source_prediction_file": "data/outputs/match_predictions/j-group-round2-quant-prediction-20260621.json",
+  "matches": [
+    {
+      "match": "Argentina vs Austria",
+      "actual_result": {
+        "score": "2-0",
+        "winner": "argentina",
+        "total_goals": 2,
+        "over_2_5": false
+      },
+      "pre_match_probabilities_1x2": {
+        "argentina_win": 0.6144,
+        "draw": 0.2142,
+        "austria_win": 0.1714
+      },
+      "pre_match_totals_probabilities": {
+        "over_2_5": 0.5471,
+        "under_2_5": 0.4529,
+        "over_3_5": 0.3237,
+        "under_3_5": 0.6763
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.1106
+        },
+        {
+          "score": "2-0",
+          "probability": 0.1078
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1017
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0992
+        },
+        {
+          "score": "3-0",
+          "probability": 0.0701
+        }
+      ],
+      "postmatch_error": {
+        "one_x_two": "correct",
+        "exact_score": "hit_top2",
+        "score_probability": 0.1078,
+        "total_2_5": "incorrect_model_leaned_over",
+        "xg_direction": "argentina_goals_close_austria_xg_overestimated"
+      },
+      "parameter_updates": {
+        "argentina_clean_sheet_factor": "+0.04",
+        "messi_clutch_finishing_factor": "+0.05",
+        "austria_vs_elite_final_third_factor": "-0.06",
+        "totals_tail_risk": "reduce_underdog_goal_tail_in_strong_favorite_control_games"
+      },
+      "red_team_verdict": "pass_for_1x2_and_scoreline_revise_totals"
+    },
+    {
+      "match": "Jordan vs Algeria",
+      "actual_result": {
+        "score": "1-2",
+        "winner": "algeria",
+        "total_goals": 3,
+        "over_2_5": true
+      },
+      "pre_match_probabilities_1x2": {
+        "jordan_win": 0.2689,
+        "draw": 0.2796,
+        "algeria_win": 0.4515
+      },
+      "pre_match_totals_probabilities": {
+        "over_2_5": 0.396,
+        "under_2_5": 0.604,
+        "over_3_5": 0.1946,
+        "under_3_5": 0.8054
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.1364
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1296
+        },
+        {
+          "score": "0-0",
+          "probability": 0.1033
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0981
+        },
+        {
+          "score": "0-2",
+          "probability": 0.09
+        }
+      ],
+      "postmatch_error": {
+        "one_x_two": "correct",
+        "exact_score": "missed_top5_but_matrix_probability_0.0855",
+        "score_probability": 0.0855,
+        "total_2_5": "incorrect_model_leaned_under",
+        "xg_direction": "algeria_second_half_substitution_elasticity_underestimated"
+      },
+      "parameter_updates": {
+        "algeria_bench_attack_factor": "+0.08",
+        "jordan_lead_protection_factor": "-0.05",
+        "totals_live_state_factor": "increase_when_favorite_trails_at_half_and_has_attacking_bench"
+      },
+      "red_team_verdict": "pass_for_1x2_revise_scoreline_rank_and_totals"
+    }
+  ]
+}

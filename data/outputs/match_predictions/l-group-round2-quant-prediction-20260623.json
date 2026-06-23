@@ -1,0 +1,733 @@
+{
+  "model_scope": "L group round 2 quantitative match predictions",
+  "phase": "group_stage_round2_quant_prediction_cp_jc_recalc",
+  "group": "L",
+  "round": 2,
+  "status": "cp_jc_odds_integrated_discussion_only",
+  "created_at": "2026-06-23T17:05:00+08:00",
+  "updated_at": "2026-06-23T17:55:00+08:00",
+  "owner": "main_thread_integrated_with_role_threads",
+  "model_version": "worldcup-quant-poisson-partial-v0.3",
+  "scope": "L组第二轮英格兰vs加纳、巴拿马vs克罗地亚量化预测；不进入出线预测，不给正式投注建议。",
+  "previous_baseline_json": "data\\outputs\\match_predictions\\l-group-round2-quant-prediction-20260622.json",
+  "role_threads": {
+    "data_collector": {
+      "thread_id": "019eb053-ef96-7a22-9685-4602ba252b10",
+      "output": "data/thread_outputs/l-group-round2-recalc-20260623/data-collector.md",
+      "status": "in_progress_at_main_finalize"
+    },
+    "tactics_coach": {
+      "thread_id": "019eb05a-a3ee-7023-9c89-42d9786d4685",
+      "output": "data/thread_outputs/l-group-round2-recalc-20260623/tactics-coach.md",
+      "status": "in_progress_at_main_finalize"
+    },
+    "modeler": {
+      "thread_id": "019eb079-bed5-7342-9dfd-d1f448caa0dc",
+      "output": "data/thread_outputs/l-group-round2-recalc-20260623/modeler.md",
+      "status": "in_progress_at_main_finalize"
+    },
+    "red_team": {
+      "thread_id": "019eb05b-66db-7000-8a84-c453dece7ac3",
+      "output": "data/thread_outputs/l-group-round2-recalc-20260623/red-team.md",
+      "status": "file_recreated_by_main_after_thread_deleted_target"
+    },
+    "summary": {
+      "thread_id": "019eb06a-ae34-7c00-b1fe-9e35ff23c848",
+      "output": "data/thread_outputs/l-group-round2-recalc-20260623/summary.md",
+      "status": "in_progress_at_main_finalize"
+    }
+  },
+  "input_readiness": {
+    "label": "partial_thread_fallback_with_cp_jc_odds",
+    "input_files": [
+      {
+        "path": "data/outputs/player_state/england-player-state.json",
+        "exists": true,
+        "size": 339228
+      },
+      {
+        "path": "data/outputs/player_state/ghana-player-state.json",
+        "exists": true,
+        "size": 597425
+      },
+      {
+        "path": "data/outputs/player_state/panama-player-state.json",
+        "exists": true,
+        "size": 511654
+      },
+      {
+        "path": "data/outputs/player_state/croatia-player-state.json",
+        "exists": true,
+        "size": 536855
+      },
+      {
+        "path": "data/packets/matches/l-group-round2-data-refresh-20260622.json",
+        "exists": true,
+        "size": 19107
+      },
+      {
+        "path": "data/packets/matchup_tactics/l-group-round2-tactical-refresh-20260622.json",
+        "exists": true,
+        "size": 28313
+      }
+    ],
+    "betting_gate_status": "discussion_only_hold",
+    "betting_execution_status": "hold_for_betting",
+    "missing_or_stale_inputs": [
+      "T-75官方首发",
+      "官方最终伤停",
+      "新浪稳定结构化竞彩赔率",
+      "临场天气/阵容最后确认"
+    ]
+  },
+  "sources": {
+    "cp_jc_odds_snapshot": {
+      "source": "中国足彩网竞彩混合页",
+      "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "source_system_time": "2026-06-23 16:53:21",
+      "captured_at": "2026-06-23T17:55:00+08:00",
+      "issue_date": "2026-06-23",
+      "site_notice": "因系统升级，该彩种暂停销售；页面仍展示竞彩混合场次数据。",
+      "matches": {
+        "L-R2-ENG-GHA-20260623": {
+          "competition_no": "周二046",
+          "home_team": "英格兰",
+          "away_team": "加纳",
+          "kickoff_beijing": "2026-06-24T04:00:00+08:00",
+          "ordinary_spf": {
+            "status": "未开售",
+            "odds": null,
+            "implied_normalized": null
+          },
+          "rqspf": {
+            "handicap": -2,
+            "odds": [
+              2.2,
+              3.8,
+              2.43
+            ],
+            "implied_normalized": [
+              0.4025,
+              0.233,
+              0.3644
+            ]
+          },
+          "non_sp_reference": {
+            "label": "页面欧赔/参考展示，不作为竞彩SP",
+            "odds_displayed_as_page_order": [
+              15.45,
+              1.19,
+              6.97
+            ],
+            "normalized_page_order": [
+              0.0617,
+              0.8014,
+              0.1368
+            ]
+          }
+        },
+        "L-R2-PAN-CRO-20260623": {
+          "competition_no": "周二047",
+          "home_team": "巴拿马",
+          "away_team": "克罗地亚",
+          "kickoff_beijing": "2026-06-24T07:00:00+08:00",
+          "ordinary_spf": {
+            "status": "已开售",
+            "odds": [
+              6.9,
+              4.2,
+              1.34
+            ],
+            "implied_normalized": [
+              0.1283,
+              0.2108,
+              0.6608
+            ]
+          },
+          "rqspf": {
+            "handicap": 1,
+            "odds": [
+              2.65,
+              3.6,
+              2.11
+            ],
+            "implied_normalized": [
+              0.3342,
+              0.246,
+              0.4198
+            ]
+          },
+          "non_sp_reference": {
+            "label": "页面欧赔/参考展示，不作为竞彩SP",
+            "odds_displayed_as_page_order": [
+              1.49,
+              6.58,
+              4.3
+            ],
+            "normalized_page_order": [
+              0.6357,
+              0.144,
+              0.2203
+            ]
+          }
+        }
+      },
+      "cross_check": {
+        "sina": "未取得稳定结构化单场竞彩SP；本版不补写无法抓到的赔率。",
+        "external_team_news": [
+          "https://www.theguardian.com/football/2026/jun/23/thomas-tuchel-england-ghana-world-cup-defence-improve",
+          "https://www.nst.com.my/amp/sports/football/2026/06/1470282/england-ghana-ready-pay-price-advance-world-cup",
+          "https://www.sportsmole.co.uk/football/panama/world-cup-2026/team-news/panama-vs-croatia-injury-suspension-list-predicted-xis_599789.html",
+          "https://www.goal.com/en-us/news/live-stream-panama-v-croatia-online-tv-channel/bltf4fd303941702c41"
+        ]
+      }
+    },
+    "team_news": [
+      {
+        "source": "Guardian",
+        "url": "https://www.theguardian.com/football/2026/jun/23/thomas-tuchel-england-ghana-world-cup-defence-improve",
+        "note": "Tuchel强调英格兰防守结构和球权管理；Rice/Saka训练与负荷信息。"
+      },
+      {
+        "source": "NST/Reuters",
+        "url": "https://www.nst.com.my/amp/sports/football/2026/06/1470282/england-ghana-ready-pay-price-advance-world-cup",
+        "note": "Saka跟腱管理、Ati-Zigi腹股沟伤待体检、Partey可出战。"
+      },
+      {
+        "source": "Sports Mole",
+        "url": "https://www.sportsmole.co.uk/football/panama/world-cup-2026/team-news/panama-vs-croatia-injury-suspension-list-predicted-xis_599789.html",
+        "note": "Panama/Croatia伤停与预计阵容。"
+      },
+      {
+        "source": "Goal",
+        "url": "https://www.goal.com/en-us/news/live-stream-panama-v-croatia-online-tv-channel/bltf4fd303941702c41",
+        "note": "Panama-Croatia赛前背景、预计阵容与近期状态。"
+      }
+    ]
+  },
+  "method": {
+    "summary": "旧版Poisson基线 + 今日中国足彩网竞彩同源赔率 + 最新队情/伤停信号 + 红队保守门控。",
+    "double_counting_guard": "首轮表现只进入近期状态和战术修正一次；赔率只作校准，不替代模型。",
+    "betting_gate": "T-75首发、最终伤停和稳定竞彩赔率未满足前，仅discussion_only。"
+  },
+  "matches": [
+    {
+      "match_id": "L-R2-ENG-GHA-20260623",
+      "match": "England vs Ghana",
+      "match_cn": "英格兰 vs 加纳",
+      "group": "L",
+      "stage": "group_stage_round2",
+      "kickoff_beijing": "2026-06-24T04:00:00+08:00",
+      "competition_no": "周二046",
+      "venue": "Boston Stadium / Gillette Stadium",
+      "source_urls": [
+        "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "https://www.theguardian.com/football/2026/jun/23/thomas-tuchel-england-ghana-world-cup-defence-improve",
+        "https://www.nst.com.my/amp/sports/football/2026/06/1470282/england-ghana-ready-pay-price-advance-world-cup"
+      ],
+      "factor_inputs": {
+        "baseline_strength": {
+          "england": 0.86,
+          "ghana": 0.59
+        },
+        "recent_round1_form": {
+          "england": "4-2 beat Croatia; attack strong but defensive rest-defense unstable",
+          "ghana": "1-0 beat Panama; low-event control and late winner"
+        },
+        "player_state": {
+          "england": "Kane high state; Saka managed load likely bench; Rice trained.",
+          "ghana": "Ati-Zigi groin issue requires pregame assessment; Partey available."
+        },
+        "tactical_matchup": "England territorial and set-piece edge vs Ghana low block/direct counter; Ghana can slow tempo and attack late.",
+        "market_signal": "ordinary SPF not on sale; -2 RQSPF only used as deep-handicap risk calibration."
+      },
+      "factor_weights": {
+        "base_strength": 0.28,
+        "recent_form": 0.2,
+        "attack_defense_structure": 0.2,
+        "player_availability": 0.12,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.03,
+        "market_calibration": 0.05
+      },
+      "team_strength_score": {
+        "england": 82,
+        "ghana": 61.5
+      },
+      "attack_score": {
+        "england": 81.5,
+        "ghana": 56.5
+      },
+      "defense_score": {
+        "england": 66.5,
+        "ghana": 61
+      },
+      "player_state_adjustment": {
+        "england": 0.05,
+        "ghana": 0.01
+      },
+      "injury_adjustment": {
+        "england": -0.02,
+        "ghana": -0.03
+      },
+      "tactical_matchup_adjustment": {
+        "england": 0.09,
+        "ghana": 0.04
+      },
+      "schedule_environment_adjustment": {
+        "england": -0.01,
+        "ghana": -0.01
+      },
+      "market_adjustment": {
+        "england": -0.01,
+        "draw": 0.018,
+        "ghana": -0.008,
+        "reason": "普通SPF未开售；-2让球分布提示英格兰优势明确但深胜不轻松。"
+      },
+      "expected_goals": {
+        "home": 1.9,
+        "away": 0.74
+      },
+      "poisson_score_matrix": {
+        "max_goals_included": 5,
+        "rows_home_goals_cols_away_goals": [
+          [
+            0.0714,
+            0.0528,
+            0.0195,
+            0.0048,
+            0.0009,
+            0.0001
+          ],
+          [
+            0.1356,
+            0.1003,
+            0.0371,
+            0.0092,
+            0.0017,
+            0.0003
+          ],
+          [
+            0.1288,
+            0.0953,
+            0.0353,
+            0.0087,
+            0.0016,
+            0.0002
+          ],
+          [
+            0.0816,
+            0.0604,
+            0.0223,
+            0.0055,
+            0.001,
+            0.0002
+          ],
+          [
+            0.0387,
+            0.0287,
+            0.0106,
+            0.0026,
+            0.0005,
+            0.0001
+          ],
+          [
+            0.0147,
+            0.0109,
+            0.004,
+            0.001,
+            0.0002,
+            0
+          ]
+        ],
+        "tail_probability_outside_0_to_5": 0.0134
+      },
+      "probabilities_1x2": {
+        "home_win": 0.6487,
+        "draw": 0.213,
+        "away_win": 0.1383
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4916,
+        "under_2_5": 0.5084,
+        "btts_yes": 0.4447
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.1356
+        },
+        {
+          "score": "2-0",
+          "probability": 0.1288
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1003
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0953
+        },
+        {
+          "score": "3-0",
+          "probability": 0.0816
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0714
+        },
+        {
+          "score": "3-1",
+          "probability": 0.0604
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0528
+        }
+      ],
+      "odds_snapshot": {
+        "competition_no": "周二046",
+        "home_team": "英格兰",
+        "away_team": "加纳",
+        "kickoff_beijing": "2026-06-24T04:00:00+08:00",
+        "ordinary_spf": {
+          "status": "未开售",
+          "odds": null,
+          "implied_normalized": null
+        },
+        "rqspf": {
+          "handicap": -2,
+          "odds": [
+            2.2,
+            3.8,
+            2.43
+          ],
+          "implied_normalized": [
+            0.4025,
+            0.233,
+            0.3644
+          ]
+        },
+        "non_sp_reference": {
+          "label": "页面欧赔/参考展示，不作为竞彩SP",
+          "odds_displayed_as_page_order": [
+            15.45,
+            1.19,
+            6.97
+          ],
+          "normalized_page_order": [
+            0.0617,
+            0.8014,
+            0.1368
+          ]
+        }
+      },
+      "odds_implied_probability": {
+        "ordinary_spf": null,
+        "rqspf_normalized": [
+          0.4025,
+          0.233,
+          0.3644
+        ]
+      },
+      "model_market_delta": {
+        "status": "partial_no_ordinary_spf",
+        "note": "无法和普通SPF直接做胜平负偏差；只保守下调大胜尾部。"
+      },
+      "final_probabilities": {
+        "home_win": 0.64,
+        "draw": 0.22,
+        "away_win": 0.14
+      },
+      "final_pick": {
+        "winner_market": "英格兰胜倾向",
+        "score": "1-0 / 2-0",
+        "confidence": "medium_low"
+      },
+      "red_team_status": {
+        "verdict": "hold_for_betting_discussion_only",
+        "publish_mode": "discussion_only",
+        "required_caution": "缺T-75首发、Saka/Rice最终负荷、Ati-Zigi赛前体检和普通SPF。"
+      },
+      "quality_notes": [
+        "不要把英格兰首轮4球简单外推成大胜。",
+        "Ghana的Partey回归会降低英格兰中路推进确定性。"
+      ]
+    },
+    {
+      "match_id": "L-R2-PAN-CRO-20260623",
+      "match": "Panama vs Croatia",
+      "match_cn": "巴拿马 vs 克罗地亚",
+      "group": "L",
+      "stage": "group_stage_round2",
+      "kickoff_beijing": "2026-06-24T07:00:00+08:00",
+      "competition_no": "周二047",
+      "venue": "Toronto Stadium / BMO Field",
+      "source_urls": [
+        "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "https://www.sportsmole.co.uk/football/panama/world-cup-2026/team-news/panama-vs-croatia-injury-suspension-list-predicted-xis_599789.html",
+        "https://www.goal.com/en-us/news/live-stream-panama-v-croatia-online-tv-channel/bltf4fd303941702c41"
+      ],
+      "factor_inputs": {
+        "baseline_strength": {
+          "panama": 0.55,
+          "croatia": 0.74
+        },
+        "recent_round1_form": {
+          "panama": "0-1 loss to Ghana; low block held until stoppage time.",
+          "croatia": "2-4 loss to England; attack alive, late defensive resistance exposed."
+        },
+        "player_state": {
+          "panama": "Carrasquilla doubtful/unknown affects progression if absent.",
+          "croatia": "No listed injuries; Modric/Kovacic core but load and defensive recovery remain risk."
+        },
+        "tactical_matchup": "Croatia control and must-win pressure vs Panama compact block and counters.",
+        "market_signal": "ordinary SPF supports Croatia; +1 handicap still shows Panama cover/draw path is not trivial."
+      },
+      "factor_weights": {
+        "base_strength": 0.27,
+        "recent_form": 0.2,
+        "attack_defense_structure": 0.19,
+        "player_availability": 0.11,
+        "tactical_matchup": 0.13,
+        "schedule_environment": 0.03,
+        "market_calibration": 0.07
+      },
+      "team_strength_score": {
+        "panama": 56,
+        "croatia": 73
+      },
+      "attack_score": {
+        "panama": 52.5,
+        "croatia": 72
+      },
+      "defense_score": {
+        "panama": 58.5,
+        "croatia": 61
+      },
+      "player_state_adjustment": {
+        "panama": -0.02,
+        "croatia": 0.02
+      },
+      "injury_adjustment": {
+        "panama": -0.02,
+        "croatia": 0
+      },
+      "tactical_matchup_adjustment": {
+        "panama": 0.03,
+        "croatia": 0.09
+      },
+      "schedule_environment_adjustment": {
+        "panama": 0,
+        "croatia": -0.01
+      },
+      "market_adjustment": {
+        "panama": -0.033,
+        "draw": -0.026,
+        "croatia": 0.059,
+        "reason": "普通SPF给克罗地亚强信号，但+1盘口限制穿透信心。"
+      },
+      "expected_goals": {
+        "home": 0.76,
+        "away": 1.72
+      },
+      "poisson_score_matrix": {
+        "max_goals_included": 5,
+        "rows_home_goals_cols_away_goals": [
+          [
+            0.0837,
+            0.144,
+            0.1239,
+            0.071,
+            0.0305,
+            0.0105
+          ],
+          [
+            0.0636,
+            0.1095,
+            0.0941,
+            0.054,
+            0.0232,
+            0.008
+          ],
+          [
+            0.0242,
+            0.0416,
+            0.0358,
+            0.0205,
+            0.0088,
+            0.003
+          ],
+          [
+            0.0061,
+            0.0105,
+            0.0091,
+            0.0052,
+            0.0022,
+            0.0008
+          ],
+          [
+            0.0012,
+            0.002,
+            0.0017,
+            0.001,
+            0.0004,
+            0.0001
+          ],
+          [
+            0.0002,
+            0.0003,
+            0.0003,
+            0.0002,
+            0.0001,
+            0
+          ]
+        ],
+        "tail_probability_outside_0_to_5": 0.0087
+      },
+      "probabilities_1x2": {
+        "home_win": 0.1621,
+        "draw": 0.2346,
+        "away_win": 0.6032
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.451,
+        "under_2_5": 0.549,
+        "btts_yes": 0.437
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.144
+        },
+        {
+          "score": "0-2",
+          "probability": 0.1239
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1095
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0941
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0837
+        },
+        {
+          "score": "0-3",
+          "probability": 0.071
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0636
+        },
+        {
+          "score": "1-3",
+          "probability": 0.054
+        }
+      ],
+      "odds_snapshot": {
+        "competition_no": "周二047",
+        "home_team": "巴拿马",
+        "away_team": "克罗地亚",
+        "kickoff_beijing": "2026-06-24T07:00:00+08:00",
+        "ordinary_spf": {
+          "status": "已开售",
+          "odds": [
+            6.9,
+            4.2,
+            1.34
+          ],
+          "implied_normalized": [
+            0.1283,
+            0.2108,
+            0.6608
+          ]
+        },
+        "rqspf": {
+          "handicap": 1,
+          "odds": [
+            2.65,
+            3.6,
+            2.11
+          ],
+          "implied_normalized": [
+            0.3342,
+            0.246,
+            0.4198
+          ]
+        },
+        "non_sp_reference": {
+          "label": "页面欧赔/参考展示，不作为竞彩SP",
+          "odds_displayed_as_page_order": [
+            1.49,
+            6.58,
+            4.3
+          ],
+          "normalized_page_order": [
+            0.6357,
+            0.144,
+            0.2203
+          ]
+        }
+      },
+      "odds_implied_probability": {
+        "ordinary_spf_normalized": [
+          0.1283,
+          0.2108,
+          0.6608
+        ],
+        "rqspf_normalized": [
+          0.3342,
+          0.246,
+          0.4198
+        ]
+      },
+      "model_market_delta": {
+        "home_win": 0.0267,
+        "draw": 0.03420000000000001,
+        "away_win": -0.060800000000000076
+      },
+      "final_probabilities": {
+        "home_win": 0.155,
+        "draw": 0.245,
+        "away_win": 0.6
+      },
+      "final_pick": {
+        "winner_market": "克罗地亚胜倾向",
+        "score": "0-1 / 0-2",
+        "confidence": "medium_low"
+      },
+      "red_team_status": {
+        "verdict": "hold_for_betting_discussion_only",
+        "publish_mode": "discussion_only",
+        "required_caution": "缺T-75首发、Carrasquilla最终状态和盘口临场变动；克罗地亚老将后程防守仍有波动。"
+      },
+      "quality_notes": [
+        "克罗地亚方向比上一版更强，但不等于稳穿。",
+        "Panama低位抗压和Toronto熟悉场地保留小比分尾部。"
+      ]
+    }
+  ],
+  "validation": {
+    "json_parse_checked": true,
+    "markdown_files_written": [
+      "比赛\\未开始比赛\\小组赛\\L组\\L组第二轮量化预测汇总_20260623.md",
+      "比赛\\未开始比赛\\小组赛\\L组\\2026-06-24_英格兰_vs_加纳_量化预测_20260623.md",
+      "比赛\\未开始比赛\\小组赛\\L组\\2026-06-24_巴拿马_vs_克罗地亚_量化预测_20260623.md",
+      "data/thread_outputs/l-group-round2-recalc-20260623/data-collector.md",
+      "data/thread_outputs/l-group-round2-recalc-20260623/tactics-coach.md",
+      "data/thread_outputs/l-group-round2-recalc-20260623/modeler.md",
+      "data/thread_outputs/l-group-round2-recalc-20260623/red-team.md",
+      "data/thread_outputs/l-group-round2-recalc-20260623/summary.md",
+      "data/thread_outputs/l-group-round2-recalc-20260623/main-recalc.md"
+    ],
+    "role_thread_integration": "partial_thread_fallback; role threads dispatched and still in progress at main finalize",
+    "status_file_append": "verified_after_finalize_script",
+    "betting_boundary": "discussion_only_hold_until_t75_lineups_final_injuries_and_stable_sp"
+  }
+}

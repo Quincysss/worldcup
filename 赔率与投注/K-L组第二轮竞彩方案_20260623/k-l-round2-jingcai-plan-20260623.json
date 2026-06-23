@@ -1,0 +1,89 @@
+{
+  "status": "discussion_only",
+  "betting_release": "hold",
+  "updated_at": "2026-06-23T17:17:05+08:00",
+  "source": {
+    "name": "中国足彩网竞彩混合页",
+    "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+    "sales_notice": "因系统升级，该彩种暂停销售"
+  },
+  "matches": [
+    {
+      "match_id": "K-R2-POR-UZB-20260623",
+      "jc_code": "周二045",
+      "match": "葡萄牙 vs 乌兹别克",
+      "model_probabilities": {"home_win": 0.655, "draw": 0.212, "away_win": 0.133},
+      "xg": {"home": 1.92, "away": 0.72},
+      "score_lean": ["1-0", "2-0"],
+      "odds": {
+        "spf": {"status": "not_on_sale"},
+        "rqspf": {"handicap": -2, "odds": [1.98, 4.05, 2.65], "normalized_implied": [0.4472, 0.2186, 0.3341]}
+      },
+      "advice_status": "watch_only",
+      "risk": "普通胜平负未开售，深让球不支持放大大胜预期"
+    },
+    {
+      "match_id": "K-R2-COL-DRC-20260623",
+      "jc_code": "周二048",
+      "match": "哥伦比亚 vs 民主刚果",
+      "model_probabilities": {"home_win": 0.57, "draw": 0.235, "away_win": 0.195},
+      "xg": {"home": 1.72, "away": 0.94},
+      "score_lean": ["1-0", "2-1"],
+      "odds": {
+        "spf": {"odds": [1.35, 3.90, 7.60], "normalized_implied": [0.6563, 0.2272, 0.1166]},
+        "rqspf": {"handicap": -1, "odds": [2.22, 3.35, 2.63], "normalized_implied": [0.3989, 0.2644, 0.3367]}
+      },
+      "advice_status": "single_watch",
+      "risk": "普通胜方向和市场同向，但让-1穿盘分歧明显"
+    },
+    {
+      "match_id": "L-R2-ENG-GHA-20260624",
+      "jc_code": "周二046",
+      "match": "英格兰 vs 加纳",
+      "model_probabilities": {"home_win": 0.64, "draw": 0.22, "away_win": 0.14},
+      "xg": {"home": 1.90, "away": 0.74},
+      "score_lean": ["1-0", "2-0"],
+      "odds": {
+        "spf": {"status": "not_on_sale"},
+        "rqspf": {"handicap": -2, "odds": [2.20, 3.80, 2.43], "normalized_implied": [0.4025, 0.2330, 0.3644]}
+      },
+      "advice_status": "watch_only",
+      "risk": "普通胜平负未开售，Saka/Rice负荷和加纳门将状态需临场确认"
+    },
+    {
+      "match_id": "L-R2-PAN-CRO-20260624",
+      "jc_code": "周二047",
+      "match": "巴拿马 vs 克罗地亚",
+      "model_probabilities": {"home_win": 0.155, "draw": 0.245, "away_win": 0.60},
+      "xg": {"home": 0.76, "away": 1.72},
+      "score_lean": ["0-1", "0-2"],
+      "odds": {
+        "spf": {"odds": [6.90, 4.20, 1.34], "normalized_implied": [0.1283, 0.2108, 0.6608]},
+        "rqspf": {"handicap": 1, "odds": [2.65, 3.60, 2.11], "normalized_implied": [0.3342, 0.2460, 0.4198]}
+      },
+      "advice_status": "single_watch",
+      "risk": "克罗地亚方向占优，但巴拿马+1覆盖空间仍在"
+    }
+  ],
+  "combo_watch": [
+    {
+      "name": "哥伦比亚胜 + 克罗地亚胜",
+      "type": "2串1",
+      "status": "discussion_only",
+      "risk": "低回报热门组合，需临场复核后才可再讨论"
+    }
+  ],
+  "avoid": [
+    "葡萄牙让-2和英格兰让-2作为组合核心",
+    "哥伦比亚让-1放大",
+    "四热门全串",
+    "用参考欧赔替代未开售竞彩SP"
+  ],
+  "release_gates": [
+    "销售状态恢复",
+    "竞彩SP链完整",
+    "T-75官方首发确认",
+    "最终伤停确认",
+    "红队verdict升级"
+  ]
+}

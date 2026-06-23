@@ -1,0 +1,270 @@
+{
+  "schema_version": "2026.06.worldcup.player_state.iteration.v1",
+  "status": "completed_incremental_iteration",
+  "scope": "group_i_round1_post_match_player_state_patch",
+  "updated_at": "2026-06-23T18:30:00+08:00",
+  "notes": [
+    "This file is an incremental player-state patch for Group I round 1, not a replacement for full roster/member tables.",
+    "internal_rating and state_value are project proxy values for model input only; they are not official match ratings.",
+    "Large existing player_state JSON files should be parsed and repaired separately before direct merge."
+  ],
+  "sources": [
+    {
+      "label": "FIFA France v Senegal match report",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-senegal-highlights-match-report",
+      "captured_at": "2026-06-23T18:30:00+08:00"
+    },
+    {
+      "label": "ESPN France v Senegal report",
+      "url": "https://www.espn.com/soccer/report/_/gameId/766713",
+      "captured_at": "2026-06-23T18:30:00+08:00"
+    },
+    {
+      "label": "FIFA Iraq v Norway match report",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/iraq-norway-highlights-match-report",
+      "captured_at": "2026-06-23T18:30:00+08:00"
+    },
+    {
+      "label": "FIFA Iraq v Norway match centre",
+      "url": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021488",
+      "captured_at": "2026-06-23T18:30:00+08:00"
+    },
+    {
+      "label": "The Guardian Iraq v Norway live report",
+      "url": "https://www.theguardian.com/football/live/2026/jun/16/iraq-v-norway-world-cup-2026-live",
+      "captured_at": "2026-06-23T18:30:00+08:00"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "2026-06-16-france-senegal",
+      "group": "I",
+      "score": "France 3-1 Senegal",
+      "pre_match_prediction": "France 2-1 Senegal",
+      "direction_hit": true,
+      "scoreline_hit": false,
+      "total_goals_error": 1,
+      "review_file": "比赛/已完成比赛/小组赛/I组/2026-06-16_法国_3-1_塞内加尔_复盘.md",
+      "red_team_verdict": "revise"
+    },
+    {
+      "match_id": "2026-06-16-iraq-norway",
+      "group": "I",
+      "score": "Iraq 1-4 Norway",
+      "pre_match_prediction": "Iraq 0-2 Norway",
+      "direction_hit": true,
+      "scoreline_hit": false,
+      "total_goals_error": 3,
+      "review_file": "比赛/已完成比赛/小组赛/I组/2026-06-16_伊拉克_1-4_挪威_复盘.md",
+      "red_team_verdict": "revise"
+    }
+  ],
+  "teams": {
+    "france": {
+      "display_name_zh": "法国",
+      "model_feature_updates": {
+        "attack_lambda_delta": 0.12,
+        "late_attack_sustainability": "up_medium",
+        "bench_impact": "up_medium",
+        "clean_sheet_confidence": "unchanged_low_medium"
+      },
+      "key_player_updates": [
+        {
+          "name_zh": "基利安-姆巴佩",
+          "name_en": "Kylian Mbappe",
+          "position": "FW",
+          "round1_internal_rating": 8.9,
+          "state_value": 5,
+          "status_note": "two goals; finishing and late-game impact up",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "迈克尔-奥利塞",
+          "name_en": "Michael Olise",
+          "position": "AM/W",
+          "round1_internal_rating": 8.2,
+          "state_value": 5,
+          "status_note": "two direct assist involvements; creation and progression upgraded",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "阿德里安-拉比奥",
+          "name_en": "Adrien Rabiot",
+          "position": "MF",
+          "round1_internal_rating": 7.4,
+          "state_value": 4,
+          "status_note": "assist and stable midfield connection",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "布拉德利-巴尔科拉",
+          "name_en": "Bradley Barcola",
+          "position": "FW",
+          "round1_internal_rating": 8,
+          "state_value": 5,
+          "status_note": "scored as late attacking option",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "迈克-迈尼昂",
+          "name_en": "Mike Maignan",
+          "position": "GK",
+          "round1_internal_rating": 6.3,
+          "state_value": 3,
+          "status_note": "team conceded late; clean-sheet confidence not upgraded",
+          "availability": "available_pending_team_news"
+        }
+      ],
+      "member_table_file": "队伍/法国/成员表.md"
+    },
+    "senegal": {
+      "display_name_zh": "塞内加尔",
+      "model_feature_updates": {
+        "weak_team_goal_floor": "up_low",
+        "late_defensive_fatigue": "up_medium",
+        "transition_threat": "maintain_medium"
+      },
+      "key_player_updates": [
+        {
+          "name_zh": "易卜拉希马-姆巴耶",
+          "name_en": "Ibrahim Mbaye",
+          "position": "FW",
+          "round1_internal_rating": 7.1,
+          "state_value": 4,
+          "status_note": "late goal; attacking spark retained",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "伊利曼-恩迪亚耶",
+          "name_en": "Iliman Ndiaye",
+          "position": "FW/AM",
+          "round1_internal_rating": 6.8,
+          "state_value": 4,
+          "status_note": "late progression and goal-chain involvement",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "卡利杜-库利巴利",
+          "name_en": "Kalidou Koulibaly",
+          "position": "DF",
+          "round1_internal_rating": 5.8,
+          "state_value": 2,
+          "status_note": "late box protection under pressure",
+          "availability": "available_pending_team_news"
+        }
+      ],
+      "member_table_file": "队伍/塞内加尔/成员表.md"
+    },
+    "norway": {
+      "display_name_zh": "挪威",
+      "model_feature_updates": {
+        "attack_lambda_delta": 0.17,
+        "high_score_tail": "up_medium_high",
+        "set_piece_threat": "up_medium",
+        "clean_sheet_probability": "down_low"
+      },
+      "key_player_updates": [
+        {
+          "name_zh": "埃尔林-哈兰德",
+          "name_en": "Erling Haaland",
+          "position": "FW",
+          "round1_internal_rating": 9,
+          "state_value": 5,
+          "status_note": "two goals; elite conversion path confirmed",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "马丁-厄德高",
+          "name_en": "Martin Odegaard",
+          "position": "MF",
+          "round1_internal_rating": 7.8,
+          "state_value": 4,
+          "status_note": "primary chance creation and set-piece service",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "戴维-默勒-沃尔费",
+          "name_en": "David Moller Wolfe",
+          "position": "DF/WB",
+          "round1_internal_rating": 7.2,
+          "state_value": 3,
+          "status_note": "assist for opening goal; cramp/minutes-risk watch",
+          "availability": "minutes_risk_pending_team_news"
+        },
+        {
+          "name_zh": "里奥-奥斯蒂高",
+          "name_en": "Leo Ostigard",
+          "position": "DF",
+          "round1_internal_rating": 7.7,
+          "state_value": 4,
+          "status_note": "headed goal; set-piece threat upgraded",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "谢尔德鲁普",
+          "name_en": "Andreas Schjelderup",
+          "position": "FW/W",
+          "round1_internal_rating": 6.6,
+          "state_value": 3,
+          "status_note": "late attacking option; head-contact follow-up required",
+          "availability": "head_contact_follow_up"
+        }
+      ],
+      "member_table_file": "队伍/挪威/成员表.md"
+    },
+    "iraq": {
+      "display_name_zh": "伊拉克",
+      "model_feature_updates": {
+        "goal_floor": "up_low",
+        "concede_after_trailing": "up_medium",
+        "goalkeeper_error_risk": "up_medium",
+        "defensive_late_fatigue": "up_medium"
+      },
+      "key_player_updates": [
+        {
+          "name_zh": "艾曼-侯赛因",
+          "name_en": "Aymen Hussein",
+          "position": "FW",
+          "round1_internal_rating": 7.4,
+          "state_value": 4,
+          "status_note": "equalising goal; target-forward route remains live",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "阿米尔-阿尔阿马里",
+          "name_en": "Amir Al-Ammari",
+          "position": "MF",
+          "round1_internal_rating": 7,
+          "state_value": 4,
+          "status_note": "assist for Hussein; progression and final-pass value upgraded",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "贾拉勒-哈桑",
+          "name_en": "Jalal Hassan",
+          "position": "GK",
+          "round1_internal_rating": 4.8,
+          "state_value": 1,
+          "status_note": "goalkeeper-confidence and handling-risk flag",
+          "availability": "available_pending_team_news"
+        },
+        {
+          "name_zh": "扎伊德-塔赫辛",
+          "name_en": "Zaid Tahseen",
+          "position": "DF",
+          "round1_internal_rating": 5.2,
+          "state_value": 2,
+          "status_note": "86th-minute yellow-card discipline watch",
+          "availability": "discipline_watch_pending_official_report"
+        }
+      ],
+      "member_table_file": "队伍/伊拉克/成员表.md"
+    }
+  },
+  "red_team_guardrails": [
+    "Do not treat the two scorelines as direct evidence of permanent team-strength jumps.",
+    "Do not use internal proxy ratings as official player ratings.",
+    "Keep late fourth-goal attribution in Iraq v Norway as pending official confirmation before player-level adjustment."
+  ],
+  "member_table_update_policy": "canonical_in_place_only; old per-round member table copies removed"
+}
