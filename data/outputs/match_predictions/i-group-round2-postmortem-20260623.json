@@ -3,7 +3,7 @@
   "status": "completed_revise",
   "group": "I",
   "round": 2,
-  "updated_at": "2026-06-23T23:10:00+08:00",
+  "updated_at": "2026-06-23T23:40:00+08:00",
   "source_prediction_file": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
   "matches": [
     {
@@ -53,7 +53,7 @@
         }
       ],
       "red_team_status": "revise",
-      "player_state_update_status": "partial_patch_written"
+      "player_state_update_status": "partial_key_players_merged_to_canonical_member_tables"
     },
     {
       "match": "Norway vs Senegal",
@@ -108,7 +108,7 @@
         }
       ],
       "red_team_status": "revise",
-      "player_state_update_status": "partial_patch_written"
+      "player_state_update_status": "partial_key_players_merged_to_canonical_member_tables"
     }
   ],
   "next_round_model_risks": [
@@ -125,5 +125,12 @@
     "All player ratings are internal proxy scores on a 1-5 or 10-point scale and are not official ratings.",
     "Injury statuses for Aymen Hussein, Julian Ryerson and Edouard Mendy remain pending review.",
     "Betting conclusions remain discussion-only and must not be upgraded from postmatch accuracy alone."
+  ],
+  "player_state_patch": "data/outputs/player_state/i-group-round2-state-iteration-20260623.json",
+  "team_member_tables": [
+    "队伍/法国/成员表.md",
+    "队伍/伊拉克/成员表.md",
+    "队伍/挪威/成员表.md",
+    "队伍/塞内加尔/成员表.md"
   ]
 }

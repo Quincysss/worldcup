@@ -1,48 +1,44 @@
-# I组第一轮赛后复盘
+# I组第一轮赛后复盘索引
 
-phase: group_round_postmortem  
-status: completed_match_review  
-updated_at: 2026/06/17 10:20 +08:00  
-group: I  
-scope: 复盘昨晚已确认完赛的 I组两场：法国 3-1 塞内加尔、伊拉克 1-4 挪威。
+- phase: round_postmortem_index
+- status: completed_revise
+- group: I
+- round: 1
+- updated_at: 2026-06-23T18:30:00+08:00
 
-## 赛果总览
+## 单场复盘
 
-| 比赛 | 赛前预测 | 实际比分 | 胜平负 | 精确比分 |
-| --- | --- | --- | --- | --- |
-| 法国 vs 塞内加尔 | 法国 2-1 塞内加尔 | 法国 3-1 塞内加尔 | 命中 | 未命中 |
-| 伊拉克 vs 挪威 | 伊拉克 0-2 挪威 | 伊拉克 1-4 挪威 | 命中 | 未命中 |
+| 比赛 | 赛前预测 | 实际 | 方向 | 主要误差 | 单场文件 |
+|---|---|---|---|---|---|
+| 法国 vs 塞内加尔 | 法国 2-1 | 法国 3-1 | 命中 | 低估法国末段扩分与替补冲击 | `2026-06-16_法国_3-1_塞内加尔_复盘.md` |
+| 伊拉克 vs 挪威 | 挪威 2-0 | 挪威 4-1 | 命中 | 低估挪威高比分尾部，也低估伊拉克进球下限 | `2026-06-16_伊拉克_1-4_挪威_复盘.md` |
 
-第一轮两场的方向判断不错：法国和挪威都拿到了该拿的胜利。但我们对比分仍偏保守，尤其是挪威这场，实际大胜路径比模型给得更清晰。
+## 模型总修正
 
-## 最大校准点
+| 特征 | 修正 |
+|---|---|
+| 强队进攻尾部 | 法国小幅上修，挪威中幅上修 |
+| 弱队进球下限 | 塞内加尔、伊拉克均小幅上修 |
+| 零封概率 | 法国不明显上修，挪威小幅下修 |
+| 单场权重 | 两场均为 `revise`，禁止用比分直接外推能力跃迁 |
 
-这次不是 G/H 组那种“低估平局”的问题，而是另一个方向：当热门方拥有顶级终结点和后程冲击力时，我们不能因为首轮保守逻辑就过度压低扩大比分概率。
+## 成员表迭代文件
 
-法国和挪威都有一个共同点：不是只靠控球赢，而是有能把半机会变成进球的人。Mbappe、Haaland 这种级别的终结点，会让 2-1、0-2 这种保守比分更容易被推到 3-1、1-4。
+- `队伍/法国/成员表_赛后迭代_20260623.md`
+- `队伍/塞内加尔/成员表_赛后迭代_20260623.md`
+- `队伍/挪威/成员表_赛后迭代_20260623.md`
+- `队伍/伊拉克/成员表_赛后迭代_20260623.md`
+- 结构化补丁：`data/outputs/player_state/i-group-round1-state-iteration-20260623.json`
+- 模型回测：`data/outputs/match_predictions/i-group-round1-postmortem.json`
 
-## 模型修正
+## 红队声明
 
-- 对拥有顶级终结点的热门队，提高 `elite_finisher_conversion`。
-- 对热门队后 30 分钟优势，提高 `late_game_attack_boost`。
-- 对低位防守队，若先丢球，提高 `game_state_collapse_risk`。
-- 对非零封路径提高一点权重：弱队即使大比分输，也可能通过支点、定位球或一次转换进球。
+本轮两场复盘均按 `revise` 处理。赛果、比分、进球时间可以作为高置信事实使用；战术因果、球员内部评分、伤停纪律和补时事件归属必须保留置信度标记，不单独驱动投注或大幅模型参数调整。
 
-## 对 I组后续的含义
+## 来源
 
-法国和挪威都证明了自己有稳定拿三分的能力。法国的优势在边路、替补和 Mbappe 的决定性；挪威的优势在 Haaland/Odegaard 轴心和禁区效率。两队后续直接或间接竞争小组头名时，不能只看控球率，必须看谁能把对手防线压到最后阶段。
-
-塞内加尔没有崩盘，但后段防线保护要修。伊拉克的问题更严重：一旦比赛状态被打开放，低位防守很难恢复成低事件局。
-
-## 文件索引
-
-- `比赛/已完成比赛/小组赛/I组/2026-06-16_法国_3-1_塞内加尔_复盘.md`
-- `比赛/已完成比赛/小组赛/I组/2026-06-16_伊拉克_1-4_挪威_复盘.md`
-- `data/outputs/match_predictions/i-group-round1-postmortem.json`
-
-## 参考源
-
-- Olympics matchday live scores: https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-group-result-tuesday-16-june-live-scores
-- Los Angeles Times live updates: https://www.latimes.com/sports/soccer/live/fifa-world-cup-live-updates-tv-schedule-results-standings-highlights
-- FIFA Match Schedule: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule
-
+- FIFA 法国 vs 塞内加尔：https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-senegal-highlights-match-report
+- ESPN 法国 vs 塞内加尔：https://www.espn.com/soccer/report/_/gameId/766713
+- FIFA 伊拉克 vs 挪威：https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/iraq-norway-highlights-match-report
+- FIFA 比赛中心：https://www.fifa.com/en/match-centre/match/17/285023/289273/400021488
+- Guardian 伊拉克 vs 挪威：https://www.theguardian.com/football/live/2026/jun/16/iraq-v-norway-world-cup-2026-live

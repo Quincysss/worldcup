@@ -5,8 +5,9 @@ import re
 from pathlib import Path
 
 
-ROOT = Path(r"K:\worldcup")
+ROOT = Path(__file__).resolve().parents[1]
 BAD_PATTERN = re.compile(r"锛|绋|涓|婢|宸|鍦|熻|乱码|�")
+FULL_ROSTER_HEADINGS = ("## 完整名单", "## 完整26人成员表", "## 26人成员表")
 
 TEAMS = [
     ("mexico", "墨西哥"),
@@ -33,17 +34,29 @@ def roster_paths(slug: str, team_cn: str) -> tuple[Path, Path, Path]:
 
 
 def markdown_full_roster_row_count(text: str) -> int:
-    marker = "## 完整名单"
-    if marker not in text:
-        return 0
-    section = text.split(marker, 1)[1]
+    lines = text.splitlines()
     count = 0
-    for line in section.splitlines():
-        if line.startswith("## "):
+    in_section = False
+    for line in lines:
+        stripped = line.strip()
+        if not in_section and stripped in FULL_ROSTER_HEADINGS:
+            in_section = True
+            continue
+        if not in_section:
+            continue
+        if stripped.startswith("## "):
             break
-        if line.startswith("|") and "---" not in line:
-            count += 1
-    return max(count - 1, 0)
+        if not stripped.startswith("|"):
+            continue
+        cells = [cell.strip() for cell in stripped.strip("|").split("|")]
+        if not cells or all(cell == "" for cell in cells):
+            continue
+        if all(set(cell) <= {"-", ":"} for cell in cells):
+            continue
+        if any(cell in {"中文名", "英文名"} for cell in cells):
+            continue
+        count += 1
+    return count
 
 
 def player_metrics(players: list[dict]) -> dict:

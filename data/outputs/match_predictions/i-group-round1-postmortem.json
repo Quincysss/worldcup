@@ -1,84 +1,74 @@
 {
-  "phase": "group_round_postmortem",
-  "status": "completed_match_review",
-  "updated_at": "2026-06-17T10:20:00+08:00",
-  "scope": "Review confirmed completed I group matches from the night of 2026-06-16 Asia/Shanghai.",
-  "group": "I",
-  "sources": [
-    {
-      "name": "Olympics matchday live scores",
-      "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-group-result-tuesday-16-june-live-scores",
-      "supports": ["France 3-1 Senegal", "Iraq 1-4 Norway"]
-    },
-    {
-      "name": "Los Angeles Times live updates",
-      "url": "https://www.latimes.com/sports/soccer/live/fifa-world-cup-live-updates-tv-schedule-results-standings-highlights",
-      "supports": ["Iraq 1-4 Norway result context"]
-    },
-    {
-      "name": "FIFA Match Schedule",
-      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-schedule",
-      "supports": ["fixture reference"]
-    }
+  "schema_version": "2026.06.worldcup.round_postmortem.v2",
+  "status": "completed_revise",
+  "updated_at": "2026-06-23T18:30:00+08:00",
+  "scope": "group_i_round1",
+  "workflow": [
+    "collect_facts",
+    "tactical_review",
+    "model_backtest",
+    "red_team_verification",
+    "write_files",
+    "validate"
   ],
   "matches": [
     {
-      "match": "France vs Senegal",
-      "prediction": {
-        "score": "France 2-1 Senegal",
-        "wdl": "France win",
-        "probabilities": {"france": 60, "draw": 24, "senegal": 16}
+      "match": "France 3-1 Senegal",
+      "match_zh": "法国 3-1 塞内加尔",
+      "pre_match_prediction": "France 2-1 Senegal",
+      "direction_hit": true,
+      "scoreline_hit": false,
+      "total_goals_error": 1,
+      "main_error": "underestimated France late attacking sustain and finishing, while keeping Senegal goal floor too low",
+      "model_updates": {
+        "france_attack_lambda_delta": "+0.08 to +0.15",
+        "france_bench_impact": "up_medium",
+        "france_creator_weight": "Olise and Rabiot chance-creation links up_low_medium",
+        "senegal_goal_floor": "up_low",
+        "overfit_guardrail": "single match only; long-term baseline remains dominant"
       },
-      "actual": {
-        "score": "France 3-1 Senegal",
-        "wdl": "France win"
-      },
-      "evaluation": {
-        "wdl_hit": true,
-        "exact_score_hit": false,
-        "score_error_note": "France late-game scoring and elite finishing were underweighted."
-      },
-      "model_adjustments": [
-        "raise late_game_attack_boost for France",
-        "raise elite_finisher_conversion for France",
-        "raise Senegal late_defensive_fatigue risk"
-      ]
+      "red_team_verdict": "revise",
+      "review_file": "比赛/已完成比赛/小组赛/I组/2026-06-16_法国_3-1_塞内加尔_复盘.md"
     },
     {
-      "match": "Iraq vs Norway",
-      "prediction": {
-        "score": "Iraq 0-2 Norway",
-        "wdl": "Norway win",
-        "probabilities": {"iraq": 10, "draw": 20, "norway": 70}
+      "match": "Iraq 1-4 Norway",
+      "match_zh": "伊拉克 1-4 挪威",
+      "pre_match_prediction": "Iraq 0-2 Norway",
+      "direction_hit": true,
+      "scoreline_hit": false,
+      "total_goals_error": 3,
+      "main_error": "underestimated Norway high-score tail and set-piece pressure, while also underestimating Iraq goal floor",
+      "model_updates": {
+        "norway_attack_lambda_delta": "+0.12 to +0.22",
+        "norway_high_score_tail": "up_medium_high",
+        "norway_set_piece_and_wide_service": "Odegaard corner and Moller Wolfe assist up_medium",
+        "norway_clean_sheet_probability": "down_low",
+        "iraq_goal_floor": "up_low",
+        "iraq_progression_link": "Al-Ammari to Hussein route retained",
+        "overfit_guardrail": "4-1 scoreline may flatter Norway; do not infer full-match dominance"
       },
-      "actual": {
-        "score": "Iraq 1-4 Norway",
-        "wdl": "Norway win"
-      },
-      "evaluation": {
-        "wdl_hit": true,
-        "exact_score_hit": false,
-        "score_error_note": "Norway conversion, set-piece/aerial pressure, and game-state expansion were underweighted; Iraq scoring path was also underweighted."
-      },
-      "model_adjustments": [
-        "raise haaland_conversion",
-        "raise odegaard_service_quality",
-        "raise norway_set_piece_aerial_edge",
-        "raise iraq_game_state_collapse_risk when trailing",
-        "raise iraq_target_forward_and_set_piece_scoring_path"
-      ]
+      "red_team_verdict": "revise",
+      "review_file": "比赛/已完成比赛/小组赛/I组/2026-06-16_伊拉克_1-4_挪威_复盘.md"
     }
   ],
-  "aggregate_evaluation": {
-    "matches_reviewed": 2,
-    "wdl_hits": 2,
-    "exact_score_hits": 0,
-    "primary_calibration_lesson": "After recent draw-heavy groups, the model correctly retained favorite win direction here but became too conservative on score margin for teams with elite finishers and late-game attacking depth."
-  },
-  "next_round_model_rules": [
-    "Do not overcorrect all favorites downward because of prior draw-heavy samples.",
-    "When favorite has elite finisher plus service creator, keep 3-goal team total paths alive.",
-    "If underdog concedes first, increase collapse-risk and also preserve one-goal response paths through set pieces or target forwards.",
-    "Separate low-block resilience before first concession from resilience after chasing the game."
-  ]
+  "player_state_patch": "data/outputs/player_state/i-group-round1-state-iteration-20260623.json",
+  "risk_notes": [
+    "Internal player ratings are project proxy values only.",
+    "Injury, suspension, official technical stats and some late-event attribution still need T+ official report refresh.",
+    "Round-one scorelines should create bounded model deltas, not large permanent team-strength jumps."
+  ],
+  "sources": [
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-senegal-highlights-match-report",
+    "https://www.espn.com/soccer/report/_/gameId/766713",
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/iraq-norway-highlights-match-report",
+    "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021488",
+    "https://www.theguardian.com/football/live/2026/jun/16/iraq-v-norway-world-cup-2026-live"
+  ],
+  "team_member_tables": [
+    "队伍/法国/成员表.md",
+    "队伍/塞内加尔/成员表.md",
+    "队伍/挪威/成员表.md",
+    "队伍/伊拉克/成员表.md"
+  ],
+  "member_table_update_policy": "canonical_in_place_only; old per-round member table copies removed"
 }

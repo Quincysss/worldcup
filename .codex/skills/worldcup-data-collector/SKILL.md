@@ -69,7 +69,7 @@ Update or verify for every squad player:
 - external rating when a reliable same-source provider is available, or a clear `rating_missing_note` when it is not. If needed, provide an `internal_rating_proxy` derived from verifiable match events, minutes, role, and form evidence, explicitly labeled as derived.
 - `source_log` and `captured_at` for each volatile update.
 
-Member-table Markdown must include a `逐场内部评分记录` section once a team has played at least one match. Keep the table compact but complete enough for backtesting: match id/date, opponent, player, started, minutes, key events, external rating/source status, `internal_match_rating_1_5`, reason, post-match `form_status_1_5`, and `captured_at`.
+Member-table Markdown must be updated in place at `队伍/{球队中文名}/成员表.md`; do not create per-round or dated member-table copies such as `成员表_赛后迭代_*.md`, `成员表_第二轮赛后迭代_*.md`, or `成员表_patch_*.md`. Once a team has played at least one match, the canonical member table must include or maintain a `逐场内部评分记录` section. Keep the table compact but complete enough for backtesting: match id/date, opponent, player, started, minutes, key events, external rating/source status, `internal_match_rating_1_5`, reason, post-match `form_status_1_5`, injury/availability status, and `captured_at`. If a temporary patch file already exists, merge its valid content back into the canonical `成员表.md`, then remove the temporary file.
 
 Return `player_state_update_status` as `updated`, `partial`, or `blocked`. If it is not `updated`, list the exact missing fields and recommended follow-up owner.
 

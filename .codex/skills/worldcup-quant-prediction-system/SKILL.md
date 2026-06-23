@@ -1,13 +1,13 @@
 ---
 name: worldcup-quant-prediction-system
-description: Run the E:\worldcup project as a quantitative 2026 FIFA World Cup prediction system. Use for match predictions, round predictions, group qualification probabilities, knockout paths, post-match backtests, model calibration, odds-implied probability comparison, Poisson score matrices, and final probability reports. Do not use for single-team profile work unless the user explicitly asks to predict.
+description: Run the K:\worldcup project as a quantitative 2026 FIFA World Cup prediction system. Use for match predictions, round predictions, group qualification probabilities, knockout paths, post-match backtests, model calibration, odds-implied probability comparison, Poisson score matrices, and final probability reports. Do not use for single-team profile work unless the user explicitly asks to predict.
 ---
 
 # World Cup Quant Prediction System
 
 ## Mission
 
-Make every prediction in `E:\worldcup` follow one reproducible quantitative chain:
+Make every prediction in `K:\worldcup` follow one reproducible quantitative chain:
 
 ```text
 data collection
@@ -49,6 +49,22 @@ This skill is the system-level contract for prediction, projection, and backtest
 8. Red-team risk adjustment.
 9. Final prediction output.
 10. Post-match backtest, player-state update, and parameter update.
+
+## Real Thread Participation Gate
+
+For match prediction, round prediction, post-match review, betting analysis, or model calibration, the main thread must call the real project role threads instead of simulating them locally.
+
+Required lanes:
+
+- data collector: facts, lineups, injuries, odds snapshots, event logs, source gaps
+- tactics coach: matchup, shape, pressing, transition, set-piece, substitution interpretation
+- data modeler: factor table, xG/Poisson/probability math, backtest, parameter update
+- red-team verifier: contradiction checks, market-risk checks, hold/revise verdict
+- summary/commentator: final user-facing Markdown from accepted inputs
+
+竞彩 or投注 tasks additionally require the betting-risk thread. Git sync is only used when the user asks for commit, push, sync, or migration work.
+
+A task is not complete until `线程状态.md` records the dispatched thread IDs, output paths, validation results, and either `complete` or a documented `partial_thread_fallback`. Fallback is allowed only when thread tooling is unavailable or a thread is blocked; it must not be presented as a full multi-thread result.
 
 ## Standard Output Fields
 

@@ -166,9 +166,18 @@
         "austria_win": 0.0212
       },
       "confidence_interval": {
-        "argentina_win": [0.56, 0.67],
-        "draw": [0.17, 0.26],
-        "austria_win": [0.12, 0.22]
+        "argentina_win": [
+          0.56,
+          0.67
+        ],
+        "draw": [
+          0.17,
+          0.26
+        ],
+        "austria_win": [
+          0.12,
+          0.22
+        ]
       },
       "red_team_status": "revise_for_probability_hold_for_betting",
       "final_probabilities": {
@@ -176,10 +185,33 @@
         "draw": 0.2142,
         "austria_win": 0.1714
       },
-      "player_state_update_status": null,
-      "player_state_updates": null,
-      "postmatch_error": null,
-      "parameter_updates": null
+      "player_state_update_status": "completed_2026-06-23",
+      "player_state_updates": [
+        "队伍/阿根廷/成员表.md",
+        "队伍/奥地利/成员表.md",
+        "队伍/约旦/成员表.md",
+        "队伍/阿尔及利亚/成员表.md",
+        "data/outputs/player_state/*.json"
+      ],
+      "postmatch_error": {
+        "one_x_two": "correct",
+        "exact_score": "hit_top2",
+        "score_probability": 0.1078,
+        "total_2_5": "incorrect_model_leaned_over",
+        "xg_direction": "argentina_goals_close_austria_xg_overestimated"
+      },
+      "parameter_updates": {
+        "argentina_clean_sheet_factor": "+0.04",
+        "messi_clutch_finishing_factor": "+0.05",
+        "austria_vs_elite_final_third_factor": "-0.06",
+        "totals_tail_risk": "reduce_underdog_goal_tail_in_strong_favorite_control_games"
+      },
+      "actual_result": {
+        "score": "2-0",
+        "winner": "argentina",
+        "total_goals": 2,
+        "over_2_5": false
+      }
     },
     {
       "match": "Jordan vs Algeria",
@@ -327,9 +359,18 @@
         "algeria_win": -0.1641
       },
       "confidence_interval": {
-        "jordan_win": [0.21, 0.33],
-        "draw": [0.23, 0.33],
-        "algeria_win": [0.38, 0.52]
+        "jordan_win": [
+          0.21,
+          0.33
+        ],
+        "draw": [
+          0.23,
+          0.33
+        ],
+        "algeria_win": [
+          0.38,
+          0.52
+        ]
       },
       "red_team_status": "revise_for_probability_hold_for_betting",
       "final_probabilities": {
@@ -337,10 +378,32 @@
         "draw": 0.2796,
         "algeria_win": 0.4515
       },
-      "player_state_update_status": null,
-      "player_state_updates": null,
-      "postmatch_error": null,
-      "parameter_updates": null
+      "player_state_update_status": "completed_2026-06-23",
+      "player_state_updates": [
+        "队伍/阿根廷/成员表.md",
+        "队伍/奥地利/成员表.md",
+        "队伍/约旦/成员表.md",
+        "队伍/阿尔及利亚/成员表.md",
+        "data/outputs/player_state/*.json"
+      ],
+      "postmatch_error": {
+        "one_x_two": "correct",
+        "exact_score": "missed_top5_but_matrix_probability_0.0855",
+        "score_probability": 0.0855,
+        "total_2_5": "incorrect_model_leaned_under",
+        "xg_direction": "algeria_second_half_substitution_elasticity_underestimated"
+      },
+      "parameter_updates": {
+        "algeria_bench_attack_factor": "+0.08",
+        "jordan_lead_protection_factor": "-0.05",
+        "totals_live_state_factor": "increase_when_favorite_trails_at_half_and_has_attacking_bench"
+      },
+      "actual_result": {
+        "score": "1-2",
+        "winner": "algeria",
+        "total_goals": 3,
+        "over_2_5": true
+      }
     }
   ],
   "sources": [

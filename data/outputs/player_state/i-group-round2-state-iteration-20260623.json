@@ -1,10 +1,10 @@
 {
   "phase": "player_state_iteration",
-  "status": "partial_patch",
+  "status": "partial_key_players_merged_to_canonical_member_tables",
   "group": "I",
   "round": 2,
-  "updated_at": "2026-06-23T23:10:00+08:00",
-  "rating_scale_note": "form_status_1_5 and match_rating are internal proxy values for this project, not official ratings.",
+  "updated_at": "2026-06-23T23:40:00+08:00",
+  "rating_scale_note": "form_status_1_5 and internal_match_rating_1_5 are project internal 1-5 values, not official ratings.",
   "source_matches": [
     "France 3-0 Iraq",
     "Norway 3-2 Senegal"
@@ -17,27 +17,48 @@
         "event": "2 goals vs Iraq",
         "goals_tournament": 4,
         "form_status_1_5": 5,
-        "match_rating_proxy": 9.1,
         "injury_status": "available_observed",
-        "model_tags": ["elite_finisher_conversion_up", "captain_form_peak"]
+        "model_tags": [
+          "elite_finisher_conversion_up",
+          "captain_form_peak"
+        ],
+        "internal_match_rating_1_5": 4.8,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/法国/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       },
       {
         "name_zh": "迈克尔-奥利塞",
         "name_en": "Michael Olise",
         "event": "key creator in France right-side chain",
         "form_status_1_5": 5,
-        "match_rating_proxy": 8.3,
         "injury_status": "available_observed",
-        "model_tags": ["half_space_creation_up", "assist_chain_up"]
+        "model_tags": [
+          "half_space_creation_up",
+          "assist_chain_up"
+        ],
+        "internal_match_rating_1_5": 4.4,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/法国/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       },
       {
         "name_zh": "奥斯曼-登贝莱",
         "name_en": "Ousmane Dembele",
         "event": "1 goal and 1 assist chain involvement",
         "form_status_1_5": 5,
-        "match_rating_proxy": 8.5,
         "injury_status": "available_observed",
-        "model_tags": ["right_wing_threat_up", "transition_finish_up"]
+        "model_tags": [
+          "right_wing_threat_up",
+          "transition_finish_up"
+        ],
+        "internal_match_rating_1_5": 4.5,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/法国/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       }
     ],
     "iraq": [
@@ -46,27 +67,45 @@
         "name_en": "Aymen Hussein",
         "event": "first-half substitution, injury or discomfort to confirm",
         "form_status_1_5": 3,
-        "match_rating_proxy": 5.8,
         "injury_status": "pending_review",
-        "model_tags": ["target_forward_availability_watch"]
+        "model_tags": [
+          "target_forward_availability_watch"
+        ],
+        "internal_match_rating_1_5": 3.1,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/伊拉克/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       },
       {
         "name_zh": "阿里-哈马迪",
         "name_en": "Ali Al-Hamadi",
         "event": "substitute target-forward threat, header chance",
         "form_status_1_5": 4,
-        "match_rating_proxy": 6.5,
         "injury_status": "available_observed",
-        "model_tags": ["forward_depth_up"]
+        "model_tags": [
+          "forward_depth_up"
+        ],
+        "internal_match_rating_1_5": 3.5,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/伊拉克/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       },
       {
         "name_zh": "扎伊德-塔赫辛",
         "name_en": "Zaid Tahseen",
         "event": "buildout error risk in France second-goal sequence",
         "form_status_1_5": 2,
-        "match_rating_proxy": 5.1,
         "injury_status": "available_observed",
-        "model_tags": ["buildout_error_risk_up"]
+        "model_tags": [
+          "buildout_error_risk_up"
+        ],
+        "internal_match_rating_1_5": 2.8,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/伊拉克/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       }
     ],
     "norway": [
@@ -76,36 +115,62 @@
         "event": "2 goals vs Senegal, 4 tournament goals",
         "goals_tournament": 4,
         "form_status_1_5": 5,
-        "match_rating_proxy": 9.0,
         "injury_status": "available_observed",
-        "model_tags": ["elite_finisher_conversion_up", "high_score_tail_up"]
+        "model_tags": [
+          "elite_finisher_conversion_up",
+          "high_score_tail_up"
+        ],
+        "internal_match_rating_1_5": 4.8,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/挪威/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       },
       {
         "name_zh": "马丁-厄德高",
         "name_en": "Martin Odegaard",
         "event": "central creator and key supply to Haaland",
         "form_status_1_5": 5,
-        "match_rating_proxy": 8.2,
         "injury_status": "available_observed",
-        "model_tags": ["chance_creation_up", "through_ball_value_up"]
+        "model_tags": [
+          "chance_creation_up",
+          "through_ball_value_up"
+        ],
+        "internal_match_rating_1_5": 4.4,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/挪威/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       },
       {
         "name_zh": "尤利安-雷尔森",
         "name_en": "Julian Ryerson",
         "event": "early substitution at 13 minutes",
         "form_status_1_5": 3,
-        "match_rating_proxy": 5.8,
         "injury_status": "pending_review",
-        "model_tags": ["right_back_availability_watch"]
+        "model_tags": [
+          "right_back_availability_watch"
+        ],
+        "internal_match_rating_1_5": 3.1,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/挪威/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       },
       {
         "name_zh": "马库斯-佩德森",
         "name_en": "Marcus Pedersen",
         "event": "substitute goal at 43 minutes",
         "form_status_1_5": 4,
-        "match_rating_proxy": 7.7,
         "injury_status": "available_observed",
-        "model_tags": ["fullback_depth_attack_up"]
+        "model_tags": [
+          "fullback_depth_attack_up"
+        ],
+        "internal_match_rating_1_5": 4.1,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/挪威/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       }
     ],
     "senegal": [
@@ -115,29 +180,76 @@
         "event": "2 goals vs Norway",
         "goals_tournament": 2,
         "form_status_1_5": 5,
-        "match_rating_proxy": 8.6,
         "injury_status": "available_observed",
-        "model_tags": ["trailing_transition_attack_up", "finishing_form_up"]
+        "model_tags": [
+          "trailing_transition_attack_up",
+          "finishing_form_up"
+        ],
+        "internal_match_rating_1_5": 4.6,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/塞内加尔/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       },
       {
         "name_zh": "爱德华-门迪",
         "name_en": "Edouard Mendy",
         "event": "substituted at 63 minutes with apparent leg issue",
         "form_status_1_5": 3,
-        "match_rating_proxy": 5.6,
         "injury_status": "pending_review",
-        "model_tags": ["goalkeeper_availability_watch"]
+        "model_tags": [
+          "goalkeeper_availability_watch"
+        ],
+        "internal_match_rating_1_5": 3,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/塞内加尔/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       },
       {
         "name_zh": "卡利杜-库利巴利",
         "name_en": "Kalidou Koulibaly",
         "event": "defensive error/withdrawal during chase phase",
         "form_status_1_5": 2,
-        "match_rating_proxy": 5.5,
         "injury_status": "available_observed",
-        "model_tags": ["defensive_reliability_down"]
+        "model_tags": [
+          "defensive_reliability_down"
+        ],
+        "internal_match_rating_1_5": 3,
+        "rating_source_status": "coverage_incomplete",
+        "rating_missing_note": "未取得同场同源、可复核的全队外部评分；本字段为项目内部1-5评分。",
+        "member_table_file": "队伍/塞内加尔/成员表.md",
+        "captured_at": "2026-06-23T23:40:00+08:00"
       }
     ]
   },
-  "merge_policy": "Do not overwrite full team player-state files until injuries and official technical reports are refreshed; use this file as round-2 patch input."
+  "merge_policy": "Members are updated only in canonical 队伍/{球队中文名}/成员表.md. Do not create dated/per-round member-table markdown copies. This patch remains a structured audit input.",
+  "canonical_member_tables": {
+    "france": "队伍/法国/成员表.md",
+    "iraq": "队伍/伊拉克/成员表.md",
+    "norway": "队伍/挪威/成员表.md",
+    "senegal": "队伍/塞内加尔/成员表.md"
+  },
+  "merge_results": [
+    {
+      "teamKey": "france",
+      "file": "data/outputs/player_state/france-player-state.json",
+      "missing": []
+    },
+    {
+      "teamKey": "iraq",
+      "file": "data/outputs/player_state/iraq-player-state.json",
+      "missing": []
+    },
+    {
+      "teamKey": "norway",
+      "file": "data/outputs/player_state/norway-player-state.json",
+      "missing": []
+    },
+    {
+      "teamKey": "senegal",
+      "file": "data/outputs/player_state/senegal-player-state.json",
+      "missing": []
+    }
+  ]
 }
