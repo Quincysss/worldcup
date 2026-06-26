@@ -1,0 +1,372 @@
+{
+  "phase": "group_stage_round3_data_collection",
+  "group": "I",
+  "status": "partial",
+  "final_status": "partial_ready_for_model_with_known_gaps",
+  "json_validated": true,
+  "created_at": "2026-06-25T15:20:00+08:00",
+  "updated_at": "2026-06-25T15:14:03.8549917+08:00",
+  "source_time": "2026-06-25T15:06:10+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "Pre-match fact packet for Group I round 3. Facts only. No score prediction. No betting advice.",
+  "factor_inputs_ready": true,
+  "cross_check_status": "unavailable_or_partial",
+  "cross_check_reason": "No stable structured odds snapshot was captured from Sina or Dongqiudi in this refresh window; China lottery page remains the only model-usable odds source.",
+  "sources": [
+    {
+      "name": "zgzcw_jcmini",
+      "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-25T15:06:10+08:00",
+      "source_system_time": "2026-06-25 14:57:23",
+      "source_status": "captured"
+    },
+    {
+      "name": "wikipedia_group_i",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I",
+      "captured_at": "2026-06-25T15:06:10+08:00",
+      "source_status": "secondary_summary_citing_fifa"
+    },
+    {
+      "name": "wikipedia_2026_world_cup_rules",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+      "captured_at": "2026-06-25T15:06:10+08:00",
+      "source_status": "secondary_summary_citing_fifa"
+    }
+  ],
+  "local_file_status": {
+    "player_state_files": [
+      {
+        "team_slug": "france",
+        "path": "data/outputs/player_state/france-player-state.json",
+        "parse_status": "ok",
+        "players_count": 26
+      },
+      {
+        "team_slug": "norway",
+        "path": "data/outputs/player_state/norway-player-state.json",
+        "parse_status": "ok",
+        "players_count": 26
+      },
+      {
+        "team_slug": "senegal",
+        "path": "data/outputs/player_state/senegal-player-state.json",
+        "parse_status": "ok",
+        "players_count": 26
+      },
+      {
+        "team_slug": "iraq",
+        "path": "data/outputs/player_state/iraq-player-state.json",
+        "parse_status": "ok",
+        "players_count": 26
+      }
+    ],
+    "member_tables": [
+      {
+        "team_slug": "france",
+        "path": "team-member-table-local",
+        "status": "read"
+      },
+      {
+        "team_slug": "norway",
+        "path": "team-member-table-local",
+        "status": "read"
+      },
+      {
+        "team_slug": "senegal",
+        "path": "team-member-table-local",
+        "status": "read"
+      },
+      {
+        "team_slug": "iraq",
+        "path": "team-member-table-local",
+        "status": "read"
+      }
+    ]
+  },
+  "standings_snapshot": [
+    {
+      "team_slug": "france",
+      "team_name_en": "France",
+      "points": 6,
+      "goal_difference": 5,
+      "goals_for": 6,
+      "goals_against": 1,
+      "rank": 1,
+      "qualification_tags": [
+        "already_qualified",
+        "first_place_race",
+        "draw_enough"
+      ],
+      "scenario": "A draw vs Norway is enough to secure first place."
+    },
+    {
+      "team_slug": "norway",
+      "team_name_en": "Norway",
+      "points": 6,
+      "goal_difference": 4,
+      "goals_for": 7,
+      "goals_against": 3,
+      "rank": 2,
+      "qualification_tags": [
+        "already_qualified",
+        "first_place_race"
+      ],
+      "scenario": "A win vs France sends Norway to first place."
+    },
+    {
+      "team_slug": "senegal",
+      "team_name_en": "Senegal",
+      "points": 0,
+      "goal_difference": -3,
+      "goals_for": 3,
+      "goals_against": 6,
+      "rank": 3,
+      "qualification_tags": [
+        "eliminated_from_top2",
+        "third_place_race",
+        "must_avoid_loss"
+      ],
+      "scenario": "Top two is gone; avoiding defeat keeps group-third position."
+    },
+    {
+      "team_slug": "iraq",
+      "team_name_en": "Iraq",
+      "points": 0,
+      "goal_difference": -6,
+      "goals_for": 1,
+      "goals_against": 7,
+      "rank": 4,
+      "qualification_tags": [
+        "eliminated_from_top2",
+        "third_place_race",
+        "must_win"
+      ],
+      "scenario": "Iraq must beat Senegal to move up to third."
+    }
+  ],
+  "tiebreaker_order": [
+    "head_to_head_points",
+    "head_to_head_goal_difference",
+    "head_to_head_goals_scored",
+    "reapply_head_to_head_for_remaining_tied_teams",
+    "overall_goal_difference",
+    "overall_goals_scored",
+    "fair_play_points",
+    "fifa_ranking"
+  ],
+  "discipline_rule_snapshot": {
+    "yellow_card_suspension_rule": "Two yellow cards in the tournament trigger a one-match suspension. Yellow cards are cleared after the group stage.",
+    "source_status": "secondary_summary_citing_fifa"
+  },
+  "fixtures": [
+    {
+      "fixture_id": "I-M61",
+      "lottery_match_code": "061",
+      "lottery_match_code_full": "周五061",
+      "local_label": "France vs Norway",
+      "external_label": "Norway vs France",
+      "home_team_external": "Norway",
+      "away_team_external": "France",
+      "home_away_conflict_status": "conflicting_home_away_order",
+      "kickoff_bjt": "2026-06-26 03:00",
+      "kickoff_local": "2026-06-26 15:00",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "t75_official_lineup_status": "not_yet_released",
+      "predicted_lineup_gaps": [
+        "France: Saliba workload status",
+        "France: Dembele workload status",
+        "France: Doue workload status",
+        "Norway: Julian Ryerson availability",
+        "Norway: Moller Wolfe recovery check",
+        "Norway: Schjelderup head-knock clearance",
+        "Norway: Odegaard workload check"
+      ],
+      "odds": {
+        "spf": {
+          "sale_status": "displayed_with_pause_notice",
+          "decimal_odds": {
+            "home_win": 4.65,
+            "draw": 3.9,
+            "away_win": 1.52
+          },
+          "implied_probability_raw": {
+            "home_win": 0.2151,
+            "draw": 0.2564,
+            "away_win": 0.6579,
+            "booksum": 1.1294
+          },
+          "implied_probability_devig": {
+            "home_win": 0.1905,
+            "draw": 0.227,
+            "away_win": 0.5825
+          }
+        },
+        "handicap_spf": {
+          "handicap": "+1",
+          "sale_status": "displayed_with_pause_notice",
+          "decimal_odds": {
+            "home_win": 2.18,
+            "draw": 3.45,
+            "away_win": 2.63
+          },
+          "implied_probability_raw": {
+            "home_win": 0.4587,
+            "draw": 0.2899,
+            "away_win": 0.3802,
+            "booksum": 1.1288
+          },
+          "implied_probability_devig": {
+            "home_win": 0.4064,
+            "draw": 0.2568,
+            "away_win": 0.3368
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "I-M62",
+      "lottery_match_code": "062",
+      "lottery_match_code_full": "周五062",
+      "local_label": "Senegal vs Iraq",
+      "external_label": "Senegal vs Iraq",
+      "home_team_external": "Senegal",
+      "away_team_external": "Iraq",
+      "home_away_conflict_status": "no_home_away_conflict_captured",
+      "kickoff_bjt": "2026-06-26 03:00",
+      "kickoff_local": "2026-06-26 15:00",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "t75_official_lineup_status": "not_yet_released",
+      "predicted_lineup_gaps": [
+        "Senegal: Edouard Mendy availability",
+        "Senegal: goalkeeper depth order if Mendy is out",
+        "Iraq: Aymen Hussein availability",
+        "Iraq: center-forward replacement plan if Aymen Hussein is out",
+        "Official accumulated yellow-card bulletin for both teams"
+      ],
+      "odds": {
+        "spf": {
+          "sale_status": "not_on_sale",
+          "decimal_odds": null,
+          "implied_probability_raw": null,
+          "implied_probability_devig": null
+        },
+        "handicap_spf": {
+          "handicap": "-2",
+          "sale_status": "handicap_only_displayed_with_pause_notice",
+          "decimal_odds": {
+            "home_win": 2.54,
+            "draw": 3.96,
+            "away_win": 2.07
+          },
+          "implied_probability_raw": {
+            "home_win": 0.3937,
+            "draw": 0.2525,
+            "away_win": 0.4831,
+            "booksum": 1.1293
+          },
+          "implied_probability_devig": {
+            "home_win": 0.3486,
+            "draw": 0.2236,
+            "away_win": 0.4278
+          }
+        }
+      }
+    }
+  ],
+  "injury_suspension_rotation_risk": [
+    {
+      "team_slug": "france",
+      "injury_status": "no_new_confirmed_public_absence_captured",
+      "yellow_card_risk": "unknown_no_official_group_bulletin",
+      "suspension_status": "not_confirmed",
+      "rotation_risk": "medium",
+      "notes": [
+        "Saliba workload watch",
+        "Dembele workload watch",
+        "Doue workload watch",
+        "Already qualified and a draw is enough for first place"
+      ]
+    },
+    {
+      "team_slug": "norway",
+      "injury_status": "pending_review_nodes_present",
+      "yellow_card_risk": "unknown_no_official_group_bulletin",
+      "suspension_status": "not_confirmed",
+      "rotation_risk": "low_to_medium",
+      "notes": [
+        "Julian Ryerson left round 2 early with an injury signal",
+        "Moller Wolfe recovery needs refresh",
+        "Schjelderup head-knock status needs refresh",
+        "Odegaard workload management needs refresh"
+      ]
+    },
+    {
+      "team_slug": "senegal",
+      "injury_status": "pending_review_nodes_present",
+      "yellow_card_risk": "unknown_no_official_group_bulletin",
+      "suspension_status": "not_confirmed",
+      "rotation_risk": "low",
+      "notes": [
+        "Edouard Mendy has a pending-review leg issue signal from round 2",
+        "Top two is no longer available but third-place motivation remains"
+      ]
+    },
+    {
+      "team_slug": "iraq",
+      "injury_status": "pending_review_nodes_present",
+      "yellow_card_risk": "partial_local_only",
+      "suspension_status": "not_confirmed",
+      "rotation_risk": "low",
+      "notes": [
+        "Aymen Hussein has a pending-review injury/discomfort signal from round 2",
+        "Zaid Tahseen has one locally observed yellow-card record",
+        "Must-win situation increases workload and tactical risk"
+      ]
+    }
+  ],
+  "model_ready_fields": [
+    "group_points",
+    "group_rank",
+    "goal_difference",
+    "goals_for",
+    "qualification_tags",
+    "same_time_group_dependency",
+    "home_away_conflict_flag",
+    "spf_odds_snapshot",
+    "handicap_spf_odds_snapshot",
+    "devig_implied_probabilities",
+    "injury_pending_review_flags",
+    "rotation_risk",
+    "yellow_card_risk_status",
+    "t75_lineup_not_released_flag"
+  ],
+  "gaps_and_conflicts": [
+    {
+      "type": "schedule_conflict",
+      "status": "conflicting",
+      "detail": "Local historical files often label the first match as France vs Norway, while current external listings show Norway vs France."
+    },
+    {
+      "type": "lineup_gap",
+      "status": "pending",
+      "detail": "T-75 official lineups are not released yet for either match."
+    },
+    {
+      "type": "discipline_gap",
+      "status": "pending",
+      "detail": "No official accumulated yellow-card or suspension bulletin for all four teams was captured in this refresh."
+    },
+    {
+      "type": "cross_check_gap",
+      "status": "unavailable_or_partial",
+      "detail": "Structured cross-check odds from Sina or Dongqiudi were not captured in usable form."
+    },
+    {
+      "type": "weather_gap",
+      "status": "pending",
+      "detail": "No official weather packet was added in this refresh."
+    }
+  ]
+}

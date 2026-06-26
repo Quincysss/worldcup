@@ -1,0 +1,305 @@
+{
+  "phase": "round3_betting_tactical_validation",
+  "groups": ["D", "E", "F"],
+  "status": "partial",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "updated_at": "2026-06-25T16:23:00+08:00",
+  "owner": "tactics-coach",
+  "scope": "第三轮积分动机、轮换、领先后降速、必须抢分尾部比分、定位球/转换进攻风险",
+  "missing_fields": [
+    "official_t_minus_75_lineups",
+    "final_market_sale_status",
+    "latest_medical_confirmation"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\thread_outputs\\d-group-round3-20260625\\summary.md",
+    "K:\\worldcup\\data\\thread_outputs\\d-group-round3-20260625\\tactics-coach.md",
+    "K:\\worldcup\\data\\thread_outputs\\d-group-round3-20260625\\data-collector.md",
+    "K:\\worldcup\\data\\thread_outputs\\d-group-round3-20260625\\red-team.md",
+    "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-quant-prediction-20260625.json",
+    "K:\\worldcup\\data\\thread_outputs\\e-group-round3-20260625\\tactics-coach.md",
+    "K:\\worldcup\\data\\outputs\\match_predictions\\f-group-round3-quant-prediction-20260625.json",
+    "K:\\worldcup\\data\\thread_outputs\\f-group-round3-20260625\\tactics-coach.md",
+    "D/E/F 相关球队 tactics packet / player_state / roster"
+  ],
+  "notes": [
+    "本文件只做购彩相关战术校验，不重做最终概率。",
+    "不输出稳赢/稳胆，只给玩法适配与风险提醒。",
+    "主仓/娱乐仓仅表示玩法与战术脚本的适配程度，不等于结果确定性。"
+  ],
+  "overall_view": {
+    "headline": "D/E/F三组第三轮更适合顺着比赛脚本做玩法筛选，而不是顺着强队名气追深盘。",
+    "global_risks": [
+      "德国、荷兰、美国都存在不同程度的轮换、领先后降速或积分管理。",
+      "60分钟后同组实时比分与换人会显著改变尾部比分分布。",
+      "比分和半全场默认只适合娱乐仓，不适合当主仓。"
+    ],
+    "confidence": "high"
+  },
+  "matches": [
+    {
+      "group": "D",
+      "match": "巴拉圭 vs 澳大利亚",
+      "discussion_only": true,
+      "tactical_summary": "巴拉圭必须争胜，但Almiron停赛削弱推进连续性；澳大利亚边路伤停后更像先保结构、接受平局节奏。",
+      "third_round_motivation": {
+        "paraguay": "must_win",
+        "australia": "draw_management_acceptable",
+        "confidence": "high"
+      },
+      "core_risks": [
+        "巴拉圭必须胜的叙事可能被市场高估，但前场推进不完整。",
+        "澳大利亚伤停迫使边路调整，反击质量下降但保平意图更清晰。",
+        "定位球和二点球会放大低比分里的偶发波动。"
+      ],
+      "tail_score_risk": "若巴拉圭60分钟后仍未领先，会增加传中和前场堆人，比赛从低速平局脚本转向1球决胜/尾部反击交换。",
+      "set_piece_transition_flags": [
+        "两队都更依赖定位球而非连续阵地战创造。",
+        "巴拉圭压上后身后保护一般，澳大利亚反击质量虽下降但仍有偷袭窗口。"
+      ],
+      "betting_tactical_fit": {
+        "main_bankroll_tilt": [
+          "平局保护",
+          "总进球偏小",
+          "受让保护优于追主胜"
+        ],
+        "entertainment_tilt": [
+          "1-0",
+          "1-1",
+          "半全场平/平",
+          "半全场平/胜"
+        ],
+        "avoid_or_discount": [
+          "巴拉圭常规胜过度绑定动机",
+          "巴拉圭让1穿盘"
+        ],
+        "strong_favorite_do_not_chase_reason": "巴拉圭并非稳定强压型球队，动机提升并没有补回Almiron缺失带来的推进损失。",
+        "handicap_view": "若仍按巴拉圭-1看盘，不适合主仓；更像市场把抢分动机放大后的高波动盘。",
+        "score_htft_warning": "比分/半全场会被定位球、红黄牌和末段抢分需求打穿，只适合娱乐仓。"
+      },
+      "confidence": "high"
+    },
+    {
+      "group": "D",
+      "match": "土耳其 vs 美国",
+      "discussion_only": true,
+      "tactical_summary": "美国实力和转换上限仍更强，但已第一且存在Pulisic管理与轮换降速；土耳其出局后反而更可能无压力提速反扑。",
+      "third_round_motivation": {
+        "turkey": "eliminated_free_swing",
+        "usa": "already_first_with_state_management",
+        "confidence": "high"
+      },
+      "core_risks": [
+        "美国低赔会被名气和小组排名压缩，但轮换和领先后控盘限制大胜厚度。",
+        "土耳其情绪波动高，落后后会把比赛拖向更开放的尾部。",
+        "Pulisic管理风险会影响美国左侧推进和定位球质量。"
+      ],
+      "tail_score_risk": "若美国前60分钟不建立优势，后段更可能保结构而不是持续压强，土耳其的远射、反击和情绪化提速会抬高1-1/1-2/2-2尾部。",
+      "set_piece_transition_flags": [
+        "美国高位压迫与转换仍是主要优势。",
+        "土耳其定位球和反击丢球并存，波动性高于稳定性。"
+      ],
+      "betting_tactical_fit": {
+        "main_bankroll_tilt": [
+          "美国不败框架",
+          "美国胜但不一定穿盘",
+          "受让一侧保护优于追深让"
+        ],
+        "entertainment_tilt": [
+          "1-2",
+          "1-1",
+          "半全场平/负"
+        ],
+        "avoid_or_discount": [
+          "美国低赔常规胜重仓",
+          "美国大胜穿盘叙事"
+        ],
+        "strong_favorite_do_not_chase_reason": "美国已第一后的轮换、控节奏和主力管理，会把赛果优势与穿盘能力拆开。",
+        "handicap_view": "土耳其+1或美国让不起的方向，比直接追美国穿盘更符合第三轮脚本。",
+        "score_htft_warning": "若美国先保强度后保体能，半全场和比分会比常规胜平负更容易被换人节奏改写。"
+      },
+      "confidence": "high"
+    },
+    {
+      "group": "E",
+      "match": "厄瓜多尔 vs 德国",
+      "discussion_only": true,
+      "tactical_summary": "德国最大修正不是实力下滑，而是已基本锁头名后的结构保守化；厄瓜多尔必须赢，但终结效率仍是硬伤。",
+      "third_round_motivation": {
+        "ecuador": "must_win",
+        "germany": "rotation_and_draw_management",
+        "confidence": "high"
+      },
+      "core_risks": [
+        "德国轮换和领先后控盘会压低大胜尾部。",
+        "厄瓜多尔必须压上能制造转换入口，但两轮0进球说明兑现能力不足。",
+        "德国右侧身后空间和高位回防速度在轮换下更不稳定。"
+      ],
+      "tail_score_risk": "若厄瓜多尔久攻不下，比赛更容易回落到低比分；若德国先领先，继续扩大比分的意愿低于常规强队脚本。",
+      "set_piece_transition_flags": [
+        "厄瓜多尔的身体对抗和转换能给德国制造中低频高价值回合。",
+        "德国机会质量仍高，但不必按满强度压制建模。"
+      ],
+      "betting_tactical_fit": {
+        "main_bankroll_tilt": [
+          "德国不败的小比分框架",
+          "厄瓜多尔受让保护",
+          "总进球偏小"
+        ],
+        "entertainment_tilt": [
+          "0-1",
+          "1-1",
+          "半全场平/负"
+        ],
+        "avoid_or_discount": [
+          "德国低赔常规胜重追",
+          "德国深盘大胜"
+        ],
+        "strong_favorite_do_not_chase_reason": "德国赢面仍在，但轮换、头名已近和领先后控盘会削弱赔率价值与穿透性。",
+        "handicap_view": "厄瓜多尔+1或德国小胜脚本，比德国穿深盘更合理。",
+        "score_htft_warning": "比分/半全场高度依赖德国首发轮换深度与厄瓜多尔开场前压成功率，只适合娱乐仓。"
+      },
+      "confidence": "high"
+    },
+    {
+      "group": "E",
+      "match": "库拉索 vs 科特迪瓦",
+      "discussion_only": true,
+      "tactical_summary": "科特迪瓦不是无条件强攻局，平局大概率够用；库拉索只有在同步信息逼迫下才会提前压上，一旦压上后场保护明显恶化。",
+      "third_round_motivation": {
+        "curacao": "must_chase_but_fragile",
+        "ivory_coast": "draw_often_enough_control_first",
+        "confidence": "high"
+      },
+      "core_risks": [
+        "科特迪瓦先领先后的降速会压低大比分穿盘率。",
+        "库拉索若被迫追净胜球，后场单防和二点保护会突然崩。",
+        "普通胜平负缺失时，深让盘更容易误导成大胜必然。"
+      ],
+      "tail_score_risk": "0-1/0-2与1-2共存，关键在于库拉索何时被迫放弃低位；尾部放大是可能性，不是基础脚本。",
+      "set_piece_transition_flags": [
+        "科特迪瓦速度和身体优势在转换中仍更强。",
+        "库拉索门将热状态不可线性延续，定位球保护也不稳。"
+      ],
+      "betting_tactical_fit": {
+        "main_bankroll_tilt": [
+          "只认可科特迪瓦赢面，不主动延伸到大胜",
+          "单关优于串深盘",
+          "若只剩深让更应谨慎"
+        ],
+        "entertainment_tilt": [
+          "0-1",
+          "0-2",
+          "1-2",
+          "半全场平/负"
+        ],
+        "avoid_or_discount": [
+          "科特迪瓦深盘",
+          "大比分机械外推"
+        ],
+        "strong_favorite_do_not_chase_reason": "科特迪瓦第三轮真实目标是确保不过度冒险，而不是持续扩分。",
+        "handicap_view": "若普通胜平负缺失、只剩+2深盘，不适合把客队穿盘当主仓逻辑。",
+        "score_htft_warning": "同组另一场进展会决定库拉索压上线的时间点，比分和半全场离散度偏高。"
+      },
+      "confidence": "high"
+    },
+    {
+      "group": "F",
+      "match": "日本 vs 瑞典",
+      "discussion_only": true,
+      "tactical_summary": "日本平局可接受但不会一开场就纯保平；瑞典更接近必须赢，60分钟后若仍未占优会把比赛推向高空球、定位球和冲吊尾部。",
+      "third_round_motivation": {
+        "japan": "draw_acceptable_but_first_place_live",
+        "sweden": "must_push_more",
+        "confidence": "high"
+      },
+      "core_risks": [
+        "日本低赔常规胜会被同组积分形势低估掉draw-management风险。",
+        "瑞典双前锋、定位球和高空球会持续威胁日本身体对抗与二点保护。",
+        "60分钟后另一场荷兰比分会显著改变日本和瑞典的风险偏好。"
+      ],
+      "tail_score_risk": "前段更稳，后段更乱；若瑞典仍未领先，传中、定位球、前场堆人会抬高1-1、2-1、1-2这类尾部。",
+      "set_piece_transition_flags": [
+        "日本边路链条更完整，反击和二线前插更稳定。",
+        "瑞典最真实的破局路径仍是定位球、高空球和双前锋二次进攻。"
+      ],
+      "betting_tactical_fit": {
+        "main_bankroll_tilt": [
+          "日本不败框架",
+          "不追日本让胜",
+          "接受前稳后乱的中段总进球逻辑"
+        ],
+        "entertainment_tilt": [
+          "1-1",
+          "2-1",
+          "半全场平/胜",
+          "半全场平/平"
+        ],
+        "avoid_or_discount": [
+          "日本低赔常规胜重仓",
+          "日本-1穿盘"
+        ],
+        "strong_favorite_do_not_chase_reason": "日本的赛果优势并不等于持续压制优势，同开球信息会把后段目标从争胜切换到管理。",
+        "handicap_view": "瑞典受让一侧、或日本赢但不轻松的脚本，比日本穿盘更贴近战术现实。",
+        "score_htft_warning": "半全场和比分会被60分钟后的信息分支和瑞典换人提速明显扰动，只适合娱乐仓。"
+      },
+      "confidence": "high"
+    },
+    {
+      "group": "F",
+      "match": "突尼斯 vs 荷兰",
+      "discussion_only": true,
+      "tactical_summary": "荷兰有头名动力，但先领先后很可能优先控盘和负荷管理；突尼斯的实际价值在低位、定位球和反击扰动，而不是持续对攻。",
+      "third_round_motivation": {
+        "tunisia": "spoiler_low_block",
+        "netherlands": "first_place_with_speed_control",
+        "confidence": "high"
+      },
+      "core_risks": [
+        "荷兰胜面强不等于大胜稳定，领先后收手是最重要的穿盘风险。",
+        "突尼斯早丢球存在二次崩盘尾部，但也有靠低位拖慢比赛的能力。",
+        "同组另一场会决定荷兰是否继续追第二球、第三球。"
+      ],
+      "tail_score_risk": "0-1、0-2是基础脚本，1-2和0-3是尾部；第三球及以上高度依赖日本vs瑞典的同步比分和荷兰轮换尺度。",
+      "set_piece_transition_flags": [
+        "荷兰边路宽度和后点占位仍是最稳定优势。",
+        "突尼斯定位球与荷兰边后卫压上后的防守转换，是少数可复制扰动点。"
+      ],
+      "betting_tactical_fit": {
+        "main_bankroll_tilt": [
+          "荷兰胜面强于荷兰穿深盘",
+          "若只看让球需防领先后降速",
+          "单关优于把荷兰大胜当串关核心"
+        ],
+        "entertainment_tilt": [
+          "0-1",
+          "0-2",
+          "1-2",
+          "半全场平/负"
+        ],
+        "avoid_or_discount": [
+          "荷兰大胜机械外推",
+          "荷兰让两球以上单边逻辑"
+        ],
+        "strong_favorite_do_not_chase_reason": "荷兰第三轮真实目标是拿下并争头名，不是持续追求极端净胜球。",
+        "handicap_view": "荷兰赢球和荷兰大胜必须拆开看，第三轮管理局里前者强于后者。",
+        "score_htft_warning": "突尼斯若成功把比赛拖进低节奏，比分和半全场会比常规胜负更依赖单次定位球或换人时点。"
+      },
+      "confidence": "high"
+    }
+  ],
+  "parlay_and_avoidance": {
+    "prefer_single_or_light_parlay": [
+      "巴拉圭 vs 澳大利亚",
+      "土耳其 vs 美国",
+      "日本 vs 瑞典"
+    ],
+    "do_not_use_as_deep_favorite_parlay_core": [
+      "德国",
+      "科特迪瓦",
+      "荷兰"
+    ],
+    "score_and_htft_default_bucket": "entertainment_only",
+    "confidence": "high"
+  }
+}

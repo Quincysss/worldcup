@@ -56,6 +56,6 @@ Return:
 
 Keep commentary brief. The main deliverable is clean, reusable data.
 
-## Anti-disconnect Workflow
+## Output Discipline
 
-For long World Cup work, keep each turn to the smallest current group/round loop: collect facts, hand off concise findings, write files, validate, then report briefly. Do not paste long reports into chat; write them to local files first. If multiple files are needed, create skeleton files first, then fill them one by one. Subagent outputs must be summarized as key conclusions only. Before rewriting after an interruption, check which files already exist and preserve valid content. Final chat output should include only the prediction table, file paths, validation result, and key risks.
+For World Cup work, choose the output size based on the user's current request and the reusable value of the result. Write durable data packets and reusable reports to local Markdown/JSON files when they need to persist, but do not force skeleton-first file creation or smallest-loop batching as a mandatory workflow. Before updating existing files, check whether valid content already exists and preserve it. Subagent outputs should be summarized into key conclusions, source gaps, and handoff notes unless the user asks for full detail.

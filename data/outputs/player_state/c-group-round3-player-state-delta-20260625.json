@@ -1,0 +1,42 @@
+{
+  "group": "C",
+  "round": 3,
+  "review_date": "2026-06-25",
+  "status": "source_limited_delta_for_model_input",
+  "canonical_member_tables_updated_in_place": true,
+  "note": "This delta records round-3 postmatch player-state changes without creating duplicate member-table markdown files. Canonical tables remain ??/<??>/???.md.",
+  "teams": {
+    "??": {
+      "member_table": "K:/worldcup/??/??/???.md",
+      "positive": [
+        "???????4",
+        "??-???????",
+        "????/????????"
+      ],
+      "watch": [
+        "??????????",
+        "??????"
+      ],
+      "model_effect": "raise weak-team scoring and BTTS tail in open third-round scripts"
+    },
+    "???": {
+      "member_table": "K:/worldcup/??/???/???.md",
+      "positive": [
+        "??????5",
+        "??????5",
+        "???/??????????",
+        "????????"
+      ],
+      "watch": [
+        "??????????",
+        "?????????"
+      ],
+      "model_effect": "increase Morocco right-side production and bench-late-goal tail; keep BTTS risk higher"
+    }
+  },
+  "source_limitations": [
+    "complete official player ratings not captured",
+    "full FIFA event table not captured",
+    "injury status based on public match reports and visible match events only"
+  ]
+}

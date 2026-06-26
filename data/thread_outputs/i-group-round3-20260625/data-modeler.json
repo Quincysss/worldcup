@@ -1,0 +1,145 @@
+{
+  "phase": "match_prediction",
+  "group": "I",
+  "round": 3,
+  "status": "partial_complete",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "updated_at": "2026-06-25T15:09:04.8833831+08:00",
+  "owner": "data-modeler-agent",
+  "scope": [
+    "法国 vs 挪威",
+    "塞内加尔 vs 伊拉克"
+  ],
+  "inputs_status": {
+    "data_collector": "partial_read",
+    "tactics_coach": "partial_read",
+    "red_team": "complete_hold"
+  },
+  "matches": [
+    {
+      "match_id": "i-group-round3-france-vs-norway",
+      "match": "法国 vs 挪威",
+      "xg_final": {
+        "france": 1.47,
+        "norway": 1.14
+      },
+      "poisson_formula": "P(法国=i,挪威=j)=exp(-1.47)*1.47^i/i! * exp(-1.14)*1.14^j/j!",
+      "probabilities_1x2": {
+        "france_win": 0.4473,
+        "draw": 0.2591,
+        "norway_win": 0.2936
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1232
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1081
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0906
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0838
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0795
+        }
+      ],
+      "over_under_2_5": {
+        "over": 0.4841,
+        "under": 0.5159
+      },
+      "market_delta": {
+        "source_status": "ordinary_1x2_available_but_home_away_order_conflict_logged",
+        "market_implied_reordered_for_project_label": {
+          "france_win": 0.5825,
+          "draw": 0.227,
+          "norway_win": 0.1905
+        },
+        "model_minus_market": {
+          "france_win": -0.1352,
+          "draw": 0.0321,
+          "norway_win": 0.1031
+        },
+        "handicap_direction_note": "模型分布更接近法国小胜或平局，未支持法国稳定净胜2球的强穿盘叙事。"
+      },
+      "confidence": "medium_low",
+      "missing_fields": [
+        "official_t_minus_75_lineups",
+        "official_card_accumulation_confirmation",
+        "canonical_home_away_order_confirmation",
+        "red_team_pass_verdict"
+      ]
+    },
+    {
+      "match_id": "i-group-round3-senegal-vs-iraq",
+      "match": "塞内加尔 vs 伊拉克",
+      "xg_final": {
+        "senegal": 1.62,
+        "iraq": 0.95
+      },
+      "poisson_formula": "P(塞内加尔=i,伊拉克=j)=exp(-1.62)*1.62^i/i! * exp(-0.95)*0.95^j/j!",
+      "probabilities_1x2": {
+        "senegal_win": 0.5307,
+        "draw": 0.2482,
+        "iraq_win": 0.2211
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.1240
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1178
+        },
+        {
+          "score": "2-0",
+          "probability": 0.1004
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0954
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0765
+        }
+      ],
+      "over_under_2_5": {
+        "over": 0.4740,
+        "under": 0.5260
+      },
+      "market_delta": {
+        "source_status": "ordinary_1x2_missing_handicap_only",
+        "market_implied": null,
+        "model_minus_market": null,
+        "handicap_market_devig_minus_2": {
+          "senegal_minus_2_win": 0.3486,
+          "draw": 0.2236,
+          "iraq_plus_2_win": 0.4278
+        },
+        "handicap_direction_note": "让球市场不支持塞内加尔大胜叙事，模型更接近塞内加尔小胜或平局风险并存。"
+      },
+      "confidence": "low",
+      "missing_fields": [
+        "official_t_minus_75_lineups",
+        "edouard_mendy_final_availability",
+        "aymen_hussein_final_availability",
+        "official_card_accumulation_confirmation",
+        "standard_1x2_market_snapshot"
+      ]
+    }
+  ],
+  "validation": {
+    "json_tool_passed": true,
+    "validation_method": "python_json_load",
+    "validated_at": "2026-06-25T15:09:04.8833831+08:00"
+  }
+}

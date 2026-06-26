@@ -1,0 +1,355 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-25T15:51:40+08:00",
+  "scope": "D/E/F group round 3 China Sports Lottery discussion plan",
+  "betting_gate": "conditional_discussion_only",
+  "execution_boundary": [
+    "Execute only after matchday official lineups, final injuries, odds, and sales status are rechecked.",
+    "If sales remain suspended, a market is not open, or lineup assumptions break, the related item amount is 0.",
+    "This is not a profit promise or mandatory betting instruction."
+  ],
+  "budget": {
+    "per_plan_total_yuan": 100,
+    "main_bank_yuan": 70,
+    "entertainment_bank_yuan": 30,
+    "note": "Each plan is an alternative 100 yuan template; do not stack all three."
+  },
+  "odds_snapshot": {
+    "source_basis": "Main-thread China Zgzcw instant odds",
+    "matches": [
+      {
+        "id": "055",
+        "match": "Ecuador vs Germany",
+        "spf": {
+          "home": 5.20,
+          "draw": 4.95,
+          "away": 1.36
+        },
+        "rqspf": {
+          "handicap": "+1",
+          "home": 2.65,
+          "draw": 3.72,
+          "away": 2.07
+        },
+        "model_note": "Germany still has the higher win side, but rotation and tempo control are major third-round risks; representative score 0-1."
+      },
+      {
+        "id": "056",
+        "match": "Curacao vs Cote d'Ivoire",
+        "spf": "not_open",
+        "rqspf": {
+          "handicap": "+2",
+          "home": 2.51,
+          "draw": 3.85,
+          "away": 2.12
+        },
+        "model_note": "Cote d'Ivoire has the stronger side, but a draw-enough state can reduce late attacking intensity; representative score 0-1."
+      },
+      {
+        "id": "057",
+        "match": "Tunisia vs Netherlands",
+        "spf": "not_open",
+        "rqspf": {
+          "handicap": "+2",
+          "home": 3.47,
+          "draw": 4.25,
+          "away": 1.65
+        },
+        "model_note": "Netherlands advantage is clear, but +2 handicap should not be read as a simple big-win confirmation; representative score 0-2/0-1."
+      },
+      {
+        "id": "058",
+        "match": "Japan vs Sweden",
+        "spf": {
+          "home": 1.60,
+          "draw": 3.57,
+          "away": 4.45
+        },
+        "rqspf": {
+          "handicap": "-1",
+          "home": 2.80,
+          "draw": 3.57,
+          "away": 2.03
+        },
+        "model_note": "Market is hotter on Japan than the model; Sweden must chase points, so Sweden +1 cover is preferred for risk control."
+      },
+      {
+        "id": "059",
+        "match": "Paraguay vs Australia",
+        "spf": {
+          "home": 2.68,
+          "draw": 2.11,
+          "away": 3.55
+        },
+        "rqspf": {
+          "handicap": "-1",
+          "home": 6.20,
+          "draw": 4.40,
+          "away": 1.35
+        },
+        "model_note": "Model is 35.5/34.0/30.5 with representative score 1-1; Paraguay need a win but a two-goal win threshold is high."
+      },
+      {
+        "id": "060",
+        "match": "Turkey vs USA",
+        "spf": {
+          "home": 3.72,
+          "draw": 3.87,
+          "away": 1.66
+        },
+        "rqspf": {
+          "handicap": "+1",
+          "home": 1.92,
+          "draw": 3.85,
+          "away": 2.87
+        },
+        "model_note": "USA has the higher win side, but already being first in the group creates rotation and tempo-control risk; representative score 1-2."
+      }
+    ]
+  },
+  "plans": [
+    {
+      "id": "A",
+      "name": "Conservative coverage template",
+      "style": "Higher tolerance, lower payout elasticity",
+      "total_yuan": 100,
+      "main_bank": {
+        "total_yuan": 70,
+        "items": [
+          {
+            "id": "A1",
+            "cost_yuan": 20,
+            "market": "RQSPF single",
+            "selection": "058 Japan vs Sweden, handicap -1, away win: Sweden +1 cover",
+            "odds": 2.03,
+            "reason": "Japan is hotter in the market than in the model; Sweden still has a must-chase branch.",
+            "risk": "Japan early goal plus Sweden chase can lead to Japan winning by 2."
+          },
+          {
+            "id": "A2",
+            "cost_yuan": 20,
+            "market": "RQSPF single",
+            "selection": "059 Paraguay vs Australia, handicap -1, away win: Australia +1 cover",
+            "odds": 1.35,
+            "reason": "The model centers around 1-1, and Paraguay winning by 2 is a high threshold.",
+            "risk": "Paraguay can break the protection if Australia injuries hurt the wide defense."
+          },
+          {
+            "id": "A3",
+            "cost_yuan": 20,
+            "market": "2-leg parlay",
+            "selection": "058 RQ away win x 059 RQ away win",
+            "odds": [2.03, 1.35],
+            "reason": "Both legs are protection against over-stretched favorite or must-win narratives.",
+            "risk": "Any early goal can change the match script and break one leg."
+          },
+          {
+            "id": "A4",
+            "cost_yuan": 10,
+            "market": "SPF single",
+            "selection": "055 Ecuador vs Germany, away win",
+            "odds": 1.36,
+            "reason": "Germany is still the higher win side, but amount is capped because of third-round rotation risk.",
+            "risk": "Rotation and Ecuador urgency can create a draw."
+          }
+        ]
+      },
+      "entertainment_bank": {
+        "total_yuan": 30,
+        "items": [
+          {"id": "A5", "cost_yuan": 4, "market": "correct_score", "selection": "055 0-1", "risk": "Score bets are high variance."},
+          {"id": "A6", "cost_yuan": 2, "market": "correct_score", "selection": "055 1-1", "risk": "Score bets are high variance."},
+          {"id": "A7", "cost_yuan": 4, "market": "correct_score", "selection": "056 0-1", "risk": "Score bets are high variance."},
+          {"id": "A8", "cost_yuan": 4, "market": "correct_score", "selection": "056 0-2", "risk": "Score bets are high variance."},
+          {"id": "A9", "cost_yuan": 4, "market": "correct_score", "selection": "057 0-2", "risk": "Score bets are high variance."},
+          {"id": "A10", "cost_yuan": 2, "market": "correct_score", "selection": "057 0-1", "risk": "Score bets are high variance."},
+          {"id": "A11", "cost_yuan": 4, "market": "correct_score", "selection": "058 1-1", "risk": "Score bets are high variance."},
+          {"id": "A12", "cost_yuan": 4, "market": "correct_score", "selection": "059 1-1", "risk": "Score bets are high variance."},
+          {"id": "A13", "cost_yuan": 2, "market": "correct_score", "selection": "060 1-2", "risk": "Score bets are high variance."}
+        ]
+      }
+    },
+    {
+      "id": "B",
+      "name": "Balanced mixed template",
+      "style": "Moderate return, controlled exposure",
+      "total_yuan": 100,
+      "main_bank": {
+        "total_yuan": 70,
+        "items": [
+          {
+            "id": "B1",
+            "cost_yuan": 20,
+            "market": "2-leg parlay",
+            "selection": "055 SPF away win x 059 RQ away win",
+            "odds": [1.36, 1.35],
+            "reason": "Combines one strength edge with one handicap-protection leg.",
+            "risk": "Germany rotation or Paraguay two-goal win breaks the ticket."
+          },
+          {
+            "id": "B2",
+            "cost_yuan": 20,
+            "market": "2-leg parlay",
+            "selection": "058 RQ away win x 060 SPF away win",
+            "odds": [2.03, 1.66],
+            "reason": "Balances Japan handicap risk with the USA higher win side.",
+            "risk": "USA rotation can turn the match into a draw; Japan can still win by 2."
+          },
+          {
+            "id": "B3",
+            "cost_yuan": 10,
+            "market": "3-leg parlay",
+            "selection": "055 SPF away win x 058 RQ away win x 059 RQ away win",
+            "odds": [1.36, 2.03, 1.35],
+            "reason": "Small amount on the core directions with better payout elasticity.",
+            "risk": "Three-leg parlays have low tolerance for one wrong script."
+          },
+          {
+            "id": "B4",
+            "cost_yuan": 10,
+            "market": "RQSPF single",
+            "selection": "060 Turkey vs USA, handicap +1, draw: USA win by exactly 1",
+            "odds": 3.85,
+            "reason": "Matches the 1-2 representative score and avoids overstating USA margin.",
+            "risk": "Turkey avoid defeat or USA win by 2+."
+          },
+          {
+            "id": "B5",
+            "cost_yuan": 10,
+            "market": "RQSPF single",
+            "selection": "056 Curacao vs Cote d'Ivoire, handicap +2, home win: Curacao +2 cover win",
+            "odds": 2.51,
+            "reason": "Cote d'Ivoire can win without constantly chasing a large margin.",
+            "risk": "Cote d'Ivoire early goals can push the match to a two-goal or larger margin."
+          }
+        ]
+      },
+      "entertainment_bank": {
+        "total_yuan": 30,
+        "items": [
+          {"id": "B6", "cost_yuan": 4, "market": "half_full_time", "selection": "055 draw/away", "odds": null, "risk": "Half-full-time odds not verified; cancel if unavailable or overpriced."},
+          {"id": "B7", "cost_yuan": 4, "market": "half_full_time", "selection": "057 draw/away", "odds": null, "risk": "Half-full-time odds not verified; cancel if unavailable or overpriced."},
+          {"id": "B8", "cost_yuan": 4, "market": "half_full_time", "selection": "060 draw/away", "odds": null, "risk": "Half-full-time odds not verified; cancel if unavailable or overpriced."},
+          {"id": "B9", "cost_yuan": 4, "market": "correct_score", "selection": "055 0-1", "risk": "High variance."},
+          {"id": "B10", "cost_yuan": 4, "market": "correct_score", "selection": "056 0-1", "risk": "High variance."},
+          {"id": "B11", "cost_yuan": 4, "market": "correct_score", "selection": "057 0-2", "risk": "High variance."},
+          {"id": "B12", "cost_yuan": 2, "market": "correct_score", "selection": "058 2-1", "risk": "High variance."},
+          {"id": "B13", "cost_yuan": 4, "market": "correct_score", "selection": "059 1-1", "risk": "High variance."}
+        ]
+      }
+    },
+    {
+      "id": "C",
+      "name": "Aggressive combo template",
+      "style": "Higher volatility, more parlay exposure",
+      "total_yuan": 100,
+      "main_bank": {
+        "total_yuan": 70,
+        "items": [
+          {
+            "id": "C1",
+            "cost_yuan": 22,
+            "market": "4-leg 11-combo, 1x",
+            "selection": "055 Germany win x 058 Sweden +1 cover x 059 Australia +1 cover x 060 USA win",
+            "odds": [1.36, 2.03, 1.35, 1.66],
+            "reason": "Uses two lower-price win sides and two handicap-protection legs across 11 combinations.",
+            "risk": "A single rotation-driven upset can damage many combinations."
+          },
+          {
+            "id": "C2",
+            "cost_yuan": 16,
+            "market": "4-leg 4-combo, 2x",
+            "selection": "055 Germany win x 056 Curacao +2 cover win x 058 Sweden +1 cover x 059 Australia +1 cover",
+            "odds": [1.36, 2.51, 2.03, 1.35],
+            "reason": "Replaces a big-favorite margin chase with Curacao +2 protection.",
+            "risk": "If Cote d'Ivoire wins by 2+, this combo cluster is exposed."
+          },
+          {
+            "id": "C3",
+            "cost_yuan": 20,
+            "market": "2-leg parlay",
+            "selection": "058 RQ away win x 059 RQ away win",
+            "odds": [2.03, 1.35],
+            "reason": "Keeps the two main handicap-protection legs as a stabilizer inside a volatile plan.",
+            "risk": "Japan or Paraguay can still break the handicap."
+          },
+          {
+            "id": "C4",
+            "cost_yuan": 6,
+            "market": "RQSPF single",
+            "selection": "057 Tunisia vs Netherlands, handicap +2, draw: Netherlands win by exactly 2",
+            "odds": 4.25,
+            "reason": "Matches the 0-2 model path without chasing Netherlands by 3+.",
+            "risk": "Netherlands rotation leads to a smaller win, or Tunisia collapse leads to a larger margin."
+          },
+          {
+            "id": "C5",
+            "cost_yuan": 6,
+            "market": "RQSPF single",
+            "selection": "060 Turkey vs USA, handicap +1, draw: USA win by exactly 1",
+            "odds": 3.85,
+            "reason": "Matches the 1-2 representative score.",
+            "risk": "Turkey avoid defeat or USA win by more than one."
+          }
+        ]
+      },
+      "entertainment_bank": {
+        "total_yuan": 30,
+        "items": [
+          {"id": "C6", "cost_yuan": 4, "market": "correct_score", "selection": "055 0-1", "risk": "High variance."},
+          {"id": "C7", "cost_yuan": 4, "market": "correct_score", "selection": "056 0-1", "risk": "High variance."},
+          {"id": "C8", "cost_yuan": 4, "market": "correct_score", "selection": "056 0-2", "risk": "High variance."},
+          {"id": "C9", "cost_yuan": 6, "market": "correct_score", "selection": "057 0-2", "risk": "High variance."},
+          {"id": "C10", "cost_yuan": 4, "market": "correct_score", "selection": "058 1-1", "risk": "High variance."},
+          {"id": "C11", "cost_yuan": 4, "market": "correct_score", "selection": "059 1-1", "risk": "High variance."},
+          {"id": "C12", "cost_yuan": 4, "market": "correct_score", "selection": "060 1-2", "risk": "High variance."}
+        ]
+      }
+    }
+  ],
+  "avoid_list": [
+    {
+      "direction": "Over-sizing 055 Germany 1.36 or 060 USA 1.66 singles",
+      "reason": "Third-round rotation and tempo control make low price favorites more fragile than the price suggests."
+    },
+    {
+      "direction": "Using 057 Netherlands handicap away win as a main-bank anchor",
+      "reason": "That requires a Netherlands win by 3+, while the model center is closer to 0-2 or 0-1."
+    },
+    {
+      "direction": "Using 058 Japan win or handicap win as a parlay core",
+      "reason": "The market is hotter on Japan than the model, and Sweden still has a must-chase branch."
+    },
+    {
+      "direction": "Using 059 Paraguay handicap win",
+      "reason": "The model centers around 1-1 and Australia has draw-management space."
+    },
+    {
+      "direction": "Writing ordinary SPF picks for 056 or 057 before the market opens",
+      "reason": "The ordinary SPF markets are not open in the provided snapshot."
+    }
+  ],
+  "pre_match_recheck": [
+    "Official T-75 lineups for Germany, Netherlands, USA, Japan, Sweden, Paraguay, Australia, Cote d'Ivoire.",
+    "Final injury and suspension confirmation, especially Paraguay/Australia wide-player availability and Cote d'Ivoire defender status.",
+    "Sales status and market availability for SPF, RQSPF, correct score, and half-full-time.",
+    "Odds movement, especially if Germany, Japan, or USA prices shorten further."
+  ],
+  "recommendation_order": [
+    {
+      "rank": 1,
+      "plan_id": "A",
+      "use_case": "Prefer tolerance and simpler tickets."
+    },
+    {
+      "rank": 2,
+      "plan_id": "B",
+      "use_case": "Prefer balance between payout and dispersion."
+    },
+    {
+      "rank": 3,
+      "plan_id": "C",
+      "use_case": "Accept higher parlay volatility for entertainment-oriented upside."
+    }
+  ]
+}

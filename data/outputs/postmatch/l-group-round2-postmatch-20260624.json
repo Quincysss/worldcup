@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "phase": "post_match_review",
+    "group": "L",
+    "round": 2,
+    "status": "complete_partial_minutes",
+    "created_at": "2026-06-24T09:54:21+08:00",
+    "workflow": [
+      "collect_facts",
+      "tactical_judgement",
+      "model_backtest",
+      "red_team_check",
+      "write_files",
+      "validate"
+    ],
+    "thread_outputs": {
+      "data_collector": "data/thread_outputs/l-group-round2-postmatch-20260624/data-collector.md",
+      "tactics_coach": "data/thread_outputs/l-group-round2-postmatch-20260624/tactics-coach.md",
+      "modeler": "data/thread_outputs/l-group-round2-postmatch-20260624/modeler.md",
+      "red_team": "data/thread_outputs/l-group-round2-postmatch-20260624/red-team.md"
+    },
+    "prediction_file": "data/outputs/match_predictions/l-group-round2-quant-prediction-20260623.json"
+  },
+  "matches": [
+    {
+      "id": "L-R2-ENG-GHA-20260623",
+      "score": "0-0",
+      "prediction": {
+        "pick": "英格兰胜倾向",
+        "score": "1-0 / 2-0",
+        "probability": {
+          "home_win": 0.64,
+          "draw": 0.22,
+          "away_win": 0.14
+        },
+        "expected_goals": {
+          "home": 1.9,
+          "away": 0.74
+        }
+      },
+      "verdict": "方向未命中，0-0 是赛前第六候选比分，说明模型识别到小比分尾部但低估了加纳中卫线和低位保护的稳定性。",
+      "risks": [
+        "不能把 0-0 简化成英格兰状态崩盘，更准确是转化失败叠加强对抗防线。",
+        "Guardian 评分可作为状态迭代输入，但单一媒体评分不应直接等同模型分。",
+        "Reece James 的治疗信息只标记为观察项，不写成伤停结论。"
+      ],
+      "sources": [
+        {
+          "name": "England Football match centre",
+          "url": "https://www.englandfootball.com/england/mens-senior-team/fixtures-results/2025-26/World-Cup/england-v-ghana-fifa-world-cup-tuesday-23-june-2026-match-centre",
+          "note": "官方赛后口径：英格兰 0-0 加纳，英格兰控球和机会占优但未转化。"
+        },
+        {
+          "name": "The Guardian England 0-0 Ghana player ratings",
+          "url": "https://www.theguardian.com/football/2026/jun/23/england-0-0-ghana-world-cup-2026-group-l-player-ratings",
+          "note": "提供英格兰与加纳球员评分，用于 round2 外部评分与内部状态值校准。"
+        }
+      ]
+    },
+    {
+      "id": "L-R2-PAN-CRO-20260623",
+      "score": "0-1",
+      "prediction": {
+        "pick": "克罗地亚胜倾向",
+        "score": "0-1 / 0-2",
+        "probability": {
+          "home_win": 0.155,
+          "draw": 0.245,
+          "away_win": 0.6
+        },
+        "expected_goals": {
+          "home": 0.76,
+          "away": 1.72
+        }
+      },
+      "verdict": "方向命中，首选比分 0-1 命中；模型对克罗地亚小胜、巴拿马进攻受限的判断有效。",
+      "risks": [
+        "Guardian 和 FOX 对阵型展示存在 4-3-3/4-2-3-1 口径差异，复盘只采用战术功能描述。",
+        "Budimir 进球链条可确认，但具体助攻归属需等 FIFA/官方技术报告再锁死。",
+        "Panama 两场 0-1 更像进攻上限不足，不等于防守完全失控。"
+      ],
+      "sources": [
+        {
+          "name": "The Guardian Panama v Croatia live",
+          "url": "https://www.theguardian.com/football/live/2026/jun/23/panama-v-croatia-world-cup-2026-live-updates",
+          "note": "确认巴拿马 0-1 克罗地亚、Budimir 进球、克罗地亚半场换人和巴拿马被迫传中。"
+        },
+        {
+          "name": "FOX Sports Panama v Croatia boxscore",
+          "url": "https://www.foxsports.com/soccer/fifa-world-cup-men-panama-vs-croatia-jun-23-2026-game-boxscore-647662",
+          "note": "交叉核验比分、阵型和巴拿马出场名单。"
+        }
+      ]
+    }
+  ],
+  "player_state_files": {
+    "england": "data/outputs/player_state/england-player-state.json",
+    "ghana": "data/outputs/player_state/ghana-player-state.json",
+    "panama": "data/outputs/player_state/panama-player-state.json",
+    "croatia": "data/outputs/player_state/croatia-player-state.json"
+  }
+}

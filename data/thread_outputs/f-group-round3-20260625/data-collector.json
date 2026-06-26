@@ -1,0 +1,516 @@
+{
+  "phase": "group_round3_data_collection",
+  "group": "F",
+  "status": "partial",
+  "final_status": "partial_ready_for_model",
+  "json_validated": true,
+  "created_at": "2026-06-25T11:33:18.4112228+08:00",
+  "updated_at": "2026-06-25T15:32:29.0621000+08:00",
+  "source_time": "2026-06-25T15:32:29.0621000+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "F组第三轮两场赛前事实数据包，只采集积分、同开球依赖、赔率快照、伤停与轮换风险、晋级路径和数据缺口，不做最终预测或投注建议。",
+  "teams": [
+    "日本",
+    "瑞典",
+    "突尼斯",
+    "荷兰"
+  ],
+  "missing_fields": [
+    "FIFA官方实时积分榜页面未同步复核，本包积分由本地已完赛结果推导。",
+    "四队T-75官方首发尚未公布。",
+    "官方累计黄牌/停赛页未完成最终刷新。",
+    "32强精确对阵路径仍需主线程bracket map或FIFA路径页复核。",
+    "新浪/懂球帝未取得稳定可复核的同场同市场结构化赔率。"
+  ],
+  "source_log": [
+    {
+      "source_name": "local_completed_match_reports_f_group",
+      "source_type": "local",
+      "source_url": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\",
+      "captured_at": "2026-06-25T15:32:29.0621000+08:00",
+      "source_status": "read",
+      "supported_fields": [
+        "前两轮赛果",
+        "积分推导",
+        "本地复盘中的伤停与纪律线索"
+      ]
+    },
+    {
+      "source_name": "local_member_tables_and_player_state",
+      "source_type": "local",
+      "source_url": "K:\\worldcup\\队伍\\日本\\成员表.md ; K:\\worldcup\\队伍\\瑞典\\成员表.md ; K:\\worldcup\\队伍\\突尼斯\\成员表.md ; K:\\worldcup\\队伍\\荷兰\\成员表.md ; K:\\worldcup\\data\\outputs\\player_state\\",
+      "captured_at": "2026-06-25T15:32:29.0621000+08:00",
+      "source_status": "read",
+      "supported_fields": [
+        "球员可用性",
+        "已知黄牌",
+        "赛后观察项",
+        "教练组冲突说明"
+      ]
+    },
+    {
+      "source_name": "ChinaSportsLottery_zgzcw_jcmini",
+      "source_type": "market",
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-25T15:29:13.8317696+08:00",
+      "source_status": "read",
+      "supported_fields": [
+        "比赛编号",
+        "普通胜平负",
+        "让球胜平负",
+        "未开售状态"
+      ]
+    },
+    {
+      "source_name": "Guardian_Netherlands_Sweden_report",
+      "source_type": "media",
+      "source_url": "https://www.theguardian.com/football/2026/jun/20/netherlands-sweden-world-cup-group-f-match-report",
+      "captured_at": "2026-06-25T15:32:29.0621000+08:00",
+      "source_status": "read",
+      "supported_fields": [
+        "荷兰vs瑞典赛况",
+        "瑞典第三轮追分语境"
+      ]
+    },
+    {
+      "source_name": "Guardian_Netherlands_Japan_live",
+      "source_type": "media",
+      "source_url": "https://www.theguardian.com/football/live/2026/jun/14/netherlands-v-japan-world-cup-2026-live",
+      "captured_at": "2026-06-25T15:32:29.0621000+08:00",
+      "source_status": "read",
+      "supported_fields": [
+        "荷兰vs日本首轮背景",
+        "日本早期伤停线索"
+      ]
+    },
+    {
+      "source_name": "Guardian_Tunisia_coach_change",
+      "source_type": "media",
+      "source_url": "https://www.theguardian.com/football/2026/jun/15/tunisia-sack-sabri-lamouchi-one-game-into-world-cup-2026-5-1-defeat-sweden",
+      "captured_at": "2026-06-25T15:32:29.0621000+08:00",
+      "source_status": "read",
+      "supported_fields": [
+        "突尼斯教练更替"
+      ]
+    }
+  ],
+  "standings_after_round2": {
+    "captured_at": "2026-06-25T15:32:29.0621000+08:00",
+    "source_status": "locally_derived_from_completed_matches",
+    "table": [
+      {
+        "rank": 1,
+        "team": "荷兰",
+        "matches_played": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "goals_for": 7,
+        "goals_against": 3,
+        "goal_difference": 4,
+        "points": 4
+      },
+      {
+        "rank": 2,
+        "team": "日本",
+        "matches_played": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "goals_for": 6,
+        "goals_against": 2,
+        "goal_difference": 4,
+        "points": 4
+      },
+      {
+        "rank": 3,
+        "team": "瑞典",
+        "matches_played": 2,
+        "wins": 1,
+        "draws": 0,
+        "losses": 1,
+        "goals_for": 6,
+        "goals_against": 6,
+        "goal_difference": 0,
+        "points": 3
+      },
+      {
+        "rank": 4,
+        "team": "突尼斯",
+        "matches_played": 2,
+        "wins": 0,
+        "draws": 0,
+        "losses": 2,
+        "goals_for": 1,
+        "goals_against": 9,
+        "goal_difference": -8,
+        "points": 0
+      }
+    ],
+    "current_order_note": "荷兰与日本同积4分、净胜球同为+4，当前按总进球数7比6暂列日本之前；两队首轮直接交锋为2比2，尚不能用相互战绩拉开。"
+  },
+  "tiebreaker_adopted": {
+    "governing_body": "FIFA",
+    "source_status": "project_standard_rule_order_secondary_confirmed",
+    "ordered_rules": [
+      "小组积分",
+      "小组净胜球",
+      "小组总进球数",
+      "相关球队之间相互战绩积分",
+      "相关球队之间相互战绩净胜球",
+      "相关球队之间相互战绩进球数",
+      "公平竞赛积分",
+      "抽签"
+    ],
+    "note": "本包采用项目既有第三轮规则顺序；最终以FIFA官方赛时排名页为准。"
+  },
+  "round_results_used": [
+    {
+      "date": "2026-06-14",
+      "match": "荷兰 2-2 日本",
+      "source_status": "local_confirmed"
+    },
+    {
+      "date": "2026-06-14",
+      "match": "瑞典 5-1 突尼斯",
+      "source_status": "local_confirmed"
+    },
+    {
+      "date": "2026-06-20",
+      "match": "荷兰 5-1 瑞典",
+      "source_status": "local_confirmed"
+    },
+    {
+      "date": "2026-06-21",
+      "match": "突尼斯 0-4 日本",
+      "source_status": "local_confirmed"
+    }
+  ],
+  "fixtures_round3": [
+    {
+      "match_number": "周四057",
+      "home_team": "突尼斯",
+      "away_team": "荷兰",
+      "kickoff_bjt": "2026-06-26 07:00",
+      "stadium": "Kansas City Stadium",
+      "simultaneous_group_kickoff": true,
+      "source_status": "market_page_and_local_project_confirmed"
+    },
+    {
+      "match_number": "周四058",
+      "home_team": "日本",
+      "away_team": "瑞典",
+      "kickoff_bjt": "2026-06-26 07:00",
+      "stadium": "Dallas Stadium",
+      "simultaneous_group_kickoff": true,
+      "source_status": "market_page_and_local_project_confirmed"
+    }
+  ],
+  "simultaneous_kickoff_context": {
+    "enabled": true,
+    "status": "confirmed",
+    "note": "两场比赛同开球，荷兰与日本既争前二也争头名；瑞典的临场策略强依赖另一场比分；突尼斯更多承担spoiler角色。"
+  },
+  "qualification_paths": [
+    {
+      "team": "荷兰",
+      "status_tags": [
+        "draw_enough",
+        "first_place_race",
+        "loss_risk_to_F3"
+      ],
+      "f1_path": "赢球可锁定前二并保留最大头名主动权；打平也可能守住头名，但取决于日本vs瑞典的结果与比分。",
+      "f2_path": "打平且日本赢球时，大概率落到第二；输球后若仍压过日本的同分比较，也可能保住第二。",
+      "f3_path": "输给突尼斯且日本输给瑞典时，存在与日本同分后因净胜球或进球数掉到第三的风险。",
+      "out_path": "F4不可能；若落到F3，是否以最好第三名出线仍需跨组矩阵复核。",
+      "confidence": "medium"
+    },
+    {
+      "team": "日本",
+      "status_tags": [
+        "draw_enough",
+        "first_place_race",
+        "loss_risk_to_F3"
+      ],
+      "f1_path": "赢球即可锁定前二，并在荷兰未取得更优积分或净胜球条件下争头名；打平也可能在荷兰不胜时升至头名。",
+      "f2_path": "打平且荷兰不败时，基本保持前二；若输给瑞典但荷兰也输球，日本仍可能通过同分比较争第二。",
+      "f3_path": "输给瑞典且荷兰不败时，将掉到第三；若与荷兰同积4分，也可能因净胜球或进球数落第三。",
+      "out_path": "F4不可能；若落到F3，仍需最好第三名路径复核。",
+      "confidence": "medium"
+    },
+    {
+      "team": "瑞典",
+      "status_tags": [
+        "must_win_for_clean_top2_path",
+        "first_place_race_if_win",
+        "third_place_live_if_draw_or_loss"
+      ],
+      "f1_path": "击败日本且荷兰不胜时，可冲到头名。",
+      "f2_path": "击败日本且荷兰赢球时，大概率第二；打平只在荷兰被突尼斯重创的极端净胜球链条下保留理论第二空间。",
+      "f3_path": "打平是最现实的第三名路径；输球后大概率仍压住突尼斯拿第三，但出线需转入最好第三名比较。",
+      "out_path": "若输给日本且突尼斯极端大胜荷兰完成净胜球反超，瑞典才会掉到第四。",
+      "confidence": "medium"
+    },
+    {
+      "team": "突尼斯",
+      "status_tags": [
+        "theoretical_only",
+        "spoiler_role",
+        "likely_F4"
+      ],
+      "f1_path": "不可能。",
+      "f2_path": "不可能。",
+      "f3_path": "仅在击败荷兰且另一场出现极端净胜球摆动时，才保留理论第三窗口。",
+      "out_path": "第四名是最现实路径。",
+      "confidence": "high"
+    }
+  ],
+  "round_of_32_path": {
+    "project_local_map": [
+      {
+        "finish_position": "F1",
+        "project_mapping": "likely_vs_C2",
+        "source_status": "project_artifact_consistent_need_verify"
+      },
+      {
+        "finish_position": "F2",
+        "project_mapping": "likely_vs_C1",
+        "source_status": "project_artifact_consistent_need_verify"
+      },
+      {
+        "finish_position": "F3",
+        "project_mapping": "best_third_matrix_dependent",
+        "source_status": "need_verify"
+      }
+    ],
+    "travel_rest_venue_impact": {
+      "status": "need_verify",
+      "note": "当前未直接读取主线程统一bracket map，休息日与旅行链条不在本包中硬写。"
+    },
+    "evidence": [
+      "K:\\worldcup\\data\\outputs\\match_predictions\\f-group-round3-quant-prediction-20260625.json",
+      "K:\\worldcup\\scripts\\generate_f_group_round3.py"
+    ]
+  },
+  "discipline_and_availability": {
+    "captured_at": "2026-06-25T15:32:29.0621000+08:00",
+    "t75_official_lineups_status": "not_yet_published",
+    "official_cumulative_yellow_status": "needs_fifa_match_centre_refresh",
+    "items": [
+      {
+        "team": "荷兰",
+        "subject": "维吉尔·范戴克",
+        "risk_type": "post_match_monitor",
+        "detail": "本地成员表保留第二轮赛后碰撞观察项，赛前未见confirmed out。",
+        "source_status": "needs_refresh"
+      },
+      {
+        "team": "荷兰",
+        "subject": "科迪·加克波",
+        "risk_type": "post_match_monitor",
+        "detail": "本地状态线保留赛后身体接触观察项，当前标记为可用但待刷新。",
+        "source_status": "needs_refresh"
+      },
+      {
+        "team": "荷兰",
+        "subject": "克里森西奥·萨默维尔",
+        "risk_type": "post_match_monitor",
+        "detail": "第二轮替补高输出后留有头部碰撞观察记录，赛前最终可用性待刷新。",
+        "source_status": "needs_refresh"
+      },
+      {
+        "team": "日本",
+        "subject": "久保建英",
+        "risk_type": "fitness_monitor",
+        "detail": "首轮有因伤提示被换下背景，第二轮未出场；第三轮赛前状态仍需刷新。",
+        "source_status": "needs_refresh"
+      },
+      {
+        "team": "瑞典",
+        "subject": "加布里埃尔·古德蒙德松",
+        "risk_type": "yellow_card_and_load_monitor",
+        "detail": "首轮有离场观察背景，第二轮53分钟黄牌并打满主要时段，第三轮需刷新体能与纪律状态。",
+        "source_status": "needs_refresh"
+      },
+      {
+        "team": "瑞典",
+        "subject": "亚辛·阿亚里",
+        "risk_type": "yellow_card_monitor",
+        "detail": "第二轮75分钟黄牌，累计风险仍待官方纪律页确认。",
+        "source_status": "needs_refresh"
+      },
+      {
+        "team": "瑞典",
+        "subject": "卢卡斯·贝里瓦尔",
+        "risk_type": "yellow_card_monitor",
+        "detail": "第二轮替补后吃牌，纪律状态需官方刷新。",
+        "source_status": "needs_refresh"
+      },
+      {
+        "team": "瑞典",
+        "subject": "亚历山大·伊萨克",
+        "risk_type": "load_monitor",
+        "detail": "前两轮持续承担锋线核心输出，当前未见confirmed out，但高负荷值得保留。",
+        "source_status": "probable_available_needs_refresh"
+      },
+      {
+        "team": "突尼斯",
+        "subject": "主教练岗位",
+        "risk_type": "source_conflict",
+        "detail": "Guardian指向埃尔韦·雷纳尔接手；较早公开源曾指向Kebaier interim，当前保留冲突说明。",
+        "source_status": "conflicting"
+      },
+      {
+        "team": "突尼斯",
+        "subject": "拉尼·赫迪拉",
+        "risk_type": "yellow_card_logged",
+        "detail": "本地成员表记录其首轮54分钟黄牌；是否触发第三轮累计风险仍需官方核对。",
+        "source_status": "needs_refresh"
+      }
+    ]
+  },
+  "odds": [
+    {
+      "match_number": "周四057",
+      "match": "突尼斯 vs 荷兰",
+      "captured_at": "2026-06-25T15:29:13.8317696+08:00",
+      "source": "中国足彩网竞彩混合页",
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "page_system_time": null,
+      "ordinary_spf": {
+        "status": "unopened",
+        "home_win": null,
+        "draw": null,
+        "away_win": null,
+        "implied_probability_raw": null,
+        "de_vig_probability": null
+      },
+      "handicap_spf": {
+        "status": "available",
+        "handicap": "+2",
+        "home_win": 3.47,
+        "draw": 4.25,
+        "away_win": 1.65,
+        "implied_probability_raw": {
+          "home_win": 0.2882,
+          "draw": 0.2353,
+          "away_win": 0.6061
+        },
+        "de_vig_probability": {
+          "home_win": 0.2551,
+          "draw": 0.2083,
+          "away_win": 0.5366
+        },
+        "note": "该盘口只反映+2让球胜平负，不能替代普通SPF主市场。"
+      },
+      "reference_display_not_model_input": {
+        "home": 1.09,
+        "draw": 27.03,
+        "away": 10.44,
+        "status": "reference_only_not_jc_sp"
+      }
+    },
+    {
+      "match_number": "周四058",
+      "match": "日本 vs 瑞典",
+      "captured_at": "2026-06-25T15:29:13.8317696+08:00",
+      "source": "中国足彩网竞彩混合页",
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "page_system_time": null,
+      "ordinary_spf": {
+        "status": "available",
+        "home_win": 1.6,
+        "draw": 3.57,
+        "away_win": 4.45,
+        "implied_probability_raw": {
+          "home_win": 0.625,
+          "draw": 0.2801,
+          "away_win": 0.2247
+        },
+        "de_vig_probability": {
+          "home_win": 0.5533,
+          "draw": 0.2479,
+          "away_win": 0.1988
+        }
+      },
+      "handicap_spf": {
+        "status": "available",
+        "handicap": "-1",
+        "home_win": 2.8,
+        "draw": 3.57,
+        "away_win": 2.03,
+        "implied_probability_raw": {
+          "home_win": 0.3571,
+          "draw": 0.2801,
+          "away_win": 0.4926
+        },
+        "de_vig_probability": {
+          "home_win": 0.3161,
+          "draw": 0.2479,
+          "away_win": 0.436
+        }
+      },
+      "reference_display_not_model_input": {
+        "home": 4.35,
+        "draw": 1.85,
+        "away": 3.54,
+        "status": "reference_only_not_jc_sp"
+      }
+    }
+  ],
+  "cross_check_status": {
+    "sina_or_dongqiudi_structured_odds": "unavailable_or_partial",
+    "reason": "当前线程未取得稳定、同场、同市场、可复核的结构化赔率页面，因此不回填未经核验数值。"
+  },
+  "data_gaps": [
+    {
+      "field": "official_standings_page",
+      "status": "partial",
+      "detail": "当前积分榜由本地已完赛结果推导，仍待FIFA官方排名页赛前再刷一遍。"
+    },
+    {
+      "field": "official_discipline_sheet",
+      "status": "missing",
+      "detail": "累计黄牌、停赛阈值和公平竞赛分仍需官方比赛中心或纪律页确认。"
+    },
+    {
+      "field": "official_t75_lineups",
+      "status": "not_yet_published",
+      "detail": "T-75官方首发当前不可得，不视为错误。"
+    },
+    {
+      "field": "final_injury_rotation_refresh",
+      "status": "partial",
+      "detail": "四队最终赛前发布会、训练和轮换口径尚未完成最后一次T-24h或T-75m刷新。"
+    },
+    {
+      "field": "round_of_32_bracket_master_map",
+      "status": "need_verify",
+      "detail": "F1/F2/F3的32强映射仅采用项目本地一致口径，仍需主线程bracket map或FIFA路径页最终核实。"
+    }
+  ],
+  "confidence": {
+    "standings_and_same_time_context": "high",
+    "odds_snapshot": "high",
+    "injury_and_rotation_context": "medium",
+    "discipline_context": "medium_low",
+    "round_of_32_path": "medium_low"
+  },
+  "model_usable_fields": [
+    "前两轮积分、净胜球、总进球数",
+    "同组同时开球依赖",
+    "F1/F2/F3路径标签",
+    "T-75未公布状态标记",
+    "已知伤停、纪律与赛后观察项",
+    "中国足彩网竞彩快照与去水隐含概率"
+  ],
+  "factor_inputs_ready": true,
+  "blocking_items": [
+    "若模型要求官方累计黄牌精确值，仍需FIFA官方纪律页。",
+    "若模型要求最终预计首发，仍需等待T-75或赛前发布会。"
+  ],
+  "notes": [
+    "本包只提供事实与标准化输入，不给比分、胜平负或投注建议。",
+    "突尼斯vs荷兰普通SPF未开售，因此该场市场输入只能部分入模。"
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "phase": "group_round3_tactics_predicted_lineups",
+  "group": "G",
+  "status": "partial",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "updated_at": "2026-06-25T01:18:00+08:00",
+  "owner": "tactics-coach",
+  "scope": "G group round 3 tactical review and predicted lineups",
+  "predicted_lineup_status": "estimated",
+  "official_t_minus_75_lineups": "unavailable",
+  "can_enter_model": true,
+  "model_readiness": "partial_but_usable",
+  "missing_fields": [
+    "official_t_minus_75_lineups",
+    "latest_discipline_confirmation",
+    "latest_medical_confirmation",
+    "verified_same_time_scoreboard_scenarios"
+  ],
+  "source_log": [
+    "local_g_group_round1_review",
+    "local_g_group_round2_review",
+    "data/outputs/match_predictions/g-group-round2-predictions.json",
+    "data/outputs/match_predictions/g-group-round2-quant-revision-20260621.json",
+    "data/outputs/match_predictions/g-group-round2-postmortem-20260622.json",
+    "data/packets/tactics/belgium-tactics-packet.json",
+    "data/packets/tactics/egypt-tactics-packet.json",
+    "data/packets/tactics/iran-tactics-packet.json",
+    "data/packets/tactics/new-zealand-tactics-packet.json",
+    "data/outputs/player_state/belgium-player-state.json",
+    "data/outputs/player_state/egypt-player-state.json",
+    "data/outputs/player_state/iran-player-state.json",
+    "data/outputs/player_state/new-zealand-player-state.json"
+  ],
+  "notes": [
+    "This file contains predicted lineups only, not confirmed T-75 lineups.",
+    "This file does not provide final score forecasts or betting recommendations."
+  ],
+  "group_context": {
+    "standings_before_round3": {
+      "egypt": 4,
+      "belgium": 2,
+      "iran": 2,
+      "new_zealand": 1
+    },
+    "motivation_summary": [
+      "Egypt have the clearest low-risk management path.",
+      "Belgium have the strongest need to push for a win.",
+      "Iran can stay compact early but may have to open up late.",
+      "New Zealand have limited slow-game value and remain outlet-and-set-piece dependent."
+    ],
+    "late_game_information_risk": {
+      "direction": "mixed",
+      "magnitude": "high",
+      "confidence": "high",
+      "evidence": "Simultaneous kickoffs can change press height, block depth, and substitution windows after the hour mark.",
+      "model_note": "Do not treat the final phase as a static game state."
+    }
+  },
+  "matches": [
+    {
+      "fixture": "New Zealand vs Belgium",
+      "status": "partial",
+      "confidence": "medium",
+      "predicted_formations": {
+        "new_zealand": {
+          "shape": "4-2-3-1 / 4-4-2 hybrid",
+          "confidence": "medium"
+        },
+        "belgium": {
+          "shape": "4-2-3-1",
+          "confidence": "high"
+        }
+      },
+      "predicted_lineups": {
+        "new_zealand": {
+          "status": "estimated",
+          "confidence": "medium",
+          "xi": [
+            "Max Crocombe",
+            "Tim Payne",
+            "Michael Boxall",
+            "Finn Surman",
+            "Liberato Cacace",
+            "Joe Bell",
+            "Marko Stamenic",
+            "Callum McCowatt",
+            "Sarpreet Singh",
+            "Elijah Just",
+            "Chris Wood"
+          ]
+        },
+        "belgium": {
+          "status": "estimated",
+          "confidence": "medium",
+          "xi": [
+            "Thibaut Courtois",
+            "Thomas Meunier",
+            "Brandon Mechele",
+            "Arthur Theate",
+            "Timothy Castagne",
+            "Amadou Onana",
+            "Youri Tielemans",
+            "Jeremy Doku",
+            "Kevin De Bruyne",
+            "Leandro Trossard",
+            "Romelu Lukaku"
+          ]
+        }
+      },
+      "key_subs_and_triggers": [
+        "New Zealand should add pace and second-ball support if they fall behind.",
+        "Belgium should add more box presence if still level after 60 minutes.",
+        "Belgium late-game risk rises if the parallel match remains level."
+      ],
+      "key_matchups": [
+        {
+          "duel": "Jeremy Doku vs Tim Payne",
+          "importance": "Belgium's clearest isolation route",
+          "confidence": "high"
+        },
+        {
+          "duel": "Romelu Lukaku vs Michael Boxall/Finn Surman",
+          "importance": "Belgium box occupation and cross conversion",
+          "confidence": "medium"
+        },
+        {
+          "duel": "Chris Wood vs Brandon Mechele/Arthur Theate",
+          "importance": "New Zealand outlet and second-ball access",
+          "confidence": "high"
+        },
+        {
+          "duel": "Kevin De Bruyne vs Joe Bell/Marko Stamenic",
+          "importance": "Half-space access and edge-of-box control",
+          "confidence": "medium"
+        }
+      ],
+      "tactical_edges": [
+        {
+          "team": "Belgium",
+          "edge": "Wide isolation and half-space service should create sustained territorial control.",
+          "confidence": "high"
+        },
+        {
+          "team": "Belgium",
+          "edge": "Lukaku start would raise box occupation quality more than raw volume.",
+          "confidence": "medium"
+        },
+        {
+          "team": "New Zealand",
+          "edge": "Wood outlet play remains the best path into direct attacks and second balls.",
+          "confidence": "high"
+        },
+        {
+          "team": "New Zealand",
+          "edge": "Set pieces and aerial duels remain the main equalizer.",
+          "confidence": "medium"
+        }
+      ],
+      "risk_points": [
+        {
+          "team": "Belgium",
+          "risk": "Finishing efficiency remains weaker than territorial control.",
+          "confidence": "high"
+        },
+        {
+          "team": "Belgium",
+          "risk": "Transition defence becomes shakier if the game-state forces harder chasing.",
+          "confidence": "medium"
+        },
+        {
+          "team": "New Zealand",
+          "risk": "Long defensive phases can expose the fullback zones and second-ball areas at the top of the box.",
+          "confidence": "medium"
+        }
+      ],
+      "xg_adjustment_guidance": {
+        "belgium_attack_delta": "+0.25 to +0.45",
+        "new_zealand_attack_delta": "+0.05 to +0.15",
+        "confidence": "medium",
+        "note": "Raise Belgium shot-volume expectation but keep a finishing cap; keep a small high-value transition tail for New Zealand."
+      },
+      "model_fields": {
+        "third_round_motivation_tactical_shift": {
+          "direction": "positive_for_belgium",
+          "magnitude": "high",
+          "confidence": "high",
+          "model_note": "Belgium have a stronger must-win push than in the first two rounds."
+        },
+        "rotation_shape_risk": {
+          "direction": "neutral",
+          "magnitude": "low",
+          "confidence": "medium",
+          "model_note": "Neither side has enough points buffer for major rotation."
+        },
+        "draw_management_tendency": {
+          "direction": "negative",
+          "magnitude": "low",
+          "confidence": "medium",
+          "model_note": "A long draw-management script is unlikely for either team."
+        },
+        "goal_difference_chase_risk": {
+          "direction": "positive_for_belgium",
+          "magnitude": "medium",
+          "confidence": "medium",
+          "model_note": "Can be triggered by the scoreline in the other match."
+        },
+        "late_game_information_risk": {
+          "direction": "mixed",
+          "magnitude": "high",
+          "confidence": "high",
+          "model_note": "Parallel scoreboard pressure can sharply change the final phase."
+        }
+      },
+      "double_counting_warning": [
+        "Do not fully stack Belgium territorial control and Doku wide advantage.",
+        "Do not fully stack Wood outlet value and New Zealand set-piece threat."
+      ]
+    },
+    {
+      "fixture": "Egypt vs Iran",
+      "status": "partial",
+      "confidence": "medium",
+      "predicted_formations": {
+        "egypt": {
+          "shape": "4-2-3-1 / 4-5-1 protection phase",
+          "confidence": "high"
+        },
+        "iran": {
+          "shape": "4-4-2 / 4-2-3-1 hybrid",
+          "confidence": "high"
+        }
+      },
+      "predicted_lineups": {
+        "egypt": {
+          "status": "estimated",
+          "confidence": "medium",
+          "xi": [
+            "Mostafa Shobeir",
+            "Mohamed Hany",
+            "Hamdy Fathy",
+            "Yasser Ibrahim",
+            "Ahmed Fatouh",
+            "Marwan Ateya",
+            "Mohanad Lasheen",
+            "Mohamed Salah",
+            "Emam Ashour",
+            "Mostafa Ziko",
+            "Omar Marmoush"
+          ]
+        },
+        "iran": {
+          "status": "estimated",
+          "confidence": "medium",
+          "xi": [
+            "Alireza Beiranvand",
+            "Ramin Rezaeian",
+            "Shoja Khalilzadeh",
+            "Ali Nemati",
+            "Milad Mohammadi",
+            "Saman Ghoddos",
+            "Saeid Ezatolahi",
+            "Rouzbeh Cheshmi",
+            "Mohammad Mohebi",
+            "Mehdi Taremi",
+            "Shahriyar Moghanlou"
+          ]
+        }
+      },
+      "key_subs_and_triggers": [
+        "Egypt should add protection layers if leading.",
+        "Iran should add direct runners and crossing support if they still need a goal after 60 minutes.",
+        "Iran's late-game risk rises if Belgium lead in the parallel match."
+      ],
+      "key_matchups": [
+        {
+          "duel": "Mohamed Salah vs Milad Mohammadi",
+          "importance": "Egypt's clearest stable attacking edge",
+          "confidence": "high"
+        },
+        {
+          "duel": "Omar Marmoush/Emam Ashour vs Saeid Ezatolahi/Rouzbeh Cheshmi",
+          "importance": "Transition connection into the half-spaces",
+          "confidence": "medium"
+        },
+        {
+          "duel": "Mehdi Taremi/Shahriyar Moghanlou vs Hamdy Fathy/Yasser Ibrahim",
+          "importance": "Direct-play conversion into real box shots",
+          "confidence": "medium"
+        },
+        {
+          "duel": "Ramin Rezaeian crossing lane vs Ahmed Fatouh recovery",
+          "importance": "Iran's cleanest repeatable wide route",
+          "confidence": "medium"
+        }
+      ],
+      "tactical_edges": [
+        {
+          "team": "Egypt",
+          "edge": "Transition quality through Salah and Marmoush remains the most reliable strength.",
+          "confidence": "high"
+        },
+        {
+          "team": "Egypt",
+          "edge": "If Iran's left side pushes higher, Egypt's counter space expands.",
+          "confidence": "high"
+        },
+        {
+          "team": "Iran",
+          "edge": "Compact box protection has already shown itself as a real repeatable trait.",
+          "confidence": "high"
+        },
+        {
+          "team": "Iran",
+          "edge": "Rezaeian crossing, Taremi link play, and Moghanlou aerial work remain the best route into the area.",
+          "confidence": "medium"
+        }
+      ],
+      "risk_points": [
+        {
+          "team": "Egypt",
+          "risk": "A very deep early lead-protection script can cede second balls and crossing pressure.",
+          "confidence": "medium"
+        },
+        {
+          "team": "Iran",
+          "risk": "Recovery speed and fullback space become clearer problems if they must chase.",
+          "confidence": "medium"
+        },
+        {
+          "team": "Both",
+          "risk": "The largest hidden variable is late simultaneous-score pressure changing the tempo.",
+          "confidence": "high"
+        }
+      ],
+      "xg_adjustment_guidance": {
+        "egypt_attack_delta": "+0.10 to +0.25",
+        "iran_attack_delta": "0 to +0.15",
+        "confidence": "medium",
+        "note": "Base game-state is more controlled, but Iran scoreboard pressure can lift late chance quality on both sides."
+      },
+      "model_fields": {
+        "third_round_motivation_tactical_shift": {
+          "direction": "mixed",
+          "magnitude": "high",
+          "confidence": "high",
+          "model_note": "Egypt have more draw-management room; Iran have more forced-upside risk."
+        },
+        "rotation_shape_risk": {
+          "direction": "neutral",
+          "magnitude": "low",
+          "confidence": "medium",
+          "model_note": "Neither side has enough table security for major structural rotation."
+        },
+        "draw_management_tendency": {
+          "direction": "positive_for_egypt",
+          "magnitude": "high",
+          "confidence": "high",
+          "model_note": "Egypt are the more plausible low-risk manager if the other match stays non-extreme."
+        },
+        "goal_difference_chase_risk": {
+          "direction": "positive_for_iran",
+          "magnitude": "medium",
+          "confidence": "medium",
+          "model_note": "This is conditional on the scoreline in the other match."
+        },
+        "late_game_information_risk": {
+          "direction": "mixed",
+          "magnitude": "high",
+          "confidence": "high",
+          "model_note": "Parallel-match information can reshape the final 25 to 30 minutes."
+        }
+      },
+      "double_counting_warning": [
+        "Do not fully stack Egypt transition lift, Salah form, and Iran late chasing into one oversized total-goal boost.",
+        "Do not fully restack Iran low-block value if it is already reflected in prior defensive sample inputs."
+      ]
+    }
+  ],
+  "data_gaps": [
+    "Official T-75 lineups are unavailable for both matches.",
+    "Belgium disciplinary confirmation after round two remains incomplete in local files.",
+    "Taremi and Mohebi are monitor-status players, not confirmed outs.",
+    "New Zealand pre-match fitness detail remains incomplete."
+  ]
+}

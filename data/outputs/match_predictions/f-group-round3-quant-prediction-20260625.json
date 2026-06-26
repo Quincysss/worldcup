@@ -1,0 +1,591 @@
+{
+  "schema_version": "worldcup-quant-prediction-system.v2",
+  "generated_at": "2026-06-25T15:30:54+08:00",
+  "group": "F",
+  "round": "group_round_3",
+  "source_threads": {
+    "data_collector": "019eb053-ef96-7a22-9685-4602ba252b10",
+    "tactics_coach": "019eb05a-a3ee-7023-9c89-42d9786d4685",
+    "data_modeler": "019eb079-bed5-7342-9dfd-d1f448caa0dc",
+    "red_team": "019eb05b-66db-7000-8a84-c453dece7ac3"
+  },
+  "group_table_snapshot": {
+    "荷兰": {
+      "pts": 4,
+      "gf": 7,
+      "ga": 3
+    },
+    "日本": {
+      "pts": 4,
+      "gf": 6,
+      "ga": 2
+    },
+    "瑞典": {
+      "pts": 3,
+      "gf": 6,
+      "ga": 6
+    },
+    "突尼斯": {
+      "pts": 0,
+      "gf": 1,
+      "ga": 9
+    }
+  },
+  "tie_breaker_modeling": {
+    "official_priority_checked": "points, goal difference, goals scored; later FIFA tie-breakers are not modeled in the Poisson group simulation.",
+    "source": "FIFA group qualification/tie-breaker explainer checked 2026-06-25"
+  },
+  "group_scenario_tree": [
+    {
+      "branch": "日本胜瑞典 + 荷兰胜突尼斯",
+      "meaning": "荷兰与日本同7分，F1取决于净胜球、进球数和更后续规则；两队都进前二，瑞典3分第三质量偏弱。"
+    },
+    {
+      "branch": "日本平瑞典 + 荷兰胜突尼斯",
+      "meaning": "荷兰7分F1，日本5分F2，瑞典4分第三名候选。"
+    },
+    {
+      "branch": "瑞典胜日本 + 荷兰胜突尼斯",
+      "meaning": "荷兰7分F1，瑞典6分F2，日本4分第三名候选；日本晋级仍有机会，但路径质量下降。"
+    },
+    {
+      "branch": "日本不败 + 荷兰不胜",
+      "meaning": "日本有明显F1机会；荷兰虽大概率前二，但如果输球会把第三名尾部风险放出来。"
+    },
+    {
+      "branch": "瑞典胜日本 + 荷兰负突尼斯",
+      "meaning": "瑞典6分上岸，日本/荷兰同4分，荷兰凭当前净胜球和进球数仍较有利，但必须进入细则比较。"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "2026-06-26_F_R3_日本_vs_瑞典",
+      "match_no": "周四058",
+      "kickoff_beijing": "2026-06-26 07:00",
+      "stadium": "Dallas Stadium",
+      "home": "日本",
+      "away": "瑞典",
+      "expected_goals": {
+        "baseline": {
+          "home": 1.34,
+          "away": 1.0
+        },
+        "adjustments": [
+          {
+            "factor": "日本不败即大概率前二",
+            "home": -0.03,
+            "away": -0.02,
+            "reason": "日本不会无条件拉开阵型。"
+          },
+          {
+            "factor": "日本仍有争第一动机",
+            "home": 0.05,
+            "away": 0.0,
+            "reason": "荷兰若未早早领先，日本会继续争进球和净胜球。"
+          },
+          {
+            "factor": "瑞典必须赢球",
+            "home": 0.08,
+            "away": 0.1,
+            "reason": "瑞典后段主动压上，双方尾部概率同时抬升。"
+          },
+          {
+            "factor": "瑞典定位球/高点",
+            "home": 0.0,
+            "away": 0.06,
+            "reason": "这是瑞典最清晰的非阵地战破局路径。"
+          },
+          {
+            "factor": "日本转换和边路衔接",
+            "home": 0.08,
+            "away": -0.02,
+            "reason": "瑞典追胜时边后卫身后空间会变成日本反击入口。"
+          },
+          {
+            "factor": "市场校准",
+            "home": 0.0,
+            "away": 0.0,
+            "reason": "当前体彩同源赔率更偏日本，但模型避免把市场与实力重复计数。"
+          }
+        ],
+        "final": {
+          "home": 1.52,
+          "away": 1.12
+        }
+      },
+      "market": {
+        "source": "中国足彩网竞彩混合页",
+        "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "captured_at": "2026-06-25 current page via main thread web open",
+        "ordinary_1x2": {
+          "odds": [
+            1.6,
+            3.57,
+            4.45
+          ],
+          "raw_inverse": [
+            0.625,
+            0.280112,
+            0.224719
+          ],
+          "overround": 1.129831,
+          "normalized_probability": [
+            0.5532,
+            0.2479,
+            0.1989
+          ]
+        },
+        "handicap_1x2": {
+          "handicap": "日本 -1",
+          "odds": [
+            3.0,
+            3.7,
+            1.91
+          ],
+          "raw_inverse": [
+            0.333333,
+            0.27027,
+            0.52356
+          ],
+          "overround": 1.127164,
+          "normalized_probability": [
+            0.2957,
+            0.2398,
+            0.4645
+          ]
+        },
+        "cross_check": "新浪/懂球帝结构化同源赔率待采集线程回填；当前先以中国足彩网为主。"
+      },
+      "third_round_context": {
+        "current_state": "日本4分、净胜球+4；瑞典3分、净胜球0。",
+        "japan_path": "胜则7分争F1；平则5分基本前二；负则4分，大概率落到第三名候选，仍要看净胜球和其他小组。",
+        "sweden_path": "胜则6分大概率前二；平则4分第三名候选；负则3分第三名质量偏弱。",
+        "same_kickoff_dependency": "若荷兰早早大比分领先，日本争F1压力上升；若荷兰迟迟不领先，日本接受平局的倾向会增强。瑞典无论另一场如何都不能把平局当作好结果。"
+      },
+      "tactical_read": [
+        "日本更适合把比赛切成可控节奏：前60分钟不盲目对攻，靠中场传导和边路二过一找机会。",
+        "瑞典必须制造更多禁区触球，定位球、远端传中和二点球是最可能打穿日本的方式。",
+        "比赛最危险的窗口在60分钟后：瑞典如果仍未领先，会从结构性进攻转向更直接的冲吊，日本反击xG也会同步上升。"
+      ],
+      "qualification_scenarios": [
+        "日本胜：日本7分，至少前二，并与荷兰比净胜球/进球数争第一。",
+        "日本平：日本5分，瑞典4分；日本前二概率很高，瑞典多半要比较第三名。",
+        "瑞典胜：瑞典6分，日本4分；瑞典进入前二主线，日本转入第三名晋级比较。"
+      ],
+      "bracket_path_expectation": {
+        "status": "need_verify",
+        "project_assumption": "项目旧稿使用F1/F2/F3分支推演，具体32强对手映射需赛程表最终确认。",
+        "football_effect": "F1通常意味着更可控的首轮淘汰赛路径；F3不确定性和对强队概率明显更高。"
+      },
+      "red_team_focus": [
+        "不能把日本平局可接受简单写成保守小球；瑞典必须赢会主动拉开比赛。",
+        "不能把瑞典上一场1-5负荷兰线性外推，日本对抗方式与荷兰不同。",
+        "T-75官方首发未出，边路和中锋使用方式仍是赛前最大变量。"
+      ],
+      "recommendation_language": "赛果倾向日本不败，代表比分1-1/2-1；瑞典胜尾部不低，不能当作单边稳胆。",
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "recent_group_performance": 0.18,
+        "player_state_injury_rotation": 0.16,
+        "tactical_matchup": 0.16,
+        "third_round_context": 0.18,
+        "market_calibration": 0.1
+      },
+      "poisson_score_matrix": {
+        "goals_0_to_5": {
+          "0": {
+            "0": 0.071361,
+            "1": 0.079925,
+            "2": 0.044758,
+            "3": 0.01671,
+            "4": 0.004679,
+            "5": 0.001048
+          },
+          "1": {
+            "0": 0.108469,
+            "1": 0.121485,
+            "2": 0.068032,
+            "3": 0.025399,
+            "4": 0.007112,
+            "5": 0.001593
+          },
+          "2": {
+            "0": 0.082437,
+            "1": 0.092329,
+            "2": 0.051704,
+            "3": 0.019303,
+            "4": 0.005405,
+            "5": 0.001211
+          },
+          "3": {
+            "0": 0.041768,
+            "1": 0.04678,
+            "2": 0.026197,
+            "3": 0.00978,
+            "4": 0.002738,
+            "5": 0.000613
+          },
+          "4": {
+            "0": 0.015872,
+            "1": 0.017776,
+            "2": 0.009955,
+            "3": 0.003716,
+            "4": 0.001041,
+            "5": 0.000233
+          },
+          "5": {
+            "0": 0.004825,
+            "1": 0.005404,
+            "2": 0.003026,
+            "3": 0.00113,
+            "4": 0.000316,
+            "5": 7.1e-05
+          }
+        },
+        "covered_mass": 0.9942,
+        "tail_probability": 0.0058
+      },
+      "poisson_formula": "P(home=i, away=j)=exp(-lambda_home)*lambda_home^i/i! * exp(-lambda_away)*lambda_away^j/j!",
+      "probabilities_1x2": {
+        "home_win": 0.4647,
+        "draw": 0.2554,
+        "away_win": 0.2798
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4916,
+        "under_2_5": 0.5084,
+        "btts_yes": 0.5264,
+        "btts_no": 0.4736
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1215
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1085
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0923
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0824
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0799
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0714
+        },
+        {
+          "score": "1-2",
+          "probability": 0.068
+        },
+        {
+          "score": "2-2",
+          "probability": 0.0517
+        }
+      ],
+      "model_market_delta": {
+        "home_win": -0.0885,
+        "draw": 0.0075,
+        "away_win": 0.0809
+      },
+      "red_team_status": "awaiting_final_thread_verdict"
+    },
+    {
+      "match_id": "2026-06-26_F_R3_突尼斯_vs_荷兰",
+      "match_no": "周四057",
+      "kickoff_beijing": "2026-06-26 07:00",
+      "stadium": "Kansas City Stadium",
+      "home": "突尼斯",
+      "away": "荷兰",
+      "expected_goals": {
+        "baseline": {
+          "home": 0.54,
+          "away": 2.0
+        },
+        "adjustments": [
+          {
+            "factor": "荷兰实力和边路压制",
+            "home": -0.03,
+            "away": 0.12,
+            "reason": "突尼斯前两轮防线抗压差，远端保护和二线保护都偏弱。"
+          },
+          {
+            "factor": "荷兰争F1",
+            "home": 0.0,
+            "away": 0.08,
+            "reason": "荷兰不仅要出线，还要避免被日本净胜球/进球数压过。"
+          },
+          {
+            "factor": "荷兰轮换与保护核心",
+            "home": 0.04,
+            "away": -0.14,
+            "reason": "第三轮领先后存在降速和保护主力的动机。"
+          },
+          {
+            "factor": "突尼斯荣誉战/低位扰动",
+            "home": 0.06,
+            "away": -0.03,
+            "reason": "突尼斯出线几乎只剩理论，但低位反击和定位球仍会制造小样本波动。"
+          },
+          {
+            "factor": "市场校准",
+            "home": -0.01,
+            "away": -0.03,
+            "reason": "普通SPF未开售，只参考+2盘，避免强行市场拉偏。"
+          }
+        ],
+        "final": {
+          "home": 0.6,
+          "away": 2.0
+        }
+      },
+      "market": {
+        "source": "中国足彩网竞彩混合页",
+        "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "captured_at": "2026-06-25 current page via main thread web open",
+        "ordinary_1x2": null,
+        "handicap_1x2": {
+          "handicap": "突尼斯 +2",
+          "odds": [
+            3.47,
+            4.25,
+            1.65
+          ],
+          "raw_inverse": [
+            0.288184,
+            0.235294,
+            0.606061
+          ],
+          "overround": 1.129539,
+          "normalized_probability": [
+            0.2551,
+            0.2083,
+            0.5366
+          ]
+        },
+        "cross_check": "普通胜平负未开售；只能把让+2作为荷兰大胜风险的弱校准。"
+      },
+      "third_round_context": {
+        "current_state": "荷兰4分、净胜球+4、进球7；突尼斯0分、净胜球-8。",
+        "netherlands_path": "胜则7分，结合进球数大概率争F1；平则5分仍大概率前二；负则4分，若瑞典胜日本可能跌到第三名。",
+        "tunisia_path": "理论上赢球到3分，但净胜球-8使第三名晋级几乎只剩数学尾部。",
+        "same_kickoff_dependency": "若日本迟迟无法领先，荷兰一球领先后也未必完全收手；若日本大比分领先，荷兰会更看重净胜球。"
+      },
+      "tactical_read": [
+        "荷兰最清晰的路径仍是边路推进、倒三角和二线插上；突尼斯前两轮最怕连续横向转移后的远端漏人。",
+        "突尼斯要把比赛拖成低节奏、低射门质量，并在荷兰中卫压上后打身后第一脚。",
+        "荷兰若早早2球领先，比赛会从追求击穿转向管理体能；这会压低3球以上继续扩大的概率。"
+      ],
+      "qualification_scenarios": [
+        "荷兰胜：7分，通常与日本比较F1；若日本不胜，荷兰基本F1。",
+        "荷兰平：5分，若日本不负则荷兰可能F2；若瑞典胜日本，荷兰仍有被瑞典追近但大概率前二。",
+        "荷兰负：4分，若瑞典胜日本，则荷兰/日本同4分与瑞典6分，荷兰可能滑到第三名比较。"
+      ],
+      "bracket_path_expectation": {
+        "status": "need_verify",
+        "project_assumption": "项目旧稿把F1/F2/F3路径作为重要动机层，但32强具体对手需官方赛程映射复核。",
+        "football_effect": "荷兰最大动机不是单纯出线，而是争F1并降低32强首轮路径波动。"
+      },
+      "red_team_focus": [
+        "不能因为突尼斯0分就把比赛写成无条件大胜；荷兰轮换和领先后降速会压低让+2穿盘确定性。",
+        "普通SPF未开售，市场校准弱于日本vs瑞典。",
+        "突尼斯低位反击的进球概率小，但一旦先进球会显著改变荷兰节奏和另一场心理。"
+      ],
+      "recommendation_language": "赛果倾向荷兰胜，代表比分0-2/0-1/1-2；让+2方向风险来自荷兰是否早早收手。",
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "recent_group_performance": 0.18,
+        "player_state_injury_rotation": 0.16,
+        "tactical_matchup": 0.16,
+        "third_round_context": 0.18,
+        "market_calibration": 0.05
+      },
+      "poisson_score_matrix": {
+        "goals_0_to_5": {
+          "0": {
+            "0": 0.074274,
+            "1": 0.148547,
+            "2": 0.148547,
+            "3": 0.099031,
+            "4": 0.049516,
+            "5": 0.019806
+          },
+          "1": {
+            "0": 0.044564,
+            "1": 0.089128,
+            "2": 0.089128,
+            "3": 0.059419,
+            "4": 0.029709,
+            "5": 0.011884
+          },
+          "2": {
+            "0": 0.013369,
+            "1": 0.026738,
+            "2": 0.026738,
+            "3": 0.017826,
+            "4": 0.008913,
+            "5": 0.003565
+          },
+          "3": {
+            "0": 0.002674,
+            "1": 0.005348,
+            "2": 0.005348,
+            "3": 0.003565,
+            "4": 0.001783,
+            "5": 0.000713
+          },
+          "4": {
+            "0": 0.000401,
+            "1": 0.000802,
+            "2": 0.000802,
+            "3": 0.000535,
+            "4": 0.000267,
+            "5": 0.000107
+          },
+          "5": {
+            "0": 4.8e-05,
+            "1": 9.6e-05,
+            "2": 9.6e-05,
+            "3": 6.4e-05,
+            "4": 3.2e-05,
+            "5": 1.3e-05
+          }
+        },
+        "covered_mass": 0.983398,
+        "tail_probability": 0.016602
+      },
+      "poisson_formula": "P(home=i, away=j)=exp(-lambda_home)*lambda_home^i/i! * exp(-lambda_away)*lambda_away^j/j!",
+      "probabilities_1x2": {
+        "home_win": 0.101,
+        "draw": 0.194,
+        "away_win": 0.7051
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4816,
+        "under_2_5": 0.5184,
+        "btts_yes": 0.3901,
+        "btts_no": 0.6099
+      },
+      "top_scorelines": [
+        {
+          "score": "0-2",
+          "probability": 0.1485
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1485
+        },
+        {
+          "score": "0-3",
+          "probability": 0.099
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0891
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0891
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0743
+        },
+        {
+          "score": "1-3",
+          "probability": 0.0594
+        },
+        {
+          "score": "0-4",
+          "probability": 0.0495
+        }
+      ],
+      "model_market_delta": null,
+      "red_team_status": "awaiting_final_thread_verdict"
+    }
+  ],
+  "simulated_group_outcomes": {
+    "method": "Independent Poisson enumeration, 0-6 plus 7+ bucket. Ranking uses points, goal difference and goals for; later FIFA tie-breakers are flagged but not modeled. Third-place advancement is a heuristic because it depends on other groups.",
+    "branch_weights": {
+      "日本胜瑞典": 0.4647,
+      "日本平瑞典": 0.2554,
+      "瑞典胜日本": 0.2798,
+      "荷兰胜突尼斯": 0.7051,
+      "荷兰平突尼斯": 0.194,
+      "突尼斯胜荷兰": 0.101
+    },
+    "teams": [
+      {
+        "team": "荷兰",
+        "avg_points": 6.309,
+        "finish_1st": 0.6569,
+        "finish_2nd": 0.3375,
+        "finish_3rd": 0.0056,
+        "finish_4th": 0.0,
+        "top2_probability": 0.9944,
+        "advance_probability": 0.9991
+      },
+      {
+        "team": "日本",
+        "avg_points": 5.65,
+        "finish_1st": 0.2606,
+        "finish_2nd": 0.4652,
+        "finish_3rd": 0.2743,
+        "finish_4th": 0.0,
+        "top2_probability": 0.7257,
+        "advance_probability": 0.9587
+      },
+      {
+        "team": "瑞典",
+        "avg_points": 4.095,
+        "finish_1st": 0.0825,
+        "finish_2nd": 0.1973,
+        "finish_3rd": 0.7201,
+        "finish_4th": 0.0,
+        "top2_probability": 0.2799,
+        "advance_probability": 0.5831
+      },
+      {
+        "team": "突尼斯",
+        "avg_points": 0.497,
+        "finish_1st": 0.0,
+        "finish_2nd": 0.0,
+        "finish_3rd": 0.0,
+        "finish_4th": 1.0,
+        "top2_probability": 0.0,
+        "advance_probability": 0.0
+      }
+    ]
+  },
+  "source_log": [
+    {
+      "name": "中国足彩网竞彩混合页",
+      "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-25 current page via main thread web open",
+      "usage": "周四057/058竞彩足球编号、普通胜平负、让球胜平负、未开售状态、赔率去水概率。"
+    },
+    {
+      "name": "FIFA tie-breaker explainer",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/groups-how-teams-qualify-tie-breakers",
+      "captured_at": "2026-06-25",
+      "usage": "小组排名同分规则边界。"
+    }
+  ],
+  "quality_notes": [
+    "T-75官方首发未发布，首发只能作为预测输入。",
+    "突尼斯 vs 荷兰普通SPF未开售，市场校准弱于日本 vs 瑞典。",
+    "32强路径的具体对手映射仍需官方赛程表复核，不在本脚本中硬编码。"
+  ],
+  "validation": [
+    "2026-06-26_F_R3_日本_vs_瑞典: probabilities_sum=0.9999, matrix=6x6",
+    "2026-06-26_F_R3_突尼斯_vs_荷兰: probabilities_sum=1.0001, matrix=6x6"
+  ]
+}

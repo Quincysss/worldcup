@@ -1,0 +1,313 @@
+{
+  "phase": "post_match_backtest",
+  "group": "E",
+  "round": 3,
+  "status": "complete",
+  "created_at": "2026-06-26T10:07:44.1118358+08:00",
+  "updated_at": "2026-06-26T10:07:44.1118358+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "E组第三轮两场正式模型回测；覆盖1X2、大小2.5、Top比分、竞彩结果、投注失败原因、参数校准与player_state写回状态",
+  "source_log": [
+    "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-quant-prediction-20260625.json",
+    "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-postmortem-20260626.json",
+    "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\E组\\2026-06-25_厄瓜多尔_2-1_德国_复盘.md",
+    "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\E组\\2026-06-25_库拉索_0-2_科特迪瓦_复盘.md",
+    "K:\\worldcup\\data\\outputs\\player_state\\ecuador-player-state.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\germany-player-state.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\curacao-player-state.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\ivory-coast-player-state.json",
+    "K:\\worldcup\\队伍\\厄瓜多尔\\成员表.md",
+    "K:\\worldcup\\队伍\\德国\\成员表.md",
+    "K:\\worldcup\\队伍\\库拉索\\成员表.md",
+    "K:\\worldcup\\队伍\\科特迪瓦\\成员表.md"
+  ],
+  "missing_fields": [
+    "分钟级player_state安全回写未执行",
+    "四队成员表未做赛后事件级补录"
+  ],
+  "inputs_status": {
+    "pre_match_prediction_json": "ready",
+    "postmortem_json": "ready",
+    "single_match_reviews": "ready",
+    "player_state_timestamps": "ready",
+    "member_table_timestamps": "ready",
+    "player_state_writeback": "blocked"
+  },
+  "player_state_timestamps": [
+    {
+      "team": "厄瓜多尔",
+      "file": "K:\\worldcup\\data\\outputs\\player_state\\ecuador-player-state.json",
+      "last_write": "2026-06-23T10:10:40.8549389+08:00"
+    },
+    {
+      "team": "德国",
+      "file": "K:\\worldcup\\data\\outputs\\player_state\\germany-player-state.json",
+      "last_write": "2026-06-23T10:10:40.8608300+08:00"
+    },
+    {
+      "team": "库拉索",
+      "file": "K:\\worldcup\\data\\outputs\\player_state\\curacao-player-state.json",
+      "last_write": "2026-06-23T10:10:40.8509206+08:00"
+    },
+    {
+      "team": "科特迪瓦",
+      "file": "K:\\worldcup\\data\\outputs\\player_state\\ivory-coast-player-state.json",
+      "last_write": "2026-06-23T10:10:40.8648603+08:00"
+    }
+  ],
+  "member_table_timestamps": [
+    {
+      "team": "厄瓜多尔",
+      "file": "K:\\worldcup\\队伍\\厄瓜多尔\\成员表.md",
+      "last_write": "2026-06-23T10:10:41.0694425+08:00"
+    },
+    {
+      "team": "德国",
+      "file": "K:\\worldcup\\队伍\\德国\\成员表.md",
+      "last_write": "2026-06-23T10:10:41.0749702+08:00"
+    },
+    {
+      "team": "库拉索",
+      "file": "K:\\worldcup\\队伍\\库拉索\\成员表.md",
+      "last_write": "2026-06-23T10:10:41.0749702+08:00"
+    },
+    {
+      "team": "科特迪瓦",
+      "file": "K:\\worldcup\\队伍\\科特迪瓦\\成员表.md",
+      "last_write": "2026-06-23T10:10:41.0849396+08:00"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "e-group-round3-ecuador-vs-germany-20260625",
+      "match": "厄瓜多尔 vs 德国",
+      "actual_score": {
+        "home": 2,
+        "away": 1
+      },
+      "pre_match": {
+        "xg_final": {
+          "home": 0.9,
+          "away": 1.4
+        },
+        "probabilities_1x2": {
+          "home_win": 0.2417,
+          "draw": 0.2724,
+          "away_win": 0.4859
+        },
+        "over_under_2_5": {
+          "over": 0.404,
+          "under": 0.596
+        },
+        "top_scorelines": [
+          {
+            "score": "0-1",
+            "probability": 0.1404
+          },
+          {
+            "score": "1-1",
+            "probability": 0.1263
+          },
+          {
+            "score": "0-0",
+            "probability": 0.1003
+          },
+          {
+            "score": "0-2",
+            "probability": 0.0983
+          },
+          {
+            "score": "1-0",
+            "probability": 0.0902
+          }
+        ],
+        "actual_score_probability": 0.0568
+      },
+      "market_snapshot": {
+        "spf_odds": [4.36, 4.05, 1.53],
+        "spf_implied_normalized": {
+          "home_win": 0.203,
+          "draw": 0.2185,
+          "away_win": 0.5785
+        },
+        "handicap_plus_1_odds": [2.14, 3.45, 2.69],
+        "handicap_plus_1_implied_normalized": {
+          "home_win": 0.4139,
+          "draw": 0.2568,
+          "away_win": 0.3293
+        },
+        "actual_spf_result": "home_win",
+        "actual_handicap_result": "home_win"
+      },
+      "backtest": {
+        "result_1x2_hit": false,
+        "over_under_2_5_hit": false,
+        "top_scoreline_hit": false,
+        "betting_result_summary": "普通SPF与德国相关方向失效，厄瓜多尔+1让胜打出。",
+        "betting_failure_reasons": [
+          "第三轮接近锁位的热门队节奏降档修正不足",
+          "必须赢一方面对非低位对手的空间兑现率被低估",
+          "小比分与热门不败路径堆积过热",
+          "市场热度在语境冲突下未被进一步限幅"
+        ]
+      },
+      "parameter_updates": {
+        "poisson_layer": [
+          {
+            "parameter": "must_win_vs_non_low_block_space_bonus",
+            "action": "up_one_notch",
+            "reason": "必须赢球队在获得推进空间时的进球兑现率偏低估"
+          },
+          {
+            "parameter": "under_bias_in_rotation_control_games",
+            "action": "down_one_notch",
+            "reason": "第三轮一方必须赢时不能机械偏向小球"
+          },
+          {
+            "parameter": "low_conversion_penalty_for_inefficient_attack",
+            "action": "conditional_rewrite",
+            "reason": "需增加对手防守形态条件，避免机械沿用前两轮低效惩罚"
+          }
+        ],
+        "market_layer": [
+          {
+            "parameter": "market_heat_cap_when_context_conflicts",
+            "action": "tighten",
+            "reason": "市场热度与第三轮动机冲突时需更强限幅"
+          }
+        ],
+        "third_round_context_layer": [
+          {
+            "parameter": "already_qualified_favorite_tempo_drag",
+            "action": "up_one_notch",
+            "reason": "已接近锁位的热门队持续压制能力高估"
+          }
+        ]
+      }
+    },
+    {
+      "match_id": "e-group-round3-curacao-vs-ivory-coast-20260625",
+      "match": "库拉索 vs 科特迪瓦",
+      "actual_score": {
+        "home": 0,
+        "away": 2
+      },
+      "pre_match": {
+        "xg_final": {
+          "home": 0.68,
+          "away": 1.95
+        },
+        "probabilities_1x2": {
+          "home_win": 0.1211,
+          "draw": 0.2044,
+          "away_win": 0.6745
+        },
+        "over_under_2_5": {
+          "over": 0.4891,
+          "under": 0.5109
+        },
+        "top_scorelines": [
+          {
+            "score": "0-1",
+            "probability": 0.1406
+          },
+          {
+            "score": "0-2",
+            "probability": 0.137
+          },
+          {
+            "score": "1-1",
+            "probability": 0.0956
+          },
+          {
+            "score": "1-2",
+            "probability": 0.0932
+          },
+          {
+            "score": "0-3",
+            "probability": 0.0891
+          }
+        ],
+        "actual_score_probability": 0.137
+      },
+      "market_snapshot": {
+        "spf_odds": null,
+        "spf_implied_normalized": null,
+        "handicap_plus_2_odds": [2.4, 3.85, 2.21],
+        "handicap_plus_2_implied_normalized": {
+          "home_win": 0.3691,
+          "draw": 0.2301,
+          "away_win": 0.4008
+        },
+        "actual_spf_result": null,
+        "actual_handicap_result": "draw"
+      },
+      "backtest": {
+        "result_1x2_hit": true,
+        "over_under_2_5_hit": true,
+        "top_scoreline_hit": true,
+        "betting_result_summary": "胜平负方向正确，但若押科特迪瓦深让或大胜，实际会被+2让球的让平结果击穿。",
+        "betting_failure_reasons": [
+          "把强队赢球错误外推成深让穿盘",
+          "忽视第三轮赢到安全线即可的风险管理局",
+          "只有让球盘时没有把盘口当作大胜尾部约束信号"
+        ]
+      },
+      "parameter_updates": {
+        "poisson_layer": [
+          {
+            "parameter": "favorite_second_goal_when_game_state_stable",
+            "action": "small_up",
+            "reason": "领先后面对后程抬线的弱队，第二球稳定性略被低估"
+          },
+          {
+            "parameter": "late_chasing_exposure_after_60",
+            "action": "small_up",
+            "reason": "弱队60分钟后被迫追分时的失球风险应更高"
+          },
+          {
+            "parameter": "big_win_tail_for_manageable_favorites",
+            "action": "hold",
+            "reason": "不能因0-2落点就追高大胜尾部"
+          }
+        ],
+        "market_layer": [
+          {
+            "parameter": "handicap_tail_guardrail",
+            "action": "hold",
+            "reason": "无普通SPF时，让球盘继续主要服务于抑制大胜热度"
+          }
+        ],
+        "third_round_context_layer": [
+          {
+            "parameter": "draw_enough_control_bias",
+            "action": "hold",
+            "reason": "平局够用/赢到安全线即可的控制倾向仍然成立"
+          },
+          {
+            "parameter": "time_sliced_low_block_to_chasing_transition",
+            "action": "add_or_strengthen",
+            "reason": "需把前60分钟低位咬住与后30分钟抬线暴露分开建模"
+          }
+        ]
+      }
+    }
+  ],
+  "cross_match_takeaways": [
+    "第三轮语境层比基础实力层更需要精细校准，尤其是锁位热门队和必须赢球队的对冲结构。",
+    "市场信号必须继续作为校准层而非真值来源，且在语境冲突时应更严格防止重复计数。",
+    "E组两场共同说明：错误不一定来自方向判断，也可能来自把赢球路径误当作大胜或深让路径。"
+  ],
+  "player_state_update_status": {
+    "status": "blocked",
+    "reason": "本线程仅核对player_state与成员表更新时间，未执行分钟级事件安全回写，按项目规范不得标complete。",
+    "recommended_next_step": "由主线程或专门维护线程在核准首发、换人、伤停后再执行回写。"
+  },
+  "validation": {
+    "json_tool_passed": true,
+    "notes": [
+      "Python json.loads 校验通过",
+      "matches 数量校验通过: 2"
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "phase": "betting_discussion",
+  "group": "D/E/F",
+  "match": null,
+  "status": "complete_validation_summary",
+  "created_at": "2026-06-25T22:20:00+08:00",
+  "updated_at": "2026-06-25T22:40:00+08:00",
+  "owner": "data-modeler-agent",
+  "scope": "D/E/F组第三轮扩展购彩组合建模校验摘要，仅复核主线程已落盘 expanded-return-betting-plan.json，不新增方案。",
+  "missing_fields": [
+    "official_lineups_t_minus_75",
+    "latest_same_source_odds_refresh",
+    "correct_score_odds_snapshot",
+    "half_full_time_odds_snapshot"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\thread_outputs\\def-round3-betting-20260625\\expanded-return-betting-plan.json"
+  ],
+  "notes": [
+    "本文件仅做算术与分层目标校验，不替代主线程正式方案文件。",
+    "收益目标是赔率结构目标，不是盈利承诺。",
+    "执行状态保持 discussion_only，需临场首发和赔率复核后执行。"
+  ],
+  "validation_summary": {
+    "reference_file": "K:\\worldcup\\data\\thread_outputs\\def-round3-betting-20260625\\expanded-return-betting-plan.json",
+    "json_ok": true,
+    "target_bands": {
+      "conservative_tolerant": "理论净回报 130-190 视为约150达标",
+      "balanced_combination": "理论净回报 180-220 视为约200达标",
+      "aggressive_combination": "理论净回报 >=300 视为300+达标"
+    },
+    "plans": [
+      {
+        "plan_id": "C1",
+        "tier": "conservative_tolerant",
+        "main_cost": 70,
+        "entertainment_cost": 30,
+        "total_cost": 100,
+        "known_odds_max_payout_checked": 264.16,
+        "theoretical_net_return_checked": 164.16,
+        "arithmetic_check": "pass",
+        "target_check": "pass",
+        "risk_note": "主仓含056让球保护，不属于低波动纯锚点。"
+      },
+      {
+        "plan_id": "C2",
+        "tier": "conservative_tolerant",
+        "main_cost": 70,
+        "entertainment_cost": 30,
+        "total_cost": 100,
+        "known_odds_max_payout_checked": 249.18,
+        "theoretical_net_return_checked": 149.18,
+        "arithmetic_check": "rounding_adjust",
+        "target_check": "pass",
+        "risk_note": "060依赖美国恰好一球胜的尾部分差。"
+      },
+      {
+        "plan_id": "B1",
+        "tier": "balanced_combination",
+        "main_cost": 70,
+        "entertainment_cost": 30,
+        "total_cost": 100,
+        "known_odds_max_payout_checked": 297.92,
+        "theoretical_net_return_checked": 197.92,
+        "arithmetic_check": "pass",
+        "target_check": "pass",
+        "risk_note": "回报建立在多个让球保护脚本同时成立。"
+      },
+      {
+        "plan_id": "B2",
+        "tier": "balanced_combination",
+        "main_cost": 70,
+        "entertainment_cost": 30,
+        "total_cost": 100,
+        "known_odds_max_payout_checked": 318.52,
+        "theoretical_net_return_checked": 218.52,
+        "arithmetic_check": "rounding_adjust",
+        "target_check": "pass",
+        "risk_note": "娱乐仓多个精确分差类让球平，受补时进球影响很大。"
+      },
+      {
+        "plan_id": "B3",
+        "tier": "balanced_combination",
+        "main_cost": 70,
+        "entertainment_cost": 30,
+        "total_cost": 100,
+        "known_odds_max_payout_checked": 295.03,
+        "theoretical_net_return_checked": 195.03,
+        "arithmetic_check": "pass",
+        "target_check": "pass",
+        "risk_note": "055+1与056+2同时依赖强队未完全打穿。"
+      },
+      {
+        "plan_id": "A1",
+        "tier": "aggressive_combination",
+        "main_cost": 70,
+        "entertainment_cost": 30,
+        "total_cost": 100,
+        "known_odds_max_payout_checked": 527.23,
+        "theoretical_net_return_checked": 427.23,
+        "arithmetic_check": "pass",
+        "target_check": "pass",
+        "risk_note": "4x11 高相关串法，任一热门大胜或翻车都会折损多分支。"
+      },
+      {
+        "plan_id": "A2",
+        "tier": "aggressive_combination",
+        "main_cost": 70,
+        "entertainment_cost": 30,
+        "total_cost": 100,
+        "known_odds_max_payout_checked": 602.04,
+        "theoretical_net_return_checked": 502.04,
+        "arithmetic_check": "pass",
+        "target_check": "pass",
+        "risk_note": "第三轮动机与轮换判断一旦失真，整套波动最大。"
+      },
+      {
+        "plan_id": "A3",
+        "tier": "aggressive_combination",
+        "main_cost": 70,
+        "entertainment_cost": 30,
+        "total_cost": 100,
+        "known_odds_max_payout_checked": 617.82,
+        "theoretical_net_return_checked": 517.82,
+        "arithmetic_check": "pass",
+        "target_check": "pass",
+        "risk_note": "偏冷门尾部，命中率最低，只能保留讨论型定位。"
+      }
+    ],
+    "plans_passing_target": [
+      "C1",
+      "C2",
+      "B1",
+      "B2",
+      "B3",
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "arithmetic_corrections": [
+      {
+        "plan_id": "C2",
+        "field_in_reference": "known_odds_max_payout/theoretical_net_return",
+        "reference_value": "249.17 / 149.17",
+        "checked_value": "249.18 / 149.18",
+        "reason": "票据逐项相加后的两位小数汇总差 0.01。"
+      },
+      {
+        "plan_id": "B2",
+        "field_in_reference": "known_odds_max_payout/theoretical_net_return",
+        "reference_value": "318.51 / 218.51",
+        "checked_value": "318.52 / 218.52",
+        "reason": "票据逐项相加后的两位小数汇总差 0.01。"
+      }
+    ]
+  }
+}

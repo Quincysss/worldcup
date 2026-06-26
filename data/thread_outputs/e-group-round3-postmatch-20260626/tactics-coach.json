@@ -1,0 +1,109 @@
+{
+  "phase": "e_group_round3_postmatch_tactical_review",
+  "group": "E",
+  "round": 3,
+  "status": "partial",
+  "created_at": "2026-06-26T00:00:00+08:00",
+  "updated_at": "2026-06-26T10:40:00+08:00",
+  "owner": "tactics-coach",
+  "scope": "postmatch_review",
+  "source_log": [
+    "data/outputs/match_predictions/e-group-round3-quant-prediction-20260625.json",
+    "data/outputs/match_predictions/e-group-round3-postmortem-20260626.json",
+    "比赛/已完成比赛/小组赛/E组/2026-06-25_厄瓜多尔_2-1_德国_复盘.md",
+    "比赛/已完成比赛/小组赛/E组/2026-06-25_库拉索_0-2_科特迪瓦_复盘.md",
+    "data/thread_outputs/e-group-round3-20260625/tactics-coach.md",
+    "data/outputs/player_state/ecuador-player-state.json",
+    "data/outputs/player_state/germany-player-state.json",
+    "data/outputs/player_state/curacao-player-state.json",
+    "data/outputs/player_state/ivory-coast-player-state.json"
+  ],
+  "missing_fields": [
+    "official_minute_level_event_log",
+    "complete_player_medical_followup",
+    "full_substitution_timeline_confirmation"
+  ],
+  "matches": [
+    {
+      "match": "厄瓜多尔 2-1 德国",
+      "confidence": "high",
+      "tactical_conclusion": [
+        "厄瓜多尔的第三轮必须赢动机，把比赛从德国可控低比分脚本拖进了高强度转换局。",
+        "德国早早领先后没有维持标准强队持续压制，轮换和节奏管理实际影响比赛前修正更大。",
+        "本场关键不是定位球偶发，而是德国给出纵向空间后，厄瓜多尔比前两轮更能把推进转成机会。"
+      ],
+      "misread_reasons": [
+        "低估了已接近锁位强队在第三轮的节奏拖拽和回防完整度下滑。",
+        "把厄瓜多尔前两轮低效进攻过度线性外推，没有充分考虑德国不是深低位对手。",
+        "对0比0、0比1、1比1等低比分尾部权重给得过高。"
+      ],
+      "player_state_updates": {
+        "ecuador": {
+          "status": "partial",
+          "suggestions": [
+            "上调前场纵向冲击和比赛末段强度标签。",
+            "Joel Ordonez 继续保留 monitor。"
+          ]
+        },
+        "germany": {
+          "status": "blocked",
+          "suggestions": [
+            "下调轮换后结构稳定性。",
+            "下调领先后控场可靠度。"
+          ],
+          "reason": "第三轮官方逐人分钟、换人时点和统一技术表未落盘。"
+        }
+      },
+      "round_of_32_impact": [
+        "德国进入淘汰赛后不能默认轮换组和主力组的控场质量等价。",
+        "厄瓜多尔虽未必晋级，但证明其面对给空间的对手时，推进威胁高于前两轮静态印象。"
+      ]
+    },
+    {
+      "match": "库拉索 0-2 科特迪瓦",
+      "confidence": "high",
+      "tactical_conclusion": [
+        "科特迪瓦这场从一开始就是结果优先的管理局，领先后更偏收风险而不是追大胜。",
+        "库拉索前段低位韧性仍在，所以客胜方向可以对，但深让和大比分票型天然更脆弱。",
+        "第二球更像对手后程抬线后的稳定补刀，而不是整场无条件高压。"
+      ],
+      "misread_reasons": [
+        "把强弱差直接外推成深让可穿，忽视了第三轮平局大概率够用的战术目标。",
+        "没有把前60分钟低位咬住和后30分钟追分暴露拆开理解。",
+        "容易把热门赢球和热门净胜球扩大混成同一个判断。"
+      ],
+      "player_state_updates": {
+        "ivory_coast": {
+          "status": "partial",
+          "suggestions": [
+            "上调 Pepe 的后段决定比赛能力标签。",
+            "继续跟踪 Kessie 负荷与 Guela Doue 纪律风险。"
+          ]
+        },
+        "curacao": {
+          "status": "partial",
+          "suggestions": [
+            "保留 Eloy Room 的高承压扑救正面标签。",
+            "不要线性延续超常扑救样本。"
+          ],
+          "reason": "逐人外部评分和完整分钟证据仍是 partial_source_limited。"
+        }
+      },
+      "round_of_32_impact": [
+        "科特迪瓦进入32强后应被视为兼具纵向爆点与风险管理能力的球队。",
+        "库拉索虽出局，但其前60分钟低位抗压能力值得保留到经验库。"
+      ]
+    }
+  ],
+  "handoff_notes": {
+    "to_model": [
+      "提高 already-qualified favorite tempo drag 的权重。",
+      "必须赢球队的终结惩罚要做对手形态敏感化处理。",
+      "draw-enough favorite 的赢球方向不要直接等价为深让可穿。"
+    ],
+    "to_red_team": [
+      "继续挑战第三轮热门领先后是否真的会持续加速。",
+      "区分胜负方向正确和票型正确，避免复盘混淆。"
+    ]
+  }
+}

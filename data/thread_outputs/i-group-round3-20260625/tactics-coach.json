@@ -1,0 +1,526 @@
+{
+  "phase": "group_round3_tactics",
+  "group": "I",
+  "status": "partial",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "updated_at": "2026-06-25T12:25:00+08:00",
+  "owner": "tactics-coach",
+  "scope": "norway-vs-france and senegal-vs-iraq third-round tactical coaching packet",
+  "predicted_lineup_status": "estimated",
+  "official_t_minus_75_lineups": "unavailable",
+  "model_entry_recommendation": "usable_with_caution",
+  "missing_fields": [
+    "official_t_minus_75_lineups",
+    "verified_card_accumulation_status",
+    "unfinished_data_collector_outputs_if_any",
+    "live_training_and_recovery_updates_within_24h"
+  ],
+  "group_context": {
+    "standings_after_round2": [
+      {
+        "team": "France",
+        "points": 6,
+        "goal_difference": 5,
+        "goals_for": 6,
+        "goals_against": 1,
+        "confidence": "high"
+      },
+      {
+        "team": "Norway",
+        "points": 6,
+        "goal_difference": 4,
+        "goals_for": 7,
+        "goals_against": 3,
+        "confidence": "high"
+      },
+      {
+        "team": "Senegal",
+        "points": 0,
+        "goal_difference": -3,
+        "goals_for": 3,
+        "goals_against": 6,
+        "confidence": "high"
+      },
+      {
+        "team": "Iraq",
+        "points": 0,
+        "goal_difference": -6,
+        "goals_for": 1,
+        "goals_against": 7,
+        "confidence": "high"
+      }
+    ],
+    "motivation_summary": [
+      {
+        "team": "France",
+        "summary": "draw should preserve group-first position under standard goal-difference logic; already qualified",
+        "confidence": "high"
+      },
+      {
+        "team": "Norway",
+        "summary": "must push for win if group-first objective is prioritized; already qualified",
+        "confidence": "high"
+      },
+      {
+        "team": "Senegal",
+        "summary": "win-first script with likely goal-difference awareness; low value in conservative draw management",
+        "confidence": "medium"
+      },
+      {
+        "team": "Iraq",
+        "summary": "win-first script but likely from low-block base because forward availability and ceiling remain constrained",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "matches": [
+    {
+      "match_id": "i-group-round3-france-vs-norway",
+      "fixture": "Norway vs France",
+      "status": "partial",
+      "discussion_only": true,
+      "data_gaps": [
+        "official starting XI unavailable",
+        "full yellow-card accumulation verification unavailable",
+        "final 24h recovery note for rotation candidates unavailable"
+      ],
+      "predicted_lineups": {
+        "France": {
+          "formation": "4-2-3-1",
+          "confidence": "medium",
+          "rotation_probability": "medium",
+          "xi_estimated": [
+            "Mike Maignan",
+            "Jules Kounde",
+            "Ibrahima Konate",
+            "William Saliba",
+            "Theo Hernandez",
+            "Aurelien Tchouameni",
+            "Adrien Rabiot",
+            "Ousmane Dembele",
+            "Michael Olise",
+            "Kylian Mbappe",
+            "Marcus Thuram"
+          ],
+          "uncertain_slots": [
+            "central defense partner may rotate with other senior option",
+            "one attacking slot could be sacrificed for extra midfielder if Deschamps prioritizes control"
+          ],
+          "predicted_substitution_triggers": [
+            "protect lead or draw with extra midfielder",
+            "add pure wing speed only if chasing or if Norway fullbacks tire"
+          ]
+        },
+        "Norway": {
+          "formation": "4-3-3",
+          "confidence": "medium-low",
+          "rotation_probability": "low-medium",
+          "xi_estimated": [
+            "Orjan Nyland",
+            "Julian Ryerson",
+            "Kristoffer Ajer",
+            "Leo Ostigard",
+            "David Moller Wolfe",
+            "Sander Berge",
+            "Patrick Berg",
+            "Martin Odegaard",
+            "Alexander Sorloth",
+            "Erling Haaland",
+            "Antonio Nusa"
+          ],
+          "uncertain_slots": [
+            "Ryerson remains a fitness-monitor slot",
+            "Oscar Bobb is a real alternative if Solbakken wants more dribble creation"
+          ],
+          "predicted_substitution_triggers": [
+            "introduce Oscar Bobb if trailing and chance creation stalls",
+            "protect box with extra height only if Norway surprisingly leads late"
+          ]
+        }
+      },
+      "key_matchups": [
+        {
+          "battle": "Odegaard right-half-space distribution vs France holding-screen and left-centre coverage",
+          "impact": "determines whether Norway can connect Haaland and Sorloth with clean first-phase service",
+          "confidence": "high"
+        },
+        {
+          "battle": "Mbappe plus Theo acceleration vs Norway right-side recovery chain",
+          "impact": "France's most stable chance-creation and foul-winning route if Norway pushes the line",
+          "confidence": "high"
+        },
+        {
+          "battle": "Norway aerial occupation and second balls vs France set-piece first-contact control",
+          "impact": "main Norway scoring tail outside direct transition",
+          "confidence": "high"
+        }
+      ],
+      "third_round_motivation_tactical_shift": {
+        "France": "already qualified and likely accepts lower pressing volume in exchange for rest-defense security and group-first preservation",
+        "Norway": "already qualified but needs more proactive win path; should increase direct service and set-piece investment without fully opening defensive structure"
+      },
+      "rotation_shape_risk": {
+        "France": 0.6,
+        "Norway": 0.3
+      },
+      "draw_management_tendency": {
+        "France": 1.2,
+        "Norway": -0.8
+      },
+      "goal_difference_chase_risk": {
+        "France": -0.3,
+        "Norway": 0.5
+      },
+      "late_game_information_risk": 0.2,
+      "tactical_summary": [
+        {
+          "point": "France should prioritize blocking the Odegaard-to-Haaland/Sorloth supply chain rather than only isolating Haaland himself; right-half-space denial and set-piece control are the first defensive jobs.",
+          "confidence": "high"
+        },
+        {
+          "point": "Deschamps has tactical cover to lower all-out press frequency because Norway's highest-value path is transition plus aerial service, not long settled-possession dominance.",
+          "confidence": "high"
+        },
+        {
+          "point": "France's strongest attack route remains wide isolation, especially Mbappe against Norway's retreat speed and Dembele/Olise against the weak-side channel.",
+          "confidence": "high"
+        },
+        {
+          "point": "Norway remains a live scoring side even in a lower-risk game state because Haaland finishing, Odegaard set-piece delivery, Sorloth aerial threat, and Nusa carrying can coexist.",
+          "confidence": "high"
+        },
+        {
+          "point": "If Norway increases risk to chase first place, its defensive-transition floor falls sharply and France's vertical release becomes more valuable than extra possession share.",
+          "confidence": "high"
+        },
+        {
+          "point": "Late-game substitution patterns should diverge: France toward control and midfield protection, Norway toward extra dribble/last-pass threat.",
+          "confidence": "medium"
+        }
+      ],
+      "quant_adjustments": {
+        "france_pressing_intensity": -0.5,
+        "france_rest_defense_priority": 1.0,
+        "france_attack_risk_appetite": -0.5,
+        "norway_direct_service_and_crossing": 0.8,
+        "norway_second_ball_commitment": 0.6,
+        "france_wide_isolation_edge": 1.0,
+        "norway_set_piece_and_aerial_path": 0.9,
+        "norway_transition_defense_risk": 1.1,
+        "france_control_sub_value": 0.7,
+        "match_volatility": 0.4
+      },
+      "xg_directional_adjustment": {
+        "France": "upward if Norway chases first place and stretches transition defense; otherwise keep near-flat because draw management can suppress shot volume",
+        "Norway": "retain live open-play and set-piece scoring path; do not overcut base xG if Odegaard supply survives",
+        "confidence": "medium"
+      },
+      "score_tendency": {
+        "lean": "France lower-variance edge, with Norway still holding a real scoring path",
+        "shape": "one-goal-margin or narrow result more likely than a blowout unless Norway concedes first and keeps chasing",
+        "confidence": "medium"
+      },
+      "substitution_and_tempo_risk": [
+        {
+          "team": "France",
+          "risk": "if level or ahead after 60 minutes, Deschamps is likelier to use control substitutions and slow the game",
+          "confidence": "high"
+        },
+        {
+          "team": "Norway",
+          "risk": "if chance creation stalls, earlier dribble-or-last-pass substitutions can sharply raise late-game tempo and exposure",
+          "confidence": "medium"
+        }
+      ],
+      "scoreline_tendency": {
+        "descriptor": "narrow France edge with both-teams-to-score path still alive",
+        "confidence": "medium"
+      },
+      "model_fields": {
+        "third_round_motivation_tactical_shift": {
+          "France": "lower press, stronger rest-defense, protect group-first position",
+          "Norway": "accept more proactive direct service and crossing to chase win"
+        },
+        "rotation_shape_risk": {
+          "France": 0.6,
+          "Norway": 0.3
+        },
+        "draw_management_tendency": {
+          "France": 1.2,
+          "Norway": -0.8
+        },
+        "goal_difference_chase_risk": {
+          "France": -0.3,
+          "Norway": 0.5
+        },
+        "late_game_information_risk": 0.2,
+        "xg_directional_adjustment": {
+          "France": "conditional up if Norway opens the game; otherwise avoid aggressive total-xG lift",
+          "Norway": "keep live set-piece/direct-service scoring tail"
+        },
+        "scoreline_tendency": "narrow France edge"
+      },
+      "key_risk_flags": [
+        "France over-rotates and reduces front counterpressure",
+        "Norway fullback fitness or recovery issue, especially on the right",
+        "unverified card accumulation could change duel aggressiveness"
+      ],
+      "double_counting_warning": [
+        "Do not separately double-penalize pace if France's draw management and Deschamps pragmatism are already modeled together.",
+        "Do not stack Haaland form, Odegaard creation, and Norway set-piece lift as fully independent scoring boosts."
+      ]
+    },
+    {
+      "match_id": "i-group-round3-senegal-vs-iraq",
+      "fixture": "Senegal vs Iraq",
+      "status": "partial",
+      "discussion_only": true,
+      "data_gaps": [
+        "official starting XI unavailable",
+        "Edouard Mendy final availability not locked",
+        "Aymen Hussein final availability not locked",
+        "full yellow-card accumulation verification unavailable"
+      ],
+      "predicted_lineups": {
+        "Senegal": {
+          "formation": "4-3-3",
+          "confidence": "medium-low",
+          "rotation_probability": "low-medium",
+          "xi_estimated": [
+            "Edouard Mendy",
+            "Antoine Mendy",
+            "Kalidou Koulibaly",
+            "Abdou Diallo",
+            "Ismail Jakobs",
+            "Idrissa Gueye",
+            "Lamine Camara",
+            "Pape Matar Sarr",
+            "Ismaila Sarr",
+            "Nicolas Jackson",
+            "Sadio Mane"
+          ],
+          "uncertain_slots": [
+            "goalkeeper depends on Edouard Mendy recovery confirmation",
+            "midfield balance may tilt toward extra runner if goal-difference chase becomes urgent"
+          ],
+          "predicted_substitution_triggers": [
+            "add extra runner or second-striker profile if still level after 60 minutes",
+            "protect center less and push fullbacks higher if parallel score keeps third-place path alive"
+          ]
+        },
+        "Iraq": {
+          "formation": "4-2-3-1",
+          "confidence": "low-medium",
+          "rotation_probability": "medium",
+          "xi_estimated": [
+            "Jalal Hassan",
+            "Hussein Ali",
+            "Zaid Tahseen",
+            "Akam Hashim",
+            "Merchas Doski",
+            "Amir Al-Ammari",
+            "Zidane Iqbal",
+            "Ibrahim Bayesh",
+            "Zaid Ismail",
+            "Ali Jasim",
+            "Aymen Hussein"
+          ],
+          "uncertain_slots": [
+            "striker slot depends on Aymen Hussein pending-review status",
+            "if Hussein cannot start, Ali Al-Hamadi becomes the likeliest central replacement"
+          ],
+          "predicted_substitution_triggers": [
+            "switch to Ali Al-Hamadi or second direct runner if chasing and Hussein is limited",
+            "hold low block longer if parallel score keeps slim third-place path alive"
+          ]
+        }
+      },
+      "key_matchups": [
+        {
+          "battle": "Mane and Ismaila Sarr wide acceleration vs Iraq fullback plus weak-side cover",
+          "impact": "Senegal's clearest route to turn midfield play into box entries and transition chaos",
+          "confidence": "high"
+        },
+        {
+          "battle": "Iraq central target route vs Koulibaly and Diallo first-contact defense",
+          "impact": "decides whether Iraq can sustain long-ball exits and second-ball possession",
+          "confidence": "high"
+        },
+        {
+          "battle": "Pape Matar Sarr late box runs vs Iraq midfield screen",
+          "impact": "important secondary Senegal route if open crossing becomes predictable",
+          "confidence": "medium"
+        }
+      ],
+      "third_round_motivation_tactical_shift": {
+        "Senegal": "must-win logic should raise pressing height, wide commitment, and willingness to accept transition risk",
+        "Iraq": "must-win logic exists too, but likely begins from compact block and counter because open exchanges hurt the defensive floor"
+      },
+      "rotation_shape_risk": {
+        "Senegal": 0.3,
+        "Iraq": 0.5
+      },
+      "draw_management_tendency": {
+        "Senegal": -1.3,
+        "Iraq": -0.8
+      },
+      "goal_difference_chase_risk": {
+        "Senegal": 1.0,
+        "Iraq": 0.6
+      },
+      "late_game_information_risk": 1.1,
+      "tactical_summary": [
+        {
+          "point": "Senegal's most reliable upside is still transition speed and wide acceleration; must-win pressure should amplify Sarr and Mane touch volume rather than slow the game down.",
+          "confidence": "high"
+        },
+        {
+          "point": "That same push raises Senegal's rest-defense vulnerability, giving Iraq its clearest upset route through Ali Jasim carries and Al-Ammari support into the box.",
+          "confidence": "high"
+        },
+        {
+          "point": "If Aymen Hussein starts, Iraq still owns a viable long-ball, second-ball, and set-piece path. If he cannot start, Iraq's open-play attack should be marked down meaningfully.",
+          "confidence": "high"
+        },
+        {
+          "point": "Senegal in settled possession is still less convincing than Senegal in open grass; Iraq can drag the game into repetitive crosses if the center remains blocked.",
+          "confidence": "high"
+        },
+        {
+          "point": "Edouard Mendy availability is a non-trivial defensive-floor variable because it affects box command and second-phase set-piece defense.",
+          "confidence": "high"
+        },
+        {
+          "point": "If Iraq concedes first, its structure is much more likely to break than Senegal's, so early scoreboard movement changes the tactical state sharply.",
+          "confidence": "high"
+        }
+      ],
+      "quant_adjustments": {
+        "senegal_pressing_and_recovery_intensity": 1.2,
+        "senegal_wide_progression_frequency": 1.0,
+        "iraq_counter_directness": 0.3,
+        "iraq_low_block_priority": 0.8,
+        "senegal_transition_attack": 1.1,
+        "senegal_transition_defense_risk": 1.3,
+        "iraq_open_play_attack_if_hussein_limited": -1.1,
+        "iraq_set_piece_steal_path": 0.6,
+        "match_volatility": 0.9
+      },
+      "xg_directional_adjustment": {
+        "Senegal": "raise transition and wide-progression xG contribution, but do not mirror that lift onto settled low-block breaking quality",
+        "Iraq": "meaningful downward adjustment if Aymen Hussein is limited or absent, while preserving counter/set-piece tail",
+        "confidence": "high"
+      },
+      "score_tendency": {
+        "lean": "higher-volatility script than raw talent gap implies",
+        "shape": "early Senegal lead can open a two-goal-type game; prolonged 0-0 or 1-0 tension stays live if Iraq's block survives the first half hour",
+        "confidence": "medium"
+      },
+      "substitution_and_tempo_risk": [
+        {
+          "team": "Senegal",
+          "risk": "if not leading by 55-65 minutes, expected attacking substitutions should increase box occupation and transition exposure together",
+          "confidence": "high"
+        },
+        {
+          "team": "Iraq",
+          "risk": "once forced away from low block by scoreboard pressure, error rate and tempo instability rise sharply",
+          "confidence": "high"
+        }
+      ],
+      "scoreline_tendency": {
+        "descriptor": "volatile medium-total to high-tail script; closer game if Iraq survives early pressure",
+        "confidence": "medium"
+      },
+      "model_fields": {
+        "third_round_motivation_tactical_shift": {
+          "Senegal": "must-win press and wide commitment up",
+          "Iraq": "must-win intent but still low-block first"
+        },
+        "rotation_shape_risk": {
+          "Senegal": 0.3,
+          "Iraq": 0.5
+        },
+        "draw_management_tendency": {
+          "Senegal": -1.3,
+          "Iraq": -0.8
+        },
+        "goal_difference_chase_risk": {
+          "Senegal": 1.0,
+          "Iraq": 0.6
+        },
+        "late_game_information_risk": 1.1,
+        "xg_directional_adjustment": {
+          "Senegal": "transition-up, settled-breakdown not equally up",
+          "Iraq": "down if Hussein limited, but set-piece tail retained"
+        },
+        "scoreline_tendency": "volatile if Senegal scores first"
+      },
+      "key_risk_flags": [
+        "Edouard Mendy availability pending review",
+        "Aymen Hussein availability pending review",
+        "Senegal may overcommit if parallel score keeps best-third path alive",
+        "Iraq's game plan degrades sharply if forced away from low block"
+      ],
+      "double_counting_warning": [
+        "Do not separately triple-count Senegal must-win, Senegal pace, and Iraq low-block stress as three clean total-goal boosts.",
+        "If Hussein absence is modeled, avoid another full-strength penalty that repeats the same target-man dependency."
+      ]
+    }
+  ],
+  "source_log": [
+    {
+      "source_path": "K:/worldcup/data/outputs/match_predictions/i-group-round1-postmortem.json",
+      "usage": "round1 tactical lessons and calibration carryover"
+    },
+    {
+      "source_path": "K:/worldcup/data/outputs/match_predictions/i-group-round2-postmortem-20260623.json",
+      "usage": "round2 tactical lessons, group-state facts, injury watchlist carryover"
+    },
+    {
+      "source_path": "K:/worldcup/比赛/已完成比赛/小组赛/I组/I组第一轮赛后复盘.md",
+      "usage": "round1 tactical evidence"
+    },
+    {
+      "source_path": "K:/worldcup/比赛/已完成比赛/小组赛/I组/I组第二轮赛后复盘.md",
+      "usage": "round2 tactical evidence"
+    },
+    {
+      "source_path": "K:/worldcup/data/packets/tactics/france-tactics-packet.json",
+      "usage": "France base shape and coach tendencies"
+    },
+    {
+      "source_path": "K:/worldcup/data/packets/tactics/norway-tactics-packet.json",
+      "usage": "Norway base shape and role chain"
+    },
+    {
+      "source_path": "K:/worldcup/data/packets/tactics/senegal-tactics-packet.json",
+      "usage": "Senegal base shape and transition profile"
+    },
+    {
+      "source_path": "K:/worldcup/data/packets/tactics/iraq-tactics-packet.json",
+      "usage": "Iraq low-block and target-forward dependency"
+    },
+    {
+      "source_path": "K:/worldcup/data/outputs/player_state/france-player-state.json",
+      "usage": "load monitoring and recent form"
+    },
+    {
+      "source_path": "K:/worldcup/data/outputs/player_state/norway-player-state.json",
+      "usage": "Ryerson fitness watch and Norway key-role form"
+    },
+    {
+      "source_path": "K:/worldcup/data/outputs/player_state/senegal-player-state.json",
+      "usage": "Edouard Mendy availability watch and wide threat form"
+    },
+    {
+      "source_path": "K:/worldcup/data/outputs/player_state/iraq-player-state.json",
+      "usage": "Aymen Hussein availability watch and Iraq counter links"
+    }
+  ],
+  "notes": [
+    "skeleton created first under anti-interruption workflow",
+    "all predicted lineups remain estimated because official T-75 lineups are unavailable",
+    "local evidence supports model entry, but only with explicit handling of pending goalkeeper and striker availability"
+  ]
+}

@@ -22,6 +22,7 @@ Use this skill after the data collection agent has produced team, player, or mat
 - set-piece threat and vulnerability
 - coach tendencies and substitution behavior
 - tactical matchups and game-state risk
+- final group-round incentive behavior: risk appetite by qualification state, draw-management, goal-difference chase, rotation logic, and late-game response to simultaneous-score information
 
 If data is missing or stale, request a data refresh instead of inventing detail.
 
@@ -33,9 +34,10 @@ If data is missing or stale, request a data refresh instead of inventing detail.
 4. Profile the coach: selection stability, risk appetite, pressing tolerance, substitution timing, tournament experience, and game-state adjustments.
 5. Map key player roles, not just names: outlet, ball progresser, box finisher, rest-defense anchor, set-piece taker, aerial target, pressing trigger.
 6. Create matchup notes only when a specific opponent or fixture is provided.
-7. Convert matchup findings into quantitative adjustment candidates with direction, magnitude, evidence, and confidence.
-8. Assign confidence to every tactical claim: `high`, `medium`, or `low`, based on sample size and source quality.
-9. Output the relevant schema from `references/tactical-schemas.md`.
+7. For final group-round fixtures, describe how qualification status changes the likely XI, press height, block depth, attacking risk, substitution timing, and late-game behavior.
+8. Convert matchup findings into quantitative adjustment candidates with direction, magnitude, evidence, and confidence.
+9. Assign confidence to every tactical claim: `high`, `medium`, or `low`, based on sample size and source quality.
+10. Output the relevant schema from `references/tactical-schemas.md`.
 
 ## Analysis Standards
 
@@ -59,6 +61,11 @@ When a match or round prediction is being prepared, output these fields where ap
 - `defensive_line_risk`
 - `coach_substitution_risk`
 - `game_state_tendency`
+- `third_round_motivation_tactical_shift`
+- `rotation_shape_risk`
+- `draw_management_tendency`
+- `goal_difference_chase_risk`
+- `late_game_information_risk`
 
 Each factor must include:
 
@@ -87,6 +94,6 @@ Return:
 - `confidence_notes`: where the analysis is strong, weak, or matchup-dependent.
 - `handoff_notes`: what the model agent should encode and what the verification agent should challenge.
 
-## Anti-disconnect Workflow
+## Output Discipline
 
-For long World Cup work, keep each turn to the smallest current group/round loop: collect facts, tactical judgment, model probability, red-team check, write files, validate, then report briefly. Do not paste long tactical reports into chat; write them to local files first. If multiple files are needed, create skeleton files first, then fill them one by one. Subagent outputs must be summarized as key conclusions only. Before rewriting after an interruption, check which files already exist and preserve valid content. Final chat output should include only the prediction table, file paths, validation result, and key risks.
+For World Cup work, choose the output size based on the user's current request and the reusable value of the result. Write durable tactical packets and reusable reports to local files when they need to persist, but do not force skeleton-first file creation or smallest-loop batching as a mandatory workflow. Before updating existing files, check whether valid content already exists and preserve it. Subagent outputs should be summarized into key tactical conclusions, model adjustments, and handoff notes unless the user asks for full detail.

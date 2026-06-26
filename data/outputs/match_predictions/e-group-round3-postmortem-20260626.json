@@ -1,0 +1,239 @@
+{
+  "schema_version": "worldcup_match_postmortem.v1",
+  "phase": "group_postmatch_review",
+  "status": "partial",
+  "group": "E",
+  "round": 3,
+  "updated_at": "2026-06-26T10:11:31+08:00",
+  "source_prediction_file": "data/outputs/match_predictions/e-group-round3-quant-prediction-20260625.json",
+  "source_thread_files": [
+    "data/thread_outputs/e-group-round3-20260625/data-collector.md",
+    "data/thread_outputs/e-group-round3-20260625/tactics-coach.md",
+    "data/thread_outputs/e-group-round3-20260625/red-team.md",
+    "data/thread_outputs/e-group-round3-postmatch-20260626/data-collector.json",
+    "data/thread_outputs/e-group-round3-postmatch-20260626/tactics-coach.md",
+    "data/thread_outputs/e-group-round3-postmatch-20260626/tactics-coach.json",
+    "data/thread_outputs/e-group-round3-postmatch-20260626/modeler.md",
+    "data/thread_outputs/e-group-round3-postmatch-20260626/modeler.json",
+    "data/thread_outputs/e-group-round3-postmatch-20260626/red-team.md",
+    "data/thread_outputs/e-group-round3-postmatch-20260626/red-team.json",
+    "data/thread_outputs/e-group-round3-postmatch-20260626/betting-risk.md",
+    "data/thread_outputs/e-group-round3-postmatch-20260626/betting-risk.json"
+  ],
+  "matches": [
+    {
+      "match": "Ecuador vs Germany",
+      "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-25_厄瓜多尔_2-1_德国_复盘.md",
+      "actual_result": {
+        "score": "2-1",
+        "winner": "ecuador",
+        "total_goals": 3,
+        "over_2_5": true,
+        "key_events": [
+          "Sane 2'",
+          "Angulo 9'",
+          "Plata 77'"
+        ]
+      },
+      "market_result": {
+        "zgzcw_match_no": "周四055",
+        "spf_odds": [
+          4.36,
+          4.05,
+          1.53
+        ],
+        "spf_implied_no_vig": {
+          "ecuador_win": 0.203,
+          "draw": 0.2185,
+          "germany_win": 0.5785
+        },
+        "spf_result": "home_win",
+        "handicap_line": "ecuador_plus_1",
+        "handicap_odds": [
+          2.14,
+          3.45,
+          2.69
+        ],
+        "handicap_implied_no_vig": {
+          "home_win": 0.4139,
+          "draw": 0.2568,
+          "away_win": 0.3293
+        },
+        "handicap_result": "home_win",
+        "betting_takeaway": "德国热度过高，第三轮已基本锁头名后的动机和节奏管理不足以支撑赛前市场热度。"
+      },
+      "pre_match_expected_goals": {
+        "ecuador": 0.9,
+        "germany": 1.4
+      },
+      "pre_match_probabilities_1x2": {
+        "ecuador_win": 0.2417,
+        "draw": 0.2724,
+        "germany_win": 0.4859
+      },
+      "pre_match_totals_probabilities": {
+        "over_2_5": 0.404,
+        "under_2_5": 0.596
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.1404
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1263
+        },
+        {
+          "score": "0-0",
+          "probability": 0.1003
+        },
+        {
+          "score": "0-2",
+          "probability": 0.0983
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0902
+        }
+      ],
+      "postmatch_error": {
+        "one_x_two": "incorrect",
+        "exact_score": "missed_top5_but_matrix_probability_0.0568",
+        "score_probability": 0.0568,
+        "total_2_5": "incorrect_model_leaned_under",
+        "goal_delta_vs_xg": {
+          "ecuador_goals_minus_xg": 1.1,
+          "germany_goals_minus_xg": -0.4
+        },
+        "main_error_bucket": [
+          "third_round_motivation_underweighted",
+          "already_qualified_favorite_rotation_tempo",
+          "market_heat_overpreserved",
+          "must_win_team_space_conversion_underestimated"
+        ]
+      },
+      "parameter_updates": {
+        "already_qualified_favorite_tempo_drag": "up_one_notch",
+        "must_win_vs_non_low_block_space_bonus": "up_one_notch",
+        "market_heat_cap_when_context_conflicts": "tighten",
+        "low_conversion_penalty_for_inefficient_attack": "keep_but_make_opponent_shape_sensitive",
+        "under_bias_in_rotation_control_games": "down_one_notch"
+      },
+      "red_team_verdict": "red_team_warned_but_revision_not_strong_enough",
+      "player_state_update_status": "blocked"
+    },
+    {
+      "match": "Curacao vs Ivory Coast",
+      "review_file": "比赛/已完成比赛/小组赛/E组/2026-06-25_库拉索_0-2_科特迪瓦_复盘.md",
+      "actual_result": {
+        "score": "0-2",
+        "winner": "ivory_coast",
+        "total_goals": 2,
+        "over_2_5": false,
+        "key_events": [
+          "Pepe 7'",
+          "Pepe 64'"
+        ]
+      },
+      "market_result": {
+        "zgzcw_match_no": "周四056",
+        "spf_odds": null,
+        "spf_result": "unavailable",
+        "handicap_line": "curacao_plus_2",
+        "handicap_odds": [
+          2.4,
+          3.85,
+          2.21
+        ],
+        "handicap_implied_no_vig": {
+          "home_win": 0.3691,
+          "draw": 0.2301,
+          "away_win": 0.4008
+        },
+        "handicap_result": "draw",
+        "betting_takeaway": "这是一场典型的强队赢球但未打穿大胜叙事，若赛前追深让或大比分，容易方向对而票错。"
+      },
+      "pre_match_expected_goals": {
+        "curacao": 0.68,
+        "ivory_coast": 1.95
+      },
+      "pre_match_probabilities_1x2": {
+        "curacao_win": 0.1211,
+        "draw": 0.2044,
+        "ivory_coast_win": 0.6745
+      },
+      "pre_match_totals_probabilities": {
+        "over_2_5": 0.4891,
+        "under_2_5": 0.5109
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.1406
+        },
+        {
+          "score": "0-2",
+          "probability": 0.137
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0956
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0932
+        },
+        {
+          "score": "0-3",
+          "probability": 0.0891
+        }
+      ],
+      "postmatch_error": {
+        "one_x_two": "correct",
+        "exact_score": "hit_top2",
+        "score_probability": 0.137,
+        "total_2_5": "correct_model_leaned_under",
+        "goal_delta_vs_xg": {
+          "curacao_goals_minus_xg": -0.68,
+          "ivory_coast_goals_minus_xg": 0.05
+        },
+        "main_error_bucket": [
+          "favorite_second_goal_slightly_underweighted",
+          "late_chasing_exposure_after_60_can_be_stronger"
+        ]
+      },
+      "parameter_updates": {
+        "draw_enough_control_bias": "hold",
+        "handicap_tail_guardrail": "hold",
+        "late_chasing_exposure_after_60": "small_up",
+        "favorite_second_goal_when_game_state_stable": "small_up",
+        "big_win_tail_for_manageable_favorites": "do_not_raise"
+      },
+      "red_team_verdict": "red_team_direction_validated",
+      "player_state_update_status": "blocked"
+    }
+  ],
+  "aggregate": {
+    "one_x_two_hits": 1,
+    "one_x_two_total": 2,
+    "exact_score_top5_hits": 1,
+    "total_2_5_hits": 1,
+    "main_takeaway": "E组第三轮最大误差不是单纯实力判断，而是德国一战中第三轮动机、轮换与节奏管理修正仍不够；科特迪瓦一战则验证了强队赢球不等于深让打穿。"
+  },
+  "betting_audit": {
+    "status": "partial",
+    "red_team_verdict": "revise",
+    "why_partial": [
+      "player_state and canonical member tables were not safely backfilled",
+      "official unified postmatch xG source is still missing",
+      "ticket-level settlement mapping is now reviewed but not linked to the user's exact physical tickets"
+    ],
+    "hard_rules": [
+      "third-round low-odds favorite SPF cannot be used as a main-bank anchor when the team is already nearly locked",
+      "deep handicap markets must explicitly separate rq_win, rq_draw and rq_loss settlement conditions",
+      "red-team hold_for_betting_discussion_only must block executable main-bank betting plans"
+    ]
+  },
+  "player_state_update_status": "blocked_pending_minute_level_backfill"
+}

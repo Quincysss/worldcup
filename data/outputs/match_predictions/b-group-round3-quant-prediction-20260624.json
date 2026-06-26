@@ -1,0 +1,58 @@
+{
+  "schema_version": "worldcup-match-prediction-v2",
+  "group": "B",
+  "round": 3,
+  "created_at": "2026-06-24T18:10:00+08:00",
+  "prediction_gate": "pass_with_predicted_lineups",
+  "betting_gate": "hold_not_executable",
+  "data_notes": {
+    "official_t75_lineups": "not_available",
+    "lineup_method": "predicted_lineups_with_uncertainty_adjustment",
+    "odds_source": "China Football Lottery near-same-source page, sales paused notice present",
+    "third_round_context": "same-time matches; group rank and best-third incentives included"
+  },
+  "matches": [
+    {
+      "match_id": "B-R3-049",
+      "competition_no": "周三049",
+      "fixture": "瑞士 vs 加拿大",
+      "kickoff_beijing": "2026-06-25T03:00:00+08:00",
+      "xg": { "home": 1.18, "away": 1.02 },
+      "odds_spf": { "home": 2.21, "draw": 2.66, "away": 3.32 },
+      "market_prob_norm": { "home": 0.4006, "draw": 0.3328, "away": 0.2666 },
+      "poisson_prob": { "home": 0.3952, "draw": 0.2901, "away": 0.3147 },
+      "calibrated_prob": { "home": 0.385, "draw": 0.33, "away": 0.285 },
+      "totals": { "over_2_5": 0.3773, "under_2_5": 0.6227, "btts_yes": 0.4429 },
+      "top_scorelines": [
+        { "score": "1-1", "prob": 0.1334 },
+        { "score": "1-0", "prob": 0.1307 },
+        { "score": "0-1", "prob": 0.113 },
+        { "score": "0-0", "prob": 0.1108 },
+        { "score": "2-1", "prob": 0.0787 }
+      ],
+      "prediction": { "score": "1-1", "result": "draw", "spf_pick": "平", "confidence": "medium-low" },
+      "risk_flags": ["third_round_draw_incentive", "canada_injury_minutes_uncertain", "switzerland_need_win_for_first"]
+    },
+    {
+      "match_id": "B-R3-050",
+      "competition_no": "周三050",
+      "fixture": "波黑 vs 卡塔尔",
+      "kickoff_beijing": "2026-06-25T03:00:00+08:00",
+      "xg": { "home": 2.05, "away": 0.76 },
+      "odds_spf": { "home": 1.26, "draw": 5.10, "away": 7.15 },
+      "market_prob_norm": { "home": 0.7026, "draw": 0.1736, "away": 0.1238 },
+      "poisson_prob": { "home": 0.6744, "draw": 0.1975, "away": 0.1281 },
+      "calibrated_prob": { "home": 0.69, "draw": 0.18, "away": 0.13 },
+      "totals": { "over_2_5": 0.5329, "under_2_5": 0.4671, "btts_yes": 0.4638 },
+      "top_scorelines": [
+        { "score": "2-0", "prob": 0.1265 },
+        { "score": "1-0", "prob": 0.1234 },
+        { "score": "2-1", "prob": 0.0961 },
+        { "score": "1-1", "prob": 0.0938 },
+        { "score": "3-0", "prob": 0.0864 }
+      ],
+      "prediction": { "score": "2-0", "result": "home_win", "spf_pick": "胜", "confidence": "medium" },
+      "risk_flags": ["qatar_two_suspensions", "bosnia_center_back_suspension", "must_win_game_can_open_late"]
+    }
+  ]
+}

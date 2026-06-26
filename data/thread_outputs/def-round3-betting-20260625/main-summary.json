@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-06-25T15:57:00+08:00",
+  "scope": "D/E/F groups round 3, Chinese sports lottery discussion plan",
+  "budget_yuan": 100,
+  "bankroll_split": {
+    "main_yuan": 70,
+    "entertainment_yuan": 30
+  },
+  "execution_gate": "conditional_discussion_only",
+  "thread_status": {
+    "data_collector": "json_ok",
+    "tactics_coach": "json_ok",
+    "red_team": "json_ok",
+    "betting_risk": "json_ok",
+    "modeler": "json_ok_skeleton_partial_thread_fallback"
+  },
+  "recommended_order": [
+    "A_conservative_coverage",
+    "B_balanced_mixed",
+    "C_aggressive_combo"
+  ],
+  "max_return_note": "Known-odds main-bank theoretical return only. Correct-score and half-full-time odds were not captured in the verified snapshot, so entertainment-bank max return is pending.",
+  "max_return_known_odds": {
+    "currency": "CNY",
+    "includes_stake": true,
+    "A": {
+      "known_odds_cost_yuan": 70,
+      "main_bank_max_return_yuan": 136.01,
+      "main_bank_max_net_yuan": 66.01,
+      "formula": "20*2.03 + 20*1.35 + 20*(2.03*1.35) + 10*1.36"
+    },
+    "B": {
+      "known_odds_cost_yuan": 70,
+      "main_bank_max_return_yuan": 204.99,
+      "main_bank_max_net_yuan": 134.99,
+      "formula": "20*(1.36*1.35) + 20*(2.03*1.66) + 10*(1.36*2.03*1.35) + 10*3.85 + 10*2.51"
+    },
+    "C": {
+      "known_odds_cost_yuan": 70,
+      "main_bank_max_return_yuan": 266.58,
+      "main_bank_max_net_yuan": 196.58,
+      "components": {
+        "C1_4x11": 74.6,
+        "C2_4x4": 88.57,
+        "C3_2x1": 54.81,
+        "C4_057_handicap_draw": 25.5,
+        "C5_060_handicap_draw": 23.1
+      }
+    }
+  },
+  "plans": [
+    {
+      "id": "A",
+      "name": "保守容错型",
+      "total_yuan": 100,
+      "main": [
+        "058 日本(-1) 让负 20元",
+        "059 巴拉圭(-1) 让负 20元",
+        "058让负 x 059让负 2串1 20元",
+        "055 德国胜 10元"
+      ],
+      "entertainment": [
+        "055 0-1 4元",
+        "055 1-1 2元",
+        "056 0-1 4元",
+        "056 0-2 4元",
+        "057 0-2 4元",
+        "057 0-1 2元",
+        "058 1-1 4元",
+        "059 1-1 4元",
+        "060 1-2 2元"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "均衡组合型",
+      "total_yuan": 100,
+      "main": [
+        "055德国胜 x 059巴拉圭(-1)让负 2串1 20元",
+        "058日本(-1)让负 x 060美国胜 2串1 20元",
+        "055德国胜 x 058日本(-1)让负 x 059巴拉圭(-1)让负 3串1 10元",
+        "060土耳其(+1)让平 10元",
+        "056库拉索(+2)让胜 10元"
+      ],
+      "entertainment": [
+        "055半全场 平/负 4元",
+        "057半全场 平/负 4元",
+        "060半全场 平/负 4元",
+        "055 0-1 4元",
+        "056 0-1 4元",
+        "057 0-2 4元",
+        "058 2-1 2元",
+        "059 1-1 4元"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "进取组合型",
+      "total_yuan": 100,
+      "main": [
+        "055德国胜 x 058日本(-1)让负 x 059巴拉圭(-1)让负 x 060美国胜 4串11 22元",
+        "055德国胜 x 056库拉索(+2)让胜 x 058日本(-1)让负 x 059巴拉圭(-1)让负 4串4 16元",
+        "058日本(-1)让负 x 059巴拉圭(-1)让负 2串1 20元",
+        "057突尼斯(+2)让平 6元",
+        "060土耳其(+1)让平 6元"
+      ],
+      "entertainment": [
+        "055 0-1 4元",
+        "056 0-1 4元",
+        "056 0-2 4元",
+        "057 0-2 6元",
+        "058 1-1 4元",
+        "059 1-1 4元",
+        "060 1-2 4元"
+      ]
+    }
+  ],
+  "avoid": [
+    "Do not stack all three plans.",
+    "Do not use Germany 1.36 as a large parlay anchor.",
+    "Do not use Japan outright win as the core exposure.",
+    "Do not use Netherlands large handicap win as main-bank exposure.",
+    "Do not play six-match full parlays."
+  ]
+}

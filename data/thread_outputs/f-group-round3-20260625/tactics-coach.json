@@ -1,0 +1,625 @@
+{
+  "phase": "group_round3_tactics_predicted_lineups",
+  "group": "F",
+  "status": "partial",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "updated_at": "2026-06-25T12:52:00+08:00",
+  "owner": "tactics-coach",
+  "scope": "F组第三轮两场比赛战术与预计首发",
+  "predicted_lineup_status": "estimated",
+  "official_t_minus_75_lineups": "unavailable",
+  "missing_fields": [
+    "official_t_minus_75_lineups",
+    "latest_discipline_confirmation",
+    "latest_medical_confirmation",
+    "verified_same_time_scoreboard_scenarios",
+    "official_bracket_map_verification"
+  ],
+  "source_log": [
+    {
+      "type": "local_review",
+      "path": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\F组第二轮复盘.md",
+      "use": "两轮后战术修正、关键伤情观察、比赛脚本基线"
+    },
+    {
+      "type": "local_review",
+      "path": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\2026-06-14_荷兰_2-2_日本_复盘.md",
+      "use": "荷兰与日本首轮强强对话修正"
+    },
+    {
+      "type": "local_review",
+      "path": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\2026-06-20_荷兰_5-1_瑞典_复盘.md",
+      "use": "荷兰第二轮进攻上限与瑞典防守压力事实"
+    },
+    {
+      "type": "local_review",
+      "path": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\2026-06-21_突尼斯_0-4_日本_复盘.md",
+      "use": "日本第二轮体系冗余与突尼斯防守地板事实"
+    },
+    {
+      "type": "local_packet",
+      "paths": [
+        "K:\\worldcup\\data\\packets\\tactics\\netherlands-tactics-packet.json",
+        "K:\\worldcup\\data\\packets\\tactics\\japan-tactics-packet.json",
+        "K:\\worldcup\\data\\packets\\tactics\\sweden-tactics-packet.json",
+        "K:\\worldcup\\data\\packets\\tactics\\tunisia-tactics-packet.json"
+      ],
+      "use": "球队默认阵型、进攻/防守结构、教练倾向"
+    },
+    {
+      "type": "local_player_state",
+      "paths": [
+        "K:\\worldcup\\data\\outputs\\player_state\\netherlands-player-state.json",
+        "K:\\worldcup\\data\\outputs\\player_state\\japan-player-state.json",
+        "K:\\worldcup\\data\\outputs\\player_state\\sweden-player-state.json",
+        "K:\\worldcup\\data\\outputs\\player_state\\tunisia-player-state.json"
+      ],
+      "use": "球员 availability、monitor 状态、黄牌与首发可信度修正"
+    },
+    {
+      "type": "local_model_brief",
+      "paths": [
+        "K:\\worldcup\\data\\outputs\\team_reports\\netherlands-model-brief.json",
+        "K:\\worldcup\\data\\outputs\\team_reports\\japan-model-brief.json",
+        "K:\\worldcup\\data\\outputs\\team_reports\\sweden-model-brief.json",
+        "K:\\worldcup\\data\\outputs\\team_reports\\tunisia-model-brief.json"
+      ],
+      "use": "模型层原始强弱项与不确定性提醒"
+    },
+    {
+      "type": "public_verified_context",
+      "label": "2026-06-24 前后 F组第三轮赛程与积分形势公开快照",
+      "use": "第三轮动机与同开球信息风险判断"
+    }
+  ],
+  "notes": [
+    "官方 T-75 首发未公布前，本文件只输出预计首发、替补影响、轮换概率与战术风险。",
+    "本文件不输出最终概率、不做购彩建议。",
+    "本稿可用于模型前置输入，但不得替代赛前 75 分钟官方首发核验。"
+  ],
+  "model_entry": {
+    "can_enter_model": true,
+    "entry_status": "partial_but_model_usable",
+    "usage_rule": [
+      "只作为第三轮动机、轮换和战术修正层输入",
+      "赛前必须由主线程刷新官方首发、即时伤停和实时小组态势"
+    ]
+  },
+  "group_context": {
+    "standings_baseline_after_round2": [
+      {
+        "team": "Netherlands",
+        "points": 4,
+        "goal_difference": 4,
+        "goals_for": 7
+      },
+      {
+        "team": "Japan",
+        "points": 4,
+        "goal_difference": 4,
+        "goals_for": 6
+      },
+      {
+        "team": "Sweden",
+        "points": 3,
+        "goal_difference": 0,
+        "goals_for": 6
+      },
+      {
+        "team": "Tunisia",
+        "points": 0,
+        "goal_difference": -8,
+        "goals_for": 1
+      }
+    ],
+    "motivation_summary": [
+      "日本与荷兰都具备保平安全诉求，但头名价值仍推动其保留争胜组件。",
+      "瑞典更接近必须争胜的风险偏好。",
+      "突尼斯按已淘汰搅局队处理。"
+    ],
+    "project_bracket_map_note": {
+      "local_reference": "本地量化输出显示 F1 可能对 C2、F2 可能对 C1，F3 路径更不稳定。",
+      "verification_status": "need_verify",
+      "tactical_use_rule": "仅可作为第三轮动机加权，不可当作已官方锁定的对阵树。"
+    },
+    "late_game_information_risk": "high"
+  },
+  "matches": [
+    {
+      "match": "Japan vs Sweden",
+      "discussion_only": true,
+      "predicted_lineup_status": "estimated",
+      "motivation_context": {
+        "japan": "平局即可显著提升出线安全性，若另一场荷兰不胜仍保留争头名窗口。",
+        "sweden": "更接近必须争胜；若另一场荷兰领先，末段风险偏好会继续上调。",
+        "same_time_score_effect": "60分钟后若荷兰稳定领先，日本 draw management 倾向增强，瑞典会提高前场人数。",
+        "confidence": "high"
+      },
+      "teams": {
+        "japan": {
+          "expected_shape": "3-4-2-1 / 3-4-3",
+          "lineup_confidence": "medium",
+          "rotation_probability": "medium",
+          "expected_xi": [
+            "铃木彩艳",
+            "富安健洋",
+            "板仓滉",
+            "伊藤洋辉",
+            "伊东纯也",
+            "田中碧",
+            "佐野海舟",
+            "中村敬斗",
+            "镰田大地",
+            "堂安律",
+            "上田绮世"
+          ],
+          "bench_triggers": [
+            {
+              "player": "久保建英",
+              "trigger": "需要末段一对一、最后一传或反超时提高前场创造力",
+              "status_note": "probable，建议按可控时长而非90分钟满负荷处理"
+            },
+            {
+              "player": "菅原由势",
+              "trigger": "边翼位体能下降或需要更主动边路传中"
+            },
+            {
+              "player": "铃木唯人 / 后藤启介",
+              "trigger": "需要提速或扩大禁区存在感"
+            }
+          ],
+          "availability_notes": [
+            "久保建英 probable，轻微伤情观察",
+            "远藤航 roster status 不应按可用首发资源处理",
+            "三笘薰、南野拓实不应按可用首发资源处理"
+          ]
+        },
+        "sweden": {
+          "expected_shape": "3-4-1-2，必要时转3-4-3",
+          "lineup_confidence": "medium_low",
+          "rotation_probability": "low_medium",
+          "expected_xi": [
+            "诺德费尔特",
+            "拉格比耶尔克",
+            "希恩",
+            "林德洛夫",
+            "伯恩哈德松",
+            "卡尔斯特伦",
+            "亚辛-阿亚里",
+            "古德蒙德松",
+            "贝里瓦尔",
+            "伊萨克",
+            "哲凯赖什"
+          ],
+          "bench_triggers": [
+            {
+              "player": "安东尼-埃兰加",
+              "trigger": "落后或需要更直接冲击日本翼卫身后时提前登场",
+              "status_note": "存在进入首发的真实可能"
+            },
+            {
+              "player": "贝斯福特-泽内利",
+              "trigger": "需要增加中路推进和远射"
+            },
+            {
+              "player": "塔哈-阿里",
+              "trigger": "需要拉开边路一对一和后程冲刺"
+            }
+          ],
+          "availability_notes": [
+            "伊萨克 confirmed/probable区间，当前未见明确新伤",
+            "库卢塞夫斯基因伤缺席本届名单",
+            "第二轮黄牌与体能消耗提示瑞典中场末段硬度下降风险"
+          ]
+        }
+      },
+      "tactical_conclusions": [
+        {
+          "text": "日本更可能维持三中卫 rest defense 来限制瑞典双前锋直接冲纵深的第一波威胁。",
+          "confidence": "high"
+        },
+        {
+          "text": "日本的边路传递链和二线前插稳定性优于瑞典，能更持续地把比赛带入本方节奏。",
+          "confidence": "high"
+        },
+        {
+          "text": "瑞典最可迁移的破局方式仍是定位球、高空球和伊萨克/哲凯赖什的二次进攻，而不是长时间阵地控球。",
+          "confidence": "medium_high"
+        },
+        {
+          "text": "若另一场荷兰领先，日本会明显提高 draw management 倾向；瑞典则会被迫更早启用埃兰加式冲击点。",
+          "confidence": "high"
+        },
+        {
+          "text": "本场的所谓战略默契风险较低，真正需要建模的是同开球信息引发的末段节奏突变。",
+          "confidence": "high"
+        }
+      ],
+      "key_matchups": [
+        {
+          "focus": "日本两侧翼卫与二前腰的传递链 vs 瑞典翼卫回防横移",
+          "impact": "决定日本阵地战是否能持续打穿弱侧和肋部",
+          "confidence": "high"
+        },
+        {
+          "focus": "伊萨克/哲凯赖什第一点背身与第二点反抢 vs 日本三中卫 rest defense",
+          "impact": "决定瑞典能否把比赛从低速脚本拖入纵深冲击和二次进攻",
+          "confidence": "high"
+        },
+        {
+          "focus": "日本双中场对贝里瓦尔/阿亚里的转身限制",
+          "impact": "决定瑞典反击是一次性长传还是连续推进",
+          "confidence": "medium_high"
+        },
+        {
+          "focus": "瑞典定位球第一点与后点包抄 vs 日本禁区二点保护",
+          "impact": "是瑞典最现实的非阵地战破局通道",
+          "confidence": "medium_high"
+        }
+      ],
+      "same_time_score_branches": [
+        {
+          "branch": "55-65分钟另一场荷兰稳定领先",
+          "effects": [
+            "日本提高 draw management 比重，降低边翼卫同时压上次数",
+            "瑞典更早切换到冲吊 + 直塞并存脚本，前场人数和传中频率上扬"
+          ],
+          "confidence": "high"
+        },
+        {
+          "branch": "55-65分钟另一场荷兰打平或落后",
+          "effects": [
+            "日本保留争头名组件，不会完全锁死节奏",
+            "瑞典除争胜外还可能兼顾净胜球/进球数尾部，防守冒险增大"
+          ],
+          "confidence": "medium_high"
+        },
+        {
+          "branch": "本场日本先领先且另一场荷兰也领先",
+          "effects": [
+            "比赛更可能进入日本控、瑞典追的单边节奏",
+            "后段总量未必持续上扬，更多取决于瑞典的定位球和边路冲击"
+          ],
+          "confidence": "medium_high"
+        }
+      ],
+      "bracket_path_effect": {
+        "project_local_map": "F1 可能对 C2，F2 可能对 C1，F3 若晋级路径更不稳定且可能更强。",
+        "verification_status": "need_verify",
+        "tactical_implications": [
+          "日本即便平局可接受，也不会在前60分钟被简单建模为纯保平脚本。",
+          "瑞典若只能走第三名路径，不确定性更大，因此末段主动追胜的风险偏好更高。"
+        ]
+      },
+      "time_window_risks": [
+        {
+          "window": "0-25",
+          "risk": "日本更重视控险和站位校准，瑞典也不会一开场就全线高压，前段节奏可能偏低。",
+          "confidence": "high"
+        },
+        {
+          "window": "25-60",
+          "risk": "日本边路链路与瑞典双前锋反击进入第一次稳定对位，比赛多为中速偏谨慎脚本。",
+          "confidence": "medium_high"
+        },
+        {
+          "window": "60-75",
+          "risk": "同开球信息最容易改变双方风险偏好，是本场最大脚本分叉窗口。",
+          "confidence": "high"
+        },
+        {
+          "window": "75+",
+          "risk": "若瑞典仍未占优，其传中、定位球、直塞叠加会抬高波动，同时放大日本反击空间。",
+          "confidence": "high"
+        }
+      ],
+      "xg_adjustment_recommendations": [
+        {
+          "team": "Japan",
+          "direction": "+",
+          "range": "0.10-0.18",
+          "reason": "边路传递链完整、二线跟进更稳定，对瑞典翼卫回防横移形成持续压力。",
+          "confidence": "high"
+        },
+        {
+          "team": "Japan",
+          "direction": "-",
+          "range": "0.08-0.15",
+          "reason": "若60分钟后另一场荷兰领先，日本会提高 draw management 比重，主动压低最后三分之一冒险传球。",
+          "confidence": "high"
+        },
+        {
+          "team": "Sweden",
+          "direction": "+",
+          "range": "0.12-0.22",
+          "reason": "定位球、高空球、双前锋二次进攻是对日本最可迁移的直接得分路径。",
+          "confidence": "medium_high"
+        },
+        {
+          "team": "Sweden",
+          "direction": "+",
+          "range": "0.05-0.15",
+          "reason": "若末段必须追胜，前场人数增加会放大射门量和混战二点。",
+          "confidence": "medium"
+        },
+        {
+          "team": "Sweden",
+          "direction": "-",
+          "range": "0.08-0.14",
+          "reason": "长时间阵地控球并非其优势，日本三中卫落位完成后能压缩正面高质量机会。",
+          "confidence": "medium_high"
+        }
+      ],
+      "xg_tendency_suggestion_range": {
+        "japan_expected_goals": "1.1-1.5",
+        "sweden_expected_goals": "0.9-1.3",
+        "total_goals_environment": "2.2-2.8",
+        "interpretation": "日本略占结构优势，但瑞典追胜脚本会把比赛推向中高波动区。"
+      },
+      "model_fields": {
+        "third_round_motivation_tactical_shift": "日本偏保守控险，瑞典偏主动追胜",
+        "rotation_shape_risk": "Japan=medium; Sweden=low_medium",
+        "draw_management_tendency": "Japan=medium_high; Sweden=low",
+        "goal_difference_chase_risk": "Japan=low_medium; Sweden=high",
+        "late_game_information_risk": "high"
+      },
+      "main_risks": [
+        "久保建英可用时长不明，影响日本末段破局能力",
+        "瑞典是否直接首发埃兰加会改变早段纵深冲击强度",
+        "另一场比分一旦稳定，可能把本场后30分钟节奏完全改写"
+      ],
+      "double_counting_warning": "不要把日本第二轮4-0与瑞典第二轮1-5同时线性外推到本场净胜差。"
+    },
+    {
+      "match": "Tunisia vs Netherlands",
+      "discussion_only": true,
+      "predicted_lineup_status": "estimated",
+      "motivation_context": {
+        "netherlands": "有明显头名动力，但若实时小组态势对其有利，科曼会优先保结构而非盲目追净胜球。",
+        "tunisia": "按已淘汰搅局队处理，更现实目标是低位减少失误并争取反击与定位球破坏。",
+        "same_time_score_effect": "若日本在另一场领先，荷兰会更重视把胜势做实；若日本迟迟不领先，荷兰可能接受低风险控场。",
+        "confidence": "high"
+      },
+      "teams": {
+        "netherlands": {
+          "expected_shape": "4-2-3-1 / 4-3-3",
+          "lineup_confidence": "medium_low",
+          "rotation_probability": "medium",
+          "expected_xi": [
+            "费布鲁亨",
+            "邓弗里斯",
+            "范海克",
+            "范戴克",
+            "范德芬",
+            "弗朗基-德容",
+            "赖因德斯",
+            "哈克波",
+            "西蒙斯",
+            "萨默维尔",
+            "布罗贝伊"
+          ],
+          "bench_triggers": [
+            {
+              "player": "孟菲斯-德佩",
+              "trigger": "需要提升中路控球、禁区终结或在领先后用经验管理节奏",
+              "status_note": "也存在直接首发替代布罗贝伊的可能"
+            },
+            {
+              "player": "马伦 / 诺阿-朗",
+              "trigger": "需要边路单点突破或轮换左/右路负荷"
+            },
+            {
+              "player": "库普梅纳斯",
+              "trigger": "需要更稳的中场站位或定位球质量"
+            }
+          ],
+          "availability_notes": [
+            "范戴克 probable，第二轮有碰撞后 monitor 痕迹",
+            "哈克波 probable，第二轮赛后有冰敷观察",
+            "萨默维尔 probable/doubtful_monitor 区间，第二轮末段头部碰撞后待复核"
+          ]
+        },
+        "tunisia": {
+          "expected_shape": "5-4-1 / 5-3-2",
+          "lineup_confidence": "medium_low",
+          "rotation_probability": "medium",
+          "expected_xi": [
+            "艾门-达门",
+            "阿里-阿卜迪",
+            "布隆",
+            "塔尔比",
+            "雷基克",
+            "瓦莱里",
+            "斯希里",
+            "阿尼斯-本-苏莱曼",
+            "汉尼拔",
+            "阿舒里",
+            "萨阿德"
+          ],
+          "bench_triggers": [
+            {
+              "player": "本哈米达 / 加尔比",
+              "trigger": "需要提升边路出球或半场后加强推进"
+            },
+            {
+              "player": "菲拉斯-沙瓦特",
+              "trigger": "落后时增加禁区点与二点争抢"
+            },
+            {
+              "player": "赫迪拉",
+              "trigger": "需要更强对抗或末段抢第二点"
+            }
+          ],
+          "availability_notes": [
+            "汉尼拔、阿舒里、斯希里、塔尔比当前未见明确新伤公开信号",
+            "教练更替后的首发稳定性仍偏低"
+          ]
+        }
+      },
+      "tactical_conclusions": [
+        {
+          "text": "荷兰最稳定的优势仍在边路宽度与后点占位，邓弗里斯和左侧终结点的交叉攻击会持续测试突尼斯五后卫横移。",
+          "confidence": "high"
+        },
+        {
+          "text": "突尼斯若不能把汉尼拔和阿舒里的第一脚推进转化为真实反击出口，比赛会再次变成长时间低位挨压。",
+          "confidence": "high"
+        },
+        {
+          "text": "荷兰即便适度轮换，第二轮已经证明其多点终结和替补边锋冲击是真实资产，进攻上限不应按大幅折损处理。",
+          "confidence": "medium_high"
+        },
+        {
+          "text": "荷兰防守转换风险仍在，尤其边后卫压上后回追与中场保护，一旦突尼斯第一时间打到边中卫外侧仍有偷袭窗口。",
+          "confidence": "medium"
+        },
+        {
+          "text": "本场更像荷兰单边控制风险，而不是双方共享平局收益的默契脚本；真正变化来自另一场实时比分。",
+          "confidence": "medium_high"
+        }
+      ],
+      "key_matchups": [
+        {
+          "focus": "邓弗里斯与左侧终结点的后点连线 vs 突尼斯五后卫横移",
+          "impact": "是荷兰撕开低位防线最稳定的结构优势",
+          "confidence": "high"
+        },
+        {
+          "focus": "弗朗基-德容/赖因德斯出球路径 vs 突尼斯第一道中场屏障",
+          "impact": "决定荷兰是持续阵地围攻还是频繁二次回收重来",
+          "confidence": "high"
+        },
+        {
+          "focus": "汉尼拔/阿舒里第一脚推进 vs 荷兰边中卫外侧空间",
+          "impact": "决定突尼斯能否把低位防守转成真实反击威胁",
+          "confidence": "medium_high"
+        },
+        {
+          "focus": "突尼斯定位球第一点与二点争抢 vs 荷兰防守转换后的落位",
+          "impact": "是突尼斯最现实的进攻扰动来源",
+          "confidence": "medium"
+        }
+      ],
+      "same_time_score_branches": [
+        {
+          "branch": "55-65分钟另一场保持平局或日本领先，且荷兰本场已经领先",
+          "effects": [
+            "荷兰更可能优先锁住胜势和体能分配，不会机械追逐大胜",
+            "边路冲刺与前场堆人会相对克制"
+          ],
+          "confidence": "high"
+        },
+        {
+          "branch": "55-65分钟另一场日本不领先，而荷兰本场仍未领先",
+          "effects": [
+            "荷兰需要同时争结果与头名，后场保护会适度让位于边路堆人和定位球压制",
+            "比赛尾部总量与转换次数都会上升"
+          ],
+          "confidence": "high"
+        },
+        {
+          "branch": "另一场瑞典领先，而本场荷兰仍打平",
+          "effects": [
+            "荷兰会提高进攻冒险，避免自己滑向更差的小组名次或更复杂路径",
+            "换人更偏向增加前场火力而非稳控"
+          ],
+          "confidence": "medium_high"
+        },
+        {
+          "branch": "荷兰早早两球领先",
+          "effects": [
+            "科曼更可能先做负荷管理，再视净胜球需要决定是否继续提速",
+            "高比分尾部不应被过度外推"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "bracket_path_effect": {
+        "project_local_map": "F1 相比 F2/F3 路径更优，且对 C 组潜在强敌暴露更少。",
+        "verification_status": "need_verify",
+        "tactical_implications": [
+          "荷兰争头名有实质价值，但更像争取赢球并保留净胜差选项，而非无条件追求极端大胜。",
+          "突尼斯自身路径激励已弱，更多体现为搅局和荣誉战，因此更愿意接受短时高波动。"
+        ]
+      },
+      "time_window_risks": [
+        {
+          "window": "0-20",
+          "risk": "突尼斯先把阵型收紧到极低位，荷兰更多是耐心找弱侧和后点。",
+          "confidence": "high"
+        },
+        {
+          "window": "20-55",
+          "risk": "若荷兰迟迟无法打穿第一层低位，比赛可能进入控球占优但节奏不快的阶段。",
+          "confidence": "medium_high"
+        },
+        {
+          "window": "55-70",
+          "risk": "同开球信息与荷兰替补前锋/边锋使用窗口重叠，是本场第二个大分叉点。",
+          "confidence": "high"
+        },
+        {
+          "window": "70+",
+          "risk": "若荷兰仍未建立优势，边路传中和定位球密度会上升；若已领先，总量可能被主动压低。",
+          "confidence": "high"
+        }
+      ],
+      "xg_adjustment_recommendations": [
+        {
+          "team": "Netherlands",
+          "direction": "+",
+          "range": "0.18-0.30",
+          "reason": "边路宽度、后点占位、多点终结能力对突尼斯低位横移形成稳定压制。",
+          "confidence": "high"
+        },
+        {
+          "team": "Netherlands",
+          "direction": "+",
+          "range": "0.06-0.12",
+          "reason": "若另一场日本领先或本场久攻不下，荷兰后程会提升边路堆人和定位球压制。",
+          "confidence": "medium_high"
+        },
+        {
+          "team": "Netherlands",
+          "direction": "-",
+          "range": "0.12-0.22",
+          "reason": "若本场领先且另一场形势对荷兰有利，科曼更可能转入控球管理和负荷保护，削弱大胜尾部。",
+          "confidence": "high"
+        },
+        {
+          "team": "Tunisia",
+          "direction": "+",
+          "range": "0.05-0.12",
+          "reason": "定位球、抢二点和荷兰边后卫压上后的防守转换，是其少数可复制得分路径。",
+          "confidence": "medium"
+        },
+        {
+          "team": "Tunisia",
+          "direction": "-",
+          "range": "0.08-0.16",
+          "reason": "若早丢球被迫抬线，原本低位保护会被打散，反击质量也会同步下降。",
+          "confidence": "medium_high"
+        }
+      ],
+      "xg_tendency_suggestion_range": {
+        "netherlands_expected_goals": "1.6-2.2",
+        "tunisia_expected_goals": "0.4-0.9",
+        "total_goals_environment": "2.3-3.1",
+        "interpretation": "荷兰结构优势更大，但若小组态势对其有利，比赛节奏可能被主动压低。"
+      },
+      "model_fields": {
+        "third_round_motivation_tactical_shift": "荷兰偏争头名但保结构，突尼斯偏荣誉战低位搅局",
+        "rotation_shape_risk": "Netherlands=medium; Tunisia=medium",
+        "draw_management_tendency": "Netherlands=medium_high; Tunisia=low",
+        "goal_difference_chase_risk": "Netherlands=medium; Tunisia=low",
+        "late_game_information_risk": "medium_high"
+      },
+      "main_risks": [
+        "范戴克、哈克波、萨默维尔的赛前真实身体状态会直接影响荷兰轮换尺度",
+        "荷兰若确认平局基本够用，可能主动把比赛带入低速控场脚本",
+        "突尼斯一旦再次早丢球，二次崩盘尾部风险仍然存在"
+      ],
+      "double_counting_warning": "不要同时过度叠加荷兰第二轮5-1与突尼斯连续大败去机械放大净胜差。"
+    }
+  ]
+}

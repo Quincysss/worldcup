@@ -25,6 +25,18 @@ Use JSON-compatible objects. Use decimal probabilities from 0 to 1.
   "confidence": "low/medium/high",
   "main_drivers": [],
   "risk_flags": [],
+  "third_round_context": {
+    "included": false,
+    "group_table_snapshot": null,
+    "qualification_scenarios": [],
+    "motivation_profile": {},
+    "bracket_path_expectation": {},
+    "rotation_risk": {},
+    "yellow_card_suspension_risk": {},
+    "strategic_tempo_adjustment": null,
+    "third_round_context_adjustment": null,
+    "simulated_group_outcomes": null
+  },
   "market_comparison": {
     "included": false,
     "bookmakers": [],

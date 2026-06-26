@@ -1,0 +1,473 @@
+{
+  "phase": "match_data_collection",
+  "group": "G组",
+  "status": "partial",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "updated_at": "2026-06-25T12:12:50.4423921+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "G组第三轮两场赛前事实采集；覆盖积分榜、第三轮赛程、出线语境、竞彩快照、来源与数据缺口；不做比分预测或投注建议。",
+  "sources": [
+    {
+      "source_name": "本地G组已完赛复盘",
+      "source_url": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组",
+      "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+      "source_status": "read",
+      "supported_fields": [
+        "前两轮赛果",
+        "本地积分基线",
+        "球员状态与纪律线索"
+      ]
+    },
+    {
+      "source_name": "Wikipedia 2026 FIFA World Cup Group G",
+      "source_url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G",
+      "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+      "source_status": "read_secondary_citing_fifa",
+      "supported_fields": [
+        "小组积分榜",
+        "第三轮赛程",
+        "场地",
+        "Match 63/64 编号",
+        "32强路径说明"
+      ]
+    },
+    {
+      "source_name": "中国足彩网竞彩混合页",
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+      "source_status": "read",
+      "supported_fields": [
+        "比赛编号",
+        "普通胜平负",
+        "让球胜平负",
+        "未开售状态",
+        "页面 systemTime"
+      ]
+    },
+    {
+      "source_name": "FIFA standings page",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
+      "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+      "source_status": "attempted_unreadable_in_current_surface",
+      "supported_fields": [
+        "官方积分页 URL 已定位"
+      ]
+    },
+    {
+      "source_name": "新浪体育/新浪彩票交叉验证",
+      "source_url": "https://sports.sina.com.cn/ ; https://lottery.sina.com.cn/",
+      "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+      "source_status": "missing_or_blocked",
+      "supported_fields": [
+        "本轮未取得稳定结构化同场赔率页"
+      ]
+    }
+  ],
+  "standings": {
+    "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+    "source_status": "local_plus_secondary_citing_fifa",
+    "table": [
+      {
+        "rank": 1,
+        "team": "埃及",
+        "team_en": "Egypt",
+        "matches_played": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "goals_for": 4,
+        "goals_against": 2,
+        "goal_difference": 2,
+        "points": 4
+      },
+      {
+        "rank": 2,
+        "team": "伊朗",
+        "team_en": "Iran",
+        "matches_played": 2,
+        "wins": 0,
+        "draws": 2,
+        "losses": 0,
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_difference": 0,
+        "points": 2
+      },
+      {
+        "rank": 3,
+        "team": "比利时",
+        "team_en": "Belgium",
+        "matches_played": 2,
+        "wins": 0,
+        "draws": 2,
+        "losses": 0,
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_difference": 0,
+        "points": 2
+      },
+      {
+        "rank": 4,
+        "team": "新西兰",
+        "team_en": "New Zealand",
+        "matches_played": 2,
+        "wins": 0,
+        "draws": 1,
+        "losses": 1,
+        "goals_for": 3,
+        "goals_against": 5,
+        "goal_difference": -2,
+        "points": 1
+      }
+    ]
+  },
+  "official_tiebreaker_order": {
+    "governing_body": "FIFA",
+    "competition_stage": "2026 FIFA World Cup group stage",
+    "ordered_rules": [
+      "积分",
+      "净胜球",
+      "总进球数",
+      "若仍同分，使用相关球队之间的小组内对赛比较规则",
+      "公平竞赛积分",
+      "抽签"
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G",
+    "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+    "source_status": "secondary_source_citing_fifa",
+    "note": "当前抓取面未直接展开 FIFA 官方规则全文，以上顺序作为本轮可读规则摘要。"
+  },
+  "fixtures": [
+    {
+      "match_id": "Match 63",
+      "match_number": "周五065",
+      "home_team": "埃及",
+      "away_team": "伊朗",
+      "kickoff_bjt": "2026-06-27 11:00",
+      "local_date": "2026-06-26",
+      "local_time": "20:00",
+      "local_timezone": "PDT",
+      "stadium": "Lumen Field",
+      "city": "Seattle",
+      "simultaneous_group_kickoff": true,
+      "source_status": "verified_secondary_plus_market"
+    },
+    {
+      "match_id": "Match 64",
+      "match_number": "周五066",
+      "home_team": "新西兰",
+      "away_team": "比利时",
+      "kickoff_bjt": "2026-06-27 11:00",
+      "local_date": "2026-06-26",
+      "local_time": "20:00",
+      "local_timezone": "PDT",
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "simultaneous_group_kickoff": true,
+      "source_status": "verified_secondary_plus_market"
+    }
+  ],
+  "simultaneous_fixture_dependency": [
+    {
+      "team": "埃及",
+      "same_group_other_match": "新西兰 vs 比利时",
+      "simultaneous_kickoff_status": true,
+      "scenario_dependency_note": "埃及打平即可锁定前二；若输球则需关注另一场结果与净胜球链条。",
+      "late_game_incentive_swing_risk": "medium",
+      "source_status": "derived_from_current_table"
+    },
+    {
+      "team": "伊朗",
+      "same_group_other_match": "新西兰 vs 比利时",
+      "simultaneous_kickoff_status": true,
+      "scenario_dependency_note": "伊朗赢球最直接；平局保留部分路径，但仍依赖另一场与 tie-break。",
+      "late_game_incentive_swing_risk": "high",
+      "source_status": "derived_from_current_table"
+    },
+    {
+      "team": "比利时",
+      "same_group_other_match": "埃及 vs 伊朗",
+      "simultaneous_kickoff_status": true,
+      "scenario_dependency_note": "比利时赢球最直接；平局仅保留狭窄路径，强依赖另一场。",
+      "late_game_incentive_swing_risk": "high",
+      "source_status": "derived_from_current_table"
+    },
+    {
+      "team": "新西兰",
+      "same_group_other_match": "埃及 vs 伊朗",
+      "simultaneous_kickoff_status": true,
+      "scenario_dependency_note": "新西兰必须争胜；不胜基本无法维持现实晋级路径。",
+      "late_game_incentive_swing_risk": "high",
+      "source_status": "derived_from_current_table"
+    }
+  ],
+  "qualification_status_tags": [
+    {
+      "team": "埃及",
+      "tags": [
+        "draw_enough",
+        "first_place_race"
+      ],
+      "qualification_status_reason": "4分在手，打平即可锁定前二；赢球可锁定更优排名。",
+      "uncertainty_label": "low"
+    },
+    {
+      "team": "伊朗",
+      "tags": [
+        "first_place_race",
+        "qualification_live"
+      ],
+      "qualification_status_reason": "仍保有前二和小组第一路径；平局是否足够取决于另一场与 tie-break。",
+      "uncertainty_label": "medium"
+    },
+    {
+      "team": "比利时",
+      "tags": [
+        "first_place_race",
+        "qualification_live"
+      ],
+      "qualification_status_reason": "仍保有前二与头名可能；平局仅保留较窄路径，赢球最直接。",
+      "uncertainty_label": "medium"
+    },
+    {
+      "team": "新西兰",
+      "tags": [
+        "must_win"
+      ],
+      "qualification_status_reason": "1分垫底，只有取胜才保有现实晋级路径。",
+      "uncertainty_label": "low"
+    }
+  ],
+  "bracket_path_expectation": [
+    {
+      "finish_position": "G组第一",
+      "likely_round_of_32_opponent_pool": [
+        "A组第三",
+        "E组第三",
+        "H组第三",
+        "I组第三",
+        "J组第三"
+      ],
+      "opponent_strength_note": "对手为最佳第三名池，强度离散度较大。",
+      "rest_day_impact": "unknown",
+      "travel_impact": "unknown",
+      "venue_impact": "unknown",
+      "uncertainty_note": "需等待最佳第三名矩阵锁定。"
+    },
+    {
+      "finish_position": "G组第二",
+      "likely_round_of_32_opponent_pool": [
+        "D组第二"
+      ],
+      "opponent_strength_note": "路径相对固定。",
+      "rest_day_impact": "unknown",
+      "travel_impact": "unknown",
+      "venue_impact": "unknown",
+      "uncertainty_note": "仍待完整淘汰赛路径表与场地表核对。"
+    },
+    {
+      "finish_position": "G组第三",
+      "likely_round_of_32_opponent_pool": [
+        "B组第一",
+        "I组第一"
+      ],
+      "opponent_strength_note": "仅在进入最佳第三名单时成立。",
+      "rest_day_impact": "unknown",
+      "travel_impact": "unknown",
+      "venue_impact": "unknown",
+      "uncertainty_note": "受最佳第三名比较矩阵影响较大。"
+    }
+  ],
+  "discipline_rotation_risk": {
+    "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+    "items": [
+      {
+        "team": "比利时",
+        "player": "Nathan Ngoy",
+        "risk_type": "discipline_monitor",
+        "detail": "本地第二轮复盘/成员表记录对伊朗一战出现红牌事件；第三轮可用性需以官方赛前名单最终确认。",
+        "source_status": "local_verified_official_pending"
+      },
+      {
+        "team": "比利时",
+        "player": "Timothy Castagne",
+        "risk_type": "yellow_card_logged",
+        "detail": "第一轮对埃及吃黄。",
+        "source_status": "local_verified"
+      },
+      {
+        "team": "比利时",
+        "player": "Maxim De Cuyper",
+        "risk_type": "yellow_card_logged",
+        "detail": "第一轮替补登场后吃黄。",
+        "source_status": "local_verified"
+      },
+      {
+        "team": "埃及",
+        "player": "Ahmed Fatouh",
+        "risk_type": "yellow_card_logged",
+        "detail": "第一轮对比利时吃黄。",
+        "source_status": "local_verified"
+      },
+      {
+        "team": "埃及",
+        "player": "Marwan Ateya",
+        "risk_type": "yellow_card_logged",
+        "detail": "第一轮对比利时吃黄。",
+        "source_status": "local_verified"
+      },
+      {
+        "team": "伊朗",
+        "player": "Mehdi Taremi",
+        "risk_type": "fitness_monitor",
+        "detail": "本地成员表保留小腿不适观察信号，但未见官方赛前 out 确认。",
+        "source_status": "local_verified_official_pending"
+      },
+      {
+        "team": "伊朗",
+        "player": "Mohammad Mohebi",
+        "risk_type": "fitness_monitor",
+        "detail": "本地成员表保留脚踝接触观察信号，但未见官方赛前 out 确认。",
+        "source_status": "local_verified_official_pending"
+      }
+    ],
+    "team_level_note": "四队 T-75 官方首发未公布，不视为错误；赛前最后一次纪律/伤停应继续刷新。"
+  },
+  "odds": [
+    {
+      "match_number": "周五065",
+      "match": "埃及 vs 伊朗",
+      "source": "中国足彩网竞彩混合页",
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "source_system_time": "2026-06-25 12:00:11",
+      "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+      "ordinary_spf": {
+        "status": "available",
+        "home_win": 2.32,
+        "draw": 2.5,
+        "away_win": 3.35,
+        "implied_probability_raw": {
+          "home_win": 0.4310,
+          "draw": 0.4000,
+          "away_win": 0.2985
+        },
+        "devig_probability": {
+          "home_win": 0.3816,
+          "draw": 0.3541,
+          "away_win": 0.2643
+        }
+      },
+      "handicap_spf": {
+        "status": "available",
+        "handicap": -1,
+        "home_win": 5.5,
+        "draw": 3.8,
+        "away_win": 1.46,
+        "implied_probability_raw": {
+          "home_win": 0.1818,
+          "draw": 0.2632,
+          "away_win": 0.6849
+        },
+        "devig_probability": {
+          "home_win": 0.1609,
+          "draw": 0.2329,
+          "away_win": 0.6062
+        }
+      },
+      "reference_display": {
+        "status": "reference_only_not_same_market",
+        "home": 3.63,
+        "draw": 2.45,
+        "away": 2.65
+      }
+    },
+    {
+      "match_number": "周五066",
+      "match": "新西兰 vs 比利时",
+      "source": "中国足彩网竞彩混合页",
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "source_system_time": "2026-06-25 12:00:11",
+      "captured_at": "2026-06-25T12:12:50.4423921+08:00",
+      "ordinary_spf": {
+        "status": "unopened",
+        "home_win": null,
+        "draw": null,
+        "away_win": null,
+        "implied_probability_raw": null,
+        "devig_probability": null
+      },
+      "handicap_spf": {
+        "status": "available",
+        "handicap": 2,
+        "home_win": 2.3,
+        "draw": 3.9,
+        "away_win": 2.28,
+        "implied_probability_raw": {
+          "home_win": 0.4348,
+          "draw": 0.2564,
+          "away_win": 0.4386
+        },
+        "devig_probability": {
+          "home_win": 0.3848,
+          "draw": 0.2270,
+          "away_win": 0.3882
+        }
+      },
+      "reference_display": {
+        "status": "reference_only_not_same_market",
+        "home": 1.16,
+        "draw": 16.15,
+        "away": 7.68
+      }
+    }
+  ],
+  "local_read_status": {
+    "member_tables_read": [
+      "K:\\worldcup\\队伍\\比利时\\成员表.md",
+      "K:\\worldcup\\队伍\\埃及\\成员表.md",
+      "K:\\worldcup\\队伍\\伊朗\\成员表.md",
+      "K:\\worldcup\\队伍\\新西兰\\成员表.md"
+    ],
+    "completed_match_files_read": [
+      "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\2026-06-15_伊朗_2-2_新西兰_复盘.md",
+      "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\2026-06-15_比利时_1-1_埃及_复盘.md",
+      "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\2026-06-21_新西兰_1-3_埃及_复盘.md",
+      "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\2026-06-21_比利时_0-0_伊朗_复盘.md"
+    ]
+  },
+  "data_gaps": [
+    {
+      "field": "official_discipline_confirmation",
+      "status": "missing",
+      "detail": "FIFA 官方可读页面下的逐队黄牌累计/停赛最终确认未在当前抓取面直接取到。"
+    },
+    {
+      "field": "sina_structured_odds_crosscheck",
+      "status": "missing_or_blocked",
+      "detail": "新浪体育/新浪彩票未获得可稳定复核的同场结构化赔率页。"
+    },
+    {
+      "field": "official_t75_lineups",
+      "status": "not_yet_published",
+      "detail": "四队 T-75 官方首发尚未公布，不视为错误。"
+    },
+    {
+      "field": "final_pre_match_injury_refresh",
+      "status": "partial",
+      "detail": "四队赛前最后一次官方伤停通报未全部可读核验。"
+    },
+    {
+      "field": "new_zealand_vs_belgium_ordinary_spf",
+      "status": "unopened",
+      "detail": "周五066 普通胜平负未开售，同源主市场概率不完整。"
+    }
+  ],
+  "recommendations_to_modeler": [
+    "可直接使用积分榜快照、净胜球、进球数、同时开球依赖、第三轮资格标签、场地和当前竞彩快照。",
+    "比利时第三轮防线可用性保留一层不确定性；Nathan Ngoy 红牌后续处理需等官方赛前名单或纪律确认。",
+    "新西兰应视为 must_win，埃及应视为 draw_enough 且仍有小组第一动机。",
+    "周五066 仅拿到让球胜平负，普通胜平负未开售；若模型要求同源主市场，请标记 missing_or_stale。",
+    "当前资格标签包含派生判断，适合做情境输入，不应替代官方即时出线公告。"
+  ],
+  "factor_inputs_ready": true
+}

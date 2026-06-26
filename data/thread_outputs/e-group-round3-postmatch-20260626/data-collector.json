@@ -1,0 +1,442 @@
+{
+  "phase": "postmatch_fact_collection",
+  "group": "E",
+  "match": [
+    "ecuador-vs-germany-2026-06-25",
+    "curacao-vs-ivory-coast-2026-06-25"
+  ],
+  "status": "partial",
+  "final_status": "partial",
+  "json_validated": true,
+  "created_at": "2026-06-26T00:00:00+08:00",
+  "updated_at": "2026-06-26T10:08:26.0804315+08:00",
+  "source_time": "2026-06-26T10:08:26.0804315+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "e-group-round3-postmatch-facts-only",
+  "factor_inputs_ready": true,
+  "summary": {
+    "matches_collected": 2,
+    "result_chain_verified": true,
+    "odds_chain_verified": true,
+    "player_state_backfill_ready": "partial",
+    "member_table_backfill_ready": "partial",
+    "notes": [
+      "两场赛果、主要进球链和竞彩赛前赔率链已核验。",
+      "四队 player_state JSON 可解析，但 2026-06-25 第三轮赛后信息尚未回灌。",
+      "分钟级首发/换人与同源逐人评分未在本轮稳定拿齐，因此保留 partial/blocked。"
+    ]
+  },
+  "matches": [
+    {
+      "match_id": "ecuador-vs-germany-2026-06-25",
+      "match_no": "周四055",
+      "date": "2026-06-25",
+      "fixture": {
+        "home_team_cn": "厄瓜多尔",
+        "away_team_cn": "德国",
+        "home_team_en": "Ecuador",
+        "away_team_en": "Germany"
+      },
+      "score": {
+        "full_time": "2-1",
+        "half_time": "1-1",
+        "winner": "厄瓜多尔"
+      },
+      "goals": [
+        {
+          "team": "德国",
+          "player": "Leroy Sane",
+          "minute": 2,
+          "status": "confirmed"
+        },
+        {
+          "team": "厄瓜多尔",
+          "player": "Nilson Angulo",
+          "minute": 9,
+          "status": "confirmed"
+        },
+        {
+          "team": "厄瓜多尔",
+          "player": "Gonzalo Plata",
+          "minute": 77,
+          "status": "confirmed"
+        }
+      ],
+      "assists": {
+        "status": "unverified",
+        "data": []
+      },
+      "cards": {
+        "status": "blocked_pending_stable_source",
+        "data": []
+      },
+      "lineups": {
+        "status": "partial",
+        "notes": "本地复盘与主流 live/report 可支撑首发和换人二次整理，但本轮未完成结构化逐人回填。"
+      },
+      "substitutions": {
+        "status": "partial",
+        "notes": "存在可读赛报来源，但未完成分钟级统一校验。"
+      },
+      "player_ratings": {
+        "status": "blocked_or_partial_source_limited",
+        "notes": "本轮未取得四队同源、稳定、可复核的逐人评分表。"
+      },
+      "pre_match_odds": {
+        "source": "中国足彩网竞彩混合页（经本地预测包/赛后复盘包回读）",
+        "captured_at": "2026-06-25T11:16:48+08:00",
+        "one_x_two": {
+          "home_win": 4.36,
+          "draw": 4.05,
+          "away_win": 1.53
+        },
+        "one_x_two_no_vig_probability": {
+          "home_win": 0.203,
+          "draw": 0.2185,
+          "away_win": 0.5785
+        },
+        "handicap": {
+          "line": "+1",
+          "home_win": 2.14,
+          "draw": 3.45,
+          "away_win": 2.69
+        },
+        "handicap_no_vig_probability": {
+          "home_win": 0.4139,
+          "draw": 0.2568,
+          "away_win": 0.3293
+        }
+      },
+      "result_vs_market": {
+        "one_x_two_result": "home_win",
+        "one_x_two_market_signal": "德国为明显赛前热门，实际为厄瓜多尔爆冷取胜。",
+        "handicap_result": "home_win",
+        "handicap_interpretation": "厄瓜多尔受让 +1 下打出主胜。"
+      },
+      "source_status": "confirmed_core_facts_partial_extended_fields",
+      "player_state_backfill_candidates": [
+        {
+          "team": "厄瓜多尔",
+          "players": [
+            "Gonzalo Plata",
+            "Nilson Angulo"
+          ],
+          "fields": [
+            "round3_goals",
+            "form_status_1_5",
+            "form_status_reason",
+            "per_match_ratings_if_available"
+          ]
+        },
+        {
+          "team": "德国",
+          "players": [
+            "Leroy Sane"
+          ],
+          "fields": [
+            "round3_goals",
+            "form_status_1_5",
+            "form_status_reason",
+            "per_match_ratings_if_available"
+          ]
+        }
+      ],
+      "member_table_backfill_candidates": [
+        "厄瓜多尔成员表.md：补第三轮比分、进球人、球员状态变化。",
+        "德国成员表.md：补第三轮失利背景与 Sane 进球状态。"
+      ],
+      "gaps": [
+        "助攻链未在本轮稳定核到。",
+        "牌、完整首发、换人分钟未完成官方或同级稳定源统一校验。",
+        "逐人评分缺少同源结构化抓取。"
+      ],
+      "sources": [
+        {
+          "type": "local_prediction_packet",
+          "url": "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-quant-prediction-20260625.json",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        },
+        {
+          "type": "local_postmortem_packet",
+          "url": "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-postmortem-20260626.json",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        },
+        {
+          "type": "local_review",
+          "url": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\E组\\2026-06-25_厄瓜多尔_2-1_德国_复盘.md",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        },
+        {
+          "type": "web_report",
+          "url": "https://www.theguardian.com/football/2026/jun/25/ecuador-germany-world-cup-match-report",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        },
+        {
+          "type": "web_live_or_report",
+          "url": "https://www.espn.com/soccer/report/_/gameId/760468",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        }
+      ]
+    },
+    {
+      "match_id": "curacao-vs-ivory-coast-2026-06-25",
+      "match_no": "周四056",
+      "date": "2026-06-25",
+      "fixture": {
+        "home_team_cn": "库拉索",
+        "away_team_cn": "科特迪瓦",
+        "home_team_en": "Curacao",
+        "away_team_en": "Ivory Coast"
+      },
+      "score": {
+        "full_time": "0-2",
+        "half_time": "0-1",
+        "winner": "科特迪瓦"
+      },
+      "goals": [
+        {
+          "team": "科特迪瓦",
+          "player": "Pepe",
+          "minute": 7,
+          "status": "confirmed"
+        },
+        {
+          "team": "科特迪瓦",
+          "player": "Pepe",
+          "minute": 64,
+          "status": "confirmed"
+        }
+      ],
+      "assists": {
+        "status": "unverified",
+        "data": []
+      },
+      "cards": {
+        "status": "blocked_pending_stable_source",
+        "data": []
+      },
+      "lineups": {
+        "status": "partial",
+        "notes": "本地复盘与主流赛报可支持后续整理，但当前事实包只锁定核心赛果与进球链。"
+      },
+      "substitutions": {
+        "status": "partial",
+        "notes": "存在可读赛报来源，但未完成分钟级结构化。"
+      },
+      "player_ratings": {
+        "status": "blocked_or_partial_source_limited",
+        "notes": "同源逐人评分未稳定取得。"
+      },
+      "pre_match_odds": {
+        "source": "中国足彩网竞彩混合页（经本地预测包/赛后复盘包回读）",
+        "captured_at": "2026-06-25T11:16:48+08:00",
+        "one_x_two": null,
+        "one_x_two_status": "unavailable_or_not_open",
+        "handicap": {
+          "line": "+2",
+          "home_win": 2.4,
+          "draw": 3.85,
+          "away_win": 2.21
+        },
+        "handicap_no_vig_probability": {
+          "home_win": 0.3691,
+          "draw": 0.2301,
+          "away_win": 0.4008
+        }
+      },
+      "result_vs_market": {
+        "one_x_two_result": "unavailable",
+        "one_x_two_market_signal": "普通胜平负赛前未开售或未记录到结构化赔率。",
+        "handicap_result": "draw",
+        "handicap_interpretation": "库拉索受让 +2，实际 0 比 2，对应让球平。"
+      },
+      "source_status": "confirmed_core_facts_partial_extended_fields",
+      "player_state_backfill_candidates": [
+        {
+          "team": "科特迪瓦",
+          "players": [
+            "Pepe"
+          ],
+          "fields": [
+            "round3_goals",
+            "form_status_1_5",
+            "form_status_reason",
+            "per_match_ratings_if_available"
+          ]
+        },
+        {
+          "team": "库拉索",
+          "players": [],
+          "fields": [
+            "starter_minutes_pending_lineup_verification",
+            "defensive_concession_context",
+            "per_match_ratings_if_available"
+          ]
+        }
+      ],
+      "member_table_backfill_candidates": [
+        "科特迪瓦成员表.md：补 Pepe 梅开二度、零封结果与状态上调依据。",
+        "库拉索成员表.md：补第三轮失利、失球与出场负荷信息。"
+      ],
+      "gaps": [
+        "助攻链未在本轮稳定核到。",
+        "普通胜平负赔率缺失或未开售，无法做完整 1X2 赛果映射。",
+        "完整首发、换人分钟、逐人评分未完成结构化统一。"
+      ],
+      "sources": [
+        {
+          "type": "local_prediction_packet",
+          "url": "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-quant-prediction-20260625.json",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        },
+        {
+          "type": "local_postmortem_packet",
+          "url": "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-postmortem-20260626.json",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        },
+        {
+          "type": "local_review",
+          "url": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\E组\\2026-06-25_库拉索_0-2_科特迪瓦_复盘.md",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        },
+        {
+          "type": "web_report",
+          "url": "https://www.theguardian.com/football/2026/jun/25/pepe-at-the-double-as-cote-divoire-beat-curacao-and-claim-place-in-last-32",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        },
+        {
+          "type": "web_live_or_report",
+          "url": "https://www.espn.com/soccer/report/_/gameId/760473",
+          "captured_at": "2026-06-26T10:08:26.0804315+08:00"
+        }
+      ]
+    }
+  ],
+  "canonical_read_status": {
+    "player_state_files": [
+      {
+        "team": "厄瓜多尔",
+        "path": "K:\\worldcup\\data\\outputs\\player_state\\ecuador-player-state.json",
+        "exists": true,
+        "json_parse_status": "ok",
+        "updated_at": "2026-06-22T09:25:00+08:00",
+        "round3_backfill_detected": false
+      },
+      {
+        "team": "德国",
+        "path": "K:\\worldcup\\data\\outputs\\player_state\\germany-player-state.json",
+        "exists": true,
+        "json_parse_status": "ok",
+        "updated_at": "2026-06-22T21:04:20+08:00",
+        "round3_backfill_detected": false
+      },
+      {
+        "team": "库拉索",
+        "path": "K:\\worldcup\\data\\outputs\\player_state\\curacao-player-state.json",
+        "exists": true,
+        "json_parse_status": "ok",
+        "updated_at": "2026-06-22T09:25:00+08:00",
+        "round3_backfill_detected": false
+      },
+      {
+        "team": "科特迪瓦",
+        "path": "K:\\worldcup\\data\\outputs\\player_state\\ivory-coast-player-state.json",
+        "exists": true,
+        "json_parse_status": "ok",
+        "updated_at": "2026-06-22T21:04:20+08:00",
+        "round3_backfill_detected": false
+      }
+    ],
+    "member_table_files": [
+      {
+        "team": "厄瓜多尔",
+        "path": "K:\\worldcup\\队伍\\厄瓜多尔\\成员表.md",
+        "exists": true,
+        "round3_backfill_detected": false
+      },
+      {
+        "team": "德国",
+        "path": "K:\\worldcup\\队伍\\德国\\成员表.md",
+        "exists": true,
+        "round3_backfill_detected": false
+      },
+      {
+        "team": "库拉索",
+        "path": "K:\\worldcup\\队伍\\库拉索\\成员表.md",
+        "exists": true,
+        "round3_backfill_detected": false
+      },
+      {
+        "team": "科特迪瓦",
+        "path": "K:\\worldcup\\队伍\\科特迪瓦\\成员表.md",
+        "exists": true,
+        "round3_backfill_detected": false
+      }
+    ]
+  },
+  "missing_fields": [
+    "两场助攻链官方或同级稳定源最终确认",
+    "两场完整首发与换人分钟结构化回填",
+    "两场逐人评分同源结构化数据",
+    "四队 2026-06-25 赛后 player_state 回灌",
+    "四队 2026-06-25 赛后成员表回灌"
+  ],
+  "gaps_and_conflicts": [
+    {
+      "type": "ratings_gap",
+      "status": "blocked",
+      "detail": "逐人评分未从同源、稳定、可复核页面成功结构化获取。"
+    },
+    {
+      "type": "lineup_substitution_gap",
+      "status": "partial",
+      "detail": "主流赛报可读，但本轮未完成分钟级统一回填。"
+    },
+    {
+      "type": "odds_gap",
+      "status": "partial",
+      "detail": "周四056 普通胜平负未开售或未记录到结构化赔率，仅可使用让球胜平负链。"
+    }
+  ],
+  "source_log": [
+    {
+      "source": "中国足彩网竞彩混合页（经本地预测包回读）",
+      "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-25T11:16:48+08:00",
+      "supports_fields": [
+        "match_no",
+        "one_x_two_odds",
+        "handicap_odds",
+        "pre_match_market_signal"
+      ],
+      "source_status": "confirmed_via_local_packet"
+    },
+    {
+      "source": "E组第三轮赛后复盘包",
+      "url": "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-postmortem-20260626.json",
+      "captured_at": "2026-06-26T10:08:26.0804315+08:00",
+      "supports_fields": [
+        "final_scores",
+        "key_events",
+        "result_vs_market"
+      ],
+      "source_status": "confirmed_local"
+    },
+    {
+      "source": "Guardian/ESPN 赛报交叉核验",
+      "url": "https://www.theguardian.com/football/2026/jun/25/ecuador-germany-world-cup-match-report",
+      "captured_at": "2026-06-26T10:08:26.0804315+08:00",
+      "supports_fields": [
+        "scoreline",
+        "goals",
+        "half_time_context"
+      ],
+      "source_status": "confirmed_web"
+    }
+  ],
+  "notes": [
+    "Skeleton created first per anti-disconnect workflow.",
+    "This packet collects facts only and does not provide predictions or betting advice.",
+    "未对四队 canonical 文件做写入，只输出赛后事实与建议回灌字段。"
+  ]
+}

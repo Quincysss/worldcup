@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "phase": "postmatch_review",
+    "group": "K",
+    "round": 2,
+    "match_id": "K-R2-COL-DRC-20260624",
+    "created_at": "2026-06-24T18:30:00+08:00",
+    "workflow": [
+      "collect_facts",
+      "tactical_judgement",
+      "model_backtest",
+      "red_team_check",
+      "write_files",
+      "validate"
+    ],
+    "role_thread_outputs": {
+      "data_collector": "data/thread_outputs/k-group-round2-colombia-drcongo-postmatch-20260624/data-collector.md",
+      "tactics_coach": "data/thread_outputs/k-group-round2-colombia-drcongo-postmatch-20260624/tactics-coach.md",
+      "modeler": "data/thread_outputs/k-group-round2-colombia-drcongo-postmatch-20260624/modeler.md",
+      "red_team": "data/thread_outputs/k-group-round2-colombia-drcongo-postmatch-20260624/red-team.md"
+    }
+  },
+  "actual": {
+    "score": "哥伦比亚 1-0 刚果金",
+    "local_date": "2026-06-23",
+    "beijing_date": "2026-06-24",
+    "kickoff_beijing": "2026-06-24T10:00:00+08:00",
+    "venue": "Estadio Guadalajara / Estadio Akron, Guadalajara/Zapopan",
+    "goal": "76' 丹尼尔·穆尼奥斯，胡安·费尔南多·昆特罗助攻",
+    "formations": {
+      "colombia": "4-2-3-1",
+      "dr_congo": "5-3-2"
+    },
+    "key_stats": {
+      "colombia_shots": 20,
+      "colombia_shots_on_target": 9,
+      "dr_congo_shots": 7,
+      "dr_congo_shots_on_target": 2,
+      "dr_congo_goalkeeper_saves": 6,
+      "dr_congo_goalkeeper_saves_conflict": "FOX key players shows Lionel Mpasi 6 saves; data-collector notes FOX play-by-play reverse count may imply 8 saves.",
+      "total_goals": 1
+    }
+  },
+  "prediction_backtest": {
+    "prediction": {
+      "source_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260623.json",
+      "pre_match_pick": "哥伦比亚小胜倾向，比分 1-0 / 2-1，信心 low_medium",
+      "expected_goals": {
+        "colombia": 1.72,
+        "dr_congo": 0.94
+      },
+      "probabilities_1x2": {
+        "colombia_win": 0.5575,
+        "draw": 0.2379,
+        "dr_congo_win": 0.2047
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.1203
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1131
+        },
+        {
+          "score": "2-0",
+          "probability": 0.1035
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0973
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0699
+        }
+      ],
+      "totals_probabilities": {
+        "over_2_5": 0.4965,
+        "under_2_5": 0.5035,
+        "btts_yes": 0.5003
+      },
+      "sporttery_reference": {
+        "competition_no": "周二048",
+        "ordinary_spf_odds": [
+          1.35,
+          3.9,
+          7.6
+        ],
+        "ordinary_spf_implied_normalized": [
+          0.6563,
+          0.2272,
+          0.1166
+        ],
+        "rqspf_handicap": -1,
+        "rqspf_odds": [
+          2.22,
+          3.35,
+          2.63
+        ],
+        "rqspf_implied_normalized": [
+          0.3989,
+          0.2644,
+          0.3367
+        ]
+      }
+    },
+    "verdict": {
+      "win_draw_loss": "hit",
+      "exact_score": "hit",
+      "under_2_5": "hit_low_edge",
+      "handicap_minus_1": "risk_warning_hit",
+      "btts": "miss_edge_case"
+    }
+  },
+  "tactical_summary": {
+    "colombia": "58分钟后由昆特罗直塞、科尔多瓦支点和穆尼奥斯弱侧前插解决低位防线。",
+    "dr_congo": "五后卫和门将高扑救把比分压低，但反击出球链路不足。"
+  },
+  "player_state_updates": {
+    "colombia_updated_players": [
+      {
+        "english": "Camilo Vargas",
+        "chinese": "卡米洛·巴尔加斯"
+      },
+      {
+        "english": "Jhon Lucumí",
+        "chinese": "约翰·卢库米"
+      },
+      {
+        "english": "Davinson Sánchez",
+        "chinese": "达文森·桑切斯"
+      },
+      {
+        "english": "Johan Mojica",
+        "chinese": "约翰·莫希卡"
+      },
+      {
+        "english": "Daniel Muñoz",
+        "chinese": "丹尼尔·穆尼奥斯"
+      },
+      {
+        "english": "Jefferson Lerma",
+        "chinese": "杰弗森·莱尔马"
+      },
+      {
+        "english": "Gustavo Puerta",
+        "chinese": "古斯塔沃·普埃尔塔"
+      },
+      {
+        "english": "Luis Díaz",
+        "chinese": "路易斯·迪亚斯"
+      },
+      {
+        "english": "James Rodríguez",
+        "chinese": "哈梅斯·罗德里格斯"
+      },
+      {
+        "english": "Jhon Arias",
+        "chinese": "约翰·阿里亚斯"
+      },
+      {
+        "english": "Luis Suárez",
+        "chinese": "路易斯·苏亚雷斯"
+      },
+      {
+        "english": "Juan Fernando Quintero",
+        "chinese": "胡安·费尔南多·昆特罗"
+      },
+      {
+        "english": "Jhon Córdoba",
+        "chinese": "约翰·科尔多瓦"
+      },
+      {
+        "english": "Richard Ríos",
+        "chinese": "理查德·里奥斯"
+      }
+    ],
+    "dr_congo_updated_players": [
+      {
+        "english": "Lionel Mpasi",
+        "chinese": "利昂内尔·姆帕西"
+      },
+      {
+        "english": "Aaron Wan-Bissaka",
+        "chinese": "阿隆·万-比萨卡"
+      },
+      {
+        "english": "Chancel Mbemba",
+        "chinese": "尚塞尔·姆本巴"
+      },
+      {
+        "english": "Axel Tuanzebe",
+        "chinese": "阿克塞尔·图安泽贝"
+      },
+      {
+        "english": "Steve Kapuadi",
+        "chinese": "史蒂夫·卡普阿迪"
+      },
+      {
+        "english": "Arthur Masuaku",
+        "chinese": "阿蒂尔·马苏亚库"
+      },
+      {
+        "english": "Ngalayel Mukau",
+        "chinese": "恩加莱耶尔·穆考"
+      },
+      {
+        "english": "Samuel Moutoussamy",
+        "chinese": "萨穆埃尔·穆图萨米"
+      },
+      {
+        "english": "Edo Kayembe",
+        "chinese": "埃多·卡延贝"
+      },
+      {
+        "english": "Cedric Bakambu",
+        "chinese": "塞德里克·巴坎布"
+      },
+      {
+        "english": "Yoane Wissa",
+        "chinese": "约阿内·威萨"
+      },
+      {
+        "english": "Noah Sadiki",
+        "chinese": "诺亚·萨迪基"
+      },
+      {
+        "english": "Simon Banza",
+        "chinese": "西蒙·班扎"
+      },
+      {
+        "english": "Joris Kayembe",
+        "chinese": "约里斯·卡延贝"
+      },
+      {
+        "english": "Charles Pickel",
+        "chinese": "夏尔·皮克尔"
+      },
+      {
+        "english": "Nathanael Mbuku",
+        "chinese": "纳塔纳埃尔·姆布库"
+      }
+    ]
+  },
+  "red_team_notes": [
+    "不要把1-0误读为哥伦比亚进攻弱，射门量和射正量显示压制真实存在。",
+    "不要把姆帕西高扑救直接外推为刚果金整体防守提升。",
+    "让球与普通胜继续分离建模。",
+    "黄牌事件存在源冲突，需赛前再查官方停赛。",
+    "姆帕西扑救数存在6次与事件流反推8次冲突，模型只使用方向性门将高光信号。"
+  ],
+  "sources": [
+    {
+      "name": "FOX Sports box score",
+      "url": "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
+      "captured_at": "2026-06-24T18:30:00+08:00",
+      "fields": [
+        "lineups",
+        "formations",
+        "substitutions",
+        "cards",
+        "goal",
+        "saves",
+        "odds display"
+      ]
+    },
+    {
+      "name": "The Guardian live/report",
+      "url": "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest",
+      "captured_at": "2026-06-24T18:30:00+08:00",
+      "fields": [
+        "match narrative",
+        "shots",
+        "shots on target",
+        "qualification impact",
+        "goal context"
+      ]
+    }
+  ]
+}

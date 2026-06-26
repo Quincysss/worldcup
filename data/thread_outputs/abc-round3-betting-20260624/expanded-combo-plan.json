@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-06-24T19:05:00+08:00",
+  "scope": "A/B/C组三第三轮，周三049-054",
+  "status": "discussion_only",
+  "betting_gate": "hold_not_executable",
+  "source": {
+    "name": "中国足彩网竞彩混合页",
+    "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+    "note": "页面提示系统升级暂停销售；赔率只用于讨论与校准。"
+  },
+  "core_pool": [
+    {
+      "id": "050",
+      "fixture": "波黑 vs 卡塔尔",
+      "pick": "波黑胜",
+      "role": "core_observation",
+      "risk": "低赔，波黑后防停赛，久攻不下有平局尾部。"
+    },
+    {
+      "id": "051",
+      "fixture": "苏格兰 vs 巴西",
+      "pick": "巴西胜",
+      "role": "core_observation",
+      "risk": "低赔，巴西领先后可能控节奏。"
+    },
+    {
+      "id": "049",
+      "fixture": "瑞士 vs 加拿大",
+      "pick": "瑞士-1让负",
+      "role": "protection",
+      "risk": "瑞士一球小胜落入让平。"
+    },
+    {
+      "id": "054",
+      "fixture": "捷克 vs 墨西哥",
+      "pick": "捷克+1让胜",
+      "role": "protection",
+      "risk": "墨西哥若主力强攻且早进球会破坏。"
+    }
+  ],
+  "combo_candidates": [
+    {
+      "type": "single",
+      "legs": ["050 波黑胜"],
+      "risk_level": "medium_low"
+    },
+    {
+      "type": "2x1",
+      "legs": ["050 波黑胜", "051 巴西胜"],
+      "risk_level": "medium_low"
+    },
+    {
+      "type": "2x1",
+      "legs": ["050 波黑胜", "054 捷克+1让胜"],
+      "risk_level": "medium"
+    },
+    {
+      "type": "3x1",
+      "legs": ["049 瑞士-1让负", "050 波黑胜", "051 巴西胜"],
+      "risk_level": "medium"
+    },
+    {
+      "type": "4x4",
+      "legs": ["049 瑞士-1让负", "050 波黑胜", "051 巴西胜", "054 捷克+1让胜"],
+      "risk_level": "medium_high"
+    },
+    {
+      "type": "entertainment_3x1",
+      "legs": ["050 波黑-1让胜", "051 苏格兰+1让负", "052 摩洛哥-2让胜"],
+      "risk_level": "high"
+    }
+  ],
+  "half_fulltime_fun": [
+    {
+      "id": "049",
+      "fixture": "瑞士 vs 加拿大",
+      "candidates": ["平/平", "平/胜", "平/负"]
+    },
+    {
+      "id": "050",
+      "fixture": "波黑 vs 卡塔尔",
+      "candidates": ["胜/胜", "平/胜"]
+    },
+    {
+      "id": "051",
+      "fixture": "苏格兰 vs 巴西",
+      "candidates": ["平/负", "负/负"]
+    },
+    {
+      "id": "052",
+      "fixture": "摩洛哥 vs 海地",
+      "candidates": ["胜/胜", "平/胜"]
+    },
+    {
+      "id": "053",
+      "fixture": "南非 vs 韩国",
+      "candidates": ["平/负", "负/负"]
+    },
+    {
+      "id": "054",
+      "fixture": "捷克 vs 墨西哥",
+      "candidates": ["平/平", "平/负"]
+    }
+  ],
+  "red_team_summary": "所有深盘、半全场和4串以上均降级为娱乐；销售恢复、官方首发、伤停和临场赔率复核前执行金额为0。"
+}

@@ -1,0 +1,276 @@
+{
+  "phase": "betting_input_data_collection",
+  "group": "D_E_F",
+  "status": "partial",
+  "created_at": "2026-06-25T15:32:29.0621000+08:00",
+  "updated_at": "2026-06-25T15:50:35.0714599+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "D/E/F组第三轮竞彩购彩建议输入复核，仅采集中国足彩网即时盘、本地旧预测盘口差异、未开售状态、T-75首发缺口与可入模字段，不输出投注建议。",
+  "source_time": "2026-06-25T15:50:35.0714599+08:00",
+  "site_sale_notice": "中国足彩网页面显示“因系统升级，该彩种暂停销售”，但周四055-060页面仍展示赔率数据；普通SPF是否可售以页面具体“未开售”与临场官方状态为准。",
+  "model_input_ready": true,
+  "model_usage_boundary": "pre_t75_discussion_only",
+  "missing_fields": [
+    "all_matches_official_t75_starting_xi_not_yet_published",
+    "same_day_predicted_lineup_refresh_needed",
+    "final_sale_status_needs_pre_cutoff_recheck"
+  ],
+  "source_log": [
+    {
+      "source": "中国足彩网竞彩混合页",
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "supports_fields": [
+        "周四055-060比赛编号",
+        "普通SPF",
+        "让球SPF",
+        "未开售状态",
+        "系统升级暂停销售提示"
+      ]
+    },
+    {
+      "source": "D组第三轮本地旧预测摘要",
+      "source_url": "K:\\worldcup\\data\\thread_outputs\\d-group-round3-20260625\\summary.md",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "supports_fields": [
+        "周四059旧普通SPF",
+        "周四060旧普通SPF",
+        "D组T-75首发不可得提醒"
+      ]
+    },
+    {
+      "source": "D组第三轮本地旧预测JSON",
+      "source_url": "K:\\worldcup\\比赛\\未开始比赛\\小组赛\\D组\\D组第三轮量化预测汇总_20260625.json",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "supports_fields": [
+        "周四059旧让球SPF",
+        "周四060旧让球SPF"
+      ]
+    },
+    {
+      "source": "E组第三轮本地旧预测JSON",
+      "source_url": "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-quant-prediction-20260625.json",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "supports_fields": [
+        "周四055旧普通SPF",
+        "周四055旧让球SPF",
+        "周四056旧普通SPF状态",
+        "周四056旧让球SPF"
+      ]
+    },
+    {
+      "source": "F组第三轮本地旧预测JSON",
+      "source_url": "K:\\worldcup\\data\\outputs\\match_predictions\\f-group-round3-quant-prediction-20260625.json",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "supports_fields": [
+        "周四057旧让球SPF",
+        "周四058旧普通SPF",
+        "周四058旧让球SPF"
+      ]
+    }
+  ],
+  "model_usable_fields": [
+    "match_no",
+    "group",
+    "fixture",
+    "kickoff_bjt",
+    "ordinary_spf_current",
+    "handicap_spf_current",
+    "ordinary_spf_status",
+    "handicap_line",
+    "raw_implied_probability",
+    "no_vig_implied_probability",
+    "delta_vs_project_snapshot",
+    "t75_official_lineups_status",
+    "predicted_lineup_gap"
+  ],
+  "matches": [
+    {
+      "match_no": "周四055",
+      "group": "E",
+      "fixture": "厄瓜多尔 vs 德国",
+      "kickoff_bjt": "2026-06-26 04:00",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "ordinary_spf_status": "displayed",
+      "ordinary_spf_current": [5.2, 4.95, 1.36],
+      "ordinary_spf_raw_implied_probability": [0.1923, 0.202, 0.7353],
+      "ordinary_spf_no_vig_probability": [0.1702, 0.1788, 0.6509],
+      "handicap_line": "+1",
+      "handicap_spf_status": "displayed",
+      "handicap_spf_current": [2.65, 3.72, 2.07],
+      "handicap_spf_raw_implied_probability": [0.3774, 0.2688, 0.4831],
+      "handicap_spf_no_vig_probability": [0.3342, 0.238, 0.4278],
+      "old_project_snapshot": {
+        "ordinary_spf": [4.36, 4.05, 1.53],
+        "handicap_spf": [2.14, 3.45, 2.69],
+        "snapshot_source": "e-group-round3-quant-prediction-20260625.json"
+      },
+      "delta_vs_project_snapshot": {
+        "ordinary_spf": [0.84, 0.9, -0.17],
+        "handicap_spf": [0.51, 0.27, -0.62],
+        "movement_note": "即时盘相对旧稿明显向德国倾斜，厄瓜多尔受让+1与德国净胜2球方向都发生实质移动。"
+      },
+      "t75_official_lineups_status": "not_yet_published",
+      "predicted_lineup_gap": "需要赛前75分钟官方首发单与临场轮换确认。",
+      "model_boundary": "odds_usable_pre_t75_lineup_sensitive"
+    },
+    {
+      "match_no": "周四056",
+      "group": "E",
+      "fixture": "库拉索 vs 科特迪瓦",
+      "kickoff_bjt": "2026-06-26 04:00",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "ordinary_spf_status": "unopened",
+      "ordinary_spf_current": null,
+      "ordinary_spf_raw_implied_probability": null,
+      "ordinary_spf_no_vig_probability": null,
+      "handicap_line": "+2",
+      "handicap_spf_status": "displayed",
+      "handicap_spf_current": [2.51, 3.85, 2.12],
+      "handicap_spf_raw_implied_probability": [0.3984, 0.2597, 0.4717],
+      "handicap_spf_no_vig_probability": [0.3526, 0.2299, 0.4175],
+      "old_project_snapshot": {
+        "ordinary_spf": null,
+        "ordinary_spf_status": "unopened",
+        "handicap_spf": [2.4, 3.85, 2.21],
+        "snapshot_source": "e-group-round3-quant-prediction-20260625.json"
+      },
+      "delta_vs_project_snapshot": {
+        "ordinary_spf": null,
+        "handicap_spf": [0.11, 0.0, -0.09],
+        "movement_note": "普通SPF仍未开售；让球+2盘较旧稿小幅向科特迪瓦净胜方向移动。"
+      },
+      "t75_official_lineups_status": "not_yet_published",
+      "predicted_lineup_gap": "需要赛前75分钟官方首发单与临场动机确认。",
+      "model_boundary": "handicap_only_usable_pre_t75"
+    },
+    {
+      "match_no": "周四057",
+      "group": "F",
+      "fixture": "突尼斯 vs 荷兰",
+      "kickoff_bjt": "2026-06-26 07:00",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "ordinary_spf_status": "unopened",
+      "ordinary_spf_current": null,
+      "ordinary_spf_raw_implied_probability": null,
+      "ordinary_spf_no_vig_probability": null,
+      "handicap_line": "+2",
+      "handicap_spf_status": "displayed",
+      "handicap_spf_current": [3.47, 4.25, 1.65],
+      "handicap_spf_raw_implied_probability": [0.2882, 0.2353, 0.6061],
+      "handicap_spf_no_vig_probability": [0.2551, 0.2083, 0.5366],
+      "old_project_snapshot": {
+        "ordinary_spf": null,
+        "ordinary_spf_status": "unopened",
+        "handicap_spf": [3.47, 4.25, 1.65],
+        "snapshot_source": "f-group-round3-quant-prediction-20260625.json"
+      },
+      "delta_vs_project_snapshot": {
+        "ordinary_spf": null,
+        "handicap_spf": [0.0, 0.0, 0.0],
+        "movement_note": "与本地旧稿一致，普通SPF仍未开售，让球+2盘未见变动。"
+      },
+      "t75_official_lineups_status": "not_yet_published",
+      "predicted_lineup_gap": "需要赛前75分钟官方首发单，尤其关注荷兰是否轮换。",
+      "model_boundary": "stable_handicap_snapshot_pre_t75"
+    },
+    {
+      "match_no": "周四058",
+      "group": "F",
+      "fixture": "日本 vs 瑞典",
+      "kickoff_bjt": "2026-06-26 07:00",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "ordinary_spf_status": "displayed",
+      "ordinary_spf_current": [1.6, 3.57, 4.45],
+      "ordinary_spf_raw_implied_probability": [0.625, 0.2801, 0.2247],
+      "ordinary_spf_no_vig_probability": [0.5532, 0.2479, 0.1989],
+      "handicap_line": "-1",
+      "handicap_spf_status": "displayed",
+      "handicap_spf_current": [2.8, 3.57, 2.03],
+      "handicap_spf_raw_implied_probability": [0.3571, 0.2801, 0.4926],
+      "handicap_spf_no_vig_probability": [0.3161, 0.2479, 0.436],
+      "old_project_snapshot": {
+        "ordinary_spf": [1.6, 3.57, 4.45],
+        "handicap_spf": [3.0, 3.7, 1.91],
+        "snapshot_source": "f-group-round3-quant-prediction-20260625.json"
+      },
+      "delta_vs_project_snapshot": {
+        "ordinary_spf": [0.0, 0.0, 0.0],
+        "handicap_spf": [-0.2, -0.13, 0.12],
+        "movement_note": "普通SPF未动；日本-1让球盘回落，市场对日本净胜2球以上的定价较旧稿更谨慎。"
+      },
+      "t75_official_lineups_status": "not_yet_published",
+      "predicted_lineup_gap": "需要赛前75分钟官方首发单，确认日本与瑞典是否按同开球形势保留/轮换主力。",
+      "model_boundary": "ordinary_and_handicap_usable_pre_t75_with_rotation_risk"
+    },
+    {
+      "match_no": "周四059",
+      "group": "D",
+      "fixture": "巴拉圭 vs 澳大利亚",
+      "kickoff_bjt": "2026-06-26 10:00",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "ordinary_spf_status": "displayed",
+      "ordinary_spf_current": [2.68, 2.11, 3.55],
+      "ordinary_spf_raw_implied_probability": [0.3731, 0.4739, 0.2817],
+      "ordinary_spf_no_vig_probability": [0.3306, 0.4199, 0.2496],
+      "handicap_line": "-1",
+      "handicap_spf_status": "displayed",
+      "handicap_spf_current": [6.2, 4.4, 1.35],
+      "handicap_spf_raw_implied_probability": [0.1613, 0.2273, 0.7407],
+      "handicap_spf_no_vig_probability": [0.1428, 0.2013, 0.6559],
+      "old_project_snapshot": {
+        "ordinary_spf": [2.63, 2.06, 3.8],
+        "handicap_spf": [6.1, 4.35, 1.36],
+        "snapshot_source": "d-group-round3-20260625/summary.md + D组第三轮量化预测汇总_20260625.json"
+      },
+      "delta_vs_project_snapshot": {
+        "ordinary_spf": [0.05, 0.05, -0.25],
+        "handicap_spf": [0.1, 0.05, -0.01],
+        "movement_note": "普通SPF略向澳大利亚不败方向移动；让球-1盘变化很小，仍不支持巴拉圭大胜定价。"
+      },
+      "t75_official_lineups_status": "not_yet_published",
+      "predicted_lineup_gap": "需要赛前75分钟官方首发单；本地旧稿已提示第三轮战意与人员调整会放大平局地板。",
+      "model_boundary": "ordinary_and_handicap_usable_pre_t75_with_motivation_risk"
+    },
+    {
+      "match_no": "周四060",
+      "group": "D",
+      "fixture": "土耳其 vs 美国",
+      "kickoff_bjt": "2026-06-26 10:00",
+      "captured_at": "2026-06-25T15:50:35.0714599+08:00",
+      "ordinary_spf_status": "displayed",
+      "ordinary_spf_current": [3.72, 3.87, 1.66],
+      "ordinary_spf_raw_implied_probability": [0.2688, 0.2584, 0.6024],
+      "ordinary_spf_no_vig_probability": [0.238, 0.2287, 0.5333],
+      "handicap_line": "+1",
+      "handicap_spf_status": "displayed",
+      "handicap_spf_current": [1.92, 3.85, 2.87],
+      "handicap_spf_raw_implied_probability": [0.5208, 0.2597, 0.3484],
+      "handicap_spf_no_vig_probability": [0.4613, 0.2301, 0.3086],
+      "old_project_snapshot": {
+        "ordinary_spf": [3.3, 3.5, 1.85],
+        "handicap_spf": [1.74, 4.0, 3.28],
+        "snapshot_source": "d-group-round3-20260625/summary.md + D组第三轮量化预测汇总_20260625.json"
+      },
+      "delta_vs_project_snapshot": {
+        "ordinary_spf": [0.42, 0.37, -0.19],
+        "handicap_spf": [0.18, -0.15, -0.41],
+        "movement_note": "普通SPF明显向美国倾斜；土耳其+1盘赔付抬升，美国方向相对强化。"
+      },
+      "t75_official_lineups_status": "not_yet_published",
+      "predicted_lineup_gap": "需要赛前75分钟官方首发单，尤其确认美国锁定排名后的轮换幅度。",
+      "model_boundary": "ordinary_and_handicap_usable_pre_t75_with_rotation_risk"
+    }
+  ],
+  "critical_changes": [
+    "周四055 厄瓜多尔 vs 德国：相对旧稿，普通SPF从 4.36/4.05/1.53 移到 5.20/4.95/1.36，德国方向明显变热。",
+    "周四056 库拉索 vs 科特迪瓦：普通SPF仍未开售；仅可用让球+2盘 2.51/3.85/2.12 做市场信号。",
+    "周四057 突尼斯 vs 荷兰：与本地旧稿一致，普通SPF未开售、让球+2盘未变。",
+    "周四058 日本 vs 瑞典：普通SPF不变，但日本-1让球盘从 3.00/3.70/1.91 移到 2.80/3.57/2.03，净胜2球信号走弱。",
+    "周四060 土耳其 vs 美国：普通SPF从 3.30/3.50/1.85 移到 3.72/3.87/1.66，美国方向强化最明显。"
+  ],
+  "notes": [
+    "页面欧赔/参考展示值未作为竞彩SP写入本数据包。",
+    "本数据包仅供主线程做赛前输入复核，不构成投注建议。"
+  ]
+}

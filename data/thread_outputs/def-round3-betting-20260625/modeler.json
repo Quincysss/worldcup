@@ -1,0 +1,1032 @@
+﻿{
+  "phase": "betting_discussion",
+  "group": "D/E/F",
+  "match": null,
+  "status": "complete_discussion_only",
+  "created_at": "2026-06-25T22:00:00+08:00",
+  "updated_at": "2026-06-25T22:05:00+08:00",
+  "owner": "data-modeler-agent",
+  "scope": "D/E/F?????????????100???70????30",
+  "missing_fields": [
+    "official_lineups_t_minus_75",
+    "latest_odds_recheck",
+    "red_team_betting_lane"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\thread_outputs\\d-group-round3-20260625\\summary.md",
+    "K:\\worldcup\\??\\?????\\???\\D?\\D??????????_20260625.json",
+    "K:\\worldcup\\data\\outputs\\match_predictions\\e-group-round3-quant-prediction-20260625.json",
+    "K:\\worldcup\\data\\outputs\\match_predictions\\f-group-round3-quant-prediction-20260625.json"
+  ],
+  "odds_snapshot": {
+    "source": "???????????????",
+    "captured_date": "2026-06-25",
+    "issues": {
+      "055": {
+        "spf": [
+          5.2,
+          4.95,
+          1.36
+        ],
+        "rq+1": [
+          2.65,
+          3.72,
+          2.07
+        ]
+      },
+      "056": {
+        "spf": null,
+        "rq+2": [
+          2.51,
+          3.85,
+          2.12
+        ]
+      },
+      "057": {
+        "spf": null,
+        "rq+2": [
+          3.47,
+          4.25,
+          1.65
+        ]
+      },
+      "058": {
+        "spf": [
+          1.6,
+          3.57,
+          4.45
+        ],
+        "rq-1": [
+          2.8,
+          3.57,
+          2.03
+        ]
+      },
+      "059": {
+        "spf": [
+          2.68,
+          2.11,
+          3.55
+        ],
+        "rq-1": [
+          6.2,
+          4.4,
+          1.35
+        ]
+      },
+      "060": {
+        "spf": [
+          3.72,
+          3.87,
+          1.66
+        ],
+        "rq+1": [
+          1.92,
+          3.85,
+          2.87
+        ]
+      }
+    }
+  },
+  "matches": [
+    {
+      "issue": "055",
+      "match": "???? vs ??",
+      "group": "E",
+      "xg": {
+        "home": 0.9,
+        "away": 1.4
+      },
+      "model_probabilities_1x2": {
+        "home": 0.2417,
+        "draw": 0.2724,
+        "away": 0.4859
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.1404
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1263
+        },
+        {
+          "score": "0-0",
+          "probability": 0.1003
+        },
+        {
+          "score": "0-2",
+          "probability": 0.0983
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0902
+        }
+      ],
+      "totals_2_5": {
+        "over": 0.40396117406793175,
+        "under": 0.5960388259320683
+      },
+      "spf_market": {
+        "home": 0.17024074448715354,
+        "draw": 0.17883876188549463,
+        "away": 0.6509204936273517,
+        "booksum": 1.1296220119749532
+      },
+      "rq_market": {
+        "handicap": 1,
+        "win": 0.33416218608829235,
+        "draw": 0.2380456433155846,
+        "lose": 0.42779217059612307,
+        "booksum": 1.1292674823067266
+      },
+      "model_rq_probabilities": {
+        "win": 0.5141002618804249,
+        "draw": 0.24943862621176108,
+        "lose": 0.23646082560458923
+      }
+    },
+    {
+      "issue": "056",
+      "match": "??? vs ????",
+      "group": "E",
+      "xg": {
+        "home": 0.68,
+        "away": 1.95
+      },
+      "model_probabilities_1x2": {
+        "home": 0.1211,
+        "draw": 0.2044,
+        "away": 0.6745
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.1406
+        },
+        {
+          "score": "0-2",
+          "probability": 0.137
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0956
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0932
+        },
+        {
+          "score": "0-3",
+          "probability": 0.0891
+        }
+      ],
+      "totals_2_5": {
+        "over": 0.4890754243436185,
+        "under": 0.5109245756563815
+      },
+      "spf_market": null,
+      "rq_market": {
+        "handicap": 2,
+        "win": 0.3526204599359737,
+        "draw": 0.2298902219322841,
+        "lose": 0.41748931813174234,
+        "booksum": 1.1298447474497988
+      },
+      "model_rq_probabilities": {
+        "win": 0.5822486558053819,
+        "draw": 0.20858864199561541,
+        "lose": 0.2091561227094638
+      }
+    },
+    {
+      "issue": "057",
+      "match": "??? vs ??",
+      "group": "F",
+      "xg": {
+        "home": 0.6,
+        "away": 2.0
+      },
+      "model_probabilities_1x2": {
+        "home": 0.101,
+        "draw": 0.194,
+        "away": 0.7051
+      },
+      "top_scorelines": [
+        {
+          "score": "0-2",
+          "probability": 0.1485
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1485
+        },
+        {
+          "score": "0-3",
+          "probability": 0.099
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0891
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0891
+        }
+      ],
+      "totals_2_5": {
+        "over": 0.48157042406394945,
+        "under": 0.5184295759360505
+      },
+      "spf_market": null,
+      "rq_market": {
+        "handicap": 2,
+        "win": 0.2551345254770697,
+        "draw": 0.20830983609539572,
+        "lose": 0.5365556384275345,
+        "booksum": 1.1295391617480108
+      },
+      "model_rq_probabilities": {
+        "win": 0.5523376192411686,
+        "draw": 0.21762877953420806,
+        "lose": 0.23002529294776036
+      }
+    },
+    {
+      "issue": "058",
+      "match": "?? vs ??",
+      "group": "F",
+      "xg": {
+        "home": 1.52,
+        "away": 1.12
+      },
+      "model_probabilities_1x2": {
+        "home": 0.4647,
+        "draw": 0.2554,
+        "away": 0.2798
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1215
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1085
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0923
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0824
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0799
+        }
+      ],
+      "totals_2_5": {
+        "over": 0.4915652266646606,
+        "under": 0.5084347733353394
+      },
+      "spf_market": {
+        "home": 0.5531800059195292,
+        "draw": 0.24792381217681983,
+        "away": 0.19889618190365096,
+        "booksum": 1.1298311459415227
+      },
+      "rq_market": {
+        "handicap": -1,
+        "win": 0.3160931823039111,
+        "draw": 0.24791622141483222,
+        "lose": 0.43599059628125675,
+        "booksum": 1.129865739399208
+      },
+      "model_rq_probabilities": {
+        "win": 0.2336940215440556,
+        "draw": 0.2310463439643517,
+        "lose": 0.5352589763355603
+      }
+    },
+    {
+      "issue": "059",
+      "match": "??? vs ????",
+      "group": "D",
+      "xg": {
+        "home": 1.12,
+        "away": 1.08
+      },
+      "model_probabilities_1x2": {
+        "home": 0.3547,
+        "draw": 0.3398,
+        "away": 0.3054
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.134
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1241
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1197
+        },
+        {
+          "score": "0-0",
+          "probability": 0.1108
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0751
+        }
+      ],
+      "totals_2_5": {
+        "over": 0.37728625000368365,
+        "under": 0.6227137499963163
+      },
+      "spf_market": {
+        "home": 0.33057067076211527,
+        "draw": 0.41987175243718916,
+        "away": 0.2495575768006955,
+        "booksum": 1.128758118492379
+      },
+      "rq_market": {
+        "handicap": -1,
+        "win": 0.14282279394085118,
+        "draw": 0.20125030055301757,
+        "lose": 0.6559269055061313,
+        "booksum": 1.129303790594113
+      },
+      "model_rq_probabilities": {
+        "win": 0.1485398063967328,
+        "draw": 0.2159074022674274,
+        "lose": 0.6355527382174301
+      }
+    },
+    {
+      "issue": "060",
+      "match": "??? vs ??",
+      "group": "D",
+      "xg": {
+        "home": 1.0,
+        "away": 1.34
+      },
+      "model_probabilities_1x2": {
+        "home": 0.2754,
+        "draw": 0.2678,
+        "away": 0.4568
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.1291
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1291
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0963
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0963
+        },
+        {
+          "score": "0-2",
+          "probability": 0.0865
+        }
+      ],
+      "totals_2_5": {
+        "over": 0.4145398803627096,
+        "under": 0.5854601196372904
+      },
+      "spf_market": {
+        "home": 0.23797035094348007,
+        "draw": 0.2287466939301669,
+        "away": 0.533282955126353,
+        "booksum": 1.1296247756718296
+      },
+      "rq_market": {
+        "handicap": 1,
+        "win": 0.4613203962942397,
+        "draw": 0.2300610807493351,
+        "lose": 0.3086185229564251,
+        "booksum": 1.129005648822722
+      },
+      "model_rq_probabilities": {
+        "win": 0.554894699297957,
+        "draw": 0.23718447425671915,
+        "lose": 0.20792063191391058
+      }
+    }
+  ],
+  "value_ranking_top5": [
+    {
+      "issue": "057",
+      "match": "??? vs ??",
+      "market": "RQ(+2)",
+      "selection": "win",
+      "odds": 3.47,
+      "model_prob": 0.5523376192411686,
+      "market_prob": 0.2551345254770697,
+      "delta": 0.2972030937640989,
+      "ev": 0.9166115387668552,
+      "risk": "B_medium"
+    },
+    {
+      "issue": "056",
+      "match": "??? vs ????",
+      "market": "RQ(+2)",
+      "selection": "win",
+      "odds": 2.51,
+      "model_prob": 0.5822486558053819,
+      "market_prob": 0.3526204599359737,
+      "delta": 0.2296281958694082,
+      "ev": 0.4614441260715083,
+      "risk": "A_low_to_medium"
+    },
+    {
+      "issue": "055",
+      "match": "???? vs ??",
+      "market": "RQ(+1)",
+      "selection": "win",
+      "odds": 2.65,
+      "model_prob": 0.5141002618804249,
+      "market_prob": 0.33416218608829235,
+      "delta": 0.17993807579213256,
+      "ev": 0.3623656939831259,
+      "risk": "B_medium"
+    },
+    {
+      "issue": "055",
+      "match": "???? vs ??",
+      "market": "SPF",
+      "selection": "draw",
+      "odds": 4.95,
+      "model_prob": 0.2724,
+      "market_prob": 0.17883876188549463,
+      "delta": 0.09356123811450534,
+      "ev": 0.3483799999999999,
+      "risk": "D_high"
+    },
+    {
+      "issue": "055",
+      "match": "???? vs ??",
+      "market": "SPF",
+      "selection": "home",
+      "odds": 5.2,
+      "model_prob": 0.2417,
+      "market_prob": 0.17024074448715354,
+      "delta": 0.07145925551284646,
+      "ev": 0.25683999999999996,
+      "risk": "D_high"
+    }
+  ],
+  "candidate_pools": {
+    "main_candidates": [
+      {
+        "issue": "057",
+        "match": "??? vs ??",
+        "market": "RQ(+2)",
+        "selection": "win",
+        "odds": 3.47,
+        "model_prob": 0.5523376192411686,
+        "market_prob": 0.2551345254770697,
+        "delta": 0.2972030937640989,
+        "ev": 0.9166115387668552,
+        "risk": "B_medium"
+      },
+      {
+        "issue": "058",
+        "match": "?? vs ??",
+        "market": "RQ(-1)",
+        "selection": "lose",
+        "odds": 2.03,
+        "model_prob": 0.5352589763355603,
+        "market_prob": 0.43599059628125675,
+        "delta": 0.09926838005430355,
+        "ev": 0.08657572196118735,
+        "risk": "B_medium"
+      },
+      {
+        "issue": "055",
+        "match": "???? vs ??",
+        "market": "RQ(+1)",
+        "selection": "win",
+        "odds": 2.65,
+        "model_prob": 0.5141002618804249,
+        "market_prob": 0.33416218608829235,
+        "delta": 0.17993807579213256,
+        "ev": 0.3623656939831259,
+        "risk": "B_medium"
+      },
+      {
+        "issue": "060",
+        "match": "??? vs ??",
+        "market": "RQ(+1)",
+        "selection": "win",
+        "odds": 1.92,
+        "model_prob": 0.554894699297957,
+        "market_prob": 0.4613203962942397,
+        "delta": 0.09357430300371727,
+        "ev": 0.06539782265207728,
+        "risk": "B_medium"
+      },
+      {
+        "issue": "056",
+        "match": "??? vs ????",
+        "market": "RQ(+2)",
+        "selection": "win",
+        "odds": 2.51,
+        "model_prob": 0.5822486558053819,
+        "market_prob": 0.3526204599359737,
+        "delta": 0.2296281958694082,
+        "ev": 0.4614441260715083,
+        "risk": "A_low_to_medium"
+      },
+      {
+        "issue": "059",
+        "match": "??? vs ????",
+        "market": "SPF",
+        "selection": "home",
+        "odds": 2.68,
+        "model_prob": 0.3547,
+        "market_prob": 0.33057067076211527,
+        "delta": 0.024129329237884745,
+        "ev": -0.04940399999999989,
+        "risk": "D_high"
+      }
+    ],
+    "entertainment_candidates": [
+      {
+        "issue": "055",
+        "match": "???? vs ??",
+        "market": "SPF",
+        "selection": "draw",
+        "odds": 4.95,
+        "model_prob": 0.2724,
+        "market_prob": 0.17883876188549463,
+        "delta": 0.09356123811450534,
+        "ev": 0.3483799999999999,
+        "risk": "D_high"
+      },
+      {
+        "issue": "058",
+        "match": "?? vs ??",
+        "market": "SPF",
+        "selection": "away",
+        "odds": 4.45,
+        "model_prob": 0.2798,
+        "market_prob": 0.19889618190365096,
+        "delta": 0.08090381809634903,
+        "ev": 0.24510999999999994,
+        "risk": "D_high"
+      },
+      {
+        "issue": "059",
+        "match": "??? vs ????",
+        "market": "SPF",
+        "selection": "away",
+        "odds": 3.55,
+        "model_prob": 0.3054,
+        "market_prob": 0.2495575768006955,
+        "delta": 0.05584242319930449,
+        "ev": 0.08416999999999986,
+        "risk": "C_medium_high"
+      },
+      {
+        "issue": "060",
+        "match": "??? vs ??",
+        "market": "SPF",
+        "selection": "draw",
+        "odds": 3.87,
+        "model_prob": 0.2678,
+        "market_prob": 0.2287466939301669,
+        "delta": 0.039053306069833094,
+        "ev": 0.03638600000000003,
+        "risk": "D_high"
+      },
+      {
+        "issue": "056",
+        "match": "??? vs ????",
+        "market": "RQ(+2)",
+        "selection": "draw",
+        "odds": 3.85,
+        "model_prob": 0.20858864199561541,
+        "market_prob": 0.2298902219322841,
+        "delta": -0.021301579936668674,
+        "ev": -0.1969337283168806,
+        "risk": "D_high"
+      },
+      {
+        "issue": "057",
+        "match": "??? vs ??",
+        "market": "RQ(+2)",
+        "selection": "draw",
+        "odds": 4.25,
+        "model_prob": 0.21762877953420806,
+        "market_prob": 0.20830983609539572,
+        "delta": 0.009318943438812344,
+        "ev": -0.0750776869796157,
+        "risk": "D_high"
+      }
+    ]
+  },
+  "portfolio": {
+    "budget_total": 100,
+    "main_warehouse": {
+      "budget": 70,
+      "status": "discussion_only_hold_for_execution",
+      "singles": [
+        {
+          "pick": {
+            "issue": "057",
+            "match": "??? vs ??",
+            "market": "RQ(+2)",
+            "selection": "win",
+            "odds": 3.47,
+            "model_prob": 0.5523376192411686,
+            "market_prob": 0.2551345254770697,
+            "delta": 0.2972030937640989,
+            "ev": 0.9166115387668552,
+            "risk": "B_medium"
+          },
+          "stake": 15
+        },
+        {
+          "pick": {
+            "issue": "058",
+            "match": "?? vs ??",
+            "market": "RQ(-1)",
+            "selection": "lose",
+            "odds": 2.03,
+            "model_prob": 0.5352589763355603,
+            "market_prob": 0.43599059628125675,
+            "delta": 0.09926838005430355,
+            "ev": 0.08657572196118735,
+            "risk": "B_medium"
+          },
+          "stake": 14
+        },
+        {
+          "pick": {
+            "issue": "055",
+            "match": "???? vs ??",
+            "market": "RQ(+1)",
+            "selection": "win",
+            "odds": 2.65,
+            "model_prob": 0.5141002618804249,
+            "market_prob": 0.33416218608829235,
+            "delta": 0.17993807579213256,
+            "ev": 0.3623656939831259,
+            "risk": "B_medium"
+          },
+          "stake": 12
+        },
+        {
+          "pick": {
+            "issue": "060",
+            "match": "??? vs ??",
+            "market": "RQ(+1)",
+            "selection": "win",
+            "odds": 1.92,
+            "model_prob": 0.554894699297957,
+            "market_prob": 0.4613203962942397,
+            "delta": 0.09357430300371727,
+            "ev": 0.06539782265207728,
+            "risk": "B_medium"
+          },
+          "stake": 10
+        },
+        {
+          "pick": {
+            "issue": "056",
+            "match": "??? vs ????",
+            "market": "RQ(+2)",
+            "selection": "win",
+            "odds": 2.51,
+            "model_prob": 0.5822486558053819,
+            "market_prob": 0.3526204599359737,
+            "delta": 0.2296281958694082,
+            "ev": 0.4614441260715083,
+            "risk": "A_low_to_medium"
+          },
+          "stake": 4
+        }
+      ],
+      "parlays_2x1": [
+        {
+          "legs": [
+            {
+              "issue": "057",
+              "match": "??? vs ??",
+              "market": "RQ(+2)",
+              "selection": "win",
+              "odds": 3.47,
+              "model_prob": 0.5523376192411686,
+              "market_prob": 0.2551345254770697,
+              "delta": 0.2972030937640989,
+              "ev": 0.9166115387668552,
+              "risk": "B_medium"
+            },
+            {
+              "issue": "058",
+              "match": "?? vs ??",
+              "market": "RQ(-1)",
+              "selection": "lose",
+              "odds": 2.03,
+              "model_prob": 0.5352589763355603,
+              "market_prob": 0.43599059628125675,
+              "delta": 0.09926838005430355,
+              "ev": 0.08657572196118735,
+              "risk": "B_medium"
+            }
+          ],
+          "stake": 6,
+          "approx_hit_probability": 0.2956,
+          "parlay_odds": 7.044,
+          "approx_ev": 1.0825
+        },
+        {
+          "legs": [
+            {
+              "issue": "055",
+              "match": "???? vs ??",
+              "market": "RQ(+1)",
+              "selection": "win",
+              "odds": 2.65,
+              "model_prob": 0.5141002618804249,
+              "market_prob": 0.33416218608829235,
+              "delta": 0.17993807579213256,
+              "ev": 0.3623656939831259,
+              "risk": "B_medium"
+            },
+            {
+              "issue": "060",
+              "match": "??? vs ??",
+              "market": "RQ(+1)",
+              "selection": "win",
+              "odds": 1.92,
+              "model_prob": 0.554894699297957,
+              "market_prob": 0.4613203962942397,
+              "delta": 0.09357430300371727,
+              "ev": 0.06539782265207728,
+              "risk": "B_medium"
+            }
+          ],
+          "stake": 4,
+          "approx_hit_probability": 0.2853,
+          "parlay_odds": 5.088,
+          "approx_ev": 0.4515
+        }
+      ],
+      "parlays_3x1": [
+        {
+          "legs": [
+            {
+              "issue": "057",
+              "match": "??? vs ??",
+              "market": "RQ(+2)",
+              "selection": "win",
+              "odds": 3.47,
+              "model_prob": 0.5523376192411686,
+              "market_prob": 0.2551345254770697,
+              "delta": 0.2972030937640989,
+              "ev": 0.9166115387668552,
+              "risk": "B_medium"
+            },
+            {
+              "issue": "058",
+              "match": "?? vs ??",
+              "market": "RQ(-1)",
+              "selection": "lose",
+              "odds": 2.03,
+              "model_prob": 0.5352589763355603,
+              "market_prob": 0.43599059628125675,
+              "delta": 0.09926838005430355,
+              "ev": 0.08657572196118735,
+              "risk": "B_medium"
+            },
+            {
+              "issue": "055",
+              "match": "???? vs ??",
+              "market": "RQ(+1)",
+              "selection": "win",
+              "odds": 2.65,
+              "model_prob": 0.5141002618804249,
+              "market_prob": 0.33416218608829235,
+              "delta": 0.17993807579213256,
+              "ev": 0.3623656939831259,
+              "risk": "B_medium"
+            }
+          ],
+          "stake": 5,
+          "approx_hit_probability": 0.152,
+          "parlay_odds": 18.667,
+          "approx_ev": 1.8372
+        }
+      ]
+    },
+    "fun_warehouse": {
+      "budget": 30,
+      "status": "discussion_only_hold_for_execution",
+      "parlays_3x1": [
+        {
+          "legs": [
+            {
+              "issue": "056",
+              "match": "??? vs ????",
+              "market": "RQ(+2)",
+              "selection": "win",
+              "odds": 2.51,
+              "model_prob": 0.5822486558053819,
+              "market_prob": 0.3526204599359737,
+              "delta": 0.2296281958694082,
+              "ev": 0.4614441260715083,
+              "risk": "A_low_to_medium"
+            },
+            {
+              "issue": "058",
+              "match": "?? vs ??",
+              "market": "SPF",
+              "selection": "away",
+              "odds": 4.45,
+              "model_prob": 0.2798,
+              "market_prob": 0.19889618190365096,
+              "delta": 0.08090381809634903,
+              "ev": 0.24510999999999994,
+              "risk": "D_high"
+            },
+            {
+              "issue": "060",
+              "match": "??? vs ??",
+              "market": "SPF",
+              "selection": "draw",
+              "odds": 3.87,
+              "model_prob": 0.2678,
+              "market_prob": 0.2287466939301669,
+              "delta": 0.039053306069833094,
+              "ev": 0.03638600000000003,
+              "risk": "D_high"
+            }
+          ],
+          "stake": 6,
+          "approx_hit_probability": 0.0436,
+          "parlay_odds": 43.226,
+          "approx_ev": 0.8859
+        }
+      ],
+      "parlays_4x4": [
+        {
+          "legs": [
+            {
+              "issue": "055",
+              "match": "???? vs ??",
+              "market": "RQ(+1)",
+              "selection": "win",
+              "odds": 2.65,
+              "model_prob": 0.5141002618804249,
+              "market_prob": 0.33416218608829235,
+              "delta": 0.17993807579213256,
+              "ev": 0.3623656939831259,
+              "risk": "B_medium"
+            },
+            {
+              "issue": "056",
+              "match": "??? vs ????",
+              "market": "RQ(+2)",
+              "selection": "win",
+              "odds": 2.51,
+              "model_prob": 0.5822486558053819,
+              "market_prob": 0.3526204599359737,
+              "delta": 0.2296281958694082,
+              "ev": 0.4614441260715083,
+              "risk": "A_low_to_medium"
+            },
+            {
+              "issue": "057",
+              "match": "??? vs ??",
+              "market": "RQ(+2)",
+              "selection": "win",
+              "odds": 3.47,
+              "model_prob": 0.5523376192411686,
+              "market_prob": 0.2551345254770697,
+              "delta": 0.2972030937640989,
+              "ev": 0.9166115387668552,
+              "risk": "B_medium"
+            },
+            {
+              "issue": "058",
+              "match": "?? vs ??",
+              "market": "RQ(-1)",
+              "selection": "lose",
+              "odds": 2.03,
+              "model_prob": 0.5352589763355603,
+              "market_prob": 0.43599059628125675,
+              "delta": 0.09926838005430355,
+              "ev": 0.08657572196118735,
+              "risk": "B_medium"
+            }
+          ],
+          "stake": 8,
+          "approx_hit_probability": 0.0885,
+          "parlay_odds": 46.854,
+          "approx_ev": 3.1464
+        }
+      ],
+      "scorelines": [
+        {
+          "issue": "055",
+          "match": "???? vs ??",
+          "score": "0-1",
+          "probability": 0.1404,
+          "stake": 3
+        },
+        {
+          "issue": "056",
+          "match": "??? vs ????",
+          "score": "0-2",
+          "probability": 0.137,
+          "stake": 3
+        },
+        {
+          "issue": "057",
+          "match": "??? vs ??",
+          "score": "0-2",
+          "probability": 0.1485,
+          "stake": 3
+        },
+        {
+          "issue": "058",
+          "match": "?? vs ??",
+          "score": "1-1",
+          "probability": 0.1215,
+          "stake": 3
+        },
+        {
+          "issue": "059",
+          "match": "??? vs ????",
+          "score": "1-1",
+          "probability": 0.134,
+          "stake": 2
+        },
+        {
+          "issue": "060",
+          "match": "??? vs ??",
+          "score": "0-1",
+          "probability": 0.1291,
+          "stake": 2
+        }
+      ],
+      "half_full_time": [
+        {
+          "issue": "055",
+          "match": "???? vs ??",
+          "candidate": "?/??",
+          "risk": "very_high",
+          "reason": "?????????????????????????",
+          "stake": 2
+        },
+        {
+          "issue": "058",
+          "match": "?? vs ??",
+          "candidate": "?/?",
+          "risk": "very_high",
+          "reason": "??????????????????????",
+          "stake": 2
+        },
+        {
+          "issue": "060",
+          "match": "??? vs ??",
+          "candidate": "?/??",
+          "risk": "very_high",
+          "reason": "??????????1??????????",
+          "stake": 1
+        }
+      ]
+    }
+  },
+  "risk_layers": {
+    "single": "???????????????????????????????45%????",
+    "2x1": "??????????????????????",
+    "3x1": "???????????????????????",
+    "4x4": "?????????????????????????",
+    "scoreline": "??Top scoreline??????????????????",
+    "half_full_time": "??????????????????????"
+  },
+  "notes": [
+    "????????????",
+    "????????????"
+  ],
+  "validation": {
+    "json_parse_ok": true
+  }
+}

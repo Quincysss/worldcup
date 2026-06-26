@@ -1,0 +1,187 @@
+{
+  "phase": "betting_postmatch_review",
+  "project": "2026_worldcup",
+  "group": "F",
+  "round": 3,
+  "status": "complete",
+  "created_at": "2026-06-26T10:30:00+08:00",
+  "owner": "betting-risk",
+  "scope": "F组第三轮两场赛后购彩复盘；解释SPF、让球、大小/总进球、比分、串关命中与失败，不给新投注建议",
+  "betting_gate": "postmatch_review_only",
+  "source_log": [
+    "K:/worldcup/data/thread_outputs/def-round3-betting-20260625/expanded-return-betting-plan.md",
+    "K:/worldcup/data/thread_outputs/def-round3-betting-20260625/expanded-return-betting-plan.json",
+    "K:/worldcup/data/thread_outputs/def-round3-betting-20260625/red-team.json",
+    "K:/worldcup/data/outputs/match_predictions/f-group-round3-quant-prediction-20260625.json",
+    "K:/worldcup/data/thread_outputs/f-group-round3-20260625/data-collector.json",
+    "K:/worldcup/data/thread_outputs/f-group-round3-20260625/tactics-coach.json",
+    "K:/worldcup/data/thread_outputs/f-group-round3-20260625/red-team.json"
+  ],
+  "source_gaps": [
+    "未在已完成比赛目录定位到F组第三轮两场赛后复盘Markdown；本复盘使用用户给定实际比分和本地赛前预测/购彩方案。",
+    "旧方案未记录官方体彩总进球/大小即时赔率；总进球和大小只用于赛果解释，不计返奖。"
+  ],
+  "actual_settlement": [
+    {
+      "match_no": "057",
+      "match": "突尼斯 vs 荷兰",
+      "score": "1-3",
+      "spf_result": "项目记录普通SPF未开售",
+      "rqspf": {
+        "handicap": "+2",
+        "result": "让平",
+        "calculation": "突尼斯1+2=3，荷兰3，调整后3-3"
+      },
+      "total_goals": 4,
+      "model_over_under_2_5": "大",
+      "exact_score": "1-3",
+      "margin": "荷兰净胜2"
+    },
+    {
+      "match_no": "058",
+      "match": "日本 vs 瑞典",
+      "score": "1-1",
+      "spf_result": "平",
+      "rqspf": {
+        "handicap": "-1",
+        "result": "让负",
+        "calculation": "日本1-1=0，瑞典1，调整后0-1"
+      },
+      "total_goals": 2,
+      "model_over_under_2_5": "小",
+      "exact_score": "1-1",
+      "margin": "平局"
+    }
+  ],
+  "pre_match_model_reference": {
+    "057": {
+      "ordinary_spf_status": "unopened",
+      "rqspf_handicap": "+2",
+      "representative_language": "荷兰胜，代表比分0-2/0-1/1-2附近；让+2方向风险来自荷兰是否早早收手",
+      "probabilities_1x2": {
+        "tunisia_win": 0.101,
+        "draw": 0.194,
+        "netherlands_win": 0.7051
+      },
+      "top_scorelines": ["0-2", "0-1", "0-3", "1-2", "1-1"],
+      "actual_score_note": "1-3在扩展矩阵中约为0.0594，不是Top5但属于荷兰净胜2路径"
+    },
+    "058": {
+      "ordinary_spf_status": "available",
+      "rqspf_handicap": "-1",
+      "representative_language": "日本不败，代表比分1-1/2-1；瑞典胜尾部不低",
+      "probabilities_1x2": {
+        "japan_win": 0.4647,
+        "draw": 0.2554,
+        "sweden_win": 0.2798
+      },
+      "top_scorelines": ["1-1", "1-0", "2-1", "2-0", "0-1"],
+      "actual_score_note": "1-1为模型Top1比分，SPF平和日本-1让负均与之匹配"
+    }
+  },
+  "old_ticket_audit": [
+    {
+      "ticket_direction": "057 突尼斯(+2) RQ home",
+      "appeared_in": ["B1娱乐", "B3娱乐", "A2主结构", "A3主结构"],
+      "actual_result": "057 RQ(+2) 让平",
+      "status": "failed",
+      "reason": "突尼斯输2球只结算让平，不能按让胜处理"
+    },
+    {
+      "ticket_direction": "057 突尼斯(+2) RQ draw / 荷兰正好赢2球",
+      "appeared_in": ["B2娱乐", "A1娱乐", "A3娱乐"],
+      "actual_result": "057 RQ(+2) 让平",
+      "status": "hit",
+      "reason": "1-3正好是荷兰净胜2"
+    },
+    {
+      "ticket_direction": "058 日本(-1) RQ away / 瑞典+1方向",
+      "appeared_in": ["C1主仓", "C2主仓", "B1主仓", "B2主仓", "B3主仓", "A1主结构", "A2主结构", "A3主结构"],
+      "actual_result": "058 RQ(-1) 让负",
+      "status": "hit",
+      "reason": "日本1-1不胜，减1后为0-1"
+    },
+    {
+      "ticket_direction": "058 日本(-1) RQ draw / 日本正好赢1球",
+      "appeared_in": ["B2娱乐", "B3娱乐", "A1娱乐", "A2娱乐"],
+      "actual_result": "058 RQ(-1) 让负",
+      "status": "failed",
+      "reason": "日本没有赢球，不能落到让平"
+    },
+    {
+      "ticket_direction": "058 SPF 日本胜",
+      "appeared_in": ["当前扩展JSON未列为独立票；若临场另买则适用"],
+      "actual_result": "SPF平",
+      "status": "failed_if_bought",
+      "reason": "1-1平局打掉日本普通胜"
+    },
+    {
+      "ticket_direction": "058 SPF平 / 比分1-1",
+      "appeared_in": ["当前扩展JSON未列为可核赔率票"],
+      "actual_result": "SPF平，比分1-1",
+      "status": "scoreline_hit_but_not_counted_in_old_plan",
+      "reason": "赛果匹配，但旧方案没有官方赔率和实际票面记录"
+    }
+  ],
+  "market_type_review": {
+    "spf": [
+      "057普通SPF按项目记录未开售，不能补算荷兰客胜。",
+      "058普通SPF实际为平；买日本胜失败，买平才命中。"
+    ],
+    "rqspf": [
+      "057突尼斯+2实际让平；让胜和让负都不对。",
+      "058日本-1实际让负；日本不胜时，受让侧方向命中。"
+    ],
+    "totals": [
+      "057总进球4，按2.5球模型口径为大；旧方案无官方总进球赔率，不计返奖。",
+      "058总进球2，按2.5球模型口径为小；旧方案无官方总进球赔率，不计返奖。"
+    ],
+    "score": [
+      "057精确比分1-3；净胜2方向命中，0-2/0-3/1-2类具体比分失败。",
+      "058精确比分1-1；模型Top1命中，但旧方案没有列为可核比分票。"
+    ],
+    "parlay": [
+      "F组命中腿被放入2串1、4x11或4x4时，仍会被E组、D组或060等其他失败腿拖死。",
+      "若用户实际未单独购买058 RQ away或057 RQ draw，赛后不能按命中腿等同中奖票。"
+    ]
+  },
+  "why_no_ticket_may_have_hit": [
+    "命中方向未必实际出票；当前JSON里的058 RQ away若单独出票应命中，需核对真实票面。",
+    "很多命中腿被串关绑定到其他错误场次，串关任一腿失败即整张失败。",
+    "057荷兰赢球被误转成突尼斯+2让胜或荷兰3球以上时，票型与实际1-3不一致。",
+    "058日本优势被误转成日本SPF胜或日本正好赢1球时，票型与实际1-1不一致。",
+    "理论最大返奖只描述全中上限，不能解释单张票的实际命中概率。"
+  ],
+  "future_f_scenario_rules": [
+    {
+      "rule": "让球胜平负必须写结算区间",
+      "detail": "+2输2球是让平；-1主队不胜是让负。禁止用模糊的cover替代竞彩三档。"
+    },
+    {
+      "rule": "优势队不自动升级为穿盘队",
+      "detail": "日本这类平局可接受的强侧，SPF低赔不能直接转换为让胜、让平或比分。"
+    },
+    {
+      "rule": "普通SPF未开售不补脑",
+      "detail": "057未开售普通SPF，只能按已知让球盘复盘，不能赛后补算客胜。"
+    },
+    {
+      "rule": "同组同时开球降低串关权重",
+      "detail": "057和058会互相影响60分钟后的动机，不能把两个同组脚本强行串成高置信组合。"
+    },
+    {
+      "rule": "命中腿与中奖票分开审计",
+      "detail": "先核对实际出票，再区分单腿命中、串关失败、未出票和临场改票。"
+    },
+    {
+      "rule": "娱乐仓不可承担救票功能",
+      "detail": "让平、比分、精确净胜等即使命中也常为小额高波动项，不能作为主结构保护。"
+    }
+  ],
+  "thread_summary": [
+    "057实际为突尼斯+2让平，不是让负；买让平命中，买让胜或让负失败。",
+    "058实际为SPF平、日本-1让负；买058 RQ away命中，买日本胜或日本正好赢1球失败。",
+    "F组存在命中腿；若用户一张未中，应优先核对实际出票和串关绑定。"
+  ],
+  "json_validated": true
+}

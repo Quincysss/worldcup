@@ -27,18 +27,19 @@ Prediction work must follow the quantitative chain defined by `worldcup-quant-pr
 4. Assign visible `factor_weights`; document defaults, overrides, and any double-counting guard.
 5. Establish baseline strength from Elo, FIFA ranking, Opta/power ratings when available, squad value, and recent performance.
 6. Adjust for match context: rest days, travel, climate, venue, host advantage, injuries, suspensions, likely rotation, tactical matchup, and motivation.
-7. Convert team scores into `expected_goals` for each team.
-8. Generate a Poisson score matrix from 0-0 through 5-5 and preserve higher-score tail probability.
-9. Derive 1X2, totals, and top scorelines from the matrix.
-10. Integrate market signal if requested:
+7. For final group-round matches, run a tournament-context layer: group-table snapshot, qualification scenarios, bracket-path expectation, same-group simultaneous-match dependency, rotation/yellow-card risk, and strategic tempo adjustment.
+8. Convert team scores into `expected_goals` for each team.
+9. Generate a Poisson score matrix from 0-0 through 5-5 and preserve higher-score tail probability.
+10. Derive 1X2, totals, and top scorelines from the matrix.
+11. Integrate market signal if requested:
    - convert odds to implied probabilities
    - remove bookmaker margin when enough outcomes are available
    - compare market probabilities with model probabilities
    - explain disagreement without recommending bets
-11. Generate probabilities and confidence bands using the schema in `references/output-schemas.md`.
-12. Run sanity checks: probabilities sum correctly, score-matrix mass is accounted for, extreme outputs are explained, stale inputs are flagged, and upset paths remain visible.
-13. For post-match reviews, check whether the data collector has updated the participating teams' player-state files and member tables.
-14. Produce handoff notes for verifier and lead analyst.
+12. Generate probabilities and confidence bands using the schema in `references/output-schemas.md`.
+13. Run sanity checks: probabilities sum correctly, score-matrix mass is accounted for, extreme outputs are explained, stale inputs are flagged, and upset paths remain visible.
+14. For post-match reviews, check whether the data collector has updated the participating teams' player-state files and member tables.
+15. Produce handoff notes for verifier and lead analyst.
 
 ## Modeling Principles
 
@@ -62,6 +63,7 @@ For match and round predictions, include:
 - `factor_weights`: weights for baseline, attack, defense, player state, injury, tactics, schedule/environment, and market factors.
 - `team_strength_score`, `attack_score`, `defense_score`.
 - `player_state_adjustment`, `injury_adjustment`, `tactical_matchup_adjustment`, `schedule_environment_adjustment`, `market_adjustment`.
+- `third_round_context` when applicable: group table, qualification state, bracket-path expectation, rotation/yellow-card risk, simultaneous-match dependency, strategic tempo adjustment, and simulated group outcomes.
 - `expected_goals`: pre-market and final xG if market calibration changes it.
 - `poisson_score_matrix`: 0-0 through 5-5 plus `tail_probability`.
 - `probabilities_1x2`: team A win, draw, team B win.
@@ -93,6 +95,6 @@ Return:
 
 Use `references/output-schemas.md` for JSON-compatible shapes.
 
-## Anti-disconnect Workflow
+## Output Discipline
 
-For long World Cup work, keep each turn to the smallest current group/round loop: collect facts, tactical judgment, model probability, red-team check, write files, validate, then report briefly. Do not paste long model reports into chat; write them to local files first. If multiple files are needed, create skeleton files first, then fill them one by one. Subagent outputs must be summarized as key conclusions only. Before rewriting after an interruption, check which files already exist and preserve valid content. Final chat output should include only the prediction table, file paths, validation result, and key risks.
+For World Cup work, choose the output size based on the user's current request and the reusable value of the result. Write durable model packets, probability JSON, and reusable reports to local files when they need to persist, but do not force skeleton-first file creation or smallest-loop batching as a mandatory workflow. Before updating existing files, check whether valid content already exists and preserve it. Subagent outputs should be summarized into key conclusions, quantitative deltas, and handoff notes unless the user asks for full detail.

@@ -1,0 +1,276 @@
+{
+  "phase": "f_group_round3_postmatch_tactical_review",
+  "group": "F",
+  "round": 3,
+  "status": "partial",
+  "created_at": "2026-06-26T00:00:00+08:00",
+  "updated_at": "2026-06-26T01:10:00+08:00",
+  "owner": "tactics-coach",
+  "scope": "postmatch_review",
+  "missing_fields": [
+    "official_minute_level_event_log",
+    "complete_player_medical_followup",
+    "full_substitution_timeline_confirmation"
+  ],
+  "source_log": [
+    "data/thread_outputs/f-group-round3-20260625/tactics-coach.md",
+    "data/thread_outputs/f-group-round3-20260625/tactics-coach.json",
+    "data/outputs/match_predictions/f-group-round3-quant-prediction-20260625.json",
+    "data/outputs/player_state/japan-player-state.json",
+    "data/outputs/player_state/sweden-player-state.json",
+    "data/outputs/player_state/netherlands-player-state.json",
+    "data/outputs/player_state/tunisia-player-state.json",
+    "用户补充的已核验比赛事实：日本1-1瑞典、突尼斯1-3荷兰的关键进球与末段事件"
+  ],
+  "notes": [
+    "仅基于本地预测、已完成比赛复盘、战术线程材料和 player_state 做赛后战术复盘。",
+    "无完整分钟级事件流时，定位球归因、换人链路和 individual error 权重仅做 partial 归纳。"
+  ],
+  "tactical_summary": {
+    "group_level_takeaways": [
+      "F组第三轮两场都证明第三轮动机对前60分钟节奏有明显塑形作用，尤其是能接受平局或领先后重视名次管理的一方。",
+      "赛前框架整体有效，但赛后要把天气、乌龙、轮换和同开球信息触发的非常规脚本单独隔离，避免被模型重复计入。",
+      "日本与荷兰都没有在结果端失控，但其比赛管理边界被暴露：日本是领先后禁区保护，荷兰是轮换条件下的 clean sheet 稳定性。"
+    ]
+  },
+  "matches": [
+    {
+      "match": "日本 vs 瑞典",
+      "score": "1-1",
+      "status": "partial",
+      "confidence": "medium",
+      "pre_match_reference": {
+        "expected_script": "日本更能接受平局，瑞典更需要主动提速，比赛更可能在60分钟后分叉。",
+        "pre_match_xg": {
+          "japan": 1.52,
+          "sweden": 1.12
+        },
+        "top_scoreline_bucket": "1-1"
+      },
+      "verified_facts": [
+        "上半场整体低事件。",
+        "56分钟日本由前田大然进球。",
+        "61或62分钟瑞典由Elanga远射扳平。",
+        "末段Isak头球中框，铃木彩艳完成关键扑救。"
+      ],
+      "tactical_conclusions": [
+        {
+          "point": "上半场低事件更像双向风险管理而非纯执行失常，日本不愿主动拉高往返，瑞典也不愿过早给日本转换空间。",
+          "confidence": "high",
+          "basis_type": "verified_fact_plus_tactical_inference"
+        },
+        {
+          "point": "前田大然的56分钟进球与日本依靠边路速度、反抢后直线推进破局的赛前脚本一致，说明日本更擅长在低节奏壳层内寻找单点提速窗口。",
+          "confidence": "medium",
+          "basis_type": "verified_fact_plus_tactical_inference"
+        },
+        {
+          "point": "Elanga的远射扳平验证了瑞典落后后的直接推进和个人终结路径，但不应被过度解释为稳定阵地控制的提升。",
+          "confidence": "medium",
+          "basis_type": "verified_fact_plus_tactical_inference"
+        },
+        {
+          "point": "末段Isak头球中框与铃木扑救说明瑞典最可靠的追分威胁仍是高空球、二点和禁区抢点，日本领先后的禁区保护和后点保护存在尾部风险。",
+          "confidence": "high",
+          "basis_type": "verified_fact"
+        },
+        {
+          "point": "日本本场更接近控风险成功但关门失败，不应简单被判为防守崩盘。",
+          "confidence": "medium",
+          "basis_type": "tactical_inference"
+        }
+      ],
+      "prediction_review": {
+        "what_was_right": [
+          "1比1作为高权重比分区间命中。",
+          "60分钟后脚本分叉的比赛模型基本命中。",
+          "日本更能压低前段节奏、瑞典后段更直接的轮廓基本成立。"
+        ],
+        "what_was_wrong_or_incomplete": [
+          "低事件程度比预期更强，说明第三轮动机对前45分钟 pace suppression 的影响被低估。",
+          "日本领先后被高空/二点持续冲击的尾部风险需要更明确写入。"
+        ]
+      },
+      "player_state_suggestions": [
+        {
+          "team": "日本",
+          "player": "前田大然",
+          "suggestion": "上调 game-state breaker 和反抢后直线冲击权重。",
+          "status": "suggest_upgrade",
+          "confidence": "medium"
+        },
+        {
+          "team": "日本",
+          "player": "铃木彩艳",
+          "suggestion": "上调高杠杆扑救稳定性，但只限本场末段救险层面。",
+          "status": "suggest_upgrade_partial",
+          "confidence": "medium"
+        },
+        {
+          "team": "瑞典",
+          "player": "Elanga",
+          "suggestion": "上调后程提速和单兵推进价值。",
+          "status": "suggest_upgrade",
+          "confidence": "medium"
+        },
+        {
+          "team": "瑞典",
+          "player": "Isak",
+          "suggestion": "维持核心终结地位，并上调 late-game aerial target 使用权重。",
+          "status": "maintain_plus",
+          "confidence": "medium"
+        }
+      ],
+      "model_adjustments": [
+        {
+          "adjustment": "low_event_bias_up",
+          "direction": "日本未来在平局可接受的第三轮语境中，前60分钟事件量继续下修。",
+          "confidence": "high"
+        },
+        {
+          "adjustment": "late_chase_aerial_bias_up",
+          "direction": "瑞典追分威胁更多分配到末段高空与直接攻击，而不是平均铺满全场阵地战。",
+          "confidence": "high"
+        },
+        {
+          "adjustment": "no_large_open_play_upgrade",
+          "direction": "不要因Elanga远射扳平而大幅上调瑞典常规阵地xG。",
+          "confidence": "high"
+        },
+        {
+          "adjustment": "protect_box_tail_risk_up",
+          "direction": "日本领先后的禁区保护与后点保护失球尾部风险小幅上调。",
+          "confidence": "medium"
+        }
+      ],
+      "handoff_to_model": {
+        "xg_directional_note": "对日本总量不宜大砍，但应把更多失球尾部分配到领先后的末段；瑞典的追平能力主要加在 game-state chasing，不平均抬升。",
+        "double_counting_warning": "不要同时因为1比1结果和末段门前险情而重复上调瑞典全场攻击力。"
+      },
+      "handoff_to_red_team": [
+        "需要核验Elanga扳平前是否存在日本回收过深或中场第二落点保护丢失。",
+        "需要核验Isak末段头球是否来自定位球、传中战还是混战二点，以决定是否单独上修瑞典定位球威胁。"
+      ]
+    },
+    {
+      "match": "突尼斯 vs 荷兰",
+      "score": "1-3",
+      "status": "partial",
+      "confidence": "medium",
+      "pre_match_reference": {
+        "expected_script": "荷兰优势明显，若先领先可能转入节奏管理；突尼斯更像低位偷袭与失误惩罚型对手。",
+        "pre_match_xg": {
+          "tunisia": 0.6,
+          "netherlands": 2.0
+        },
+        "top_scoreline_bucket": "0-2 / 0-3 / 1-3"
+      },
+      "verified_facts": [
+        "比赛为雨战环境。",
+        "荷兰存在轮换背景和争F1动机。",
+        "Skhiri早段乌龙。",
+        "Brobbey扩大比分。",
+        "Mastouri为突尼斯追回一球。",
+        "Van Hecke锁定比分。"
+      ],
+      "tactical_conclusions": [
+        {
+          "point": "Skhiri的早段乌龙提前打碎了突尼斯原本最可行的低事件、拖节奏、等信息分支再偷袭的脚本。",
+          "confidence": "high",
+          "basis_type": "verified_fact_plus_tactical_inference"
+        },
+        {
+          "point": "雨战与轮换没有抹掉荷兰的禁区存在感，Brobbey扩大比分说明荷兰即便不是最丝滑的地面渗透版本，也能靠身体点、宽度和二次进攻兑现优势。",
+          "confidence": "medium",
+          "basis_type": "verified_fact_plus_tactical_inference"
+        },
+        {
+          "point": "Mastouri追回一球说明突尼斯在追分态下仍保有直接冲击和偷球尾部路径，也提示荷兰轮换局下的 clean sheet 并不稳。",
+          "confidence": "medium",
+          "basis_type": "verified_fact_plus_tactical_inference"
+        },
+        {
+          "point": "Van Hecke锁定比分支持荷兰 superiority，但这场更像优势兑现而非无瑕压制，不能线性外推出轮换版荷兰稳定穿深盘。",
+          "confidence": "high",
+          "basis_type": "verified_fact_plus_tactical_inference"
+        },
+        {
+          "point": "从教练管理看，荷兰在争F1背景下并未过度保守，但也没有无成本狂攻，属于控制成本下维持名次主动权的版本。",
+          "confidence": "medium",
+          "basis_type": "tactical_inference"
+        }
+      ],
+      "prediction_review": {
+        "what_was_right": [
+          "荷兰优势方向正确。",
+          "比分形态仍落在赛前1比3、0比3、0比2这类荷兰清晰占优区间附近。",
+          "突尼斯更依赖尾部偷球而非长期控场的框架基本成立。"
+        ],
+        "what_was_wrong_or_incomplete": [
+          "低事件脚本被早段乌龙和雨战提前打碎，导致赛前对节奏压缩的稳定性略高估。",
+          "荷兰领先后自动收缩到超低风险管理的置信度偏高。"
+        ]
+      },
+      "player_state_suggestions": [
+        {
+          "team": "荷兰",
+          "player": "Brobbey",
+          "suggestion": "上调轮换首发时的 box finisher 与对抗型中锋价值。",
+          "status": "suggest_upgrade",
+          "confidence": "medium"
+        },
+        {
+          "team": "荷兰",
+          "player": "Van Hecke",
+          "suggestion": "上调 second-phase 与定位球存在感。",
+          "status": "suggest_upgrade_partial",
+          "confidence": "medium"
+        },
+        {
+          "team": "突尼斯",
+          "player": "Mastouri",
+          "suggestion": "上调追分态前场直接冲击价值，但样本仍小。",
+          "status": "suggest_upgrade_partial",
+          "confidence": "low"
+        },
+        {
+          "team": "突尼斯",
+          "player": "Skhiri",
+          "suggestion": "标记 early-error / 压力下处理失误风险待核验，避免因一次乌龙过度降权。",
+          "status": "monitor_not_downgrade_hard",
+          "confidence": "medium"
+        }
+      ],
+      "model_adjustments": [
+        {
+          "adjustment": "motivation_attack_persistence_up",
+          "direction": "荷兰在必须守住或争取头名主动权的第三轮情境里，领先后进攻持续性略高于普通领先脚本。",
+          "confidence": "medium"
+        },
+        {
+          "adjustment": "rotation_clean_sheet_down_small",
+          "direction": "荷兰轮换局下的 clean sheet 可信度小幅下修，尤其遇到天气扰动和对手无包袱追分时。",
+          "confidence": "high"
+        },
+        {
+          "adjustment": "spoiler_goal_tail_up",
+          "direction": "突尼斯常规攻击基线仍低，但对手轮换+天气扰动+领先后松动时的偷球尾部概率不应压得过低。",
+          "confidence": "high"
+        },
+        {
+          "adjustment": "no_linear_blowout_carryover",
+          "direction": "不支持把本场净胜优势直接外推为荷兰面对中高档对手时的稳定深盘穿透力。",
+          "confidence": "high"
+        }
+      ],
+      "handoff_to_model": {
+        "xg_directional_note": "保持荷兰高于同组对手的attack ceiling，但把更多风险分配到轮换与天气条件下的失球尾部；突尼斯只上调spoiler goal tail，不上调长期控场能力。",
+        "double_counting_warning": "不要同时因为3比1结果、雨战因素和早段乌龙而重复上调荷兰常规攻击上限。"
+      },
+      "handoff_to_red_team": [
+        "需要核验Brobbey进球前荷兰是否主要靠边路传中、定位球二次球还是高位回收制造，以免错配得分来源。",
+        "需要核验Mastouri进球是否来自突尼斯少数高质量转换还是比赛已开放后的随机波动。"
+      ]
+    }
+  ]
+}

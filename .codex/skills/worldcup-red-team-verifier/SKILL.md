@@ -35,6 +35,7 @@ Be adversarial but fair. Separate evidence-backed concerns from speculative conc
    - data failure: weak sample, opponent-quality distortion, missing xG/context, club-to-country mismatch
    - market failure: public bias, odds movement without team-news support, inflated favorite, stale line
    - tournament failure: rotation incentives, group-third dynamics, travel/rest/climate, bracket path
+   - third-round failure: misread qualification incentives, ignored simultaneous-match dependency, overvalued a team that may rotate, underpriced draw-management, or double-counted market motivation
 5. Audit the quantitative chain:
    - sample size too small or opponent quality distorted
    - injury, suspension, lineup, or minutes-risk data stale
@@ -102,6 +103,13 @@ When reviewing a match prediction, check these fields explicitly:
 - `injury_adjustment`
 - `tactical_matchup_adjustment`
 - `schedule_environment_adjustment`
+- `third_round_context`
+- `qualification_scenarios`
+- `motivation_profile`
+- `bracket_path_expectation`
+- `rotation_risk`
+- `strategic_tempo_adjustment`
+- `simulated_group_outcomes`
 - `market_adjustment`
 - `expected_goals`
 - `poisson_score_matrix`
@@ -117,6 +125,18 @@ Return `hold` if official lineups, key availability, market snapshots, or a core
 
 Return `pass` only when the chain is complete enough for the current task and the remaining uncertainty is clearly disclosed.
 
+## Third-Round Review Requirements
+
+For final group-round predictions, return `revise` or `hold` unless these items are explicitly present or explicitly marked unavailable:
+
+- official tiebreaker rules and current group table snapshot
+- each team's qualification-state label and reason
+- same-group simultaneous fixture dependency and late-game incentive risk
+- bracket-path expectation for finishing first/second/third when relevant
+- rotation, yellow-card suspension, and minutes-management risk
+- check that motivation, rotation, and market movement were not counted twice
+- downside scenario where the favorite has lower incentive than the underdog
+
 ## Red-Team Checklist
 
 Load `references/review-checklist.md` when reviewing a concrete forecast.
@@ -131,6 +151,6 @@ Load `references/market-risk.md` when odds, implied probabilities, Asian handica
 - Do not treat prestige, star power, or historical reputation as sufficient evidence.
 - Do not let a prediction publish as executable betting language while verdict is `hold` or `revise`.
 
-## Anti-disconnect Workflow
+## Output Discipline
 
-For long World Cup work, keep each turn to the smallest current group/round loop: collect facts, tactical judgment, model probability, red-team check, write files, validate, then report briefly. Do not paste long red-team reports into chat; write them to local files first. If multiple files are needed, create skeleton files first, then fill them one by one. Subagent outputs must be summarized as key conclusions only. Before rewriting after an interruption, check which files already exist and preserve valid content. Final chat output should include only the prediction table, file paths, validation result, and key risks.
+For World Cup work, choose the output size based on the user's current request and the reusable value of the result. Write durable verification packets and reusable reports to local files when they need to persist, but do not force skeleton-first file creation or smallest-loop batching as a mandatory workflow. Before updating existing files, check whether valid content already exists and preserve it. Subagent outputs should be summarized into key objections, verdict, required fixes, and handoff notes unless the user asks for full detail.

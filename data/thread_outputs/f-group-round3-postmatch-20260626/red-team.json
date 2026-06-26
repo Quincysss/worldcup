@@ -1,0 +1,163 @@
+{
+  "phase": "postmatch_review",
+  "group": "F",
+  "matches": [
+    {
+      "match": "Japan 1-1 Sweden",
+      "betting_line_check": {
+        "market": "Japan -1",
+        "actual_result": "let_negative",
+        "verbatim_cn": "让负"
+      }
+    },
+    {
+      "match": "Tunisia 1-3 Netherlands",
+      "betting_line_check": {
+        "market": "Tunisia +2",
+        "actual_result": "let_draw",
+        "verbatim_cn": "让平"
+      }
+    }
+  ],
+  "status": "complete",
+  "created_at": "2026-06-26T00:00:00+08:00",
+  "updated_at": "2026-06-26T00:25:00+08:00",
+  "owner": "red-team",
+  "scope": "F组第三轮赛后复盘红队校验；只审查事实链、赛前预测解释、竞彩口径、模型过拟合与成员表回填门禁",
+  "missing_fields": [
+    "official_postmatch_match_reports_not_found_locally",
+    "official_minute_level_player_state_confirmation"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\outputs\\match_predictions\\f-group-round3-quant-prediction-20260625.json",
+    "K:\\worldcup\\data\\thread_outputs\\f-group-round3-20260625\\data-collector.md",
+    "K:\\worldcup\\data\\thread_outputs\\f-group-round3-20260625\\tactics-coach.json",
+    "K:\\worldcup\\data\\thread_outputs\\f-group-round3-20260625\\modeler-draft.md",
+    "K:\\worldcup\\data\\thread_outputs\\f-group-round3-20260625\\red-team.md",
+    "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\F组\\F组第二轮复盘.md"
+  ],
+  "notes": [
+    "赛果由任务指令给定：日本 1-1 瑞典；突尼斯 1-3 荷兰",
+    "本地当前未确认第三轮单场官方复盘文件，因此 player_state 只能部分安全回填"
+  ],
+  "verdict": "revise",
+  "publish_gate": "publish_with_explicit_gaps_no_full_closure_claim",
+  "fact_conflict_check": [
+    {
+      "item": "Japan vs Sweden pre-match chain included 1-1 in top score outcomes",
+      "result": "pass",
+      "severity": "low",
+      "confidence": "high",
+      "note": "Result does not contradict the pre-match probability surface."
+    },
+    {
+      "item": "Sweden must win was simplified into automatic high-total script",
+      "result": "revise",
+      "severity": "high",
+      "confidence": "high",
+      "note": "This is an over-attribution risk. The safer reading is that Sweden's urgency mainly enlarged late-game and set-piece tails."
+    },
+    {
+      "item": "Netherlands strong win equals handicap cover certainty",
+      "result": "revise",
+      "severity": "high",
+      "confidence": "high",
+      "note": "Actual 1-3 maps to Tunisia +2 let_draw, not a full strong-side handicap cash."
+    },
+    {
+      "item": "Third-round motivation and qualification path were fully official-state verified pre-match",
+      "result": "revise",
+      "severity": "medium",
+      "confidence": "high",
+      "note": "Existing chain still carried heuristic path warnings; postmatch language cannot rewrite that into full closure."
+    }
+  ],
+  "market_checks": [
+    {
+      "match": "Japan 1-1 Sweden",
+      "issue": "Ordinary favorite price on Japan did not imply safe Japan -1 handicap support.",
+      "actual_line_result": "Japan -1 let_negative",
+      "severity": "high",
+      "owner": "betting"
+    },
+    {
+      "match": "Tunisia 1-3 Netherlands",
+      "issue": "Ordinary SPF was unavailable pre-match, so market calibration was partial and cannot be rewritten as full market confirmation after the result.",
+      "actual_line_result": "Tunisia +2 let_draw",
+      "severity": "high",
+      "owner": "betting"
+    }
+  ],
+  "model_overfit_flags": [
+    "Do not convert the correct Netherlands win direction into a claim that margin or handicap logic was fully correct.",
+    "Do not convert the Japan draw result into proof that Sweden urgency automatically creates open games.",
+    "Do not backfill player ratings or player_state using scoreline alone."
+  ],
+  "player_state_writeback": {
+    "status": "partial_safe_writeback_only",
+    "safe_to_write_back": [
+      "final_score",
+      "match_result_label",
+      "Japan -1 let_negative",
+      "Tunisia +2 let_draw"
+    ],
+    "not_safe_to_write_back_yet": [
+      "minute_level_load_conclusions",
+      "discipline_clearance_complete",
+      "full_player_ratings",
+      "complete_member_table_closure"
+    ],
+    "reason": "Third-round single-match official postmatch files and minute-level confirmation are not yet verified locally.",
+    "owner": "data"
+  },
+  "responsibility": [
+    {
+      "owner": "model",
+      "level": "medium",
+      "issue": "If postmatch copy sells directional success as precise payout or exact margin validation, that is model explanation overfit."
+    },
+    {
+      "owner": "main",
+      "level": "high",
+      "issue": "Publishing layer must distinguish scoreline hit, handicap result, and remaining data gaps."
+    },
+    {
+      "owner": "betting",
+      "level": "high",
+      "issue": "Must not narrate Netherlands win as automatic +2 cover or ignore Japan -1 let_negative."
+    },
+    {
+      "owner": "data",
+      "level": "medium",
+      "issue": "Need third-round single-match evidence before claiming complete player_state or member-table writeback."
+    },
+    {
+      "owner": "tactics",
+      "level": "low_to_medium",
+      "issue": "Risk lies more in postmatch over-attribution than in the baseline tactical read."
+    }
+  ],
+  "must_fix_items": [
+    {
+      "item": "State explicitly that Japan 1-1 Sweden means Japan -1 ended as let_negative / 让负.",
+      "owner": "main"
+    },
+    {
+      "item": "State explicitly that Tunisia 1-3 Netherlands means Tunisia +2 ended as let_draw / 让平, not strong-side handicap cash.",
+      "owner": "main"
+    },
+    {
+      "item": "Remove any linear wording that Sweden must win therefore the game was naturally a high-total or wide-open script.",
+      "owner": "summary"
+    },
+    {
+      "item": "Remove any wording that Netherlands strong win therefore the market fully backed a clean cover story.",
+      "owner": "summary"
+    },
+    {
+      "item": "Keep player_state and member-table status at partial_safe_writeback until official postmatch or minute-level evidence is added.",
+      "owner": "data"
+    }
+  ],
+  "recommended_statement": "本轮赛果与赛前主预测方向并非完全冲突，但盘口兑现与赛果兑现不是同一件事。日本 1-1 瑞典对应日本 -1 让负；突尼斯 1-3 荷兰对应突尼斯 +2 让平。赛后解释应避免把“必须赢”简化为自动大球，也避免把“强队赢球”简化为自动穿盘。第三轮成员表与 player_state 若缺少官方单场复盘和分钟级确认，只能部分回填，不能宣称完整闭环。"
+}

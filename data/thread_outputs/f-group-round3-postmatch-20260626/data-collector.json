@@ -1,0 +1,314 @@
+{
+  "phase": "postmatch_fact_collection",
+  "group": "F",
+  "round": "group_round_3",
+  "status": "partial",
+  "final_status": "partial",
+  "json_validated": true,
+  "factor_inputs_ready": true,
+  "created_at": "2026-06-26T10:26:54.1758559+08:00",
+  "updated_at": "2026-06-26T10:44:00+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": "f-group-round3-postmatch-facts-only",
+  "source_time": "2026-06-26T10:30:00.8455727+08:00",
+  "standings_after_round3": [
+    {
+      "team": "Netherlands",
+      "rank": 1,
+      "points": 7,
+      "goals_for": 10,
+      "goals_against": 4,
+      "goal_difference": 6,
+      "qualification_status": "qualified"
+    },
+    {
+      "team": "Japan",
+      "rank": 2,
+      "points": 5,
+      "goals_for": 7,
+      "goals_against": 3,
+      "goal_difference": 4,
+      "qualification_status": "qualified"
+    },
+    {
+      "team": "Sweden",
+      "rank": 3,
+      "points": 4,
+      "goals_for": 7,
+      "goals_against": 7,
+      "goal_difference": 0,
+      "qualification_status": "qualified_as_third_place"
+    },
+    {
+      "team": "Tunisia",
+      "rank": 4,
+      "points": 0,
+      "goals_for": 2,
+      "goals_against": 12,
+      "goal_difference": -10,
+      "qualification_status": "eliminated"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "japan-vs-sweden-2026-06-26",
+      "match_no": "Thu058",
+      "kickoff_beijing": "2026-06-26 07:00",
+      "venue": "Dallas Stadium",
+      "score_ft": "1-1",
+      "score_ht": "0-0",
+      "goals": [
+        {
+          "team": "Japan",
+          "scorer": "Daizen Maeda",
+          "minute": "56",
+          "assist": null
+        },
+        {
+          "team": "Sweden",
+          "scorer": "Anthony Elanga",
+          "minute": "61",
+          "assist": null
+        }
+      ],
+      "key_events": [
+        "90+3 Isak header hit the bar after a Suzuki touch."
+      ],
+      "lineup_status": "partial_available_via_live_blog",
+      "formation_status": "unverified",
+      "substitution_status": "partial",
+      "injury_status": "no_confirmed_new_injury_captured",
+      "advancement_result": {
+        "Japan": "runner_up_vs_brazil_in_last_32",
+        "Sweden": "third_place_team_advanced"
+      },
+      "prediction_contrast": {
+        "model_top_scoreline": "1-1",
+        "model_1x2_probability": {
+          "japan_win": 0.4647,
+          "draw": 0.2554,
+          "sweden_win": 0.2798
+        },
+        "market_1x2_decimal_odds": {
+          "japan_win": 1.6,
+          "draw": 3.57,
+          "sweden_win": 4.45
+        },
+        "note": "Model top scoreline matched. Market leaned more to Japan win."
+      },
+      "lottery_context": {
+        "availability": "available_in_local_pre_match_packet",
+        "ordinary_spf": {
+          "home_win": 1.6,
+          "draw": 3.57,
+          "away_win": 4.45,
+          "settlement": "draw"
+        },
+        "handicap_spf": {
+          "handicap": -1,
+          "home_win": 3.0,
+          "draw": 3.7,
+          "away_win": 1.91,
+          "settlement": "away_win"
+        }
+      },
+      "source_urls": [
+        "https://www.theguardian.com/football/2026/jun/26/japan-sweden-world-cup-2026-match-report",
+        "https://www.theguardian.com/football/live/2026/jun/25/japan-v-sweden-world-cup-2026-live",
+        "K:\\worldcup\\data\\outputs\\match_predictions\\f-group-round3-quant-prediction-20260625.json"
+      ],
+      "captured_at": "2026-06-26T10:30:00.8455727+08:00",
+      "gaps": [
+        "Official xG unavailable.",
+        "Full lineups, formations, substitutions and player ratings not fully structured.",
+        "Card detail not fully verified."
+      ]
+    },
+    {
+      "match_id": "tunisia-vs-netherlands-2026-06-26",
+      "match_no": "Thu057",
+      "kickoff_beijing": "2026-06-26 07:00",
+      "venue": "Kansas City Stadium",
+      "score_ft": "1-3",
+      "score_ht": "0-2",
+      "goals": [
+        {
+          "team": "Netherlands",
+          "scorer": "Ellyes Skhiri",
+          "minute": "3",
+          "assist": null,
+          "goal_type": "own_goal"
+        },
+        {
+          "team": "Netherlands",
+          "scorer": "Brian Brobbey",
+          "minute": "7",
+          "assist": "Virgil van Dijk"
+        },
+        {
+          "team": "Tunisia",
+          "scorer": "Hazem Mastouri",
+          "minute": "54",
+          "assist": null
+        },
+        {
+          "team": "Netherlands",
+          "scorer": "Jan Paul van Hecke",
+          "minute": "62",
+          "assist": null
+        }
+      ],
+      "key_events": [
+        "Pre-match severe weather alert around the stadium area.",
+        "Fan zone closure was lifted roughly one hour before kick-off."
+      ],
+      "lineup_status": "partial_available_via_live_blog",
+      "formation_status": "unverified",
+      "substitution_status": "partial",
+      "known_substitutions": [
+        "77 Depay for Brobbey",
+        "84 Noa Lang for Gakpo",
+        "90 Tounekti for Mastouri"
+      ],
+      "injury_status": "no_confirmed_new_injury_captured",
+      "availability_notes": [
+        "Netherlands missing Micky van de Ven and Crysencio Summerville from prior yellow-card issues."
+      ],
+      "advancement_result": {
+        "Netherlands": "group_winner_vs_morocco_in_last_32",
+        "Tunisia": "eliminated"
+      },
+      "prediction_contrast": {
+        "model_1x2_probability": {
+          "tunisia_win": 0.101,
+          "draw": 0.194,
+          "netherlands_win": 0.7051
+        },
+        "model_top_scorelines": [
+          "0-2",
+          "0-1",
+          "0-3"
+        ],
+        "market_ordinary_spf": "not_on_sale_pre_match",
+        "market_handicap_spf": {
+          "handicap": 2,
+          "home_win": 3.47,
+          "draw": 4.25,
+          "away_win": 1.65
+        },
+        "note": "Away-win direction aligned with model."
+      },
+      "lottery_context": {
+        "availability": "handicap_only_in_local_pre_match_packet",
+        "ordinary_spf": "not_on_sale",
+        "handicap_spf": {
+          "handicap": 2,
+          "home_win": 3.47,
+          "draw": 4.25,
+          "away_win": 1.65,
+          "settlement": "draw"
+        }
+      },
+      "source_urls": [
+        "https://www.theguardian.com/football/2026/jun/26/tunisia-netherlands-world-cup-2026-match-report",
+        "https://www.theguardian.com/football/live/2026/jun/25/tunisia-v-netherlands-world-cup-2026-live",
+        "K:\\worldcup\\data\\outputs\\match_predictions\\f-group-round3-quant-prediction-20260625.json"
+      ],
+      "captured_at": "2026-06-26T10:30:00.8455727+08:00",
+      "gaps": [
+        "Official xG unavailable.",
+        "Netherlands full lineup and full substitution chain not fully structured.",
+        "Player ratings and new card detail unavailable."
+      ]
+    }
+  ],
+  "canonical_read_status": {
+    "player_state": [
+      {
+        "file": "K:\\worldcup\\data\\outputs\\player_state\\japan-player-state.json",
+        "exists": true,
+        "last_known_updated_at": "2026-06-21T18:30:00+08:00",
+        "round3_backfill_detected": false
+      },
+      {
+        "file": "K:\\worldcup\\data\\outputs\\player_state\\sweden-player-state.json",
+        "exists": true,
+        "last_known_updated_at": "2026-06-21T18:35:00+08:00",
+        "round3_backfill_detected": false
+      },
+      {
+        "file": "K:\\worldcup\\data\\outputs\\player_state\\tunisia-player-state.json",
+        "exists": true,
+        "last_known_updated_at": "2026-06-21T18:30:00+08:00",
+        "round3_backfill_detected": false
+      },
+      {
+        "file": "K:\\worldcup\\data\\outputs\\player_state\\netherlands-player-state.json",
+        "exists": true,
+        "last_known_updated_at": "2026-06-21T18:35:00+08:00",
+        "round3_backfill_detected": false
+      }
+    ],
+    "member_tables": [
+      {
+        "file": "team_member_table:japan",
+        "exists": true,
+        "round3_backfill_detected": false
+      },
+      {
+        "file": "team_member_table:sweden",
+        "exists": true,
+        "round3_backfill_detected": false
+      },
+      {
+        "file": "team_member_table:tunisia",
+        "exists": true,
+        "round3_backfill_detected": false
+      },
+      {
+        "file": "team_member_table:netherlands",
+        "exists": true,
+        "round3_backfill_detected": false
+      }
+    ]
+  },
+  "missing_fields": [
+    "Official xG and full technical stats",
+    "Full player ratings for both matches",
+    "Japan vs Sweden full lineup, formation and substitution chain",
+    "Tunisia vs Netherlands Netherlands full lineup and substitution chain",
+    "Round-3 backfill to canonical player_state and member-table files"
+  ],
+  "source_log": [
+    {
+      "id": "src-f-r3-001",
+      "url": "https://www.theguardian.com/football/2026/jun/26/japan-sweden-world-cup-2026-match-report",
+      "captured_at": "2026-06-26T10:30:00.8455727+08:00"
+    },
+    {
+      "id": "src-f-r3-002",
+      "url": "https://www.theguardian.com/football/live/2026/jun/25/japan-v-sweden-world-cup-2026-live",
+      "captured_at": "2026-06-26T10:30:00.8455727+08:00"
+    },
+    {
+      "id": "src-f-r3-003",
+      "url": "https://www.theguardian.com/football/2026/jun/26/tunisia-netherlands-world-cup-2026-match-report",
+      "captured_at": "2026-06-26T10:30:00.8455727+08:00"
+    },
+    {
+      "id": "src-f-r3-004",
+      "url": "https://www.theguardian.com/football/live/2026/jun/25/tunisia-v-netherlands-world-cup-2026-live",
+      "captured_at": "2026-06-26T10:30:00.8455727+08:00"
+    },
+    {
+      "id": "src-f-r3-005",
+      "url": "K:\\worldcup\\data\\outputs\\match_predictions\\f-group-round3-quant-prediction-20260625.json",
+      "captured_at": "2026-06-26T10:30:00.8455727+08:00"
+    }
+  ],
+  "notes": [
+    "Facts only. No prediction or betting advice.",
+    "Lottery fields were reused from the local pre-match prediction packet snapshot.",
+    "Canonical player_state and member-table files still need separate postmatch backfill."
+  ]
+}

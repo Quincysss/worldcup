@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "phase": "post_match_review",
+    "status": "complete_partial_minutes",
+    "created_at": "2026-06-24T09:37:50+08:00",
+    "workflow": [
+      "collect_facts",
+      "tactical_judgement",
+      "model_backtest",
+      "red_team_check",
+      "write_files",
+      "validate"
+    ],
+    "role_thread_outputs": {
+      "data_collector": "data/thread_outputs/k-group-round2-portugal-uzbekistan-postmatch-20260624/data-collector.md",
+      "tactics_coach": "data/thread_outputs/k-group-round2-portugal-uzbekistan-postmatch-20260624/tactics-coach.md",
+      "modeler": "data/thread_outputs/k-group-round2-portugal-uzbekistan-postmatch-20260624/modeler.md",
+      "red_team": "data/thread_outputs/k-group-round2-portugal-uzbekistan-postmatch-20260624/red-team.md"
+    }
+  },
+  "match": {
+    "id": "K-R2-POR-UZB-20260623",
+    "group": "K",
+    "round": 2,
+    "date": "2026-06-23",
+    "kickoff_beijing": "2026-06-24T01:00:00+08:00",
+    "venue": "Houston Stadium / NRG Stadium",
+    "home_team": "葡萄牙",
+    "away_team": "乌兹别克斯坦",
+    "score": "5-0",
+    "result": {
+      "portugal": 5,
+      "uzbekistan": 0
+    }
+  },
+  "sources": [
+    {
+      "name": "FIFA match report",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-uzbekistan-match-report-highlights",
+      "note": "确认葡萄牙5-0、C罗梅开二度和比赛报告框架。"
+    },
+    {
+      "name": "The Guardian match report",
+      "url": "https://www.theguardian.com/football/2026/jun/23/portugal-uzbekistan-world-cup-group-k-match-report",
+      "note": "用于进球链、战术细节、定位球与C罗纪录描述。"
+    },
+    {
+      "name": "VAVEL live report",
+      "url": "https://www.vavel.com/en-us/soccer/2026/06/23/1264145-portugal-vs-uzbekistan-live-score-2026-fifa-world-cup.html",
+      "note": "确认比分、首发、终场和第86分钟莱奥进球链。"
+    },
+    {
+      "name": "AP syndicated report",
+      "url": "https://www.bigrapidsnews.com/sports/article/portugal-sticks-with-ronaldo-against-uzbekistan-22316960.php",
+      "note": "交叉验证5-0、C罗双响、Nematov乌龙归属。"
+    }
+  ],
+  "goals": [
+    {
+      "minute": 6,
+      "team": "葡萄牙",
+      "scorer": "Cristiano Ronaldo",
+      "scorer_cn": "克里斯蒂亚诺·罗纳尔多",
+      "assist_or_source": "Joao Cancelo byline cutback",
+      "source_status": "confirmed_multi_source"
+    },
+    {
+      "minute": 17,
+      "team": "葡萄牙",
+      "scorer": "Nuno Mendes",
+      "scorer_cn": "努诺·门德斯",
+      "assist_or_source": "direct free kick after Pedro Neto drew foul",
+      "source_status": "confirmed_multi_source"
+    },
+    {
+      "minute": 39,
+      "team": "葡萄牙",
+      "scorer": "Cristiano Ronaldo",
+      "scorer_cn": "克里斯蒂亚诺·罗纳尔多",
+      "assist_or_source": "Bruno Fernandes through ball",
+      "source_status": "confirmed_multi_source"
+    },
+    {
+      "minute": 60,
+      "team": "葡萄牙",
+      "scorer": "Own goal",
+      "scorer_cn": "乌龙球",
+      "assist_or_source": "Bruno Fernandes low corner; Nematov/Khusanov touch sequence",
+      "source_status": "confirmed_goal_conflicting_own_goal_attribution"
+    },
+    {
+      "minute": 86,
+      "team": "葡萄牙",
+      "scorer": "Rafael Leao",
+      "scorer_cn": "拉斐尔·莱奥",
+      "assist_or_source": "Nelson Semedo low cross after Bruno Fernandes pass",
+      "source_status": "confirmed_multi_source"
+    }
+  ],
+  "predicted": {
+    "source_file": "data/outputs/match_predictions/k-group-round2-quant-prediction-20260623.json",
+    "parse_status": "invalid_json_in_local_file",
+    "pre_match_pick": "葡萄牙胜",
+    "pre_match_score": "1-0 / 2-0",
+    "expected_goals": {
+      "portugal": 1.92,
+      "uzbekistan": 0.72
+    },
+    "home_win_probability": 0.655,
+    "under_2_5_probability": 0.5084,
+    "handicap_note": "赛前对葡萄牙-2/-2.25穿盘保持谨慎"
+  },
+  "backtest": {
+    "winner_direction": "hit",
+    "exact_score": "miss",
+    "total_goals": "miss_over_2_5_actual",
+    "handicap_direction": "miss_portugal_covered_minus_2",
+    "btts": "hit_no",
+    "main_errors": [
+      "强弱差场景下，Poisson尾部被压缩，4球以上大胜概率不足。",
+      "赛前模型保留了乌兹别克斯坦反击进球尾部，但实战中其推进和二点球都被压住。",
+      "葡萄牙定位球设计、领先后继续压迫、替补边路冲击没有被充分联动到大小球和让球模块。",
+      "竞彩/近同源市场强烈支持葡萄牙时，模型只轻度吸收，导致主胜概率与大胜路径偏保守。"
+    ],
+    "parameter_updates": [
+      "加入强队领先后持续压制放大项。",
+      "当市场主胜去水概率超过80%且模型仅65%左右时，触发非线性校准复核。",
+      "重标4+净胜尾部分布，尤其是边路强队对低位弱队。",
+      "让球、大小球与胜负强信号增强联动，避免机械低比分锚定。"
+    ]
+  },
+  "tactical": [
+    "葡萄牙开局就把比赛打成两翼牵引加禁区内终结：坎塞洛的底线回敲、佩德罗·内托造任意球、门德斯直接任意球，连续把乌兹别克斯坦防线拉到横向失衡。",
+    "布鲁诺·费尔南德斯是中场真空的最大利用者：第三球送出纵向传递，第四球低平角球制造乌龙，第五球前也参与右路转移。",
+    "乌兹别克斯坦低位并没有真正形成第一落点保护，门将和中卫在定位球/低平球处理上连续出错，导致比分从可控输球坠入崩盘。",
+    "葡萄牙没有在2-0后降速，而是继续用C罗的禁区威胁牵制中卫，再用莱奥和塞梅多补强边路冲击。",
+    "这场不能简单理解成C罗个人复苏，真正决定比赛下限的是定位球质量、边后卫宽度和布鲁诺的二次组织。"
+  ],
+  "red_team": [
+    "不要因为5-0就把葡萄牙后续所有深盘都视为可穿；乌兹别克斯坦的门将/中卫事故有样本偶然性。",
+    "C罗双响提升终结可信度，但面对更强中卫线时，葡萄牙是否继续牺牲前场压迫强度仍要单独评估。",
+    "乌龙归属在可访问媒体之间有细节差异，成员表只写事件影响，不把争议归因写死为单一球员重大失误。",
+    "本场赛前预测方向正确但让球和大小球失误，不能用赛后比分反向抹掉赛前信息缺口。"
+  ],
+  "player_state_updates": {
+    "portugal": [
+      "Diogo Costa",
+      "Joao Cancelo",
+      "Ruben Dias",
+      "Renato Veiga",
+      "Nuno Mendes",
+      "Joao Neves",
+      "Vitinha",
+      "Bruno Fernandes",
+      "Joao Felix",
+      "Cristiano Ronaldo",
+      "Pedro Neto",
+      "Rafael Leao",
+      "Nelson Semedo"
+    ],
+    "uzbekistan": [
+      "Abduvohid Nematov",
+      "Abdukodir Khusanov",
+      "Odiljon Hamrobekov",
+      "Eldor Shomurodov",
+      "Jaloliddin Masharipov"
+    ],
+    "status": "canonical_player_state_and_member_table_updated; full official minute/player rating feed still missing"
+  }
+}

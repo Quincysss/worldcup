@@ -1,0 +1,118 @@
+{
+  "review_target": "K:/worldcup/data/thread_outputs/def-round3-betting-20260625/expanded-return-betting-plan.md (missing, fallback review based on betting-plan/main-summary/modeler)",
+  "verdict": "revise",
+  "publish_gate": "discussion_only",
+  "execution_gate": "hold_for_betting_discussion_only",
+  "top_concerns": [
+    {
+      "concern": "为了把理论净回报抬到150/200/300+，方案很容易被迫增加3串1、4串4、4串11等多断点结构。",
+      "category": "market",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "现有A/B/C模板里，返奖越高的方案越依赖多串；C方案主仓已经出现4串11与4串4。",
+      "why_it_matters": "这会把原本是讨论型保护方向，改造成高断点高波动结构，和“主仓70”定位冲突。",
+      "follow_up_check": "8套扩展方案里，保守2不得出现3串或以上；均衡3的3串只能进娱乐仓；进取3必须明确为高波动娱乐模板。",
+      "owner": "main"
+    },
+    {
+      "concern": "为追返奖把精确净胜球玩法塞进主仓，属于深让盘误读。",
+      "category": "market",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "现有方案已使用057让平=荷兰刚好赢2球、060让平=美国刚好赢1球。",
+      "why_it_matters": "这类玩法本质接近比分单，不适合被包装成稳健提回报手段。",
+      "follow_up_check": "所有让球平、精确净胜球数玩法降级娱乐仓或删除。",
+      "owner": "main"
+    },
+    {
+      "concern": "056和057普通SPF未开售/未补齐，若扩展方案把它们混入主仓，会把不可执行市场伪装成可执行建议。",
+      "category": "data",
+      "severity": "blocker",
+      "confidence": "high",
+      "evidence": "现有betting-plan明确写出056/057普通SPF未开售或缺失，只能参考让球盘。",
+      "why_it_matters": "未开售场次不能承担执行模板中的主仓角色。",
+      "follow_up_check": "删除任何基于056/057普通SPF的主仓设计；仍缺普通SPF时继续discussion_only。",
+      "owner": "data"
+    },
+    {
+      "concern": "第三轮轮换、同开球动机变化和领先后降速，会把热门低赔与大胜叙事同时打穿。",
+      "category": "tournament",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "德国、荷兰、美国均存在轮换/节奏管理风险；日本与瑞典、巴拉圭与澳大利亚也都受同组同步路径影响。",
+      "why_it_matters": "这直接打击德国1.36、美国1.66、荷兰深让、日本穿盘等热门链路。",
+      "follow_up_check": "临场若出现2名及以上核心轮换或路径转为保平/控节奏，撤掉对应热门项。",
+      "owner": "main"
+    },
+    {
+      "concern": "比分和半全场被用于抬升理论返奖，会把高方差玩法混入看似理性的回报设计。",
+      "category": "market",
+      "severity": "medium",
+      "confidence": "high",
+      "evidence": "现有A/B/C模板已把055 0-1、057 0-2、058 1-1以及平/负半全场作为回报补充项。",
+      "why_it_matters": "这些玩法对早球、红牌、末段追分极度敏感，不应参与主仓收益叙事。",
+      "follow_up_check": "比分、半全场统一降级娱乐仓，并在8套方案中独立披露为高方差票。",
+      "owner": "main"
+    }
+  ],
+  "allowed_keep": [
+    "058 日本(-1)让负 / 瑞典+1覆盖",
+    "059 巴拉圭(-1)让负 / 澳大利亚+1覆盖",
+    "055 德国胜仅可作为小额辅助项",
+    "056 库拉索(+2)方向仅可作为平衡风险候选"
+  ],
+  "downgrade_to_entertainment": [
+    "所有3串1、4串4、4串11",
+    "所有比分",
+    "所有半全场",
+    "057让平（荷兰刚好赢2球）",
+    "060让平（美国刚好赢1球）",
+    "所有热门大胜与深让延伸玩法"
+  ],
+  "delete_or_replace": [
+    "删除任何把056或057普通SPF当作可执行主仓的方案",
+    "删除保守型方案中的3串1、4串4、4串11",
+    "删除把055德国1.36与060美国1.66同时包装成双低赔安全锚的主仓设计",
+    "删除把057让平、060让平放进主仓的设计",
+    "替换所有为了冲300+而把比分/半全场塞进均衡方案的写法"
+  ],
+  "upset_or_failure_scenarios": [
+    "德国和美国同时出现轮换或降速，低赔双锚一起失效。",
+    "日本未能穿盘，瑞典必须追胜导致比赛进入开放尾部。",
+    "荷兰只求结果不求净胜球，0-1或1-1压缩了让球与比分链路。",
+    "巴拉圭必须赢但阿尔米隆停赛，比赛回到1-1/0-1而非巴拉圭主导。"
+  ],
+  "overconfidence_flags": [
+    "把理论净回报写成目标回报",
+    "把多串关当成均衡提回报而不是增加断点",
+    "把让球平等同于稳健玩法",
+    "把未开售市场写成可执行主仓"
+  ],
+  "market_flags": [
+    "056和057普通SPF未开售或未补齐，不能混入主仓",
+    "055德国和060美国低赔不等于低波动",
+    "058日本市场偏热，-1不支持轻松穿盘",
+    "057和060的让球平本质是精确净胜球数"
+  ],
+  "quant_chain_flags": [
+    "当前expanded-return-betting-plan文件缺失，红队只能基于旧方案做结构性审查",
+    "现有高返奖上限主要来自串关和精确脚本，而不是更稳健的概率优势",
+    "第三轮轮换、同开球路径与市场热度有被重复计入的风险"
+  ],
+  "recommended_probability_adjustment": "不建议为追返奖而上调热门穿盘、大胜比分或精确净胜球路径的主观概率；若必须扩展8套方案，应把高返奖部分明确迁移到娱乐仓，而不是假装主仓胜率不变。",
+  "missing_data": [
+    "expanded-return-betting-plan.md/json",
+    "T-75官方首发",
+    "最终伤停/黄牌锁定",
+    "056/057普通SPF快照",
+    "临场同源赔率刷新"
+  ],
+  "late_cancel_conditions": [
+    "T-75官方首发缺失",
+    "德国、荷兰、日本、美国出现2名及以上核心轮换/保护",
+    "056/057仍无普通SPF",
+    "热门赔率临场明显降温且无公开伤停解释",
+    "同组另一场路径显示本场转为保平、控节奏或已无追净胜球动力"
+  ],
+  "handoff_notes": "最终口径应改为：8套方案只是讨论型回报阶梯，不是收益升级版。主线程必须把150/200/300+改写为理论上限，把多串、比分、半全场和精确净胜球玩法全部降级娱乐仓，并删除未开售场次混入主仓的写法。"
+}

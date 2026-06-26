@@ -1,0 +1,192 @@
+﻿    position: relative;
+    }       
+ /* 2019.3.12新加红单遮罩 */
+ .mask{
+        position: absolute;
+
+---
+
+<!--
+<script>
+//点击遮罩隐藏(2019.3.12)
+
+    $('.ad01').click(function(){
+
+---
+
+										cellpadding="0">
+										<tbody>
+											<tr show="1" dg="1"  rel="0" d="星期四" m="世界杯" expire="1" id="tr_2040291"   rq="+1" xq="xq_1" i="0" mN="周四055"  class="beginBet even" t="2026-06-25 21:40"  >
+
+
+
+---
+
+											</td>
+											<td class="wh-4 t-r">
+												<a href="http://saishi.zgzcw.com/soccer/team/1/11082" target="_blank" title="厄瓜多尔">厄瓜多尔</a>
+												<em class="pm oneDat">
+													
+
+---
+
+                    
+												</em>
+												<a href="http://saishi.zgzcw.com/soccer/team/1/11746" target="_blank" title="德国">德国</a>
+											</td>
+											
+
+---
+
+											</td>
+											</tr>
+											<tr show="1" dg="1"  rel="0" d="星期四" m="世界杯" expire="1" id="tr_2040292"   rq="+2" xq="xq_1" i="1" mN="周四056"  class="beginBet" t="2026-06-25 21:40"  >
+
+
+
+---
+
+											</td>
+											<td class="wh-4 t-r">
+												<a href="http://saishi.zgzcw.com/soccer/team/1/33203" target="_blank" title="库拉索">库拉索</a>
+												<em class="pm oneDat">
+													
+
+---
+
+                    
+												</em>
+												<a href="http://saishi.zgzcw.com/soccer/team/1/11141" target="_blank" title="科特迪瓦">科特迪瓦</a>
+											</td>
+											
+
+---
+
+													<em class="rq jia dg">+2</em>
+													
+													<a href="javascript:void(0)" id="td_2040292_22_0" class="weisai">2.40<s></s></a><a href="javascript:void(0)" id="td_2040292_22_1" class="weisai">3.85<s></s></a><a href="javascript:void(0)" id="td_2040292_22_2" class="weisai">2.21<s></s></a>
+													<em class="all" id="all_2040292_22"><input type="checkbox"
+															class="martop9" /></em>
+
+---
+
+                
+													<input type="hidden" id="ht_2040292" class="spArr"
+														value="0 0 0|2.40 3.85 2.21" />
+													
+
+
+---
+
+													<em class="rq ">0</em>
+													
+													<a href="javascript:void(0)" id="td_2040294_49_0" class="weisai">1.74<s></s></a><a href="javascript:void(0)" id="td_2040294_49_1" class="weisai">3.40<s></s></a><a href="javascript:void(0)" id="td_2040294_49_2" class="weisai">3.85<s></s></a>
+													<em class="all" id="all_2040294_49"><input type="checkbox"
+															class="martop9" /></em>
+
+---
+
+                
+													<input type="hidden" id="ht_2040294" class="spArr"
+														value="1.74 3.40 3.85|3.10 3.75 1.85" />
+													
+
+
+---
+
+													<em class="rq ">0</em>
+													
+													<a href="javascript:void(0)" id="td_2040295_49_0" class="weisai">2.63<s></s></a><a href="javascript:void(0)" id="td_2040295_49_1" class="weisai">2.06<s></s></a><a href="javascript:void(0)" id="td_2040295_49_2" class="weisai">3.80<s></s></a>
+													<em class="all" id="all_2040295_49"><input type="checkbox"
+															class="martop9" /></em>
+
+---
+
+                
+													<input type="hidden" id="ht_2040295" class="spArr"
+														value="2.63 2.06 3.80|6.10 4.35 1.36" />
+													
+
+
+---
+
+													<em class="rq jia ">+1</em>
+													
+													<a href="javascript:void(0)" id="td_2040300_22_0" class="weisai">2.65<s></s></a><a href="javascript:void(0)" id="td_2040300_22_1" class="weisai">3.35<s></s></a><a href="javascript:void(0)" id="td_2040300_22_2" class="weisai">2.21<s></s></a>
+													<em class="all" id="all_2040300_22"><input type="checkbox"
+															class="martop9" /></em>
+
+---
+
+                
+													<input type="hidden" id="ht_2040300" class="spArr"
+														value="6.85 4.22 1.34|2.65 3.35 2.21" />
+													
+
+
+---
+
+													<em class="rq jian ">-1</em>
+													
+													<a href="javascript:void(0)" id="td_2040301_22_0" class="weisai">5.50<s></s></a><a href="javascript:void(0)" id="td_2040301_22_1" class="weisai">3.80<s></s></a><a href="javascript:void(0)" id="td_2040301_22_2" class="weisai">1.46<s></s></a>
+													<em class="all" id="all_2040301_22"><input type="checkbox"
+															class="martop9" /></em>
+
+---
+
+                
+													<input type="hidden" id="ht_2040301" class="spArr"
+														value="2.32 2.50 3.35|5.50 3.80 1.46" />
+													
+
+
+---
+
+													<em class="rq jia ">+1</em>
+													
+													<a href="javascript:void(0)" id="td_2040305_22_0" class="weisai">1.82<s></s></a><a href="javascript:void(0)" id="td_2040305_22_1" class="weisai">3.50<s></s></a><a href="javascript:void(0)" id="td_2040305_22_2" class="weisai">3.40<s></s></a>
+													<em class="all" id="all_2040305_22"><input type="checkbox"
+															class="martop9" /></em>
+
+---
+
+                
+													<input type="hidden" id="ht_2040305" class="spArr"
+														value="3.95 3.22 1.77|1.82 3.50 3.40" />
+													
+
+
+---
+
+													<em class="rq jian ">-1</em>
+													
+													<a href="javascript:void(0)" id="td_2040306_22_0" class="weisai">3.15<s></s></a><a href="javascript:void(0)" id="td_2040306_22_1" class="weisai">3.50<s></s></a><a href="javascript:void(0)" id="td_2040306_22_2" class="weisai">1.90<s></s></a>
+													<em class="all" id="all_2040306_22"><input type="checkbox"
+															class="martop9" /></em>
+
+---
+
+                
+													<input type="hidden" id="ht_2040306" class="spArr"
+														value="1.71 3.75 3.60|3.15 3.50 1.90" />
+													
+
+
+---
+
+													<em class="rq jia dg">+2</em>
+													
+													<a href="javascript:void(0)" id="td_2040308_22_0" class="weisai">2.22<s></s></a><a href="javascript:void(0)" id="td_2040308_22_1" class="weisai">3.85<s></s></a><a href="javascript:void(0)" id="td_2040308_22_2" class="weisai">2.39<s></s></a>
+													<em class="all" id="all_2040308_22"><input type="checkbox"
+															class="martop9" /></em>
+
+---
+
+                
+													<input type="hidden" id="ht_2040308" class="spArr"
+														value="0 0 0|2.22 3.85 2.39" />
+													
+
+
+---
+

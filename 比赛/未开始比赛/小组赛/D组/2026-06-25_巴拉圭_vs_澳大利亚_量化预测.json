@@ -1,0 +1,177 @@
+{
+  "match_id": "2026-06-25_PAR_AUS",
+  "competition_round": "Group D Round 3",
+  "issue_number": "周四059",
+  "date_beijing": "2026-06-26 10:00",
+  "home": "巴拉圭",
+  "away": "澳大利亚",
+  "status": "completed_prediction_discussion_only",
+  "group_table_snapshot": [
+    {
+      "team": "美国",
+      "pts": 6,
+      "gd": 5,
+      "gf": 6,
+      "ga": 1,
+      "state": "已锁定小组第一"
+    },
+    {
+      "team": "澳大利亚",
+      "pts": 3,
+      "gd": 0,
+      "gf": 2,
+      "ga": 2,
+      "state": "平/胜巴拉圭即第二"
+    },
+    {
+      "team": "巴拉圭",
+      "pts": 3,
+      "gd": -2,
+      "gf": 2,
+      "ga": 4,
+      "state": "必须击败澳大利亚争第二"
+    },
+    {
+      "team": "土耳其",
+      "pts": 0,
+      "gd": -3,
+      "gf": 0,
+      "ga": 3,
+      "state": "已出局"
+    }
+  ],
+  "odds": {
+    "source": "中国足彩网竞彩混合页",
+    "captured": "2026-06-25 10:27:30 page systemTime",
+    "spf": {
+      "odds": [
+        2.63,
+        2.06,
+        3.8
+      ],
+      "raw_inverse": [
+        0.38023,
+        0.48544,
+        0.26316
+      ],
+      "no_vig_probability": [
+        0.3368,
+        0.43,
+        0.2331
+      ],
+      "booksum": 1.1288
+    },
+    "rqspf": {
+      "handicap": "巴拉圭 -1",
+      "odds": [
+        6.1,
+        4.35,
+        1.36
+      ],
+      "no_vig_probability": [
+        0.1452,
+        0.2036,
+        0.6512
+      ]
+    }
+  },
+  "expected_goals": {
+    "home": 1.12,
+    "away": 1.08
+  },
+  "poisson": {
+    "home_win": 0.3644,
+    "draw": 0.2913,
+    "away_win": 0.3443,
+    "over_2_5": 0.3773,
+    "under_2_5": 0.6227,
+    "btts_yes": 0.4449,
+    "top_scores": [
+      {
+        "score": "1-1",
+        "probability": 0.134
+      },
+      {
+        "score": "1-0",
+        "probability": 0.1241
+      },
+      {
+        "score": "0-1",
+        "probability": 0.1197
+      },
+      {
+        "score": "0-0",
+        "probability": 0.1108
+      },
+      {
+        "score": "2-1",
+        "probability": 0.0751
+      },
+      {
+        "score": "1-2",
+        "probability": 0.0724
+      },
+      {
+        "score": "2-0",
+        "probability": 0.0695
+      },
+      {
+        "score": "0-2",
+        "probability": 0.0646
+      }
+    ]
+  },
+  "market_adjustment": {
+    "market_no_vig": {
+      "home_win": 0.3368,
+      "draw": 0.43,
+      "away_win": 0.2331
+    },
+    "model_final": {
+      "home_win": 0.3547,
+      "draw": 0.3398,
+      "away_win": 0.3054
+    },
+    "delta_vs_market": {
+      "home_win": 0.0179,
+      "draw": -0.0902,
+      "away_win": 0.0723
+    }
+  },
+  "third_round_context": {
+    "motivation_profile": "澳大利亚低风险拿平即可，巴拉圭必须胜。",
+    "qualification_scenarios": "澳大利亚胜/平第二；巴拉圭胜第二。",
+    "bracket_path_expectation": "第二名路径未完全确定，核心动机仍是确保出线。",
+    "rotation_yellow_card_risk": "澳大利亚被动伤停轮换；巴拉圭被动替换 Almirón。",
+    "strategic_tempo_adjustment": "澳大利亚保平触发前60分钟降速脚本，巴拉圭久攻不下后尾盘提速。",
+    "draw_floor_dynamic": "泊松原始平局低于市场，因第三轮保平脚本将平局地板上调，但不过度追随43%市场平局。"
+  },
+  "predicted_lineups": {
+    "disclaimer": "T-75官方首发未公布，本节为赛前模型首发预测，不作为官方首发。",
+    "home": "Gill; Cáceres/Alonso, Gustavo Gómez, Alderete; Cubas, Galarza/Diego Gómez; Enciso; Pitta/Sanabria；边路替代 Almirón",
+    "away": "Beach; Geria/Circati/Souttar/Burgess/Bos; O'Neill, Okon-Engstler; Metcalfe, Irankunda/Velupillay; Toure/Yengi"
+  },
+  "tactical_read": [
+    "巴拉圭必须主动，但 Almirón 停赛削弱右路推进和反击第一脚。",
+    "澳大利亚最合理路径是前60分钟降节奏，依靠身高、定位球和防线密度守住平局。",
+    "若60分钟仍平，平局概率继续上升；若巴拉圭先丢球，尾盘会明显失衡。"
+  ],
+  "prediction": {
+    "primary_score": "1-1",
+    "secondary_scores": [
+      "0-0",
+      "1-0",
+      "0-1"
+    ],
+    "winner_pick": "平",
+    "confidence": "medium-low",
+    "totals": "小2.5倾向，模型小2.5约62%",
+    "handicap_view": "澳大利亚受让/巴拉圭-1让负优于追巴拉圭大胜"
+  },
+  "red_team_status": "revise_completed_hold_discussion_only",
+  "red_team_watchlist": [
+    "竞彩平局低赔已经强烈表达保平预期，模型不能重复加权过度。",
+    "澳大利亚 Italiano、Leckie 缺席会降低边路出球质量。",
+    "巴拉圭若早早领先，澳大利亚的长传和定位球会抬高反向尾部。"
+  ]
+}

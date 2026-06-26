@@ -31,8 +31,9 @@ For prediction work, this skill feeds the quantitative pipeline defined by `worl
 4. Gather performance context: recent results, opponent quality, goals, xG if available, rankings, Elo, market value, and set-piece indicators.
 5. Gather environment context: host city, travel distance, rest days, climate, altitude, pitch/stadium notes, and time-zone burden.
 6. Gather market context if requested: 1X2, Asian handicap, totals, qualification, group winner, outright, and line movement.
-7. Normalize into the schemas in `references/data-schemas.md`.
-8. Produce a concise data-quality note: freshness, missing fields, conflicting claims, and recommended follow-up checks.
+7. For final group-round matches, gather tournament-context facts: current group table, official tiebreaker order, same-group simultaneous fixtures, qualification scenarios, possible round-of-32 opponent paths, yellow-card suspension risk, coach rotation hints, and any public comments about target finishing position.
+8. Normalize into the schemas in `references/data-schemas.md`.
+9. Produce a concise data-quality note: freshness, missing fields, conflicting claims, and recommended follow-up checks.
 
 ## Quantitative Input Requirements
 
@@ -46,6 +47,7 @@ When the output will feed a match prediction, group projection, or backtest, pro
 - club, league, market value, position, role, preferred foot, height, and squad status when available.
 - team recent form, opponent strength context, rankings/Elo/power ratings if gathered.
 - fixture context: kickoff time, venue, rest days, travel, climate, altitude, and host/crowd context.
+- third-round context when applicable: points/rank/goal difference, tiebreaker status, qualification scenario labels, simultaneous-match dependency, bracket-path expectation, rotation/minutes-management indicators, yellow-card suspension risk, and coach quote source status.
 - odds snapshots when requested: bookmaker/source, market type, odds format, `captured_at`, and implied probability.
 - `source_log` and `captured_at` for every volatile claim.
 
@@ -94,6 +96,6 @@ Return:
 
 Keep commentary brief. The main deliverable is clean, reusable data.
 
-## Anti-disconnect Workflow
+## Output Discipline
 
-For long World Cup work, keep each turn to the smallest current group/round loop: collect facts, hand off concise findings, write files, validate, then report briefly. Do not paste long reports into chat; write them to local files first. If multiple files are needed, create skeleton files first, then fill them one by one. Subagent outputs must be summarized as key conclusions only. Before rewriting after an interruption, check which files already exist and preserve valid content. Final chat output should include only the prediction table, file paths, validation result, and key risks.
+For World Cup work, choose the output size based on the user's current request and the reusable value of the result. Write durable data packets and reusable reports to local Markdown/JSON files when they need to persist, but do not force skeleton-first file creation or smallest-loop batching as a mandatory workflow. Before updating existing files, check whether valid content already exists and preserve it. Subagent outputs should be summarized into key conclusions, source gaps, and handoff notes unless the user asks for full detail.

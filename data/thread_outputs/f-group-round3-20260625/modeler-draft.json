@@ -1,0 +1,747 @@
+﻿{
+  "phase": "match_prediction",
+  "group": "F",
+  "round": 3,
+  "status": "partial_but_model_usable",
+  "created_at": "2026-06-25T21:20:00+08:00",
+  "updated_at": "2026-06-25T21:35:00+08:00",
+  "owner": "data-modeler-agent",
+  "scope": "F组第三轮量化建模草案，仅含日本vs瑞典、突尼斯vs荷兰",
+  "input_readiness": "partial",
+  "pending_inputs": [
+    "T-75官方首发未确认",
+    "部分伤停与轮换信息仍为预测首发口径",
+    "32强对阵 bracket map 需由主线程或数据采集线程最终核验",
+    "突尼斯vs荷兰普通SPF未开售，只能使用让球盘做轻校准",
+    "red_team_status 仍为 pending"
+  ],
+  "missing_fields": [
+    "confirmed_starting_xi",
+    "final_bracket_map_verification",
+    "red_team_review"
+  ],
+  "inputs_status": {
+    "data_collector": "partial",
+    "tactics_coach": "partial",
+    "red_team": "pending",
+    "player_state": "usable_with_uncertainty"
+  },
+  "source_log": [
+    "K:\\worldcup\\data\\thread_outputs\\f-group-round3-20260625\\data-collector.md",
+    "K:\\worldcup\\data\\thread_outputs\\f-group-round3-20260625\\data-collector.json",
+    "K:\\worldcup\\data\\thread_outputs\\f-group-round3-20260625\\tactics-coach.md",
+    "K:\\worldcup\\data\\thread_outputs\\f-group-round3-20260625\\tactics-coach.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\japan-player-state.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\sweden-player-state.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\tunisia-player-state.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\netherlands-player-state.json"
+  ],
+  "method": {
+    "base_model": "team_strength -> attack/defense -> xG -> Poisson -> 1X2/totals",
+    "poisson_formula": "P(score=k)=exp(-lambda)*lambda^k/k!",
+    "market_calibration_rule": "赔率仅作轻校准，避免与实力重复计数",
+    "third_round_rule": "先基础xG，再加入第三轮动机/轮换/同开球依赖修正"
+  },
+  "factor_weights": {
+    "baseline_strength": 0.24,
+    "recent_form": 0.12,
+    "attack_defense": 0.2,
+    "player_state_rotation": 0.17,
+    "tactical_matchup": 0.1,
+    "schedule_environment": 0.05,
+    "third_round_context": 0.08,
+    "market_signal": 0.04
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-26_F_R3_japan_vs_sweden",
+      "match": "日本 vs 瑞典",
+      "home": "日本",
+      "away": "瑞典",
+      "kickoff_bjt": "2026-06-26 07:00",
+      "factor_inputs": {
+        "baseline_strength": {
+          "日本": 77,
+          "瑞典": 74
+        },
+        "recent_form": {
+          "日本": 76,
+          "瑞典": 71
+        },
+        "attack": {
+          "日本": 78,
+          "瑞典": 73
+        },
+        "defense": {
+          "日本": 76,
+          "瑞典": 72
+        },
+        "player_state_rotation": {
+          "日本": 71,
+          "瑞典": 69
+        },
+        "tactical_matchup": {
+          "日本": 73,
+          "瑞典": 70
+        },
+        "schedule_environment": {
+          "日本": 50,
+          "瑞典": 50
+        },
+        "third_round_context": {
+          "日本": 74,
+          "瑞典": 72
+        },
+        "market_signal": {
+          "日本": 73,
+          "瑞典": 68
+        }
+      },
+      "team_strength_score": {
+        "日本": 76.72,
+        "瑞典": 72.86
+      },
+      "attack_score": {
+        "日本": 77.9,
+        "瑞典": 72.7
+      },
+      "defense_score": {
+        "日本": 76.3,
+        "瑞典": 72.4
+      },
+      "expected_goals": {
+        "pre_market": {
+          "日本": 1.34,
+          "瑞典": 0.98
+        },
+        "adjustments": [
+          {
+            "factor": "recent_form_attack_defense",
+            "delta": {
+              "日本": 0.05,
+              "瑞典": -0.02
+            },
+            "reason": "日本前两轮进攻连贯度更稳定，瑞典防守转换略有波动。"
+          },
+          {
+            "factor": "tactical_matchup",
+            "delta": {
+              "日本": 0.04,
+              "瑞典": 0.02
+            },
+            "reason": "日本地面推进对瑞典中后场横移有一定优势，但瑞典的高点与二点冲击仍能制造回应。"
+          },
+          {
+            "factor": "third_round_motivation_and_tempo",
+            "delta": {
+              "日本": -0.07,
+              "瑞典": -0.08
+            },
+            "reason": "同开球背景下，日本存在保平节奏管理倾向，瑞典必须抢分但未必从开场就无序提速。"
+          },
+          {
+            "factor": "player_state_rotation",
+            "delta": {
+              "日本": -0.02,
+              "瑞典": 0.02
+            },
+            "reason": "久保等关键球员可用分钟仍有不确定性，瑞典锋线主力具备一定末段拉高输出的能力。"
+          },
+          {
+            "factor": "market_calibration",
+            "delta": {
+              "日本": 0.08,
+              "瑞典": 0.0
+            },
+            "reason": "普通SPF对日本倾斜，给予主胜端轻校准，但不放大大胜尾部。"
+          }
+        ],
+        "final": {
+          "日本": 1.42,
+          "瑞典": 0.92
+        }
+      },
+      "poisson_formula": {
+        "text": "P(score=k)=exp(-lambda)*lambda^k/k!",
+        "home_lambda": 1.42,
+        "away_lambda": 0.92,
+        "example": "P(日本=1, 瑞典=0)=exp(-1.42)*1.42^1/1! * exp(-0.92)*0.92^0/0!"
+      },
+      "poisson_score_matrix": {
+        "home_team": "日本",
+        "away_team": "瑞典",
+        "goals_0_to_5": {
+          "0": {
+            "0": 0.096343,
+            "1": 0.088635,
+            "2": 0.040772,
+            "3": 0.012503,
+            "4": 0.002876,
+            "5": 0.000529
+          },
+          "1": {
+            "0": 0.136807,
+            "1": 0.125863,
+            "2": 0.057897,
+            "3": 0.017755,
+            "4": 0.004084,
+            "5": 0.000751
+          },
+          "2": {
+            "0": 0.097133,
+            "1": 0.089376,
+            "2": 0.041113,
+            "3": 0.012608,
+            "4": 0.0029,
+            "5": 0.000533
+          },
+          "3": {
+            "0": 0.045975,
+            "1": 0.042303,
+            "2": 0.019459,
+            "3": 0.005967,
+            "4": 0.001372,
+            "5": 0.000252
+          },
+          "4": {
+            "0": 0.016321,
+            "1": 0.015017,
+            "2": 0.006908,
+            "3": 0.002118,
+            "4": 0.000487,
+            "5": 8.9e-05
+          },
+          "5": {
+            "0": 0.004635,
+            "1": 0.004265,
+            "2": 0.001962,
+            "3": 0.000601,
+            "4": 0.000138,
+            "5": 2.5e-05
+          }
+        },
+        "tail_probability": 0.000771
+      },
+      "probabilities_1x2": {
+        "home_win": 0.4863,
+        "draw": 0.2697,
+        "away_win": 0.2439
+      },
+      "over_under_2_5": {
+        "over_2_5": 0.4145,
+        "under_2_5": 0.5855
+      },
+      "btts": {
+        "yes": 0.4561,
+        "no": 0.5439
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.1368
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1259
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0971
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0963
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0894
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_1x2": {
+          "home_win": 0.5092,
+          "draw": 0.2606,
+          "away_win": 0.2301
+        },
+        "handicap_minus1": {
+          "home_by_2_plus": 0.2855,
+          "home_by_1": 0.236,
+          "away_not_lose": 0.4784
+        },
+        "status": "usable"
+      },
+      "model_market_delta": {
+        "ordinary_1x2": {
+          "home_win_delta": -0.0229,
+          "draw_delta": 0.0091,
+          "away_win_delta": 0.0138
+        },
+        "handicap_minus1": {
+          "home_by_2_plus_delta": -0.047,
+          "home_by_1_delta": 0.0118,
+          "away_not_lose_delta": 0.0351
+        },
+        "read": "模型比市场略保守于日本主胜，并明显压低日本净胜2球以上的尾部。"
+      },
+      "market_adjustment": {
+        "included": true,
+        "status": "applied_light",
+        "notes": "普通SPF可用，因此对主胜倾向做轻校准；未让市场重复定义实力。"
+      },
+      "third_round_context": {
+        "group_table_snapshot": {
+          "荷兰": {
+            "pts": 4,
+            "gd": 4,
+            "gf": 7
+          },
+          "日本": {
+            "pts": 4,
+            "gd": 4,
+            "gf": 6
+          },
+          "瑞典": {
+            "pts": 3,
+            "gd": 0,
+            "gf": 6
+          },
+          "突尼斯": {
+            "pts": 0,
+            "gd": -8,
+            "gf": 1
+          }
+        },
+        "qualification_scenarios": [
+          "日本打平大概率出线，但小组第一仍受荷兰比赛净胜球影响。",
+          "瑞典若不胜，晋级希望接近归零；若取胜则高概率压过日本。"
+        ],
+        "motivation_profile": {
+          "日本": "avoid_loss + compete_for_first",
+          "瑞典": "must_win"
+        },
+        "simultaneous_dependency": "日本会受到荷兰同步赛况的间接影响；若荷兰早早领先，日本保平动机会增强。",
+        "rotation_risk": {
+          "日本": "medium",
+          "瑞典": "medium"
+        },
+        "yellow_card_risk": {
+          "日本": "partial_unknown",
+          "瑞典": "partial_unknown"
+        },
+        "strategic_tempo_adjustment": "日本中后段更可能压低节奏，瑞典在落后或平局维持过久时会显著提速。",
+        "bracket_path_expectation": {
+          "status": "need_verify",
+          "note": "仅可确认第三轮存在争第一动机；32强具体落点需等待项目确认 bracket map。"
+        }
+      },
+      "confidence": "medium",
+      "missing_fields": [
+        "confirmed_starting_xi",
+        "verified_bracket_map"
+      ]
+    },
+    {
+      "match_id": "2026-06-26_F_R3_tunisia_vs_netherlands",
+      "match": "突尼斯 vs 荷兰",
+      "home": "突尼斯",
+      "away": "荷兰",
+      "kickoff_bjt": "2026-06-26 07:00",
+      "factor_inputs": {
+        "baseline_strength": {
+          "突尼斯": 47,
+          "荷兰": 81
+        },
+        "recent_form": {
+          "突尼斯": 42,
+          "荷兰": 78
+        },
+        "attack": {
+          "突尼斯": 43,
+          "荷兰": 82
+        },
+        "defense": {
+          "突尼斯": 36,
+          "荷兰": 75
+        },
+        "player_state_rotation": {
+          "突尼斯": 54,
+          "荷兰": 71
+        },
+        "tactical_matchup": {
+          "突尼斯": 46,
+          "荷兰": 79
+        },
+        "schedule_environment": {
+          "突尼斯": 50,
+          "荷兰": 50
+        },
+        "third_round_context": {
+          "突尼斯": 40,
+          "荷兰": 73
+        },
+        "market_signal": {
+          "突尼斯": 37,
+          "荷兰": 76
+        }
+      },
+      "team_strength_score": {
+        "突尼斯": 45.88,
+        "荷兰": 79.98
+      },
+      "attack_score": {
+        "突尼斯": 43.2,
+        "荷兰": 82.4
+      },
+      "defense_score": {
+        "突尼斯": 35.8,
+        "荷兰": 75.1
+      },
+      "expected_goals": {
+        "pre_market": {
+          "突尼斯": 0.62,
+          "荷兰": 1.92
+        },
+        "adjustments": [
+          {
+            "factor": "recent_form_attack_defense",
+            "delta": {
+              "突尼斯": -0.03,
+              "荷兰": 0.05
+            },
+            "reason": "突尼斯前两轮防线承压明显，荷兰进攻衔接与压制稳定度更高。"
+          },
+          {
+            "factor": "tactical_matchup",
+            "delta": {
+              "突尼斯": -0.04,
+              "荷兰": 0.08
+            },
+            "reason": "荷兰边路推进和二线包抄对突尼斯低位防线具备持续拉扯效果。"
+          },
+          {
+            "factor": "third_round_motivation_and_tempo",
+            "delta": {
+              "突尼斯": 0.01,
+              "荷兰": -0.07
+            },
+            "reason": "荷兰有争第一但也会参考同步赛况控制风险，若另一场对自己有利可能主动降节奏。"
+          },
+          {
+            "factor": "player_state_rotation",
+            "delta": {
+              "突尼斯": 0.02,
+              "荷兰": -0.01
+            },
+            "reason": "突尼斯无出线压力，反而可能更开放；荷兰存在轻度轮换和负荷管理。"
+          },
+          {
+            "factor": "market_calibration",
+            "delta": {
+              "突尼斯": 0.0,
+              "荷兰": 0.05
+            },
+            "reason": "普通SPF缺失，仅用让球+2盘提示荷兰赢球概率高但大胜需克制处理。"
+          }
+        ],
+        "final": {
+          "突尼斯": 0.58,
+          "荷兰": 2.02
+        }
+      },
+      "poisson_formula": {
+        "text": "P(score=k)=exp(-lambda)*lambda^k/k!",
+        "home_lambda": 0.58,
+        "away_lambda": 2.02,
+        "example": "P(突尼斯=0, 荷兰=2)=exp(-0.58)*0.58^0/0! * exp(-2.02)*2.02^2/2!"
+      },
+      "poisson_score_matrix": {
+        "home_team": "突尼斯",
+        "away_team": "荷兰",
+        "goals_0_to_5": {
+          "0": {
+            "0": 0.074255,
+            "1": 0.149995,
+            "2": 0.151495,
+            "3": 0.102006,
+            "4": 0.051518,
+            "5": 0.020813
+          },
+          "1": {
+            "0": 0.043068,
+            "1": 0.086997,
+            "2": 0.087867,
+            "3": 0.059172,
+            "4": 0.029882,
+            "5": 0.012073
+          },
+          "2": {
+            "0": 0.01249,
+            "1": 0.025229,
+            "2": 0.025482,
+            "3": 0.017158,
+            "4": 0.008665,
+            "5": 0.0035
+          },
+          "3": {
+            "0": 0.002414,
+            "1": 0.004877,
+            "2": 0.004925,
+            "3": 0.003316,
+            "4": 0.001675,
+            "5": 0.000677
+          },
+          "4": {
+            "0": 0.00035,
+            "1": 0.000708,
+            "2": 0.000715,
+            "3": 0.000481,
+            "4": 0.000243,
+            "5": 9.8e-05
+          },
+          "5": {
+            "0": 4.1e-05,
+            "1": 8.2e-05,
+            "2": 8.3e-05,
+            "3": 5.6e-05,
+            "4": 2.8e-05,
+            "5": 1.1e-05
+          }
+        },
+        "tail_probability": 0.017328
+      },
+      "probabilities_1x2": {
+        "home_win": 0.0956,
+        "draw": 0.1904,
+        "away_win": 0.714
+      },
+      "over_under_2_5": {
+        "over_2_5": 0.4816,
+        "under_2_5": 0.5184
+      },
+      "btts": {
+        "yes": 0.3817,
+        "no": 0.6183
+      },
+      "top_scorelines": [
+        {
+          "score": "0-2",
+          "probability": 0.1515
+        },
+        {
+          "score": "0-1",
+          "probability": 0.15
+        },
+        {
+          "score": "0-3",
+          "probability": 0.102
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0879
+        },
+        {
+          "score": "1-1",
+          "probability": 0.087
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_1x2": null,
+        "handicap_plus2": {
+          "tunisia_not_lose_plus2": 0.2859,
+          "tunisia_lose_by_2": 0.2216,
+          "netherlands_win_by_3_plus": 0.4925
+        },
+        "status": "handicap_only"
+      },
+      "model_market_delta": {
+        "handicap_plus2": {
+          "tunisia_not_lose_plus2_delta": 0.0955,
+          "tunisia_lose_by_2_delta": 0.0353,
+          "netherlands_win_by_3_plus_delta": -0.0353
+        },
+        "read": "模型支持荷兰赢球，但比让球市场更谨慎，不追逐荷兰净胜3球以上尾部。"
+      },
+      "market_adjustment": {
+        "included": true,
+        "status": "applied_light_handicap_only",
+        "notes": "由于普通SPF缺失，仅用让球+2盘压低荷兰大胜尾部信心。"
+      },
+      "third_round_context": {
+        "group_table_snapshot": {
+          "荷兰": {
+            "pts": 4,
+            "gd": 4,
+            "gf": 7
+          },
+          "日本": {
+            "pts": 4,
+            "gd": 4,
+            "gf": 6
+          },
+          "瑞典": {
+            "pts": 3,
+            "gd": 0,
+            "gf": 6
+          },
+          "突尼斯": {
+            "pts": 0,
+            "gd": -8,
+            "gf": 1
+          }
+        },
+        "qualification_scenarios": [
+          "荷兰打平大概率出线，但小组第一仍与日本比赛结果和净胜球相关。",
+          "突尼斯已无实质晋级空间，更可能以搅局者身份比赛。"
+        ],
+        "motivation_profile": {
+          "突尼斯": "spoiler_only",
+          "荷兰": "qualify_and_compete_for_first"
+        },
+        "simultaneous_dependency": "若日本未能迅速领先，荷兰保持争第一动机；若同步赛况有利，荷兰可能在领先后降速控场。",
+        "rotation_risk": {
+          "突尼斯": "medium",
+          "荷兰": "medium"
+        },
+        "yellow_card_risk": {
+          "突尼斯": "partial_unknown",
+          "荷兰": "partial_unknown"
+        },
+        "strategic_tempo_adjustment": "荷兰开局仍以建立领先为先，但中后段节奏高度依赖另一场比分。",
+        "bracket_path_expectation": {
+          "status": "need_verify",
+          "note": "存在争第一动机，但32强路径映射暂不在本线程内最终确认。"
+        }
+      },
+      "confidence": "medium",
+      "missing_fields": [
+        "confirmed_starting_xi",
+        "verified_bracket_map"
+      ]
+    }
+  ],
+  "simulated_group_outcomes": {
+    "captured_at": "2026-06-25T21:20:00+08:00",
+    "simulation_runs": 300000,
+    "teams": {
+      "荷兰": {
+        "finish_1st": 0.635,
+        "finish_2nd": 0.3573,
+        "finish_3rd": 0.0077,
+        "finish_4th": 0.0,
+        "advance_probability": 0.9988
+      },
+      "日本": {
+        "finish_1st": 0.2945,
+        "finish_2nd": 0.4681,
+        "finish_3rd": 0.2375,
+        "finish_4th": 0.0,
+        "advance_probability": 0.9643
+      },
+      "瑞典": {
+        "finish_1st": 0.0705,
+        "finish_2nd": 0.1746,
+        "finish_3rd": 0.7548,
+        "finish_4th": 0.0,
+        "advance_probability": 0.532
+      },
+      "突尼斯": {
+        "finish_1st": 0.0,
+        "finish_2nd": 0.0,
+        "finish_3rd": 0.0,
+        "finish_4th": 1.0,
+        "advance_probability": 0.0
+      }
+    },
+    "assumptions": [
+      "第三名晋级概率为项目内估算值，不等于官方实时排名池。",
+      "同分优先按净胜球、进球数做简化模拟。"
+    ],
+    "risk_flags": [
+      "若T-75首发与预测差异过大，小组名次分布会重新偏移。",
+      "同步赛果驱动的战略性降速，很难被静态Poisson完全捕捉。"
+    ],
+    "sweden_branch_sensitivity": {
+      "瑞典胜": {
+        "branch_probability": 0.243,
+        "荷兰": {
+          "finish_1st": 0.7148,
+          "finish_2nd": 0.2672,
+          "finish_3rd": 0.018,
+          "advance_probability": 0.982
+        },
+        "日本": {
+          "finish_1st": 0.0,
+          "finish_2nd": 0.018,
+          "finish_3rd": 0.982,
+          "advance_probability": 0.018
+        },
+        "瑞典": {
+          "finish_1st": 0.2852,
+          "finish_2nd": 0.7148,
+          "finish_3rd": 0.0,
+          "advance_probability": 1.0
+        }
+      },
+      "平局": {
+        "branch_probability": 0.2714,
+        "荷兰": {
+          "finish_1st": 0.8906,
+          "finish_2nd": 0.1093,
+          "finish_3rd": 0.0001,
+          "advance_probability": 0.9999
+        },
+        "日本": {
+          "finish_1st": 0.1094,
+          "finish_2nd": 0.8906,
+          "finish_3rd": 0.0,
+          "advance_probability": 1.0
+        },
+        "瑞典": {
+          "finish_1st": 0.0,
+          "finish_2nd": 0.0001,
+          "finish_3rd": 0.9999,
+          "advance_probability": 0.0001
+        }
+      },
+      "日本胜": {
+        "branch_probability": 0.4856,
+        "荷兰": {
+          "finish_1st": 0.5267,
+          "finish_2nd": 0.4733,
+          "advance_probability": 1.0
+        },
+        "日本": {
+          "finish_1st": 0.4733,
+          "finish_2nd": 0.5267,
+          "advance_probability": 1.0
+        },
+        "瑞典": {
+          "finish_3rd": 1.0,
+          "advance_probability": 0.0
+        }
+      }
+    },
+    "key_branch_read": [
+      "瑞典若赢球，将把日本直接推向高风险第三名区间。",
+      "日本若拿到平局，基本锁住前二并大幅压缩瑞典出线空间。",
+      "荷兰的第一名概率显著依赖日本-瑞典战果，因此同步赛况会反向塑造荷兰比赛节奏。"
+    ]
+  },
+  "red_team_status": "pending",
+  "quality_notes": [
+    "本稿已修复上一版乱码问题，使用UTF-8重新落盘。",
+    "突尼斯vs荷兰普通SPF缺失，市场校准可信度低于日本vs瑞典。",
+    "两场模型都纳入第三轮动机修正，但同步赛中的实时博弈仍可能造成偏离。",
+    "若官方首发显示日本或荷兰明显轮换，xG需在赛前最后窗口再修一次。"
+  ],
+  "notes": [
+    "本线程只输出量化建模草案，不生成投注结论。",
+    "字段命名优先兼容主线程可复核读取。"
+  ],
+  "validation": {
+    "json_parse_ok": true,
+    "schema_shape": "project_partial_draft",
+    "upstream_ready": false,
+    "encoding": "utf-8"
+  }
+}

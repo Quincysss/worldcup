@@ -1,0 +1,55 @@
+{
+  "review_target": {
+    "phase": "match_prediction",
+    "group": "I",
+    "matches": [
+      "france_vs_norway",
+      "senegal_vs_iraq"
+    ],
+    "scope": "final_red_team_rereview"
+  },
+  "status": "complete",
+  "verdict": "revise",
+  "publish_gate": "temporary_publish_only",
+  "betting_gate": "hold_for_betting",
+  "top_concerns": [
+    "Official T-75 lineups are still unavailable for both matches, so estimated-XI variance remains material.",
+    "France vs Norway still has unresolved home-away and market-label conflict, which increases wording and market-mapping risk.",
+    "Senegal vs Iraq still lacks a stable ordinary 1X2 market snapshot, so confidence calibration is weaker than normal."
+  ],
+  "recommended_probability_adjustment": [
+    {
+      "match": "France vs Norway",
+      "base_probabilities": {
+        "france_win": 0.4473,
+        "draw": 0.2591,
+        "norway_win": 0.2936
+      },
+      "adjustment_direction": "trim_france_win_small_raise_draw_tail_keep_norway_upset_tail_live",
+      "reason": "France has draw-enough incentive, lineup uncertainty remains open, and market-source labeling is still conflicted."
+    },
+    {
+      "match": "Senegal vs Iraq",
+      "base_probabilities": {
+        "senegal_win": 0.5307,
+        "draw": 0.2482,
+        "iraq_win": 0.2211
+      },
+      "adjustment_direction": "trim_senegal_win_small_raise_draw_tail_and_small_conditional_iraq_upset_tail",
+      "reason": "No stable ordinary 1X2 cross-check exists, strong-margin support is weak, and final availability inputs are not fully locked."
+    }
+  ],
+  "missing_data": [
+    "official_t75_lineups_both_matches",
+    "official_card_accumulation_confirmation",
+    "france_norway_canonical_home_away_confirmation",
+    "mendy_final_availability",
+    "aymen_hussein_final_availability",
+    "senegal_iraq_stable_ordinary_1x2_market"
+  ],
+  "handoff_notes": [
+    "Prediction chain is publishable only as a temporary pre-lineup release, not as a final locked version.",
+    "Do not upgrade to pass_with_cautions until lineup, discipline, and market-label conflicts are refreshed closer to kickoff.",
+    "If market commentary is kept, it must note that Senegal vs Iraq has no normal 1X2 cross-check and France vs Norway still has source-label conflict."
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "review_target": {
+    "phase": "match_prediction",
+    "group": "H",
+    "matches": [
+      "spain_vs_uruguay",
+      "cape_verde_vs_saudi_arabia"
+    ],
+    "scope": "red_team_review_only"
+  },
+  "verdict": "revise",
+  "red_team_status": "revise_required",
+  "top_concerns": [
+    {
+      "concern": "Spain may manage qualification risk at 4 points, reducing both win rate and big-win tail.",
+      "category": "tournament",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "Round-2 Spain 4-0 Saudi solved round-1 low-block issues, but third-round incentive and rotation risk now cut the other way.",
+      "why_it_matters": "A strong-favorite Spain line can be too high if rotation, pace control, or draw-management is underweighted.",
+      "follow_up_check": "Confirm projected lineup intensity, yellow-card risk, and whether the model treats draw as sufficient for group control.",
+      "owner": "model"
+    },
+    {
+      "concern": "Uruguay two-draw pressure can create late-game opening, but must-win should not be treated as a static kickoff state.",
+      "category": "tournament",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": "Uruguay drew Saudi 1-1 and Cape Verde 2-2; same-time dependency can change its risk profile during the match.",
+      "why_it_matters": "If the model assumes full urgency from minute 1, it can overstate both early tempo and away-side variance.",
+      "follow_up_check": "Stress test first-half caution versus second-half opening scripts under different live table states.",
+      "owner": "model"
+    },
+    {
+      "concern": "Cape Verde resilience is now evidence-backed after draws with Spain and Uruguay.",
+      "category": "data",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "Cape Verde posted 0-0 versus Spain and 2-2 versus Uruguay, including repeat low-score survival and set-piece relevance.",
+      "why_it_matters": "Any line that treats Cape Verde as a soft favorite without draw and set-piece variance is too confident.",
+      "follow_up_check": "Keep draw tail and set-piece threat visible in both xG narrative and score matrix.",
+      "owner": "model"
+    },
+    {
+      "concern": "Saudi Arabia must-win urgency increases both early-collapse and late-chaos failure modes.",
+      "category": "tactical",
+      "severity": "medium",
+      "confidence": "high",
+      "evidence": "Spain scored four against Saudi in round 2 after breaking the line early.",
+      "why_it_matters": "Saudi should not be modeled only as a low-output underdog; its volatility tails are wider now.",
+      "follow_up_check": "Split early defensive fragility from late-game transition chaos in scenario testing.",
+      "owner": "tactics"
+    },
+    {
+      "concern": "China Sports Lottery pricing is missing, so market reaction to third-round motivation cannot be verified.",
+      "category": "market",
+      "severity": "blocker",
+      "confidence": "high",
+      "evidence": "Collector file still has odds_snapshot_pending and no executable same-day market snapshot.",
+      "why_it_matters": "Without a traceable market snapshot, market alignment claims are weaker and betting language should remain blocked.",
+      "follow_up_check": "Add same-book 1X2 and handicap snapshot with capture time before any stronger publish language.",
+      "owner": "data"
+    },
+    {
+      "concern": "The entire third-round quant chain is still incomplete.",
+      "category": "data",
+      "severity": "blocker",
+      "confidence": "high",
+      "evidence": "Collector, tactics, and modeler files all remain in_progress skeletons with missing fields.",
+      "why_it_matters": "This review can only be partial and interval-based, not a full audit of final probabilities.",
+      "follow_up_check": "Do not present exact final probabilities as fully validated until the quant chain exists.",
+      "owner": "main"
+    }
+  ],
+  "upset_or_failure_scenarios": [
+    "Spain rotates or manages risk after an even first half, leaving too much draw weight unmodeled.",
+    "Uruguay stays measured early, then opens sharply once live scoreboard pressure increases.",
+    "Cape Verde gets overpriced because win-and-qualify framing suppresses draw risk.",
+    "Saudi concedes early and the match flips into a high-variance state instead of a controlled Cape Verde script.",
+    "Same-time scoreboard changes alter late-game incentives in both matches."
+  ],
+  "overconfidence_flags": [
+    "Revise if Spain win probability is above 0.41.",
+    "Revise if Uruguay win probability is below 0.27.",
+    "Revise if Cape Verde win probability is above 0.42.",
+    "Revise if Saudi win tail is pushed below 0.26.",
+    "Revise if any scoreline language implies high confidence without official T-75 lineups."
+  ],
+  "market_flags": [
+    "No China Sports Lottery same-day snapshot is present, so third-round motivation pricing cannot be verified.",
+    "Do not use market agreement as proof while collector odds remain pending.",
+    "Keep betting language blocked until same-book executable prices are captured."
+  ],
+  "quant_chain_flags": [
+    "data-collector.json is still skeleton-level in_progress with empty standings, fixtures, and odds arrays.",
+    "tactics-coach.json still has estimated lineups and missing official T-75 confirmation.",
+    "modeler-draft.json is still skeleton-level in_progress with no Poisson or group simulation outputs.",
+    "No final third-round quant output exists for H group."
+  ],
+  "recommended_probability_adjustment": {
+    "spain_vs_uruguay": {
+      "suggested_probability_range": {
+        "spain_win": "0.34-0.40",
+        "draw": "0.29-0.34",
+        "uruguay_win": "0.28-0.33"
+      },
+      "suggested_xg_range": {
+        "spain": "1.0-1.4",
+        "uruguay": "0.9-1.3"
+      },
+      "direction": "Trim Spain favorite strength and big-win tail; keep draw and Uruguay late-open variance alive."
+    },
+    "cape_verde_vs_saudi_arabia": {
+      "suggested_probability_range": {
+        "cape_verde_win": "0.35-0.41",
+        "draw": "0.27-0.32",
+        "saudi_arabia_win": "0.27-0.33"
+      },
+      "suggested_xg_range": {
+        "cape_verde": "1.0-1.4",
+        "saudi_arabia": "0.9-1.4"
+      },
+      "direction": "Do not overheat Cape Verde on pure momentum; preserve Saudi volatility and late-chaos tail."
+    }
+  },
+  "missing_data": [
+    "official_third_round_quant_output",
+    "official_t_minus_75_lineups",
+    "latest_official_injury_confirmation",
+    "latest_official_discipline_confirmation",
+    "china_sports_lottery_same_day_snapshot"
+  ],
+  "handoff_notes": [
+    "data: add current table, qualification paths, same-time dependency notes, and executable market snapshot.",
+    "tactics: review Spain rotation and pace management, Uruguay late opening triggers, Cape Verde set-piece resilience, and Saudi instability split.",
+    "model: avoid static motivation from kickoff, cap Spain favorite premium, and preserve draw plus volatility tails.",
+    "main: publish only as partial discussion output, not as full quant consensus."
+  ]
+}

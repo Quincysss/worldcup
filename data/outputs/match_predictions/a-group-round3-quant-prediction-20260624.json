@@ -1,0 +1,218 @@
+{
+  "metadata": {
+    "group": "A",
+    "round": 3,
+    "created_at": "2026-06-24T18:08:00+08:00",
+    "status": "ready_with_estimated_lineups_and_same_source_odds_recheck",
+    "betting_status": "discussion_only_hold",
+    "threads": {
+      "data_collector": "019eb5e6-3961-71f3-8451-4af2fdae71cc",
+      "modeler": "019eb5e6-5269-7b12-a59d-73a9d6bdd585",
+      "tactics_coach": "019eb05a-a3ee-7023-9c89-42d9786d4685",
+      "red_team": "019eb05b-66db-7000-8a84-c453dece7ac3",
+      "betting_risk": "019ed379-0c15-7620-965f-a59bd5da9998",
+      "summary": "019eb06a-ae34-7c00-b1fe-9e35ff23c848"
+    },
+    "sources": [
+      {
+        "name": "中国足彩网竞彩混合页",
+        "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "captured_at": "2026-06-24T18:08:00+08:00",
+        "note": "周三053/054可见普通胜平负与让球胜平负；页面提示系统升级、暂停销售，赔率仅作概率锚点。"
+      },
+      {
+        "name": "乐彩网竞彩足球模拟选号",
+        "url": "https://6.17500.cn/?lottery=bet&lotteryId=s_fb",
+        "captured_at": "2026-06-24T18:08:00+08:00",
+        "note": "周三053/054普通胜平负与中国足彩网一致；仅作交叉验证。"
+      },
+      {
+        "name": "本地球队成员表",
+        "url": "K:/worldcup/比赛/已完成比赛/小组赛/A组",
+        "captured_at": "2026-06-24T18:08:00+08:00",
+        "note": "用于预测首发与伤停停赛复核。"
+      }
+    ]
+  },
+  "lineup_policy": {
+    "official_t75_status": "unavailable_before_matchday_window",
+    "predicted_lineup_status": "estimated",
+    "prediction_gate": "not_blocked_by_missing_t75",
+    "betting_gate": "hold_until_official_lineups_and_executable_odds",
+    "recheck_trigger": "赛前约1小时官方首发公布后重跑xG/Poisson/红队校验"
+  },
+  "group_table_snapshot": [
+    {"team": "墨西哥", "points": 6, "gf": 3, "ga": 0, "gd": 3, "third_round_task": "已基本出线，争头名并管理轮换/黄牌"},
+    {"team": "韩国", "points": 3, "gf": 2, "ga": 2, "gd": 0, "third_round_task": "不败有利，赢球更稳"},
+    {"team": "捷克", "points": 1, "gf": 2, "ga": 3, "gd": -1, "third_round_task": "基本需要赢球"},
+    {"team": "南非", "points": 1, "gf": 1, "ga": 3, "gd": -2, "third_round_task": "基本需要赢球"}
+  ],
+  "factor_weights": {
+    "baseline_strength": 0.24,
+    "recent_attack_defense": 0.19,
+    "player_state_injury_rotation": 0.18,
+    "tactical_matchup": 0.12,
+    "schedule_environment": 0.05,
+    "third_round_context": 0.14,
+    "market_calibration": 0.08
+  },
+  "matches": [
+    {
+      "match_id": "A-R3-20260624-054",
+      "lottery_id": "周三054",
+      "kickoff_local": "2026-06-24 09:00",
+      "home": "捷克",
+      "away": "墨西哥",
+      "odds": {
+        "source": "中国足彩网竞彩混合页",
+        "spf": {"home": 3.63, "draw": 3.50, "away": 1.76},
+        "spf_implied_normalized": {"home": 24.39, "draw": 25.30, "away": 50.31},
+        "handicap": "+1",
+        "rq_spf": {"home": 1.81, "draw": 3.43, "away": 3.50},
+        "rq_spf_implied_normalized": {"home": 48.90, "draw": 25.81, "away": 25.29},
+        "sale_status_note": "页面提示暂停销售"
+      },
+      "third_round_context": {
+        "qualification_scenarios": "墨西哥6分基本出线，捷克1分基本需要赢球；若平局，捷克出线价值偏弱。",
+        "simultaneous_dependency": "同组两场同时开球，韩国/南非比分会影响捷克后段冒险程度。",
+        "bracket_path_expectation": "墨西哥争头名仍有价值，但保护主力和黄牌同样重要。",
+        "rotation_risk": "墨西哥中高，捷克低",
+        "yellow_card_suspension_risk": "墨西哥需保护核心，捷克更偏搏命",
+        "strategic_tempo_adjustment": "墨西哥不必持续高压，节奏偏慢；捷克落后时提速。",
+        "tiebreaker_note": "公开解读存在冲突，按双分支保守处理。"
+      },
+      "factor_inputs": {
+        "baseline_strength": "墨西哥优于捷克，但轮换压低优势兑现率。",
+        "recent_attack_defense": "墨西哥两战3球0失；捷克2球3失。",
+        "player_state_injury_rotation": "使用estimated预测首发；墨西哥蒙特斯停赛，墨西哥轮换风险上调。",
+        "tactical_matchup": "捷克压上会暴露反击空间，墨西哥可控节奏。",
+        "schedule_environment": "同组同时开球。",
+        "third_round_context": "捷克必须争胜，墨西哥可接受平局。",
+        "market_calibration": "市场墨西哥胜50.31%，模型降至40.87%。"
+      },
+      "predicted_lineups": {
+        "status": "estimated",
+        "home_shape": "3-4-2-1",
+        "home_xi": ["马捷伊·科瓦日", "罗宾·赫拉纳奇", "什捷潘·哈卢佩克", "拉迪斯拉夫·克雷伊奇", "弗拉迪米尔·曹法尔", "托马什·绍切克", "米哈尔·萨迪莱克", "大卫·尤拉塞克", "帕维尔·舒尔茨", "卢卡什·普罗沃德", "帕特里克·希克"],
+        "away_shape": "4-3-3",
+        "away_xi": ["劳尔·兰赫尔", "豪尔赫·桑切斯", "伊斯雷尔·雷耶斯", "约翰·巴斯克斯", "赫苏斯·加拉多", "埃里克·利拉", "阿尔瓦罗·菲达尔戈", "布赖恩·古铁雷斯", "罗伯托·阿尔瓦拉多", "劳尔·希门尼斯", "胡利安·基诺内斯"],
+        "uncertain_nodes": ["墨西哥中锋与后腰是否轮换", "捷克锋线高点人选", "蒙特斯停赛后的中卫组合"],
+        "confidence": "medium_low"
+      },
+      "expected_goals": {"home": 1.11, "away": 1.30},
+      "poisson": {
+        "result_probability": {"home": 31.69, "draw": 27.44, "away": 40.87, "tail": 0.32},
+        "total_goals_probability": {"over_2_5": 43.29, "under_2_5": 56.71},
+        "top_scorelines": [
+          {"score": "1-1", "probability": 12.96},
+          {"score": "0-1", "probability": 11.68},
+          {"score": "1-0", "probability": 9.97},
+          {"score": "0-0", "probability": 8.98},
+          {"score": "1-2", "probability": 8.42}
+        ],
+        "score_matrix_0_5": {
+          "0-0": 8.98, "0-1": 11.68, "0-2": 7.59, "0-3": 3.29, "0-4": 1.07, "0-5": 0.28,
+          "1-0": 9.97, "1-1": 12.96, "1-2": 8.42, "1-3": 3.65, "1-4": 1.19, "1-5": 0.31,
+          "2-0": 5.53, "2-1": 7.19, "2-2": 4.68, "2-3": 2.03, "2-4": 0.66, "2-5": 0.17,
+          "3-0": 2.05, "3-1": 2.66, "3-2": 1.73, "3-3": 0.75, "3-4": 0.24, "3-5": 0.06,
+          "4-0": 0.57, "4-1": 0.74, "4-2": 0.48, "4-3": 0.21, "4-4": 0.07, "4-5": 0.02,
+          "5-0": 0.13, "5-1": 0.16, "5-2": 0.11, "5-3": 0.05, "5-4": 0.02, "5-5": 0.00
+        }
+      },
+      "prediction": {
+        "primary_score": "1-1",
+        "secondary_scores": ["0-1", "1-0", "1-2"],
+        "win_draw_loss_pick": "墨西哥不败，胜平倾向接近",
+        "confidence": "medium_low"
+      },
+      "betting_discussion": {
+        "status": "hold",
+        "note": "已使用预测首发重算，但官方首发未出且竞彩页显示暂停销售；仅讨论让球捷克+1不败形态，不输出执行建议。"
+      }
+    },
+    {
+      "match_id": "A-R3-20260624-053",
+      "lottery_id": "周三053",
+      "kickoff_local": "2026-06-24 09:00",
+      "home": "南非",
+      "away": "韩国",
+      "odds": {
+        "source": "中国足彩网竞彩混合页",
+        "spf": {"home": 5.55, "draw": 3.78, "away": 1.46},
+        "spf_implied_normalized": {"home": 15.95, "draw": 23.42, "away": 60.63},
+        "handicap": "+1",
+        "rq_spf": {"home": 2.28, "draw": 3.20, "away": 2.64},
+        "rq_spf_implied_normalized": {"home": 38.82, "draw": 27.66, "away": 33.52},
+        "sale_status_note": "页面提示暂停销售"
+      },
+      "third_round_context": {
+        "qualification_scenarios": "韩国3分，不败有利；南非1分，基本需要赢球才有明显晋级价值。",
+        "simultaneous_dependency": "捷克若领先墨西哥，韩国可能被迫提高求胜强度；若墨西哥领先，韩国可更保守。",
+        "bracket_path_expectation": "韩国争更好排名，但首要目标是避免输球。",
+        "rotation_risk": "韩国中低，南非低",
+        "yellow_card_suspension_risk": "韩国需避免核心停赛，南非搏命风险更高",
+        "strategic_tempo_adjustment": "韩国偏控节奏，南非后段若未领先会提速。",
+        "tiebreaker_note": "公开解读存在冲突，韩国平局的安全边际按保守分支处理。"
+      },
+      "factor_inputs": {
+        "baseline_strength": "韩国阵容与前两轮稳定性优于南非。",
+        "recent_attack_defense": "韩国2球2失，南非1球3失。",
+        "player_state_injury_rotation": "使用estimated预测首发；南非莫科纳、兹瓦内、西托莱停赛，韩国核心框架较完整。",
+        "tactical_matchup": "韩国转换和边路速度可惩罚南非后段压上。",
+        "schedule_environment": "同组同时开球。",
+        "third_round_context": "南非必须赢，韩国不败目标提高平局权重。",
+        "market_calibration": "市场韩国胜60.63%，模型降至50.41%。"
+      },
+      "predicted_lineups": {
+        "status": "estimated",
+        "home_shape": "4-2-3-1",
+        "home_xi": ["龙文·威廉姆斯", "库利索·穆道", "姆贝克泽利·姆博卡齐", "恩科西纳蒂·西比西", "奥布里·莫迪巴", "杰登·亚当斯", "塔伦特·姆巴塔", "奥斯温·阿波利斯", "伊克拉姆·雷纳斯", "塔佩洛·马塞科", "莱尔·福斯特"],
+        "away_shape": "4-2-3-1",
+        "away_xi": ["金承奎", "薛英佑", "李汉汎", "金玟哉", "李泰锡", "黄仁范", "白昇浩", "李刚仁", "李在城", "孙兴慜", "吴贤揆"],
+        "uncertain_nodes": ["南非中轴停赛后的双后腰", "韩国中锋吴贤揆/曹圭成选择", "韩国是否保留黄喜灿作为后手提速"],
+        "confidence": "medium_low"
+      },
+      "expected_goals": {"home": 0.86, "away": 1.43},
+      "poisson": {
+        "result_probability": {"home": 22.61, "draw": 26.97, "away": 50.41, "tail": 0.38},
+        "total_goals_probability": {"over_2_5": 40.13, "under_2_5": 59.87},
+        "top_scorelines": [
+          {"score": "0-1", "probability": 14.48},
+          {"score": "1-1", "probability": 12.45},
+          {"score": "0-2", "probability": 10.35},
+          {"score": "0-0", "probability": 10.13},
+          {"score": "1-2", "probability": 8.90}
+        ],
+        "score_matrix_0_5": {
+          "0-0": 10.13, "0-1": 14.48, "0-2": 10.35, "0-3": 4.94, "0-4": 1.76, "0-5": 0.50,
+          "1-0": 8.71, "1-1": 12.45, "1-2": 8.90, "1-3": 4.24, "1-4": 1.52, "1-5": 0.43,
+          "2-0": 3.74, "2-1": 5.36, "2-2": 3.83, "2-3": 1.83, "2-4": 0.65, "2-5": 0.19,
+          "3-0": 1.07, "3-1": 1.54, "3-2": 1.10, "3-3": 0.52, "3-4": 0.19, "3-5": 0.05,
+          "4-0": 0.23, "4-1": 0.33, "4-2": 0.24, "4-3": 0.11, "4-4": 0.04, "4-5": 0.01,
+          "5-0": 0.04, "5-1": 0.06, "5-2": 0.04, "5-3": 0.02, "5-4": 0.01, "5-5": 0.00
+        }
+      },
+      "prediction": {
+        "primary_score": "0-1",
+        "secondary_scores": ["1-1", "0-2", "0-0"],
+        "win_draw_loss_pick": "韩国胜，防平",
+        "confidence": "medium_low"
+      },
+      "betting_discussion": {
+        "status": "hold",
+        "note": "韩国胜是基本面方向，但低赔热度与第三轮控节奏风险并存，不输出执行建议。"
+      }
+    }
+  ],
+  "red_team_verdict": {
+    "prediction": "revise_pass_for_discussion",
+    "betting": "hold",
+    "reasons": [
+      "T-75官方首发未到公布窗口，预测使用estimated首发并降低置信度",
+      "中国足彩网页面可见赔率但同时提示暂停销售，不能视为可执行价格",
+      "南非与墨西哥存在明确停赛点，官方首发公布后需要复核",
+      "第三轮同时开球导致后段节奏高依赖实时比分",
+      "小组排名规则公开解读存在冲突"
+    ]
+  }
+}

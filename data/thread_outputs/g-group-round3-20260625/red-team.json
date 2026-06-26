@@ -1,0 +1,111 @@
+{
+  "review_target": {
+    "phase": "match_prediction",
+    "group": "G",
+    "matches": [
+      "belgium_vs_new_zealand",
+      "egypt_vs_iran"
+    ],
+    "scope": "red_team_review_only"
+  },
+  "verdict": "revise",
+  "red_team_status": "revise_required",
+  "top_concerns": [
+    {
+      "match": "belgium_vs_new_zealand",
+      "issue": "Belgium name value is likely too high relative to two straight low-conversion matches.",
+      "severity": "high",
+      "confidence": "high",
+      "owner": "model"
+    },
+    {
+      "match": "egypt_vs_iran",
+      "issue": "Egypt second-half pressure and Salah finishing route may still be underweighted, but Iran draw and set-piece tail must remain live.",
+      "severity": "high",
+      "confidence": "medium",
+      "owner": "model"
+    },
+    {
+      "match": "group_wide",
+      "issue": "Same-time third-round scoreboard dependence means motivation cannot be modeled as static for 90 minutes.",
+      "severity": "high",
+      "confidence": "high",
+      "owner": "main"
+    },
+    {
+      "match": "group_wide",
+      "issue": "China Sports Lottery market snapshot is missing or not open, so market calibration must be downweighted.",
+      "severity": "medium",
+      "confidence": "high",
+      "owner": "data"
+    },
+    {
+      "match": "group_wide",
+      "issue": "No round-3 quant output exists yet, so this review cannot be presented as full quant-backed validation.",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "main"
+    }
+  ],
+  "upset_or_failure_scenarios": [
+    "Belgium controls territory again but fails to convert, pushing the match toward a low-score draw tail.",
+    "New Zealand starts more conservative than expected, then opens late because a win is required.",
+    "Egypt shifts into draw-management mode in the second half and reduces its own win rate.",
+    "Iran scores first via set piece or counter and breaks the single-side Egypt favorite story.",
+    "Real-time score changes in the other match alter late-game incentives."
+  ],
+  "overconfidence_flags": [
+    "Revise if Belgium win probability is above 0.56.",
+    "Revise if Egypt win probability is above 0.41 while draw is below 0.30.",
+    "Revise if any match is framed with a narrow score band despite incomplete upstream inputs."
+  ],
+  "market_flags": [
+    "Missing or unopened China Sports Lottery prices cannot be treated as stable support.",
+    "If only generic odds are available and no executable lottery line exists, keep discussion_only."
+  ],
+  "quant_chain_flags": [
+    "g-group-round3-quant-prediction-20260625.json is missing.",
+    "data-collector.json is still missing standings, odds snapshot, and source crosscheck.",
+    "tactics-coach.json still lacks official T-75 lineups, discipline confirmation, and medical confirmation.",
+    "modeler-draft.json is still a partial skeleton."
+  ],
+  "recommended_probability_adjustment": {
+    "belgium_vs_new_zealand": {
+      "suggested_probability_range": {
+        "belgium_win": "0.48-0.55",
+        "draw": "0.24-0.29",
+        "new_zealand_win": "0.19-0.24"
+      },
+      "suggested_xg_range": {
+        "belgium": "1.3-1.7",
+        "new_zealand": "0.7-1.1"
+      },
+      "direction": "Trim Belgium favorite inflation and raise draw plus late-open New Zealand tail."
+    },
+    "egypt_vs_iran": {
+      "suggested_probability_range": {
+        "egypt_win": "0.34-0.40",
+        "draw": "0.31-0.36",
+        "iran_win": "0.27-0.32"
+      },
+      "suggested_xg_range": {
+        "egypt": "1.0-1.4",
+        "iran": "0.8-1.2"
+      },
+      "direction": "Keep a small Egypt edge, but preserve a thick draw band and Iran set-piece/counter tail."
+    }
+  },
+  "missing_data": [
+    "g-group-round3-quant-prediction-20260625.json",
+    "official_t_minus_75_lineups",
+    "latest_official_injury_confirmation",
+    "latest_official_discipline_confirmation",
+    "china_sports_lottery_same_day_snapshot"
+  ],
+  "handoff_notes": [
+    "data: add standings, qualification paths, same-time motivation notes, and market snapshot.",
+    "tactics: recheck Belgium finishing and rest-defense issues, New Zealand pace split, Egypt second-half pressure, and Iran set-piece/counter routes.",
+    "model: cap Belgium favorite premium, avoid double counting Egypt tactical lift plus star finishing, and preserve Iran draw/upset tail.",
+    "main: publish only as partial discussion output, not as full quant consensus."
+  ]
+}

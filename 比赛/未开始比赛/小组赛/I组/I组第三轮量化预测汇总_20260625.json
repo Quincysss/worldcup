@@ -1,0 +1,521 @@
+{
+  "schema": "worldcup_group_round3_prediction_v1",
+  "created_at": "2026-06-25T15:19:19+08:00",
+  "group": "I",
+  "status": "temporary_publish_red_team_revised",
+  "project_threads": {
+    "data_collector": "019eb053-ef96-7a22-9685-4602ba252b10",
+    "tactics_coach": "019eb05a-a3ee-7023-9c89-42d9786d4685",
+    "data_modeler": "019eb079-bed5-7342-9dfd-d1f448caa0dc",
+    "red_team": "019eb05b-66db-7000-8a84-c453dece7ac3"
+  },
+  "current_standings": [
+    {
+      "team": "法国",
+      "played": 2,
+      "points": 6,
+      "gf": 6,
+      "ga": 1,
+      "gd": 5
+    },
+    {
+      "team": "挪威",
+      "played": 2,
+      "points": 6,
+      "gf": 7,
+      "ga": 3,
+      "gd": 4
+    },
+    {
+      "team": "塞内加尔",
+      "played": 2,
+      "points": 0,
+      "gf": 3,
+      "ga": 6,
+      "gd": -3
+    },
+    {
+      "team": "伊拉克",
+      "played": 2,
+      "points": 0,
+      "gf": 1,
+      "ga": 7,
+      "gd": -6
+    }
+  ],
+  "tiebreaker_note": "小组排名按积分、净胜球、进球等通用顺序处理；若官方特殊细则或公平竞赛分触发，需赛后再核。",
+  "round3_context": {
+    "simultaneous_dependency": "同组第三轮应按同时开球处理；实时比分会改变末段压迫和换人。",
+    "qualification_state": "法国与挪威6分基本锁定前二；塞内加尔与伊拉克0分，只能冲第三名横向比较。",
+    "rotation_risk": "法国平局足够，存在末段降风险和小轮换；挪威争第一动机更直接。",
+    "market_guard": "竞彩赔率只做校准，不与实力重复计数；T-75官方首发未公布，投注执行需赛前复核。"
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-27_I_R3_挪威_vs_法国",
+      "home": "挪威",
+      "away": "法国",
+      "market_key": "norway_france",
+      "home_xg": 1.18,
+      "away_xg": 1.4,
+      "recommended_score": "1-1",
+      "lean": "红队修正后仅临时发布：法国不败仍优先，但平局尾部上修",
+      "factor_inputs": {
+        "baseline_strength": "法国整体阵容深度、前场创造与防线质量仍高于挪威；挪威强点集中在哈兰德-厄德高链路。",
+        "recent_attack_defense": "法国前两轮6进1失；挪威前两轮7进3失，进攻尾部上修但零封能力下修。",
+        "player_state": "姆巴佩/登贝莱/奥利塞状态值高；哈兰德/厄德高状态值高；里尔森伤情待核降低挪威边路防守稳定性。",
+        "tactical_matchup": "法国需要限制厄德高向哈兰德的早传和定位球二点；挪威可用快速直传与定位球攻击法国身后。",
+        "third_round_context": "两队已基本锁定出线。法国因净胜球领先，平局大概率保小组第一；挪威需要赢球才主动争第一。",
+        "market_calibration": "竞彩去水后法国胜约48.6%；红队要求修正法国品牌溢价与主客口径冲突，模型下调法国胜率并上修平局尾部。"
+      },
+      "team_strength_score": {
+        "挪威": {
+          "overall": 81,
+          "attack": 86,
+          "defense": 66,
+          "form": 84
+        },
+        "法国": {
+          "overall": 88,
+          "attack": 90,
+          "defense": 82,
+          "form": 89
+        }
+      },
+      "adjustments": [
+        {
+          "target": "挪威进攻xG",
+          "delta": "+0.04",
+          "reason": "前两轮高转化、哈兰德状态与争第一动机，但受法国控场压制"
+        },
+        {
+          "target": "法国进攻xG",
+          "delta": "-0.12",
+          "reason": "法国平局足够，红队要求压低品牌溢价和末段冒险强度"
+        },
+        {
+          "target": "挪威失球风险",
+          "delta": "+0.06",
+          "reason": "对强队时边路和后段防守稳定性仍待核验"
+        }
+      ],
+      "predicted_lineups": {
+        "status": "T-75官方首发未公布，以下为预测首发",
+        "挪威": "4-2-3-1：尼兰德；佩德森/里尔森待核，阿耶尔，厄斯蒂高，梅勒-沃尔夫；贝格，托斯比；努萨，厄德高，鲍勃/索尔洛特；哈兰德",
+        "法国": "4-3-3：迈尼昂；孔德，萨利巴，于帕梅卡诺，特奥；楚阿梅尼，拉比奥，卡马文加/坎特；登贝莱，姆巴佩，奥利塞/巴尔科拉"
+      },
+      "red_team_notes": [
+        "不能用法国品牌直接压死挪威：哈兰德链路和定位球会放大比分尾部。",
+        "法国若大轮换或领先后收节奏，法国胜率和大球概率需赛前下修。",
+        "T-75首发、黄牌停赛、里尔森可用性是赛前必须复核项。"
+      ],
+      "kickoff_beijing": "2026-06-27，具体开球时间以FIFA/竞彩赛前页最终显示为准",
+      "sources_used": [
+        "data/outputs/match_predictions/i-group-round1-postmortem.json",
+        "data/outputs/match_predictions/i-group-round2-postmortem-20260623.json",
+        "data/outputs/player_state/i-group-round2-state-iteration-20260623.json",
+        "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini"
+      ],
+      "factor_weights": {
+        "baseline_strength": 0.24,
+        "recent_attack_defense": 0.2,
+        "player_state_injury_rotation": 0.18,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.06,
+        "third_round_context": 0.12,
+        "market_calibration": 0.08
+      },
+      "expected_goals": {
+        "挪威": 1.18,
+        "法国": 1.4,
+        "formula": "P(挪威=h,法国=a)=e^-1.18*1.18^h/h! * e^-1.4*1.4^a/a!"
+      },
+      "poisson_score_matrix_0_to_5": {
+        "0": {
+          "0": 0.075774,
+          "1": 0.106084,
+          "2": 0.074259,
+          "3": 0.034654,
+          "4": 0.012129,
+          "5": 0.003396
+        },
+        "1": {
+          "0": 0.089413,
+          "1": 0.125179,
+          "2": 0.087625,
+          "3": 0.040892,
+          "4": 0.014312,
+          "5": 0.004007
+        },
+        "2": {
+          "0": 0.052754,
+          "1": 0.073855,
+          "2": 0.051699,
+          "3": 0.024126,
+          "4": 0.008444,
+          "5": 0.002364
+        },
+        "3": {
+          "0": 0.02075,
+          "1": 0.02905,
+          "2": 0.020335,
+          "3": 0.00949,
+          "4": 0.003321,
+          "5": 0.00093
+        },
+        "4": {
+          "0": 0.006121,
+          "1": 0.00857,
+          "2": 0.005999,
+          "3": 0.002799,
+          "4": 0.00098,
+          "5": 0.000274
+        },
+        "5": {
+          "0": 0.001445,
+          "1": 0.002022,
+          "2": 0.001416,
+          "3": 0.000661,
+          "4": 0.000231,
+          "5": 6.5e-05
+        }
+      },
+      "poisson_tail_probability_outside_0_to_5": 0.004576,
+      "probabilities_1x2": {
+        "home": 0.316796,
+        "draw": 0.263189,
+        "away": 0.420015
+      },
+      "totals": {
+        "over_2_5": 0.476538,
+        "under_2_5": 0.523462,
+        "both_teams_to_score_yes": 0.521898
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.125179
+        },
+        {
+          "score": "0-1",
+          "probability": 0.106084
+        },
+        {
+          "score": "1-0",
+          "probability": 0.089413
+        },
+        {
+          "score": "1-2",
+          "probability": 0.087625
+        },
+        {
+          "score": "0-0",
+          "probability": 0.075774
+        }
+      ],
+      "market": {
+        "source": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "cross_check_source": "新浪体育/新浪彩票结构化同场页面未稳定取得，待赛前再核验",
+        "captured_at": "2026-06-25T15:19:19+08:00",
+        "match_no": "周五061",
+        "home": "挪威",
+        "away": "法国",
+        "spf_odds": [
+          3.65,
+          3.25,
+          1.82
+        ],
+        "handicap": "挪威 +1",
+        "handicap_odds": [
+          1.69,
+          3.65,
+          3.72
+        ],
+        "sale_status": "开售",
+        "spf_implied_no_vig": {
+          "home": 0.242215,
+          "draw": 0.272026,
+          "away": 0.48576,
+          "book_overround": 0.131115
+        },
+        "handicap_implied_no_vig": {
+          "home": 0.521563,
+          "draw": 0.241491,
+          "away": 0.236947,
+          "book_overround": 0.134506
+        }
+      },
+      "model_market_delta": {
+        "home": 0.074582,
+        "draw": -0.008837,
+        "away": -0.065745
+      },
+      "red_team_status": "revise; temporary_publish_only",
+      "final_probabilities": {
+        "home": 0.316796,
+        "draw": 0.263189,
+        "away": 0.420015
+      }
+    },
+    {
+      "match_id": "2026-06-27_I_R3_塞内加尔_vs_伊拉克",
+      "home": "塞内加尔",
+      "away": "伊拉克",
+      "market_key": "senegal_iraq",
+      "home_xg": 1.52,
+      "away_xg": 0.92,
+      "recommended_score": "1-0",
+      "lean": "红队修正后仅临时发布：塞内加尔小胜优先，防平局与伊拉克反击尾部",
+      "factor_inputs": {
+        "baseline_strength": "塞内加尔个人能力、防守对抗与边路冲击仍强于伊拉克。",
+        "recent_attack_defense": "塞内加尔两战均有进球但失球6个；伊拉克两战仅1球、失7球。",
+        "player_state": "伊斯梅拉-萨尔状态上修；门迪/库利巴利可用性与状态需复核；艾曼-侯赛因伤情待核影响伊拉克支点。",
+        "tactical_matchup": "塞内加尔必须赢球会提高边路推进和反抢强度，但也给伊拉克低位反击与定位球留下空间。",
+        "third_round_context": "塞内加尔赢球才有较现实第三名竞争力；伊拉克若想第三名需要赢球且最好大比分。",
+        "market_calibration": "竞彩去水后塞内加尔胜约58.6%；红队指出普通1X2交叉验证不足，模型下调塞内加尔胜率并上修平局/冷门尾部。"
+      },
+      "team_strength_score": {
+        "塞内加尔": {
+          "overall": 71,
+          "attack": 70,
+          "defense": 58,
+          "form": 63
+        },
+        "伊拉克": {
+          "overall": 53,
+          "attack": 49,
+          "defense": 43,
+          "form": 46
+        }
+      },
+      "adjustments": [
+        {
+          "target": "塞内加尔进攻xG",
+          "delta": "-0.10",
+          "reason": "必须争胜但普通1X2交叉验证不足，红队要求压低热门净胜假设"
+        },
+        {
+          "target": "伊拉克进攻xG",
+          "delta": "+0.01",
+          "reason": "艾曼-侯赛因可用性未确认，但塞内加尔压上会留下反击与定位球尾部"
+        },
+        {
+          "target": "比赛方差",
+          "delta": "+0.04",
+          "reason": "第三轮末段追分会增加转换和空档"
+        }
+      ],
+      "predicted_lineups": {
+        "status": "T-75官方首发未公布，以下为预测首发",
+        "塞内加尔": "4-3-3：门迪待核/迪昂；雅各布斯，库利巴利待核，尼亚卡特，萨巴利；盖耶，帕普-马塔尔-萨尔，库亚特/拉明-卡马拉；伊斯梅拉-萨尔，迪亚，马内/恩迪亚耶",
+        "伊拉克": "4-2-3-1/5-4-1：哈桑；阿德南，塔赫辛，苏拉卡，萨德；阿姆贾德-阿特万，阿尔-阿马里；阿里-贾西姆，巴耶什，侯赛因-阿里；艾曼-侯赛因待核/阿尔-哈马迪"
+      },
+      "red_team_notes": [
+        "塞内加尔必须赢不等于稳胜：压上后身后空间和门将状态是反向风险。",
+        "伊拉克若艾曼-侯赛因缺阵，进攻xG和定位球威胁应继续下修。",
+        "让球盘对塞内加尔净胜2球要求偏高，需警惕1球小胜或平局。"
+      ],
+      "kickoff_beijing": "2026-06-27，具体开球时间以FIFA/竞彩赛前页最终显示为准",
+      "sources_used": [
+        "data/outputs/match_predictions/i-group-round1-postmortem.json",
+        "data/outputs/match_predictions/i-group-round2-postmortem-20260623.json",
+        "data/outputs/player_state/i-group-round2-state-iteration-20260623.json",
+        "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini"
+      ],
+      "factor_weights": {
+        "baseline_strength": 0.24,
+        "recent_attack_defense": 0.2,
+        "player_state_injury_rotation": 0.18,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.06,
+        "third_round_context": 0.12,
+        "market_calibration": 0.08
+      },
+      "expected_goals": {
+        "塞内加尔": 1.52,
+        "伊拉克": 0.92,
+        "formula": "P(塞内加尔=h,伊拉克=a)=e^-1.52*1.52^h/h! * e^-0.92*0.92^a/a!"
+      },
+      "poisson_score_matrix_0_to_5": {
+        "0": {
+          "0": 0.087161,
+          "1": 0.080188,
+          "2": 0.036886,
+          "3": 0.011312,
+          "4": 0.002602,
+          "5": 0.000479
+        },
+        "1": {
+          "0": 0.132484,
+          "1": 0.121886,
+          "2": 0.056067,
+          "3": 0.017194,
+          "4": 0.003955,
+          "5": 0.000728
+        },
+        "2": {
+          "0": 0.100688,
+          "1": 0.092633,
+          "2": 0.042611,
+          "3": 0.013067,
+          "4": 0.003006,
+          "5": 0.000553
+        },
+        "3": {
+          "0": 0.051015,
+          "1": 0.046934,
+          "2": 0.02159,
+          "3": 0.006621,
+          "4": 0.001523,
+          "5": 0.00028
+        },
+        "4": {
+          "0": 0.019386,
+          "1": 0.017835,
+          "2": 0.008204,
+          "3": 0.002516,
+          "4": 0.000579,
+          "5": 0.000106
+        },
+        "5": {
+          "0": 0.005893,
+          "1": 0.005422,
+          "2": 0.002494,
+          "3": 0.000765,
+          "4": 0.000176,
+          "5": 3.2e-05
+        }
+      },
+      "poisson_tail_probability_outside_0_to_5": 0.005129,
+      "probabilities_1x2": {
+        "home": 0.512779,
+        "draw": 0.258891,
+        "away": 0.22833
+      },
+      "totals": {
+        "over_2_5": 0.440706,
+        "under_2_5": 0.559294,
+        "both_teams_to_score_yes": 0.46993
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.132484
+        },
+        {
+          "score": "1-1",
+          "probability": 0.121886
+        },
+        {
+          "score": "2-0",
+          "probability": 0.100688
+        },
+        {
+          "score": "2-1",
+          "probability": 0.092633
+        },
+        {
+          "score": "0-0",
+          "probability": 0.087161
+        }
+      ],
+      "market": {
+        "source": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "cross_check_source": "新浪体育/新浪彩票结构化同场页面未稳定取得，待赛前再核验",
+        "captured_at": "2026-06-25T15:19:19+08:00",
+        "match_no": "周五062",
+        "home": "塞内加尔",
+        "away": "伊拉克",
+        "spf_odds": [
+          1.51,
+          3.55,
+          5.35
+        ],
+        "handicap": "塞内加尔 -1",
+        "handicap_odds": [
+          2.65,
+          3.38,
+          2.18
+        ],
+        "sale_status": "开售",
+        "spf_implied_no_vig": {
+          "home": 0.585619,
+          "draw": 0.249094,
+          "away": 0.165287,
+          "book_overround": 0.130858
+        },
+        "handicap_implied_no_vig": {
+          "home": 0.333376,
+          "draw": 0.261374,
+          "away": 0.40525,
+          "book_overround": 0.131932
+        }
+      },
+      "model_market_delta": {
+        "home": -0.07284,
+        "draw": 0.009797,
+        "away": 0.063043
+      },
+      "red_team_status": "revise; temporary_publish_only",
+      "final_probabilities": {
+        "home": 0.512779,
+        "draw": 0.258891,
+        "away": 0.22833
+      }
+    }
+  ],
+  "simulated_group_outcomes": {
+    "method": "基于两场0-5泊松矩阵枚举；tail未再分配，因此第三名晋级为启发式估计。",
+    "finish_first": {
+      "法国": 0.683129,
+      "挪威": 0.316871,
+      "塞内加尔": 0.0,
+      "伊拉克": 0.0
+    },
+    "finish_second": {
+      "法国": 0.316871,
+      "挪威": 0.683129,
+      "塞内加尔": 0.0,
+      "伊拉克": 0.0
+    },
+    "finish_third": {
+      "法国": 0.0,
+      "挪威": 0.0,
+      "塞内加尔": 0.770879,
+      "伊拉克": 0.229121
+    },
+    "top_two": {
+      "法国": 1.0,
+      "挪威": 1.0,
+      "塞内加尔": 0.0,
+      "伊拉克": 0.0
+    },
+    "third_place_advancement_heuristic": {
+      "塞内加尔": 0.185011,
+      "伊拉克": 0.027495,
+      "法国": 0.0,
+      "挪威": 0.0
+    },
+    "notes": [
+      "法国/挪威已锁定前二的概率按当前积分结构视作100%。",
+      "法国打平即基本锁定小组第一；挪威必须击败法国才主动抢第一。",
+      "塞内加尔/伊拉克只能争第三，且要看其他组第三名积分和净胜球。"
+    ]
+  },
+  "global_gaps": [
+    "T-75官方首发未公布。",
+    "累计黄牌/停赛未形成官方逐队结构表。",
+    "挪威vs法国仍有主客顺序与市场标签冲突，赛前发布必须统一口径。",
+    "里尔森、门迪、库利巴利、艾曼-侯赛因伤情需赛前刷新。",
+    "塞内加尔vs伊拉克普通胜平负同源交叉验证不足，新浪同场结构化赔率未稳定取得。"
+  ],
+  "red_team_final_review": {
+    "path": "K:\\worldcup\\data\\thread_outputs\\i-group-round3-20260625\\red-team-final-review.json",
+    "verdict": "revise",
+    "publish_gate": "temporary_publish_only",
+    "probability_adjustment": [
+      "挪威vs法国：下调法国胜率，小幅上修平局尾部，保留挪威冷门尾部。",
+      "塞内加尔vs伊拉克：下调塞内加尔胜率，小幅上修平局与伊拉克冷门尾部。"
+    ]
+  }
+}

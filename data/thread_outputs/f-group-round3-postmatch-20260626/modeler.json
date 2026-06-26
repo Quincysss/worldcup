@@ -1,0 +1,387 @@
+{
+  "phase": "post_match_backtest",
+  "group": "F",
+  "round": 3,
+  "status": "partial",
+  "created_at": "2026-06-26T10:15:00+08:00",
+  "updated_at": "2026-06-26T10:28:21.4182981+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "F组第三轮两场赛后模型复盘；覆盖xG、Poisson、Top比分、1X2、大小球、BTTS、小组模拟、参数修正与player_state/member表回填建议",
+  "input_readiness": "partial",
+  "missing_fields": [
+    "四队player_state与成员表未做安全赛后回写",
+    "第三名跨组晋级结果未在本包内最终闭合"
+  ],
+  "source_log": [
+    "K:\\worldcup\\data\\outputs\\match_predictions\\f-group-round3-quant-prediction-20260625.json",
+    "K:\\worldcup\\比赛\\未开始比赛\\小组赛\\F组\\2026-06-26_日本_vs_瑞典_量化预测.md",
+    "K:\\worldcup\\比赛\\未开始比赛\\小组赛\\F组\\2026-06-26_突尼斯_vs_荷兰_量化预测.md",
+    "K:\\worldcup\\data\\outputs\\player_state\\japan-player-state.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\sweden-player-state.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\tunisia-player-state.json",
+    "K:\\worldcup\\data\\outputs\\player_state\\netherlands-player-state.json",
+    "K:\\worldcup\\队伍\\日本\\成员表.md",
+    "K:\\worldcup\\队伍\\瑞典\\成员表.md",
+    "K:\\worldcup\\队伍\\突尼斯\\成员表.md",
+    "K:\\worldcup\\队伍\\荷兰\\成员表.md"
+  ],
+  "player_state_backtest_link": {
+    "player_state_files_checked": true,
+    "member_tables_checked": true,
+    "player_state_writeback_performed": false,
+    "member_table_writeback_performed": false
+  },
+  "timestamp_check": {
+    "player_state": [
+      {
+        "team": "日本",
+        "path": "K:\\worldcup\\data\\outputs\\player_state\\japan-player-state.json",
+        "last_write": "2026-06-23T10:10:40.8673778+08:00"
+      },
+      {
+        "team": "瑞典",
+        "path": "K:\\worldcup\\data\\outputs\\player_state\\sweden-player-state.json",
+        "last_write": "2026-06-23T10:10:40.8875962+08:00"
+      },
+      {
+        "team": "突尼斯",
+        "path": "K:\\worldcup\\data\\outputs\\player_state\\tunisia-player-state.json",
+        "last_write": "2026-06-23T10:10:40.8896462+08:00"
+      },
+      {
+        "team": "荷兰",
+        "path": "K:\\worldcup\\data\\outputs\\player_state\\netherlands-player-state.json",
+        "last_write": "2026-06-23T10:10:40.8717564+08:00"
+      }
+    ],
+    "member_tables": [
+      {
+        "team": "日本",
+        "path": "K:\\worldcup\\队伍\\日本\\成员表.md",
+        "last_write": "2026-06-23T10:10:41.0794552+08:00"
+      },
+      {
+        "team": "瑞典",
+        "path": "K:\\worldcup\\队伍\\瑞典\\成员表.md",
+        "last_write": "2026-06-23T10:10:41.0837930+08:00"
+      },
+      {
+        "team": "突尼斯",
+        "path": "K:\\worldcup\\队伍\\突尼斯\\成员表.md",
+        "last_write": "2026-06-23T10:10:41.0864450+08:00"
+      },
+      {
+        "team": "荷兰",
+        "path": "K:\\worldcup\\队伍\\荷兰\\成员表.md",
+        "last_write": "2026-06-23T10:10:41.0893033+08:00"
+      }
+    ]
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-26_F_R3_日本_vs_瑞典",
+      "actual_result": {
+        "score": "1-1",
+        "home_goals": 1,
+        "away_goals": 1,
+        "result_1x2": "draw",
+        "total_goals": 2,
+        "over_2_5": false,
+        "btts": true,
+        "group_effect": "日本第2，瑞典第3"
+      },
+      "pre_match_model": {
+        "expected_goals": {
+          "home": 1.52,
+          "away": 1.12
+        },
+        "poisson_formula": "P(home=i, away=j)=exp(-lambda_home)*lambda_home^i/i! * exp(-lambda_away)*lambda_away^j/j!",
+        "probabilities_1x2": {
+          "home_win": 0.4647,
+          "draw": 0.2554,
+          "away_win": 0.2798
+        },
+        "totals_probabilities": {
+          "over_2_5": 0.4916,
+          "under_2_5": 0.5084,
+          "btts_yes": 0.5264,
+          "btts_no": 0.4736
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1215
+          },
+          {
+            "score": "1-0",
+            "probability": 0.1085
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0923
+          },
+          {
+            "score": "2-0",
+            "probability": 0.0824
+          },
+          {
+            "score": "0-1",
+            "probability": 0.0799
+          }
+        ],
+        "third_round_context_summary": "日本可接受平局但仍想争F1；瑞典必须赢。",
+        "group_simulation": {
+          "japan_finish_2nd": 0.4652,
+          "sweden_finish_3rd": 0.7201,
+          "japan_advance": 0.9587,
+          "sweden_advance": 0.5831
+        },
+        "market": {
+          "ordinary_1x2_odds": [
+            1.6,
+            3.57,
+            4.45
+          ],
+          "handicap_minus_1_odds": [
+            3.0,
+            3.7,
+            1.91
+          ],
+          "ordinary_result": "draw",
+          "handicap_result": "away_win"
+        }
+      },
+      "postmatch_error": {
+        "xg_minus_goals": {
+          "home": 0.52,
+          "away": 0.12
+        },
+        "total_goal_error": 0.64,
+        "result_1x2_hit": false,
+        "over_under_2_5_hit": true,
+        "btts_hit": true,
+        "top_scoreline_hit": true,
+        "actual_score_probability": 0.1215,
+        "main_error": "平局走廊被低估，争F1动机被转译成过多日本主胜概率。"
+      },
+      "parameter_updates": {
+        "poisson": [
+          {
+            "parameter": "draw_corridor_when_one_team_can_live_with_draw",
+            "action": "small_up",
+            "reason": "一方可接受平局、另一方必须抢胜时，1-1类中心比分更容易成主模态。"
+          },
+          {
+            "parameter": "must_push_for_first_place_home_win_bonus",
+            "action": "small_down",
+            "reason": "争头名不等于全场持续压主胜。"
+          },
+          {
+            "parameter": "sweden_set_piece_threat",
+            "action": "hold",
+            "reason": "瑞典定位球和高点威胁假设无需下修。"
+          }
+        ],
+        "market": [
+          {
+            "parameter": "market_to_home_win_boost_in_mixed_incentive_games",
+            "action": "down_one_notch",
+            "reason": "市场支持主队时，若主队平局也可接受，应减少二次推热。"
+          }
+        ],
+        "third_round_context": [
+          {
+            "parameter": "dual_incentive_control_factor",
+            "action": "up_one_notch",
+            "reason": "一方求稳、一方求胜的组合更容易产生平局走廊。"
+          }
+        ]
+      }
+    },
+    {
+      "match_id": "2026-06-26_F_R3_突尼斯_vs_荷兰",
+      "actual_result": {
+        "score": "1-3",
+        "home_goals": 1,
+        "away_goals": 3,
+        "result_1x2": "away_win",
+        "total_goals": 4,
+        "over_2_5": true,
+        "btts": true,
+        "group_effect": "荷兰第1，突尼斯第4"
+      },
+      "pre_match_model": {
+        "expected_goals": {
+          "home": 0.6,
+          "away": 2.0
+        },
+        "poisson_formula": "P(home=i, away=j)=exp(-lambda_home)*lambda_home^i/i! * exp(-lambda_away)*lambda_away^j/j!",
+        "probabilities_1x2": {
+          "home_win": 0.101,
+          "draw": 0.194,
+          "away_win": 0.7051
+        },
+        "totals_probabilities": {
+          "over_2_5": 0.4816,
+          "under_2_5": 0.5184,
+          "btts_yes": 0.3901,
+          "btts_no": 0.6099
+        },
+        "top_scorelines": [
+          {
+            "score": "0-2",
+            "probability": 0.1485
+          },
+          {
+            "score": "0-1",
+            "probability": 0.1485
+          },
+          {
+            "score": "0-3",
+            "probability": 0.099
+          },
+          {
+            "score": "1-2",
+            "probability": 0.0891
+          },
+          {
+            "score": "1-1",
+            "probability": 0.0891
+          }
+        ],
+        "actual_score_probability": 0.0594,
+        "third_round_context_summary": "荷兰争F1，突尼斯已近出局但仍有荣誉战扰动。",
+        "group_simulation": {
+          "netherlands_finish_1st": 0.6569,
+          "tunisia_finish_4th": 1.0,
+          "netherlands_advance": 0.9991
+        },
+        "market": {
+          "ordinary_1x2_odds": null,
+          "handicap_plus_2_odds": [
+            3.47,
+            4.25,
+            1.65
+          ],
+          "ordinary_result": null,
+          "handicap_result": "draw"
+        }
+      },
+      "postmatch_error": {
+        "xg_minus_goals": {
+          "home": -0.4,
+          "away": -1.0
+        },
+        "total_goal_error": -1.4,
+        "result_1x2_hit": true,
+        "over_under_2_5_hit": false,
+        "btts_hit": false,
+        "top_scoreline_hit": false,
+        "main_error": "低估荷兰继续追击与突尼斯安慰球尾部，过度依赖领先后降速假设。"
+      },
+      "parameter_updates": {
+        "poisson": [
+          {
+            "parameter": "favorite_attack_persistence_when_first_place_live",
+            "action": "small_up",
+            "reason": "争头名热门队在第二球后未必立刻收手。"
+          },
+          {
+            "parameter": "eliminated_underdog_consolation_goal_tail",
+            "action": "small_up",
+            "reason": "已近出局球队的荣誉战破门尾部被压得过低。"
+          },
+          {
+            "parameter": "leading_favorite_coast_penalty",
+            "action": "small_down",
+            "reason": "本场说明领先后降速惩罚不能一概过重。"
+          }
+        ],
+        "market": [
+          {
+            "parameter": "weak_market_calibration_without_spf",
+            "action": "hold",
+            "reason": "普通SPF缺失时市场仍只能作为弱约束。"
+          },
+          {
+            "parameter": "handicap_only_tail_cap",
+            "action": "rewrite",
+            "reason": "让球盘应约束深让，但不该把BTTS与大球尾部一起压得过低。"
+          }
+        ],
+        "third_round_context": [
+          {
+            "parameter": "goal_difference_chase_when_first_place_matters",
+            "action": "small_up",
+            "reason": "争F1的强队在对手防线脆弱时会更持续追第三球。"
+          }
+        ]
+      }
+    }
+  ],
+  "group_simulation_backtest": {
+    "actual_group_order": [
+      "荷兰",
+      "日本",
+      "瑞典",
+      "突尼斯"
+    ],
+    "team_checks": [
+      {
+        "team": "荷兰",
+        "predicted_most_likely_finish": "1st",
+        "probability": 0.6569,
+        "actual_finish": "1st",
+        "hit": true
+      },
+      {
+        "team": "日本",
+        "predicted_most_likely_finish": "2nd",
+        "probability": 0.4652,
+        "actual_finish": "2nd",
+        "hit": true
+      },
+      {
+        "team": "瑞典",
+        "predicted_most_likely_finish": "3rd",
+        "probability": 0.7201,
+        "actual_finish": "3rd",
+        "hit": true
+      },
+      {
+        "team": "突尼斯",
+        "predicted_most_likely_finish": "4th",
+        "probability": 1.0,
+        "actual_finish": "4th",
+        "hit": true
+      }
+    ],
+    "notes": [
+      "仅回测F组内名次。",
+      "瑞典第三名是否最终晋级依赖其他小组结果，本包不假装闭合。"
+    ]
+  },
+  "player_state_update_status": {
+    "status": "blocked",
+    "reason": "本线程只核对了四队player_state与成员表更新时间，未安全回写首发、分钟、事件和评分。",
+    "suggested_writeback": [
+      "日本：原地更新组织与控节奏相关球员的 internal_match_rating_1_5，并补录首发/换人/分钟。",
+      "瑞典：原地更新高点、定位球与末段冲击贡献，并补录必须追分局下的威胁备注。",
+      "突尼斯：原地更新反击破门与荣誉战强度，适度上修进攻端 form_status_1_5 下限。",
+      "荷兰：原地更新前场持续进攻兑现，并对防线零封预期做轻微降温备注。",
+      "四队统一：不新建 dated 成员表，只允许修改现有 成员表.md 与 player_state.json。"
+    ]
+  },
+  "quality_notes": [
+    "日本 vs 瑞典属于结构判断对、1X2主方向偏热的案例。",
+    "突尼斯 vs 荷兰属于胜平负命中、总进球与BTTS偏保守的案例。",
+    "F组第三轮整体说明：第三轮语境修正要区分争头名与可接受平局，不能只用单一动机权重。"
+  ],
+  "validation": {
+    "json_tool_passed": true,
+    "notes": [
+      "Python json.loads 校验通过",
+      "matches 数量校验通过: 2"
+    ]
+  }
+}

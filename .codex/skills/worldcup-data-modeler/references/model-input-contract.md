@@ -32,6 +32,17 @@
 - bracket path rules
 - host/venue context if modeling each match
 
+## Required For Final Group-Round Prediction
+
+- current group table snapshot: points, rank, goal difference, goals scored, and official tiebreaker-relevant fields
+- official tiebreaker order and qualification rules
+- same-group simultaneous fixture list and kickoff times
+- qualification-state label for each team: must-win, draw-enough, first-place race, already-qualified, rotation-likely, eliminated, or theoretical-only
+- possible round-of-32 path by finish position, with opponent-strength estimate and uncertainty label
+- yellow-card suspension risk, accumulated cards where available, and key-player minutes-management risk
+- coach or team-public-comment source status for rotation and target-position claims
+- same-day odds snapshot and note on whether the market appears to price motivation or rotation
+
 ## Freshness Rules
 
 - odds: recapture same day as analysis, and again within 24h of kickoff

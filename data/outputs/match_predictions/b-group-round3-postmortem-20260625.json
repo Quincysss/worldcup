@@ -1,0 +1,119 @@
+{
+  "schema_version": "worldcup-postmatch-review-v1",
+  "group": "B",
+  "round": 3,
+  "created_at": "2026-06-25T10:05:00+08:00",
+  "workflow": "anti_disconnect_postmatch",
+  "source_status": {
+    "results_verified": true,
+    "player_ratings_external": "not_available_same_source",
+    "member_tables_update": "partial_in_place",
+    "player_state_json_update": "blocked_source_limited_logged",
+    "red_team_status": "completed"
+  },
+  "agents": {
+    "data_collector": "019efc79-f1fd-7d50-a645-a89ecfbbcf5c",
+    "tactics_coach": "019efc7a-0b8b-7320-a565-27437071ea40",
+    "modeler": "019efc7a-23cf-7011-8aea-9aa7bd979c4e",
+    "red_team": "019efc7a-3f48-7332-b4ec-9239ee5ed570"
+  },
+  "matches": [
+    {
+      "match_id": "B-R3-049",
+      "fixture": "Switzerland vs Canada",
+      "prediction": {
+        "score": "1-1",
+        "result": "draw",
+        "xg": { "home": 1.18, "away": 1.02 },
+        "poisson": {
+          "home_win": 0.3952,
+          "draw": 0.2901,
+          "away_win": 0.3147,
+          "over_2_5": 0.3773,
+          "under_2_5": 0.6227,
+          "btts_yes": 0.4429
+        },
+        "top_score_actual_rank": 5,
+        "actual_score_probability": 0.0787
+      },
+      "actual": {
+        "score": "2-1",
+        "halftime": "0-0",
+        "result": "home_win",
+        "goals": ["46 Vargas", "57 Manzambi", "76 Promise David"],
+        "total_goals": 3,
+        "btts": true
+      },
+      "backtest": {
+        "result_hit": false,
+        "score_hit": false,
+        "total_hit": false,
+        "btts_hit": true,
+        "home_goal_error": 0.82,
+        "away_goal_error": -0.02
+      },
+      "model_lessons": [
+        "overweighted third-round draw incentive",
+        "underweighted Switzerland first-place incentive",
+        "underweighted Canada injury/minutes uncertainty impact on pressing and transition defense",
+        "market draw signal and model draw narrative were double counted"
+      ]
+    },
+    {
+      "match_id": "B-R3-050",
+      "fixture": "Bosnia and Herzegovina vs Qatar",
+      "prediction": {
+        "score": "2-0",
+        "result": "home_win",
+        "xg": { "home": 2.05, "away": 0.76 },
+        "poisson": {
+          "home_win": 0.6744,
+          "draw": 0.1975,
+          "away_win": 0.1281,
+          "over_2_5": 0.5329,
+          "under_2_5": 0.4671,
+          "btts_yes": 0.4638
+        },
+        "actual_score_probability": 0.0657
+      },
+      "actual": {
+        "score": "3-1",
+        "halftime": "2-1",
+        "result": "home_win",
+        "goals": ["29 Alajbegovic", "34 Albrake own goal", "42 Al-Haydos", "80 Mahmic"],
+        "total_goals": 4,
+        "btts": true
+      },
+      "backtest": {
+        "result_hit": true,
+        "score_hit": false,
+        "total_hit": true,
+        "btts_hit": true,
+        "home_goal_error": 0.95,
+        "away_goal_error": 0.24
+      },
+      "model_lessons": [
+        "direction correct but score distribution conservative",
+        "raise late-game openness for must-win games",
+        "raise btts and 3-plus-goal tail when draw value is low",
+        "text risk notes must be converted into score-distribution parameters"
+      ]
+    }
+  ],
+  "aggregate": {
+    "result_hits": 1,
+    "result_total": 2,
+    "total_hits": 1,
+    "score_hits": 0,
+    "score_total": 2,
+      "main_parameter_updates": [
+        "third_round_draw_incentive_requires_counterweight_for_first_place_chase",
+        "injury_minutes_uncertainty_affects_pressing_transition_and_late_collapse_risk",
+        "must_win_low_draw_value_games_raise_over_btts_tail",
+        "market_draw_absorption_cap",
+        "path_value_asymmetry_multiplier",
+        "availability_chain_gate_weight",
+        "nonstarter_star_minutes_prior"
+      ]
+  }
+}

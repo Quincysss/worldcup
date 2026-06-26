@@ -1,0 +1,26 @@
+{
+  "schema_version": "worldcup-betting-risk-v1",
+  "group": "B",
+  "round": 3,
+  "created_at": "2026-06-24T18:10:00+08:00",
+  "gate": "hold_not_executable",
+  "reason": [
+    "official_t75_lineups_not_available",
+    "near_same_source_odds_visible_but_sales_paused_notice_present",
+    "requires_pre_match_one_hour_recheck"
+  ],
+  "discussion_only": [
+    {
+      "competition_no": "周三049",
+      "fixture": "瑞士 vs 加拿大",
+      "lean": "draw_first_swiss_unbeaten_cover",
+      "avoid": "heavy_single_side_chase"
+    },
+    {
+      "competition_no": "周三050",
+      "fixture": "波黑 vs 卡塔尔",
+      "lean": "bosnia_home_win",
+      "avoid": "treating_home_win_and_minus_one_win_as_same_risk"
+    }
+  ]
+}

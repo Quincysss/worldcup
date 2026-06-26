@@ -1,0 +1,441 @@
+{
+  "metadata": {
+    "task": "C组第三轮量化预测",
+    "generated_at": "2026-06-24T10:20:33.395Z",
+    "workflow": "collect_facts -> tactics -> model_probabilities -> red_team -> files -> validation -> concise_report",
+    "anti_disconnect": true,
+    "official_lineup_status": "T-75官方首发未公布；本文件只使用预测首发，不把预测首发当事实。",
+    "betting_execution_gate": "hold_not_executable"
+  },
+  "thread_participation": [
+    {
+      "role": "data_collector",
+      "thread_id": "019eb5e6-3961-71f3-8451-4af2fdae71cc",
+      "output": "K:\\worldcup\\data\\thread_outputs\\c-group-round3-20260624\\data-collector-lineup-odds-recheck.md"
+    },
+    {
+      "role": "tactics_coach",
+      "thread_id": "019eb05a-a3ee-7023-9c89-42d9786d4685",
+      "output": "K:\\worldcup\\data\\thread_outputs\\c-group-round3-20260624\\tactics-predicted-lineups.md"
+    },
+    {
+      "role": "data_modeler",
+      "thread_id": "019eb5e6-5269-7b12-a59d-73a9d6bdd585",
+      "output": "K:\\worldcup\\data\\thread_outputs\\c-group-round3-20260624\\modeler-lineup-adjusted-recalc.md"
+    },
+    {
+      "role": "red_team",
+      "thread_id": "019eb05b-66db-7000-8a84-c453dece7ac3",
+      "output": "K:\\worldcup\\data\\thread_outputs\\c-group-round3-20260624\\red-team-lineup-odds-recheck.md"
+    },
+    {
+      "role": "betting_risk",
+      "thread_id": "019ed379-0c15-7620-965f-a59bd5da9998",
+      "output": "K:\\worldcup\\data\\thread_outputs\\c-group-round3-20260624\\betting-risk.md"
+    }
+  ],
+  "source_log": [
+    {
+      "source": "中国足彩网竞彩混合页",
+      "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured": "2026-06-24",
+      "notes": "页面显示该彩种暂停销售；C组周三051/052赔率可见。"
+    },
+    {
+      "source": "Guardian Scotland-Brazil preview",
+      "url": "https://www.theguardian.com/football/2026/jun/23/steve-clarke-warns-scotland-of-threat-posed-by-returning-brazil-icon-neymar",
+      "captured": "2026-06-24",
+      "notes": "Neymar回归威胁、Hickey缺阵、苏格兰拿1分大概率足够。"
+    },
+    {
+      "source": "Sports Illustrated Morocco-Haiti preview",
+      "url": "https://www.si.com/soccer/morocco-vs-haiti-world-cup-preview-predictions-lineups-6-24-26",
+      "captured": "2026-06-24",
+      "notes": "摩洛哥预计延续4-2-3-1，海地已出局且可能回到4-4-2。"
+    },
+    {
+      "source": "Sports Mole Morocco-Haiti team news",
+      "url": "https://www.sportsmole.co.uk/football/morocco/injury-news/team-news/morocco-vs-haiti-injury-suspension-list-predicted-xis_599778.html",
+      "captured": "2026-06-24",
+      "notes": "摩洛哥无伤疑；海地Nazon存疑。"
+    }
+  ],
+  "standings_before_round3": [
+    {
+      "team": "巴西",
+      "points": 4,
+      "goal_difference": 3,
+      "goals_for": 4,
+      "goals_against": 1,
+      "incentive": "争小组第一，平局也大概率出线但可能丢榜首。"
+    },
+    {
+      "team": "摩洛哥",
+      "points": 4,
+      "goal_difference": 1,
+      "goals_for": 2,
+      "goals_against": 1,
+      "incentive": "争小组第一，需要赢海地且关注巴西净胜球。"
+    },
+    {
+      "team": "苏格兰",
+      "points": 3,
+      "goal_difference": 0,
+      "goals_for": 1,
+      "goals_against": 1,
+      "incentive": "平局大概率/可能足够晋级，输球仍可能看第三名排名。"
+    },
+    {
+      "team": "海地",
+      "points": 0,
+      "goal_difference": -4,
+      "goals_for": 0,
+      "goals_against": 4,
+      "incentive": "已出局/基本无出线收益，为尊严和进球而战。"
+    }
+  ],
+  "odds_snapshots": [
+    {
+      "match_id": "C3-1",
+      "fixture": "苏格兰 vs 巴西",
+      "book": "中国足彩网竞彩",
+      "match_no": "周三051",
+      "kickoff_local": "2026-06-24 06:00 listed on page",
+      "spf_odds": {
+        "home": 9.6,
+        "draw": 5.4,
+        "away": 1.19
+      },
+      "spf_implied_normalized": {
+        "home": 9.22,
+        "draw": 16.39,
+        "away": 74.39
+      },
+      "rq_spf": {
+        "handicap": "+1 Scotland",
+        "odds": {
+          "home": 3.6,
+          "draw": 3.75,
+          "away": 1.71
+        },
+        "implied_normalized": {
+          "home_plus1_win": 24.6,
+          "exact_brazil_by1": 23.61,
+          "brazil_by2_plus": 51.79
+        }
+      },
+      "sales_status": "页面提示暂停销售，赔率只用于校准讨论，不可直接执行"
+    },
+    {
+      "match_id": "C3-2",
+      "fixture": "摩洛哥 vs 海地",
+      "book": "中国足彩网竞彩",
+      "match_no": "周三052",
+      "kickoff_local": "2026-06-24 06:00 listed on page",
+      "spf_odds": "未开售",
+      "rq_spf": {
+        "handicap": "-2 Morocco",
+        "odds": {
+          "home": 2.19,
+          "draw": 3.85,
+          "away": 2.42
+        },
+        "implied_normalized": {
+          "morocco_by3_plus": 40.42,
+          "exact_morocco_by2": 22.99,
+          "haiti_plus2_cover": 36.58
+        }
+      },
+      "sales_status": "普通胜平负未开售；页面提示暂停销售，赔率只用于校准讨论，不可直接执行"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "C3-1",
+      "fixture": "苏格兰 vs 巴西",
+      "predicted_score": "0-2",
+      "pick_1x2": "巴西胜",
+      "confidence": "中高",
+      "xg": {
+        "home": "苏格兰 0.55",
+        "away": "巴西 2.15"
+      },
+      "predicted_lineup_basis": "苏格兰预计保守5后卫/低位保护，Hickey缺阵；巴西Raphinha缺阵，Neymar可用但需赛前确认首发，Vinicius/Cunha/Paqueta仍是主威胁。",
+      "third_round_context": "苏格兰拿1分收益极高，巴西争第一且需压制摩洛哥净胜球追赶；巴西若早领先，比赛可能降速。",
+      "poisson": {
+        "matrix_0_5": [
+          [
+            6.721,
+            14.449,
+            15.533,
+            11.132,
+            5.983,
+            2.573
+          ],
+          [
+            3.696,
+            7.947,
+            8.543,
+            6.123,
+            3.291,
+            1.415
+          ],
+          [
+            1.016,
+            2.185,
+            2.349,
+            1.684,
+            0.905,
+            0.389
+          ],
+          [
+            0.186,
+            0.401,
+            0.431,
+            0.309,
+            0.166,
+            0.071
+          ],
+          [
+            0.026,
+            0.055,
+            0.059,
+            0.042,
+            0.023,
+            0.01
+          ],
+          [
+            0.003,
+            0.006,
+            0.007,
+            0.005,
+            0.003,
+            0.001
+          ]
+        ],
+        "matrix_mass_0_5": 0.977371,
+        "tail_probability_outside_0_5": 0.022629,
+        "calculation_mass_0_12": 0.99999954,
+        "tail_probability_outside_0_12": 4.6e-7,
+        "poisson_1x2": {
+          "home": 8.12,
+          "draw": 17.35,
+          "away": 74.53
+        },
+        "totals": {
+          "over_2_5": 50.64,
+          "under_2_5": 49.36,
+          "both_teams_to_score": 37.38
+        },
+        "top_scorelines": [
+          {
+            "score": "0-2",
+            "probability": 15.53
+          },
+          {
+            "score": "0-1",
+            "probability": 14.45
+          },
+          {
+            "score": "0-3",
+            "probability": 11.13
+          },
+          {
+            "score": "1-2",
+            "probability": 8.54
+          },
+          {
+            "score": "1-1",
+            "probability": 7.95
+          },
+          {
+            "score": "0-0",
+            "probability": 6.72
+          },
+          {
+            "score": "1-3",
+            "probability": 6.12
+          },
+          {
+            "score": "0-4",
+            "probability": 5.98
+          }
+        ]
+      },
+      "market_calibration": {
+        "spf_market_normalized": {
+          "home": 9.22,
+          "draw": 16.39,
+          "away": 74.39
+        },
+        "model_vs_market": "模型客胜74.53%，与市场客胜74.39%基本贴合；方向认可巴西胜，但不把客胜自动升级为深让穿盘。"
+      },
+      "manual_adjustments": [
+        "苏格兰动机从“必须赢”修正为“拿分优先”，降低开放对攻概率。",
+        "巴西Raphinha缺阵下调边路连续性，但Neymar回归提高中路创造。",
+        "巴西若领先会管理节奏，但争榜首和净胜球使2球胜权重高于1球小胜。"
+      ],
+      "betting_gate": {
+        "status": "hold_not_executable",
+        "reason": [
+          "中国足彩网页面提示该彩种暂停销售",
+          "T-75官方首发未公布",
+          "投注前需复核巴西首发与让球赔率是否变化"
+        ]
+      },
+      "red_team_risks": [
+        "若Neymar不首发或只替补，巴西进攻xG需下调0.10-0.18。",
+        "若苏格兰主动压上，BTTS与1-2概率上升。",
+        "巴西若只求不败，-1深盘风险高于胜平负；若追净胜球，0-3/1-3尾部会上升。"
+      ]
+    },
+    {
+      "match_id": "C3-2",
+      "fixture": "摩洛哥 vs 海地",
+      "predicted_score": "3-0",
+      "pick_1x2": "摩洛哥胜",
+      "confidence": "中",
+      "xg": {
+        "home": "摩洛哥 2.55",
+        "away": "海地 0.35"
+      },
+      "predicted_lineup_basis": "摩洛哥预计4-2-3-1主力框架，Hakimi/Brahim/Saibari/El Khannouss冲击；海地已出局，可能4-4-2提高前场存在感但防线承压。",
+      "third_round_context": "摩洛哥与巴西同4分但净胜球落后，需要赢球并尽量扩大净胜球；海地目标转为尊严战和首球。",
+      "poisson": {
+        "matrix_0_5": [
+          [
+            5.502,
+            1.926,
+            0.337,
+            0.039,
+            0.003,
+            0
+          ],
+          [
+            14.031,
+            4.911,
+            0.859,
+            0.1,
+            0.009,
+            0.001
+          ],
+          [
+            17.889,
+            6.261,
+            1.096,
+            0.128,
+            0.011,
+            0.001
+          ],
+          [
+            15.206,
+            5.322,
+            0.931,
+            0.109,
+            0.01,
+            0.001
+          ],
+          [
+            9.694,
+            3.393,
+            0.594,
+            0.069,
+            0.006,
+            0
+          ],
+          [
+            4.944,
+            1.73,
+            0.303,
+            0.035,
+            0.003,
+            0
+          ]
+        ],
+        "matrix_mass_0_5": 0.954553,
+        "tail_probability_outside_0_5": 0.045447,
+        "calculation_mass_0_12": 0.99999705,
+        "tail_probability_outside_0_12": 0.00000295,
+        "poisson_1x2": {
+          "home": 84.95,
+          "draw": 11.62,
+          "away": 3.43
+        },
+        "totals": {
+          "over_2_5": 55.4,
+          "under_2_5": 44.6,
+          "both_teams_to_score": 27.23
+        },
+        "top_scorelines": [
+          {
+            "score": "2-0",
+            "probability": 17.89
+          },
+          {
+            "score": "3-0",
+            "probability": 15.21
+          },
+          {
+            "score": "1-0",
+            "probability": 14.03
+          },
+          {
+            "score": "4-0",
+            "probability": 9.69
+          },
+          {
+            "score": "2-1",
+            "probability": 6.26
+          },
+          {
+            "score": "0-0",
+            "probability": 5.5
+          },
+          {
+            "score": "3-1",
+            "probability": 5.32
+          },
+          {
+            "score": "5-0",
+            "probability": 4.94
+          }
+        ]
+      },
+      "market_calibration": {
+        "rq_market_normalized": {
+          "morocco_by3_plus": 40.42,
+          "exact_morocco_by2": 22.99,
+          "haiti_plus2_cover": 36.59
+        },
+        "model_rq_distribution": "模型摩洛哥赢3球以上约43.2%，略高于市场40.4%，但普通SPF未开售使执行等级保持观察。"
+      },
+      "manual_adjustments": [
+        "第三轮争榜首把摩洛哥进攻xG上调，但同时保留海地无包袱反击的低概率尾部。",
+        "海地前两轮进攻穿透弱，客队xG保持0.35。",
+        "摩洛哥若60分钟后两球领先仍会追净胜球，3-0比2-0权重上升。"
+      ],
+      "betting_gate": {
+        "status": "hold_not_executable",
+        "reason": [
+          "普通胜平负未开售",
+          "中国足彩网页面提示暂停销售",
+          "-2让球需等首发和临场赔率复核"
+        ]
+      },
+      "red_team_risks": [
+        "-2盘最危险点在2-0/3-1，模型Top比分里2-0仍很高。",
+        "若摩洛哥轮换三名以上，3球穿盘概率明显下降。",
+        "海地若改5后卫，比赛可能落到2-0。"
+      ]
+    }
+  ],
+  "group_outlook_after_predictions": {
+    "likely_table_if_scores_hit": [
+      "巴西 7分 净胜+5，小组第一",
+      "摩洛哥 7分 净胜+4，小组第二",
+      "苏格兰 3分 等第三名排名",
+      "海地 0分 出局"
+    ],
+    "caveat": "若摩洛哥大胜且巴西小胜/平，榜首排序会改变；本轮同开球必须动态复核。"
+  }
+}

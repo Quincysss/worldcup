@@ -1,0 +1,480 @@
+{
+  "phase": "group_e_round3_model_draft",
+  "group": "E",
+  "round": 3,
+  "status": "draft_thread_only",
+  "thread_output_only": true,
+  "captured_at": "2026-06-25T11:06:23+08:00",
+  "market_status": "pending_data",
+  "source_scope": {
+    "required_skills_read": [
+      "K:\\worldcup\\.codex\\skills\\worldcup-data-modeler\\SKILL.md",
+      "K:\\worldcup\\.codex\\skills\\worldcup-quant-prediction-system\\SKILL.md"
+    ],
+    "core_local_inputs": [
+      "队伍\\德国\\成员表.md",
+      "队伍\\科特迪瓦\\成员表.md",
+      "队伍\\厄瓜多尔\\成员表.md",
+      "队伍\\库拉索\\成员表.md",
+      "data\\outputs\\player_state\\germany-player-state.json",
+      "data\\outputs\\player_state\\ivory-coast-player-state.json",
+      "data\\outputs\\player_state\\ecuador-player-state.json",
+      "data\\outputs\\player_state\\curacao-player-state.json",
+      "比赛\\已完成比赛\\小组赛\\E组\\E组第一轮赛后复盘.md",
+      "比赛\\已完成比赛\\小组赛\\E组\\2026-06-20_德国_2-1_科特迪瓦_复盘.md",
+      "比赛\\已完成比赛\\小组赛\\E组\\2026-06-20_厄瓜多尔_0-0_库拉索_复盘.md",
+      "data\\outputs\\match_predictions\\e-group-round2-quant-revision-20260620.json",
+      "data\\outputs\\match_predictions\\e-group-round2-postmortem.json"
+    ],
+    "read_only_cross_check": [
+      "scripts\\generate_e_group_round3.py",
+      "data\\outputs\\match_predictions\\e-group-round3-quant-prediction-20260625.json",
+      "比赛\\未开始比赛\\小组赛\\E组\\E组第三轮量化预测汇总_20260625.md"
+    ]
+  },
+  "current_table": [
+    {
+      "rank": 1,
+      "team": "德国",
+      "pts": 6,
+      "gf": 9,
+      "ga": 2,
+      "gd": 7
+    },
+    {
+      "rank": 2,
+      "team": "科特迪瓦",
+      "pts": 3,
+      "gf": 2,
+      "ga": 2,
+      "gd": 0
+    },
+    {
+      "rank": 3,
+      "team": "厄瓜多尔",
+      "pts": 1,
+      "gf": 0,
+      "ga": 1,
+      "gd": -1
+    },
+    {
+      "rank": 4,
+      "team": "库拉索",
+      "pts": 1,
+      "gf": 1,
+      "ga": 7,
+      "gd": -6
+    }
+  ],
+  "qualification_scenarios": [
+    {
+      "team": "德国",
+      "scenario": "模型下 top2 已锁定；平局基本锁定头名，输球仍高度依赖巨大净胜球保住前二。",
+      "modeled_top2_probability": 1.0
+    },
+    {
+      "team": "科特迪瓦",
+      "scenario": "对库拉索不败大概率出线；赢球仍有极小头名路径，输球则可能被厄瓜多尔或库拉索反超。",
+      "modeled_top2_probability": 0.8959
+    },
+    {
+      "team": "厄瓜多尔",
+      "scenario": "必须先赢德国才有真实前二路径；即便赢球，仍需要另一场不利于科特迪瓦并处理6分并列的净胜球/进球数。",
+      "modeled_top2_probability": 0.0383
+    },
+    {
+      "team": "库拉索",
+      "scenario": "必须赢科特迪瓦，且要弥补巨大净胜球劣势；如果德国同时击败厄瓜多尔，库拉索的二名窗口才会显著打开。",
+      "modeled_top2_probability": 0.0659
+    }
+  ],
+  "factor_weights": {
+    "baseline_strength": 0.22,
+    "attack_defense": 0.2,
+    "player_state_availability": 0.16,
+    "tactical_matchup": 0.14,
+    "third_round_tournament_context": 0.13,
+    "schedule_environment": 0.05,
+    "market_signal": 0.1
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-25_E_R3_ecuador_vs_germany",
+      "match": "厄瓜多尔 vs 德国",
+      "home": "厄瓜多尔",
+      "away": "德国",
+      "market_status": "local_found",
+      "team_state_anchor": {
+        "厄瓜多尔": [
+          "两轮0进球，第二轮 28 射 15 正却被 0-0 拉平，热门破低位与转化假设被下修。",
+          "Enner Valencia 在第二轮赛后被下调至 postmatch_form_status_1_5=1.8，终结效率风险仍是主约束。",
+          "Caicedo、Plata、Pacho、Hincapie 仍构成中后场主干，公开源未见新增停赛/伤停阻断。"
+        ],
+        "德国": [
+          "6分+7净胜球使其晋级基本锁定，第三轮存在轮换与控节奏动机。",
+          "Undav form_status_1_5=4.6、internal_match_rating_1_5=4.8，第二轮替补双响被模型明确上修。",
+          "Nmecha 3.8、Wirtz 3.2，队内没有明确的新伤停封锁，但不再线性外推首轮 7-1。"
+        ]
+      },
+      "motivation_rotation_factor": {
+        "厄瓜多尔": "+6 must-win",
+        "德国": "-2 rotation/draw-management"
+      },
+      "factor_inputs": {
+        "baseline_strength": {
+          "厄瓜多尔": 72,
+          "德国": 87
+        },
+        "attack": {
+          "厄瓜多尔": 63,
+          "德国": 86
+        },
+        "defense": {
+          "厄瓜多尔": 76,
+          "德国": 78
+        },
+        "player_state": {
+          "厄瓜多尔": 63,
+          "德国": 76
+        },
+        "third_round_context": {
+          "厄瓜多尔": "+6 must-win",
+          "德国": "-2 rotation/draw-management"
+        },
+        "tactical_adjustment": {
+          "厄瓜多尔": "+2 press and physicality, -3 conversion risk",
+          "德国": "+4 chance quality, -2 possible rotation"
+        },
+        "market_adjustment": {
+          "厄瓜多尔": -2,
+          "德国": 3
+        }
+      },
+      "market_reference": {
+        "zgzcw_match_no": "周四055",
+        "zgzcw_1x2_odds": [
+          3.8,
+          3.7,
+          1.68
+        ],
+        "zgzcw_1x2_normalized": [
+          0.2332,
+          0.2395,
+          0.5274
+        ],
+        "sina_1x2_odds": [
+          4.36,
+          4.05,
+          1.53
+        ],
+        "sina_1x2_normalized": [
+          0.203,
+          0.2185,
+          0.5785
+        ],
+        "market_note": "德国客胜价格更热，市场只做轻度校准，不覆盖第三轮动机与轮换调整。"
+      },
+      "expected_goals": {
+        "home": 1.05,
+        "away": 1.62
+      },
+      "poisson_0_5_matrix": {
+        "row_team": "厄瓜多尔",
+        "col_team": "德国",
+        "rows_0_to_5": [
+          [
+            0.069252,
+            0.112189,
+            0.090873,
+            0.049071,
+            0.019874,
+            0.006439
+          ],
+          [
+            0.072715,
+            0.117798,
+            0.095416,
+            0.051525,
+            0.020868,
+            0.006761
+          ],
+          [
+            0.038175,
+            0.061844,
+            0.050094,
+            0.027051,
+            0.010955,
+            0.00355
+          ],
+          [
+            0.013361,
+            0.021645,
+            0.017533,
+            0.009468,
+            0.003834,
+            0.001242
+          ],
+          [
+            0.003507,
+            0.005682,
+            0.004602,
+            0.002485,
+            0.001007,
+            0.000326
+          ],
+          [
+            0.000737,
+            0.001193,
+            0.000966,
+            0.000522,
+            0.000211,
+            0.000068
+          ]
+        ],
+        "tail_probability": 0.007159
+      },
+      "probabilities_1x2": {
+        "厄瓜多尔_win": 0.2459,
+        "draw": 0.2477,
+        "德国_win": 0.5064
+      },
+      "totals_2_5": {
+        "over_2_5": 0.499,
+        "under_2_5": 0.501
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1178
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1122
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0954
+        },
+        {
+          "score": "0-2",
+          "probability": 0.0909
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0727
+        }
+      ],
+      "representative_score": "1-2",
+      "confidence_note": "1X2 single-outcome +/- 0.07; xG +/- 0.25 because official lineups were unavailable at modeling time."
+    },
+    {
+      "match_id": "2026-06-25_E_R3_curacao_vs_ivory_coast",
+      "match": "库拉索 vs 科特迪瓦",
+      "home": "库拉索",
+      "away": "科特迪瓦",
+      "market_status": "pending_data",
+      "team_state_anchor": {
+        "库拉索": [
+          "第二轮 0-0 厄瓜多尔说明低位止血成功，但模型不把 Room 的极热扑救日直接线性延续。",
+          "Room form_status_1_5=5.0，Comenencia 4.0，Chong 3.8；仍保留门将回归与结构修复后的防守韧性。",
+          "1分-6净胜球使其必须争胜，若比赛后段仍未领先，追分会显著暴露身后空间。"
+        ],
+        "科特迪瓦": [
+          "Kessie 4.1、Yahia Fofana 4.0、Diomande 3.7 形成较稳状态锚点。",
+          "第二轮赛后复盘保留其转换、二点和反击威胁，同时不把德国战的小负外推成全面下滑。",
+          "Singo 有身体复核提示，Doue 与 Kessie 各有 1 黄，但公开源未见硬性停赛。"
+        ]
+      },
+      "motivation_rotation_factor": {
+        "库拉索": "+5 must-win but open-game risk",
+        "科特迪瓦": "+3 draw-enough, second-place control"
+      },
+      "factor_inputs": {
+        "baseline_strength": {
+          "库拉索": 54,
+          "科特迪瓦": 77
+        },
+        "attack": {
+          "库拉索": 50,
+          "科特迪瓦": 77
+        },
+        "defense": {
+          "库拉索": 43,
+          "科特迪瓦": 72
+        },
+        "player_state": {
+          "库拉索": 64,
+          "科特迪瓦": 72
+        },
+        "third_round_context": {
+          "库拉索": "+5 must-win but open-game risk",
+          "科特迪瓦": "+3 draw enough, second-place control"
+        },
+        "tactical_adjustment": {
+          "库拉索": "+2 goalkeeper rebound, -5 chasing exposure",
+          "科特迪瓦": "+5 transition/aerial/pace mismatch"
+        },
+        "market_adjustment": {
+          "库拉索": -3,
+          "科特迪瓦": 5
+        }
+      },
+      "market_reference": {
+        "zgzcw_match_no": "周四056",
+        "zgzcw_1x2_status": "pending_data",
+        "zgzcw_handicap_plus2_odds": [
+          2.4,
+          3.85,
+          2.21
+        ],
+        "zgzcw_handicap_plus2_normalized": [
+          0.3691,
+          0.2301,
+          0.4008
+        ],
+        "market_note": "本地未找到完整普通 1X2，只保留让球(+2)盘口作为方向校准，不编造缺失盘口。"
+      },
+      "expected_goals": {
+        "home": 0.62,
+        "away": 2.24
+      },
+      "poisson_0_5_matrix": {
+        "row_team": "库拉索",
+        "col_team": "科特迪瓦",
+        "rows_0_to_5": [
+          [
+            0.057269,
+            0.128282,
+            0.143676,
+            0.107278,
+            0.060076,
+            0.026914
+          ],
+          [
+            0.035507,
+            0.079535,
+            0.089079,
+            0.066512,
+            0.037247,
+            0.016687
+          ],
+          [
+            0.011007,
+            0.024656,
+            0.027615,
+            0.020619,
+            0.011547,
+            0.005173
+          ],
+          [
+            0.002275,
+            0.005096,
+            0.005707,
+            0.004261,
+            0.002386,
+            0.001069
+          ],
+          [
+            0.000353,
+            0.00079,
+            0.000885,
+            0.00066,
+            0.00037,
+            0.000166
+          ],
+          [
+            0.000044,
+            0.000098,
+            0.00011,
+            0.000082,
+            0.000046,
+            0.000021
+          ]
+        ],
+        "tail_probability": 0.026907
+      },
+      "probabilities_1x2": {
+        "库拉索_win": 0.0874,
+        "draw": 0.1691,
+        "科特迪瓦_win": 0.7436
+      },
+      "totals_2_5": {
+        "over_2_5": 0.5447,
+        "under_2_5": 0.4553
+      },
+      "top_scorelines": [
+        {
+          "score": "0-2",
+          "probability": 0.1437
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1283
+        },
+        {
+          "score": "0-3",
+          "probability": 0.1073
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0891
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0795
+        }
+      ],
+      "representative_score": "0-2",
+      "confidence_note": "1X2 single-outcome +/- 0.07; xG +/- 0.25 because official lineups were unavailable at modeling time."
+    }
+  ],
+  "group_simulation": {
+    "method": "deterministic enumeration of independent Poisson scorelines, 0-6 plus 7+ bucket",
+    "tiebreaker_assumption": "points, goal difference, goals for; later FIFA tiebreakers are not modeled",
+    "teams": [
+      {
+        "team": "德国",
+        "avg_points": 7.767,
+        "finish_1st": 0.9962,
+        "finish_2nd": 0.0038,
+        "finish_3rd": 0.0,
+        "finish_4th": 0.0,
+        "top2_probability": 1.0
+      },
+      {
+        "team": "科特迪瓦",
+        "avg_points": 5.4,
+        "finish_1st": 0.0038,
+        "finish_2nd": 0.892,
+        "finish_3rd": 0.0827,
+        "finish_4th": 0.0215,
+        "top2_probability": 0.8959
+      },
+      {
+        "team": "厄瓜多尔",
+        "avg_points": 1.986,
+        "finish_1st": 0.0,
+        "finish_2nd": 0.0383,
+        "finish_3rd": 0.8095,
+        "finish_4th": 0.1522,
+        "top2_probability": 0.0383
+      },
+      {
+        "team": "库拉索",
+        "avg_points": 1.431,
+        "finish_1st": 0.0,
+        "finish_2nd": 0.0659,
+        "finish_3rd": 0.1078,
+        "finish_4th": 0.8263,
+        "top2_probability": 0.0659
+      }
+    ]
+  },
+  "assumptions_and_risks": [
+    "德国对科特迪瓦一战后，不再把首轮 7-1 对库拉索直接线性外推为所有对手的大胜概率。",
+    "厄瓜多尔的 must-win 动机被明确加分，但终结效率与热门平局尾部继续保留。",
+    "库拉索的第二轮防守反弹被认可，但 Room 的极值扑救表现做回归处理。",
+    "科特迪瓦保留转换威胁与低位韧性，但如果早早领先，后续节奏可能下降，影响大球与净胜球尾部。",
+    "本草案只写线程文件，不修改主预测发布目录。"
+  ]
+}

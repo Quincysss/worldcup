@@ -1,0 +1,214 @@
+{
+  "project": "2026_worldcup",
+  "scope": "D/E/F groups round 3 China Sports Lottery discussion portfolio",
+  "created_at": "2026-06-25T16:25:00+08:00",
+  "status": "discussion_only",
+  "budget_per_plan_rmb": 100,
+  "default_split": {
+    "main_rmb": 70,
+    "entertainment_rmb": 30
+  },
+  "return_note": "Maximum theoretical payout is calculated from known China Sports Lottery or same-source odds only. It is not a profit promise.",
+  "odds_snapshot": {
+    "055": {
+      "match": "Ecuador vs Germany",
+      "spf": {"home": 5.20, "draw": 4.95, "away": 1.36},
+      "rqspf": {"handicap": "+1", "home": 2.65, "draw": 3.72, "away": 2.07}
+    },
+    "056": {
+      "match": "Curacao vs Ivory Coast",
+      "spf": "unavailable",
+      "rqspf": {"handicap": "+2", "home": 2.51, "draw": 3.85, "away": 2.12}
+    },
+    "057": {
+      "match": "Tunisia vs Netherlands",
+      "spf": "unavailable",
+      "rqspf": {"handicap": "+2", "home": 3.47, "draw": 4.25, "away": 1.65}
+    },
+    "058": {
+      "match": "Japan vs Sweden",
+      "spf": {"home": 1.60, "draw": 3.57, "away": 4.45},
+      "rqspf": {"handicap": "-1", "home": 2.80, "draw": 3.57, "away": 2.03}
+    },
+    "059": {
+      "match": "Paraguay vs Australia",
+      "spf": {"home": 2.68, "draw": 2.11, "away": 3.55},
+      "rqspf": {"handicap": "-1", "home": 6.20, "draw": 4.40, "away": 1.35}
+    },
+    "060": {
+      "match": "Turkey vs United States",
+      "spf": {"home": 3.72, "draw": 3.87, "away": 1.66},
+      "rqspf": {"handicap": "+1", "home": 1.92, "draw": 3.85, "away": 2.87}
+    }
+  },
+  "plans": [
+    {
+      "id": "C1",
+      "tier": "conservative_tolerant",
+      "target_net_rmb": "around_150",
+      "main": [
+        {"cost": 20, "ticket": "058 Japan(-1) RQ away / Sweden +1 cover", "odds_product": 2.03, "max_payout": 40.60},
+        {"cost": 20, "ticket": "059 Paraguay(-1) RQ away / Australia +1 cover", "odds_product": 1.35, "max_payout": 27.00},
+        {"cost": 30, "ticket": "056 Curacao(+2) RQ home x 058 Japan(-1) RQ away", "odds_product": 5.0953, "max_payout": 152.86}
+      ],
+      "entertainment": [
+        {"cost": 10, "ticket": "060 SPF away / United States win", "odds_product": 1.66, "max_payout": 16.60},
+        {"cost": 10, "ticket": "059 Paraguay(-1) RQ away / Australia +1 cover", "odds_product": 1.35, "max_payout": 13.50},
+        {"cost": 10, "ticket": "055 SPF away / Germany win", "odds_product": 1.36, "max_payout": 13.60}
+      ],
+      "known_odds_max_payout": 264.16,
+      "theoretical_net_return": 164.16,
+      "breakpoint_profile": "main uses singles plus one 2-leg parlay; no 3-leg or larger parlay",
+      "key_risk": "056 +2 cover is not a low-variance anchor; Germany/USA low odds can still fail with rotation."
+    },
+    {
+      "id": "C2",
+      "tier": "conservative_tolerant",
+      "target_net_rmb": "around_150",
+      "main": [
+        {"cost": 20, "ticket": "056 Curacao(+2) RQ home", "odds_product": 2.51, "max_payout": 50.20},
+        {"cost": 20, "ticket": "058 Japan(-1) RQ away / Sweden +1 cover", "odds_product": 2.03, "max_payout": 40.60},
+        {"cost": 10, "ticket": "059 Paraguay(-1) RQ away / Australia +1 cover", "odds_product": 1.35, "max_payout": 13.50},
+        {"cost": 20, "ticket": "058 Japan(-1) RQ away x 060 SPF away", "odds_product": 3.3698, "max_payout": 67.40}
+      ],
+      "entertainment": [
+        {"cost": 10, "ticket": "055 Ecuador(+1) RQ home x 059 Paraguay(-1) RQ away", "odds_product": 3.5775, "max_payout": 35.78},
+        {"cost": 10, "ticket": "060 SPF away / United States win", "odds_product": 1.66, "max_payout": 16.60},
+        {"cost": 10, "ticket": "056 Curacao(+2) RQ home", "odds_product": 2.51, "max_payout": 25.10}
+      ],
+      "known_odds_max_payout": 249.18,
+      "theoretical_net_return": 149.18,
+      "breakpoint_profile": "main uses singles plus one 2-leg parlay",
+      "key_risk": "Return target is met narrowly; if 056 line moves below 2.35, payout band should be recalculated."
+    },
+    {
+      "id": "B1",
+      "tier": "balanced_combination",
+      "target_net_rmb": "around_200",
+      "main": [
+        {"cost": 20, "ticket": "056 Curacao(+2) RQ home x 058 Japan(-1) RQ away", "odds_product": 5.0953, "max_payout": 101.91},
+        {"cost": 15, "ticket": "055 Ecuador(+1) RQ home x 059 Paraguay(-1) RQ away", "odds_product": 3.5775, "max_payout": 53.66},
+        {"cost": 15, "ticket": "058 Japan(-1) RQ away x 060 SPF away", "odds_product": 3.3698, "max_payout": 50.55},
+        {"cost": 20, "ticket": "059 Paraguay(-1) RQ away / Australia +1 cover", "odds_product": 1.35, "max_payout": 27.00}
+      ],
+      "entertainment": [
+        {"cost": 10, "ticket": "057 Tunisia(+2) RQ home", "odds_product": 3.47, "max_payout": 34.70},
+        {"cost": 10, "ticket": "060 SPF away / United States win", "odds_product": 1.66, "max_payout": 16.60},
+        {"cost": 10, "ticket": "059 Paraguay(-1) RQ away / Australia +1 cover", "odds_product": 1.35, "max_payout": 13.50}
+      ],
+      "known_odds_max_payout": 297.92,
+      "theoretical_net_return": 197.92,
+      "breakpoint_profile": "mostly 2-leg parlays plus cover singles",
+      "key_risk": "Balanced return depends on multiple cover markets, not only match winners."
+    },
+    {
+      "id": "B2",
+      "tier": "balanced_combination",
+      "target_net_rmb": "around_200",
+      "main": [
+        {"cost": 25, "ticket": "056 Curacao(+2) RQ home x 060 SPF away", "odds_product": 4.1666, "max_payout": 104.17},
+        {"cost": 20, "ticket": "058 Japan(-1) RQ away x 059 Paraguay(-1) RQ away", "odds_product": 2.7405, "max_payout": 54.81},
+        {"cost": 15, "ticket": "055 SPF away x 059 Paraguay(-1) RQ away", "odds_product": 1.836, "max_payout": 27.54},
+        {"cost": 10, "ticket": "060 SPF away / United States win", "odds_product": 1.66, "max_payout": 16.60}
+      ],
+      "entertainment": [
+        {"cost": 10, "ticket": "057 Tunisia(+2) RQ draw / Netherlands exactly 2", "odds_product": 4.25, "max_payout": 42.50},
+        {"cost": 10, "ticket": "058 Japan(-1) RQ draw / Japan exactly 1", "odds_product": 3.57, "max_payout": 35.70},
+        {"cost": 10, "ticket": "055 Ecuador(+1) RQ draw / Germany exactly 1", "odds_product": 3.72, "max_payout": 37.20}
+      ],
+      "known_odds_max_payout": 318.52,
+      "theoretical_net_return": 218.52,
+      "breakpoint_profile": "main is 2-leg plus singles; entertainment uses exact-margin high variance",
+      "key_risk": "Exact-margin entertainment tickets are sensitive to one late goal."
+    },
+    {
+      "id": "B3",
+      "tier": "balanced_combination",
+      "target_net_rmb": "around_200",
+      "main": [
+        {"cost": 15, "ticket": "055 Ecuador(+1) RQ home x 056 Curacao(+2) RQ home", "odds_product": 6.6515, "max_payout": 99.77},
+        {"cost": 20, "ticket": "058 Japan(-1) RQ away x 059 Paraguay(-1) RQ away", "odds_product": 2.7405, "max_payout": 54.81},
+        {"cost": 20, "ticket": "060 SPF away / United States win", "odds_product": 1.66, "max_payout": 33.20},
+        {"cost": 15, "ticket": "059 Paraguay(-1) RQ away / Australia +1 cover", "odds_product": 1.35, "max_payout": 20.25}
+      ],
+      "entertainment": [
+        {"cost": 10, "ticket": "057 Tunisia(+2) RQ home", "odds_product": 3.47, "max_payout": 34.70},
+        {"cost": 10, "ticket": "058 Japan(-1) RQ draw / Japan exactly 1", "odds_product": 3.57, "max_payout": 35.70},
+        {"cost": 10, "ticket": "060 SPF away / United States win", "odds_product": 1.66, "max_payout": 16.60}
+      ],
+      "known_odds_max_payout": 295.03,
+      "theoretical_net_return": 195.03,
+      "breakpoint_profile": "one higher-odds 2-leg cover parlay, then lower-variance cover/winner tickets",
+      "key_risk": "055 +1 and 056 +2 are cover calls; if favorites score early, both become fragile."
+    },
+    {
+      "id": "A1",
+      "tier": "aggressive_combination",
+      "target_net_rmb": "300_plus",
+      "main": [
+        {"cost": 44, "ticket": "4x11: 055 Ecuador(+1) RQ home / 056 Curacao(+2) RQ home / 058 Japan(-1) RQ away / 060 SPF away", "odds_product": "mixed 2-leg, 3-leg, 4-leg combinations", "max_payout": 373.63},
+        {"cost": 16, "ticket": "059 Paraguay(-1) RQ away / Australia +1 cover", "odds_product": 1.35, "max_payout": 21.60},
+        {"cost": 10, "ticket": "060 SPF away / United States win", "odds_product": 1.66, "max_payout": 16.60}
+      ],
+      "entertainment": [
+        {"cost": 10, "ticket": "057 Tunisia(+2) RQ draw / Netherlands exactly 2", "odds_product": 4.25, "max_payout": 42.50},
+        {"cost": 10, "ticket": "058 Japan(-1) RQ draw / Japan exactly 1", "odds_product": 3.57, "max_payout": 35.70},
+        {"cost": 10, "ticket": "055 Ecuador(+1) RQ draw / Germany exactly 1", "odds_product": 3.72, "max_payout": 37.20}
+      ],
+      "known_odds_max_payout": 527.23,
+      "theoretical_net_return": 427.23,
+      "breakpoint_profile": "4x11 with high correlation to handicap cover outcomes",
+      "key_risk": "A single favorite blowout or favorite underperformance can collapse several branches."
+    },
+    {
+      "id": "A2",
+      "tier": "aggressive_combination",
+      "target_net_rmb": "300_plus",
+      "main": [
+        {"cost": 44, "ticket": "4x11: 056 Curacao(+2) RQ home / 057 Tunisia(+2) RQ home / 058 Japan(-1) RQ away / 060 SPF away", "odds_product": "mixed 2-leg, 3-leg, 4-leg combinations", "max_payout": 463.14},
+        {"cost": 16, "ticket": "059 Paraguay(-1) RQ away / Australia +1 cover", "odds_product": 1.35, "max_payout": 21.60},
+        {"cost": 10, "ticket": "060 SPF away / United States win", "odds_product": 1.66, "max_payout": 16.60}
+      ],
+      "entertainment": [
+        {"cost": 10, "ticket": "055 Ecuador(+1) RQ home", "odds_product": 2.65, "max_payout": 26.50},
+        {"cost": 10, "ticket": "058 Japan(-1) RQ draw / Japan exactly 1", "odds_product": 3.57, "max_payout": 35.70},
+        {"cost": 10, "ticket": "060 Turkey(+1) RQ draw / United States exactly 1", "odds_product": 3.85, "max_payout": 38.50}
+      ],
+      "known_odds_max_payout": 602.04,
+      "theoretical_net_return": 502.04,
+      "breakpoint_profile": "4x11 with two underdog-cover legs",
+      "key_risk": "This is payout-seeking and very exposed to third-round motivation/rotation errors."
+    },
+    {
+      "id": "A3",
+      "tier": "aggressive_combination",
+      "target_net_rmb": "300_plus",
+      "main": [
+        {"cost": 22, "ticket": "4x4: 055 Ecuador(+1) RQ home / 056 Curacao(+2) RQ home / 057 Tunisia(+2) RQ home / 058 Japan(-1) RQ away", "odds_product": "four 3-leg combinations", "max_payout": 401.12},
+        {"cost": 20, "ticket": "058 Japan(-1) RQ away x 060 SPF away", "odds_product": 3.3698, "max_payout": 67.40},
+        {"cost": 18, "ticket": "059 Paraguay(-1) RQ away / Australia +1 cover", "odds_product": 1.35, "max_payout": 24.30},
+        {"cost": 10, "ticket": "060 SPF away / United States win", "odds_product": 1.66, "max_payout": 16.60}
+      ],
+      "entertainment": [
+        {"cost": 10, "ticket": "055 Ecuador(+1) RQ draw / Germany exactly 1", "odds_product": 3.72, "max_payout": 37.20},
+        {"cost": 10, "ticket": "057 Tunisia(+2) RQ draw / Netherlands exactly 2", "odds_product": 4.25, "max_payout": 42.50},
+        {"cost": 10, "ticket": "060 Turkey(+1) RQ away / United States by 2+", "odds_product": 2.87, "max_payout": 28.70}
+      ],
+      "known_odds_max_payout": 617.82,
+      "theoretical_net_return": 517.82,
+      "breakpoint_profile": "4x4 means every branch is a 3-leg parlay",
+      "key_risk": "Highest return design here; not suitable if the goal shifts back to hit-rate priority."
+    }
+  ],
+  "red_team_gate": {
+    "verdict": "revise",
+    "execution": "hold_for_betting_discussion_only",
+    "required_before_action": [
+      "T-75 official lineups",
+      "latest injuries and suspension check",
+      "same-source China Sports Lottery odds refresh",
+      "remove or resize any plan if 056/057 SPF remains unavailable and market changes materially"
+    ]
+  },
+  "json_validated": true
+}

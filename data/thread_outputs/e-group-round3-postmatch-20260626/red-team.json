@@ -1,0 +1,133 @@
+{
+  "review_target": "K:/worldcup/data/outputs/match_predictions/e-group-round3-postmortem-20260626.json and related E-group betting artifacts",
+  "phase": "postmatch_review",
+  "status": "complete",
+  "verdict": "revise",
+  "overall_error_level": "high",
+  "recommended_postmortem_status": "partial",
+  "should_downgrade_postmortem_status": true,
+  "scope": "E组第三轮赛后复盘与购彩失误审查；只做来源冲突、逻辑漏洞、让球误读、status冲突、强队低赔陷阱与第三轮动机误判核验",
+  "top_concerns": [
+    {
+      "concern": "红队赛前已给出 hold_for_betting_discussion_only，但主线程/投注线程仍把德国低赔、056让胜、3串1、4串11、精确净胜球玩法写进主仓或核心串关。",
+      "category": "market",
+      "severity": "blocker",
+      "confidence": "high",
+      "evidence": "def-round3-betting-20260625/red-team.md 已明确禁止上述玩法进入主仓；betting-plan.md 与 main-summary.md 仍保留德国胜主仓、056库拉索(+2)让胜、B方案3串1、C方案4串11/4串4、057/060让平。",
+      "why_it_matters": "这说明红队门禁没有变成真实发布门槛，执行层继续暴露在高波动与误读玩法中。",
+      "follow_up_check": "主线程规则改为：red-team=hold_for_betting_discussion_only 时，不得输出主仓/执行型方案。",
+      "owner": "main"
+    },
+    {
+      "concern": "德国第三轮动机与轮换风险虽然被 revise，但没有被翻译成投注层禁入条件，德国1.36仍被当作主仓锚点或串关腿。",
+      "category": "tournament",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "e-group-round3 red-team.md 已要求把德国热度更多让回给平局；量化最终仍给德国胜48.59%，而 betting-plan A/B/C 继续使用055德国胜。",
+      "why_it_matters": "已基本锁位强队最容易造成低赔误导；赛果2-1证明 revise 幅度不足且发布门禁失效。",
+      "follow_up_check": "下一轮把已锁位/基本锁位强队低赔SPF列入主仓禁入项。",
+      "owner": "model"
+    },
+    {
+      "concern": "056库拉索(+2)盘口被错误落成让胜主仓方向，实际0-2正好打到让平，属于让球结构理解不合格而非纯结果波动。",
+      "category": "market",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "赛前红队把+2盘定义为大胜尾部约束信号；betting-plan B5 仍选择库拉索(+2)让胜；实际0-2对应让平。",
+      "why_it_matters": "这是典型的让球误读，会把本应用来约束大胜叙事的盘口错翻译成主仓方向。",
+      "follow_up_check": "所有深受让盘必须显式区分让胜/让平/让负覆盖条件，且不允许模糊写成“+2方向”。",
+      "owner": "betting"
+    },
+    {
+      "concern": "赛后复盘把模型方向命中与票型命中混写，存在“方向对所以复盘 complete”的自我辩护风险。",
+      "category": "data",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "库拉索vs科特迪瓦单场复盘写“模型总体方向正确”，但若用户踩中的是056让胜，该票型仍然错误；当前group postmortem未把ticket-level结果单独展开。",
+      "why_it_matters": "如果不拆开模型方向与票型结果，复盘会弱化真正需要修的发布与执行错误。",
+      "follow_up_check": "postmortem 模板新增 ticket_result_review 段，分别记录模型方向、玩法方向、最终票型是否命中。",
+      "owner": "main"
+    },
+    {
+      "concern": "当前E组group postmortem status=complete 过满，因player_state回填、统一赛后xG、投注链来源与实际票据映射仍缺失。",
+      "category": "data",
+      "severity": "medium",
+      "confidence": "high",
+      "evidence": "e-group-round3-postmortem-20260626.json 写有 player_state_update_status=blocked；单场复盘也列出官方统一赛后xG未落盘；正式来源未纳入betting-plan/red-team文件。",
+      "why_it_matters": "当前更像模型赛后复盘完成，但投注失误闭环未完成；继续写complete会误导主线程和用户。",
+      "follow_up_check": "把group postmortem及承担购彩解释职责的单场复盘状态改为partial，并补写 betting_audit_incomplete 说明。",
+      "owner": "data"
+    }
+  ],
+  "upset_or_failure_scenarios": [
+    "已基本锁位强队被继续当作低赔安全锚，结果在轮换、控节奏或动机下滑的第三轮环境中直接反噬整张串关。",
+    "深受让盘本应用来约束大胜尾部，却被翻译成需要更激进结果成立的主仓票型，导致看对强弱却输在盘口结构。",
+    "赛后只强调模型方向大致正确，忽略票型本身错误，导致下一轮重复使用同类高方差玩法。 "
+  ],
+  "overconfidence_flags": [
+    "把德国1.36与美国1.66这类第三轮低赔包装成安全锚点。",
+    "把3串1、4串11、4串4放进保守/均衡主仓结构。",
+    "把057让平、060让平这类精确净胜球玩法写进主仓。"
+  ],
+  "market_flags": [
+    "056/057普通SPF未开售时，仍有方案试图用让球或延伸玩法替代主仓常规胜负。",
+    "056的+2盘更像大胜尾部约束，而不是主仓方向强化。",
+    "低赔强队在第三轮易被市场与叙事双重加热。"
+  ],
+  "quant_chain_flags": [
+    "德国场 revise 方向存在，但落地幅度不足，未转化成 betting gate。",
+    "postmortem 只复盘模型误差，没有把票型结果做结构化拆分。",
+    "status=complete 与 blocked player_state / missing xG / missing betting source chain 不一致。"
+  ],
+  "responsibility_attribution": [
+    {
+      "owner": "main",
+      "error_level": "high",
+      "issue": "未把红队hold变成发布门禁；赛后复盘status写满。"
+    },
+    {
+      "owner": "betting",
+      "error_level": "high",
+      "issue": "主仓混入德国低赔、056让胜、3串1/4串11和精确净胜球玩法。"
+    },
+    {
+      "owner": "model",
+      "error_level": "high",
+      "issue": "德国第三轮降速/动机修正不够狠，未形成明确禁投翻译。"
+    },
+    {
+      "owner": "data",
+      "error_level": "medium",
+      "issue": "player_state、统一赛后xG、票据映射和投注链来源不全。"
+    },
+    {
+      "owner": "tactics",
+      "error_level": "low",
+      "issue": "主要战术风险大体识别正确，问题更多出在量化权重和票型翻译。"
+    }
+  ],
+  "must_change_rules": [
+    "当 red-team verdict 为 hold_for_betting_discussion_only 时，主线程不得输出主仓/执行型方案。",
+    "已出线或基本锁位强队低赔SPF不得作为主仓锚点或3串以上核心腿。",
+    "所有需要精确净胜球数成立的让球平玩法，只能归为高方差娱乐项。",
+    "深受让盘必须明确写清让胜/让平/让负覆盖条件，不得模糊写成受让方向。",
+    "赛后复盘必须拆分模型方向命中与票型命中，禁止以前者替代后者。",
+    "只要 player_state_update_status=blocked、统一赛后xG缺失或投注链未纳入正式来源，就不得把end-to-end postmortem标为complete。"
+  ],
+  "should_change_review_status_from_complete_to_partial": true,
+  "next_round_betting_ban_list": [
+    "已基本锁位强队低赔SPF作为主仓锚点",
+    "任何3串1、4串4、4串11进入保守/均衡主仓",
+    "所有+1让平、+2让平、净胜1球/2球精确玩法进入主仓",
+    "普通SPF未开售场次被包装成可执行主仓票",
+    "比分、半全场、深让穿盘玩法被用来补主仓回报目标"
+  ],
+  "missing_data": [
+    "实际用户购票单据，无法精确映射到单一方案编号。",
+    "分钟级player_state回填。",
+    "官方统一赛后xG。",
+    "group postmortem 对 betting-plan / betting red-team / expanded-return red-team 的正式引用链。",
+    "ticket_result_review 结构化字段。"
+  ],
+  "handoff_notes": "建议主线程把 E组第三轮 group postmortem status 改为 partial，并在复盘中新增 ticket-level 审查；下一轮若红队继续给出 hold_for_betting_discussion_only，不得再发布主仓执行模板。"
+}

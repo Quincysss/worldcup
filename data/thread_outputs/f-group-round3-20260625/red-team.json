@@ -1,0 +1,191 @@
+{
+  "review_target": {
+    "phase": "match_prediction",
+    "group": "F",
+    "matches": [
+      "japan_vs_sweden",
+      "tunisia_vs_netherlands"
+    ],
+    "scope": "third_round_red_team_verification"
+  },
+  "status": "complete",
+  "verdict": "revise",
+  "publish_gate": "discussion_only_pre_lineup",
+  "top_concerns": [
+    {
+      "concern": "Third-round motivation, bracket path, same-time scoreboard pressure, and market sentiment are all present in the chain already. They must not be stacked again in summary language or manual probability nudges.",
+      "category": "tournament",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "data-modeler.json already includes third_round_context, qualification_scenarios, motivation_profile, bracket_path_expectation, rotation_risk, strategic_tempo_adjustment, and market_adjustment for both matches.",
+      "why_it_matters": "Double counting can overfit Japan draw management, Sweden must-win aggression, and Netherlands incentive edge.",
+      "follow_up_check": "Keep only one explicit third-round adjustment layer in final writeup and in any manual red-team probability trim.",
+      "owner": "model"
+    },
+    {
+      "concern": "Japan vs Sweden favorite framing is still vulnerable to overstating Japan control because ordinary 1X2 supports Japan, but the same chain also shows Sweden late-game and set-piece tails remain live.",
+      "category": "tactical",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": "Quant output has Japan 46.37, draw 25.99, Sweden 27.63, while market implied is 50.92, 26.06, 23.01 and handicap -1 does not support an easy Japan margin.",
+      "why_it_matters": "If summary language follows brand or market favorite bias, Sweden's must-win aerial and set-piece path gets underweighted.",
+      "follow_up_check": "Keep Sweden upset and draw tails explicit; do not market Japan as a clean-control favorite.",
+      "owner": "summary"
+    },
+    {
+      "concern": "Tunisia vs Netherlands still lacks ordinary 1X2 lottery pricing, so the market calibration chain is weaker and +2 handicap should not be converted into a high-confidence away-win endorsement.",
+      "category": "market",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "data-collector.json marks ordinary_status unopened; quant output uses handicap +2 only and keeps market_adjustment weight lower for this match.",
+      "why_it_matters": "Without ordinary 1X2, the model can still project Netherlands on strength, but precision on away-win and big-margin tails should be reduced.",
+      "follow_up_check": "Retain weaker calibration warning and avoid presenting Netherlands win rate as tightly locked.",
+      "owner": "model"
+    },
+    {
+      "concern": "Official T-75 lineups, final injuries, and card accumulation status remain unresolved for both matches.",
+      "category": "availability",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "data-collector.json and tactics-coach.json both keep official lineups unavailable and discipline or medical refresh incomplete.",
+      "why_it_matters": "Lineup and workload uncertainty directly affect xG bands, rotation assumptions, and late-match substitution scripts.",
+      "follow_up_check": "Refresh before any upgrade from discussion_only wording.",
+      "owner": "data"
+    },
+    {
+      "concern": "Third-place and bracket-path language is still heuristic rather than fully official-state complete.",
+      "category": "data",
+      "severity": "medium",
+      "confidence": "high",
+      "evidence": "quant output explicitly says later FIFA tiebreakers are not modeled and third-place advancement is heuristic because other groups are external dependencies.",
+      "why_it_matters": "Overstating these probabilities as exact can mislead the motivation story, especially for Tunisia's theoretical-only path and Sweden's best-third route.",
+      "follow_up_check": "Mark third-place advancement and bracket-path effects as heuristic support, not exact qualification math.",
+      "owner": "main"
+    }
+  ],
+  "upset_or_failure_scenarios": [
+    {
+      "match": "japan_vs_sweden",
+      "scenario": "If Netherlands lead early in the parallel match, Japan can become more draw-protective and Sweden's direct-play or set-piece tail grows in the last 30 minutes.",
+      "severity": "high",
+      "owner": "tactics"
+    },
+    {
+      "match": "japan_vs_sweden",
+      "scenario": "If Sweden starts a more aggressive front-foot version than estimated, Japan's wing circulation and buildup control can be disrupted earlier than the median script.",
+      "severity": "medium",
+      "owner": "tactics"
+    },
+    {
+      "match": "tunisia_vs_netherlands",
+      "scenario": "If Dutch rotation is heavier than assumed, Netherlands can still be the better team while the away-win margin tail compresses toward 0-1, 0-2, or 1-1 type outcomes.",
+      "severity": "high",
+      "owner": "model"
+    },
+    {
+      "match": "tunisia_vs_netherlands",
+      "scenario": "If Tunisia concedes early again, collapse tail remains live and independent Poisson may still understate the messy high-variance branch.",
+      "severity": "medium",
+      "owner": "model"
+    }
+  ],
+  "overconfidence_flags": [
+    "Do not treat Japan ordinary 1X2 1.74 as proof that the qualitative read is solved.",
+    "Do not sell Netherlands as a full-confidence market-backed away favorite while ordinary 1X2 is unopened.",
+    "Do not write Tunisia's path as live qualification equity; it is theoretical-only and near-elimination in practical terms.",
+    "Do not present third-place advancement probabilities as exact official-state outputs."
+  ],
+  "market_flags": [
+    "Japan vs Sweden: ordinary 1X2 favors Japan, but handicap -1 does not support a relaxed big-margin script.",
+    "Tunisia vs Netherlands: ordinary 1X2 unavailable, so handicap +2 only constrains blowout interpretation and does not fully calibrate away-win pricing.",
+    "Because the lottery market set is incomplete, any market-reference sentence must state that calibration is partial."
+  ],
+  "quant_chain_flags": [
+    "Japan already has lower model win probability than market; avoid additional manual anti-Sweden discounting.",
+    "Netherlands strength edge is real, but away-win precision should be wider because market and lineup confirmation are incomplete.",
+    "Independent Poisson still underweights red cards, early goals, late chasing, and collapse branches.",
+    "Later FIFA tiebreakers and best-third advancement remain heuristic in the current simulation layer."
+  ],
+  "recommended_probability_adjustment": {
+    "japan_vs_sweden": {
+      "current_model": {
+        "japan_win": 0.4637,
+        "draw": 0.2599,
+        "sweden_win": 0.2763
+      },
+      "direction": "keep_japan_edge_but_do_not_push_it_higher_trim_small_if_needed_toward_draw_or_sweden_tail",
+      "suggested_range": {
+        "japan_win": [
+          0.45,
+          0.46
+        ],
+        "draw": [
+          0.26,
+          0.27
+        ],
+        "sweden_win": [
+          0.28,
+          0.29
+        ]
+      },
+      "note": "This is mainly a calibration guardrail, not a demand for a large rewrite."
+    },
+    "tunisia_vs_netherlands": {
+      "current_model": {
+        "tunisia_win": 0.1148,
+        "draw": 0.2095,
+        "netherlands_win": 0.6756
+      },
+      "direction": "trim_netherlands_precision_and_shift_small_mass_to_draw_plus_small_tunisia_tail",
+      "suggested_range": {
+        "tunisia_win": [
+          0.12,
+          0.13
+        ],
+        "draw": [
+          0.22,
+          0.24
+        ],
+        "netherlands_win": [
+          0.64,
+          0.66
+        ]
+      },
+      "note": "The concern is not that Netherlands should stop being favorite, but that the current precision and margin confidence are still too neat."
+    }
+  },
+  "must_fix_before_publish": [
+    {
+      "item": "State clearly that third-place advancement and bracket-path effects are heuristic, not full official-state exact math.",
+      "owner": "main"
+    },
+    {
+      "item": "Do not add another manual motivation boost or market boost on top of the existing third_round_context and market_adjustment layers.",
+      "owner": "model"
+    },
+    {
+      "item": "For Japan vs Sweden, preserve Sweden must-win plus set-piece or aerial threat in the final narrative and avoid clean-favorite wording for Japan.",
+      "owner": "summary"
+    },
+    {
+      "item": "For Tunisia vs Netherlands, explicitly mark ordinary 1X2 as unavailable and prevent handicap +2 from being narrated as a full market endorsement.",
+      "owner": "summary"
+    },
+    {
+      "item": "Keep T-75 lineups, final injuries, and card accumulation status marked unresolved at publish time unless refreshed.",
+      "owner": "data"
+    }
+  ],
+  "missing_data": [
+    "official_t75_lineups",
+    "final_injury_confirmation",
+    "final_suspension_or_card_accumulation_confirmation",
+    "tunisia_vs_netherlands_ordinary_1x2_snapshot",
+    "same_time_scoreboard_branch_refresh_closer_to_kickoff"
+  ],
+  "handoff_notes": [
+    "Prediction can be published only as discussion_only_pre_lineup while verdict remains revise.",
+    "The main issues are calibration and disclosure, not a full rebuild of the F-group chain.",
+    "Japan vs Sweden needs anti-favorite-overstatement language; Tunisia vs Netherlands needs anti-false-market-certainty language."
+  ]
+}

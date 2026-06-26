@@ -1,0 +1,45 @@
+{
+  "group": "C",
+  "round": 3,
+  "review_date": "2026-06-25",
+  "matches": [
+    {
+      "match": "Scotland vs Brazil",
+      "actual_score": "0-3",
+      "pregame_main_prediction": "0-2",
+      "winner_prediction_hit": true,
+      "exact_score_hit": false,
+      "total_goals_direction_hit": true,
+      "btts_hit": true,
+      "poisson_top_score_actual_rank": 3,
+      "poisson_actual_score_probability": 0.1113,
+      "postmortem": "同方向高位尾部兑现；需上调巴西争头名/净胜球场景下领先后继续进球权重。"
+    },
+    {
+      "match": "Morocco vs Haiti",
+      "actual_score": "4-2",
+      "pregame_main_prediction": "3-0",
+      "winner_prediction_hit": true,
+      "exact_score_hit": false,
+      "total_goals_direction_hit": true,
+      "btts_hit": false,
+      "poisson_top_score_actual_rank": 19,
+      "poisson_actual_score_probability": 0.005937,
+      "postmortem": "胜负方向命中，但零封、BTTS、比分尾部分布明显失真；低估海地进球能力和第三轮开放度。"
+    }
+  ],
+  "aggregate": {
+    "winner_hits": "2/2",
+    "exact_score_hits": "0/2",
+    "total_goals_direction_hits": "2/2",
+    "btts_hits": "1/2"
+  },
+  "model_update_notes": "C组第3轮方向2/2命中，但比分尾部分布校准不足。苏格兰0-3巴西属同方向高位尾部兑现，需上调强队争头名时领先后继续扩大战果权重；摩洛哥4-2海地暴露弱队进球与比赛开放度被系统性低估，后续应提高第三轮动机脚本、弱队反击转化、领先后高节奏分支、门将/乌龙极端事件和强队替补深度的胖尾修正。",
+  "player_state_delta": "K:/worldcup/data/outputs/player_state/c-group-round3-player-state-delta-20260625.json",
+  "canonical_member_tables_updated_in_place": [
+    "K:/worldcup/??/??/???.md",
+    "K:/worldcup/??/???/???.md",
+    "K:/worldcup/??/???/???.md",
+    "K:/worldcup/??/??/???.md"
+  ]
+}

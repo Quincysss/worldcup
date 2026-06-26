@@ -1,0 +1,743 @@
+{
+  "phase": "match_prediction",
+  "group": "G",
+  "round": 3,
+  "status": "partial_but_model_usable",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "updated_at": "2026-06-25T12:35:00+08:00",
+  "owner": "data-modeler-agent",
+  "scope": [
+    "新西兰 vs 比利时",
+    "埃及 vs 伊朗"
+  ],
+  "input_readiness": {
+    "status": "partial",
+    "available_inputs": [
+      "G组第二轮预测文件",
+      "G组第二轮复盘文件",
+      "四队 team_profile 简报",
+      "四队 player_state JSON",
+      "四队 tactics packet",
+      "项目内既有 G组第三轮量化预测汇总"
+    ],
+    "missing_or_pending_inputs": [
+      "data-collector.json 仍是骨架",
+      "tactics-coach.json 仍是骨架",
+      "T-75 官方首发",
+      "最新纪律与医疗确认",
+      "新西兰 vs 比利时普通胜平负同源盘"
+    ]
+  },
+  "missing_fields": [
+    "official_t_minus_75_lineups",
+    "latest_discipline_confirmation",
+    "latest_medical_confirmation",
+    "same_source_ordinary_1x2_new_zealand_vs_belgium"
+  ],
+  "source_log": [
+    {
+      "path": "K:\\worldcup\\data\\outputs\\match_predictions\\g-group-round2-predictions.json",
+      "status": "read"
+    },
+    {
+      "path": "K:\\worldcup\\data\\outputs\\match_predictions\\g-group-round2-postmortem-20260622.json",
+      "status": "read"
+    },
+    {
+      "path": "K:\\worldcup\\data\\thread_outputs\\g-group-round3-20260625\\data-collector.json",
+      "status": "skeleton_only"
+    },
+    {
+      "path": "K:\\worldcup\\data\\thread_outputs\\g-group-round3-20260625\\tactics-coach.json",
+      "status": "skeleton_only"
+    },
+    {
+      "path": "K:\\worldcup\\比赛\\未开始比赛\\小组赛\\G组\\G组第三轮量化预测汇总_20260625.json",
+      "status": "read_primary_local_source"
+    },
+    {
+      "path": "K:\\worldcup\\比赛\\已完成比赛\\小组赛\\G组\\G组第二轮复盘.md",
+      "status": "read"
+    }
+  ],
+  "notes": [
+    "本文件优先复用项目内既有的 G组第三轮量化汇总，避免在上游线程未补齐时重复计算并引入漂移。",
+    "市场只作为校准层，不作为独立实力信号重复计数。",
+    "red-team 仍未完成，因此保留 pending。"
+  ],
+  "factor_weights_default": {
+    "baseline_strength": 0.22,
+    "recent_attack_defense": 0.17,
+    "player_state_injury_rotation": 0.17,
+    "tactical_matchup": 0.12,
+    "schedule_environment": 0.05,
+    "third_round_context": 0.19,
+    "market_calibration": 0.08
+  },
+  "group_table_snapshot_before_round3": [
+    {
+      "team": "埃及",
+      "played": 2,
+      "points": 4,
+      "gf": 4,
+      "ga": 2,
+      "gd": 2
+    },
+    {
+      "team": "比利时",
+      "played": 2,
+      "points": 2,
+      "gf": 1,
+      "ga": 1,
+      "gd": 0
+    },
+    {
+      "team": "伊朗",
+      "played": 2,
+      "points": 2,
+      "gf": 2,
+      "ga": 2,
+      "gd": 0
+    },
+    {
+      "team": "新西兰",
+      "played": 2,
+      "points": 1,
+      "gf": 3,
+      "ga": 5,
+      "gd": -2
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "G-R3-20260627-NZL-BEL",
+      "match": "新西兰 vs 比利时",
+      "home": "新西兰",
+      "away": "比利时",
+      "kickoff_bjt": "2026-06-27 11:00",
+      "venue": "Vancouver, Canada",
+      "factor_inputs": {
+        "round2_carryover": [
+          "比利时前两轮场面优势高于结果兑现，进攻转化率偏低。",
+          "新西兰前两轮都有进球，但低位防线横移稳定性不足。",
+          "第三轮动机使本场比常规小组赛更不利于平局自然收敛。"
+        ],
+        "player_state_signal": {
+          "home": "Chris Wood 体系权重高，锋线支点价值明显。",
+          "away": "De Bruyne、Lukaku、Doku 一旦齐整会抬高上限，但第二轮后需压低大胜尾部。"
+        },
+        "market_status": {
+          "source": "中国足彩网竞彩混合页同源快照，仅让球胜平负可用",
+          "ordinary_1x2_status": "unavailable",
+          "handicap_label": "新西兰 +2",
+          "handicap_1x2_odds": [
+            2.25,
+            3.9,
+            2.32
+          ]
+        },
+        "lineup_status": "T-75 官方首发不可得，当前基于预测首发。"
+      },
+      "weights": {
+        "baseline_strength": 0.22,
+        "recent_attack_defense": 0.17,
+        "player_state_injury_rotation": 0.17,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.19,
+        "market_calibration": 0.08
+      },
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "recent_attack_defense": 0.17,
+        "player_state_injury_rotation": 0.17,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.19,
+        "market_calibration": 0.08
+      },
+      "team_strength_score": {
+        "home": 62.0,
+        "away": 81.5
+      },
+      "attack_score": {
+        "home": 64.0,
+        "away": 79.0
+      },
+      "defense_score": {
+        "home": 57.0,
+        "away": 77.0
+      },
+      "player_state_adjustment": {
+        "home": -0.01,
+        "away": 0.02,
+        "note": "比利时核心齐整度略抬上限，新西兰更多依赖单点兑现。"
+      },
+      "injury_adjustment": {
+        "home": 0.0,
+        "away": 0.0,
+        "note": "未把未确认伤停直接视作缺阵。"
+      },
+      "tactical_matchup_adjustment": {
+        "home": -0.06,
+        "away": 0.08,
+        "note": "比利时边路与肋部直塞对新西兰低位横移持续施压。"
+      },
+      "schedule_environment_adjustment": {
+        "home": 0.0,
+        "away": 0.0,
+        "note": "同组同开，后程将受另一场实时比分影响。"
+      },
+      "market_adjustment": {
+        "status": "partial_handicap_only",
+        "note": "普通胜平负缺失，仅用 +2 让球盘约束比利时大胜尾部。"
+      },
+      "third_round_context": {
+        "group_table_snapshot": [
+          {
+            "team": "埃及",
+            "points": 4,
+            "gd": 2,
+            "gf": 4
+          },
+          {
+            "team": "比利时",
+            "points": 2,
+            "gd": 0,
+            "gf": 1
+          },
+          {
+            "team": "伊朗",
+            "points": 2,
+            "gd": 0,
+            "gf": 2
+          },
+          {
+            "team": "新西兰",
+            "points": 1,
+            "gd": -2,
+            "gf": 3
+          }
+        ],
+        "qualification_scenarios": [
+          "比利时赢球后大概率锁定前二，至少进入高质量第三名通道。",
+          "比利时若战平仅有3分，晋级将明显依赖横向比较。",
+          "新西兰只有赢球才有现实出线通道。"
+        ],
+        "motivation_profile": {
+          "home": "必须争胜，若另一场走势不利，后段会主动提速并抬高风险。",
+          "away": "目标是赢球，但若另一场有利于自己，后程可能从扩大比分切换到控制风险。"
+        },
+        "bracket_path_expectation": {
+          "summary": "两队都还没到可以主动为淘汰赛路径放弃积分的阶段。",
+          "uncertainty": "high"
+        },
+        "rotation_risk": {
+          "home": "low",
+          "away": "medium_low",
+          "note": "积分压力抑制大幅轮换。"
+        },
+        "yellow_card_suspension_risk": {
+          "home": "unknown_partial",
+          "away": "unknown_partial"
+        },
+        "strategic_tempo_adjustment": {
+          "home": 0.03,
+          "away": 0.04,
+          "draw_probability_shift": -0.01,
+          "note": "新西兰必须争胜，比赛节奏比常规 draw-baseline 更开放。"
+        },
+        "third_round_context_adjustment": {
+          "home_xg_shift": -0.02,
+          "away_xg_shift": 0.04
+        }
+      },
+      "qualification_scenarios": [
+        "比利时赢球后大概率锁定前二。",
+        "比利时平局仍需看横向比较。",
+        "新西兰只有赢球才保有现实晋级通道。"
+      ],
+      "motivation_profile": {
+        "home": "高动机争胜",
+        "away": "优先争胜，次级目标是控制风险"
+      },
+      "bracket_path_expectation": {
+        "summary": "当前更受出线线约束，而非主动挑选淘汰赛对手。",
+        "uncertainty": "high"
+      },
+      "expected_goals": {
+        "pre_market": {
+          "home": 0.9,
+          "away": 1.84,
+          "total": 2.74
+        },
+        "final": {
+          "home": 0.88,
+          "away": 1.88,
+          "total": 2.76
+        }
+      },
+      "poisson_score_matrix": {
+        "home_team": "新西兰",
+        "away_team": "比利时",
+        "goals_0_to_5": {
+          "0": {
+            "0": 0.063292,
+            "1": 0.118989,
+            "2": 0.111849,
+            "3": 0.070092,
+            "4": 0.032943,
+            "5": 0.012387
+          },
+          "1": {
+            "0": 0.055697,
+            "1": 0.10471,
+            "2": 0.098427,
+            "3": 0.061681,
+            "4": 0.02899,
+            "5": 0.0109
+          },
+          "2": {
+            "0": 0.024507,
+            "1": 0.046072,
+            "2": 0.043308,
+            "3": 0.02714,
+            "4": 0.012756,
+            "5": 0.004796
+          },
+          "3": {
+            "0": 0.007189,
+            "1": 0.013515,
+            "2": 0.012704,
+            "3": 0.007961,
+            "4": 0.003742,
+            "5": 0.001407
+          },
+          "4": {
+            "0": 0.001581,
+            "1": 0.002973,
+            "2": 0.002795,
+            "3": 0.001751,
+            "4": 0.000823,
+            "5": 0.00031
+          },
+          "5": {
+            "0": 0.000278,
+            "1": 0.000523,
+            "2": 0.000492,
+            "3": 0.000308,
+            "4": 0.000145,
+            "5": 0.000054
+          }
+        },
+        "tail_probability": 0.012913
+      },
+      "probabilities_1x2": {
+        "home_win": 0.1708,
+        "draw": 0.2202,
+        "away_win": 0.609
+      },
+      "totals": {
+        "over_2_5": 0.521,
+        "under_2_5": 0.479,
+        "btts_yes": 0.4959,
+        "btts_no": 0.5041
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.119
+        },
+        {
+          "score": "0-2",
+          "probability": 0.1118
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1047
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0984
+        },
+        {
+          "score": "0-3",
+          "probability": 0.0701
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_1x2": null,
+        "handicap_market_no_vig": {
+          "label": "新西兰 +2",
+          "home": 0.3927,
+          "draw": 0.2265,
+          "away": 0.3808
+        }
+      },
+      "model_market_delta": {
+        "ordinary_1x2": null,
+        "handicap_context_only": {
+          "comparable_market_missing": true,
+          "note": "普通胜平负未开售，无法做同口径 1X2 偏差；仅用 +2 让球盘限制比利时大胜尾部。"
+        }
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "home_win": 0.1708,
+        "draw": 0.2202,
+        "away_win": 0.609
+      },
+      "quality_notes": [
+        "collector 与 tactics 上游仍是骨架，本场主要依赖项目内既有量化汇总与 team/player/tactics 包。",
+        "普通胜平负缺失，市场校准只轻量作用于比分尾部。"
+      ]
+    },
+    {
+      "match_id": "G-R3-20260627-EGY-IRN",
+      "match": "埃及 vs 伊朗",
+      "home": "埃及",
+      "away": "伊朗",
+      "kickoff_bjt": "2026-06-27 11:00",
+      "venue": "Seattle, USA",
+      "factor_inputs": {
+        "round2_carryover": [
+          "埃及第二轮 3比1 新西兰后，反击与二阶段压迫尾部上修。",
+          "伊朗两连不败，低位韧性与定位球路径仍需保留。",
+          "本场平局价值高于另一场，尤其对4分在手的埃及。"
+        ],
+        "player_state_signal": {
+          "home": "Salah、Marmoush 可用性仍决定埃及反击上限，但不再简化为单点输出。",
+          "away": "Taremi 与定位球、二点争夺仍是伊朗最稳定的破局路径。"
+        },
+        "market_status": {
+          "source": "中国足彩网竞彩混合页同源快照",
+          "ordinary_1x2_odds": [
+            2.32,
+            2.5,
+            3.35
+          ],
+          "handicap_label": "埃及 -1",
+          "handicap_1x2_odds": [
+            5.5,
+            3.8,
+            1.46
+          ]
+        },
+        "lineup_status": "T-75 官方首发不可得，当前基于预测首发。"
+      },
+      "weights": {
+        "baseline_strength": 0.22,
+        "recent_attack_defense": 0.17,
+        "player_state_injury_rotation": 0.17,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.19,
+        "market_calibration": 0.08
+      },
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "recent_attack_defense": 0.17,
+        "player_state_injury_rotation": 0.17,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.19,
+        "market_calibration": 0.08
+      },
+      "team_strength_score": {
+        "home": 74.0,
+        "away": 71.0
+      },
+      "attack_score": {
+        "home": 74.5,
+        "away": 69.0
+      },
+      "defense_score": {
+        "home": 70.5,
+        "away": 72.0
+      },
+      "player_state_adjustment": {
+        "home": 0.03,
+        "away": 0.0,
+        "note": "埃及第二轮后前场状态评分上修，伊朗保留稳定性但不额外抬高开放产量。"
+      },
+      "injury_adjustment": {
+        "home": 0.0,
+        "away": 0.0,
+        "note": "未把未确认伤停直接视作缺阵。"
+      },
+      "tactical_matchup_adjustment": {
+        "home": 0.04,
+        "away": -0.02,
+        "note": "埃及纵深反击点更完整，但伊朗低位组织与定位球保留平局尾部。"
+      },
+      "schedule_environment_adjustment": {
+        "home": -0.01,
+        "away": -0.01,
+        "note": "同组同开，后程可能因另一场比分而降速。"
+      },
+      "market_adjustment": {
+        "status": "ordinary_1x2_available_light",
+        "note": "普通胜平负可用，但只做 headline 轻量校准，避免与 recent_form、third_round_context 重复计数。"
+      },
+      "third_round_context": {
+        "group_table_snapshot": [
+          {
+            "team": "埃及",
+            "points": 4,
+            "gd": 2,
+            "gf": 4
+          },
+          {
+            "team": "比利时",
+            "points": 2,
+            "gd": 0,
+            "gf": 1
+          },
+          {
+            "team": "伊朗",
+            "points": 2,
+            "gd": 0,
+            "gf": 2
+          },
+          {
+            "team": "新西兰",
+            "points": 1,
+            "gd": -2,
+            "gf": 3
+          }
+        ],
+        "qualification_scenarios": [
+          "埃及打平到5分，基础晋级概率已很高；赢球则更接近小组第一。",
+          "伊朗赢球到5分即可主动争前二；若只拿1分，更可能落入第三名横向比较。",
+          "若另一场比利时早早领先，伊朗更需要提速；若另一场僵持，本场前70分钟更可能维持低比分。"
+        ],
+        "motivation_profile": {
+          "home": "先保不败，再根据另一场走势决定是否继续压上争第一。",
+          "away": "三分优先级高于保守拿一分，但会根据同组比分动态调整冒险程度。"
+        },
+        "bracket_path_expectation": {
+          "summary": "埃及更有能力在接近晋级时接受低事件比赛；伊朗不能只考虑路径，先要确保积分线。",
+          "uncertainty": "high"
+        },
+        "rotation_risk": {
+          "home": "medium_low",
+          "away": "low",
+          "note": "伊朗积分压力更大，完整轮换概率低；埃及也难大面积保留主力。"
+        },
+        "yellow_card_suspension_risk": {
+          "home": "unknown_partial",
+          "away": "partial_watch"
+        },
+        "strategic_tempo_adjustment": {
+          "home": -0.02,
+          "away": -0.01,
+          "draw_probability_shift": 0.03,
+          "note": "本场平局价值高于新西兰 vs 比利时，低比分与平局尾部需显式保留。"
+        },
+        "third_round_context_adjustment": {
+          "home_xg_shift": 0.03,
+          "away_xg_shift": -0.01
+        }
+      },
+      "qualification_scenarios": [
+        "埃及平局即非常接近晋级。",
+        "伊朗赢球即可主动争前二。",
+        "同组另一场比分将显著影响本场后段节奏。"
+      ],
+      "motivation_profile": {
+        "home": "优先保不败，再视路径提速",
+        "away": "优先争三分"
+      },
+      "bracket_path_expectation": {
+        "summary": "路径考量存在，但优先级仍低于积分需求。",
+        "uncertainty": "high"
+      },
+      "expected_goals": {
+        "pre_market": {
+          "home": 1.02,
+          "away": 0.86,
+          "total": 1.88
+        },
+        "final": {
+          "home": 1.05,
+          "away": 0.85,
+          "total": 1.9
+        }
+      },
+      "poisson_score_matrix": {
+        "home_team": "埃及",
+        "away_team": "伊朗",
+        "goals_0_to_5": {
+          "0": {
+            "0": 0.149569,
+            "1": 0.127133,
+            "2": 0.054032,
+            "3": 0.015309,
+            "4": 0.003253,
+            "5": 0.000553
+          },
+          "1": {
+            "0": 0.157047,
+            "1": 0.13349,
+            "2": 0.056733,
+            "3": 0.016074,
+            "4": 0.003416,
+            "5": 0.000581
+          },
+          "2": {
+            "0": 0.08245,
+            "1": 0.070082,
+            "2": 0.029785,
+            "3": 0.008439,
+            "4": 0.001793,
+            "5": 0.000305
+          },
+          "3": {
+            "0": 0.028857,
+            "1": 0.024529,
+            "2": 0.010425,
+            "3": 0.002954,
+            "4": 0.000628,
+            "5": 0.000107
+          },
+          "4": {
+            "0": 0.007575,
+            "1": 0.006439,
+            "2": 0.002736,
+            "3": 0.000775,
+            "4": 0.000165,
+            "5": 0.000028
+          },
+          "5": {
+            "0": 0.001591,
+            "1": 0.001352,
+            "2": 0.000575,
+            "3": 0.000163,
+            "4": 0.000035,
+            "5": 0.000006
+          }
+        },
+        "tail_probability": 0.001018
+      },
+      "probabilities_1x2": {
+        "home_win": 0.3954,
+        "draw": 0.316,
+        "away_win": 0.2886
+      },
+      "totals": {
+        "over_2_5": 0.2963,
+        "under_2_5": 0.7037,
+        "btts_yes": 0.3722,
+        "btts_no": 0.6278
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.157
+        },
+        {
+          "score": "0-0",
+          "probability": 0.1496
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1335
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1271
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0824
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_1x2_no_vig": {
+          "home": 0.3816,
+          "draw": 0.3541,
+          "away": 0.2643
+        },
+        "handicap_market_context": {
+          "label": "埃及 -1",
+          "odds": [
+            5.5,
+            3.8,
+            1.46
+          ]
+        }
+      },
+      "model_market_delta": {
+        "ordinary_1x2": {
+          "home": 0.0138,
+          "draw": -0.0381,
+          "away": 0.0243
+        },
+        "note": "模型略低于市场平局，略高于主胜与客胜两端，headline 更偏分胜负，但比分分布仍保留低事件结构。"
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "home_win": 0.3954,
+        "draw": 0.316,
+        "away_win": 0.2886
+      },
+      "quality_notes": [
+        "普通胜平负可用，但不应把埃及第二轮强势简单外推为大胜。",
+        "伊朗连续低事件比赛特征要求模型继续保留 0比0、1比0、1比1 这类结果。"
+      ]
+    }
+  ],
+  "simulated_group_outcomes": {
+    "method": "复用项目内 G组第三轮量化汇总中的小组模拟结果；第三名晋级概率为 heuristic 估算。",
+    "tie_breaker_note": "simulation sorts by points, goal difference, goals for; head-to-head edge is documented in scenarios but not exhaustively enumerated.",
+    "teams": [
+      {
+        "team": "埃及",
+        "expected_final_points": 5.501,
+        "rank_1_probability": 0.531,
+        "rank_2_probability": 0.2858,
+        "rank_3_probability": 0.1832,
+        "rank_4_probability": 0.0,
+        "top2_probability": 0.8168,
+        "advance_probability": 0.957
+      },
+      {
+        "team": "比利时",
+        "expected_final_points": 4.036,
+        "rank_1_probability": 0.2441,
+        "rank_2_probability": 0.4793,
+        "rank_3_probability": 0.1366,
+        "rank_4_probability": 0.14,
+        "top2_probability": 0.7234,
+        "advance_probability": 0.7594
+      },
+      {
+        "team": "伊朗",
+        "expected_final_points": 3.182,
+        "rank_1_probability": 0.1745,
+        "rank_2_probability": 0.1536,
+        "rank_3_probability": 0.6063,
+        "rank_4_probability": 0.0656,
+        "top2_probability": 0.3281,
+        "advance_probability": 0.4288
+      },
+      {
+        "team": "新西兰",
+        "expected_final_points": 1.741,
+        "rank_1_probability": 0.0504,
+        "rank_2_probability": 0.0813,
+        "rank_3_probability": 0.0739,
+        "rank_4_probability": 0.7944,
+        "top2_probability": 0.1317,
+        "advance_probability": 0.1592
+      }
+    ]
+  },
+  "red_team_status": "pending",
+  "quality_notes": [
+    "collector 与 tactics 线程文件已存在但仍是骨架，因此本文件状态为 partial_but_model_usable。",
+    "Poisson 矩阵已覆盖 0比0 至 5比5，并保留 tail_probability。",
+    "新西兰 vs 比利时缺普通胜平负盘口，市场校准可靠度低于埃及 vs 伊朗。",
+    "T-75 官方首发未确认前，本文件只可作为模型草稿，不应用作最终执行建议。"
+  ]
+}

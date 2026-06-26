@@ -1,0 +1,685 @@
+{
+  "schema_version": "worldcup-quant-prediction-system.round3.v2",
+  "generated_at": "2026-06-25T14:56:21+08:00",
+  "group": "H",
+  "round": "group_round_3",
+  "source_threads": {
+    "data_collector": "019eb053-ef96-7a22-9685-4602ba252b10",
+    "tactics_coach": "019eb05a-a3ee-7023-9c89-42d9786d4685",
+    "data_modeler": "019eb079-bed5-7342-9dfd-d1f448caa0dc",
+    "red_team": "019eb05b-66db-7000-8a84-c453dece7ac3",
+    "summary_commentator": "019eb06a-ae34-7c00-b1fe-9e35ff23c848"
+  },
+  "thread_participation_status": {
+    "status": "dispatched_with_partial_fallback",
+    "notes": "All five existing project threads were prompted; local files were skeleton or in-progress at generation time, so main thread completed the validated model output from project data and odds snapshot.",
+    "thread_output_dir": "K:\\worldcup\\data\\thread_outputs\\h-group-round3-20260625"
+  },
+  "group_table_snapshot": {
+    "西班牙": {
+      "played": 2,
+      "points": 4,
+      "gf": 4,
+      "ga": 0,
+      "gd": 4
+    },
+    "乌拉圭": {
+      "played": 2,
+      "points": 2,
+      "gf": 3,
+      "ga": 3,
+      "gd": 0
+    },
+    "佛得角": {
+      "played": 2,
+      "points": 2,
+      "gf": 2,
+      "ga": 2,
+      "gd": 0
+    },
+    "沙特": {
+      "played": 2,
+      "points": 1,
+      "gf": 1,
+      "ga": 5,
+      "gd": -4
+    }
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-27_H_R3_佛得角_vs_沙特",
+      "match_no": "周五063",
+      "kickoff_beijing": "2026-06-27 08:00",
+      "home": "佛得角",
+      "away": "沙特",
+      "market": {
+        "captured_at": "2026-06-25 14:50 +08:00 main-thread ZGZCW snapshot",
+        "ordinary_1x2_odds": [
+          2.4,
+          3.05,
+          2.6
+        ],
+        "handicap_label": "佛得角 -1",
+        "handicap_1x2_odds": [
+          5.55,
+          4.0,
+          1.43
+        ]
+      },
+      "team_strength_score": {
+        "佛得角": 69.0,
+        "沙特": 67.0
+      },
+      "attack_score": {
+        "佛得角": 67.0,
+        "沙特": 64.0
+      },
+      "defense_score": {
+        "佛得角": 66.0,
+        "沙特": 58.0
+      },
+      "factor_inputs": {
+        "local_results_used": [
+          "西班牙 0-0 佛得角",
+          "沙特 1-1 乌拉圭",
+          "乌拉圭 2-2 佛得角",
+          "西班牙 4-0 沙特"
+        ],
+        "lineup_status": "T-75官方首发不可得，采用预测首发与成员状态表估计。",
+        "round2_model_correction": "上轮低估佛得角定位球/逆风韧性，同时低估沙特面对强压时防线崩盘尾部。"
+      },
+      "expected_goals": {
+        "pre_market": {
+          "home": 1.2,
+          "away": 1.08
+        },
+        "final": {
+          "home": 1.24,
+          "away": 1.12
+        },
+        "note": "佛得角韧性与定位球上调；沙特必须争胜带来进攻上调，但后防风险抵消。"
+      },
+      "third_round_context": {
+        "group_table_snapshot": {
+          "西班牙": {
+            "played": 2,
+            "points": 4,
+            "gf": 4,
+            "ga": 0,
+            "gd": 4
+          },
+          "乌拉圭": {
+            "played": 2,
+            "points": 2,
+            "gf": 3,
+            "ga": 3,
+            "gd": 0
+          },
+          "佛得角": {
+            "played": 2,
+            "points": 2,
+            "gf": 2,
+            "ga": 2,
+            "gd": 0
+          },
+          "沙特": {
+            "played": 2,
+            "points": 1,
+            "gf": 1,
+            "ga": 5,
+            "gd": -4
+          }
+        },
+        "qualification_scenarios": [
+          "佛得角2分，赢球到5分大概率晋级；平局到3分需要看第三名横向比较和乌拉圭赛果。",
+          "沙特1分，赢球到4分仍有晋级窗口；平/负基本失去主动权。",
+          "若乌拉圭早段落后西班牙，佛得角平局价值会提高；若乌拉圭领先，佛得角必须加速争胜。"
+        ],
+        "same_time_dependency": "乌拉圭 vs 西班牙同开，实时比分会显著影响下半场风险偏好。"
+      },
+      "predicted_lineups": {
+        "佛得角": {
+          "shape": "4-3-3 / 4-2-3-1",
+          "key_note": "继续依赖中前场二点争夺、边路推进与定位球；领先后会收成4-5-1。"
+        },
+        "沙特": {
+          "shape": "4-2-3-1 / 4-3-3",
+          "key_note": "需要更主动前压，但边后卫身后和中卫转身仍是最大隐患。"
+        }
+      },
+      "tactical_matchup_adjustment": [
+        "佛得角前两轮没有被强队打穿，说明低位组织和二点保护可信。",
+        "沙特如果必须压上，佛得角反击与定位球二次进攻价值上升。",
+        "双方都需要胜利但都怕先丢球，前30分钟可能谨慎，60分钟后开放度提高。"
+      ],
+      "rotation_risk": {
+        "佛得角": "low_to_medium",
+        "沙特": "medium"
+      },
+      "yellow_card_suspension_risk": "未拿到完整官方黄牌停赛快照，按中性风险处理。",
+      "bracket_path_expectation": "两队优先级都是先进入32强，不应为了淘汰赛路径牺牲小组出线。",
+      "strategic_tempo_adjustment": "平局阶段节奏偏低；若同场乌拉圭不落后，佛得角会更早提速。",
+      "key_risks": [
+        "竞彩普通胜平负三项非常接近，任何首发或早球都会显著改变概率。",
+        "佛得角上轮2-2体现韧性，但连续硬仗后的体能尾段仍需防。",
+        "沙特必须争胜可能提升大球，但也可能因心理压力导致进攻质量低于射门量。"
+      ],
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "recent_attack_defense": 0.18,
+        "player_state_injury_rotation": 0.17,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.18,
+        "market_calibration": 0.08
+      },
+      "poisson_formula_readable": {
+        "generic": "P(home=h, away=a)=exp(-lambda_home)*lambda_home^h/h! * exp(-lambda_away)*lambda_away^a/a!",
+        "this_match": "P(佛得角=h,沙特=a)=e^-1.24*1.24^h/h! * e^-1.12*1.12^a/a!"
+      },
+      "poisson_score_matrix": {
+        "formula": "P(home=h, away=a)=exp(-lambda_home)*lambda_home^h/h! * exp(-lambda_away)*lambda_away^a/a!",
+        "lambda_home": 1.24,
+        "lambda_away": 1.12,
+        "goals_0_to_5": {
+          "0": {
+            "0": 0.09442,
+            "1": 0.105751,
+            "2": 0.05922,
+            "3": 0.022109,
+            "4": 0.006191,
+            "5": 0.001387
+          },
+          "1": {
+            "0": 0.117081,
+            "1": 0.131131,
+            "2": 0.073433,
+            "3": 0.027415,
+            "4": 0.007676,
+            "5": 0.001719
+          },
+          "2": {
+            "0": 0.07259,
+            "1": 0.081301,
+            "2": 0.045529,
+            "3": 0.016997,
+            "4": 0.004759,
+            "5": 0.001066
+          },
+          "3": {
+            "0": 0.030004,
+            "1": 0.033604,
+            "2": 0.018818,
+            "3": 0.007026,
+            "4": 0.001967,
+            "5": 0.000441
+          },
+          "4": {
+            "0": 0.009301,
+            "1": 0.010417,
+            "2": 0.005834,
+            "3": 0.002178,
+            "4": 0.00061,
+            "5": 0.000137
+          },
+          "5": {
+            "0": 0.002307,
+            "1": 0.002584,
+            "2": 0.001447,
+            "3": 0.00054,
+            "4": 0.000151,
+            "5": 3.4e-05
+          }
+        },
+        "tail_probability": 0.002825
+      },
+      "probabilities_1x2": {
+        "home_win": 0.3899,
+        "draw": 0.2788,
+        "away_win": 0.3313
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4198,
+        "under_2_5": 0.5802,
+        "btts_yes": 0.4788,
+        "btts_no": 0.5212
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1311
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1171
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1058
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0944
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0813
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0734
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0726
+        },
+        {
+          "score": "0-2",
+          "probability": 0.0592
+        }
+      ],
+      "odds_implied_probability": {
+        "source": "中国足彩网竞彩混合页",
+        "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "captured_at": "2026-06-25 14:50 +08:00 main-thread ZGZCW snapshot",
+        "ordinary_1x2": {
+          "odds": [
+            2.4,
+            3.05,
+            2.6
+          ],
+          "raw_inverse": [
+            0.416667,
+            0.327869,
+            0.384615
+          ],
+          "overround": 1.129151,
+          "normalized_probability": {
+            "home_win": 0.369,
+            "draw": 0.2904,
+            "away_win": 0.3406
+          }
+        },
+        "handicap_1x2": {
+          "handicap": "佛得角 -1",
+          "odds": [
+            5.55,
+            4.0,
+            1.43
+          ],
+          "raw_inverse": [
+            0.18018,
+            0.25,
+            0.699301
+          ],
+          "overround": 1.129481,
+          "normalized_probability": {
+            "home_win": 0.1595,
+            "draw": 0.2213,
+            "away_win": 0.6191
+          }
+        }
+      },
+      "model_market_delta": {
+        "home_win": 0.0209,
+        "draw": -0.0116,
+        "away_win": -0.0093
+      },
+      "red_team_status": "pass_with_cautions",
+      "final_probabilities": {
+        "home_win": 0.3899,
+        "draw": 0.2788,
+        "away_win": 0.3313
+      }
+    },
+    {
+      "match_id": "2026-06-27_H_R3_乌拉圭_vs_西班牙",
+      "match_no": "周五064",
+      "kickoff_beijing": "2026-06-27 08:00",
+      "home": "乌拉圭",
+      "away": "西班牙",
+      "market": {
+        "captured_at": "2026-06-25 14:50 +08:00 main-thread ZGZCW snapshot",
+        "ordinary_1x2_odds": [
+          6.85,
+          4.22,
+          1.34
+        ],
+        "handicap_label": "乌拉圭 +1",
+        "handicap_1x2_odds": [
+          2.65,
+          3.35,
+          2.21
+        ]
+      },
+      "team_strength_score": {
+        "乌拉圭": 78.0,
+        "西班牙": 88.0
+      },
+      "attack_score": {
+        "乌拉圭": 75.0,
+        "西班牙": 86.0
+      },
+      "defense_score": {
+        "乌拉圭": 67.0,
+        "西班牙": 84.0
+      },
+      "factor_inputs": {
+        "local_results_used": [
+          "西班牙 0-0 佛得角",
+          "沙特 1-1 乌拉圭",
+          "乌拉圭 2-2 佛得角",
+          "西班牙 4-0 沙特"
+        ],
+        "lineup_status": "T-75官方首发不可得，采用预测首发；西班牙有轮换/保护黄牌的第三轮风险。",
+        "round2_model_correction": "西班牙强队早球后扩大比分尾部需保留；乌拉圭进攻存在但防线稳定性下调。"
+      },
+      "expected_goals": {
+        "pre_market": {
+          "home": 0.82,
+          "away": 1.98
+        },
+        "final": {
+          "home": 0.88,
+          "away": 1.88
+        },
+        "note": "市场强烈偏西班牙；模型因西班牙4分和潜在轮换略压低客胜/大胜端，同时保留乌拉圭必须争胜带来的进攻xG。"
+      },
+      "third_round_context": {
+        "group_table_snapshot": {
+          "西班牙": {
+            "played": 2,
+            "points": 4,
+            "gf": 4,
+            "ga": 0,
+            "gd": 4
+          },
+          "乌拉圭": {
+            "played": 2,
+            "points": 2,
+            "gf": 3,
+            "ga": 3,
+            "gd": 0
+          },
+          "佛得角": {
+            "played": 2,
+            "points": 2,
+            "gf": 2,
+            "ga": 2,
+            "gd": 0
+          },
+          "沙特": {
+            "played": 2,
+            "points": 1,
+            "gf": 1,
+            "ga": 5,
+            "gd": -4
+          }
+        },
+        "qualification_scenarios": [
+          "西班牙4分，平局到5分大概率锁定前二；赢球基本小组第一。",
+          "乌拉圭2分，赢球到5分直接掌握晋级主动；平局到3分将高度依赖另一场和第三名比较。",
+          "若佛得角领先沙特，乌拉圭会更早被迫冒险；若佛得角打平，乌拉圭对平局的容忍度略升但仍不足够安全。"
+        ],
+        "same_time_dependency": "佛得角 vs 沙特同开，乌拉圭的后60分钟策略最受另一场比分牵引。"
+      },
+      "predicted_lineups": {
+        "乌拉圭": {
+          "shape": "4-2-3-1 / 4-3-3",
+          "key_note": "中前场需要更直接冲击西班牙肋部；若落后会转向双前锋或边路堆人。"
+        },
+        "西班牙": {
+          "shape": "4-3-3",
+          "key_note": "控球压节奏和边锋单点仍是主武器；领先后大概率降速保护核心。"
+        }
+      },
+      "tactical_matchup_adjustment": [
+        "西班牙控球和反抢会限制乌拉圭连续进攻，但乌拉圭定位球与二点球仍能制造样本外风险。",
+        "乌拉圭必须争胜，后段压上会扩大西班牙反击和二次进攻的xG尾部。",
+        "西班牙如果较早进球，比赛可能从控节奏变为消耗管理，2-0/2-1比3球大胜更自然。"
+      ],
+      "rotation_risk": {
+        "乌拉圭": "low",
+        "西班牙": "medium_high"
+      },
+      "yellow_card_suspension_risk": "西班牙核心位可能有保护性轮换；未有T-75名单前不作单点强修正。",
+      "bracket_path_expectation": "西班牙争第一有价值，但不会为路径冒大规模伤停风险；乌拉圭优先出线。",
+      "strategic_tempo_adjustment": "乌拉圭需要随另一场比分提速；西班牙领先后会压低节奏和总射门尾部。",
+      "key_risks": [
+        "竞彩客胜隐含概率高于模型，主要差异来自西班牙轮换与小组形势。",
+        "乌拉圭前两轮丢3球，防守端稳定性不足，若早丢球容易被拉开。",
+        "西班牙0-0佛得角说明破密防并非无成本，若轮换过大可能把平局尾部放大。"
+      ],
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "recent_attack_defense": 0.18,
+        "player_state_injury_rotation": 0.17,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.18,
+        "market_calibration": 0.08
+      },
+      "poisson_formula_readable": {
+        "generic": "P(home=h, away=a)=exp(-lambda_home)*lambda_home^h/h! * exp(-lambda_away)*lambda_away^a/a!",
+        "this_match": "P(乌拉圭=h,西班牙=a)=e^-0.88*0.88^h/h! * e^-1.88*1.88^a/a!"
+      },
+      "poisson_score_matrix": {
+        "formula": "P(home=h, away=a)=exp(-lambda_home)*lambda_home^h/h! * exp(-lambda_away)*lambda_away^a/a!",
+        "lambda_home": 0.88,
+        "lambda_away": 1.88,
+        "goals_0_to_5": {
+          "0": {
+            "0": 0.063292,
+            "1": 0.118989,
+            "2": 0.111849,
+            "3": 0.070092,
+            "4": 0.032943,
+            "5": 0.012387
+          },
+          "1": {
+            "0": 0.055697,
+            "1": 0.10471,
+            "2": 0.098427,
+            "3": 0.061681,
+            "4": 0.02899,
+            "5": 0.0109
+          },
+          "2": {
+            "0": 0.024507,
+            "1": 0.046072,
+            "2": 0.043308,
+            "3": 0.02714,
+            "4": 0.012756,
+            "5": 0.004796
+          },
+          "3": {
+            "0": 0.007189,
+            "1": 0.013515,
+            "2": 0.012704,
+            "3": 0.007961,
+            "4": 0.003742,
+            "5": 0.001407
+          },
+          "4": {
+            "0": 0.001581,
+            "1": 0.002973,
+            "2": 0.002795,
+            "3": 0.001751,
+            "4": 0.000823,
+            "5": 0.00031
+          },
+          "5": {
+            "0": 0.000278,
+            "1": 0.000523,
+            "2": 0.000492,
+            "3": 0.000308,
+            "4": 0.000145,
+            "5": 5.4e-05
+          }
+        },
+        "tail_probability": 0.012913
+      },
+      "probabilities_1x2": {
+        "home_win": 0.1708,
+        "draw": 0.2202,
+        "away_win": 0.609
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.521,
+        "under_2_5": 0.479,
+        "btts_yes": 0.4959,
+        "btts_no": 0.5041
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.119
+        },
+        {
+          "score": "0-2",
+          "probability": 0.1118
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1047
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0984
+        },
+        {
+          "score": "0-3",
+          "probability": 0.0701
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0633
+        },
+        {
+          "score": "1-3",
+          "probability": 0.0617
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0557
+        }
+      ],
+      "odds_implied_probability": {
+        "source": "中国足彩网竞彩混合页",
+        "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "captured_at": "2026-06-25 14:50 +08:00 main-thread ZGZCW snapshot",
+        "ordinary_1x2": {
+          "odds": [
+            6.85,
+            4.22,
+            1.34
+          ],
+          "raw_inverse": [
+            0.145985,
+            0.236967,
+            0.746269
+          ],
+          "overround": 1.129221,
+          "normalized_probability": {
+            "home_win": 0.1293,
+            "draw": 0.2098,
+            "away_win": 0.6609
+          }
+        },
+        "handicap_1x2": {
+          "handicap": "乌拉圭 +1",
+          "odds": [
+            2.65,
+            3.35,
+            2.21
+          ],
+          "raw_inverse": [
+            0.377358,
+            0.298507,
+            0.452489
+          ],
+          "overround": 1.128355,
+          "normalized_probability": {
+            "home_win": 0.3344,
+            "draw": 0.2646,
+            "away_win": 0.401
+          }
+        }
+      },
+      "model_market_delta": {
+        "home_win": 0.0415,
+        "draw": 0.0104,
+        "away_win": -0.0519
+      },
+      "red_team_status": "pass_with_cautions",
+      "final_probabilities": {
+        "home_win": 0.1708,
+        "draw": 0.2202,
+        "away_win": 0.609
+      }
+    }
+  ],
+  "simulated_group_outcomes": {
+    "method": "Independent Poisson enumeration using 0-5 score grid normalized inside the grid. Ranking uses points, goal difference, goals for; head-to-head and fair-play are documented risks.",
+    "teams": [
+      {
+        "team": "西班牙",
+        "expected_final_points": 6.036,
+        "finish_1st": 0.8246,
+        "finish_2nd": 0.1081,
+        "finish_3rd": 0.0673,
+        "finish_4th": 0.0,
+        "top2_probability": 0.9327,
+        "advance_probability_with_third_place_heuristic": 0.9878
+      },
+      {
+        "team": "乌拉圭",
+        "expected_final_points": 2.741,
+        "finish_1st": 0.1488,
+        "finish_2nd": 0.082,
+        "finish_3rd": 0.6753,
+        "finish_4th": 0.0939,
+        "top2_probability": 0.2308,
+        "advance_probability_with_third_place_heuristic": 0.2871
+      },
+      {
+        "team": "佛得角",
+        "expected_final_points": 3.447,
+        "finish_1st": 0.0266,
+        "finish_2nd": 0.5358,
+        "finish_3rd": 0.1965,
+        "finish_4th": 0.2411,
+        "top2_probability": 0.5624,
+        "advance_probability_with_third_place_heuristic": 0.5963
+      },
+      {
+        "team": "沙特",
+        "expected_final_points": 2.273,
+        "finish_1st": 0.0,
+        "finish_2nd": 0.274,
+        "finish_3rd": 0.061,
+        "finish_4th": 0.665,
+        "top2_probability": 0.274,
+        "advance_probability_with_third_place_heuristic": 0.3075
+      }
+    ]
+  },
+  "source_log": [
+    {
+      "name": "中国足彩网竞彩混合页",
+      "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-25 14:50 +08:00",
+      "usage": "竞彩编号、普通胜平负、让球胜平负与是否开售状态。"
+    },
+    {
+      "name": "项目本地H组复盘与预测文件",
+      "url": "K:/worldcup/比赛/已完成比赛/小组赛/H组; K:/worldcup/data/outputs/match_predictions",
+      "captured_at": "2026-06-25T14:56:21+08:00",
+      "usage": "小组积分、第二轮模型纠错、球队状态与此前xG基线。"
+    }
+  ],
+  "validation": [
+    "2026-06-27_H_R3_佛得角_vs_沙特: probabilities_sum=1.0000; matrix=6x6; top_scores=8",
+    "2026-06-27_H_R3_乌拉圭_vs_西班牙: probabilities_sum=1.0000; matrix=6x6; top_scores=8"
+  ]
+}

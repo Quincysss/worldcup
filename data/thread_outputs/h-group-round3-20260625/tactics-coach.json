@@ -1,0 +1,262 @@
+{
+  "phase": "group_round3_tactics_predicted_lineups",
+  "group": "H",
+  "status": "partial",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "updated_at": "2026-06-25T15:02:00+08:00",
+  "owner": "tactics-coach",
+  "scope": "H group round 3 tactical and predicted lineup review for Cape Verde vs Saudi Arabia and Uruguay vs Spain.",
+  "predicted_lineup_status": "estimated",
+  "official_t_minus_75_lineups": "unavailable",
+  "model_entry_ready": "yes_with_caution",
+  "group_context": {
+    "standings_before_round3": {
+      "Spain": 4,
+      "Uruguay": 2,
+      "Cape Verde": 2,
+      "Saudi Arabia": 1
+    },
+    "same_time_kickoff_dependency": "high",
+    "summary": [
+      "Spain showed in round 2 that an early lead allows them to control tempo and reduce chaos.",
+      "Cape Verde have produced two credible low-block results and remain dangerous on set pieces and counters.",
+      "Uruguay still carry a high-press and direct-transition identity, but their defensive control is not stable.",
+      "Saudi Arabia remain vulnerable when forced to build under strong pressure or defend repeated box entries."
+    ]
+  },
+  "discipline_note": {
+    "verified_round1_bookings": [
+      "Pedri",
+      "Sidny Lopes Cabral",
+      "Abdulelah Al-Amri"
+    ],
+    "warning": "Card accumulation threshold and full round 2 booking status are not fully verified. Treat this as a tactical caution signal, not a confirmed suspension list."
+  },
+  "matches": [
+    {
+      "fixture": "Cape Verde vs Saudi Arabia",
+      "confidence": "medium",
+      "status": "partial_but_model_usable",
+      "predicted_formations": {
+        "Cape Verde": "4-2-3-1 to 5-4-1 without the ball",
+        "Saudi Arabia": "5-4-2 or 5-4-1, with a possible 3-4-2-1 chase shape"
+      },
+      "predicted_lineups": {
+        "Cape Verde": [
+          "Vozinha",
+          "Steven Moreira",
+          "Pico",
+          "Diney",
+          "Sidny Lopes Cabral",
+          "Kevin Pina",
+          "Laros Duarte",
+          "Ryan Mendes",
+          "Jamiro Monteiro",
+          "Jovane Cabral",
+          "Dailon Livramento"
+        ],
+        "Saudi Arabia": [
+          "Mohammed Al-Owais",
+          "Saud Abdulhamid",
+          "Hassan Tambakti",
+          "Abdulelah Al-Amri",
+          "Moteb Al-Harbi",
+          "Mohammed Abu Al-Shamat",
+          "Abdullah Al-Khaibari",
+          "Mohamed Kanno",
+          "Musab Al-Juwayr",
+          "Salem Al-Dawsari",
+          "Firas Al-Buraikan"
+        ]
+      },
+      "lineup_confidence": {
+        "Cape Verde": "medium_high",
+        "Saudi Arabia": "medium"
+      },
+      "key_subs_and_triggers": {
+        "Cape Verde": [
+          "Helio Varela if Cape Verde need more vertical transition threat.",
+          "Willy Semedo if wider ball-carrying is needed in the final 30 minutes.",
+          "Nuno da Costa if more box occupation and dueling are needed.",
+          "Joao Paulo if Cape Verde lead and need extra midfield running."
+        ],
+        "Saudi Arabia": [
+          "Nasser Al-Dawsari if midfield intensity or second-ball pressure must increase.",
+          "Saleh Al-Shehri if Saudi need more penalty-box finishing presence after 60 minutes.",
+          "Ayman Yahya for direct wide dribbling in a chase state.",
+          "Nawaf Boushal if the right flank needs renewed running or overlap volume."
+        ]
+      },
+      "key_matchups": [
+        "Kevin Pina set-piece delivery versus Saudi second-ball box protection.",
+        "Ryan Mendes transition carrying versus the space behind Moteb Al-Harbi.",
+        "Salem Al-Dawsari moving inside versus Moreira and Pico support coverage."
+      ],
+      "tactical_summary": [
+        "Cape Verde should prefer a compact mid-low block, protect the center, and attack through set pieces and counters.",
+        "Saudi Arabia have lower draw value and are more likely to raise wing-back height and overall tempo.",
+        "Cape Verde do not need to press high to hurt Saudi Arabia; inviting width and then countering the second phase is the cleaner route.",
+        "This should not be priced as a high-event game from kickoff; the bigger xG tail is more likely to appear if Saudi must chase late."
+      ],
+      "rotation_shape_risk": [
+        "If Logan Costa returns to the XI, Cape Verde's duel ceiling rises, but his minutes profile is not fully certain.",
+        "Saudi's right-side spacing depends on whether Abdulhamid is isolated as the main runner or paired with Abu Al-Shamat in a more split-width pattern."
+      ],
+      "yellow_card_suspension_risk": [
+        "Sidny Lopes Cabral has a verified round 1 booking, so caution management could matter if accumulation risk exists.",
+        "Abdulelah Al-Amri has a verified round 1 booking, so box duels and step-out timing deserve monitoring."
+      ],
+      "tempo_factors": [
+        "Cape Verde can deliberately fragment rhythm and reduce long passing sequences.",
+        "If the parallel match makes a draw less useful, Saudi's last 30 minutes should become more aggressive."
+      ],
+      "third_round_motivation_tactical_shift": {
+        "Cape Verde": "They can enter in a non-loss structure first, then increase set-piece and counter commitment if the live table turns against them.",
+        "Saudi Arabia": "Because a draw has limited value, they are more likely to increase speed, wing-back height, and forward numbers as the match progresses."
+      },
+      "draw_management_tendency": {
+        "Cape Verde": "medium_high",
+        "Saudi Arabia": "low"
+      },
+      "goal_difference_chase_risk": {
+        "Cape Verde": "low_medium",
+        "Saudi Arabia": "medium_high"
+      },
+      "late_game_information_risk": "high",
+      "xg_adjustment_guidance": [
+        "Keep the base script in a lower-event range rather than mechanically upgrading total chaos because Cape Verde already took points twice.",
+        "If Saudi are not leading after halftime, late total xG can rise by about +0.20 to +0.35.",
+        "Cape Verde set-piece xG can receive a modest boost of about +0.05 to +0.10.",
+        "Do not overrate Saudi sustained low-block breaking in settled possession."
+      ],
+      "double_counting_warning": [
+        "Do not count Cape Verde resilience multiple times across defensive floor, goalkeeper overperformance, set pieces, and mentality.",
+        "Do not linearly carry Saudi's loss to Spain into an identical collapse expectation here."
+      ]
+    },
+    {
+      "fixture": "Uruguay vs Spain",
+      "confidence": "medium",
+      "status": "partial_but_model_usable",
+      "predicted_formations": {
+        "Uruguay": "4-2-3-1 with a 4-3-3 press posture",
+        "Spain": "4-3-3"
+      },
+      "predicted_lineups": {
+        "Uruguay": [
+          "Fernando Muslera",
+          "Guillermo Varela",
+          "Ronald Araujo",
+          "Jose Maria Gimenez",
+          "Mathias Olivera",
+          "Manuel Ugarte",
+          "Rodrigo Bentancur",
+          "Agustin Canobbio",
+          "Federico Valverde",
+          "Maximiliano Araujo",
+          "Darwin Nunez"
+        ],
+        "Spain": [
+          "Unai Simon",
+          "Marcos Llorente",
+          "Pau Cubarsi",
+          "Aymeric Laporte",
+          "Marc Cucurella",
+          "Rodri",
+          "Pedri",
+          "Fabian Ruiz",
+          "Lamine Yamal",
+          "Mikel Oyarzabal",
+          "Nico Williams"
+        ]
+      },
+      "lineup_confidence": {
+        "Uruguay": "medium_low",
+        "Spain": "medium_high"
+      },
+      "key_subs_and_triggers": {
+        "Uruguay": [
+          "Nicolas de la Cruz if Uruguay need cleaner midfield-to-front connection.",
+          "Federico Vinas if Uruguay must add a second box target while chasing.",
+          "Juan Manuel Sanabria if extra flank running or recovery is needed.",
+          "Brian Rodriguez if Uruguay need more pure wing isolation."
+        ],
+        "Spain": [
+          "Dani Olmo if Spain need more central creation between the lines.",
+          "Mikel Merino if Spain need extra box presence or aerial security.",
+          "Martin Zubimendi if Spain lead and want more midfield control.",
+          "Ferran Torres if wide starters need managed minutes or more direct runs."
+        ]
+      },
+      "key_matchups": [
+        "Valverde and Ugarte jumping onto Rodri and Pedri in the first phase.",
+        "Yamal and Nico Williams attacking the Uruguay fullback channels one versus one.",
+        "Darwin Nunez threatening behind Spain's center-backs when Uruguay break pressure."
+      ],
+      "tactical_summary": [
+        "Uruguay have the stronger incentive to raise tempo and pressing aggression; a passive control draw would be out of character for Bielsa.",
+        "Spain are more likely to keep a strong XI with minutes management rather than a heavy rotation plan.",
+        "Uruguay's best path remains high-pressure regains followed by fast vertical access through Valverde and Darwin.",
+        "Spain's best path is to survive the first press wave and then hit the wings and half-spaces quickly enough to expose Uruguay's side-to-center protection.",
+        "If the parallel match changes draw value for either side, the last phase can become significantly more volatile."
+      ],
+      "rotation_shape_risk": [
+        "Uruguay still carry uncertainty around goalkeeper and secondary structure choices, with Rochet, Caceres, or De la Cruz all capable of changing the shape feel.",
+        "If Spain manage Yamal or Nico Williams minutes, Olmo, Merino, or Ferran Torres can alter the wing threat profile."
+      ],
+      "yellow_card_suspension_risk": [
+        "Pedri has a verified round 1 booking, so foul management may matter if accumulation risk is active.",
+        "Uruguay do not have a fully verified suspension picture from round 2 cards, so the model should avoid assuming unlimited duel aggression."
+      ],
+      "tempo_factors": [
+        "Uruguay are the more likely team to force the pace upward.",
+        "If Spain lead, they are structurally better equipped to bring the game back into possession control.",
+        "If Uruguay concede first, the match should move faster into direct exchange sequences."
+      ],
+      "third_round_motivation_tactical_shift": {
+        "Uruguay": "They are more likely to press, increase sequence count, and add forward commitment in the second half if the live table demands it.",
+        "Spain": "If the live table allows it, Spain can shift toward lower-risk possession and draw management, but they should still begin from a strong control structure."
+      },
+      "draw_management_tendency": {
+        "Uruguay": "low_medium",
+        "Spain": "medium_high"
+      },
+      "goal_difference_chase_risk": {
+        "Uruguay": "medium_high",
+        "Spain": "medium"
+      },
+      "late_game_information_risk": "high",
+      "xg_adjustment_guidance": [
+        "Do not fully transfer Spain's finishing rate from the 4-0 Saudi match into this tougher duel and pressure environment.",
+        "If Uruguay must chase, total xG volatility can rise by about +0.25 to +0.40.",
+        "If Spain can accept the draw because of the parallel match, Spain open-play xG can be trimmed by about -0.10 to -0.20.",
+        "Do not mechanically downgrade Spain defensive error risk just because they may choose a more conservative script."
+      ],
+      "double_counting_warning": [
+        "Do not count Uruguay's high press as four separate positives across attack strength, pace, upset path, and total-goal bias without overlap control.",
+        "Do not let Spain's round 2 big win erase the possibility of rhythm breaks against stronger pressure."
+      ]
+    }
+  ],
+  "missing_fields": [
+    "official_t_minus_75_lineups",
+    "full_round2_individual_minutes_for_all_four_teams",
+    "fully_verified_card_accumulation_and_suspension_threshold",
+    "final_live_scoreboard_scenario_before_kickoff"
+  ],
+  "source_log": [
+    "matches/H-group round 1 and round 2 review markdown files",
+    "2026-06-15 Spain 0-0 Cape Verde review",
+    "2026-06-15 Saudi Arabia 1-1 Uruguay review",
+    "2026-06-21 Uruguay 2-2 Cape Verde review",
+    "2026-06-21 Spain 4-0 Saudi Arabia review",
+    "data/outputs/match_predictions/h-group-round2-postmortem-20260622.json",
+    "data/outputs/match_predictions/h-group-round2-quant-revision-20260621.json",
+    "team roster markdown files for Cape Verde, Saudi Arabia, Uruguay, and Spain",
+    "player_state json files for the four teams"
+  ],
+  "notes": [
+    "All lineups are estimated because official T-75 lineups are unavailable.",
+    "This file is model-usable with caution, especially for late_game_information_risk and incomplete card verification."
+  ]
+}

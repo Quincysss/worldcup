@@ -1,0 +1,164 @@
+{
+  "review_target": {
+    "phase": "match_prediction",
+    "group": "I",
+    "matches": [
+      "france_vs_norway",
+      "senegal_vs_iraq"
+    ],
+    "scope": "red_team_review_only",
+    "review_date": "2026-06-25",
+    "simultaneous_kickoff": true
+  },
+  "status": "complete",
+  "verdict": "hold",
+  "publish_gate": "discussion_only",
+  "betting_gate": "hold_for_betting",
+  "top_concerns": [
+    {
+      "concern": "round3 quant prediction file missing",
+      "category": "data",
+      "severity": "blocker",
+      "confidence": "high",
+      "evidence": "no i-group round3 quant prediction file found; data-modeler.json still in_progress",
+      "why_it_matters": "final probabilities, xG chain, and poisson matrix cannot be audited",
+      "follow_up_check": "add round3 quant prediction with third_round_context, market_adjustment, and final_probabilities",
+      "owner": "model"
+    },
+    {
+      "concern": "official T-75 lineups missing and player-state still partial",
+      "category": "availability",
+      "severity": "blocker",
+      "confidence": "high",
+      "evidence": "tactics-coach.json says official_t_minus_75_lineups unavailable; player-state files still require final recheck",
+      "why_it_matters": "third-round rotation, minutes limits, and last-minute absences can materially move xG and score tails",
+      "follow_up_check": "recheck starters, bench strength, minutes limits, and late scratches at T-75",
+      "owner": "data"
+    },
+    {
+      "concern": "official group table and tiebreaker snapshot missing in current thread",
+      "category": "tournament",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": "data-collector.json still shows standings_pending; current table is inferred from prior match results, not sourced here",
+      "why_it_matters": "third-round motivation can be misread if top spot, draw acceptance, or third-place value is not explicitly sourced",
+      "follow_up_check": "add official table, tiebreaker, and qualification-state labels for all four teams",
+      "owner": "data"
+    },
+    {
+      "concern": "France brand premium may inflate baseline more than evidence supports",
+      "category": "market",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": "team-level red-team review already flagged France prestige premium; live market snapshot is still missing",
+      "why_it_matters": "France win rate and 2+ goal margin can be overstated if France are more willing to manage a draw or rotate",
+      "follow_up_check": "check rotation signs, pace-management signals, and whether live odds still overprice France name value",
+      "owner": "main"
+    },
+    {
+      "concern": "Norway high-score tail is real but easy to overfit",
+      "category": "tactical",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": "round1 and round2 postmortems both said Norway scoring ceiling was previously underestimated after games open up",
+      "why_it_matters": "model can fail in two directions: too narrow if tail not widened, too aggressive if 4-1 and 3-2 are treated as stable baseline",
+      "follow_up_check": "recheck Norway open-game scoring ceiling and defensive exposure in a first-place chase script",
+      "owner": "model"
+    },
+    {
+      "concern": "Senegal and Iraq samples remain shallow and context-sensitive",
+      "category": "data",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": "team red-team reviews flagged sample bias, opponent-quality issues, and instability in attack and defense assumptions",
+      "why_it_matters": "single-scoreline and prestige-based gaps can overstate Senegal and understate Iraq draw or upset paths",
+      "follow_up_check": "add opponent-quality adjustment, split recent samples, and clarify round3 incentive context",
+      "owner": "model"
+    },
+    {
+      "concern": "same-book same-time executable market snapshot missing",
+      "category": "market",
+      "severity": "high",
+      "confidence": "high",
+      "evidence": "data-collector.json still shows odds_snapshot_pending",
+      "why_it_matters": "stale odds can mislead calibration, especially in round3 when lineup and motivation news move fast",
+      "follow_up_check": "capture 1X2, handicap, and totals from the same source with timestamp",
+      "owner": "data"
+    },
+    {
+      "concern": "independent Poisson is likely too narrow for red cards, early goals, chase-state, and simultaneous-match strategy shifts",
+      "category": "tactical",
+      "severity": "medium",
+      "confidence": "high",
+      "evidence": "round2 postmortem already flagged static Poisson as too narrow for Norway vs Senegal; round3 adds simultaneous-kickoff dependency",
+      "why_it_matters": "BTTS, late flips, and sudden tempo changes can be underweighted",
+      "follow_up_check": "expand score-tail treatment or add explicit manual uncertainty adjustment",
+      "owner": "model"
+    }
+  ],
+  "upset_or_failure_scenarios": [
+    {
+      "match": "france_vs_norway",
+      "scenario": "France accept draw management or partial rotation while Norway push harder for first place"
+    },
+    {
+      "match": "france_vs_norway",
+      "scenario": "an early Norway goal or weaker France protection opens the match and widens BTTS and 2-2 or 1-2 paths"
+    },
+    {
+      "match": "senegal_vs_iraq",
+      "scenario": "Senegal struggle to break a low block and Iraq steal one from a set piece or counter"
+    },
+    {
+      "match": "senegal_vs_iraq",
+      "scenario": "simultaneous-match information changes late-game urgency and breaks a low-total baseline"
+    }
+  ],
+  "overconfidence_flags": [
+    "do not project France two-win momentum directly into full-intensity round3 motivation",
+    "do not extrapolate Norway high scores linearly into a permanent shootout baseline",
+    "do not treat Senegal prestige as enough evidence to suppress draw and Iraq scoring share",
+    "without T-75 lineups and final injury news, any exact score framing is overconfident"
+  ],
+  "market_flags": [
+    "France public-team premium remains a live risk",
+    "round3 odds may be stale if they are not same-book same-time captured",
+    "if market chases Norway recent goals or shortens France only on name value, calibration should be conservative"
+  ],
+  "quant_chain_flags": [
+    "no round3 final_probabilities to audit",
+    "no sourced third_round_context or qualification_scenarios in current thread",
+    "no poisson_score_matrix to verify whether heavy-tail widening was applied"
+  ],
+  "recommended_probability_adjustment": [
+    {
+      "match": "france_vs_norway",
+      "direction": [
+        "down France win probability",
+        "up draw probability",
+        "slightly up Norway scoring and BTTS paths",
+        "down confidence in France by 2 or more goals"
+      ],
+      "reason": "France brand premium and two-win narrative can overstate motivation; Norway first-place incentive and scoring tail remain live"
+    },
+    {
+      "match": "senegal_vs_iraq",
+      "direction": [
+        "down Senegal win probability and margin confidence",
+        "up draw share",
+        "slightly up Iraq scoring and upset paths",
+        "widen score range instead of defaulting to a low-total script"
+      ],
+      "reason": "sample quality is weak, game-state volatility is meaningful, and Senegal reputation can be overpriced"
+    }
+  ],
+  "missing_data": [
+    "round3_quant_prediction_file",
+    "official_group_table_and_tiebreaker_snapshot",
+    "official_t_minus_75_lineups",
+    "latest_official_injury_confirmation",
+    "latest_official_discipline_confirmation",
+    "executable_market_snapshot_same_book"
+  ],
+  "handoff_notes": "use this as a red-team gate only. data must add official table, tiebreaker, odds, injuries, and card status. tactics must clarify rotation and tempo assumptions. model must add the full round3 quant file and avoid double-counting brand, motivation, and market signals."
+}

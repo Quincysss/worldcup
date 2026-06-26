@@ -1,0 +1,155 @@
+{
+  "phase": "betting_failure_postmortem",
+  "project": "2026_worldcup",
+  "group": "E",
+  "round": 3,
+  "status": "complete",
+  "created_at": "2026-06-26T10:10:00+08:00",
+  "owner": "betting-risk",
+  "scope": "E组第三轮购彩失败复盘；解释旧方案票型、表达和盘口理解问题，不给新下注建议",
+  "betting_gate": "postmatch_review_only",
+  "source_log": [
+    "K:/worldcup/data/thread_outputs/def-round3-betting-20260625/expanded-return-betting-plan.md",
+    "K:/worldcup/data/thread_outputs/def-round3-betting-20260625/expanded-return-betting-plan.json",
+    "K:/worldcup/data/thread_outputs/def-round3-betting-20260625/red-team.md",
+    "K:/worldcup/data/thread_outputs/def-round3-betting-20260625/red-team.json",
+    "K:/worldcup/data/outputs/match_predictions/e-group-round3-quant-prediction-20260625.json",
+    "K:/worldcup/比赛/已完成比赛/小组赛/E组/2026-06-25_厄瓜多尔_2-1_德国_复盘.md",
+    "K:/worldcup/比赛/已完成比赛/小组赛/E组/2026-06-25_库拉索_0-2_科特迪瓦_复盘.md"
+  ],
+  "actual_settlement": [
+    {
+      "match_no": "055",
+      "match": "厄瓜多尔 vs 德国",
+      "score": "2-1",
+      "spf_result": "主胜",
+      "rqspf": {
+        "handicap": "+1",
+        "result": "让胜",
+        "settlement_explanation": "厄瓜多尔受让1球后按3-1结算"
+      },
+      "project_market_status": "赛前普通SPF有售，德国低赔方向失败"
+    },
+    {
+      "match_no": "056",
+      "match": "库拉索 vs 科特迪瓦",
+      "score": "0-2",
+      "spf_result": "未开售",
+      "rqspf": {
+        "handicap": "+2",
+        "result": "让平",
+        "settlement_explanation": "库拉索受让2球后按2-2结算"
+      },
+      "project_market_status": "项目记录普通SPF未开售，不能按普通客胜结算"
+    }
+  ],
+  "pre_match_model_reference": {
+    "055": {
+      "representative_score": "0-1",
+      "probabilities_1x2": {
+        "home_win": 0.2417,
+        "draw": 0.2724,
+        "away_win": 0.4859
+      },
+      "top_scorelines": ["0-1", "1-1", "0-0", "0-2", "1-0"],
+      "postmatch_error": "德国低赔和小比分控局权重仍偏高，实际走向厄瓜多尔高强度反扑"
+    },
+    "056": {
+      "representative_score": "0-1",
+      "probabilities_1x2": {
+        "home_win": 0.1211,
+        "draw": 0.2044,
+        "away_win": 0.6745
+      },
+      "top_scorelines": ["0-1", "0-2", "1-1", "1-2", "0-3"],
+      "postmatch_error": "胜负方向接近正确，但从比分/胜负转换到让球票型时把让平误落为让胜"
+    }
+  },
+  "old_directions_audit": [
+    {
+      "direction": "055 SPF 德国胜",
+      "appeared_in": ["C1娱乐", "B2主仓"],
+      "actual_result": "055 SPF 主胜",
+      "status": "dead",
+      "why": "第三轮德国已基本锁位，低赔客胜没有抵抗轮换、控节奏和厄瓜多尔必须争胜的开放尾部"
+    },
+    {
+      "direction": "055 RQ(+1) 让平 / 德国赢1球",
+      "appeared_in": ["B2娱乐", "A1娱乐", "A3娱乐"],
+      "actual_result": "055 RQ(+1) 让胜",
+      "status": "dead",
+      "why": "德国早进球后没有维持一球小胜脚本，最终被厄瓜多尔反超"
+    },
+    {
+      "direction": "056 RQ(+2) 库拉索让胜",
+      "appeared_in": ["C1主仓", "C2主仓", "C2娱乐", "B1主仓", "B2主仓", "B3主仓", "A1主结构", "A2主结构", "A3主结构"],
+      "actual_result": "056 RQ(+2) 让平",
+      "status": "dead",
+      "why": "0-2正好是受让2球后的平局，不能按库拉索让胜结算"
+    },
+    {
+      "direction": "055 RQ(+1) 厄瓜多尔让胜",
+      "appeared_in": ["C2娱乐", "B1主仓", "B3主仓", "A1主结构", "A2娱乐", "A3主结构"],
+      "actual_result": "055 RQ(+1) 让胜",
+      "status": "survived_but_not_enough",
+      "why": "该方向本身正确，但经常与056让胜或其他组断点串联，不能单独救回整张组合"
+    }
+  ],
+  "why_all_failed": [
+    "055德国低赔客胜和德国赢1球方向直接失效，低赔补位没有起到保护作用。",
+    "056科特迪瓦赢球但让球落点是让平，所有买库拉索+2让胜的分支失效。",
+    "二串一、4x11、4x4把单一盘口误读放大为多个分支同时失效。",
+    "理论最大返奖被表格化展示后容易被误读为预期收益，但它只是所有选项同时命中的赔率上限。",
+    "娱乐仓与主结构一起列返奖，容易让用户误以为娱乐项能补救主仓，实际娱乐仓应默认可归零。"
+  ],
+  "expression_failures": [
+    {
+      "issue": "低赔强队表达过轻",
+      "old_expression_risk": "德国1.36、德国胜等低赔率项容易被理解成安全垫",
+      "correction": "第三轮已出线或接近锁位强队不得作为组合锚点；必须先过首发、伤停、同源赔率和红队门禁"
+    },
+    {
+      "issue": "受让覆盖表达不精确",
+      "old_expression_risk": "库拉索(+2) cover 容易被误解为两球负也能按让胜过关",
+      "correction": "+2必须写明让胜=不输或只输1球，让平=正好输2球，让负=输3球及以上"
+    },
+    {
+      "issue": "理论返奖目标易误读",
+      "old_expression_risk": "理论净回报约150/200/300+可能被看成收益目标",
+      "correction": "只能写为已知赔率下的最大理论返奖，不作为命中概率或购买理由"
+    },
+    {
+      "issue": "娱乐仓边界不硬",
+      "old_expression_risk": "比分、让平、精确净胜等娱乐项与主仓同表展示，削弱了可以全损的提示",
+      "correction": "娱乐仓单独隔离，明确可以归零，不承担保护或补救功能"
+    }
+  ],
+  "future_rule_changes": [
+    {
+      "rule": "低赔强队禁追",
+      "detail": "第三轮已出线、接近锁位、平局够用或可能轮换的热门队，不允许用低赔胜作为组合锚点。"
+    },
+    {
+      "rule": "深让盘精确解释",
+      "detail": "所有让球胜平负必须写明比分区间，尤其+2盘必须区分让胜、让平、让负。"
+    },
+    {
+      "rule": "理论返奖降级",
+      "detail": "理论最大返奖和理论净回报只作为赔率上限测算，不作为收益预期、购买理由或信心依据。"
+    },
+    {
+      "rule": "娱乐仓隔离",
+      "detail": "比分、半全场、精确净胜、3串及以上只进娱乐仓，并明确可以全损。"
+    },
+    {
+      "rule": "discussion_only门禁",
+      "detail": "官方T-75首发、最终伤停、同源竞彩赔率、红队pass任一缺失时，只能输出讨论型观察。"
+    }
+  ],
+  "hard_rules_for_thread": [
+    "第三轮低赔热门不能当组合锚点，已出线或平局够用球队先降级处理。",
+    "让球盘必须写清结算区间，+2输两球是让平，不是让胜。",
+    "理论返奖不是预期收益，娱乐仓默认可以归零且不能承担补救主仓功能。"
+  ],
+  "json_validated": true
+}
