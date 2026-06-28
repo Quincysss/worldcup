@@ -1,0 +1,1437 @@
+{
+  "schema_version": "round32_m85_m88_data_refresh_v1",
+  "created_at": "2026-06-29T00:05:00+08:00",
+  "created_by": "main_control_thread_fallback_after_data_thread_dispatch",
+  "upstream_thread_status": {
+    "data_collector_thread_id": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+    "status": "dispatched_and_active_but_target_file_not_observed_at_fallback_time",
+    "fallback_reason": "downstream threads were blocked by missing data packet; fallback uses local roster/player_state and verified bracket only"
+  },
+  "canonical_confirmation": {
+    "status": "confirmed_current_public_schedule",
+    "external_source": "Sky Sports bracket and knockout fixtures, opened by main thread on 2026-06-28",
+    "local_source": "比赛/未开始比赛/32强/32强对阵落位_20260628.md",
+    "conflicts": [
+      "旧临时口径 M85 瑞士 vs 伊朗 已废弃",
+      "旧临时口径 M87 哥伦比亚 vs 克罗地亚 已废弃"
+    ]
+  },
+  "matches": [
+    {
+      "match_identity": {
+        "match_no": "M85",
+        "stage": "Round of 32",
+        "host_date": "2026-07-02",
+        "source_uk_date": "2026-07-03",
+        "kickoff_uk": "04:00",
+        "kickoff_host": "20:00",
+        "kickoff_beijing": "2026-07-03 11:00",
+        "city": "温哥华",
+        "venue": "Vancouver Stadium",
+        "slot_home": "1B",
+        "slot_away": "3J",
+        "home_team": "瑞士",
+        "away_team": "阿尔及利亚",
+        "round_of_16_path": "M96 胜者路径：M85胜者 vs M87胜者"
+      },
+      "group_stage_context": {
+        "瑞士": "B组第一；前两轮以科贝尔、阿坎吉、扎卡、恩博洛为中轴，第二轮4-1波黑显示定位球与替补冲击有上修证据。",
+        "阿尔及利亚": "J组第三；第三轮3-3奥地利后以第三名进入分配，马赫雷斯、马扎、古伊里、本塞拜尼构成主要持球与转换节点。"
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-29T00:05:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "home": {
+          "team": "瑞士",
+          "team_en": "Switzerland",
+          "formation": "4-2-3-1",
+          "confidence": "medium_low_until_T_minus_75_official_XI",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "格雷戈尔·科贝尔",
+              "player_en": "Gregor Kobel",
+              "role_note": "starter",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "RB",
+              "player_cn": "西尔万·威德默",
+              "player_en": "Silvan Widmer",
+              "role_note": "starter",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "CB",
+              "player_cn": "尼科·埃尔韦迪",
+              "player_en": "Nico Elvedi",
+              "role_note": "starter",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "CB",
+              "player_cn": "曼努埃尔·阿坎吉",
+              "player_en": "Manuel Akanji",
+              "role_note": "starter",
+              "form_status_1_5": 4,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "LB",
+              "player_cn": "里卡多·罗德里格斯",
+              "player_en": "Ricardo Rodriguez",
+              "role_note": "starter",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "CM",
+              "player_cn": "雷莫·弗罗伊勒",
+              "player_en": "Remo Freuler",
+              "role_note": "starter",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "CM",
+              "player_cn": "格拉尼特·扎卡",
+              "player_en": "Granit Xhaka",
+              "role_note": "starter",
+              "form_status_1_5": 5,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "CM",
+              "player_cn": "米歇尔·阿比舍尔",
+              "player_en": "Michel Aebischer",
+              "role_note": "starter",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "AM",
+              "player_cn": "法比安·里德尔",
+              "player_en": "Fabian Rieder",
+              "role_note": "starter",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "RW",
+              "player_cn": "丹·恩多耶",
+              "player_en": "Dan Ndoye",
+              "role_note": "starter",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "CF",
+              "player_cn": "布雷尔·恩博洛",
+              "player_en": "Breel Embolo",
+              "role_note": "starter",
+              "form_status_1_5": 4,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "伊冯·姆沃戈",
+              "player_en": "Yvon Mvogo",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "马尔温·凯勒",
+              "player_en": "Marvin Keller",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "米罗·穆海姆",
+              "player_en": "Miro Muheim",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "埃赖·居梅尔特",
+              "player_en": "Eray Comert",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "奥雷勒·阿门达",
+              "player_en": "Aurele Amenda",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            }
+          ],
+          "source_files": [
+            "data/outputs/player_state/switzerland-player-state.json",
+            "data/packets/rosters/switzerland-roster.json",
+            "队伍/瑞士/成员表.md"
+          ],
+          "state_status": "partial",
+          "gaps_and_conflicts": [
+            "T-75 官方首发未捕获，预计首发不得视为 confirmed",
+            "最新官方医疗/停赛/分钟限制仍需赛前终检"
+          ]
+        },
+        "away": {
+          "team": "阿尔及利亚",
+          "team_en": "Algeria",
+          "formation": "4-2-3-1",
+          "confidence": "medium_low_until_T_minus_75_official_XI",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "Goalkeeper",
+              "player_cn": "奥萨马·本博特",
+              "player_en": "Oussama Benbot",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Right-Back",
+              "player_cn": "拉菲克·贝尔加利",
+              "player_en": "Rafik Belghali",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.6,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Centre-Back",
+              "player_cn": "艾萨·曼迪",
+              "player_en": "Aissa Mandi",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.1,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Centre-Back",
+              "player_cn": "拉米·本塞拜尼",
+              "player_en": "Ramy Bensebaini",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Left-Back",
+              "player_cn": "雅温·哈贾姆",
+              "player_en": "Jaouen Hadjam",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 2.9,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Defensive Midfield",
+              "player_cn": "纳比勒·本塔莱布",
+              "player_en": "Nabil Bentaleb",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.1,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Attacking Midfield",
+              "player_cn": "胡瑟姆·奥亚尔",
+              "player_en": "Houssem Aouar",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.1,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Attacking Midfield",
+              "player_cn": "易卜拉欣·马扎",
+              "player_en": "Ibrahim Maza",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.4,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Attacking Midfield",
+              "player_cn": "法雷斯·沙伊比",
+              "player_en": "Fares Chaibi",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.1,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Right Winger",
+              "player_cn": "利雅得·马赫雷斯",
+              "player_en": "Riyad Mahrez",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 4.2,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "Centre-Forward",
+              "player_cn": "阿明·古伊里",
+              "player_en": "Amine Gouiri",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "卢卡·齐达内",
+              "player_en": "Luca Zidane",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "梅尔文·马斯蒂尔",
+              "player_en": "Melvin Mastil",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "萨米尔·谢尔吉",
+              "player_en": "Samir Chergui",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "齐内丁·贝莱德",
+              "player_en": "Zineddine Belaid",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "穆罕默德·阿明·图加伊",
+              "player_en": "Mohamed Amine Tougai",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            }
+          ],
+          "source_files": [
+            "data/outputs/player_state/algeria-player-state.json",
+            "data/packets/rosters/algeria-roster.json",
+            "队伍/阿尔及利亚/成员表.md"
+          ],
+          "state_status": "partial",
+          "gaps_and_conflicts": [
+            "T-75 官方首发未捕获，预计首发不得视为 confirmed",
+            "最新官方医疗/停赛/分钟限制仍需赛前终检"
+          ]
+        }
+      },
+      "injuries_suspensions": {
+        "status": "partial_source_limited_needs_late_check",
+        "home": "未捕获T-75官方首发与最终医疗公告；本地可用性按 player_state/复盘记录处理。",
+        "away": "未捕获T-75官方首发与最终医疗公告；本地可用性按 player_state/复盘记录处理。"
+      },
+      "odds_snapshot": {
+        "official_china_jingcai": "unavailable_or_not_captured",
+        "same_source_market_snapshot": false,
+        "notes": "本包不填充赔率；竞彩风控线程必须单独核验官方同源快照。"
+      },
+      "source_log": [
+        {
+          "source": "Sky Sports bracket and knockout fixtures",
+          "url": "https://www.skysports.com/football/news/12098/13556636/world-cup-2026-bracket-and-knockout-fixtures-whos-facing-who-in-the-last-32-and-route-to-final",
+          "captured_at": "2026-06-28T23:50:00+08:00",
+          "used_for": [
+            "fixture",
+            "kickoff_uk",
+            "host_city"
+          ]
+        },
+        {
+          "source": "local player_state and roster files",
+          "url": "E:/worldcup/data/outputs/player_state and E:/worldcup/data/packets/rosters",
+          "captured_at": "2026-06-29T00:05:00+08:00",
+          "used_for": [
+            "probable_not_official predicted_xi",
+            "player state summary"
+          ]
+        }
+      ],
+      "gaps_and_conflicts": [
+        "官方 T-75 首发未捕获，predicted_xi 只作 probable_not_official。",
+        "最新官方伤停、停赛、分钟限制未完全闭合。",
+        "官方竞彩与同源盘口快照未捕获。",
+        "data/outputs/knockout/round-of-32-bracket-20260628.json 在部分 PowerShell 读取路径曾出现乱码/断引号显示，预测采用最新 Markdown canonical 与外部赛程核验。"
+      ]
+    },
+    {
+      "match_identity": {
+        "match_no": "M86",
+        "stage": "Round of 32",
+        "host_date": "2026-07-03",
+        "source_uk_date": "2026-07-03",
+        "kickoff_uk": "23:00",
+        "kickoff_host": "18:00",
+        "kickoff_beijing": "2026-07-04 06:00",
+        "city": "迈阿密",
+        "venue": "Miami Stadium",
+        "slot_home": "1J",
+        "slot_away": "2H",
+        "home_team": "阿根廷",
+        "away_team": "佛得角",
+        "round_of_16_path": "M95 胜者路径：M86胜者 vs M88胜者"
+      },
+      "group_stage_context": {
+        "阿根廷": "J组第一；第三轮3-1约旦后锁定小组头名，劳塔罗、洛塞尔索、帕雷德斯、马丁内斯是当前本地状态主轴。",
+        "佛得角": "H组第二；连续逼平强队的低位纪律和反击韧性是主要标签，凯文·皮纳、瑞安·门德斯和门将沃齐尼亚是状态锚点。"
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-29T00:05:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "home": {
+          "team": "阿根廷",
+          "team_en": "Argentina",
+          "formation": "4-3-3",
+          "confidence": "medium_low_until_T_minus_75_official_XI",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "埃米利亚诺·马丁内斯",
+              "player_en": "Emiliano Martínez",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.8,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "CB",
+              "player_cn": "尼古拉斯·奥塔门迪",
+              "player_en": "Nicolás Otamendi",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.4,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "CB",
+              "player_cn": "马科斯·塞内西",
+              "player_en": "Marcos Senesi",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "LB",
+              "player_cn": "尼古拉斯·塔利亚菲科",
+              "player_en": "Nicolás Tagliafico",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.4,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "RB",
+              "player_cn": "纳韦尔·莫利纳",
+              "player_en": "Nahuel Molina",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "DM",
+              "player_cn": "莱安德罗·帕雷德斯",
+              "player_en": "Leandro Paredes",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.3,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "CM",
+              "player_cn": "埃塞基耶尔·帕拉西奥斯",
+              "player_en": "Exequiel Palacios",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.4,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "AM",
+              "player_cn": "吉奥瓦尼·洛塞尔索",
+              "player_en": "Giovani Lo Celso",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.8,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "AM",
+              "player_cn": "尼科·帕斯",
+              "player_en": "Nico Paz",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.4,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "ST/SS",
+              "player_cn": "胡利安·阿尔瓦雷斯",
+              "player_en": "Julián Alvarez",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.3,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "ST",
+              "player_cn": "劳塔罗·马丁内斯",
+              "player_en": "Lautaro Martínez",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.8,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "赫罗尼莫·鲁利",
+              "player_en": "Gerónimo Rulli",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "胡安·穆索",
+              "player_en": "Juan Musso",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "克里斯蒂安·罗梅罗",
+              "player_en": "Cristian Romero",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "利桑德罗·马丁内斯",
+              "player_en": "Lisandro Martínez",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "法昆多·梅迪纳",
+              "player_en": "Facundo Medina",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            }
+          ],
+          "source_files": [
+            "data/outputs/player_state/argentina-player-state.json",
+            "data/packets/rosters/argentina-roster.json",
+            "队伍/阿根廷/成员表.md"
+          ],
+          "state_status": "partial",
+          "gaps_and_conflicts": [
+            "T-75 官方首发未捕获，预计首发不得视为 confirmed",
+            "最新官方医疗/停赛/分钟限制仍需赛前终检"
+          ]
+        },
+        "away": {
+          "team": "佛得角",
+          "team_en": "Cape Verde",
+          "formation": "5-4-1",
+          "confidence": "medium_low_until_T_minus_75_official_XI",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "沃齐尼亚",
+              "player_en": "Vozinha",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "DF",
+              "player_cn": "迪内",
+              "player_en": "Diney",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "DF",
+              "player_cn": "皮科·洛佩斯",
+              "player_en": "Pico",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "DF",
+              "player_cn": "史蒂文·莫雷拉",
+              "player_en": "Steven Moreira",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "DF",
+              "player_cn": "西德尼·洛佩斯·卡布拉尔",
+              "player_en": "Sidny Lopes Cabral",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "MF",
+              "player_cn": "拉罗斯·杜阿尔特",
+              "player_en": "Laros Duarte",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "MF",
+              "player_cn": "凯文·皮纳",
+              "player_en": "Kevin Pina",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 4.4,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "MF",
+              "player_cn": "贾米罗·蒙特罗",
+              "player_en": "Jamiro Monteiro",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "MF",
+              "player_cn": "若瓦内·卡布拉尔",
+              "player_en": "Jovane Cabral",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "FW",
+              "player_cn": "瑞安·门德斯",
+              "player_en": "Ryan Mendes",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "FW",
+              "player_cn": "戴隆·利夫拉门托",
+              "player_en": "Dailon Livramento",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.5,
+              "availability_status": "needs_late_check",
+              "source_status": "probable_not_official"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "斯托皮拉",
+              "player_en": "Stopira",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "洛根·科斯塔",
+              "player_en": "Logan Costa",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "若昂·保罗",
+              "player_en": "Joao Paulo",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "吉尔森·本希莫尔",
+              "player_en": "Gilson Benchimol",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "加里·罗德里格斯",
+              "player_en": "Garry Rodrigues",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            }
+          ],
+          "source_files": [
+            "data/outputs/player_state/cape-verde-player-state.json",
+            "data/packets/rosters/cape-verde-roster.json",
+            "队伍/佛得角/成员表.md"
+          ],
+          "state_status": "partial_source_limited_round2_review_updated",
+          "gaps_and_conflicts": [
+            "T-75 官方首发未捕获，预计首发不得视为 confirmed",
+            "最新官方医疗/停赛/分钟限制仍需赛前终检"
+          ]
+        }
+      },
+      "injuries_suspensions": {
+        "status": "partial_source_limited_needs_late_check",
+        "home": "未捕获T-75官方首发与最终医疗公告；本地可用性按 player_state/复盘记录处理。",
+        "away": "未捕获T-75官方首发与最终医疗公告；本地可用性按 player_state/复盘记录处理。"
+      },
+      "odds_snapshot": {
+        "official_china_jingcai": "unavailable_or_not_captured",
+        "same_source_market_snapshot": false,
+        "notes": "本包不填充赔率；竞彩风控线程必须单独核验官方同源快照。"
+      },
+      "source_log": [
+        {
+          "source": "Sky Sports bracket and knockout fixtures",
+          "url": "https://www.skysports.com/football/news/12098/13556636/world-cup-2026-bracket-and-knockout-fixtures-whos-facing-who-in-the-last-32-and-route-to-final",
+          "captured_at": "2026-06-28T23:50:00+08:00",
+          "used_for": [
+            "fixture",
+            "kickoff_uk",
+            "host_city"
+          ]
+        },
+        {
+          "source": "local player_state and roster files",
+          "url": "E:/worldcup/data/outputs/player_state and E:/worldcup/data/packets/rosters",
+          "captured_at": "2026-06-29T00:05:00+08:00",
+          "used_for": [
+            "probable_not_official predicted_xi",
+            "player state summary"
+          ]
+        }
+      ],
+      "gaps_and_conflicts": [
+        "官方 T-75 首发未捕获，predicted_xi 只作 probable_not_official。",
+        "最新官方伤停、停赛、分钟限制未完全闭合。",
+        "官方竞彩与同源盘口快照未捕获。",
+        "data/outputs/knockout/round-of-32-bracket-20260628.json 在部分 PowerShell 读取路径曾出现乱码/断引号显示，预测采用最新 Markdown canonical 与外部赛程核验。"
+      ]
+    },
+    {
+      "match_identity": {
+        "match_no": "M87",
+        "stage": "Round of 32",
+        "host_date": "2026-07-03",
+        "source_uk_date": "2026-07-04",
+        "kickoff_uk": "02:30",
+        "kickoff_host": "20:30",
+        "kickoff_beijing": "2026-07-04 09:30",
+        "city": "堪萨斯城",
+        "venue": "Kansas City Stadium",
+        "slot_home": "1K",
+        "slot_away": "3L",
+        "home_team": "哥伦比亚",
+        "away_team": "加纳",
+        "round_of_16_path": "M96 胜者路径：M85胜者 vs M87胜者"
+      },
+      "group_stage_context": {
+        "哥伦比亚": "K组第一；第三轮0-0葡萄牙后以小组第一出线，整体强度稳定，迪亚斯、J罗、莱尔马、穆尼奥斯仍是主要模型输入。",
+        "加纳": "L组第三；第三轮1-2克罗地亚后进入第三名分配，速度型边锋和身体对抗仍有反击尾部，但控场稳定性不足。"
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-29T00:05:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "home": {
+          "team": "哥伦比亚",
+          "team_en": "Colombia",
+          "formation": "4-2-3-1",
+          "confidence": "medium_low_until_T_minus_75_official_XI",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "门将",
+              "player_cn": "卡米洛·巴尔加斯",
+              "player_en": "Camilo Vargas",
+              "role_note": "主力门将/后场指挥",
+              "form_status_1_5": 4,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "右后卫",
+              "player_cn": "丹尼尔·穆尼奥斯",
+              "player_en": "Daniel Muñoz",
+              "role_note": "主力右后卫/前插点",
+              "form_status_1_5": 2.6,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "达文森·桑切斯",
+              "player_en": "Davinson Sánchez",
+              "role_note": "主力中卫/速度保护",
+              "form_status_1_5": 3.7,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "约翰·卢库米",
+              "player_en": "Jhon Lucumí",
+              "role_note": "主力中卫",
+              "form_status_1_5": 3.5,
+              "availability_status": "probable_starter_candidate",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "左后卫",
+              "player_cn": "德伊韦尔·马查多",
+              "player_en": "Deiver Machado",
+              "role_note": "左路替补/轮换",
+              "form_status_1_5": 3.2,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "防守型中场",
+              "player_cn": "杰弗森·莱尔马",
+              "player_en": "Jefferson Lerma",
+              "role_note": "主力后腰/防守屏障",
+              "form_status_1_5": 3.5,
+              "availability_status": "probable_card_watch",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "防守型中场",
+              "player_cn": "理查德·里奥斯",
+              "player_en": "Richard Ríos",
+              "role_note": "中场主力竞争",
+              "form_status_1_5": 2.6,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "前腰",
+              "player_cn": "哈梅斯·罗德里格斯",
+              "player_en": "James Rodríguez",
+              "role_note": "核心创造者/定位球手",
+              "form_status_1_5": 3.7,
+              "availability_status": "probable_minutes_managed",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "左边锋",
+              "player_cn": "路易斯·迪亚斯",
+              "player_en": "Luis Díaz",
+              "role_note": "进攻核心/左路爆点",
+              "form_status_1_5": 3.3,
+              "availability_status": "probable_role_pressure",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "右边锋",
+              "player_cn": "约翰·阿里亚斯",
+              "player_en": "Jhon Arias",
+              "role_note": "主力右路/连接点",
+              "form_status_1_5": 3.4,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中锋",
+              "player_cn": "约翰·科尔多瓦",
+              "player_en": "Jhon Córdoba",
+              "role_note": "支点中锋/替补冲击",
+              "form_status_1_5": 3.3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "阿尔瓦罗·蒙特罗",
+              "player_en": "Álvaro Montero",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "大卫·奥斯皮纳",
+              "player_en": "David Ospina",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "威勒·迪塔",
+              "player_en": "Willer Ditta",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "耶里·米纳",
+              "player_en": "Yerry Mina",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "约翰·莫希卡",
+              "player_en": "Johan Mojica",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            }
+          ],
+          "source_files": [
+            "data/outputs/player_state/colombia-player-state.json",
+            "data/packets/rosters/colombia-roster.json",
+            "队伍/哥伦比亚/成员表.md"
+          ],
+          "state_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
+          "gaps_and_conflicts": [
+            "T-75 官方首发未捕获，预计首发不得视为 confirmed",
+            "最新官方医疗/停赛/分钟限制仍需赛前终检"
+          ]
+        },
+        "away": {
+          "team": "加纳",
+          "team_en": "Ghana",
+          "formation": "4-2-3-1",
+          "confidence": "medium_low_until_T_minus_75_official_XI",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "劳伦斯·阿蒂-齐吉",
+              "player_en": "Lawrence Ati-Zigi",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 2.5,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "DF",
+              "player_cn": "马文·塞纳亚",
+              "player_en": "Marvin Senaya",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "DF",
+              "player_cn": "乔纳斯·阿杰泰",
+              "player_en": "Jonas Adjetey",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 2.7,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "DF",
+              "player_cn": "杰罗姆·奥波库",
+              "player_en": "Jerome Opoku",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 2.5,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "DF",
+              "player_cn": "吉迪恩·门萨",
+              "player_en": "Gideon Mensah",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "MF",
+              "player_cn": "埃利沙·奥乌苏",
+              "player_en": "Elisha Owusu",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 2.7,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "MF",
+              "player_cn": "托马斯·帕尔特伊",
+              "player_en": "Thomas Partey",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "FW",
+              "player_cn": "欧内斯特·努阿马",
+              "player_en": "Ernest Nuamah",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.2,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "MF",
+              "player_cn": "安托万·塞梅尼奥",
+              "player_en": "Antoine Semenyo",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 2.8,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "FW",
+              "player_cn": "卡马尔丁·苏莱曼纳",
+              "player_en": "Kamaldeen Sulemana",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 2.8,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "FW",
+              "player_cn": "乔丹·阿尤",
+              "player_en": "Jordan Ayew",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 2.8,
+              "availability_status": "unknown",
+              "source_status": "probable_not_official"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "阿利杜·塞杜",
+              "player_en": "Alidu Seidu",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "凯莱布·伊伦基",
+              "player_en": "Caleb Yirenkyi",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "阿卜杜勒·穆明",
+              "player_en": "Abdul Mumin",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "阿卜杜勒·法塔武",
+              "player_en": "Abdul Fatawu",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "夸西·西博",
+              "player_en": "Kwasi Sibo",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            }
+          ],
+          "source_files": [
+            "data/outputs/player_state/ghana-player-state.json",
+            "data/packets/rosters/ghana-roster.json",
+            "队伍/加纳/成员表.md"
+          ],
+          "state_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
+          "gaps_and_conflicts": [
+            "T-75 官方首发未捕获，预计首发不得视为 confirmed",
+            "最新官方医疗/停赛/分钟限制仍需赛前终检"
+          ]
+        }
+      },
+      "injuries_suspensions": {
+        "status": "partial_source_limited_needs_late_check",
+        "home": "未捕获T-75官方首发与最终医疗公告；本地可用性按 player_state/复盘记录处理。",
+        "away": "未捕获T-75官方首发与最终医疗公告；本地可用性按 player_state/复盘记录处理。"
+      },
+      "odds_snapshot": {
+        "official_china_jingcai": "unavailable_or_not_captured",
+        "same_source_market_snapshot": false,
+        "notes": "本包不填充赔率；竞彩风控线程必须单独核验官方同源快照。"
+      },
+      "source_log": [
+        {
+          "source": "Sky Sports bracket and knockout fixtures",
+          "url": "https://www.skysports.com/football/news/12098/13556636/world-cup-2026-bracket-and-knockout-fixtures-whos-facing-who-in-the-last-32-and-route-to-final",
+          "captured_at": "2026-06-28T23:50:00+08:00",
+          "used_for": [
+            "fixture",
+            "kickoff_uk",
+            "host_city"
+          ]
+        },
+        {
+          "source": "local player_state and roster files",
+          "url": "E:/worldcup/data/outputs/player_state and E:/worldcup/data/packets/rosters",
+          "captured_at": "2026-06-29T00:05:00+08:00",
+          "used_for": [
+            "probable_not_official predicted_xi",
+            "player state summary"
+          ]
+        }
+      ],
+      "gaps_and_conflicts": [
+        "官方 T-75 首发未捕获，predicted_xi 只作 probable_not_official。",
+        "最新官方伤停、停赛、分钟限制未完全闭合。",
+        "官方竞彩与同源盘口快照未捕获。",
+        "data/outputs/knockout/round-of-32-bracket-20260628.json 在部分 PowerShell 读取路径曾出现乱码/断引号显示，预测采用最新 Markdown canonical 与外部赛程核验。"
+      ]
+    },
+    {
+      "match_identity": {
+        "match_no": "M88",
+        "stage": "Round of 32",
+        "host_date": "2026-07-03",
+        "source_uk_date": "2026-07-03",
+        "kickoff_uk": "19:00",
+        "kickoff_host": "13:00",
+        "kickoff_beijing": "2026-07-04 02:00",
+        "city": "达拉斯/阿灵顿",
+        "venue": "Dallas Stadium",
+        "slot_home": "2D",
+        "slot_away": "2G",
+        "home_team": "澳大利亚",
+        "away_team": "埃及",
+        "round_of_16_path": "M95 胜者路径：M86胜者 vs M88胜者"
+      },
+      "group_stage_context": {
+        "澳大利亚": "D组第二；本地文件显示其低位防守、三/五后卫和反击是主要结构，Beach/Souttar/Burgess/O'Neill/Irankunda为关键状态点。",
+        "埃及": "G组第二；第二轮3-1新西兰、第三轮1-1伊朗后状态较稳，萨拉赫、齐科、阿舒尔和中场三后腰结构是核心输入。"
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-29T00:05:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "home": {
+          "team": "澳大利亚",
+          "team_en": "Australia",
+          "formation": "5-4-1",
+          "confidence": "medium_low_until_T_minus_75_official_XI",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "门将",
+              "player_cn": "帕特里克·比奇",
+              "player_en": "Patrick Beach",
+              "role_note": "首轮首发门将，零封土耳其",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "右后卫",
+              "player_cn": "雅各布·伊塔利亚诺",
+              "player_en": "Jacob Italiano",
+              "role_note": "首轮首发右路/翼卫",
+              "form_status_1_5": 2.5,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "亚历山德罗·奇尔卡蒂",
+              "player_en": "Alessandro Circati",
+              "role_note": "首轮首发中卫",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "哈里·苏塔",
+              "player_en": "Harry Souttar",
+              "role_note": "首轮队长，中卫制空核心",
+              "form_status_1_5": 3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "卡梅伦·伯吉斯",
+              "player_en": "Cameron Burgess",
+              "role_note": "首轮首发中卫",
+              "form_status_1_5": 2.1,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "左后卫",
+              "player_cn": "乔丹·博斯",
+              "player_en": "Jordan Bos",
+              "role_note": "首轮首发左路推进点",
+              "form_status_1_5": 2.4,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "防守型中场",
+              "player_cn": "艾登·奥尼尔",
+              "player_en": "Aiden O'Neill",
+              "role_note": "首轮首发后腰",
+              "form_status_1_5": 2.5,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "防守型中场",
+              "player_cn": "保罗·奥孔-恩斯特勒",
+              "player_en": "Paul Okon-Engstler",
+              "role_note": "首轮首发中场并送助攻",
+              "form_status_1_5": 2.5,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中前卫",
+              "player_cn": "康纳·梅特卡夫",
+              "player_en": "Connor Metcalfe",
+              "role_note": "首轮首发并进球",
+              "form_status_1_5": 3.7,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "右边锋",
+              "player_cn": "内斯托里·伊兰昆达",
+              "player_en": "Nestory Irankunda",
+              "role_note": "首轮首发并进球的速度爆点",
+              "form_status_1_5": 3.3,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中锋",
+              "player_cn": "穆罕默德·图雷",
+              "player_en": "Mohamed Touré",
+              "role_note": "首轮首发前场跑动点",
+              "form_status_1_5": 2.4,
+              "availability_status": "probable",
+              "source_status": "probable_not_official"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "马修·瑞安",
+              "player_en": "Mathew Ryan",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "保罗·伊佐",
+              "player_en": "Paul Izzo",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "卢卡斯·赫林顿",
+              "player_en": "Lucas Herrington",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "米洛什·德格内克",
+              "player_en": "Milos Degenek",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "阿齐兹·贝希奇",
+              "player_en": "Aziz Behich",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            }
+          ],
+          "source_files": [
+            "data/outputs/player_state/australia-player-state.json",
+            "data/packets/rosters/australia-roster.json",
+            "队伍/澳大利亚/成员表.md"
+          ],
+          "state_status": "partial",
+          "gaps_and_conflicts": [
+            "T-75 官方首发未捕获，预计首发不得视为 confirmed",
+            "最新官方医疗/停赛/分钟限制仍需赛前终检"
+          ]
+        },
+        "away": {
+          "team": "埃及",
+          "team_en": "Egypt",
+          "formation": "4-3-3",
+          "confidence": "medium_low_until_T_minus_75_official_XI",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "门将",
+              "player_cn": "穆斯塔法·舒贝尔",
+              "player_en": "Oufa Shobeir / Mostafa Shobeir",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.6,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "右后卫",
+              "player_cn": "穆罕默德·哈尼",
+              "player_en": "Mohamed Hany",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.6,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "亚西尔·易卜拉欣",
+              "player_en": "Yasser Ibrahim",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.6,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "左后卫",
+              "player_cn": "艾哈迈德·法图赫",
+              "player_en": "Ahmed Fatouh",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.6,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "后腰",
+              "player_cn": "马尔万·阿提亚",
+              "player_en": "Marwan Ateya",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.6,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "后腰",
+              "player_cn": "穆罕纳德·拉欣",
+              "player_en": "Mohanad Lasheen",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.6,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "后腰",
+              "player_cn": "哈姆迪·法蒂",
+              "player_en": "Hamdy Fathy",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.6,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中前卫",
+              "player_cn": "埃马姆·阿舒尔",
+              "player_en": "Emam Ashour",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 4,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "左边锋",
+              "player_cn": "穆斯塔法·齐科",
+              "player_en": "Mostafa Ziko",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 4.1,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "右边锋",
+              "player_cn": "穆罕默德·萨拉赫",
+              "player_en": "Mohamed Salah",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 4.5,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            },
+            {
+              "position": "中锋",
+              "player_cn": "奥马尔·马尔穆什",
+              "player_en": "Omar Marmoush",
+              "role_note": "probable starter from local player_state/roster",
+              "form_status_1_5": 3.6,
+              "availability_status": "available",
+              "source_status": "probable_not_official"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "穆罕默德·阿拉",
+              "player_en": "Mohamed Alaa",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "穆罕默德·埃尔谢纳维",
+              "player_en": "Mohamed El Shenawy",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "马赫迪·苏莱曼",
+              "player_en": "El Mahdi Soliman",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "穆罕默德·阿卜杜勒莫内姆",
+              "player_en": "Mohamed Abdelmonem",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            },
+            {
+              "player_cn": "侯萨姆·阿卜杜勒马吉德",
+              "player_en": "Hossam Abdelmaguid",
+              "trigger": "体能、比分状态或对位需求触发；官方首发未出前只作轮换观察"
+            }
+          ],
+          "source_files": [
+            "data/outputs/player_state/egypt-player-state.json",
+            "data/packets/rosters/egypt-roster.json",
+            "队伍/埃及/成员表.md"
+          ],
+          "state_status": "partial_source_limited_round2_review_updated",
+          "gaps_and_conflicts": [
+            "T-75 官方首发未捕获，预计首发不得视为 confirmed",
+            "最新官方医疗/停赛/分钟限制仍需赛前终检"
+          ]
+        }
+      },
+      "injuries_suspensions": {
+        "status": "partial_source_limited_needs_late_check",
+        "home": "未捕获T-75官方首发与最终医疗公告；本地可用性按 player_state/复盘记录处理。",
+        "away": "未捕获T-75官方首发与最终医疗公告；本地可用性按 player_state/复盘记录处理。"
+      },
+      "odds_snapshot": {
+        "official_china_jingcai": "unavailable_or_not_captured",
+        "same_source_market_snapshot": false,
+        "notes": "本包不填充赔率；竞彩风控线程必须单独核验官方同源快照。"
+      },
+      "source_log": [
+        {
+          "source": "Sky Sports bracket and knockout fixtures",
+          "url": "https://www.skysports.com/football/news/12098/13556636/world-cup-2026-bracket-and-knockout-fixtures-whos-facing-who-in-the-last-32-and-route-to-final",
+          "captured_at": "2026-06-28T23:50:00+08:00",
+          "used_for": [
+            "fixture",
+            "kickoff_uk",
+            "host_city"
+          ]
+        },
+        {
+          "source": "local player_state and roster files",
+          "url": "E:/worldcup/data/outputs/player_state and E:/worldcup/data/packets/rosters",
+          "captured_at": "2026-06-29T00:05:00+08:00",
+          "used_for": [
+            "probable_not_official predicted_xi",
+            "player state summary"
+          ]
+        }
+      ],
+      "gaps_and_conflicts": [
+        "官方 T-75 首发未捕获，predicted_xi 只作 probable_not_official。",
+        "最新官方伤停、停赛、分钟限制未完全闭合。",
+        "官方竞彩与同源盘口快照未捕获。",
+        "data/outputs/knockout/round-of-32-bracket-20260628.json 在部分 PowerShell 读取路径曾出现乱码/断引号显示，预测采用最新 Markdown canonical 与外部赛程核验。"
+      ]
+    }
+  ]
+}

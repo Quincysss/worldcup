@@ -1156,6 +1156,179 @@
         "no_1x2_probability_change": true,
         "no_poisson_matrix_change": true,
         "no_red_team_or_betting_gate_change": true
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "not_triggered",
+        "tail_visibility_level": "low",
+        "modeler_tail_visibility_level": "low",
+        "tactical_tail_classification": "limited_tail_do_not_amplify",
+        "red_team_verdict": "revise",
+        "red_team_mainline_forbidden": true,
+        "reason": "总 xG 2.42、Over2.5 43.6%、矩阵 tail 0.35%，淘汰赛谨慎和南非低位韧性更支持窄比分。",
+        "recommended_display": "不新增显性大比分尾部，只在质量备注中保留加拿大 1-3/0-3 等低概率追分尾部。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ],
+        "red_team_guardrails": [
+          "只作为 tail_visibility / risk layer 接入，不直接改 1X2、xG、大小球或 headline score。",
+          "T-75 官方首发、最终伤停/分钟限制和同源赔率未闭合前，不能把大比分尾部写成可执行结论。",
+          "红牌、早球、点球、门将失误和晚段追分只能作为条件尾部，不得作为稳定主预测。",
+          "必须保留 raw Poisson 和 adjusted headline score，防止从过保守反向过度补偿。",
+          "防止与 totals、BTTS、player_state、tactical_volatility 重复计权。"
+        ],
+        "no_probability_change": true,
+        "no_headline_score_change": true,
+        "no_betting_gate_change": true,
+        "applied_at": "2026-06-29T00:35:00+08:00"
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.1388,
+          "top_scores": [
+            {
+              "score": "1-3",
+              "probability": 0.0385
+            },
+            {
+              "score": "0-3",
+              "probability": 0.0357
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0208
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0129
+            },
+            {
+              "score": "0-4",
+              "probability": 0.0119
+            },
+            {
+              "score": "2-4",
+              "probability": 0.007
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2009,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.0466
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0385
+            },
+            {
+              "score": "3-1",
+              "probability": 0.025
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0208
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0168
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0129
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.0691,
+          "top_scores": [
+            {
+              "score": "0-3",
+              "probability": 0.0357
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0129
+            },
+            {
+              "score": "0-4",
+              "probability": 0.0119
+            },
+            {
+              "score": "1-5",
+              "probability": 0.0035
+            },
+            {
+              "score": "0-5",
+              "probability": 0.0032
+            },
+            {
+              "score": "2-5",
+              "probability": 0.0019
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.1733,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.0466
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0385
+            },
+            {
+              "score": "3-1",
+              "probability": 0.025
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0208
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0168
+            },
+            {
+              "score": "3-3",
+              "probability": 0.0075
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0035
+      },
+      "margin_bands": {
+        "favorite_by_1": 0.2289,
+        "favorite_by_2": 0.126,
+        "favorite_by_3plus": 0.0691,
+        "draw": 0.2724,
+        "underdog_by_1": 0.1844,
+        "underdog_by_2plus": 0.1159,
+        "total_goals_4plus_in_matrix": 0.2221,
+        "both_teams_2plus_in_matrix": 0.1127
+      },
+      "late_game_tail_note": "若一方60分钟后落后、早球、红牌/二黄、点球/定位球、门将失误或连续进攻换人出现，本场上沿比分尾部会被放大；赛前只作条件路径展示。",
+      "tactical_big_score_tail_factors": {
+        "tail_classification": "limited_tail_do_not_amplify",
+        "path_families_to_surface": [
+          "small_two_way_tail_if_canada_fullbacks_high"
+        ],
+        "tactical_triggers": [
+          "Canada transition_attack +0.45",
+          "South Africa low block and set_piece +0.25",
+          "Canada transition_defense_risk -0.35"
+        ],
+        "confidence": "medium",
+        "model_note": "Do not force favorite_runaway. Keep a modest late 2-2/3-2 style branch only if Canada chase or wingbacks overextend.",
+        "do_not_amplify_reason": "South Africa low-block/game-state floor and Canada uncertainty around fullback/midfield minutes point more to controlled variance than runaway."
       }
     },
     {
@@ -2042,6 +2215,181 @@
             "probability": 0.0446
           }
         ]
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "triggered",
+        "tail_visibility_level": "high",
+        "modeler_tail_visibility_level": "high",
+        "tactical_tail_classification": "favorite_runaway_explicit",
+        "red_team_verdict": "revise",
+        "red_team_mainline_forbidden": false,
+        "reason": "德国 1X2 67.9%、xG 2.10-0.78、强度差 18，具备早球后控场扩大和巴拉圭追分暴露路径。",
+        "recommended_display": "新增强队打穿与弱队崩盘尾部：3-0、3-1、4-0、4-1；headline 仍用 adjusted/ranked score，不把大比分强行设为首选。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ],
+        "red_team_guardrails": [
+          "只作为 tail_visibility / risk layer 接入，不直接改 1X2、xG、大小球或 headline score。",
+          "T-75 官方首发、最终伤停/分钟限制和同源赔率未闭合前，不能把大比分尾部写成可执行结论。",
+          "红牌、早球、点球、门将失误和晚段追分只能作为条件尾部，不得作为稳定主预测。",
+          "必须保留 raw Poisson 和 adjusted headline score，防止从过保守反向过度补偿。",
+          "防止与 totals、BTTS、player_state、tactical_volatility 重复计权。"
+        ],
+        "no_probability_change": true,
+        "no_headline_score_change": true,
+        "no_betting_gate_change": true,
+        "applied_at": "2026-06-29T00:35:00+08:00"
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.3206,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0866
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0676
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0455
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0355
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0264
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0191
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2397,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0676
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0377
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0355
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0264
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0149
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0138
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.2074,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0866
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0455
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0355
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0191
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0149
+            },
+            {
+              "score": "5-2",
+              "probability": 0.0058
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.1811,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0676
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0377
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0264
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0138
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0098
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0093
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0206
+      },
+      "margin_bands": {
+        "favorite_by_1": 0.2447,
+        "favorite_by_2": 0.2067,
+        "favorite_by_3plus": 0.2074,
+        "draw": 0.1933,
+        "underdog_by_1": 0.0909,
+        "underdog_by_2plus": 0.0363,
+        "total_goals_4plus_in_matrix": 0.3053,
+        "both_teams_2plus_in_matrix": 0.1103
+      },
+      "late_game_tail_note": "若一方60分钟后落后、早球、红牌/二黄、点球/定位球、门将失误或连续进攻换人出现，本场上沿比分尾部会被放大；赛前只作条件路径展示。",
+      "tactical_big_score_tail_factors": {
+        "tail_classification": "favorite_runaway_explicit",
+        "path_families_to_surface": [
+          "3-0/3-1/4-1",
+          "set_piece_concession_branch"
+        ],
+        "tactical_triggers": [
+          "Germany pressing +0.40",
+          "Germany central_control +0.55",
+          "Paraguay central_control -0.45",
+          "Paraguay transition_defense -0.35"
+        ],
+        "confidence": "high",
+        "model_note": "Current predictions already show 3-0 in top five, but the tail layer should explicitly preserve 3-1/4-1 instead of letting central 1-goal margins dominate.",
+        "do_not_amplify_reason": "Do not erase Paraguay set-piece and low-block survival, but the mismatch is strong enough to surface runaway paths."
       }
     },
     {
@@ -3120,6 +3468,181 @@
         "no_1x2_probability_change": true,
         "no_poisson_matrix_change": true,
         "no_red_team_or_betting_gate_change": true
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "observe",
+        "tail_visibility_level": "low",
+        "modeler_tail_visibility_level": "medium_low",
+        "tactical_tail_classification": "open_two_way_tail",
+        "red_team_verdict": "revise",
+        "red_team_mainline_forbidden": true,
+        "reason": "荷兰有小优势但 xG 1.48-1.12 不足以支持强队打穿，更多是相近实力下的早球/转换尾部。",
+        "recommended_display": "只新增观察级开放尾部：3-1、2-2、3-2；不作为主展示。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ],
+        "red_team_guardrails": [
+          "只作为 tail_visibility / risk layer 接入，不直接改 1X2、xG、大小球或 headline score。",
+          "T-75 官方首发、最终伤停/分钟限制和同源赔率未闭合前，不能把大比分尾部写成可执行结论。",
+          "红牌、早球、点球、门将失误和晚段追分只能作为条件尾部，不得作为稳定主预测。",
+          "必须保留 raw Poisson 和 adjusted headline score，防止从过保守反向过度补偿。",
+          "防止与 totals、BTTS、player_state、tactical_volatility 重复计权。"
+        ],
+        "no_probability_change": true,
+        "no_headline_score_change": true,
+        "no_betting_gate_change": true,
+        "applied_at": "2026-06-29T00:35:00+08:00"
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.1678,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0449
+            },
+            {
+              "score": "3-0",
+              "probability": 0.0401
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0252
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0166
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0148
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0093
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2334,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.051
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0449
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0257
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0252
+            },
+            {
+              "score": "2-3",
+              "probability": 0.019
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0166
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.0836,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0401
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0166
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0148
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0049
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0044
+            },
+            {
+              "score": "5-2",
+              "probability": 0.0028
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.1991,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.051
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0449
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0257
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0252
+            },
+            {
+              "score": "2-3",
+              "probability": 0.019
+            },
+            {
+              "score": "3-3",
+              "probability": 0.0094
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0052
+      },
+      "margin_bands": {
+        "favorite_by_1": 0.23,
+        "favorite_by_2": 0.1365,
+        "favorite_by_3plus": 0.0836,
+        "draw": 0.2588,
+        "underdog_by_1": 0.1739,
+        "underdog_by_2plus": 0.1116,
+        "total_goals_4plus_in_matrix": 0.2586,
+        "both_teams_2plus_in_matrix": 0.1325
+      },
+      "late_game_tail_note": "若一方60分钟后落后、早球、红牌/二黄、点球/定位球、门将失误或连续进攻换人出现，本场上沿比分尾部会被放大；赛前只作条件路径展示。",
+      "tactical_big_score_tail_factors": {
+        "tail_classification": "open_two_way_tail",
+        "path_families_to_surface": [
+          "3-2/2-3/2-2",
+          "3-1 secondary"
+        ],
+        "tactical_triggers": [
+          "Netherlands transition_attack +0.35",
+          "Morocco transition_attack +0.40",
+          "Netherlands transition_defense -0.30",
+          "Morocco third-round 4-2 openness noted in Markdown"
+        ],
+        "confidence": "medium_high",
+        "model_note": "Move some central draw and 2-1 mass into open two-way tail. Keep both-team scoring branch distinct from Netherlands quality.",
+        "do_not_amplify_reason": "Not a pure favorite runaway because Morocco transition and bench routes remain live."
       }
     },
     {
@@ -4198,6 +4721,181 @@
         "no_1x2_probability_change": true,
         "no_poisson_matrix_change": true,
         "no_red_team_or_betting_gate_change": true
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "triggered",
+        "tail_visibility_level": "high",
+        "modeler_tail_visibility_level": "medium_high",
+        "tactical_tail_classification": "favorite_runaway_with_two_way_counter",
+        "red_team_verdict": "revise",
+        "red_team_mainline_forbidden": false,
+        "reason": "巴西胜率 56.9%、xG 1.92-1.08、Over2.5 57.7%、BTTS 56.4%，raw 1-1 已被 rerank 为 2-1，仍需要显性显示 3球以上上沿。",
+        "recommended_display": "新增巴西边路打穿尾部：3-1、3-0、4-1、4-0，并保留日本反击导致 3-2/2-2 的开放尾部。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ],
+        "red_team_guardrails": [
+          "只作为 tail_visibility / risk layer 接入，不直接改 1X2、xG、大小球或 headline score。",
+          "T-75 官方首发、最终伤停/分钟限制和同源赔率未闭合前，不能把大比分尾部写成可执行结论。",
+          "红牌、早球、点球、门将失误和晚段追分只能作为条件尾部，不得作为稳定主预测。",
+          "必须保留 raw Poisson 和 adjusted headline score，防止从过保守反向过度补偿。",
+          "防止与 totals、BTTS、player_state、tactical_volatility 重复计权。"
+        ],
+        "no_probability_change": true,
+        "no_headline_score_change": true,
+        "no_betting_gate_change": true,
+        "applied_at": "2026-06-29T00:35:00+08:00"
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.269,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0634
+            },
+            {
+              "score": "3-0",
+              "probability": 0.0587
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0343
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0304
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0282
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0164
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2954,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0634
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0535
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0343
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0304
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0201
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0193
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.1461,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0587
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0304
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0282
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0117
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0108
+            },
+            {
+              "score": "5-2",
+              "probability": 0.0063
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.2393,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0634
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0535
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0343
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0201
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0193
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0164
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0147
+      },
+      "margin_bands": {
+        "favorite_by_1": 0.2355,
+        "favorite_by_2": 0.1739,
+        "favorite_by_3plus": 0.1461,
+        "draw": 0.2206,
+        "underdog_by_1": 0.1324,
+        "underdog_by_2plus": 0.0766,
+        "total_goals_4plus_in_matrix": 0.3378,
+        "both_teams_2plus_in_matrix": 0.1632
+      },
+      "late_game_tail_note": "若一方60分钟后落后、早球、红牌/二黄、点球/定位球、门将失误或连续进攻换人出现，本场上沿比分尾部会被放大；赛前只作条件路径展示。",
+      "tactical_big_score_tail_factors": {
+        "tail_classification": "favorite_runaway_with_two_way_counter",
+        "path_families_to_surface": [
+          "3-0/3-1/4-1",
+          "3-2/2-2 secondary"
+        ],
+        "tactical_triggers": [
+          "Brazil transition_attack +0.50",
+          "Brazil wide_channel +0.45",
+          "Japan wide_channel -0.35",
+          "Japan set_piece -0.30"
+        ],
+        "confidence": "high",
+        "model_note": "Explicitly surface favorite_runaway while retaining Japan counter branch; avoid double counting Vinicius or Brazil attack_score.",
+        "do_not_amplify_reason": "Japan transition and draw-management quality prevent a single one-sided tail only."
       }
     }
   ],
@@ -4224,5 +4922,20 @@
       "M76"
     ],
     "boundary": "raw Poisson, xG, 1X2, totals, red-team and betting gates unchanged"
+  },
+  "knockout_big_score_tail_optimization": {
+    "applied_at": "2026-06-29T00:35:00+08:00",
+    "thread_inputs": {
+      "modeler": "data/thread_outputs/round32-big-score-tail-optimization-20260629/modeler-tail-review.json",
+      "tactics": "data/thread_outputs/round32-big-score-tail-optimization-20260629/tactics-tail-factors.json",
+      "red_team": "data/thread_outputs/round32-big-score-tail-optimization-20260629/red-team-tail-review.json"
+    },
+    "boundary": "Visibility layer only; raw Poisson, xG, 1X2, totals, red-team status and betting gate unchanged.",
+    "affected_matches": [
+      "M73",
+      "M74",
+      "M75",
+      "M76"
+    ]
   }
 }

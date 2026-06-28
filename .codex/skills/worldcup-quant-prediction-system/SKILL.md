@@ -48,11 +48,12 @@ This skill is the system-level contract for prediction, projection, and backtest
 6. Expected goals.
 7. Poisson score matrix.
 8. Scoreline diversity layer: close-strength teams must be reported as score clusters, not only as a repeated `1-1` exact-score default.
-9. 1X2, totals, and score probabilities.
-10. Odds-implied probability calibration.
-11. Red-team risk adjustment.
-12. Final prediction output.
-13. Post-match backtest, player-state update, and parameter update.
+9. Knockout big-score tail layer: knockout matches must expose justified strong-favorite breakthrough, open shootout, weak-team collapse, and late-game chase tails without forcing them into the headline.
+10. 1X2, totals, and score probabilities.
+11. Odds-implied probability calibration.
+12. Red-team risk adjustment.
+13. Final prediction output.
+14. Post-match backtest, player-state update, and parameter update.
 
 ## Real Thread Participation Gate
 
@@ -102,6 +103,10 @@ Prediction, projection, and backtest JSON should include these fields when appli
 - `adjusted_top_scorelines`
 - `final_adjusted_top_scoreline`
 - `scoreline_clusters`
+- `knockout_big_score_tail_layer`
+- `big_score_tail_paths`
+- `margin_bands`
+- `late_game_tail_note`
 - `probabilities_1x2`
 - `totals_probabilities`
 - `odds_implied_probability`
@@ -182,6 +187,8 @@ Move weight between buckets only with a short reason. Increase tournament contex
 - Explain any manual adjustment away from the raw matrix.
 - For close-strength teams, run a `1-1 overconcentration` check. If raw Poisson repeatedly makes `1-1` Top1, also publish low-event draw, one-goal edge, open draw, and volatility-tail clusters. Do not present `1-1` as the whole prediction unless tactical tempo, lineups, and incentives clearly support a low-event draw.
 - If `1-1` is a raw Top1 but the aggregate 1X2 and xG direction favor one side, produce a separate final scoreline ranking: keep `raw_poisson_top_scorelines` unchanged, then set `adjusted_top_scorelines` and `final_adjusted_top_scoreline` for the user-facing conclusion. The report's headline Top5 must use the adjusted ranking, not the raw Poisson order, whenever this layer is triggered.
+- For knockout matches, run a big-score tail check after the scoreline diversity layer. When favorite strength, total xG, over 2.5, BTTS, transition/set-piece volatility, or late-game chase state supports it, publish `knockout_big_score_tail_layer`, `big_score_tail_paths`, `margin_bands`, and `late_game_tail_note`. This is a visibility and sensitivity layer: it must not change raw Poisson, xG, 1X2, totals, red-team status, or betting gate by itself.
+- `tail_visibility_level=high` may appear in the conclusion as an explicit tail-path warning. `medium` belongs in sensitivity/risk sections. `low` should normally stay in JSON or quality notes. Exact big scores must not become the headline unless a full rerun and red-team pass support it.
 
 ## Odds Boundary
 

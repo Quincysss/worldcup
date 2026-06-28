@@ -1,0 +1,273 @@
+{
+  "schema_version": "knockout_big_score_tail_tactical_factors_v1",
+  "status": "complete",
+  "created_at": "2026-06-28T23:20:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "Round of 32 M73-M84 tactical audit for knockout_big_score_tail_layer; no score conclusion, no win-draw-loss probability, no betting advice",
+  "source_files_read": [
+    ".codex/skills/worldcup-tactics-coach/SKILL.md",
+    "data/thread_outputs/round32-m73-m76-v3-20260628/tactics-coach.json",
+    "data/thread_outputs/round32-m77-m80-v3-20260628/tactics-coach.json",
+    "data/thread_outputs/round32-m81-m84-v3-20260628/tactics-coach.json",
+    "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+    "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+    "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+    "比赛/未开始比赛/32强/M73_2026-06-28_南非_vs_加拿大_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M74_2026-06-29_德国_vs_巴拉圭_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M75_2026-06-29_荷兰_vs_摩洛哥_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M76_2026-06-29_巴西_vs_日本_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M77_2026-06-30_法国_vs_瑞典_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M78_2026-06-30_科特迪瓦_vs_挪威_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M79_2026-06-30_墨西哥_vs_厄瓜多尔_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M80_2026-07-01_英格兰_vs_刚果金_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M81_2026-07-01_美国_vs_波黑_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M82_2026-07-01_比利时_vs_塞内加尔_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M83_2026-07-02_葡萄牙_vs_克罗地亚_量化预测_v3.md",
+    "比赛/未开始比赛/32强/M84_2026-07-02_西班牙_vs_奥地利_量化预测_v3.md"
+  ],
+  "data_gaps": [
+    "T-75 official lineups are still required before final tail activation.",
+    "Goalkeeper and center-back late fitness or rotation changes are not fully locked for all M73-M84 teams.",
+    "This packet does not modify formal prediction files; it is a tactical handoff for model-layer implementation."
+  ],
+  "knockout_big_score_tail_layer": {
+    "purpose": "Add explicit tactical tail paths when knockout match dynamics can move beyond central Poisson score slices.",
+    "activation_logic": [
+      "favorite_runaway_path: activate when favorite transition_attack or wide_channel is at least +0.30 and opponent transition_defense_risk or defensive_line_risk is at most -0.30.",
+      "open_two_way_path: activate when both teams have transition_attack at least +0.30 and both have transition_defense_risk or defensive_line_risk at most -0.25.",
+      "late_chase_collapse_path: activate when the trailing-side game_state_tendency is at least +0.20 and its line or transition defense risk is at most -0.25.",
+      "set_piece_break_path: activate when one team has set_piece_advantage at least +0.20 and the opponent has aerial, goalkeeper, or center-back uncertainty.",
+      "do_not_amplify_gate: suppress when a low block, draw management, or central-control parity is the stronger tactical read and neither side has a clear transition or width mismatch."
+    ],
+    "double_counting_policy": [
+      "Do not add the same signal again if player_state already rewards a star forward or winger's form.",
+      "Do not double count set pieces if the base model has already raised set-piece xG or aerial mismatch.",
+      "Correlate transition_defense_risk and defensive_line_risk before adding tail mass; they are usually the same failure channel.",
+      "The layer should redistribute scoreline tail mass, not inflate overall team quality without a tactical trigger."
+    ]
+  },
+  "global_triggers": [
+    {
+      "trigger": "high_press_breakthrough",
+      "direction": "positive_for_big_score_tail",
+      "magnitude": 0.25,
+      "evidence": [
+        "M74 Germany pressing_adjustment +0.40 and central_control_advantage +0.55 against Paraguay central_control_advantage -0.45.",
+        "M84 Spain build_up_resistance_adjustment +0.40 and pressing_adjustment +0.25 against Austria high press with transition_defense_risk -0.35.",
+        "M81 United States pressing_adjustment +0.25 against Bosnia build_up_resistance_adjustment -0.25."
+      ],
+      "confidence": "medium_high",
+      "model_note": "When a strong favorite can both press and pass through the opponent press, shift part of central 1-goal margin mass into favorite_runaway_path. Cap if the favorite's player_state already carries the same stars."
+    },
+    {
+      "trigger": "wide_channel_mismatch",
+      "direction": "positive_for_favorite_runaway_or_open_tail",
+      "magnitude": 0.30,
+      "evidence": [
+        "M76 Brazil wide_channel_advantage +0.45 versus Japan wide_channel_advantage -0.35 and set_piece_advantage -0.30.",
+        "M77 France wide_channel_advantage +0.35 versus Sweden wide_channel_advantage -0.30 and defensive_line_risk -0.35.",
+        "M84 Spain wide_channel_advantage +0.35 versus Austria wide_channel_advantage -0.30 and defensive_line_risk -0.35."
+      ],
+      "confidence": "high",
+      "model_note": "Use as a tail multiplier only when paired with opponent line risk or late chase behavior; do not treat every winger edge as a runaway trigger."
+    },
+    {
+      "trigger": "vertical_counter_depth",
+      "direction": "positive_for_open_two_way_tail",
+      "magnitude": 0.25,
+      "evidence": [
+        "M78 Ivory Coast transition_attack_adjustment +0.35 and Norway +0.40 while Norway transition_defense_risk and defensive_line_risk are both -0.35.",
+        "M82 Belgium transition_attack_adjustment +0.40 and Senegal +0.35 with both sides carrying transition defense risk.",
+        "M75 Netherlands transition_attack_adjustment +0.35 and Morocco +0.40, with current Markdown noting Netherlands multi-goal tail and Morocco 4-2 Haiti openness."
+      ],
+      "confidence": "medium_high",
+      "model_note": "This should expand 3-2, 2-3 and 2-2 families more than one-sided 3-0 paths. Keep separate from raw attack_score."
+    },
+    {
+      "trigger": "set_piece_defensive_faultline",
+      "direction": "positive_for_extra_goal_tail",
+      "magnitude": 0.18,
+      "evidence": [
+        "M74 Paraguay set_piece_advantage +0.30 keeps an underdog scoring branch live even when Germany controls territory.",
+        "M80 England set_piece_advantage +0.30 and DR Congo +0.25 create asymmetric but nonzero dead-ball tail risk.",
+        "M83 Croatia set_piece_advantage +0.25 is the main reason not to flatten Croatia's late equalizer or extra-goal branch."
+      ],
+      "confidence": "medium",
+      "model_note": "Use as a branch activator, not a broad attack upgrade. Avoid double counting if set-piece xG has already been raised."
+    },
+    {
+      "trigger": "goalkeeper_centerback_error_chain",
+      "direction": "positive_for_favorite_runaway_tail",
+      "magnitude": 0.15,
+      "evidence": [
+        "M80 DR Congo build_up_resistance_adjustment -0.30 and central_control_advantage -0.45 against England central_control_advantage +0.45.",
+        "M81 Bosnia build_up_resistance_adjustment -0.25, transition_defense_risk -0.35 and defensive_line_risk -0.35 against United States width and pressure.",
+        "M74 Paraguay transition_defense_risk -0.35 and central_control_advantage -0.45 against Germany high press."
+      ],
+      "confidence": "medium_low",
+      "model_note": "Only activate after T-75 confirms the vulnerable goalkeeper/center-back and build-up unit. This is a tactical error-chain flag, not a claim of individual mistakes."
+    },
+    {
+      "trigger": "trailing_team_60min_push",
+      "direction": "positive_for_late_runaway_or_two_way_tail",
+      "magnitude": 0.22,
+      "evidence": [
+        "M77 Sweden transition_attack_adjustment +0.35 but defensive_line_risk -0.35 creates a late chase split: one goal back or more space for France.",
+        "M82 Senegal game_state_tendency +0.25 and Belgium transition_defense_risk -0.30 create late two-way volatility.",
+        "M84 Austria pressing_adjustment +0.25 but defensive_line_risk -0.35 makes a trailing high-press chase vulnerable to Spain's width."
+      ],
+      "confidence": "medium_high",
+      "model_note": "Apply after 60-minute game-state branch. It should alter tail families, not pre-match central xG by itself."
+    },
+    {
+      "trigger": "attacking_substitution_bias",
+      "direction": "positive_for_late_goal_tail",
+      "magnitude": 0.16,
+      "evidence": [
+        "M77 France coach_substitution_risk +0.20 and game_state_tendency +0.25 with Dembele/Thuram/Cherki-type bench routes.",
+        "M80 England coach_substitution_risk +0.20 with Rogers, Madueke and Watkins style route changes.",
+        "M75 Morocco coach_substitution_risk +0.20 and Netherlands +0.15 support late open-tail paths."
+      ],
+      "confidence": "medium",
+      "model_note": "Use only when bench profiles change speed, box occupation or width. Cap heavily if squad-depth is already in team_strength_score."
+    }
+  ],
+  "match_audit": [
+    {
+      "match_id": "M73",
+      "fixture": "南非 vs 加拿大",
+      "tail_classification": "limited_tail_do_not_amplify",
+      "path_families_to_surface": ["small_two_way_tail_if_canada_fullbacks_high"],
+      "do_not_amplify_reason": "South Africa low-block/game-state floor and Canada uncertainty around fullback/midfield minutes point more to controlled variance than runaway.",
+      "tactical_triggers": ["Canada transition_attack +0.45", "South Africa low block and set_piece +0.25", "Canada transition_defense_risk -0.35"],
+      "confidence": "medium",
+      "model_note": "Do not force favorite_runaway. Keep a modest late 2-2/3-2 style branch only if Canada chase or wingbacks overextend."
+    },
+    {
+      "match_id": "M74",
+      "fixture": "德国 vs 巴拉圭",
+      "tail_classification": "favorite_runaway_explicit",
+      "path_families_to_surface": ["3-0/3-1/4-1", "set_piece_concession_branch"],
+      "do_not_amplify_reason": "Do not erase Paraguay set-piece and low-block survival, but the mismatch is strong enough to surface runaway paths.",
+      "tactical_triggers": ["Germany pressing +0.40", "Germany central_control +0.55", "Paraguay central_control -0.45", "Paraguay transition_defense -0.35"],
+      "confidence": "high",
+      "model_note": "Current predictions already show 3-0 in top five, but the tail layer should explicitly preserve 3-1/4-1 instead of letting central 1-goal margins dominate."
+    },
+    {
+      "match_id": "M75",
+      "fixture": "荷兰 vs 摩洛哥",
+      "tail_classification": "open_two_way_tail",
+      "path_families_to_surface": ["3-2/2-3/2-2", "3-1 secondary"],
+      "do_not_amplify_reason": "Not a pure favorite runaway because Morocco transition and bench routes remain live.",
+      "tactical_triggers": ["Netherlands transition_attack +0.35", "Morocco transition_attack +0.40", "Netherlands transition_defense -0.30", "Morocco third-round 4-2 openness noted in Markdown"],
+      "confidence": "medium_high",
+      "model_note": "Move some central draw and 2-1 mass into open two-way tail. Keep both-team scoring branch distinct from Netherlands quality."
+    },
+    {
+      "match_id": "M76",
+      "fixture": "巴西 vs 日本",
+      "tail_classification": "favorite_runaway_with_two_way_counter",
+      "path_families_to_surface": ["3-0/3-1/4-1", "3-2/2-2 secondary"],
+      "do_not_amplify_reason": "Japan transition and draw-management quality prevent a single one-sided tail only.",
+      "tactical_triggers": ["Brazil transition_attack +0.50", "Brazil wide_channel +0.45", "Japan wide_channel -0.35", "Japan set_piece -0.30"],
+      "confidence": "high",
+      "model_note": "Explicitly surface favorite_runaway while retaining Japan counter branch; avoid double counting Vinicius or Brazil attack_score."
+    },
+    {
+      "match_id": "M77",
+      "fixture": "法国 vs 瑞典",
+      "tail_classification": "favorite_runaway_explicit",
+      "path_families_to_surface": ["3-0/3-1/4-1", "3-2 secondary if Sweden chase"],
+      "do_not_amplify_reason": "Sweden set pieces and dual-forward transition keep a concession branch live, but defensive-line mismatch is severe.",
+      "tactical_triggers": ["France transition_attack +0.50", "France wide_channel +0.35", "Sweden transition_defense -0.35", "Sweden defensive_line_risk -0.35"],
+      "confidence": "high",
+      "model_note": "Formal Markdown already lists volatile tail, but model layer should label this as favorite_runaway instead of treating 3-1 as just a neighbor score."
+    },
+    {
+      "match_id": "M78",
+      "fixture": "科特迪瓦 vs 挪威",
+      "tail_classification": "open_two_way_tail",
+      "path_families_to_surface": ["3-2/2-3/2-2"],
+      "do_not_amplify_reason": "Neither side has enough central-control dominance for one-sided runaway; both have transition and line-risk exposure.",
+      "tactical_triggers": ["Ivory Coast transition_attack +0.35", "Norway transition_attack +0.40", "Norway transition_defense -0.35", "Norway defensive_line_risk -0.35"],
+      "confidence": "medium_high",
+      "model_note": "The layer should create chaos-tail mass rather than a strong favorite blowout path."
+    },
+    {
+      "match_id": "M79",
+      "fixture": "墨西哥 vs 厄瓜多尔",
+      "tail_classification": "do_not_amplify",
+      "path_families_to_surface": ["only_small_2-2_if_game_state_forces_chase"],
+      "do_not_amplify_reason": "Central control is near balanced, set-piece edges are small, and both teams have transition risk but not a clear collapse channel.",
+      "tactical_triggers": ["Mexico transition_defense -0.30", "Ecuador transition_attack +0.35", "Mexico central_control 0.00", "Ecuador central_control +0.05"],
+      "confidence": "medium",
+      "model_note": "Suppress big-score expansion unless T-75 lineups create a fullback mismatch or late chase branch."
+    },
+    {
+      "match_id": "M80",
+      "fixture": "英格兰 vs 刚果金",
+      "tail_classification": "favorite_runaway_explicit",
+      "path_families_to_surface": ["3-0/3-1/4-1", "3-2 secondary from DR Congo transition"],
+      "do_not_amplify_reason": "DR Congo transition and set pieces keep a scoring branch live, but central-control and build-up mismatch points to runaway risk.",
+      "tactical_triggers": ["England central_control +0.45", "England set_piece +0.30", "DR Congo central_control -0.45", "DR Congo transition_defense -0.35"],
+      "confidence": "high",
+      "model_note": "Current 3-0 appears in top five; keep 3-1/4-1 as an explicit favorite_runaway family and cap against Bellingham/Kane double count."
+    },
+    {
+      "match_id": "M81",
+      "fixture": "美国 vs 波黑",
+      "tail_classification": "moderate_favorite_runaway",
+      "path_families_to_surface": ["3-1/3-0", "4-1 only if early press goal or Bosnia chase"],
+      "do_not_amplify_reason": "Bosnia set-piece and Dzeko/Pjanic-style outlet reduce the certainty of a clean runaway.",
+      "tactical_triggers": ["USA pressing +0.25", "USA wide_channel +0.35", "Bosnia transition_defense -0.35", "Bosnia defensive_line_risk -0.35"],
+      "confidence": "medium_high",
+      "model_note": "Data collector now supplies probable XIs; activate only if USA keeps Adams/McKennie/Reyna width-control spine."
+    },
+    {
+      "match_id": "M82",
+      "fixture": "比利时 vs 塞内加尔",
+      "tail_classification": "open_two_way_tail_high",
+      "path_families_to_surface": ["3-2/2-3/2-2", "3-1 secondary"],
+      "do_not_amplify_reason": "Belgium edge is not stable enough for pure runaway because Senegal transition and physical pressure remain strong.",
+      "tactical_triggers": ["Belgium transition_attack +0.40", "Senegal transition_attack +0.35", "Belgium transition_defense -0.30", "Senegal game_state +0.25"],
+      "confidence": "high",
+      "model_note": "The model should not let 1-1 dominate the display without an open-tail family. This is a two-way volatility branch."
+    },
+    {
+      "match_id": "M83",
+      "fixture": "葡萄牙 vs 克罗地亚",
+      "tail_classification": "selective_tail_only",
+      "path_families_to_surface": ["3-1 if Portugal wide edge breaks", "2-2/3-2 only if Croatia set pieces land"],
+      "do_not_amplify_reason": "Croatia's game-state control and veteran tempo management suppress broad big-score inflation.",
+      "tactical_triggers": ["Portugal wide_channel +0.30", "Croatia defensive_line_risk -0.30", "Croatia set_piece +0.25", "Portugal transition_defense -0.15"],
+      "confidence": "medium",
+      "model_note": "Add only a narrow tail branch; do not convert this into a broad runaway layer unless Croatia midfield legs are absent at T-75."
+    },
+    {
+      "match_id": "M84",
+      "fixture": "西班牙 vs 奥地利",
+      "tail_classification": "favorite_runaway_explicit",
+      "path_families_to_surface": ["3-0/3-1/4-1", "3-2/2-2 secondary if Austria press creates early exchange"],
+      "do_not_amplify_reason": "Austria set pieces and high press keep a scoring branch, but high-line exposure against Spain width is the dominant tail trigger.",
+      "tactical_triggers": ["Spain build_up_resistance +0.40", "Spain wide_channel +0.35", "Austria transition_defense -0.35", "Austria defensive_line_risk -0.35"],
+      "confidence": "high",
+      "model_note": "Current display includes 3-1 but should explicitly flag favorite_runaway because Austria's own press can create collapse risk if bypassed."
+    }
+  ],
+  "model_handoff": {
+    "encode_as": [
+      "favorite_runaway_tail_flag",
+      "open_two_way_tail_flag",
+      "late_chase_collapse_flag",
+      "set_piece_break_flag",
+      "do_not_amplify_gate"
+    ],
+    "recommended_cap": "Use small redistribution from central exact-score slices into tail families; do not change 1X2 or totals directly without modeler calibration.",
+    "red_team_challenge_points": [
+      "Check whether recent group-stage big wins are already counted in attack/player_state.",
+      "Check whether T-75 lineups remove the winger, creator, goalkeeper, or center-back trigger.",
+      "Challenge M81 and M83 tail activation because evidence is medium rather than high.",
+      "Challenge M79 suppression only if official lineups create a new fullback mismatch."
+    ]
+  }
+}

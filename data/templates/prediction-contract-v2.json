@@ -186,6 +186,42 @@
       "basis": null,
       "reason": null
     },
+    "knockout_big_score_tail_layer": {
+      "trigger_status": null,
+      "tail_visibility_level": null,
+      "reason": null,
+      "red_team_guardrails": [],
+      "no_probability_change": true
+    },
+    "big_score_tail_paths": {
+      "strong_team_breakthrough_path": {
+        "probability": null,
+        "top_scores": []
+      },
+      "open_shootout_path": {
+        "probability": null,
+        "top_scores": []
+      },
+      "weak_team_collapse_path": {
+        "probability": null,
+        "top_scores": []
+      },
+      "late_game_chase_tail": {
+        "probability": null,
+        "top_scores": []
+      }
+    },
+    "margin_bands": {
+      "favorite_by_1": null,
+      "favorite_by_2": null,
+      "favorite_by_3plus": null,
+      "draw": null,
+      "underdog_by_1": null,
+      "underdog_by_2plus": null,
+      "total_goals_4plus_in_matrix": null,
+      "both_teams_2plus_in_matrix": null
+    },
+    "late_game_tail_note": null,
     "scoreline_clusters": {
       "low_event_draw_cluster": [],
       "balanced_one_goal_cluster": [],

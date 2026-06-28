@@ -1,0 +1,2158 @@
+{
+  "schema_version": "round32_knockout_big_score_tail_layer_review_v1",
+  "created_at": "2026-06-29T00:25:00+08:00",
+  "status": "completed_review_only_no_prediction_file_change",
+  "owner": "worldcup-data-modeler",
+  "scope": "M73-M84 knockout big-score tail layer design and audit",
+  "input_files": [
+    ".codex/skills/worldcup-data-modeler/SKILL.md",
+    ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+    "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+    "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+    "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+    "data/outputs/model_backtests/round32-scoreline-final-rerank-20260628.json"
+  ],
+  "no_prediction_file_change": true,
+  "no_betting_advice": true,
+  "layer_design": {
+    "field_name": "knockout_big_score_tail_layer",
+    "purpose": "Expose plausible high-score and wide-margin tails in knockout matches without changing raw Poisson, xG, 1X2 or adjusted headline score.",
+    "trigger_conditions": [
+      "favorite_1x2_probability >= 0.55 with xG gap >= 0.75",
+      "team_strength_gap >= 10 and favorite_xg >= 1.85",
+      "total_xg >= 2.9 or over_2_5 >= 0.56",
+      "BTTS/open-game signal >= 0.56 plus close-strength transition volatility",
+      "poisson tail above 5x5 >= 0.01 or matrix total_goals_4plus >= 0.18",
+      "tactical amplifiers: high press, weak low block, set pieces, keeper volatility, red-card/late-chase sensitivity"
+    ],
+    "paths": {
+      "strong_team_breakthrough_path": "Favorite scores 3+ in a win: 3-0, 3-1, 4-0, 4-1, 5-0, 5-1.",
+      "open_shootout_path": "Both teams score and total goals reach 4+: 2-2, 3-2, 2-3, 3-3, 4-2, 2-4.",
+      "weak_team_collapse_path": "Favorite wins by 3+ goals in 90 minutes.",
+      "late_game_chase_tail": "Total 4+ with margin <=2, often from trailing-team chase after 60 minutes.",
+      "amplifiers": "Red card, set-piece/penalty, goalkeeper swing, early goal, and late substitution chase increase visibility but do not rewrite raw matrix."
+    },
+    "relationship_to_scoreline_diversity_layer": {
+      "raw_poisson_matrix_changed": false,
+      "scoreline_diversity_role": "solves repeated 1-1 and close-score presentation",
+      "big_score_tail_role": "adds explicit upper-tail visibility for knockout game-state volatility",
+      "publication_rule": "Do not force a big score into final_adjusted_top_scoreline. Add big_score_tail_paths, margin_bands, late_game_tail_note and tail_visibility_level beside headline Top5."
+    },
+    "recommended_fields": [
+      "knockout_big_score_tail_layer.trigger_status",
+      "knockout_big_score_tail_layer.tail_visibility_level",
+      "big_score_tail_paths.strong_team_breakthrough_path",
+      "big_score_tail_paths.open_shootout_path",
+      "big_score_tail_paths.weak_team_collapse_path",
+      "big_score_tail_paths.late_game_chase_tail",
+      "margin_bands.favorite_by_1/favorite_by_2/favorite_by_3plus/draw/underdog_by_1/underdog_by_2plus",
+      "late_game_tail_note",
+      "tail_amplifiers",
+      "tail_suppression_reasons"
+    ]
+  },
+  "audit_summary": {
+    "triggered": [
+      "M74",
+      "M76",
+      "M77",
+      "M78",
+      "M80",
+      "M82",
+      "M84"
+    ],
+    "observe": [
+      "M75",
+      "M79",
+      "M81",
+      "M83"
+    ],
+    "not_triggered": [
+      "M73"
+    ]
+  },
+  "matches": [
+    {
+      "match_id": "M73",
+      "match": "南非 vs 加拿大",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "favorite": "加拿大",
+      "underdog": "南非",
+      "expected_goals": {
+        "team_a": 1.08,
+        "team_b": 1.34,
+        "total": 2.42,
+        "xg_gap": 0.26
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.3012,
+        "draw": 0.2724,
+        "team_b_win": 0.4265,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4355,
+        "under_2_5": 0.5645,
+        "btts_yes": 0.4875,
+        "btts_no": 0.5125
+      },
+      "team_strength_score": {
+        "team_a": 68,
+        "team_b": 74,
+        "scale": "0-100 internal"
+      },
+      "existing_tail_probability_above_5x5": 0.0035,
+      "margin_bands": {
+        "favorite_by_1": 0.2289,
+        "favorite_by_2": 0.126,
+        "favorite_by_3plus": 0.0691,
+        "draw": 0.2724,
+        "underdog_by_1": 0.1844,
+        "underdog_by_2plus": 0.1159,
+        "total_goals_4plus_in_matrix": 0.2221,
+        "both_teams_2plus_in_matrix": 0.1127
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.1388,
+          "top_scores": [
+            {
+              "score": "1-3",
+              "probability": 0.0385
+            },
+            {
+              "score": "0-3",
+              "probability": 0.0357
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0208
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0129
+            },
+            {
+              "score": "0-4",
+              "probability": 0.0119
+            },
+            {
+              "score": "2-4",
+              "probability": 0.007
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2009,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.0466
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0385
+            },
+            {
+              "score": "3-1",
+              "probability": 0.025
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0208
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0168
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0129
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.0691,
+          "top_scores": [
+            {
+              "score": "0-3",
+              "probability": 0.0357
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0129
+            },
+            {
+              "score": "0-4",
+              "probability": 0.0119
+            },
+            {
+              "score": "1-5",
+              "probability": 0.0035
+            },
+            {
+              "score": "0-5",
+              "probability": 0.0032
+            },
+            {
+              "score": "2-5",
+              "probability": 0.0019
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.1733,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.0466
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0385
+            },
+            {
+              "score": "3-1",
+              "probability": 0.025
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0208
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0168
+            },
+            {
+              "score": "3-3",
+              "probability": 0.0075
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0035
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "not_triggered",
+        "tail_visibility_level": "low",
+        "recommended_display": "不新增显性大比分尾部，只在质量备注中保留加拿大 1-3/0-3 等低概率追分尾部。",
+        "reason": "总 xG 2.42、Over2.5 43.6%、矩阵 tail 0.35%，淘汰赛谨慎和南非低位韧性更支持窄比分。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M74",
+      "match": "德国 vs 巴拉圭",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "favorite": "德国",
+      "underdog": "巴拉圭",
+      "expected_goals": {
+        "team_a": 2.1,
+        "team_b": 0.78,
+        "total": 2.88,
+        "xg_gap": 1.32
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.6793,
+        "draw": 0.1933,
+        "team_b_win": 0.1274,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5494,
+        "under_2_5": 0.4506,
+        "btts_yes": 0.4753,
+        "btts_no": 0.5247
+      },
+      "team_strength_score": {
+        "team_a": 87,
+        "team_b": 69,
+        "scale": "0-100 internal"
+      },
+      "existing_tail_probability_above_5x5": 0.0206,
+      "margin_bands": {
+        "favorite_by_1": 0.2447,
+        "favorite_by_2": 0.2067,
+        "favorite_by_3plus": 0.2074,
+        "draw": 0.1933,
+        "underdog_by_1": 0.0909,
+        "underdog_by_2plus": 0.0363,
+        "total_goals_4plus_in_matrix": 0.3053,
+        "both_teams_2plus_in_matrix": 0.1103
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.3206,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0866
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0676
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0455
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0355
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0264
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0191
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2397,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0676
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0377
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0355
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0264
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0149
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0138
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.2074,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0866
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0455
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0355
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0191
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0149
+            },
+            {
+              "score": "5-2",
+              "probability": 0.0058
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.1811,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0676
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0377
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0264
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0138
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0098
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0093
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0206
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "triggered",
+        "tail_visibility_level": "high",
+        "recommended_display": "新增强队打穿与弱队崩盘尾部：3-0、3-1、4-0、4-1；headline 仍用 adjusted/ranked score，不把大比分强行设为首选。",
+        "reason": "德国 1X2 67.9%、xG 2.10-0.78、强度差 18，具备早球后控场扩大和巴拉圭追分暴露路径。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M75",
+      "match": "荷兰 vs 摩洛哥",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "favorite": "荷兰",
+      "underdog": "摩洛哥",
+      "expected_goals": {
+        "team_a": 1.48,
+        "team_b": 1.12,
+        "total": 2.6,
+        "xg_gap": 0.36
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4545,
+        "draw": 0.2588,
+        "team_b_win": 0.2867,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4816,
+        "under_2_5": 0.5184,
+        "btts_yes": 0.5204,
+        "btts_no": 0.4796
+      },
+      "team_strength_score": {
+        "team_a": 82,
+        "team_b": 79,
+        "scale": "0-100 internal"
+      },
+      "existing_tail_probability_above_5x5": 0.0052,
+      "margin_bands": {
+        "favorite_by_1": 0.23,
+        "favorite_by_2": 0.1365,
+        "favorite_by_3plus": 0.0836,
+        "draw": 0.2588,
+        "underdog_by_1": 0.1739,
+        "underdog_by_2plus": 0.1116,
+        "total_goals_4plus_in_matrix": 0.2586,
+        "both_teams_2plus_in_matrix": 0.1325
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.1678,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0449
+            },
+            {
+              "score": "3-0",
+              "probability": 0.0401
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0252
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0166
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0148
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0093
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2334,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.051
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0449
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0257
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0252
+            },
+            {
+              "score": "2-3",
+              "probability": 0.019
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0166
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.0836,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0401
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0166
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0148
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0049
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0044
+            },
+            {
+              "score": "5-2",
+              "probability": 0.0028
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.1991,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.051
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0449
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0257
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0252
+            },
+            {
+              "score": "2-3",
+              "probability": 0.019
+            },
+            {
+              "score": "3-3",
+              "probability": 0.0094
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0052
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "observe",
+        "tail_visibility_level": "medium_low",
+        "recommended_display": "只新增观察级开放尾部：3-1、2-2、3-2；不作为主展示。",
+        "reason": "荷兰有小优势但 xG 1.48-1.12 不足以支持强队打穿，更多是相近实力下的早球/转换尾部。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M76",
+      "match": "巴西 vs 日本",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "favorite": "巴西",
+      "underdog": "日本",
+      "expected_goals": {
+        "team_a": 1.92,
+        "team_b": 1.08,
+        "total": 3,
+        "xg_gap": 0.84
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5694,
+        "draw": 0.2206,
+        "team_b_win": 0.21,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5768,
+        "under_2_5": 0.4232,
+        "btts_yes": 0.5636,
+        "btts_no": 0.4364
+      },
+      "team_strength_score": {
+        "team_a": 89,
+        "team_b": 78,
+        "scale": "0-100 internal"
+      },
+      "existing_tail_probability_above_5x5": 0.0147,
+      "margin_bands": {
+        "favorite_by_1": 0.2355,
+        "favorite_by_2": 0.1739,
+        "favorite_by_3plus": 0.1461,
+        "draw": 0.2206,
+        "underdog_by_1": 0.1324,
+        "underdog_by_2plus": 0.0766,
+        "total_goals_4plus_in_matrix": 0.3378,
+        "both_teams_2plus_in_matrix": 0.1632
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.269,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0634
+            },
+            {
+              "score": "3-0",
+              "probability": 0.0587
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0343
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0304
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0282
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0164
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2954,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0634
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0535
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0343
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0304
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0201
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0193
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.1461,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0587
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0304
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0282
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0117
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0108
+            },
+            {
+              "score": "5-2",
+              "probability": 0.0063
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.2393,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0634
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0535
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0343
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0201
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0193
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0164
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0147
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "triggered",
+        "tail_visibility_level": "medium_high",
+        "recommended_display": "新增巴西边路打穿尾部：3-1、3-0、4-1、4-0，并保留日本反击导致 3-2/2-2 的开放尾部。",
+        "reason": "巴西胜率 56.9%、xG 1.92-1.08、Over2.5 57.7%、BTTS 56.4%，raw 1-1 已被 rerank 为 2-1，仍需要显性显示 3球以上上沿。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M77",
+      "match": "法国 vs 瑞典",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "favorite": "法国",
+      "underdog": "瑞典",
+      "expected_goals": {
+        "team_a": 2.1,
+        "team_b": 1.03,
+        "total": 3.13,
+        "xg_gap": 1.07
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.6194,
+        "draw": 0.2035,
+        "team_b_win": 0.1771,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.6053,
+        "under_2_5": 0.3947,
+        "btts_yes": 0.5643,
+        "btts_no": 0.4357
+      },
+      "team_strength_score": {
+        "team_a": 89,
+        "team_b": 78,
+        "scale": "0-100 internal"
+      },
+      "existing_tail_probability_above_5x5": 0.0211,
+      "margin_bands": {
+        "favorite_by_1": 0.2341,
+        "favorite_by_2": 0.1874,
+        "favorite_by_3plus": 0.1775,
+        "draw": 0.2035,
+        "underdog_by_1": 0.1148,
+        "underdog_by_2plus": 0.0617,
+        "total_goals_4plus_in_matrix": 0.3608,
+        "both_teams_2plus_in_matrix": 0.1648
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.3115,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0695
+            },
+            {
+              "score": "3-0",
+              "probability": 0.0675
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0365
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0358
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0354
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0188
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.308,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0695
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0511
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0365
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0358
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0188
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0176
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.1775,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0675
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0365
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0354
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0153
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0149
+            },
+            {
+              "score": "5-2",
+              "probability": 0.0079
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.2422,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0695
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0511
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0358
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0188
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0176
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0167
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0211
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "triggered",
+        "tail_visibility_level": "high",
+        "recommended_display": "新增法国强队打穿尾部：3-1、3-0、4-1、4-0；瑞典进球路径存在时优先 3-1/4-1。",
+        "reason": "法国胜率 61.9%、xG 2.10-1.03、Over2.5 60.5%、BTTS 56.4%，既有强队上限也有对手进球后的开放尾部。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M78",
+      "match": "科特迪瓦 vs 挪威",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "favorite": "挪威",
+      "underdog": "科特迪瓦",
+      "expected_goals": {
+        "team_a": 1.39,
+        "team_b": 1.62,
+        "total": 3.01,
+        "xg_gap": 0.23
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.3292,
+        "draw": 0.2408,
+        "team_b_win": 0.43,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.579,
+        "under_2_5": 0.421,
+        "btts_yes": 0.6023,
+        "btts_no": 0.3977
+      },
+      "team_strength_score": {
+        "team_a": 77,
+        "team_b": 80,
+        "scale": "0-100 internal"
+      },
+      "existing_tail_probability_above_5x5": 0.0095,
+      "margin_bands": {
+        "favorite_by_1": 0.2105,
+        "favorite_by_2": 0.129,
+        "favorite_by_3plus": 0.0841,
+        "draw": 0.2408,
+        "underdog_by_1": 0.1806,
+        "underdog_by_2plus": 0.1455,
+        "total_goals_4plus_in_matrix": 0.3455,
+        "both_teams_2plus_in_matrix": 0.1908
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.1891,
+          "top_scores": [
+            {
+              "score": "1-3",
+              "probability": 0.0485
+            },
+            {
+              "score": "0-3",
+              "probability": 0.0349
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0337
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0197
+            },
+            {
+              "score": "0-4",
+              "probability": 0.0141
+            },
+            {
+              "score": "2-4",
+              "probability": 0.0137
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.317,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.0625
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0485
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0357
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0337
+            },
+            {
+              "score": "3-2",
+              "probability": 0.029
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0197
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.0841,
+          "top_scores": [
+            {
+              "score": "0-3",
+              "probability": 0.0349
+            },
+            {
+              "score": "1-4",
+              "probability": 0.0197
+            },
+            {
+              "score": "0-4",
+              "probability": 0.0141
+            },
+            {
+              "score": "1-5",
+              "probability": 0.0064
+            },
+            {
+              "score": "0-5",
+              "probability": 0.0046
+            },
+            {
+              "score": "2-5",
+              "probability": 0.0044
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.2678,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.0625
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0485
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0357
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0337
+            },
+            {
+              "score": "3-2",
+              "probability": 0.029
+            },
+            {
+              "score": "3-3",
+              "probability": 0.0156
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0095
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "triggered",
+        "tail_visibility_level": "medium_high",
+        "recommended_display": "新增开放对攻尾部：2-2、2-3、3-2、1-3、3-3；重点不是强队碾压，而是互相拉开后的总进球尾部。",
+        "reason": "总 xG 3.01、Over2.5 57.9%、BTTS 60.2%，科特迪瓦/挪威是典型 close-strength open-game tail。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M79",
+      "match": "墨西哥 vs 厄瓜多尔",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "favorite": "墨西哥",
+      "underdog": "厄瓜多尔",
+      "expected_goals": {
+        "team_a": 1.44,
+        "team_b": 1.24,
+        "total": 2.68,
+        "xg_gap": 0.2
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4173,
+        "draw": 0.2578,
+        "team_b_win": 0.3249,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5015,
+        "under_2_5": 0.4985,
+        "btts_yes": 0.5423,
+        "btts_no": 0.4577
+      },
+      "team_strength_score": {
+        "team_a": 81,
+        "team_b": 79,
+        "scale": "0-100 internal"
+      },
+      "existing_tail_probability_above_5x5": 0.0054,
+      "margin_bands": {
+        "favorite_by_1": 0.2172,
+        "favorite_by_2": 0.1239,
+        "favorite_by_3plus": 0.0722,
+        "draw": 0.2578,
+        "underdog_by_1": 0.1872,
+        "underdog_by_2plus": 0.136,
+        "total_goals_4plus_in_matrix": 0.2759,
+        "both_teams_2plus_in_matrix": 0.1462
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.1554,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0423
+            },
+            {
+              "score": "3-0",
+              "probability": 0.0341
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0262
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0152
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0123
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0094
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2516,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.0547
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0423
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0314
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0262
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0226
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0152
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.0722,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0341
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0152
+            },
+            {
+              "score": "4-0",
+              "probability": 0.0123
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0044
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0035
+            },
+            {
+              "score": "5-2",
+              "probability": 0.0027
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.2155,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.0547
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0423
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0314
+            },
+            {
+              "score": "3-2",
+              "probability": 0.0262
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0226
+            },
+            {
+              "score": "3-3",
+              "probability": 0.0108
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0054
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "observe",
+        "tail_visibility_level": "medium_low",
+        "recommended_display": "只新增观察级 2-2/3-1/1-3 尾部，不应把大比分写进主路径。",
+        "reason": "墨西哥/厄瓜多尔接近均衡，总 xG 2.68、Over2.5 50.2%，尾部主要来自早球和定位球波动。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M80",
+      "match": "英格兰 vs 刚果金",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "favorite": "英格兰",
+      "underdog": "刚果金",
+      "expected_goals": {
+        "team_a": 2.07,
+        "team_b": 0.88,
+        "total": 2.95,
+        "xg_gap": 1.19
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.649,
+        "draw": 0.201,
+        "team_b_win": 0.15,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5655,
+        "under_2_5": 0.4345,
+        "btts_yes": 0.5114,
+        "btts_no": 0.4886
+      },
+      "team_strength_score": {
+        "team_a": 90,
+        "team_b": 74,
+        "scale": "0-100 internal"
+      },
+      "existing_tail_probability_above_5x5": 0.0195,
+      "margin_bands": {
+        "favorite_by_1": 0.2419,
+        "favorite_by_2": 0.1976,
+        "favorite_by_3plus": 0.1902,
+        "draw": 0.201,
+        "underdog_by_1": 0.1029,
+        "underdog_by_2plus": 0.0468,
+        "total_goals_4plus_in_matrix": 0.3219,
+        "both_teams_2plus_in_matrix": 0.1304
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.3106,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0774
+            },
+            {
+              "score": "3-1",
+              "probability": 0.0681
+            },
+            {
+              "score": "4-0",
+              "probability": 0.04
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0352
+            },
+            {
+              "score": "3-2",
+              "probability": 0.03
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0166
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.2638,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0681
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0434
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0352
+            },
+            {
+              "score": "3-2",
+              "probability": 0.03
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0155
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0146
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.1902,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.0774
+            },
+            {
+              "score": "4-0",
+              "probability": 0.04
+            },
+            {
+              "score": "4-1",
+              "probability": 0.0352
+            },
+            {
+              "score": "5-0",
+              "probability": 0.0166
+            },
+            {
+              "score": "5-1",
+              "probability": 0.0146
+            },
+            {
+              "score": "5-2",
+              "probability": 0.0064
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.2039,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.0681
+            },
+            {
+              "score": "2-2",
+              "probability": 0.0434
+            },
+            {
+              "score": "3-2",
+              "probability": 0.03
+            },
+            {
+              "score": "4-2",
+              "probability": 0.0155
+            },
+            {
+              "score": "2-3",
+              "probability": 0.0127
+            },
+            {
+              "score": "1-3",
+              "probability": 0.0123
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.0195
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "triggered",
+        "tail_visibility_level": "high",
+        "recommended_display": "新增英格兰强队打穿尾部：3-0、3-1、4-0、4-1；刚果金若早丢球，弱队崩盘路径应显性展示。",
+        "reason": "英格兰胜率 64.9%、xG 2.07-0.88、强度差 16，淘汰赛后段换人和追分空间会放大 3+ 球比分。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M81",
+      "match": "美国 vs 波黑",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "favorite": "美国",
+      "underdog": "波黑",
+      "expected_goals": {
+        "team_a": 1.75,
+        "team_b": 1,
+        "total": 2.75,
+        "xg_gap": 0.75
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5498,
+        "draw": 0.2354,
+        "team_b_win": 0.2148
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5185,
+        "under_2_5": 0.4815
+      },
+      "team_strength_score": {
+        "team_a": 78,
+        "team_b": 71,
+        "scale": "0-100"
+      },
+      "existing_tail_probability_above_5x5": 0.00972,
+      "margin_bands": {
+        "favorite_by_1": 0.242843,
+        "favorite_by_2": 0.16894,
+        "favorite_by_3plus": 0.128926,
+        "draw": 0.2354,
+        "underdog_by_1": 0.138767,
+        "underdog_by_2plus": 0.075426,
+        "total_goals_4plus_in_matrix": 0.287238,
+        "both_teams_2plus_in_matrix": 0.135248
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.233055,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.057102
+            },
+            {
+              "score": "3-1",
+              "probability": 0.057102
+            },
+            {
+              "score": "3-2",
+              "probability": 0.028551
+            },
+            {
+              "score": "4-0",
+              "probability": 0.024982
+            },
+            {
+              "score": "4-1",
+              "probability": 0.024982
+            },
+            {
+              "score": "4-2",
+              "probability": 0.012491
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.250315,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.057102
+            },
+            {
+              "score": "2-2",
+              "probability": 0.048945
+            },
+            {
+              "score": "3-2",
+              "probability": 0.028551
+            },
+            {
+              "score": "4-1",
+              "probability": 0.024982
+            },
+            {
+              "score": "1-3",
+              "probability": 0.018646
+            },
+            {
+              "score": "2-3",
+              "probability": 0.016315
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.128926,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.057102
+            },
+            {
+              "score": "4-0",
+              "probability": 0.024982
+            },
+            {
+              "score": "4-1",
+              "probability": 0.024982
+            },
+            {
+              "score": "5-0",
+              "probability": 0.008744
+            },
+            {
+              "score": "5-1",
+              "probability": 0.008744
+            },
+            {
+              "score": "5-2",
+              "probability": 0.004372
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.205808,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.057102
+            },
+            {
+              "score": "2-2",
+              "probability": 0.048945
+            },
+            {
+              "score": "3-2",
+              "probability": 0.028551
+            },
+            {
+              "score": "1-3",
+              "probability": 0.018646
+            },
+            {
+              "score": "2-3",
+              "probability": 0.016315
+            },
+            {
+              "score": "4-2",
+              "probability": 0.012491
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.00972
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "observe",
+        "tail_visibility_level": "medium",
+        "recommended_display": "新增观察级美国 3-1/3-0 尾部；不触发高可见度，因为波黑定位球和支点会压低纯碾压叙事。",
+        "reason": "美国胜率 55.0%、xG 1.75-1.00 有优势，但 total xG 2.75 和强度差 7 更适合中等可见度。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M82",
+      "match": "比利时 vs 塞内加尔",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "favorite": "比利时",
+      "underdog": "塞内加尔",
+      "expected_goals": {
+        "team_a": 1.7,
+        "team_b": 1.48,
+        "total": 3.18,
+        "xg_gap": 0.22
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4302,
+        "draw": 0.2336,
+        "team_b_win": 0.3361
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.6159,
+        "under_2_5": 0.3841
+      },
+      "team_strength_score": {
+        "team_a": 82,
+        "team_b": 79,
+        "scale": "0-100"
+      },
+      "existing_tail_probability_above_5x5": 0.012144,
+      "margin_bands": {
+        "favorite_by_1": 0.205727,
+        "favorite_by_2": 0.128997,
+        "favorite_by_3plus": 0.087534,
+        "draw": 0.2336,
+        "underdog_by_1": 0.179103,
+        "underdog_by_2plus": 0.152885,
+        "total_goals_4plus_in_matrix": 0.380879,
+        "both_teams_2plus_in_matrix": 0.215102
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.202536,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.050397
+            },
+            {
+              "score": "3-2",
+              "probability": 0.037293
+            },
+            {
+              "score": "3-0",
+              "probability": 0.034052
+            },
+            {
+              "score": "4-1",
+              "probability": 0.021419
+            },
+            {
+              "score": "4-2",
+              "probability": 0.01585
+            },
+            {
+              "score": "4-0",
+              "probability": 0.014472
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.350713,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.065812
+            },
+            {
+              "score": "3-1",
+              "probability": 0.050397
+            },
+            {
+              "score": "1-3",
+              "probability": 0.038197
+            },
+            {
+              "score": "3-2",
+              "probability": 0.037293
+            },
+            {
+              "score": "2-3",
+              "probability": 0.032467
+            },
+            {
+              "score": "4-1",
+              "probability": 0.021419
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.087534,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.034052
+            },
+            {
+              "score": "4-1",
+              "probability": 0.021419
+            },
+            {
+              "score": "4-0",
+              "probability": 0.014472
+            },
+            {
+              "score": "5-1",
+              "probability": 0.007282
+            },
+            {
+              "score": "5-2",
+              "probability": 0.005389
+            },
+            {
+              "score": "5-0",
+              "probability": 0.00492
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.294751,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.065812
+            },
+            {
+              "score": "3-1",
+              "probability": 0.050397
+            },
+            {
+              "score": "1-3",
+              "probability": 0.038197
+            },
+            {
+              "score": "3-2",
+              "probability": 0.037293
+            },
+            {
+              "score": "2-3",
+              "probability": 0.032467
+            },
+            {
+              "score": "3-3",
+              "probability": 0.018398
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.012144
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "triggered",
+        "tail_visibility_level": "high",
+        "recommended_display": "新增开放对攻和双向尾部：3-2、2-3、3-1、1-3、2-2、3-3；不只写比利时打穿，也要显示塞内加尔反打。",
+        "reason": "总 xG 3.18、Over2.5 61.6%、双方强度差 3，是 M73-M84 中最应显性展示大比分开放尾部的场次之一。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M83",
+      "match": "葡萄牙 vs 克罗地亚",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "favorite": "葡萄牙",
+      "underdog": "克罗地亚",
+      "expected_goals": {
+        "team_a": 1.58,
+        "team_b": 1.08,
+        "total": 2.66,
+        "xg_gap": 0.5
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4893,
+        "draw": 0.251,
+        "team_b_win": 0.2597
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4965,
+        "under_2_5": 0.5035
+      },
+      "team_strength_score": {
+        "team_a": 83,
+        "team_b": 75,
+        "scale": "0-100"
+      },
+      "existing_tail_probability_above_5x5": 0.006573,
+      "margin_bands": {
+        "favorite_by_1": 0.235767,
+        "favorite_by_2": 0.148769,
+        "favorite_by_3plus": 0.099048,
+        "draw": 0.251,
+        "underdog_by_1": 0.161158,
+        "underdog_by_2plus": 0.097704,
+        "total_goals_4plus_in_matrix": 0.270537,
+        "both_teams_2plus_in_matrix": 0.135514
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.191463,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.049662
+            },
+            {
+              "score": "3-0",
+              "probability": 0.045983
+            },
+            {
+              "score": "3-2",
+              "probability": 0.026817
+            },
+            {
+              "score": "4-1",
+              "probability": 0.019616
+            },
+            {
+              "score": "4-0",
+              "probability": 0.018163
+            },
+            {
+              "score": "4-2",
+              "probability": 0.010593
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.241813,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.050919
+            },
+            {
+              "score": "3-1",
+              "probability": 0.049662
+            },
+            {
+              "score": "3-2",
+              "probability": 0.026817
+            },
+            {
+              "score": "1-3",
+              "probability": 0.023204
+            },
+            {
+              "score": "4-1",
+              "probability": 0.019616
+            },
+            {
+              "score": "2-3",
+              "probability": 0.018331
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.099048,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.045983
+            },
+            {
+              "score": "4-1",
+              "probability": 0.019616
+            },
+            {
+              "score": "4-0",
+              "probability": 0.018163
+            },
+            {
+              "score": "5-1",
+              "probability": 0.006199
+            },
+            {
+              "score": "5-0",
+              "probability": 0.00574
+            },
+            {
+              "score": "5-2",
+              "probability": 0.003347
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.203964,
+          "top_scores": [
+            {
+              "score": "2-2",
+              "probability": 0.050919
+            },
+            {
+              "score": "3-1",
+              "probability": 0.049662
+            },
+            {
+              "score": "3-2",
+              "probability": 0.026817
+            },
+            {
+              "score": "1-3",
+              "probability": 0.023204
+            },
+            {
+              "score": "2-3",
+              "probability": 0.018331
+            },
+            {
+              "score": "4-2",
+              "probability": 0.010593
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.006573
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "observe",
+        "tail_visibility_level": "medium_low",
+        "recommended_display": "只新增葡萄牙 3-1/3-0 低可见度尾部；主叙事仍是控制型一球差。",
+        "reason": "葡萄牙有 xG 与实力优势，但 Over2.5 49.7%、克罗地亚控节奏能力较强，不应强行提高大比分可见度。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    },
+    {
+      "match_id": "M84",
+      "match": "西班牙 vs 奥地利",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "favorite": "西班牙",
+      "underdog": "奥地利",
+      "expected_goals": {
+        "team_a": 1.92,
+        "team_b": 1.05,
+        "total": 2.97,
+        "xg_gap": 0.87
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5765,
+        "draw": 0.2201,
+        "team_b_win": 0.2033
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5701,
+        "under_2_5": 0.4299
+      },
+      "team_strength_score": {
+        "team_a": 88,
+        "team_b": 76,
+        "scale": "0-100"
+      },
+      "existing_tail_probability_above_5x5": 0.014599,
+      "margin_bands": {
+        "favorite_by_1": 0.237324,
+        "favorite_by_2": 0.176274,
+        "favorite_by_3plus": 0.149089,
+        "draw": 0.2201,
+        "underdog_by_1": 0.129786,
+        "underdog_by_2plus": 0.072804,
+        "total_goals_4plus_in_matrix": 0.331451,
+        "both_teams_2plus_in_matrix": 0.157299
+      },
+      "big_score_tail_paths": {
+        "strong_team_breakthrough_path": {
+          "probability": 0.270333,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.063546
+            },
+            {
+              "score": "3-0",
+              "probability": 0.06052
+            },
+            {
+              "score": "3-2",
+              "probability": 0.033362
+            },
+            {
+              "score": "4-1",
+              "probability": 0.030502
+            },
+            {
+              "score": "4-0",
+              "probability": 0.02905
+            },
+            {
+              "score": "4-2",
+              "probability": 0.016014
+            }
+          ]
+        },
+        "open_shootout_path": {
+          "probability": 0.288102,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.063546
+            },
+            {
+              "score": "2-2",
+              "probability": 0.052127
+            },
+            {
+              "score": "3-2",
+              "probability": 0.033362
+            },
+            {
+              "score": "4-1",
+              "probability": 0.030502
+            },
+            {
+              "score": "1-3",
+              "probability": 0.019005
+            },
+            {
+              "score": "2-3",
+              "probability": 0.018245
+            }
+          ]
+        },
+        "weak_team_collapse_path": {
+          "probability": 0.149089,
+          "top_scores": [
+            {
+              "score": "3-0",
+              "probability": 0.06052
+            },
+            {
+              "score": "4-1",
+              "probability": 0.030502
+            },
+            {
+              "score": "4-0",
+              "probability": 0.02905
+            },
+            {
+              "score": "5-1",
+              "probability": 0.011713
+            },
+            {
+              "score": "5-0",
+              "probability": 0.011155
+            },
+            {
+              "score": "5-2",
+              "probability": 0.006149
+            }
+          ]
+        },
+        "late_game_chase_tail": {
+          "probability": 0.232695,
+          "top_scores": [
+            {
+              "score": "3-1",
+              "probability": 0.063546
+            },
+            {
+              "score": "2-2",
+              "probability": 0.052127
+            },
+            {
+              "score": "3-2",
+              "probability": 0.033362
+            },
+            {
+              "score": "1-3",
+              "probability": 0.019005
+            },
+            {
+              "score": "2-3",
+              "probability": 0.018245
+            },
+            {
+              "score": "4-2",
+              "probability": 0.016014
+            }
+          ]
+        },
+        "unallocated_above_5x5_tail": 0.014599
+      },
+      "knockout_big_score_tail_layer": {
+        "trigger_status": "triggered",
+        "tail_visibility_level": "high",
+        "recommended_display": "新增西班牙打穿与奥地利高压互爆尾部：3-1、3-0、4-1、2-2、3-2；高压被穿透或早球会显著放大比分。",
+        "reason": "西班牙胜率 57.7%、xG 1.92-1.05、Over2.5 57.0%，奥地利高压既带来破门，也带来被打身后的崩盘风险。",
+        "amplifiers_to_check": [
+          "early_goal_before_30m",
+          "red_card_or_second_yellow",
+          "set_piece_goal_or_penalty",
+          "goalkeeper_error_or_save_swing",
+          "late_game_trailing_team_chase",
+          "extra_time_not_in_90m_model"
+        ]
+      }
+    }
+  ],
+  "handoff_to_main": [
+    "M74/M76/M77/M80/M84 should show strong-team breakthrough tails.",
+    "M78/M82 should show open-shootout tails rather than only narrow-score diversity.",
+    "M73 should remain low-tail; M75/M79/M81/M83 are observe-level only.",
+    "No 1X2 probability, raw Poisson matrix, final adjusted scoreline, red-team status, or betting gate should change from this review alone."
+  ]
+}

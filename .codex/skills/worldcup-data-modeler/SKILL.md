@@ -32,15 +32,16 @@ Prediction work must follow the quantitative chain defined by `worldcup-quant-pr
 9. Generate a Poisson score matrix from 0-0 through 5-5 and preserve higher-score tail probability.
 10. Derive 1X2, totals, top scorelines, and scoreline clusters from the matrix.
 11. Run the scoreline diversity check: when team strength and xG are close, do not let `1-1` become the only useful score story by default. Separate `1-1` from low-event draws, open draws, one-goal edge wins, and volatility tails.
-12. Integrate market signal if requested:
+12. For knockout matches, run the big-score tail check: expose strong-favorite breakthrough, open shootout, weak-team collapse, and late-game chase tails when the matrix and tactical evidence justify them.
+13. Integrate market signal if requested:
    - convert odds to implied probabilities
    - remove bookmaker margin when enough outcomes are available
    - compare market probabilities with model probabilities
    - explain disagreement without recommending bets
-13. Generate probabilities and confidence bands using the schema in `references/output-schemas.md`.
-14. Run sanity checks: probabilities sum correctly, score-matrix mass is accounted for, extreme outputs are explained, stale inputs are flagged, and upset paths remain visible.
-15. For post-match reviews, check whether the data collector has updated the participating teams' player-state files and member tables.
-16. Produce handoff notes for verifier and lead analyst.
+14. Generate probabilities and confidence bands using the schema in `references/output-schemas.md`.
+15. Run sanity checks: probabilities sum correctly, score-matrix mass is accounted for, extreme outputs are explained, stale inputs are flagged, and upset paths remain visible.
+16. For post-match reviews, check whether the data collector has updated the participating teams' player-state files and member tables.
+17. Produce handoff notes for verifier and lead analyst.
 
 ## Modeling Principles
 
@@ -76,6 +77,10 @@ For match and round predictions, include:
 - `final_adjusted_top_scoreline`: the single scoreline used in the user-facing conclusion, with a reason and confidence label.
 - `scoreline_clusters`: low-event draw, balanced one-goal, open draw, favorite-edge, underdog-edge, and volatility-tail clusters when relevant.
 - `scoreline_diversity_layer`: trigger status, xG gap, total-xG band, tempo profile, 1-1 overconcentration flag, and redistribution note.
+- `knockout_big_score_tail_layer`: knockout-only trigger status, tail visibility level, guardrails, and reason.
+- `big_score_tail_paths`: strong-team breakthrough, open shootout, weak-team collapse, and late-game chase paths with raw matrix probabilities.
+- `margin_bands`: one-goal, two-goal, three-plus margin, draw, total-goals 4+ and both-teams-2+ bands.
+- `late_game_tail_note`: conditional explanation for 60-minute chase, early goal, red-card, set-piece, penalty, goalkeeper, and substitution-state tails.
 - `odds_implied_probability` and `model_market_delta` when odds are included.
 - `confidence_interval` or uncertainty band for 1X2 and xG.
 - `red_team_status`: `pending`, `pass`, `revise`, or `hold`.
@@ -127,6 +132,31 @@ Required treatment:
 - If both teams have high transition or set-piece volatility, shift the narrative from `1-1 default` to `open balanced game`; raise 2-1/1-2/2-2 cluster visibility before changing 1X2 headline.
 
 Use `references/output-schemas.md` for JSON-compatible shapes.
+
+## Knockout Big-Score Tail Layer
+
+Use this layer for knockout matches when the central scoreline looks too compressed but the matrix, tactical factors, or game-state logic support a visible upper tail.
+
+Trigger candidates:
+
+- favorite 1X2 probability is normally at least 55% and xG gap is at least 0.75
+- favorite xG is at least 1.85 with a clear strength or matchup edge
+- total xG is at least 2.90, over 2.5 is at least 56%, or BTTS/open-game signal is at least 56%
+- tactical evidence shows high press break risk, transition depth, wide-channel mismatch, set-piece/penalty volatility, goalkeeper or centre-back error risk, or aggressive late substitutions
+- knockout game-state creates a chase tail after roughly 60 minutes when the trailing team must open the match
+
+Required treatment:
+
+- Keep raw Poisson, xG, 1X2, totals, and `final_adjusted_top_scoreline` unchanged unless a full model rerun explicitly justifies changing them.
+- Add `knockout_big_score_tail_layer` with `trigger_status`, `tail_visibility_level` (`high`, `medium`, `low`, or `not_triggered`), `reason`, and `red_team_guardrails`.
+- Add `big_score_tail_paths`:
+  - `strong_team_breakthrough_path`: 3-0, 3-1, 4-0, 4-1, and related favorite-score expansion
+  - `open_shootout_path`: 2-2, 3-2, 2-3, 3-3, and transition-heavy scorelines
+  - `weak_team_collapse_path`: three-plus margin favorite wins
+  - `late_game_chase_tail`: scores created by late risk-taking after the first goal or trailing state
+- Add `margin_bands` from the matrix where possible.
+- High visibility may enter the Markdown conclusion as a tail-path table. Medium visibility belongs in sensitivity/risk sections. Low visibility should stay in JSON or a short quality note.
+- Do not promote exact big scores into betting language or the main scoreline unless T-75 official lineups, fresh availability, market context, and red-team review all allow a full rerun.
 
 ## Betting-Plan Backtest Support
 

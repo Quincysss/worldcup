@@ -1,0 +1,407 @@
+{
+  "schema_version": "round32_m85_m88_tactical_refresh_v1",
+  "created_at": "2026-06-29T00:20:00+08:00",
+  "role": "main_control_fallback_after_tactics_thread_dispatch",
+  "thread_coordination": {
+    "tactics_thread_id": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+    "status": "dispatched_and_parsed_data_packet_but_target_file_not_observed_at_fallback_time"
+  },
+  "matches": [
+    {
+      "match_no": "M85",
+      "fixture": "瑞士 vs 阿尔及利亚",
+      "upstream_basis": "data/packets/matches/round32-m85-m88-data-refresh-20260629.json",
+      "formations_and_roles": {
+        "home": "4-2-3-1",
+        "away": "4-2-3-1",
+        "key_roles": "瑞士依赖扎卡调度、阿坎吉出球和恩博洛支点；阿尔及利亚依赖马赫雷斯内收、古伊里牵制与边后卫插上。"
+      },
+      "tactical_matchup": "瑞士依赖扎卡调度、阿坎吉出球和恩博洛支点；阿尔及利亚依赖马赫雷斯内收、古伊里牵制与边后卫插上。",
+      "quantitative_factors": {
+        "pressing_adjustment": {
+          "direction": "home_plus",
+          "magnitude": 0.2,
+          "basis": "预计首发压迫结构与出球抗性",
+          "confidence": "medium_low"
+        },
+        "build_up_resistance_adjustment": {
+          "direction": "contextual",
+          "magnitude": 0.1,
+          "basis": "中后场出球与对手压迫质量",
+          "confidence": "medium_low"
+        },
+        "transition_attack_adjustment": {
+          "direction": "both_sides_visible",
+          "magnitude": 0.3,
+          "basis": "边路和反击纵深",
+          "confidence": "medium"
+        },
+        "transition_defense_risk": {
+          "direction": "both_sides",
+          "magnitude": 0.25,
+          "basis": "淘汰赛落后方压上后的强相关事件",
+          "confidence": "medium"
+        },
+        "wide_channel_advantage": {
+          "direction": "balanced_or_home_slight",
+          "magnitude": 0.25,
+          "basis": "边路错位与边后卫保护",
+          "confidence": "medium_low"
+        },
+        "central_control_advantage": {
+          "direction": "slight_home_or_balanced",
+          "magnitude": 0.2,
+          "basis": "中场控球与二点",
+          "confidence": "medium_low"
+        },
+        "set_piece_advantage": {
+          "direction": "favorite_visible",
+          "magnitude": 0.2,
+          "basis": "定位球高点/二点",
+          "confidence": "medium_low"
+        },
+        "defensive_line_risk": {
+          "direction": "underdog_or_chasing_side",
+          "magnitude": 0.3,
+          "basis": "落后压上与中卫转身",
+          "confidence": "medium"
+        },
+        "coach_substitution_risk": {
+          "direction": "late_volatility",
+          "magnitude": 0.2,
+          "basis": "60分钟后进攻换人",
+          "confidence": "medium_low"
+        },
+        "game_state_tendency": {
+          "direction": "knockout_cautious_until_first_goal",
+          "magnitude": 0.15,
+          "basis": "淘汰赛前60分钟风险管理",
+          "confidence": "medium"
+        }
+      },
+      "knockout_big_score_tail_tactical_triggers": [
+        {
+          "trigger": "阿尔及利亚右路内切带来的二次进攻",
+          "confidence": "medium_low"
+        },
+        {
+          "trigger": "瑞士定位球和后点争顶",
+          "confidence": "medium_low"
+        },
+        {
+          "trigger": "落后方60分钟后增加边锋与中锋人数",
+          "confidence": "medium_low"
+        }
+      ],
+      "xg_tempo_factor_impact": "影响节奏与尾部可见性，不直接覆盖 xG。",
+      "double_counting_guards": [
+        "同一边路证据不得同时在线路优势、转换进攻和 player_state 中满额叠加。",
+        "大比分尾部触发器只作为模型可见性层，不改写 totals/BTTS/1X2。",
+        "官方首发缺失时，对阵型和角色置信度不超过 medium_low。"
+      ],
+      "gaps_and_conflicts": [
+        "官方 T-75 首发未捕获，predicted_xi 只作 probable_not_official。",
+        "最新官方伤停、停赛、分钟限制未完全闭合。",
+        "官方竞彩与同源盘口快照未捕获。",
+        "data/outputs/knockout/round-of-32-bracket-20260628.json 在部分 PowerShell 读取路径曾出现乱码/断引号显示，预测采用最新 Markdown canonical 与外部赛程核验。"
+      ]
+    },
+    {
+      "match_no": "M86",
+      "fixture": "阿根廷 vs 佛得角",
+      "upstream_basis": "data/packets/matches/round32-m85-m88-data-refresh-20260629.json",
+      "formations_and_roles": {
+        "home": "4-3-3",
+        "away": "5-4-1",
+        "key_roles": "阿根廷通过帕雷德斯和洛塞尔索掌控二点，劳塔罗/阿尔瓦雷斯冲击中卫；佛得角低位五后卫和门将表现是生存路径。"
+      },
+      "tactical_matchup": "阿根廷通过帕雷德斯和洛塞尔索掌控二点，劳塔罗/阿尔瓦雷斯冲击中卫；佛得角低位五后卫和门将表现是生存路径。",
+      "quantitative_factors": {
+        "pressing_adjustment": {
+          "direction": "home_plus",
+          "magnitude": 0.2,
+          "basis": "预计首发压迫结构与出球抗性",
+          "confidence": "medium_low"
+        },
+        "build_up_resistance_adjustment": {
+          "direction": "contextual",
+          "magnitude": 0.1,
+          "basis": "中后场出球与对手压迫质量",
+          "confidence": "medium_low"
+        },
+        "transition_attack_adjustment": {
+          "direction": "home_plus",
+          "magnitude": 0.3,
+          "basis": "边路和反击纵深",
+          "confidence": "medium"
+        },
+        "transition_defense_risk": {
+          "direction": "both_sides",
+          "magnitude": 0.25,
+          "basis": "淘汰赛落后方压上后的强相关事件",
+          "confidence": "medium"
+        },
+        "wide_channel_advantage": {
+          "direction": "balanced_or_home_slight",
+          "magnitude": 0.25,
+          "basis": "边路错位与边后卫保护",
+          "confidence": "medium_low"
+        },
+        "central_control_advantage": {
+          "direction": "home_plus",
+          "magnitude": 0.2,
+          "basis": "中场控球与二点",
+          "confidence": "medium_low"
+        },
+        "set_piece_advantage": {
+          "direction": "favorite_visible",
+          "magnitude": 0.2,
+          "basis": "定位球高点/二点",
+          "confidence": "medium_low"
+        },
+        "defensive_line_risk": {
+          "direction": "underdog_or_chasing_side",
+          "magnitude": 0.3,
+          "basis": "落后压上与中卫转身",
+          "confidence": "medium"
+        },
+        "coach_substitution_risk": {
+          "direction": "late_volatility",
+          "magnitude": 0.2,
+          "basis": "60分钟后进攻换人",
+          "confidence": "medium_low"
+        },
+        "game_state_tendency": {
+          "direction": "knockout_cautious_until_first_goal",
+          "magnitude": 0.15,
+          "basis": "淘汰赛前60分钟风险管理",
+          "confidence": "medium"
+        }
+      },
+      "knockout_big_score_tail_tactical_triggers": [
+        {
+          "trigger": "阿根廷高位压迫破局",
+          "confidence": "medium_low"
+        },
+        {
+          "trigger": "佛得角落后后边翼卫压上",
+          "confidence": "medium_low"
+        },
+        {
+          "trigger": "禁区连续传中与定位球二点导致弱队崩盘尾部",
+          "confidence": "medium_low"
+        }
+      ],
+      "xg_tempo_factor_impact": "影响节奏与尾部可见性，不直接覆盖 xG。",
+      "double_counting_guards": [
+        "同一边路证据不得同时在线路优势、转换进攻和 player_state 中满额叠加。",
+        "大比分尾部触发器只作为模型可见性层，不改写 totals/BTTS/1X2。",
+        "官方首发缺失时，对阵型和角色置信度不超过 medium_low。"
+      ],
+      "gaps_and_conflicts": [
+        "官方 T-75 首发未捕获，predicted_xi 只作 probable_not_official。",
+        "最新官方伤停、停赛、分钟限制未完全闭合。",
+        "官方竞彩与同源盘口快照未捕获。",
+        "data/outputs/knockout/round-of-32-bracket-20260628.json 在部分 PowerShell 读取路径曾出现乱码/断引号显示，预测采用最新 Markdown canonical 与外部赛程核验。"
+      ]
+    },
+    {
+      "match_no": "M87",
+      "fixture": "哥伦比亚 vs 加纳",
+      "upstream_basis": "data/packets/matches/round32-m85-m88-data-refresh-20260629.json",
+      "formations_and_roles": {
+        "home": "4-2-3-1",
+        "away": "4-2-3-1",
+        "key_roles": "哥伦比亚左路爆点和J罗定位球对加纳边后卫保护形成压力；加纳依靠苏莱曼纳、努阿马、塞梅尼奥抢转换。"
+      },
+      "tactical_matchup": "哥伦比亚左路爆点和J罗定位球对加纳边后卫保护形成压力；加纳依靠苏莱曼纳、努阿马、塞梅尼奥抢转换。",
+      "quantitative_factors": {
+        "pressing_adjustment": {
+          "direction": "home_plus",
+          "magnitude": 0.2,
+          "basis": "预计首发压迫结构与出球抗性",
+          "confidence": "medium_low"
+        },
+        "build_up_resistance_adjustment": {
+          "direction": "contextual",
+          "magnitude": 0.1,
+          "basis": "中后场出球与对手压迫质量",
+          "confidence": "medium_low"
+        },
+        "transition_attack_adjustment": {
+          "direction": "home_plus",
+          "magnitude": 0.3,
+          "basis": "边路和反击纵深",
+          "confidence": "medium"
+        },
+        "transition_defense_risk": {
+          "direction": "both_sides",
+          "magnitude": 0.25,
+          "basis": "淘汰赛落后方压上后的强相关事件",
+          "confidence": "medium"
+        },
+        "wide_channel_advantage": {
+          "direction": "home_plus",
+          "magnitude": 0.25,
+          "basis": "边路错位与边后卫保护",
+          "confidence": "medium_low"
+        },
+        "central_control_advantage": {
+          "direction": "slight_home_or_balanced",
+          "magnitude": 0.2,
+          "basis": "中场控球与二点",
+          "confidence": "medium_low"
+        },
+        "set_piece_advantage": {
+          "direction": "favorite_visible",
+          "magnitude": 0.2,
+          "basis": "定位球高点/二点",
+          "confidence": "medium_low"
+        },
+        "defensive_line_risk": {
+          "direction": "underdog_or_chasing_side",
+          "magnitude": 0.3,
+          "basis": "落后压上与中卫转身",
+          "confidence": "medium"
+        },
+        "coach_substitution_risk": {
+          "direction": "late_volatility",
+          "magnitude": 0.2,
+          "basis": "60分钟后进攻换人",
+          "confidence": "medium_low"
+        },
+        "game_state_tendency": {
+          "direction": "knockout_cautious_until_first_goal",
+          "magnitude": 0.15,
+          "basis": "淘汰赛前60分钟风险管理",
+          "confidence": "medium"
+        }
+      },
+      "knockout_big_score_tail_tactical_triggers": [
+        {
+          "trigger": "哥伦比亚边路错位",
+          "confidence": "medium_low"
+        },
+        {
+          "trigger": "加纳落后后反击纵深",
+          "confidence": "medium_low"
+        },
+        {
+          "trigger": "定位球二点争抢和禁区混战",
+          "confidence": "medium_low"
+        }
+      ],
+      "xg_tempo_factor_impact": "影响节奏与尾部可见性，不直接覆盖 xG。",
+      "double_counting_guards": [
+        "同一边路证据不得同时在线路优势、转换进攻和 player_state 中满额叠加。",
+        "大比分尾部触发器只作为模型可见性层，不改写 totals/BTTS/1X2。",
+        "官方首发缺失时，对阵型和角色置信度不超过 medium_low。"
+      ],
+      "gaps_and_conflicts": [
+        "官方 T-75 首发未捕获，predicted_xi 只作 probable_not_official。",
+        "最新官方伤停、停赛、分钟限制未完全闭合。",
+        "官方竞彩与同源盘口快照未捕获。",
+        "data/outputs/knockout/round-of-32-bracket-20260628.json 在部分 PowerShell 读取路径曾出现乱码/断引号显示，预测采用最新 Markdown canonical 与外部赛程核验。"
+      ]
+    },
+    {
+      "match_no": "M88",
+      "fixture": "澳大利亚 vs 埃及",
+      "upstream_basis": "data/packets/matches/round32-m85-m88-data-refresh-20260629.json",
+      "formations_and_roles": {
+        "home": "5-4-1",
+        "away": "4-3-3",
+        "key_roles": "澳大利亚以五后卫、身体对抗和定位球寻找低事件生存；埃及依赖萨拉赫、齐科、阿舒尔和三后腰保护后的反击加速。"
+      },
+      "tactical_matchup": "澳大利亚以五后卫、身体对抗和定位球寻找低事件生存；埃及依赖萨拉赫、齐科、阿舒尔和三后腰保护后的反击加速。",
+      "quantitative_factors": {
+        "pressing_adjustment": {
+          "direction": "home_plus",
+          "magnitude": -0.1,
+          "basis": "预计首发压迫结构与出球抗性",
+          "confidence": "medium_low"
+        },
+        "build_up_resistance_adjustment": {
+          "direction": "contextual",
+          "magnitude": 0.1,
+          "basis": "中后场出球与对手压迫质量",
+          "confidence": "medium_low"
+        },
+        "transition_attack_adjustment": {
+          "direction": "both_sides_visible",
+          "magnitude": 0.3,
+          "basis": "边路和反击纵深",
+          "confidence": "medium"
+        },
+        "transition_defense_risk": {
+          "direction": "both_sides",
+          "magnitude": 0.25,
+          "basis": "淘汰赛落后方压上后的强相关事件",
+          "confidence": "medium"
+        },
+        "wide_channel_advantage": {
+          "direction": "balanced_or_home_slight",
+          "magnitude": 0.25,
+          "basis": "边路错位与边后卫保护",
+          "confidence": "medium_low"
+        },
+        "central_control_advantage": {
+          "direction": "slight_home_or_balanced",
+          "magnitude": 0.2,
+          "basis": "中场控球与二点",
+          "confidence": "medium_low"
+        },
+        "set_piece_advantage": {
+          "direction": "home_visible",
+          "magnitude": 0.2,
+          "basis": "定位球高点/二点",
+          "confidence": "medium_low"
+        },
+        "defensive_line_risk": {
+          "direction": "underdog_or_chasing_side",
+          "magnitude": 0.3,
+          "basis": "落后压上与中卫转身",
+          "confidence": "medium"
+        },
+        "coach_substitution_risk": {
+          "direction": "late_volatility",
+          "magnitude": 0.2,
+          "basis": "60分钟后进攻换人",
+          "confidence": "medium_low"
+        },
+        "game_state_tendency": {
+          "direction": "knockout_cautious_until_first_goal",
+          "magnitude": 0.15,
+          "basis": "淘汰赛前60分钟风险管理",
+          "confidence": "medium"
+        }
+      },
+      "knockout_big_score_tail_tactical_triggers": [
+        {
+          "trigger": "埃及右路强点与弱侧二点",
+          "confidence": "medium_low"
+        },
+        {
+          "trigger": "澳大利亚定位球高点",
+          "confidence": "medium_low"
+        },
+        {
+          "trigger": "落后方60分钟后压上产生互打空间",
+          "confidence": "medium_low"
+        }
+      ],
+      "xg_tempo_factor_impact": "影响节奏与尾部可见性，不直接覆盖 xG。",
+      "double_counting_guards": [
+        "同一边路证据不得同时在线路优势、转换进攻和 player_state 中满额叠加。",
+        "大比分尾部触发器只作为模型可见性层，不改写 totals/BTTS/1X2。",
+        "官方首发缺失时，对阵型和角色置信度不超过 medium_low。"
+      ],
+      "gaps_and_conflicts": [
+        "官方 T-75 首发未捕获，predicted_xi 只作 probable_not_official。",
+        "最新官方伤停、停赛、分钟限制未完全闭合。",
+        "官方竞彩与同源盘口快照未捕获。",
+        "data/outputs/knockout/round-of-32-bracket-20260628.json 在部分 PowerShell 读取路径曾出现乱码/断引号显示，预测采用最新 Markdown canonical 与外部赛程核验。"
+      ]
+    }
+  ]
+}

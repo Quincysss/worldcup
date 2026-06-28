@@ -1,0 +1,159 @@
+{
+  "schema_version": "round32_m85_m88_red_team_v1",
+  "created_at": "2026-06-29T00:20:00+08:00",
+  "role": "main_control_red_team_fallback_after_red_thread_dispatch",
+  "thread_coordination": {
+    "red_team_thread_id": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+    "status": "dispatched_but_upstream_model_file_missing_before_main_fallback"
+  },
+  "matches": [
+    {
+      "match_no": "M85",
+      "fixture": "瑞士 vs 阿尔及利亚",
+      "verdict": "hold",
+      "review_scope": "prediction_can_be_discussed; betting_and_final_lock_hold",
+      "top_concerns": [
+        {
+          "concern": "T-75官方首发未出，预计首发只为probable_not_official。",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high"
+        },
+        {
+          "concern": "官方竞彩同源赔率缺失，不能做可执行赔率校准。",
+          "category": "market",
+          "severity": "blocker",
+          "confidence": "high"
+        },
+        {
+          "concern": "大比分尾部层只能作为可见性，不得改写xG/1X2/泊松矩阵。",
+          "category": "model",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "knockout_big_score_tail_review": {
+        "status": "pass_as_visibility_layer_only",
+        "no_probability_change_confirmed": true,
+        "note": "未把大比分写成主线，仍保留 headline score 与 1X2 概率。"
+      },
+      "recommended_probability_adjustment": "no_numeric_override_before_official_lineups_and_market_snapshot",
+      "missing_data": [
+        "official_lineups",
+        "latest_injury_report",
+        "official_same_source_jingcai_odds"
+      ]
+    },
+    {
+      "match_no": "M86",
+      "fixture": "阿根廷 vs 佛得角",
+      "verdict": "hold",
+      "review_scope": "prediction_can_be_discussed; betting_and_final_lock_hold",
+      "top_concerns": [
+        {
+          "concern": "T-75官方首发未出，预计首发只为probable_not_official。",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high"
+        },
+        {
+          "concern": "官方竞彩同源赔率缺失，不能做可执行赔率校准。",
+          "category": "market",
+          "severity": "blocker",
+          "confidence": "high"
+        },
+        {
+          "concern": "大比分尾部层只能作为可见性，不得改写xG/1X2/泊松矩阵。",
+          "category": "model",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "knockout_big_score_tail_review": {
+        "status": "pass_as_visibility_layer_only",
+        "no_probability_change_confirmed": true,
+        "note": "未把大比分写成主线，仍保留 headline score 与 1X2 概率。"
+      },
+      "recommended_probability_adjustment": "no_numeric_override_before_official_lineups_and_market_snapshot",
+      "missing_data": [
+        "official_lineups",
+        "latest_injury_report",
+        "official_same_source_jingcai_odds"
+      ]
+    },
+    {
+      "match_no": "M87",
+      "fixture": "哥伦比亚 vs 加纳",
+      "verdict": "hold",
+      "review_scope": "prediction_can_be_discussed; betting_and_final_lock_hold",
+      "top_concerns": [
+        {
+          "concern": "T-75官方首发未出，预计首发只为probable_not_official。",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high"
+        },
+        {
+          "concern": "官方竞彩同源赔率缺失，不能做可执行赔率校准。",
+          "category": "market",
+          "severity": "blocker",
+          "confidence": "high"
+        },
+        {
+          "concern": "大比分尾部层只能作为可见性，不得改写xG/1X2/泊松矩阵。",
+          "category": "model",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "knockout_big_score_tail_review": {
+        "status": "pass_as_visibility_layer_only",
+        "no_probability_change_confirmed": true,
+        "note": "未把大比分写成主线，仍保留 headline score 与 1X2 概率。"
+      },
+      "recommended_probability_adjustment": "no_numeric_override_before_official_lineups_and_market_snapshot",
+      "missing_data": [
+        "official_lineups",
+        "latest_injury_report",
+        "official_same_source_jingcai_odds"
+      ]
+    },
+    {
+      "match_no": "M88",
+      "fixture": "澳大利亚 vs 埃及",
+      "verdict": "hold",
+      "review_scope": "prediction_can_be_discussed; betting_and_final_lock_hold",
+      "top_concerns": [
+        {
+          "concern": "T-75官方首发未出，预计首发只为probable_not_official。",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high"
+        },
+        {
+          "concern": "官方竞彩同源赔率缺失，不能做可执行赔率校准。",
+          "category": "market",
+          "severity": "blocker",
+          "confidence": "high"
+        },
+        {
+          "concern": "大比分尾部层只能作为可见性，不得改写xG/1X2/泊松矩阵。",
+          "category": "model",
+          "severity": "medium",
+          "confidence": "high"
+        }
+      ],
+      "knockout_big_score_tail_review": {
+        "status": "pass_as_visibility_layer_only",
+        "no_probability_change_confirmed": true,
+        "note": "未把大比分写成主线，仍保留 headline score 与 1X2 概率。"
+      },
+      "recommended_probability_adjustment": "no_numeric_override_before_official_lineups_and_market_snapshot",
+      "missing_data": [
+        "official_lineups",
+        "latest_injury_report",
+        "official_same_source_jingcai_odds"
+      ]
+    }
+  ]
+}

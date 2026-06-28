@@ -1,0 +1,189 @@
+﻿{
+  "schema_version": "round32_m85_m88_betting_gates_v2_upstream_present_hold",
+  "updated_at": "2026-06-29T00:20:00+08:00",
+  "project": "E:/worldcup",
+  "role": "betting_risk_thread",
+  "task_scope": "M85-M88 Round of 32 pre-match betting gate review only",
+  "workflow_status": "upstream_present_gates_not_closed",
+  "overall_status": "hold_not_executable",
+  "allowed_states": ["hold_not_executable", "discussion_only", "observation_only"],
+  "no_executable_betting_advice": true,
+  "canonical_bracket_source": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+  "required_upstream": {
+    "data_refresh": {
+      "path": "data/packets/matches/round32-m85-m88-data-refresh-20260629.json",
+      "status": "available_parse_ok",
+      "last_write_observed": "2026-06-28T23:56:59+08:00"
+    },
+    "model_quant_chain": {
+      "path": "data/outputs/match_predictions/round32-m85-m88-v3-quant-prediction-20260629.json",
+      "status": "available_parse_ok",
+      "last_write_observed": "2026-06-29T00:00:55+08:00"
+    },
+    "red_team_review": {
+      "path": "data/reviews/red_team/round32-m85-m88-prediction-red-team-20260629.json",
+      "status": "available_parse_ok",
+      "last_write_observed": "2026-06-29T00:00:55+08:00",
+      "verdict_summary": "all_matches_hold"
+    }
+  },
+  "global_gate_result": {
+    "official_lineups_gate": "missing",
+    "latest_injury_gate": "partial_source_limited_needs_late_check",
+    "official_jc_odds_gate": "missing",
+    "same_source_market_snapshot_gate": "missing",
+    "red_team_gate": "hold",
+    "odds_snapshot_status": "missing_unavailable",
+    "overall_status": "hold_not_executable",
+    "prohibited_language_check": "passed_no_executable_or_hype_language",
+    "gate_decision": "upstream_present_but_hold_not_executable"
+  },
+  "matches": [
+    {
+      "match_no": "M85",
+      "fixture": "瑞士 vs 阿尔及利亚",
+      "canonical_slot": "1B vs 3J",
+      "host_date": "2026-07-02",
+      "venue": "Vancouver Stadium",
+      "model_observation_only": {
+        "xg": {"home": 1.42, "away": 1.16},
+        "ninety_minute_1x2": {"home_win": 0.42, "draw": 0.28, "away_win": 0.30},
+        "totals": {"over_2_5": 0.49, "under_2_5": 0.51},
+        "adjusted_top_scoreline": {"score": "1-0", "probability": 0.104},
+        "note": "Model values are observation-only and not a ticket instruction."
+      },
+      "betting_gate": {
+        "official_lineups_gate": "missing",
+        "latest_injury_gate": "partial_source_limited_needs_late_check",
+        "official_jc_odds_gate": "missing",
+        "same_source_market_snapshot_gate": "missing",
+        "red_team_gate": "hold",
+        "overall_status": "hold_not_executable",
+        "odds_snapshot_status": "missing_unavailable",
+        "prohibited_language_check": "passed"
+      },
+      "market_availability": {
+        "official_china_jingcai": {"status": "missing", "source": null, "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "source": null, "captured_at": null},
+        "source_500": {"status": "not_captured", "source": null, "captured_at": null},
+        "markets": {"1x2": "missing", "handicap": "missing", "over_under": "missing", "correct_score": "missing", "total_goals": "missing", "half_full_time": "missing"},
+        "same_source_complete": false
+      },
+      "risk_boundary": "Red-team verdict is hold; official lineups, latest availability and same-source official odds are not closed.",
+      "risk_notes": ["T-75 official lineup is not captured.", "Official Jingcai same-source odds are missing.", "Big-score tail layer is visibility-only and must not alter xG, 1X2 or ticket language."],
+      "deletion_or_downgrade_items": ["any executable ticket wording", "any odds-value claim", "any score, handicap, total-goals or half/full-time valuation"],
+      "waiting_items": ["T-75 official lineups", "latest injuries, suspensions and minutes limits", "official Jingcai odds", "same-source 1X2/handicap/totals snapshot", "red-team release from hold"]
+    },
+    {
+      "match_no": "M86",
+      "fixture": "阿根廷 vs 佛得角",
+      "canonical_slot": "1J vs 2H",
+      "host_date": "2026-07-03",
+      "venue": "Miami Stadium",
+      "model_observation_only": {
+        "xg": {"home": 1.95, "away": 0.72},
+        "ninety_minute_1x2": {"home_win": 0.66, "draw": 0.20, "away_win": 0.14},
+        "totals": {"over_2_5": 0.53, "under_2_5": 0.47},
+        "adjusted_top_scoreline": {"score": "2-0", "probability": 0.119},
+        "note": "Model values are observation-only and not a ticket instruction."
+      },
+      "betting_gate": {
+        "official_lineups_gate": "missing",
+        "latest_injury_gate": "partial_source_limited_needs_late_check",
+        "official_jc_odds_gate": "missing",
+        "same_source_market_snapshot_gate": "missing",
+        "red_team_gate": "hold",
+        "overall_status": "hold_not_executable",
+        "odds_snapshot_status": "missing_unavailable",
+        "prohibited_language_check": "passed"
+      },
+      "market_availability": {
+        "official_china_jingcai": {"status": "missing", "source": null, "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "source": null, "captured_at": null},
+        "source_500": {"status": "not_captured", "source": null, "captured_at": null},
+        "markets": {"1x2": "missing", "handicap": "missing", "over_under": "missing", "correct_score": "missing", "total_goals": "missing", "half_full_time": "missing"},
+        "same_source_complete": false
+      },
+      "risk_boundary": "Red-team verdict is hold; favorite framing cannot be translated into betting language while official and same-source market gates are missing.",
+      "risk_notes": ["T-75 official lineup is not captured.", "Latest injury and minutes information remains source-limited.", "Big-score tail visibility cannot be used as a margin or score valuation."],
+      "deletion_or_downgrade_items": ["any executable ticket wording", "any favorite-tax or value conclusion", "any margin or score valuation"],
+      "waiting_items": ["T-75 official lineups", "latest injuries, suspensions and minutes limits", "official Jingcai odds", "same-source 1X2/handicap/totals snapshot", "red-team release from hold"]
+    },
+    {
+      "match_no": "M87",
+      "fixture": "哥伦比亚 vs 加纳",
+      "canonical_slot": "1K vs 3L",
+      "host_date": "2026-07-03",
+      "venue": "Kansas City Stadium",
+      "model_observation_only": {
+        "xg": {"home": 1.55, "away": 1.04},
+        "ninety_minute_1x2": {"home_win": 0.48, "draw": 0.27, "away_win": 0.25},
+        "totals": {"over_2_5": 0.50, "under_2_5": 0.50},
+        "adjusted_top_scoreline": {"score": "2-1", "probability": 0.096},
+        "note": "Model values are observation-only and not a ticket instruction."
+      },
+      "betting_gate": {
+        "official_lineups_gate": "missing",
+        "latest_injury_gate": "partial_source_limited_needs_late_check",
+        "official_jc_odds_gate": "missing",
+        "same_source_market_snapshot_gate": "missing",
+        "red_team_gate": "hold",
+        "overall_status": "hold_not_executable",
+        "odds_snapshot_status": "missing_unavailable",
+        "prohibited_language_check": "passed"
+      },
+      "market_availability": {
+        "official_china_jingcai": {"status": "missing", "source": null, "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "source": null, "captured_at": null},
+        "source_500": {"status": "not_captured", "source": null, "captured_at": null},
+        "markets": {"1x2": "missing", "handicap": "missing", "over_under": "missing", "correct_score": "missing", "total_goals": "missing", "half_full_time": "missing"},
+        "same_source_complete": false
+      },
+      "risk_boundary": "Red-team verdict is hold; knockout 90-minute and advancement boundary cannot be priced without official same-source markets.",
+      "risk_notes": ["T-75 official lineup is not captured.", "Official Jingcai same-source odds are missing.", "Draw and narrow-margin paths must remain discussion-only."],
+      "deletion_or_downgrade_items": ["any executable ticket wording", "any 90-minute direction claim", "any draw or narrow-margin valuation"],
+      "waiting_items": ["T-75 official lineups", "latest injuries, suspensions and minutes limits", "official Jingcai odds", "same-source 1X2/handicap/totals snapshot", "red-team release from hold"]
+    },
+    {
+      "match_no": "M88",
+      "fixture": "澳大利亚 vs 埃及",
+      "canonical_slot": "2D vs 2G",
+      "host_date": "2026-07-03",
+      "venue": "Dallas Stadium",
+      "model_observation_only": {
+        "xg": {"home": 1.05, "away": 1.32},
+        "ninety_minute_1x2": {"home_win": 0.29, "draw": 0.29, "away_win": 0.42},
+        "totals": {"over_2_5": 0.45, "under_2_5": 0.55},
+        "adjusted_top_scoreline": {"score": "1-2", "probability": 0.087},
+        "note": "Model values are observation-only and not a ticket instruction."
+      },
+      "betting_gate": {
+        "official_lineups_gate": "missing",
+        "latest_injury_gate": "partial_source_limited_needs_late_check",
+        "official_jc_odds_gate": "missing",
+        "same_source_market_snapshot_gate": "missing",
+        "red_team_gate": "hold",
+        "overall_status": "hold_not_executable",
+        "odds_snapshot_status": "missing_unavailable",
+        "prohibited_language_check": "passed"
+      },
+      "market_availability": {
+        "official_china_jingcai": {"status": "missing", "source": null, "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "source": null, "captured_at": null},
+        "source_500": {"status": "not_captured", "source": null, "captured_at": null},
+        "markets": {"1x2": "missing", "handicap": "missing", "over_under": "missing", "correct_score": "missing", "total_goals": "missing", "half_full_time": "missing"},
+        "same_source_complete": false
+      },
+      "risk_boundary": "Red-team verdict is hold; tactical and player-state narratives cannot be priced without official same-source markets.",
+      "risk_notes": ["T-75 official lineup is not captured.", "Latest injury and minutes information remains source-limited.", "Totals, score and half/full-time markets have no official same-source calibration."],
+      "deletion_or_downgrade_items": ["any executable ticket wording", "any totals valuation", "any score or half/full-time valuation"],
+      "waiting_items": ["T-75 official lineups", "latest injuries, suspensions and minutes limits", "official Jingcai odds", "same-source 1X2/handicap/totals snapshot", "red-team release from hold"]
+    }
+  ],
+  "validation": {
+    "json_parse": "passed_after_write",
+    "forbidden_tokens_absent": true,
+    "raw_json_code_block_absent": true,
+    "invalid_runtime_literals_absent": true
+  }
+}
