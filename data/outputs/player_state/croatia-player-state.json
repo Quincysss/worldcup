@@ -4,9 +4,9 @@
   "team_en": "Croatia",
   "group": "L",
   "status": "complete_current_stage",
-  "player_state_update_status": "updated_round2_postmatch",
+  "player_state_update_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
   "created_at": "2026-06-21T00:09:43+08:00",
-  "updated_at": "2026-06-24T09:54:21+08:00",
+  "updated_at": "2026-06-28T22:35:00+08:00",
   "captured_at": "2026-06-21T00:09:43+08:00",
   "owner": "worldcup-data-collector-croatia",
   "scope": "同步L组第一轮英格兰4-2克罗地亚后的球员状态；不主写单场复盘",
@@ -288,7 +288,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "多米尼克·科塔尔斯基",
+        "english_name": "Dominik Kotarski",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 12,
@@ -534,7 +552,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "伊沃尔·潘杜尔",
+        "english_name": "Ivor Pandur",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 1,
@@ -611,7 +647,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.5,
+      "form_status_1_5": 3.2,
       "form_reason": "虽丢4球但Guardian给9分，多次高质量扑救避免比分扩大。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -779,7 +815,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "零封，后段处理传中和定位球保持稳定。"
       },
-      "form_status_reason": "零封，后段处理传中和定位球保持稳定。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "多米尼克·利瓦科维奇",
+        "english_name": "Dominik Livakovic",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.2,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.2,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 4,
@@ -856,7 +910,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.1,
+      "form_status_1_5": 3.0,
       "form_reason": "打满但防线承压，补时错失近距离机会。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -1024,7 +1078,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "首发半场被换下，未见明确伤停结论，标记赛前复核。"
       },
-      "form_status_reason": "首发半场被换下，未见明确伤停结论，标记赛前复核。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "约什科·格瓦迪奥尔",
+        "english_name": "Josko Gvardiol",
+        "started": "替补",
+        "minutes": 2,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 22,
@@ -1101,7 +1173,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.5,
+      "form_status_1_5": 2.5,
       "form_reason": "有失位也有亮点，Guardian给7分。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -1269,7 +1341,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "卢卡·武什科维奇",
+        "english_name": "Luka Vuskovic",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 6,
@@ -1346,7 +1436,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.4,
+      "form_status_1_5": 3.0,
       "form_reason": "打满但防线组织不稳，评分偏低。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -1514,7 +1604,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "中卫线保护中路，限制巴拿马禁区抢点。"
       },
-      "form_status_reason": "中卫线保护中路，限制巴拿马禁区抢点。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "约西普·舒塔洛",
+        "english_name": "Josip Sutalo",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 3,
@@ -1592,7 +1700,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.4,
+      "form_status_1_5": 3.0,
       "form_reason": "未出场，状态保持观察。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -1760,7 +1868,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "中卫线保持零封，对传中落点保护较稳。"
       },
-      "form_status_reason": "中卫线保持零封，对传中落点保护较稳。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "马林·庞格拉契奇",
+        "english_name": "Marin Pongracic",
+        "started": "是",
+        "minutes": 88,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 25,
@@ -2006,7 +2132,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "马丁·埃尔利奇",
+        "english_name": "Martin Erlic",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 5,
@@ -2252,7 +2396,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "杜耶·查莱塔-察尔",
+        "english_name": "Duje Caleta-Car",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 2,
@@ -2329,7 +2491,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.8,
+      "form_status_1_5": 3.0,
       "form_reason": "右路攻防存在感强，Guardian给7分。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -2497,7 +2659,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "参与制胜进球链条，右路攻防质量高。"
       },
-      "form_status_reason": "参与制胜进球链条，右路攻防质量高。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "约西普·斯塔尼希奇",
+        "english_name": "Josip Stanisic",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 7,
@@ -2743,7 +2923,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "尼古拉·莫罗",
+        "english_name": "Nikola Moro",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 18,
@@ -2989,7 +3187,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "克里斯蒂扬·雅基奇",
+        "english_name": "Kristijan Jakic",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 17,
@@ -3066,7 +3282,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.5,
+      "form_status_1_5": 4.4,
       "form_reason": "贡献助攻但也错失下半场机会。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -3234,7 +3450,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "31分钟远射破门。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "佩塔尔·苏契奇",
+        "english_name": "Petar Sucic",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "31分钟远射破门。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 4.4,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 4.4,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 8,
@@ -3479,7 +3713,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "中场控节奏和抗压转移稳定。"
       },
-      "form_status_reason": "中场控节奏和抗压转移稳定。"
+      "form_status_reason": "首发80分钟，按体能/战术轮换下场。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "马特奥·科瓦契奇",
+        "english_name": "Mateo Kovacic",
+        "started": "是",
+        "minutes": 80,
+        "event_summary": "首发80分钟，按体能/战术轮换下场。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.6,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 21,
@@ -3725,7 +3977,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "卢卡·苏契奇",
+        "english_name": "Luka Sucic",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 15,
@@ -3802,7 +4072,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.3,
+      "form_status_1_5": 3.1,
       "form_reason": "参与前场连接但中场对抗下风。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -3970,7 +4240,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "前场右侧/肋部参与制胜进球发起链条。"
       },
-      "form_status_reason": "前场右侧/肋部参与制胜进球发起链条。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "马里奥·帕沙利奇",
+        "english_name": "Mario Pasalic",
+        "started": "替补",
+        "minutes": 10,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.1,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.1,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 10,
@@ -4047,7 +4335,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.9,
+      "form_status_1_5": 4.6,
       "form_reason": "有送点负面事件，但仍保持传控质量，Guardian给7分。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -4215,7 +4503,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "第200场国家队出场，中场节奏核心；遭 Barcenas 犯规。"
       },
-      "form_status_reason": "第200场国家队出场，中场节奏核心；遭 Barcenas 犯规。"
+      "form_status_reason": "角球助攻制胜并控制末段节奏。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "卢卡·莫德里奇",
+        "english_name": "Luka Modric",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "角球助攻制胜并控制末段节奏。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 4.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 4.6,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 16,
@@ -4292,7 +4598,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.4,
+      "form_status_1_5": 3.0,
       "form_reason": "进球质量高，前场直接性明显。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -4460,7 +4766,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "首发中场连接顺畅，但直接制造机会有限。"
       },
-      "form_status_reason": "首发中场连接顺畅，但直接制造机会有限。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "马丁·巴图里纳",
+        "english_name": "Martin Baturina",
+        "started": "是",
+        "minutes": 88,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 13,
@@ -4537,7 +4861,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.5,
+      "form_status_1_5": 4.5,
       "form_reason": "替补登场时间有限。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -4705,7 +5029,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "83分钟接Modric角球头球制胜。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "尼古拉·弗拉希奇",
+        "english_name": "Nikola Vlasic",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "83分钟接Modric角球头球制胜。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 4.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 4.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 19,
@@ -4951,7 +5293,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "托尼·弗鲁克",
+        "english_name": "Toni Fruk",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 9,
@@ -5028,7 +5388,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.6,
+      "form_status_1_5": 2.5,
       "form_reason": "替补后制造威胁但未能追平。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -5196,7 +5556,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "半场替补后提高禁区前串联和终结支援。"
       },
-      "form_status_reason": "半场替补后提高禁区前串联和终结支援。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "安德雷·克拉马里奇",
+        "english_name": "Andrej Kramaric",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 14,
@@ -5273,7 +5651,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.3,
+      "form_status_1_5": 3.1,
       "form_reason": "贡献助攻且体能表现积极。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -5441,7 +5819,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "边路宽度与传中威胁稳定。"
       },
-      "form_status_reason": "边路宽度与传中威胁稳定。"
+      "form_status_reason": "68分钟黄牌，宽路和定位球压迫仍有价值。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "伊万·佩里希奇",
+        "english_name": "Ivan Perisic",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "68分钟黄牌，宽路和定位球压迫仍有价值。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.1,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.1,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 24,
@@ -5518,7 +5914,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3,
+      "form_status_1_5": 3.0,
       "form_reason": "替补后右路有射门和推进。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -5686,7 +6082,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "马尔科·帕沙利奇",
+        "english_name": "Marco Pasalic",
+        "started": "替补",
+        "minutes": 2,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 20,
@@ -5763,7 +6177,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.5,
+      "form_status_1_5": 3.0,
       "form_reason": "替补上场但未改变比分。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -5931,7 +6345,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
       },
-      "form_status_reason": "第二轮赛后团队层面迭代。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "伊戈尔·马塔诺维奇",
+        "english_name": "Igor Matanovic",
+        "started": "替补",
+        "minutes": 23,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 26,
@@ -6008,7 +6440,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.8,
+      "form_status_1_5": 2.5,
       "form_reason": "把握机会扳平，前场支点有效。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -6176,7 +6608,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "首发中锋半场被换下，终结参与不足。"
       },
-      "form_status_reason": "首发中锋半场被换下，终结参与不足。"
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "佩塔尔·穆萨",
+        "english_name": "Petar Musa",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "number": 11,
@@ -6254,7 +6704,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 4.2,
+      "form_status_1_5": 3.1,
       "form_reason": "未出场，状态保持观察。",
       "next_match_availability_note": "未见本场新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -6422,7 +6872,25 @@
         "injury_status_after_match": "no_new_official_report",
         "note": "半场替补登场，第54分钟打入制胜球。"
       },
-      "form_status_reason": "半场替补登场，第54分钟打入制胜球。"
+      "form_status_reason": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_CRO_2-1_GHA",
+        "match": "2026-06-28_克罗地亚_2-1_加纳",
+        "date": "2026-06-28",
+        "opponent": "加纳",
+        "player": "安特·布迪米尔",
+        "english_name": "Ante Budimir",
+        "started": "是",
+        "minutes": 67,
+        "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.1,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.1,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     }
   ],
   "gaps_and_conflicts": [
@@ -7055,5 +7523,457 @@
     "review_file": "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\L组\\2026-06-17_英格兰_4-2_克罗地亚_复盘.md"
   },
   "round_context": "巴拿马 0-1 克罗地亚 第二轮赛后迭代：写入 round2、内部评分、状态值与伤停观察项。",
-  "round2_source_status": "Guardian live + FOX boxscore, internal ratings"
+  "round2_source_status": "Guardian live + FOX boxscore, internal ratings",
+  "round3_postmatch_update": {
+    "match_id": "2026-06-28_CRO_2-1_GHA",
+    "match": "2026-06-28_克罗地亚_2-1_加纳",
+    "opponent": "加纳",
+    "result": "2-1 win",
+    "captured_at": "2026-06-28T22:35:00+08:00",
+    "status": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+    "source_log": [
+      {
+        "source": "The Guardian live - Croatia 2-1 Ghana",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/croatia-v-ghana-world-cup-2026-live",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "starting_lineups",
+          "goals",
+          "substitutions",
+          "cards",
+          "xG note",
+          "injury watch"
+        ],
+        "source_status": "confirmed_primary_live"
+      },
+      {
+        "source": "The Guardian live - Panama 0-2 England",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/panama-v-england-world-cup-2026-live-updates",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "starting_lineups",
+          "goals",
+          "assists",
+          "substitutions",
+          "cards",
+          "injury watch",
+          "group table"
+        ],
+        "source_status": "confirmed_primary_live"
+      },
+      {
+        "source": "Times of India - Croatia vs Ghana result",
+        "url": "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/croatia-vs-ghana-fifa-world-cup-match-result-vlasic-sucic-strike-to-seal-croatias-knockout-berth-with-2-1-win-over-ghana/articleshow/132044231.cms",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "goalscorers",
+          "knockout context"
+        ],
+        "source_status": "supporting"
+      }
+    ],
+    "data_gaps": [
+      "FIFA官方完整事件表未取得。",
+      "两场官方完整逐人分钟、全部替补补时细节和完整技术统计未闭合。",
+      "同源外部逐人评分未取得；后续成员表/player_state应将 external_rating 设为 null，并写 rating_source_status/rating_missing_note。",
+      "克罗地亚 2-1 加纳部分助攻未由当前可靠源确认，Petar Sucic和Derrick Luckassen进球 assist 保留 null。",
+      "加纳 Antoine Semenyo、英格兰 Jarell Quansah 的赛后伤情需后续官方/队医或发布会源复核。",
+      "本包只提供结构化事实输入，未直接更新四队 canonical 成员表或 player_state。"
+    ]
+  },
+  "round3_internal_rating_logs": [
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "多米尼克·科塔尔斯基",
+      "english_name": "Dominik Kotarski",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "伊沃尔·潘杜尔",
+      "english_name": "Ivor Pandur",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "多米尼克·利瓦科维奇",
+      "english_name": "Dominik Livakovic",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.2,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "约什科·格瓦迪奥尔",
+      "english_name": "Josko Gvardiol",
+      "started": "替补",
+      "minutes": 2,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "卢卡·武什科维奇",
+      "english_name": "Luka Vuskovic",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "约西普·舒塔洛",
+      "english_name": "Josip Sutalo",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "马林·庞格拉契奇",
+      "english_name": "Marin Pongracic",
+      "started": "是",
+      "minutes": 88,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "马丁·埃尔利奇",
+      "english_name": "Martin Erlic",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "杜耶·查莱塔-察尔",
+      "english_name": "Duje Caleta-Car",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "约西普·斯塔尼希奇",
+      "english_name": "Josip Stanisic",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "尼古拉·莫罗",
+      "english_name": "Nikola Moro",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "克里斯蒂扬·雅基奇",
+      "english_name": "Kristijan Jakic",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "佩塔尔·苏契奇",
+      "english_name": "Petar Sucic",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 4.4,
+      "event_summary": "31分钟远射破门。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "马特奥·科瓦契奇",
+      "english_name": "Mateo Kovacic",
+      "started": "是",
+      "minutes": 80,
+      "internal_match_rating_1_5": 3.6,
+      "event_summary": "首发80分钟，按体能/战术轮换下场。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "卢卡·苏契奇",
+      "english_name": "Luka Sucic",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "马里奥·帕沙利奇",
+      "english_name": "Mario Pasalic",
+      "started": "替补",
+      "minutes": 10,
+      "internal_match_rating_1_5": 3.1,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "卢卡·莫德里奇",
+      "english_name": "Luka Modric",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 4.6,
+      "event_summary": "角球助攻制胜并控制末段节奏。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "马丁·巴图里纳",
+      "english_name": "Martin Baturina",
+      "started": "是",
+      "minutes": 88,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "尼古拉·弗拉希奇",
+      "english_name": "Nikola Vlasic",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 4.5,
+      "event_summary": "83分钟接Modric角球头球制胜。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "托尼·弗鲁克",
+      "english_name": "Toni Fruk",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "安德雷·克拉马里奇",
+      "english_name": "Andrej Kramaric",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "伊万·佩里希奇",
+      "english_name": "Ivan Perisic",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.1,
+      "event_summary": "68分钟黄牌，宽路和定位球压迫仍有价值。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "马尔科·帕沙利奇",
+      "english_name": "Marco Pasalic",
+      "started": "替补",
+      "minutes": 2,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "伊戈尔·马塔诺维奇",
+      "english_name": "Igor Matanovic",
+      "started": "替补",
+      "minutes": 23,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "佩塔尔·穆萨",
+      "english_name": "Petar Musa",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_CRO_2-1_GHA",
+      "match": "2026-06-28_克罗地亚_2-1_加纳",
+      "date": "2026-06-28",
+      "opponent": "加纳",
+      "player": "安特·布迪米尔",
+      "english_name": "Ante Budimir",
+      "started": "是",
+      "minutes": 67,
+      "internal_match_rating_1_5": 3.1,
+      "event_summary": "必须赢局面下控节奏并由定位球/二点完成后段破局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    }
+  ]
 }

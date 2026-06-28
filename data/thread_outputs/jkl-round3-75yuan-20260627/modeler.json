@@ -1,0 +1,2256 @@
+{
+  "artifact": "jkl_round3_75yuan_discussion_only_model_probability_mapping",
+  "status": "completed_discussion_only_mapping",
+  "generated_at": "2026-06-27T00:00:00+08:00",
+  "scope": "J/K/L group round three candidate probability mapping; no final portfolio, no stake allocation, no execution language.",
+  "input_files": {
+    "prediction_json": [
+      "data/outputs/match_predictions/j-group-round3-v3-quant-prediction-20260627.json",
+      "data/outputs/match_predictions/k-group-round3-quant-prediction-20260627.json",
+      "data/outputs/match_predictions/l-group-round3-v3-quant-prediction-20260627.json"
+    ],
+    "optional_jkl_data_collector": "data/thread_outputs/jkl-round3-75yuan-20260627/data-collector.json",
+    "optional_jkl_data_collector_status": "available"
+  },
+  "rules": {
+    "no_betting_advice": true,
+    "no_final_tickets_or_amounts": true,
+    "betting_gate_status": "discussion_only_hold",
+    "relationship_values": [
+      "aligned",
+      "value_override",
+      "hedge",
+      "conflict"
+    ],
+    "bucket_values": [
+      "suitable_main_bucket_candidate",
+      "entertainment_bucket_candidate",
+      "remove_candidate",
+      "wait_live_candidate"
+    ]
+  },
+  "method": {
+    "model_probability_sources": "Use red-team-after/final 1X2 probabilities, official xG/top-score/totals from J/K/L prediction JSON, and Poisson-derived margin/HTFT buckets where the prediction file does not directly publish a betting-settlement probability.",
+    "market_probability_sources": "Use no-vig probabilities from same-source snapshots when present; otherwise null.",
+    "edge_threshold": "+/-0.03 treated as the noise band for discussion-only mapping.",
+    "handicap_translation_guard": "Every handicap candidate includes its real full-time settlement condition."
+  },
+  "matches": [
+    {
+      "group": "J",
+      "match_id": "2026-06-28_algeria_vs_austria",
+      "fixture": "Algeria vs Austria",
+      "red_team_after_release": {
+        "red_team_status": "hold",
+        "betting_gate_status": "discussion_only_hold",
+        "note": "Probabilities are for candidate mapping only; no final ticket or stake is generated."
+      },
+      "expected_goals": {
+        "home": 1.14,
+        "away": 1.31
+      },
+      "probabilities_1x2_after_red_team": {
+        "home_win": 0.315,
+        "draw": 0.33,
+        "away_win": 0.355,
+        "probability_sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4433,
+        "under_2_5": 0.5567
+      },
+      "btts_probabilities": {
+        "yes": 0.4967,
+        "no": 0.5033
+      },
+      "top5_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1289
+        },
+        {
+          "score": "0-1",
+          "probability": 0.113
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0984
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0863
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0844
+        }
+      ],
+      "market_snapshot": {
+        "source": "China Sports Lottery / project snapshot",
+        "one_x_two_no_vig": {
+          "home_win": 0.264263,
+          "draw": 0.419565,
+          "away_win": 0.316172
+        },
+        "handicap": {
+          "line": 1,
+          "no_vig": {
+            "win": 0.676,
+            "draw": 0.2036,
+            "loss": 0.1205
+          }
+        },
+        "totals_no_vig": null
+      },
+      "candidate_mapping": {
+        "one_x_two": [
+          {
+            "market_type": "1x2",
+            "selected_bet": "Algeria win",
+            "model_probability": 0.315,
+            "market_implied_probability": 0.2643,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.0507,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Algeria must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Draw",
+            "model_probability": 0.33,
+            "market_implied_probability": 0.4196,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.0896,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Full-time result must be level after 90 minutes.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "hedge",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Austria win",
+            "model_probability": 0.355,
+            "market_implied_probability": 0.3162,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.0388,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Austria must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "handicap_wdl": [
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Algeria +1 handicap win",
+            "model_probability": 0.5952,
+            "market_implied_probability": 0.676,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.0808,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium_low",
+            "settlement_condition": "Algeria +1 win means Algeria real win/draw.",
+            "model_direction": "Handicap settlement translated from Poisson margin distribution, not ordinary 1X2.",
+            "relationship": "aligned",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Algeria +1 handicap draw",
+            "model_probability": 0.2213,
+            "market_implied_probability": 0.2036,
+            "edge_or_no_edge": {
+              "status": "no_clear_edge",
+              "delta": 0.0177,
+              "note": "Difference is inside the small-sample/noise band."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Algeria +1 draw means Austria wins by exactly 1 goal(s).",
+            "model_direction": "Exact-margin bucket from Poisson margin distribution.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Algeria +1 handicap loss",
+            "model_probability": 0.1835,
+            "market_implied_probability": 0.1205,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.063,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Algeria +1 loss means Austria wins by 2 or more goals.",
+            "model_direction": "Handicap non-cover/cover-against bucket from Poisson margin distribution.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          }
+        ],
+        "exact_score": [
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Algeria 1-1 Austria",
+            "model_probability": 0.1289,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Algeria 0-1 Austria",
+            "model_probability": 0.113,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Algeria 1-0 Austria",
+            "model_probability": 0.0984,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Algeria 0-0 Austria",
+            "model_probability": 0.0863,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Algeria 1-2 Austria",
+            "model_probability": 0.0844,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-2.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "total_goals": [
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Under 2.5 goals",
+            "model_probability": 0.5567,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Wins if total full-time goals are 0, 1, or 2.",
+            "model_direction": "Lower-total cluster preferred by model.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Over 2.5 goals",
+            "model_probability": 0.4433,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Wins if total full-time goals are 3 or more.",
+            "model_direction": "Secondary total path.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "half_full_time": [
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Austria",
+            "model_probability": 0.1466,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result A; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Austria / FT Austria",
+            "model_probability": 0.2374,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result A and full-time result A; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Draw",
+            "model_probability": 0.1723,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result D; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ]
+      },
+      "candidate_bucket_summary": {
+        "entertainment_bucket_candidate": [
+          "Algeria win",
+          "Algeria +1 handicap draw"
+        ],
+        "remove_candidate": [
+          "Draw",
+          "Algeria +1 handicap win",
+          "Algeria +1 handicap loss"
+        ],
+        "wait_live_candidate": [
+          "Austria win",
+          "Algeria 1-1 Austria",
+          "Algeria 0-1 Austria",
+          "Algeria 1-0 Austria",
+          "Algeria 0-0 Austria",
+          "Algeria 1-2 Austria",
+          "Under 2.5 goals",
+          "Over 2.5 goals",
+          "HT Draw / FT Austria",
+          "HT Austria / FT Austria",
+          "HT Draw / FT Draw"
+        ]
+      },
+      "quality_notes": [
+        "Handicap WDL probabilities are derived from margin buckets and are not substituted with ordinary 1X2 probabilities.",
+        "Exact score and half/full-time candidates are high variance; most same-source odds are unavailable in the prediction packet.",
+        "T-75 official lineup and latest same-source market checks remain outside this mapping artifact."
+      ]
+    },
+    {
+      "group": "J",
+      "match_id": "2026-06-28_jordan_vs_argentina",
+      "fixture": "Jordan vs Argentina",
+      "red_team_after_release": {
+        "red_team_status": "hold",
+        "betting_gate_status": "discussion_only_hold",
+        "note": "Probabilities are for candidate mapping only; no final ticket or stake is generated."
+      },
+      "expected_goals": {
+        "home": 0.56,
+        "away": 1.95
+      },
+      "probabilities_1x2_after_red_team": {
+        "home_win": 0.12,
+        "draw": 0.24,
+        "away_win": 0.64,
+        "probability_sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4587,
+        "under_2_5": 0.5413
+      },
+      "btts_probabilities": {
+        "yes": 0.3678,
+        "no": 0.6322
+      },
+      "top5_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.1585
+        },
+        {
+          "score": "0-2",
+          "probability": 0.1545
+        },
+        {
+          "score": "0-3",
+          "probability": 0.1004
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0887
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0865
+        }
+      ],
+      "market_snapshot": {
+        "source": "China Sports Lottery / project snapshot",
+        "one_x_two_no_vig": null,
+        "handicap": {
+          "line": 2,
+          "no_vig": {
+            "win": 0.388355,
+            "draw": 0.229987,
+            "loss": 0.381659
+          }
+        },
+        "totals_no_vig": null
+      },
+      "candidate_mapping": {
+        "one_x_two": [
+          {
+            "market_type": "1x2",
+            "selected_bet": "Jordan win",
+            "model_probability": 0.12,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Jordan must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Draw",
+            "model_probability": 0.24,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Full-time result must be level after 90 minutes.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Argentina win",
+            "model_probability": 0.64,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium_low",
+            "settlement_condition": "Argentina must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "handicap_wdl": [
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Jordan +2 handicap win",
+            "model_probability": 0.5566,
+            "market_implied_probability": 0.3884,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.1682,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Jordan +2 win means Jordan real win/draw, or Argentina wins by fewer than 2 goals.",
+            "model_direction": "Handicap settlement translated from Poisson margin distribution, not ordinary 1X2.",
+            "relationship": "aligned",
+            "bucket_label": "suitable_main_bucket_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Jordan +2 handicap draw",
+            "model_probability": 0.219,
+            "market_implied_probability": 0.23,
+            "edge_or_no_edge": {
+              "status": "no_clear_edge",
+              "delta": -0.011,
+              "note": "Difference is inside the small-sample/noise band."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Jordan +2 draw means Argentina wins by exactly 2 goal(s).",
+            "model_direction": "Exact-margin bucket from Poisson margin distribution.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Jordan +2 handicap loss",
+            "model_probability": 0.2244,
+            "market_implied_probability": 0.3817,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.1573,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Jordan +2 loss means Argentina wins by 3 or more goals.",
+            "model_direction": "Handicap non-cover/cover-against bucket from Poisson margin distribution.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          }
+        ],
+        "exact_score": [
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Jordan 0-1 Argentina",
+            "model_probability": 0.1585,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Jordan 0-2 Argentina",
+            "model_probability": 0.1545,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-2.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Jordan 0-3 Argentina",
+            "model_probability": 0.1004,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-3.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Jordan 1-1 Argentina",
+            "model_probability": 0.0887,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Jordan 1-2 Argentina",
+            "model_probability": 0.0865,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-2.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "total_goals": [
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Under 2.5 goals",
+            "model_probability": 0.5413,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Wins if total full-time goals are 0, 1, or 2.",
+            "model_direction": "Lower-total cluster preferred by model.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Over 2.5 goals",
+            "model_probability": 0.4587,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Wins if total full-time goals are 3 or more.",
+            "model_direction": "Secondary total path.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "half_full_time": [
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Argentina",
+            "model_probability": 0.2204,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result A; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Argentina / FT Argentina",
+            "model_probability": 0.463,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result A and full-time result A; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Draw",
+            "model_probability": 0.1362,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result D; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          }
+        ]
+      },
+      "candidate_bucket_summary": {
+        "remove_candidate": [
+          "Jordan win",
+          "Jordan +2 handicap loss",
+          "HT Draw / FT Draw"
+        ],
+        "wait_live_candidate": [
+          "Draw",
+          "Argentina win",
+          "Jordan 0-1 Argentina",
+          "Jordan 0-2 Argentina",
+          "Jordan 0-3 Argentina",
+          "Jordan 1-1 Argentina",
+          "Jordan 1-2 Argentina",
+          "Under 2.5 goals",
+          "Over 2.5 goals",
+          "HT Draw / FT Argentina",
+          "HT Argentina / FT Argentina"
+        ],
+        "suitable_main_bucket_candidate": [
+          "Jordan +2 handicap win"
+        ],
+        "entertainment_bucket_candidate": [
+          "Jordan +2 handicap draw"
+        ]
+      },
+      "quality_notes": [
+        "Handicap WDL probabilities are derived from margin buckets and are not substituted with ordinary 1X2 probabilities.",
+        "Exact score and half/full-time candidates are high variance; most same-source odds are unavailable in the prediction packet.",
+        "T-75 official lineup and latest same-source market checks remain outside this mapping artifact."
+      ]
+    },
+    {
+      "group": "K",
+      "match_id": "2026-06-28_K_R3_COL_POR",
+      "fixture": "Colombia vs Portugal",
+      "red_team_after_release": {
+        "red_team_status": "hold",
+        "betting_gate_status": "discussion_only_hold",
+        "note": "Probabilities are for candidate mapping only; no final ticket or stake is generated."
+      },
+      "expected_goals": {
+        "home": 1.18,
+        "away": 1.48
+      },
+      "probabilities_1x2_after_red_team": {
+        "home_win": 0.278,
+        "draw": 0.261,
+        "away_win": 0.461,
+        "probability_sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4965,
+        "under_2_5": 0.5035
+      },
+      "btts_probabilities": {
+        "yes": 0.535,
+        "no": 0.465
+      },
+      "top5_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1222
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1035
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0904
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0825
+        },
+        {
+          "score": "0-2",
+          "probability": 0.0766
+        }
+      ],
+      "market_snapshot": {
+        "source": "China Sports Lottery / project snapshot",
+        "one_x_two_no_vig": {
+          "home_win": 0.2093,
+          "draw": 0.2699,
+          "away_win": 0.5208
+        },
+        "handicap": {
+          "line": 1,
+          "no_vig": {
+            "win": 0.4663,
+            "draw": 0.2568,
+            "loss": 0.2769
+          }
+        },
+        "totals_no_vig": null
+      },
+      "candidate_mapping": {
+        "one_x_two": [
+          {
+            "market_type": "1x2",
+            "selected_bet": "Colombia win",
+            "model_probability": 0.278,
+            "market_implied_probability": 0.2093,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.0687,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Colombia must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Draw",
+            "model_probability": 0.261,
+            "market_implied_probability": 0.2699,
+            "edge_or_no_edge": {
+              "status": "no_clear_edge",
+              "delta": -0.0089,
+              "note": "Difference is inside the small-sample/noise band."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Full-time result must be level after 90 minutes.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Portugal win",
+            "model_probability": 0.461,
+            "market_implied_probability": 0.5208,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.0598,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Portugal must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "aligned",
+            "bucket_label": "remove_candidate"
+          }
+        ],
+        "handicap_wdl": [
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Colombia +1 handicap win",
+            "model_probability": 0.5592,
+            "market_implied_probability": 0.4663,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.0929,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Colombia +1 win means Colombia real win/draw.",
+            "model_direction": "Handicap settlement translated from Poisson margin distribution, not ordinary 1X2.",
+            "relationship": "aligned",
+            "bucket_label": "suitable_main_bucket_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Colombia +1 handicap draw",
+            "model_probability": 0.2244,
+            "market_implied_probability": 0.2568,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.0324,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Colombia +1 draw means Portugal wins by exactly 1 goal(s).",
+            "model_direction": "Exact-margin bucket from Poisson margin distribution.",
+            "relationship": "hedge",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Colombia +1 handicap loss",
+            "model_probability": 0.2164,
+            "market_implied_probability": 0.2769,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.0605,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Colombia +1 loss means Portugal wins by 2 or more goals.",
+            "model_direction": "Handicap non-cover/cover-against bucket from Poisson margin distribution.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          }
+        ],
+        "exact_score": [
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Colombia 1-1 Portugal",
+            "model_probability": 0.1222,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Colombia 0-1 Portugal",
+            "model_probability": 0.1035,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Colombia 1-2 Portugal",
+            "model_probability": 0.0904,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-2.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Colombia 1-0 Portugal",
+            "model_probability": 0.0825,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Colombia 0-2 Portugal",
+            "model_probability": 0.0766,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-2.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "total_goals": [
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Under 2.5 goals",
+            "model_probability": 0.5035,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Wins if total full-time goals are 0, 1, or 2.",
+            "model_direction": "Lower-total cluster preferred by model.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Over 2.5 goals",
+            "model_probability": 0.4965,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Wins if total full-time goals are 3 or more.",
+            "model_direction": "Secondary total path.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "half_full_time": [
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Portugal",
+            "model_probability": 0.1521,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result A; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Portugal / FT Portugal",
+            "model_probability": 0.2643,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result A and full-time result A; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Draw",
+            "model_probability": 0.1554,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result D; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          }
+        ]
+      },
+      "candidate_bucket_summary": {
+        "entertainment_bucket_candidate": [
+          "Colombia win",
+          "Draw"
+        ],
+        "remove_candidate": [
+          "Portugal win",
+          "Colombia +1 handicap draw",
+          "Colombia +1 handicap loss",
+          "HT Draw / FT Draw"
+        ],
+        "suitable_main_bucket_candidate": [
+          "Colombia +1 handicap win"
+        ],
+        "wait_live_candidate": [
+          "Colombia 1-1 Portugal",
+          "Colombia 0-1 Portugal",
+          "Colombia 1-2 Portugal",
+          "Colombia 1-0 Portugal",
+          "Colombia 0-2 Portugal",
+          "Under 2.5 goals",
+          "Over 2.5 goals",
+          "HT Draw / FT Portugal",
+          "HT Portugal / FT Portugal"
+        ]
+      },
+      "quality_notes": [
+        "Handicap WDL probabilities are derived from margin buckets and are not substituted with ordinary 1X2 probabilities.",
+        "Exact score and half/full-time candidates are high variance; most same-source odds are unavailable in the prediction packet.",
+        "T-75 official lineup and latest same-source market checks remain outside this mapping artifact."
+      ]
+    },
+    {
+      "group": "K",
+      "match_id": "2026-06-28_K_R3_DRC_UZB",
+      "fixture": "DR Congo vs Uzbekistan",
+      "red_team_after_release": {
+        "red_team_status": "hold",
+        "betting_gate_status": "discussion_only_hold",
+        "note": "Probabilities are for candidate mapping only; no final ticket or stake is generated."
+      },
+      "expected_goals": {
+        "home": 1.48,
+        "away": 0.98
+      },
+      "probabilities_1x2_after_red_team": {
+        "home_win": 0.5,
+        "draw": 0.255,
+        "away_win": 0.245,
+        "probability_sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4459,
+        "under_2_5": 0.5541
+      },
+      "btts_probabilities": {
+        "yes": 0.4825,
+        "no": 0.5175
+      },
+      "top5_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.1264
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1239
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0936
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0917
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0854
+        }
+      ],
+      "market_snapshot": {
+        "source": "China Sports Lottery / project snapshot",
+        "one_x_two_no_vig": {
+          "home_win": 0.5302,
+          "draw": 0.2318,
+          "away_win": 0.238
+        },
+        "handicap": {
+          "line": -1,
+          "no_vig": {
+            "win": 0.286,
+            "draw": 0.257,
+            "loss": 0.457
+          }
+        },
+        "totals_no_vig": null
+      },
+      "candidate_mapping": {
+        "one_x_two": [
+          {
+            "market_type": "1x2",
+            "selected_bet": "DR Congo win",
+            "model_probability": 0.5,
+            "market_implied_probability": 0.5302,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.0302,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "DR Congo must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: home_win.",
+            "relationship": "aligned",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Draw",
+            "model_probability": 0.255,
+            "market_implied_probability": 0.2318,
+            "edge_or_no_edge": {
+              "status": "no_clear_edge",
+              "delta": 0.0232,
+              "note": "Difference is inside the small-sample/noise band."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Full-time result must be level after 90 minutes.",
+            "model_direction": "Model 1X2 direction: home_win.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Uzbekistan win",
+            "model_probability": 0.245,
+            "market_implied_probability": 0.238,
+            "edge_or_no_edge": {
+              "status": "no_clear_edge",
+              "delta": 0.007,
+              "note": "Difference is inside the small-sample/noise band."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Uzbekistan must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: home_win.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          }
+        ],
+        "handicap_wdl": [
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "DR Congo -1 handicap win",
+            "model_probability": 0.2444,
+            "market_implied_probability": 0.286,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.0416,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "DR Congo -1 win means DR Congo wins by 2 or more goals.",
+            "model_direction": "Handicap settlement translated from Poisson margin distribution, not ordinary 1X2.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "DR Congo -1 handicap draw",
+            "model_probability": 0.2432,
+            "market_implied_probability": 0.257,
+            "edge_or_no_edge": {
+              "status": "no_clear_edge",
+              "delta": -0.0138,
+              "note": "Difference is inside the small-sample/noise band."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "DR Congo -1 draw means DR Congo wins by exactly 1 goal(s).",
+            "model_direction": "Exact-margin bucket from Poisson margin distribution.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "DR Congo -1 handicap loss",
+            "model_probability": 0.5124,
+            "market_implied_probability": 0.457,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.0554,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "DR Congo -1 loss means DR Congo does not cover: draw or Uzbekistan real win.",
+            "model_direction": "Handicap non-cover/cover-against bucket from Poisson margin distribution.",
+            "relationship": "aligned",
+            "bucket_label": "suitable_main_bucket_candidate"
+          }
+        ],
+        "exact_score": [
+          {
+            "market_type": "exact_score",
+            "selected_bet": "DR Congo 1-0 Uzbekistan",
+            "model_probability": 0.1264,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "DR Congo 1-1 Uzbekistan",
+            "model_probability": 0.1239,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "DR Congo 2-0 Uzbekistan",
+            "model_probability": 0.0936,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 2-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "DR Congo 2-1 Uzbekistan",
+            "model_probability": 0.0917,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 2-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "DR Congo 0-0 Uzbekistan",
+            "model_probability": 0.0854,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "total_goals": [
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Under 2.5 goals",
+            "model_probability": 0.5541,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Wins if total full-time goals are 0, 1, or 2.",
+            "model_direction": "Lower-total cluster preferred by model.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Over 2.5 goals",
+            "model_probability": 0.4459,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Wins if total full-time goals are 3 or more.",
+            "model_direction": "Secondary total path.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "half_full_time": [
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT DR Congo",
+            "model_probability": 0.17,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result H; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT DR Congo / FT DR Congo",
+            "model_probability": 0.2943,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result H and full-time result H; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Draw",
+            "model_probability": 0.1674,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result D; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          }
+        ]
+      },
+      "candidate_bucket_summary": {
+        "remove_candidate": [
+          "DR Congo win",
+          "DR Congo -1 handicap win",
+          "HT Draw / FT Draw"
+        ],
+        "entertainment_bucket_candidate": [
+          "Draw",
+          "Uzbekistan win",
+          "DR Congo -1 handicap draw"
+        ],
+        "suitable_main_bucket_candidate": [
+          "DR Congo -1 handicap loss"
+        ],
+        "wait_live_candidate": [
+          "DR Congo 1-0 Uzbekistan",
+          "DR Congo 1-1 Uzbekistan",
+          "DR Congo 2-0 Uzbekistan",
+          "DR Congo 2-1 Uzbekistan",
+          "DR Congo 0-0 Uzbekistan",
+          "Under 2.5 goals",
+          "Over 2.5 goals",
+          "HT Draw / FT DR Congo",
+          "HT DR Congo / FT DR Congo"
+        ]
+      },
+      "quality_notes": [
+        "Handicap WDL probabilities are derived from margin buckets and are not substituted with ordinary 1X2 probabilities.",
+        "Exact score and half/full-time candidates are high variance; most same-source odds are unavailable in the prediction packet.",
+        "T-75 official lineup and latest same-source market checks remain outside this mapping artifact."
+      ]
+    },
+    {
+      "group": "L",
+      "match_id": "2026-06-28_croatia_vs_ghana",
+      "fixture": "Croatia vs Ghana",
+      "red_team_after_release": {
+        "red_team_status": "hold",
+        "betting_gate_status": "discussion_only_hold",
+        "note": "Probabilities are for candidate mapping only; no final ticket or stake is generated."
+      },
+      "expected_goals": {
+        "home": 1.28,
+        "away": 0.78
+      },
+      "probabilities_1x2_after_red_team": {
+        "home_win": 0.5038,
+        "draw": 0.2902,
+        "away_win": 0.206,
+        "probability_sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.3396,
+        "under_2_5": 0.6604
+      },
+      "btts_probabilities": {
+        "yes": 0.391,
+        "no": 0.609
+      },
+      "top5_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.1631
+        },
+        {
+          "score": "0-0",
+          "probability": 0.1275
+        },
+        {
+          "score": "1-1",
+          "probability": 0.1273
+        },
+        {
+          "score": "2-0",
+          "probability": 0.1044
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0994
+        }
+      ],
+      "market_snapshot": {
+        "source": "China Sports Lottery / project snapshot 2026-06-26T17:43:00+08:00",
+        "one_x_two_no_vig": {
+          "home_win": 0.553166,
+          "draw": 0.290185,
+          "away_win": 0.156649
+        },
+        "handicap": {
+          "line": -1,
+          "no_vig": {
+            "win": 0.3034,
+            "draw": 0.2645,
+            "loss": 0.4322
+          }
+        },
+        "totals_no_vig": null
+      },
+      "candidate_mapping": {
+        "one_x_two": [
+          {
+            "market_type": "1x2",
+            "selected_bet": "Croatia win",
+            "model_probability": 0.5038,
+            "market_implied_probability": 0.5532,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.0493,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Croatia must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: home_win.",
+            "relationship": "aligned",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Draw",
+            "model_probability": 0.2902,
+            "market_implied_probability": 0.2902,
+            "edge_or_no_edge": {
+              "status": "no_clear_edge",
+              "delta": 0,
+              "note": "Difference is inside the small-sample/noise band."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Full-time result must be level after 90 minutes.",
+            "model_direction": "Model 1X2 direction: home_win.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Ghana win",
+            "model_probability": 0.206,
+            "market_implied_probability": 0.1566,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.0493,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Ghana must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: home_win.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          }
+        ],
+        "handicap_wdl": [
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Croatia -1 handicap win",
+            "model_probability": 0.2234,
+            "market_implied_probability": 0.3034,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.08,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Croatia -1 win means Croatia wins by 2 or more goals.",
+            "model_direction": "Handicap settlement translated from Poisson margin distribution, not ordinary 1X2.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Croatia -1 handicap draw",
+            "model_probability": 0.2593,
+            "market_implied_probability": 0.2645,
+            "edge_or_no_edge": {
+              "status": "no_clear_edge",
+              "delta": -0.0052,
+              "note": "Difference is inside the small-sample/noise band."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Croatia -1 draw means Croatia wins by exactly 1 goal(s).",
+            "model_direction": "Exact-margin bucket from Poisson margin distribution.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Croatia -1 handicap loss",
+            "model_probability": 0.5173,
+            "market_implied_probability": 0.4322,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.0851,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Croatia -1 loss means Croatia does not cover: draw or Ghana real win.",
+            "model_direction": "Handicap non-cover/cover-against bucket from Poisson margin distribution.",
+            "relationship": "aligned",
+            "bucket_label": "suitable_main_bucket_candidate"
+          }
+        ],
+        "exact_score": [
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Croatia 1-0 Ghana",
+            "model_probability": 0.1631,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Croatia 0-0 Ghana",
+            "model_probability": 0.1275,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Croatia 1-1 Ghana",
+            "model_probability": 0.1273,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Croatia 2-0 Ghana",
+            "model_probability": 0.1044,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 2-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Croatia 0-1 Ghana",
+            "model_probability": 0.0994,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "total_goals": [
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Under 2.5 goals",
+            "model_probability": 0.6604,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium_low",
+            "settlement_condition": "Wins if total full-time goals are 0, 1, or 2.",
+            "model_direction": "Lower-total cluster preferred by model.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Over 2.5 goals",
+            "model_probability": 0.3396,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Wins if total full-time goals are 3 or more.",
+            "model_direction": "Secondary total path.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "half_full_time": [
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Croatia",
+            "model_probability": 0.18,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result H; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Croatia / FT Croatia",
+            "model_probability": 0.2848,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result H and full-time result H; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Draw",
+            "model_probability": 0.2049,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result D; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ]
+      },
+      "candidate_bucket_summary": {
+        "remove_candidate": [
+          "Croatia win",
+          "Ghana win",
+          "Croatia -1 handicap win"
+        ],
+        "entertainment_bucket_candidate": [
+          "Draw",
+          "Croatia -1 handicap draw"
+        ],
+        "suitable_main_bucket_candidate": [
+          "Croatia -1 handicap loss"
+        ],
+        "wait_live_candidate": [
+          "Croatia 1-0 Ghana",
+          "Croatia 0-0 Ghana",
+          "Croatia 1-1 Ghana",
+          "Croatia 2-0 Ghana",
+          "Croatia 0-1 Ghana",
+          "Under 2.5 goals",
+          "Over 2.5 goals",
+          "HT Draw / FT Croatia",
+          "HT Croatia / FT Croatia",
+          "HT Draw / FT Draw"
+        ]
+      },
+      "quality_notes": [
+        "Handicap WDL probabilities are derived from margin buckets and are not substituted with ordinary 1X2 probabilities.",
+        "Exact score and half/full-time candidates are high variance; most same-source odds are unavailable in the prediction packet.",
+        "T-75 official lineup and latest same-source market checks remain outside this mapping artifact."
+      ]
+    },
+    {
+      "group": "L",
+      "match_id": "2026-06-28_panama_vs_england",
+      "fixture": "Panama vs England",
+      "red_team_after_release": {
+        "red_team_status": "hold",
+        "betting_gate_status": "discussion_only_hold",
+        "note": "Probabilities are for candidate mapping only; no final ticket or stake is generated."
+      },
+      "expected_goals": {
+        "home": 0.5,
+        "away": 1.75
+      },
+      "probabilities_1x2_after_red_team": {
+        "home_win": 0.0999,
+        "draw": 0.2199,
+        "away_win": 0.6802,
+        "probability_sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.3907,
+        "under_2_5": 0.6093
+      },
+      "btts_probabilities": {
+        "yes": 0.3251,
+        "no": 0.6749
+      },
+      "top5_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.1844
+        },
+        {
+          "score": "0-2",
+          "probability": 0.1614
+        },
+        {
+          "score": "0-0",
+          "probability": 0.1054
+        },
+        {
+          "score": "0-3",
+          "probability": 0.0941
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0922
+        }
+      ],
+      "market_snapshot": {
+        "source": "China Sports Lottery / project snapshot 2026-06-26T17:43:00+08:00",
+        "one_x_two_no_vig": null,
+        "handicap": {
+          "line": 2,
+          "no_vig": {
+            "win": 0.357115,
+            "draw": 0.227089,
+            "loss": 0.415796
+          }
+        },
+        "totals_no_vig": null
+      },
+      "candidate_mapping": {
+        "one_x_two": [
+          {
+            "market_type": "1x2",
+            "selected_bet": "Panama win",
+            "model_probability": 0.0999,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Panama must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "Draw",
+            "model_probability": 0.2199,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Full-time result must be level after 90 minutes.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          },
+          {
+            "market_type": "1x2",
+            "selected_bet": "England win",
+            "model_probability": 0.6802,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium_low",
+            "settlement_condition": "England must win in 90-minute full time.",
+            "model_direction": "Model 1X2 direction: away_win.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "handicap_wdl": [
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Panama +2 handicap win",
+            "model_probability": 0.5976,
+            "market_implied_probability": 0.3571,
+            "edge_or_no_edge": {
+              "status": "positive_model_delta_discussion_only",
+              "delta": 0.2405,
+              "note": "Model probability exceeds no-vig market probability; still gated by discussion_only_hold."
+            },
+            "variance_level": "medium_low",
+            "settlement_condition": "Panama +2 win means Panama real win/draw, or England wins by fewer than 2 goals.",
+            "model_direction": "Handicap settlement translated from Poisson margin distribution, not ordinary 1X2.",
+            "relationship": "aligned",
+            "bucket_label": "suitable_main_bucket_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Panama +2 handicap draw",
+            "model_probability": 0.2139,
+            "market_implied_probability": 0.2271,
+            "edge_or_no_edge": {
+              "status": "no_clear_edge",
+              "delta": -0.0132,
+              "note": "Difference is inside the small-sample/noise band."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Panama +2 draw means England wins by exactly 2 goal(s).",
+            "model_direction": "Exact-margin bucket from Poisson margin distribution.",
+            "relationship": "hedge",
+            "bucket_label": "entertainment_bucket_candidate"
+          },
+          {
+            "market_type": "handicap_wdl",
+            "selected_bet": "Panama +2 handicap loss",
+            "model_probability": 0.1885,
+            "market_implied_probability": 0.4158,
+            "edge_or_no_edge": {
+              "status": "negative_model_delta",
+              "delta": -0.2273,
+              "note": "Market price is not supported by the model probability."
+            },
+            "variance_level": "medium_high",
+            "settlement_condition": "Panama +2 loss means England wins by 3 or more goals.",
+            "model_direction": "Handicap non-cover/cover-against bucket from Poisson margin distribution.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          }
+        ],
+        "exact_score": [
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Panama 0-1 England",
+            "model_probability": 0.1844,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Panama 0-2 England",
+            "model_probability": 0.1614,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-2.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Panama 0-0 England",
+            "model_probability": 0.1054,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-0.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Panama 0-3 England",
+            "model_probability": 0.0941,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 0-3.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "exact_score",
+            "selected_bet": "Panama 1-1 England",
+            "model_probability": 0.0922,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Settles only if the exact full-time score is 1-1.",
+            "model_direction": "Exact-score distribution from xG/Poisson top-five cluster.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "total_goals": [
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Under 2.5 goals",
+            "model_probability": 0.6093,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium_low",
+            "settlement_condition": "Wins if total full-time goals are 0, 1, or 2.",
+            "model_direction": "Lower-total cluster preferred by model.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "total_goals",
+            "selected_bet": "Over 2.5 goals",
+            "model_probability": 0.3907,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "medium",
+            "settlement_condition": "Wins if total full-time goals are 3 or more.",
+            "model_direction": "Secondary total path.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          }
+        ],
+        "half_full_time": [
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT England",
+            "model_probability": 0.2256,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result A; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "aligned",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT England / FT England",
+            "model_probability": 0.4356,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result A and full-time result A; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "hedge",
+            "bucket_label": "wait_live_candidate"
+          },
+          {
+            "market_type": "half_full_time",
+            "selected_bet": "HT Draw / FT Draw",
+            "model_probability": 0.1602,
+            "market_implied_probability": null,
+            "edge_or_no_edge": {
+              "status": "market_missing",
+              "delta": null,
+              "note": "No same-source odds captured for this candidate."
+            },
+            "variance_level": "high",
+            "settlement_condition": "Requires half-time result D and full-time result D; it is not the same as ordinary 1X2.",
+            "model_direction": "Approximate HT/FT probability from split Poisson; high variance and odds unavailable.",
+            "relationship": "conflict",
+            "bucket_label": "remove_candidate"
+          }
+        ]
+      },
+      "candidate_bucket_summary": {
+        "remove_candidate": [
+          "Panama win",
+          "Draw",
+          "Panama +2 handicap loss",
+          "HT Draw / FT Draw"
+        ],
+        "wait_live_candidate": [
+          "England win",
+          "Panama 0-1 England",
+          "Panama 0-2 England",
+          "Panama 0-0 England",
+          "Panama 0-3 England",
+          "Panama 1-1 England",
+          "Under 2.5 goals",
+          "Over 2.5 goals",
+          "HT Draw / FT England",
+          "HT England / FT England"
+        ],
+        "suitable_main_bucket_candidate": [
+          "Panama +2 handicap win"
+        ],
+        "entertainment_bucket_candidate": [
+          "Panama +2 handicap draw"
+        ]
+      },
+      "quality_notes": [
+        "Handicap WDL probabilities are derived from margin buckets and are not substituted with ordinary 1X2 probabilities.",
+        "Exact score and half/full-time candidates are high variance; most same-source odds are unavailable in the prediction packet.",
+        "T-75 official lineup and latest same-source market checks remain outside this mapping artifact."
+      ]
+    }
+  ],
+  "validation": {
+    "json_parse_expected": true,
+    "probability_checks": [
+      {
+        "match_id": "2026-06-28_algeria_vs_austria",
+        "one_x_two_sum": 1
+      },
+      {
+        "match_id": "2026-06-28_jordan_vs_argentina",
+        "one_x_two_sum": 1
+      },
+      {
+        "match_id": "2026-06-28_K_R3_COL_POR",
+        "one_x_two_sum": 1
+      },
+      {
+        "match_id": "2026-06-28_K_R3_DRC_UZB",
+        "one_x_two_sum": 1
+      },
+      {
+        "match_id": "2026-06-28_croatia_vs_ghana",
+        "one_x_two_sum": 1
+      },
+      {
+        "match_id": "2026-06-28_panama_vs_england",
+        "one_x_two_sum": 1
+      }
+    ],
+    "forbidden_execution_language_present": false
+  }
+}

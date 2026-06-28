@@ -1,0 +1,716 @@
+{
+  "metadata": {
+    "schema": "single_match_quant_prediction_v3",
+    "group": "L",
+    "round": 3,
+    "created_at": "2026-06-27T15:10:00+08:00",
+    "status": "partial_source_limited",
+    "main_thread_role": "integration_only",
+    "thread_outputs_dir": "data/thread_outputs/l-group-round3-v3-20260627",
+    "matches": [
+      "2026-06-28_croatia_vs_ghana",
+      "2026-06-28_panama_vs_england"
+    ],
+    "betting_status": "discussion_only_hold"
+  },
+  "thread_participation": {
+    "data_collector": {
+      "thread_id": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+      "status": "completed",
+      "outputs": [
+        "data/thread_outputs/l-group-round3-v3-20260627/data-collector.json",
+        "data/thread_outputs/l-group-round3-v3-20260627/data-collector.md"
+      ]
+    },
+    "tactics_coach": {
+      "thread_id": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+      "status": "completed",
+      "outputs": [
+        "data/thread_outputs/l-group-round3-v3-20260627/tactics-coach.json",
+        "data/thread_outputs/l-group-round3-v3-20260627/tactics-coach.md"
+      ]
+    },
+    "modeler": {
+      "thread_id": "019edb8f-536a-7100-84da-e13bfecb0def",
+      "status": "completed",
+      "outputs": [
+        "data/thread_outputs/l-group-round3-v3-20260627/modeler.json",
+        "data/thread_outputs/l-group-round3-v3-20260627/modeler.md"
+      ]
+    },
+    "red_team": {
+      "thread_id": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+      "status": "completed",
+      "outputs": [
+        "data/thread_outputs/l-group-round3-v3-20260627/red-team.json",
+        "data/thread_outputs/l-group-round3-v3-20260627/red-team.md"
+      ]
+    },
+    "betting_risk": {
+      "thread_id": "019edb8f-cd0d-7393-bf92-d637962a67e4",
+      "status": "completed",
+      "outputs": [
+        "data/thread_outputs/l-group-round3-v3-20260627/betting-risk.json",
+        "data/thread_outputs/l-group-round3-v3-20260627/betting-risk.md"
+      ]
+    }
+  },
+  "group_table_after_round2": [
+    {
+      "team": "英格兰",
+      "points": 4,
+      "goals_for": 4,
+      "goals_against": 2,
+      "goal_difference": 2
+    },
+    {
+      "team": "加纳",
+      "points": 4,
+      "goals_for": 1,
+      "goals_against": 0,
+      "goal_difference": 1
+    },
+    {
+      "team": "克罗地亚",
+      "points": 3,
+      "goals_for": 3,
+      "goals_against": 4,
+      "goal_difference": -1
+    },
+    {
+      "team": "巴拿马",
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 2,
+      "goal_difference": -2
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "2026-06-28_croatia_vs_ghana",
+      "match_no": "周六067",
+      "fixture": {
+        "home": "克罗地亚",
+        "away": "加纳",
+        "kickoff_beijing": "2026-06-28T05:00:00+08:00",
+        "kickoff_local": "2026-06-27T17:00:00-04:00",
+        "venue": "Philadelphia Stadium",
+        "host_city": "Philadelphia",
+        "neutral_site": true,
+        "official_lineup_status": "missing",
+        "t75_check_time_beijing": "2026-06-28T03:45:00+08:00"
+      },
+      "predicted_lineups": {
+        "home": {
+          "team": "克罗地亚",
+          "formation": "3-4-2-1",
+          "confidence": "medium_low",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "chinese_name": "多米尼克·利瓦科维奇",
+              "english_name": "Dominik Livakovic"
+            },
+            {
+              "position": "RCB",
+              "chinese_name": "约西普·舒塔洛",
+              "english_name": "Josip Sutalo"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "卢卡·武什科维奇",
+              "english_name": "Luka Vuskovic"
+            },
+            {
+              "position": "LCB",
+              "chinese_name": "约什科·格瓦迪奥尔",
+              "english_name": "Josko Gvardiol"
+            },
+            {
+              "position": "RWB",
+              "chinese_name": "约西普·斯塔尼希奇",
+              "english_name": "Josip Stanisic"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "卢卡·莫德里奇",
+              "english_name": "Luka Modric"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "马特奥·科瓦契奇",
+              "english_name": "Mateo Kovacic"
+            },
+            {
+              "position": "LWB",
+              "chinese_name": "伊万·佩里希奇",
+              "english_name": "Ivan Perisic"
+            },
+            {
+              "position": "AM",
+              "chinese_name": "马丁·巴图里纳",
+              "english_name": "Martin Baturina"
+            },
+            {
+              "position": "SS",
+              "chinese_name": "安德雷·克拉马里奇",
+              "english_name": "Andrej Kramaric"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "安特·布迪米尔",
+              "english_name": "Ante Budimir"
+            }
+          ],
+          "rotation_candidates": [
+            "佩塔尔·苏契奇",
+            "马里奥·帕沙利奇",
+            "佩塔尔·穆萨",
+            "马林·庞格拉契奇"
+          ],
+          "conflicts": [
+            "公开预测源存在 4-2-3-1 与 3-4-2-1 口径差异。",
+            "Budimir/Kramaric 半场替补奏效后是否双双首发仍待 T-75 确认。"
+          ]
+        },
+        "away": {
+          "team": "加纳",
+          "formation": "4-4-1-1 / 4-2-3-1",
+          "confidence": "medium_low",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "chinese_name": "本杰明·阿萨雷",
+              "english_name": "Benjamin Asare"
+            },
+            {
+              "position": "RB",
+              "chinese_name": "凯莱布·伊伦基",
+              "english_name": "Caleb Yirenkyi"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "乔纳斯·阿杰泰",
+              "english_name": "Jonas Adjetey"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "杰罗姆·奥波库",
+              "english_name": "Jerome Opoku"
+            },
+            {
+              "position": "LB",
+              "chinese_name": "吉迪恩·门萨",
+              "english_name": "Gideon Mensah"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "托马斯·帕尔特伊",
+              "english_name": "Thomas Partey"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "埃利沙·奥乌苏",
+              "english_name": "Elisha Owusu"
+            },
+            {
+              "position": "RM",
+              "chinese_name": "安托万·塞梅尼奥",
+              "english_name": "Antoine Semenyo"
+            },
+            {
+              "position": "AM",
+              "chinese_name": "乔丹·阿尤",
+              "english_name": "Jordan Ayew"
+            },
+            {
+              "position": "LM",
+              "chinese_name": "卡马尔丁·苏莱曼纳",
+              "english_name": "Kamaldeen Sulemana"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "布兰登·托马斯-阿桑特",
+              "english_name": "Brandon Thomas-Asante"
+            }
+          ],
+          "rotation_candidates": [
+            "劳伦斯·阿蒂-齐吉",
+            "伊尼亚基·威廉姆斯",
+            "阿卜杜勒·法塔武",
+            "夸西·西博"
+          ],
+          "conflicts": [
+            "Ati-Zigi 与 Asare 的门将口径仍需官方首发确认。",
+            "公开预测源常把 Inaki Williams 和 Kwasi Sibo 放入首发，本项目保留冲突。"
+          ]
+        }
+      },
+      "factor_inputs": {
+        "previous_rounds": [
+          "英格兰 4-2 克罗地亚：克罗地亚中场仍有控制力，但防线被英格兰提速和定位球击穿。",
+          "加纳 1-0 巴拿马：加纳低位与后段冲击有效，Yirenkyi 制胜。",
+          "英格兰 0-0 加纳：加纳低位纪律和中卫保护上修，英格兰控球不等于稳定破局。",
+          "巴拿马 0-1 克罗地亚：Budimir/Kramaric 半场调整带来制胜，克罗地亚小胜路径验证。"
+        ],
+        "third_round_context": "克罗地亚 3 分更需要赢球；加纳 4 分有守平和争头名双重动机，同组同步比分会影响后 30 分钟节奏。",
+        "injury_adjustment": {
+          "croatia": 0.0,
+          "ghana": -0.04,
+          "note": "加纳门将与 Partey 可用性待 T-75，暂作小幅不确定性扣分。"
+        },
+        "player_state_adjustment": {
+          "croatia": 0.05,
+          "ghana": 0.04
+        },
+        "tactical_matchup_adjustment": {
+          "croatia": 0.05,
+          "ghana": 0.02,
+          "note": "克罗地亚中场控制占优，但加纳低位和转换会抬高平局尾部。"
+        },
+        "schedule_environment_adjustment": {
+          "both": 0.0
+        },
+        "market_adjustment": {
+          "croatia": 0.02,
+          "draw": 0.0,
+          "ghana": -0.02,
+          "note": "市场更偏克罗地亚，但红队要求防止热门/经验溢价过度上修。"
+        }
+      },
+      "factor_weights": {
+        "team_strength": 0.28,
+        "recent_form_player_state": 0.18,
+        "availability": 0.14,
+        "tactical_matchup": 0.16,
+        "third_round_context": 0.1,
+        "market_calibration": 0.08,
+        "schedule_environment": 0.06
+      },
+      "team_strength_score": {
+        "croatia": 77.8,
+        "ghana": 73.2
+      },
+      "attack_score": {
+        "croatia": 74.5,
+        "ghana": 68.8
+      },
+      "defense_score": {
+        "croatia": 70.6,
+        "ghana": 75.4
+      },
+      "expected_goals": {
+        "home": 1.28,
+        "away": 0.78
+      },
+      "poisson_score_matrix_0_5": [
+        [0.127454, 0.099414, 0.038771, 0.010081, 0.001966, 0.000307],
+        [0.163141, 0.12725, 0.049628, 0.012903, 0.002516, 0.000393],
+        [0.10441, 0.08144, 0.031762, 0.008258, 0.00161, 0.000251],
+        [0.044548, 0.034748, 0.013552, 0.003523, 0.000687, 0.000107],
+        [0.014255, 0.011119, 0.004337, 0.001127, 0.00022, 0.000034],
+        [0.003649, 0.002847, 0.00111, 0.000289, 0.000056, 0.000009]
+      ],
+      "poisson_tail_probability": 0.002228,
+      "probabilities_1x2": {
+        "home_win": 0.503837,
+        "draw": 0.290208,
+        "away_win": 0.205955
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.339559,
+        "under_2_5": 0.660441,
+        "over_3_5": 0.153862,
+        "under_3_5": 0.846138,
+        "btts_yes": 0.391011,
+        "btts_no": 0.608989
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.163141
+        },
+        {
+          "score": "0-0",
+          "probability": 0.127454
+        },
+        {
+          "score": "1-1",
+          "probability": 0.12725
+        },
+        {
+          "score": "2-0",
+          "probability": 0.10441
+        },
+        {
+          "score": "0-1",
+          "probability": 0.099414
+        }
+      ],
+      "odds_implied_probability": {
+        "source": "中国足彩网",
+        "captured_at": "2026-06-26T17:43:00+08:00",
+        "ordinary_spf_odds": {
+          "home": 1.6,
+          "draw": 3.05,
+          "away": 5.65
+        },
+        "no_vig": {
+          "home_win": 0.553166,
+          "draw": 0.290185,
+          "away_win": 0.156649
+        },
+        "handicap": {
+          "home_handicap": -1,
+          "odds": {
+            "home": 2.92,
+            "draw": 3.35,
+            "away": 2.05
+          }
+        }
+      },
+      "model_market_delta": {
+        "home_win": -0.049329,
+        "draw": 0.000023,
+        "away_win": 0.049306
+      },
+      "red_team_status": "hold",
+      "red_team_adjustment": {
+        "reason": "T-75首发缺失、门将/后腰可用性和加纳守平价值未闭合；克罗地亚热门溢价需折扣。",
+        "final_probabilities": {
+          "home_win": 0.485,
+          "draw": 0.305,
+          "away_win": 0.21
+        }
+      },
+      "confidence_interval": {
+        "home_win": [0.43, 0.57],
+        "draw": [0.24, 0.35],
+        "away_win": [0.15, 0.27]
+      },
+      "postmatch_error": null,
+      "parameter_updates": null
+    },
+    {
+      "match_id": "2026-06-28_panama_vs_england",
+      "match_no": "周六068",
+      "fixture": {
+        "home": "巴拿马",
+        "away": "英格兰",
+        "kickoff_beijing": "2026-06-28T05:00:00+08:00",
+        "kickoff_local": "2026-06-27T17:00:00-04:00",
+        "venue": "New York New Jersey Stadium",
+        "host_city": "East Rutherford / New York New Jersey",
+        "neutral_site": true,
+        "official_lineup_status": "missing",
+        "t75_check_time_beijing": "2026-06-28T03:45:00+08:00"
+      },
+      "predicted_lineups": {
+        "home": {
+          "team": "巴拿马",
+          "formation": "5-4-1 / 4-4-2 low block",
+          "confidence": "medium_low",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "chinese_name": "奥兰多·莫斯克拉",
+              "english_name": "Orlando Mosquera"
+            },
+            {
+              "position": "RB/RWB",
+              "chinese_name": "塞萨尔·布莱克曼",
+              "english_name": "Cesar Blackman"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "何塞·科尔多瓦",
+              "english_name": "Jose Cordoba"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "吉奥瓦尼·拉莫斯",
+              "english_name": "Jiovany Ramos"
+            },
+            {
+              "position": "LB/LCB",
+              "chinese_name": "安德烈斯·安德拉德",
+              "english_name": "Andres Andrade"
+            },
+            {
+              "position": "RWB/RM",
+              "chinese_name": "阿米尔·穆里略",
+              "english_name": "Amir Murillo"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "克里斯蒂安·马丁内斯",
+              "english_name": "Cristian Martinez"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "卡洛斯·哈维",
+              "english_name": "Carlos Harvey"
+            },
+            {
+              "position": "LM/LW",
+              "chinese_name": "何塞·路易斯·罗德里格斯",
+              "english_name": "Jose Luis Rodriguez"
+            },
+            {
+              "position": "AM/RW",
+              "chinese_name": "约埃尔·巴尔塞纳斯",
+              "english_name": "Yoel Barcenas"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "塞西利奥·沃特曼",
+              "english_name": "Cecilio Waterman"
+            }
+          ],
+          "rotation_candidates": [
+            "何塞·法哈多",
+            "伊斯梅尔·迪亚斯",
+            "阿尼巴尔·戈多伊",
+            "阿达尔贝托·卡拉斯基利亚"
+          ],
+          "conflicts": [
+            "Carrasquilla 状态与出场仍需赛前确认。",
+            "两轮 0 进球后，前场支点 Waterman/Fajardo 排序有轮换风险。"
+          ]
+        },
+        "away": {
+          "team": "英格兰",
+          "formation": "4-2-3-1",
+          "confidence": "medium_low",
+          "source_status": "probable_not_official",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "chinese_name": "乔丹·皮克福德",
+              "english_name": "Jordan Pickford"
+            },
+            {
+              "position": "RB",
+              "chinese_name": "埃兹里·孔萨",
+              "english_name": "Ezri Konsa"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "约翰·斯通斯",
+              "english_name": "John Stones"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "马克·格伊",
+              "english_name": "Marc Guehi"
+            },
+            {
+              "position": "LB",
+              "chinese_name": "尼科·奥赖利",
+              "english_name": "Nico O'Reilly"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "科比·梅努",
+              "english_name": "Kobbie Mainoo"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "埃利奥特·安德森",
+              "english_name": "Elliot Anderson"
+            },
+            {
+              "position": "AM",
+              "chinese_name": "裘德·贝林厄姆",
+              "english_name": "Jude Bellingham"
+            },
+            {
+              "position": "RW",
+              "chinese_name": "布卡约·萨卡",
+              "english_name": "Bukayo Saka"
+            },
+            {
+              "position": "LW",
+              "chinese_name": "马库斯·拉什福德",
+              "english_name": "Marcus Rashford"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "哈里·凯恩",
+              "english_name": "Harry Kane"
+            }
+          ],
+          "rotation_candidates": [
+            "德克兰·赖斯",
+            "诺尼·马杜埃凯",
+            "摩根·罗杰斯",
+            "杰德·斯彭斯",
+            "奥利·沃特金斯"
+          ],
+          "conflicts": [
+            "Reece James 已按 Guardian 伤缺口径排除；Rice 存在 fitness concern。",
+            "英格兰已至少晋级，但仍争小组第一，Kane/Bellingham 是否控分钟待 T-75。"
+          ]
+        }
+      },
+      "factor_inputs": {
+        "previous_rounds": [
+          "加纳 1-0 巴拿马：巴拿马低位能拖住比分，但进攻穿透不足。",
+          "英格兰 4-2 克罗地亚：英格兰定位球、替补冲击和 Kane 终结打开上限。",
+          "英格兰 0-0 加纳：英格兰面对低位转化不稳，需提高低比分和平局尾部。",
+          "巴拿马 0-1 克罗地亚：巴拿马前场连接仍弱，但一球小负路径稳定存在。"
+        ],
+        "third_round_context": "英格兰已至少晋级但仍争小组第一；巴拿马 0 分，理论第三名路径极窄，可能先低位再视同组信息后段冒险。",
+        "injury_adjustment": {
+          "panama": -0.03,
+          "england": -0.06,
+          "note": "英格兰 Reece James 伤缺、Rice 体能疑问；巴拿马 Carrasquilla 状态不明。"
+        },
+        "player_state_adjustment": {
+          "panama": -0.04,
+          "england": 0.08
+        },
+        "tactical_matchup_adjustment": {
+          "panama": -0.06,
+          "england": 0.1,
+          "note": "英格兰宽路和十号位优势明显，但第二轮显示破低位转化不能过度乐观。"
+        },
+        "schedule_environment_adjustment": {
+          "both": 0.0
+        },
+        "market_adjustment": {
+          "panama": null,
+          "england": null,
+          "note": "普通胜平负缺失，只保留 +2 让球观察，不做 1X2 市场校准。"
+        }
+      },
+      "factor_weights": {
+        "team_strength": 0.3,
+        "recent_form_player_state": 0.17,
+        "availability": 0.15,
+        "tactical_matchup": 0.16,
+        "third_round_context": 0.1,
+        "market_calibration": 0.06,
+        "schedule_environment": 0.06
+      },
+      "team_strength_score": {
+        "panama": 61.4,
+        "england": 84.6
+      },
+      "attack_score": {
+        "panama": 57.5,
+        "england": 82.8
+      },
+      "defense_score": {
+        "panama": 65.2,
+        "england": 79.4
+      },
+      "expected_goals": {
+        "home": 0.5,
+        "away": 1.75
+      },
+      "poisson_score_matrix_0_5": [
+        [0.105399, 0.184449, 0.161393, 0.094146, 0.041189, 0.014416],
+        [0.0527, 0.092224, 0.080696, 0.047073, 0.020594, 0.007208],
+        [0.013175, 0.023056, 0.020174, 0.011768, 0.005149, 0.001802],
+        [0.002196, 0.003843, 0.003362, 0.001961, 0.000858, 0.0003],
+        [0.000274, 0.00048, 0.00042, 0.000245, 0.000107, 0.000038],
+        [0.000027, 0.000048, 0.000042, 0.000025, 0.000011, 0.000004]
+      ],
+      "poisson_tail_probability": 0.009148,
+      "probabilities_1x2": {
+        "home_win": 0.099919,
+        "draw": 0.21987,
+        "away_win": 0.680211
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.390661,
+        "under_2_5": 0.609339,
+        "over_3_5": 0.190567,
+        "under_3_5": 0.809433,
+        "btts_yes": 0.325095,
+        "btts_no": 0.674905
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.184449
+        },
+        {
+          "score": "0-2",
+          "probability": 0.161393
+        },
+        {
+          "score": "0-0",
+          "probability": 0.105399
+        },
+        {
+          "score": "0-3",
+          "probability": 0.094146
+        },
+        {
+          "score": "1-1",
+          "probability": 0.092224
+        }
+      ],
+      "odds_implied_probability": {
+        "source": "中国足彩网",
+        "captured_at": "2026-06-26T17:43:00+08:00",
+        "ordinary_spf_odds": null,
+        "ordinary_spf_status": "not_on_sale_or_not_captured",
+        "handicap": {
+          "home_handicap": 2,
+          "odds": {
+            "home": 2.48,
+            "draw": 3.9,
+            "away": 2.13
+          },
+          "no_vig": {
+            "handicap_home": 0.357115,
+            "handicap_draw": 0.227089,
+            "handicap_away": 0.415796
+          }
+        }
+      },
+      "model_market_delta": {
+        "home_win": null,
+        "draw": null,
+        "away_win": null,
+        "note": "普通胜平负缺失，让球 +2 不能直接替代 1X2 校准。"
+      },
+      "red_team_status": "hold",
+      "red_team_adjustment": {
+        "reason": "英格兰首发/分钟管理、Reece James 伤缺、Rice 疑问和普通 1X2 缺口要求压低强队赛前胜率。",
+        "final_probabilities": {
+          "home_win": 0.115,
+          "draw": 0.24,
+          "away_win": 0.645
+        }
+      },
+      "confidence_interval": {
+        "home_win": [0.06, 0.14],
+        "draw": [0.17, 0.28],
+        "away_win": [0.61, 0.75]
+      },
+      "postmatch_error": null,
+      "parameter_updates": null
+    }
+  ],
+  "open_data_gaps": [
+    "两场 T-75 官方首发未发布，预计首发不能升级为 confirmed。",
+    "加纳门将 Ati-Zigi/Asare 与 Partey 可用性仍需官方确认。",
+    "英格兰 Reece James 伤缺已纳入，Declan Rice fitness concern 和分钟限制待确认。",
+    "巴拿马 vs 英格兰普通胜平负未捕获/未开售。",
+    "两场同源大小球盘口缺失。",
+    "黄牌累计和停赛风险需官方牌表复核。"
+  ],
+  "validation_expectations": {
+    "json_parse": true,
+    "predicted_xi_count_per_team": 11,
+    "probability_sum_tolerance": 0.00001,
+    "poisson_matrix_plus_tail_tolerance": 0.0001
+  }
+}

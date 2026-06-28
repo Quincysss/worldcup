@@ -1,0 +1,342 @@
+{
+  "schema_version": "jkl_round3_75yuan_red_team_review_v1",
+  "phase": "betting_portfolio_red_team_review",
+  "status": "complete_red_team_review",
+  "created_at": "2026-06-27T15:55:00+08:00",
+  "owner": "worldcup-red-team-verifier",
+  "scope": "J/K/L group round 3 75 RMB discussion-only candidate and portfolio-logic review",
+  "overall_verdict": "hold_not_executable",
+  "betting_language_blocked": true,
+  "no_betting_advice": true,
+  "input_files_reviewed": [
+    "data/thread_outputs/jkl-round3-75yuan-20260627/data-collector.json",
+    "data/thread_outputs/jkl-round3-75yuan-20260627/modeler.json",
+    "data/outputs/match_predictions/j-group-round3-v3-quant-prediction-20260627.json",
+    "data/outputs/match_predictions/k-group-round3-quant-prediction-20260627.json",
+    "data/outputs/match_predictions/l-group-round3-v3-quant-prediction-20260627.json",
+    "赔率与投注/购彩方案组合标准_20260625.md",
+    ".codex/skills/worldcup-red-team-verifier/references/review-checklist.md",
+    ".codex/skills/worldcup-red-team-verifier/references/market-risk.md"
+  ],
+  "hard_gates": {
+    "t75_official_lineups": {
+      "status": "missing_for_all_six_matches",
+      "verdict": "hold"
+    },
+    "latest_injury_suspension_minutes": {
+      "status": "partial_source_limited",
+      "verdict": "hold"
+    },
+    "official_china_jingcai_live_chain": {
+      "status": "partial_local_snapshot_and_online_recheck_conflicts",
+      "verdict": "hold"
+    },
+    "same_source_1x2_handicap_totals_score_htft": {
+      "status": "incomplete",
+      "verdict": "hold"
+    },
+    "correct_score_total_goals_half_full_time_odds": {
+      "status": "active_flags_only_no_odds",
+      "verdict": "hold"
+    }
+  },
+  "global_top_concerns": [
+    {
+      "category": "availability",
+      "severity": "blocker",
+      "confidence": "high",
+      "concern": "All six matches lack T-75 official lineups and final minutes/injury confirmation."
+    },
+    {
+      "category": "market",
+      "severity": "blocker",
+      "confidence": "high",
+      "concern": "The market chain is incomplete: some ordinary 1X2 markets are missing, same-source totals are missing, and score/total-goals/half-full-time have active flags but no captured odds."
+    },
+    {
+      "category": "portfolio",
+      "severity": "high",
+      "confidence": "high",
+      "concern": "The modeler artifact maps candidates only; it explicitly creates no final tickets, stakes, or portfolio. Any 3-main plus entertainment structure would be premature."
+    },
+    {
+      "category": "correlation",
+      "severity": "high",
+      "confidence": "medium",
+      "concern": "The apparent main-bucket candidates cluster around handicap non-cover or underdog-protection paths, making the portfolio vulnerable to one shared low-margin/favorite-control assumption."
+    }
+  ],
+  "candidate_review_policy": {
+    "executable_pass_allowed": false,
+    "default_verdict_when_gate_missing": "hold",
+    "candidate_logic_labels": [
+      "candidate_logic_ok_but_gate_hold",
+      "revise_or_remove",
+      "market_missing_hold",
+      "high_variance_hold"
+    ]
+  },
+  "match_candidate_reviews": [
+    {
+      "fixture": "Algeria vs Austria",
+      "red_team_status": "hold",
+      "candidate_items": [
+        {
+          "market_type": "1x2",
+          "items": [
+            {"selected_bet": "Algeria win", "verdict": "hold", "candidate_logic": "entertainment_only; hedge; medium-high variance"},
+            {"selected_bet": "Draw", "verdict": "revise", "candidate_logic": "remove; model delta negative despite market draw heat"},
+            {"selected_bet": "Austria win", "verdict": "hold", "candidate_logic": "wait-live only; aligned but T-75 and draw-market gap unresolved"}
+          ]
+        },
+        {
+          "market_type": "handicap_wdl",
+          "items": [
+            {"selected_bet": "Algeria +1 handicap win", "verdict": "revise", "candidate_logic": "remove; market price not supported; overlaps with Algeria real win/draw"},
+            {"selected_bet": "Algeria +1 handicap draw", "verdict": "hold", "candidate_logic": "entertainment only; exact Austria one-goal win"},
+            {"selected_bet": "Algeria +1 handicap loss", "verdict": "revise", "candidate_logic": "remove; conflicts with low-margin red-team read"}
+          ]
+        },
+        {
+          "market_type": "exact_score",
+          "items": [
+            {"selected_bet": "1-1 / 0-1 / 1-0 / 0-0 / 1-2 score cluster", "verdict": "hold", "candidate_logic": "market odds missing; high variance; top score only about 12.9%"}
+          ]
+        },
+        {
+          "market_type": "total_goals",
+          "items": [
+            {"selected_bet": "Under 2.5", "verdict": "hold", "candidate_logic": "model-aligned but odds missing; late chase tail unresolved"},
+            {"selected_bet": "Over 2.5", "verdict": "hold", "candidate_logic": "hedge only; odds missing; depends on late-game opening"}
+          ]
+        },
+        {
+          "market_type": "half_full_time",
+          "items": [
+            {"selected_bet": "HT Draw/FT Austria; HT Austria/FT Austria; HT Draw/FT Draw", "verdict": "hold", "candidate_logic": "market odds missing; high variance; not suitable for main structure"}
+          ]
+        }
+      ],
+      "market_flags": [
+        "Draw pricing is hotter than model support.",
+        "Score, totals and HT/FT odds are not captured."
+      ]
+    },
+    {
+      "fixture": "Jordan vs Argentina",
+      "red_team_status": "hold",
+      "candidate_items": [
+        {
+          "market_type": "1x2",
+          "items": [
+            {"selected_bet": "Jordan win", "verdict": "revise", "candidate_logic": "remove; conflict and ordinary 1X2 missing"},
+            {"selected_bet": "Draw", "verdict": "hold", "candidate_logic": "wait-live only; ordinary 1X2 missing"},
+            {"selected_bet": "Argentina win", "verdict": "hold", "candidate_logic": "aligned but ordinary 1X2 missing and rotation risk unresolved"}
+          ]
+        },
+        {
+          "market_type": "handicap_wdl",
+          "items": [
+            {"selected_bet": "Jordan +2 handicap win", "verdict": "hold", "candidate_logic": "candidate logic ok but gate hold; means Jordan real win/draw or Argentina wins by one"},
+            {"selected_bet": "Jordan +2 handicap draw", "verdict": "hold", "candidate_logic": "entertainment only; exact Argentina two-goal win"},
+            {"selected_bet": "Jordan +2 handicap loss", "verdict": "revise", "candidate_logic": "remove; market/model disagreement and three-plus margin tail uncertain"}
+          ]
+        },
+        {
+          "market_type": "exact_score",
+          "items": [
+            {"selected_bet": "0-1 / 0-2 / 0-3 / 1-1 / 1-2 score cluster", "verdict": "hold", "candidate_logic": "market odds missing; high variance; Argentina rotation-sensitive"}
+          ]
+        },
+        {
+          "market_type": "total_goals",
+          "items": [
+            {"selected_bet": "Under 2.5 / Over 2.5", "verdict": "hold", "candidate_logic": "odds missing; tempo depends on Argentina rotation and Jordan low block"}
+          ]
+        },
+        {
+          "market_type": "half_full_time",
+          "items": [
+            {"selected_bet": "HT Draw/FT Argentina; HT Argentina/FT Argentina; HT Draw/FT Draw", "verdict": "hold", "candidate_logic": "odds missing; high variance; HT/FT must not be used as main coverage"}
+          ]
+        }
+      ],
+      "market_flags": [
+        "Ordinary 1X2 missing.",
+        "Do not substitute Jordan +2 for ordinary 1X2."
+      ]
+    },
+    {
+      "fixture": "Colombia vs Portugal",
+      "red_team_status": "hold",
+      "candidate_items": [
+        {
+          "market_type": "1x2",
+          "items": [
+            {"selected_bet": "Colombia win", "verdict": "hold", "candidate_logic": "entertainment only; hedge against Portugal direction"},
+            {"selected_bet": "Draw", "verdict": "hold", "candidate_logic": "entertainment only; no clear edge; third-round draw incentives relevant"},
+            {"selected_bet": "Portugal win", "verdict": "revise", "candidate_logic": "remove in modeler; model below market and Portugal rotation/lineup gate unresolved"}
+          ]
+        },
+        {
+          "market_type": "handicap_wdl",
+          "items": [
+            {"selected_bet": "Colombia +1 handicap win", "verdict": "hold", "candidate_logic": "candidate logic ok but gate hold; overlaps Colombia real win/draw"},
+            {"selected_bet": "Colombia +1 handicap draw", "verdict": "revise", "candidate_logic": "remove; exact Portugal one-goal win priced without enough edge"},
+            {"selected_bet": "Colombia +1 handicap loss", "verdict": "revise", "candidate_logic": "remove; Portugal two-plus win conflicts with red-team tail caution"}
+          ]
+        },
+        {
+          "market_type": "exact_score_total_goals_half_full_time",
+          "items": [
+            {"selected_bet": "Top scores, U/O2.5, HT/FT candidates", "verdict": "hold", "candidate_logic": "market odds missing; high variance; cannot enter main allocation"}
+          ]
+        }
+      ],
+      "market_flags": [
+        "Portugal public/favorite tax risk.",
+        "Colombia +1 overlaps with draw and Colombia win, so it cannot be treated as independent insurance."
+      ]
+    },
+    {
+      "fixture": "DR Congo vs Uzbekistan",
+      "red_team_status": "hold",
+      "candidate_items": [
+        {
+          "market_type": "1x2",
+          "items": [
+            {"selected_bet": "DR Congo win", "verdict": "revise", "candidate_logic": "remove; market stronger than model and draw tail material"},
+            {"selected_bet": "Draw", "verdict": "hold", "candidate_logic": "entertainment only; draw tail not negligible"},
+            {"selected_bet": "Uzbekistan win", "verdict": "hold", "candidate_logic": "entertainment only; upset tail but not main"}
+          ]
+        },
+        {
+          "market_type": "handicap_wdl",
+          "items": [
+            {"selected_bet": "DR Congo -1 handicap win", "verdict": "revise", "candidate_logic": "remove; two-plus margin not robust"},
+            {"selected_bet": "DR Congo -1 handicap draw", "verdict": "hold", "candidate_logic": "entertainment only; exact one-goal win"},
+            {"selected_bet": "DR Congo -1 handicap loss", "verdict": "hold", "candidate_logic": "candidate logic ok but gate hold; means DR Congo does not win by two-plus"}
+          ]
+        },
+        {
+          "market_type": "exact_score_total_goals_half_full_time",
+          "items": [
+            {"selected_bet": "Top scores, U/O2.5, HT/FT candidates", "verdict": "hold", "candidate_logic": "market odds missing; high variance; both teams' must-win state thickens tails"}
+          ]
+        }
+      ],
+      "market_flags": [
+        "Both teams need a result; motivation does not equal chance quality.",
+        "DR Congo -1 loss is a broad non-cover bucket and overlaps with draw/upset hedges."
+      ]
+    },
+    {
+      "fixture": "Croatia vs Ghana",
+      "red_team_status": "hold",
+      "candidate_items": [
+        {
+          "market_type": "1x2",
+          "items": [
+            {"selected_bet": "Croatia win", "verdict": "revise", "candidate_logic": "remove; model below market, Ghana draw utility high"},
+            {"selected_bet": "Draw", "verdict": "hold", "candidate_logic": "entertainment only; no clear edge but tactical path live"},
+            {"selected_bet": "Ghana win", "verdict": "revise", "candidate_logic": "remove; conflict/upset tail only"}
+          ]
+        },
+        {
+          "market_type": "handicap_wdl",
+          "items": [
+            {"selected_bet": "Croatia -1 handicap win", "verdict": "revise", "candidate_logic": "remove; two-plus margin not supported"},
+            {"selected_bet": "Croatia -1 handicap draw", "verdict": "hold", "candidate_logic": "entertainment only; exact one-goal Croatia win"},
+            {"selected_bet": "Croatia -1 handicap loss", "verdict": "hold", "candidate_logic": "candidate logic ok but gate hold; means Croatia does not cover"}
+          ]
+        },
+        {
+          "market_type": "exact_score_total_goals_half_full_time",
+          "items": [
+            {"selected_bet": "Top scores, U/O2.5, HT/FT candidates", "verdict": "hold", "candidate_logic": "market odds missing; high variance; Ghana low-block/draw path"}
+          ]
+        }
+      ],
+      "market_flags": [
+        "Croatia favorite price may include experience/favorite premium.",
+        "Croatia -1 loss overlaps draw/Ghana non-loss and cannot be independent coverage."
+      ]
+    },
+    {
+      "fixture": "Panama vs England",
+      "red_team_status": "hold",
+      "candidate_items": [
+        {
+          "market_type": "1x2",
+          "items": [
+            {"selected_bet": "Panama win", "verdict": "revise", "candidate_logic": "remove; conflict and ordinary 1X2 missing"},
+            {"selected_bet": "Draw", "verdict": "revise", "candidate_logic": "remove in modeler, but draw tail must stay in model risk"},
+            {"selected_bet": "England win", "verdict": "hold", "candidate_logic": "aligned but ordinary 1X2 missing and England rotation risk unresolved"}
+          ]
+        },
+        {
+          "market_type": "handicap_wdl",
+          "items": [
+            {"selected_bet": "Panama +2 handicap win", "verdict": "hold", "candidate_logic": "candidate logic ok but gate hold; means Panama real win/draw or England wins by one"},
+            {"selected_bet": "Panama +2 handicap draw", "verdict": "hold", "candidate_logic": "entertainment only; exact England two-goal win"},
+            {"selected_bet": "Panama +2 handicap loss", "verdict": "revise", "candidate_logic": "remove; three-plus England margin conflicts with low-score caution"}
+          ]
+        },
+        {
+          "market_type": "exact_score_total_goals_half_full_time",
+          "items": [
+            {"selected_bet": "Top scores, U/O2.5, HT/FT candidates", "verdict": "hold", "candidate_logic": "market odds missing; high variance; England rotation-sensitive"}
+          ]
+        }
+      ],
+      "market_flags": [
+        "Ordinary 1X2 missing.",
+        "Panama +2 cannot substitute for full market calibration."
+      ]
+    }
+  ],
+  "proposed_ticket_structure_review": {
+    "structure": "3 main tickets plus 2-3 entertainment tickets",
+    "actual_final_tickets_found": false,
+    "overall_verdict": "hold",
+    "ticket_slot_verdicts": [
+      {"slot": "main_ticket_1", "verdict": "hold", "reason": "No final legs or stake amounts; all gates remain hold_not_executable."},
+      {"slot": "main_ticket_2", "verdict": "hold", "reason": "Potential main bucket is likely handicap-protection/non-cover; correlation matrix not built."},
+      {"slot": "main_ticket_3", "verdict": "hold", "reason": "Three main tickets would likely over-concentrate in low-margin/favorite-not-cover assumptions."},
+      {"slot": "entertainment_ticket_1", "verdict": "hold", "reason": "Exact-score/HTFT odds missing and high variance."},
+      {"slot": "entertainment_ticket_2", "verdict": "hold", "reason": "Total-goals odds missing; no same-source price to evaluate value."},
+      {"slot": "entertainment_ticket_3_optional", "verdict": "hold", "reason": "Optional entertainment slot must not be used to add correlated parlay leverage."}
+    ],
+    "correlation_flags": [
+      "Main-bucket candidates cluster around handicap non-cover or underdog-protection paths.",
+      "Colombia +1 win, Croatia -1 loss, Panama +2 win and Jordan +2 win are not independent if the shared assumption is favorite control without margin.",
+      "Exact score and HT/FT candidates are narrow path and should not be used to make a portfolio look insured.",
+      "No scenario-compatible minimum return or path matrix is present."
+    ],
+    "required_before_reconsideration": [
+      "T-75 official lineups",
+      "final injury/suspension/minutes checks",
+      "same-source odds for all selected markets",
+      "ordinary 1X2 for markets currently missing",
+      "specific ticket legs, stake amounts, odds products and scenario-compatible return matrix",
+      "explicit model-bet alignment for every leg"
+    ]
+  },
+  "final_handoff": {
+    "verdict": "hold_not_executable",
+    "blocking_items": [
+      "No T-75 official lineups.",
+      "Final injuries/minutes unavailable.",
+      "Official live odds chain incomplete and conflicting between sources.",
+      "Score, total-goals and HT/FT odds missing.",
+      "No final 75 RMB portfolio tickets to audit.",
+      "Potential main-bucket structure is correlated around favorite non-cover/low-margin paths."
+    ],
+    "owners": {
+      "data": "official lineups, final injuries, cards, minutes",
+      "market": "same-source odds for selected markets and sale status",
+      "model": "candidate-to-ticket alignment and correlation matrix",
+      "main": "do not publish executable main allocation while red-team verdict is hold"
+    }
+  }
+}

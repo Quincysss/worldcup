@@ -42,15 +42,16 @@ This skill is the system-level contract for prediction, projection, and backtest
 
 1. Data collection package.
 2. Factor input table.
-3. Weighted scoring.
-4. Third-round tournament-context simulation when the match is a final group-round fixture.
-5. Expected goals.
-6. Poisson score matrix.
-7. 1X2, totals, and score probabilities.
-8. Odds-implied probability calibration.
-9. Red-team risk adjustment.
-10. Final prediction output.
-11. Post-match backtest, player-state update, and parameter update.
+3. Predicted lineup package: probable formation, probable XI, rotation candidates, confidence, source log, and T-75 official-lineup gate.
+4. Weighted scoring.
+5. Third-round tournament-context simulation when the match is a final group-round fixture.
+6. Expected goals.
+7. Poisson score matrix.
+8. 1X2, totals, and score probabilities.
+9. Odds-implied probability calibration.
+10. Red-team risk adjustment.
+11. Final prediction output.
+12. Post-match backtest, player-state update, and parameter update.
 
 ## Real Thread Participation Gate
 
@@ -73,6 +74,7 @@ A task is not complete until `线程状态.md` records the dispatched thread IDs
 Prediction, projection, and backtest JSON should include these fields when applicable:
 
 - `factor_inputs`
+- `predicted_lineups`
 - `factor_weights`
 - `team_strength_score`
 - `attack_score`
@@ -106,6 +108,24 @@ Prediction, projection, and backtest JSON should include these fields when appli
 - `parameter_updates`
 
 If a field is not applicable, set it to `null` and explain why in `quality_notes` or `gaps_and_conflicts`. Do not silently omit core fields from a prediction file.
+
+## Predicted Lineup Standard
+
+Every match prediction Markdown and JSON must include a predicted-lineup section before factor scoring. This is a model input, not a confirmed fact until official lineups are published.
+
+Required fields:
+
+- `source_status`: `confirmed`, `probable_not_official`, `uncertain`, or `conflicting`.
+- `captured_at`.
+- `official_lineup_gate`: normally `T-75 official XI required before executable betting or final model lock`.
+- predicted formation for both teams.
+- 11 predicted starters for both teams with Chinese name, English/common name, position, and role note.
+- rotation candidates and the trigger that would move them into the XI.
+- lineup confidence. Before T-75 official lineups, confidence normally must not exceed `medium`; any higher value requires explicit evidence.
+- tactical/model impact if a key starter, role, or formation changes.
+- source log and conflicts.
+
+If predicted lineups are missing, mark `predicted_lineups_status=missing_or_probable_not_official` and keep the red-team or betting gate at `hold` unless the user only asked for a rough discussion.
 
 ## Factor Guidance
 
@@ -223,6 +243,28 @@ Default stake caps for model-conflict hedges:
 - no conflicting hedge ticket may be included in the return floor or described as safety coverage
 
 Every portfolio table should include a short consistency column or note. If more than one core leg is marked `conflict`, the portfolio must be rebuilt before presentation.
+
+### Post-Result Betting Settlement Review
+
+When real results are available for a prior betting discussion, settle the ticket plan before proposing model changes. Use this as a post-match audit, not as new betting advice.
+
+Required settlement fields:
+
+- `actual_results`
+- `ticket_settlement`: ticket id, stake, hit/miss, payout, settlement reason, and failure category
+- `settlement_summary`: total stake, total payout, net return, hit ticket ids, missed ticket ids
+- `model_diagnosis`: direction hits, scoreline hits, tail errors, draw-floor errors, and market or context errors
+- `betting_model_diagnosis`: translation errors, portfolio concentration, hedge independence, narrow-path risk, and uncovered model scorelines
+- `parameter_updates`
+
+Classify misses carefully:
+
+- `model_direction_error`: the match direction itself was wrong.
+- `model_tail_error`: direction was right but margin, scoreline tail, red-card, rotation, or late-game scoring tail was underweighted.
+- `bet_translation_error`: the model identified a useful path, but the ticket omitted or distorted it.
+- `portfolio_structure_error`: a leg was reasonable alone but failed because it was tied into an overcorrelated or overleveraged combination.
+
+Do not treat a winning match direction as proof that the ticket model was sound. A plan can have correct football reads and still lose money because the ticket settlement layer or portfolio construction was weak.
 
 ## File Discipline
 

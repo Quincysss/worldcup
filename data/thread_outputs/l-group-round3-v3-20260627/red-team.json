@@ -1,0 +1,318 @@
+{
+  "schema_version": "worldcup_red_team_review_v3",
+  "phase": "match_prediction_red_team_review",
+  "group": "L",
+  "round": 3,
+  "version": "v3",
+  "created_at": "2026-06-27T15:35:00+08:00",
+  "red_team_status": "complete_red_team_review",
+  "overall_verdict": "hold",
+  "betting_language_blocked": true,
+  "review_scope": [
+    "Croatia vs Ghana",
+    "Panama vs England"
+  ],
+  "source_files_reviewed": [
+    "README.md",
+    "thread-status.md",
+    "workflow-discipline.md",
+    "project-architecture.md",
+    ".codex/skills/worldcup-red-team-verifier/SKILL.md",
+    ".codex/skills/worldcup-red-team-verifier/references/review-checklist.md",
+    ".codex/skills/worldcup-red-team-verifier/references/market-risk.md",
+    ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+    "data/outputs/match_predictions/l-group-round3-quant-prediction-20260626.json",
+    "data/thread_outputs/l-group-round3-prediction-20260626/data-collector.md",
+    "data/thread_outputs/l-group-round3-prediction-20260626/tactics-coach.md",
+    "data/thread_outputs/l-group-round3-prediction-20260626/modeler.md",
+    "data/thread_outputs/l-group-round3-prediction-20260626/red-team.md",
+    "match-md-croatia-vs-ghana-20260628",
+    "match-md-panama-vs-england-20260628",
+    "l-group-round3-summary-20260626"
+  ],
+  "v3_upstream_status": {
+    "v3_thread_directory_existed_before_review": false,
+    "v3_data_tactics_model_files_found": false,
+    "fallback_baseline": "Existing 20260626 L group round 3 prediction chain was reviewed as the current available baseline."
+  },
+  "v3_contract_flags": [
+    {
+      "flag": "predicted_lineups_missing",
+      "severity": "blocker",
+      "confidence": "high",
+      "detail": "The reviewed baseline states that predicted lineups are not official and need T-75 recheck, but does not provide the v3 structured predicted_lineups package with XI, confidence, conflicts, source log and rerun triggers."
+    },
+    {
+      "flag": "core_quant_fields_incomplete_for_v3",
+      "severity": "high",
+      "confidence": "high",
+      "detail": "The baseline has xG, Poisson, odds and final probabilities, but does not expose the full v3 factor_inputs, weights, third_round_context_adjustment, simulated_group_outcomes and duplicate-counting audit."
+    },
+    {
+      "flag": "market_chain_incomplete",
+      "severity": "high",
+      "confidence": "high",
+      "detail": "Same-source totals are missing, and Panama vs England ordinary 1X2 is unavailable in the reviewed snapshot."
+    }
+  ],
+  "blocking_gates": [
+    {
+      "gate": "T-75 official lineups",
+      "status": "missing",
+      "owner": "data/team-news",
+      "blocking_effect": "hold final model lock and all betting-style language"
+    },
+    {
+      "gate": "final injuries, suspensions, minutes limits",
+      "status": "not_final",
+      "owner": "data/team-news",
+      "blocking_effect": "availability and rotation-sensitive probabilities require cap or rerun"
+    },
+    {
+      "gate": "v3 predicted_lineups",
+      "status": "missing_in_reviewed_baseline",
+      "owner": "data/tactics/model",
+      "blocking_effect": "cannot pass the latest single-match v3 template"
+    },
+    {
+      "gate": "same-source 1X2, handicap and totals odds",
+      "status": "incomplete",
+      "owner": "market/betting-risk",
+      "blocking_effect": "odds remain discussion-level calibration only"
+    }
+  ],
+  "matches": [
+    {
+      "match": "Croatia vs Ghana",
+      "match_no": "Saturday067",
+      "kickoff_beijing": "2026-06-28 05:00",
+      "verdict": "hold",
+      "model_snapshot_reviewed": {
+        "xg": {
+          "croatia": 1.28,
+          "ghana": 0.78
+        },
+        "final_1x2": {
+          "croatia_win": 0.5038,
+          "draw": 0.2902,
+          "ghana_win": 0.206
+        },
+        "raw_1x2": {
+          "croatia_win": 0.4827,
+          "draw": 0.2902,
+          "ghana_win": 0.2271
+        },
+        "top_scores": [
+          "1-0",
+          "0-0",
+          "1-1",
+          "2-0",
+          "0-1"
+        ],
+        "totals": {
+          "over_2_5": 0.3396,
+          "under_2_5": 0.6604
+        }
+      },
+      "top_concerns": [
+        {
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high",
+          "concern": "T-75 official lineups and final availability are missing; Ghana goalkeeper/Partey questions and Croatia veteran minutes load remain pre-match swing inputs."
+        },
+        {
+          "category": "tournament",
+          "severity": "high",
+          "confidence": "high",
+          "concern": "Ghana can benefit from a draw while Croatia are more win-dependent; late tempo can flip around 55-75 minutes depending on the simultaneous England match."
+        },
+        {
+          "category": "market",
+          "severity": "high",
+          "confidence": "medium",
+          "concern": "Croatia ordinary 1X2 market at 55.3% no-vig is stronger than model raw 48.3%; public/experience premium or market motivation pricing must be separated from model evidence."
+        },
+        {
+          "category": "quant",
+          "severity": "medium",
+          "confidence": "medium",
+          "concern": "Croatia experience, midfield control, second attacks, first-round correction and market signal may be counted across strength, tactics, player state and market calibration."
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "Ghana sit in a low block and accept draw utility, turning the game into a 0-0 or 1-1 path longer than the model's Croatia-win headline suggests.",
+        "Croatia push late and open transition space for Ghana counters or set-piece swings.",
+        "An early card or early Ghana goal breaks the low-event under baseline and makes the static Poisson tail too thin."
+      ],
+      "overconfidence_flags": [
+        "Croatia win at 50.4% is not strong enough for one-sided language.",
+        "Top score 1-0 is only 16.31%, with 0-0 and 1-1 close behind.",
+        "The current baseline lacks v3 predicted_lineups and full factor-weight exposure."
+      ],
+      "market_flags": [
+        "Ordinary 1X2 and handicap snapshots exist, but same-source totals are absent.",
+        "Croatia -1 handicap market points to handicap failure risk, not a clear-margin favorite profile.",
+        "Single capture at 2026-06-26T17:43:00+08:00 does not establish line movement."
+      ],
+      "quant_chain_flags": [
+        "Independent Poisson underweights late incentive shifts, early goal, red card, and correlated transition events.",
+        "Full v3 factor_inputs and factor_weights are not exposed in the reviewed baseline.",
+        "No structured predicted_lineups means player-state and tactical assumptions cannot be fully audited."
+      ],
+      "recommended_probability_adjustment": {
+        "type": "favorite_cap_and_draw_tail_raise",
+        "suggestion": "Before T-75 and final availability, keep Croatia win in a review band around 47-50% rather than publishing 50.4% as firm; preserve or slightly raise draw around 29-31% and Ghana counter/set-piece tail.",
+        "not_a_replacement_prediction": true
+      },
+      "missing_data": [
+        "T-75 official lineups",
+        "structured v3 predicted_lineups",
+        "final Ghana goalkeeper/Partey availability",
+        "final Croatia veteran minutes and rotation plan",
+        "same-source totals odds",
+        "line movement and official sale-status recheck",
+        "full v3 factor inputs and weights"
+      ],
+      "handoff_notes": [
+        {
+          "owner": "data/team-news",
+          "request": "Confirm official XI, Ghana key availability, Croatia old-core minutes limits, cards and suspension risk."
+        },
+        {
+          "owner": "tactics",
+          "request": "Stress-test Ghana low block, transition threat, and Croatia late chase triggers under simultaneous-match score states."
+        },
+        {
+          "owner": "model",
+          "request": "Add v3 predicted_lineups, expose factor weights, audit duplicate counting, and thicken draw/late-transition tails."
+        },
+        {
+          "owner": "market",
+          "request": "Add same-source totals and a fresh 1X2/handicap snapshot with movement notes."
+        }
+      ]
+    },
+    {
+      "match": "Panama vs England",
+      "match_no": "Saturday068",
+      "kickoff_beijing": "2026-06-28 05:00",
+      "verdict": "hold",
+      "model_snapshot_reviewed": {
+        "xg": {
+          "panama": 0.5,
+          "england": 1.75
+        },
+        "final_1x2": {
+          "panama_win": 0.0999,
+          "draw": 0.2199,
+          "england_win": 0.6802
+        },
+        "top_scores": [
+          "0-1",
+          "0-2",
+          "0-0",
+          "0-3",
+          "1-1"
+        ],
+        "totals": {
+          "over_2_5": 0.3907,
+          "under_2_5": 0.6093
+        }
+      },
+      "top_concerns": [
+        {
+          "category": "market",
+          "severity": "blocker",
+          "confidence": "high",
+          "concern": "Ordinary 1X2 is not available in the reviewed China Sports Lottery snapshot; Panama +2 handicap cannot replace full 1X2 calibration."
+        },
+        {
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high",
+          "concern": "T-75 official lineups and final England rotation/minutes plan are missing; Rice, Saka, Reece James and other management decisions materially affect xG and tempo."
+        },
+        {
+          "category": "tactical",
+          "severity": "high",
+          "confidence": "high",
+          "concern": "England's second-round 0-0 warns that control does not guarantee stable low-block chance conversion; the 68.0% win estimate needs a pre-lineup cap."
+        },
+        {
+          "category": "tournament",
+          "severity": "medium",
+          "confidence": "medium",
+          "concern": "Panama have only a theoretical third-place route but can still alter tempo; England may manage top-two risk instead of chasing margin."
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "England rotate and accept a low-tempo control match, extending 0-1, 0-0 and 1-1 corridors.",
+        "Panama start aggressively because only a theoretical third-place path remains, creating either early chaos or England transition chances.",
+        "A red card, penalty or early goal makes the +2 handicap signal unstable and separates England win from margin outcomes."
+      ],
+      "overconfidence_flags": [
+        "England win at 68.0% is materially lineup-sensitive before T-75.",
+        "0-0 and 1-1 are both in or near the top-score cluster, so low-score tail must remain visible.",
+        "England win, England by two, and England by three-plus are different settlement layers and must not be merged."
+      ],
+      "market_flags": [
+        "Ordinary 1X2 is missing.",
+        "Same-source totals are missing.",
+        "Panama +2 handicap snapshot implies deep England margin is not low-variance.",
+        "Single snapshot does not capture late movement around England rotation news."
+      ],
+      "quant_chain_flags": [
+        "Poisson underweights early goals, red cards, favorite rotation, low-block tempo drag and score-state dependence.",
+        "The baseline does not expose full v3 factor_inputs, weights, predicted_lineups, or simulated_group_outcomes.",
+        "Market +2 signal was used to raise England xG from 1.58 to 1.75; this needs duplicate-counting control against favorite strength and Panama must-open factors."
+      ],
+      "recommended_probability_adjustment": {
+        "type": "favorite_cap_and_low-score_tail_raise",
+        "suggestion": "Before T-75, final availability and ordinary 1X2 are complete, review England win 68.0% in a 63-66% band; raise draw/low-score and Panama small-loss uncertainty while keeping England late-transition blowout as a scenario, not a stable baseline.",
+        "not_a_replacement_prediction": true
+      },
+      "missing_data": [
+        "ordinary 1X2 market snapshot",
+        "T-75 official lineups",
+        "structured v3 predicted_lineups",
+        "final England rotation/minutes plan",
+        "final Panama lineup and Carrasquilla availability",
+        "same-source totals odds",
+        "line movement and official sale-status recheck",
+        "full v3 factor inputs and weights"
+      ],
+      "handoff_notes": [
+        {
+          "owner": "data/team-news",
+          "request": "Confirm official XI, England rotation/minutes limits, Panama availability, cards and suspension risk."
+        },
+        {
+          "owner": "tactics",
+          "request": "Define England low-block breaking plan, Panama must-open triggers, and late-game transition state changes."
+        },
+        {
+          "owner": "model",
+          "request": "Cap England pre-lineup probability, split win/margin/score clusters, and audit the market +2 xG uplift for duplicate counting."
+        },
+        {
+          "owner": "market",
+          "request": "Add ordinary 1X2 and same-source totals; do not use Panama +2 as a substitute for full market calibration."
+        }
+      ]
+    }
+  ],
+  "alternative_scenarios": [
+    "Both matches kick off simultaneously, so the Croatia-Ghana state can change England's top-place risk appetite and vice versa.",
+    "If Ghana protect a draw and England also control risk, the group can drift into low-event corridors that punish favorite-margin assumptions.",
+    "If Croatia or Panama must chase late, transition and red-card tails become thicker than independent Poisson suggests."
+  ],
+  "follow_up_checks": [
+    "Recheck official lineups, benches, formations and core rests after T-75.",
+    "Recheck final injuries, suspensions, yellow-card suspension risk, minutes limits and workload.",
+    "Add same-source ordinary 1X2, handicap and totals odds with capture time and sale status.",
+    "Create or update L group v3 prediction artifacts with predicted_lineups, factor_inputs, factor_weights and simulated_group_outcomes.",
+    "Audit duplicate counting between first two rounds, player_state, tactical adjustments, third-round motivation and market calibration."
+  ],
+  "publish_gate": "hold until official lineups, final availability, complete odds chain, v3 predicted_lineups and red-team recheck are complete"
+}

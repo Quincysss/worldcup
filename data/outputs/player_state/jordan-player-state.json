@@ -5,8 +5,8 @@
   "group": "J",
   "phase": "member_table_build",
   "status": "completed",
-  "player_state_update_status": "round2_postmatch_updated_in_canonical_player_state",
-  "captured_at": "2026-06-23T11:00:00+08:00",
+  "player_state_update_status": "partial",
+  "captured_at": "2026-06-28T20:56:26+08:00",
   "match_context": {
     "last_match": "奥地利 3-1 约旦",
     "next_match": "约旦 vs 阿尔及利亚",
@@ -54,8 +54,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.8,
-      "form_reason": "失 2 球，约旦下半场承压较大。",
+      "form_status_1_5": 2.7,
+      "form_reason": "扑救亮点但失3球。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -211,6 +211,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "亚齐德·阿布莱拉",
+          "english_name": "Yazeed Abulaila",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "首发门将，失3球，28分钟后做出近距离扑救。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.8,
+          "rating_reason": "扑救亮点但失3球。",
+          "postmatch_form_status_1_5": 2.7,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -241,7 +260,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.8,
+        "postmatch_form_status_1_5": 2.7,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发门将，失3球，28分钟后做出近距离扑救。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-02",
@@ -284,7 +333,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.4,
-      "form_reason": "尾段替补，样本很小。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -417,6 +466,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "穆罕默德·阿布哈希什",
+          "english_name": "Mohammad Abu Hashish",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.4,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -447,7 +515,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.4,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-03",
@@ -491,7 +589,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.8,
-      "form_reason": "中卫线下半场被压制。",
+      "form_reason": "防线失3球，压力较大。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -647,6 +745,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "阿卜杜拉·纳西卜",
+          "english_name": "Abdallah Nasib",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "首发中卫。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.8,
+          "rating_reason": "防线失3球，压力较大。",
+          "postmatch_form_status_1_5": 2.8,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -677,7 +794,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.8,
+        "postmatch_form_status_1_5": 2.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发中卫。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-04",
@@ -720,8 +867,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_reason": "64 分钟黄牌，终场补时前后被换下。",
+      "form_status_1_5": 2.4,
+      "form_reason": "首发中卫伤退，下一场可用性需重点复核。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -864,6 +1011,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "胡萨姆·阿布达哈卜",
+          "english_name": "Husam Abu Dahab",
+          "started": true,
+          "minutes": 89,
+          "event_summary": "89分钟与Barco碰撞后被担架抬下。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "首发中卫伤退，下一场可用性需重点复核。",
+          "postmatch_form_status_1_5": 2.4,
+          "injury_availability": "89分钟担架离场，伤情待官方确认。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -894,7 +1060,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "无确认停赛，但黄牌纪律风险上调。"
+      "next_match_availability_note": "无确认停赛，但黄牌纪律风险上调。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 89,
+        "substitution": "89分钟伤退/被换下",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.4,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "89分钟担架离场，伤情待官方确认。",
+        "key_stats_note": "89分钟与Barco碰撞后被担架抬下。",
+        "source_status": "confirmed_injury_watch",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-05",
@@ -937,8 +1133,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.8,
-      "form_reason": "三中卫体系中承压，终场前被持续冲击。",
+      "form_status_1_5": 2.6,
+      "form_reason": "防守承压且吃牌。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -1094,6 +1290,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "亚赞·阿拉伯",
+          "english_name": "Yazan Al-Arab",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "64分钟因犯规吃黄牌。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "防守承压且吃牌。",
+          "postmatch_form_status_1_5": 2.6,
+          "injury_availability": "黄牌纪律风险需复核累计。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -1124,7 +1339,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 1,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2.6,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "黄牌纪律风险需复核累计。",
+        "key_stats_note": "64分钟因犯规吃黄牌。",
+        "source_status": "confirmed_card",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-06",
@@ -1167,8 +1412,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.3,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_status_1_5": 2.8,
+      "form_reason": "替补时间较短。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -1311,6 +1556,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "阿梅尔·贾穆斯",
+          "english_name": "Amer Jamous",
+          "started": false,
+          "minutes": 14,
+          "event_summary": "76分钟替补登场。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.8,
+          "rating_reason": "替补时间较短。",
+          "postmatch_form_status_1_5": 2.8,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -1341,7 +1605,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 14,
+        "substitution": "76分钟替补登场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.8,
+        "postmatch_form_status_1_5": 2.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "76分钟替补登场。",
+        "source_status": "confirmed_sub",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-07",
@@ -1384,8 +1678,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.1,
-      "form_reason": "补时替补，样本极小。",
+      "form_status_1_5": 2.7,
+      "form_reason": "补时前替补，证据有限。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -1528,6 +1822,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "穆罕默德·阿布祖赖克",
+          "english_name": "Mohammad Abu Zrayq",
+          "started": false,
+          "minutes": 1,
+          "event_summary": "89分钟替补登场。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "补时前替补，证据有限。",
+          "postmatch_form_status_1_5": 2.7,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -1558,7 +1871,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 1,
+        "substitution": "89分钟替补登场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.7,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "89分钟替补登场。",
+        "source_status": "confirmed_sub",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-08",
@@ -1601,8 +1944,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3,
-      "form_reason": "中场屏障和二点保护一般。",
+      "form_status_1_5": 2.8,
+      "form_reason": "中场长期承压，直接事件不足。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -1758,6 +2101,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "努尔·拉瓦布德",
+          "english_name": "Noor Al-Rawabdeh",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "首发中场。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.8,
+          "rating_reason": "中场长期承压，直接事件不足。",
+          "postmatch_form_status_1_5": 2.8,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -1788,7 +2150,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.8,
+        "postmatch_form_status_1_5": 2.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发中场。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-09",
@@ -1831,8 +2223,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.4,
-      "form_reason": "多次射门，反击威胁延续。",
+      "form_status_1_5": 2.8,
+      "form_reason": "前场支点有限，无直接事件。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -1988,6 +2380,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "阿里·奥尔万",
+          "english_name": "Ali Olwan",
+          "started": true,
+          "minutes": 89,
+          "event_summary": "首发前锋，89分钟被换下。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.8,
+          "rating_reason": "前场支点有限，无直接事件。",
+          "postmatch_form_status_1_5": 2.8,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -2018,7 +2429,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 89,
+        "substitution": "89分钟被Mohammad Abu Zrayq换下",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.8,
+        "postmatch_form_status_1_5": 2.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发前锋，89分钟被换下。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-10",
@@ -2060,8 +2501,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.8,
-      "form_reason": "助攻拉什丹，仍是约旦反击第一推进点。",
+      "form_status_1_5": 3.4,
+      "form_reason": "替补进球，是约旦最大亮点。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -2207,6 +2648,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "穆萨·塔马里",
+          "english_name": "Musa Al-Taamari",
+          "started": false,
+          "minutes": 45,
+          "event_summary": "55分钟替补破门。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3.8,
+          "rating_reason": "替补进球，是约旦最大亮点。",
+          "postmatch_form_status_1_5": 3.4,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -2237,7 +2697,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 45,
+        "substitution": "半场替补登场",
+        "goals": 1,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3.8,
+        "postmatch_form_status_1_5": 3.4,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "55分钟替补破门。",
+        "source_status": "confirmed_goal",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-11",
@@ -2279,8 +2769,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_status_1_5": 2.6,
+      "form_reason": "半场调整，进攻影响有限。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -2426,6 +2916,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "奥德·法库里",
+          "english_name": "Odeh Al-Fakhouri",
+          "started": true,
+          "minutes": 45,
+          "event_summary": "首发半场被换下。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "半场调整，进攻影响有限。",
+          "postmatch_form_status_1_5": 2.6,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -2456,7 +2965,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 45,
+        "substitution": "半场被Mahmoud Al-Mardi换下",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2.6,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发半场被换下。",
+        "source_status": "confirmed_subbed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-12",
@@ -2499,7 +3038,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.3,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -2632,6 +3171,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "努尔·巴尼阿蒂亚",
+          "english_name": "Nour Bani Attiah",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.3,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -2662,7 +3220,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-13",
@@ -2706,7 +3294,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 3,
-      "form_reason": "72 分钟有射正，75 分钟左右被换下。",
+      "form_reason": "替补提升前场活力但无直接事件。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -2862,6 +3450,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "马哈茂德·马尔迪",
+          "english_name": "Mahmoud Al-Mardi",
+          "started": false,
+          "minutes": 45,
+          "event_summary": "半场替补登场。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3,
+          "rating_reason": "替补提升前场活力但无直接事件。",
+          "postmatch_form_status_1_5": 3,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -2892,7 +3499,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 45,
+        "substitution": "半场替补登场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3,
+        "postmatch_form_status_1_5": 3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "半场替补登场。",
+        "source_status": "confirmed_sub",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-14",
@@ -2936,7 +3573,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.3,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -3079,6 +3716,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "拉贾伊·阿耶德",
+          "english_name": "Rajaei Ayed",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.3,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3109,7 +3765,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-15",
@@ -3152,7 +3838,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.3,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -3285,6 +3971,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "易卜拉欣·萨德",
+          "english_name": "Ibrahim Sadeh",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.3,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3315,7 +4020,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-16",
@@ -3358,7 +4093,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 3,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -3504,6 +4239,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "穆罕默德·阿布纳迪",
+          "english_name": "Mo Abualnadi",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 3,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3534,7 +4288,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-17",
@@ -3576,8 +4360,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.1,
-      "form_reason": "补时替补，样本极小。",
+      "form_status_1_5": 2.7,
+      "form_reason": "补时前替补，证据有限。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -3710,6 +4494,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "萨利姆·奥贝德",
+          "english_name": "Salim Obaid",
+          "started": false,
+          "minutes": 1,
+          "event_summary": "89分钟替补登场。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "补时前替补，证据有限。",
+          "postmatch_form_status_1_5": 2.7,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3740,7 +4543,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 1,
+        "substitution": "89分钟替补登场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.7,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "89分钟替补登场。",
+        "source_status": "confirmed_sub",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-18",
@@ -3783,7 +4616,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.3,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -3916,6 +4749,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "穆罕默德·塔哈",
+          "english_name": "Mohammad Taha",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.3,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3946,7 +4798,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-19",
@@ -3989,7 +4871,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.6,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -4135,6 +5017,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "赛义德·罗桑",
+          "english_name": "Saed Al-Rosan",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.6,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -4165,7 +5066,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.6,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-20",
@@ -4208,8 +5139,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.9,
-      "form_reason": "边路参与定位球和防守，84 分钟被换下。",
+      "form_status_1_5": 2.6,
+      "form_reason": "黄牌和任意球失分源，但有防守补救。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -4365,6 +5296,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "穆罕纳德·阿布塔哈",
+          "english_name": "Mohannad Abu Taha",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "19分钟犯规送Lo Celso任意球并吃黄牌；51分钟关键铲断。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "黄牌和任意球失分源，但有防守补救。",
+          "postmatch_form_status_1_5": 2.6,
+          "injury_availability": "黄牌纪律风险需复核累计。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -4395,7 +5345,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 1,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2.6,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "黄牌纪律风险需复核累计。",
+        "key_stats_note": "19分钟犯规送Lo Celso任意球并吃黄牌；51分钟关键铲断。",
+        "source_status": "confirmed_card",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-21",
@@ -4438,8 +5418,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 4.1,
-      "form_reason": "36 分钟接塔马里助攻破门，约旦本场最佳之一。",
+      "form_status_1_5": 2.5,
+      "form_reason": "送点关键负面事件。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -4595,6 +5575,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "尼扎尔·拉什丹",
+          "english_name": "Nizar Al-Rashdan",
+          "started": true,
+          "minutes": 76,
+          "event_summary": "29分钟高脚动作导致点球判罚。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.4,
+          "rating_reason": "送点关键负面事件。",
+          "postmatch_form_status_1_5": 2.5,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -4625,7 +5624,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 76,
+        "substitution": "76分钟被Amer Jamous换下",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.4,
+        "postmatch_form_status_1_5": 2.5,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "29分钟高脚动作导致点球判罚。",
+        "source_status": "confirmed_key_error",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-22",
@@ -4669,7 +5698,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.3,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -4812,6 +5841,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "阿卜杜拉·法库里",
+          "english_name": "Abdallah Al-Fakhouri",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.3,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -4842,7 +5890,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-23",
@@ -4884,8 +5962,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.9,
-      "form_reason": "边路守转攻有参与但末段承压。",
+      "form_status_1_5": 3.2,
+      "form_reason": "助攻约旦进球，防守端承压。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -5031,6 +6109,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "伊赫桑·哈达德",
+          "english_name": "Ihsan Haddad",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "55分钟低平传中助攻Al-Taamari。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3.4,
+          "rating_reason": "助攻约旦进球，防守端承压。",
+          "postmatch_form_status_1_5": 3.2,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -5061,7 +6158,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 1,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3.4,
+        "postmatch_form_status_1_5": 3.2,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "55分钟低平传中助攻Al-Taamari。",
+        "source_status": "confirmed_assist",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-24",
@@ -5104,8 +6231,8 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_reason": "尾段替补。",
+      "form_status_1_5": 2.6,
+      "form_reason": "半场即被调整，影响有限。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -5261,6 +6388,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "阿里·阿扎伊泽",
+          "english_name": "Ali Azaizeh",
+          "started": true,
+          "minutes": 45,
+          "event_summary": "首发半场被换下。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.6,
+          "rating_reason": "半场即被调整，影响有限。",
+          "postmatch_form_status_1_5": 2.6,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -5291,7 +6437,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": true,
+        "minutes": 45,
+        "substitution": "半场被Musa Al-Taamari换下",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.6,
+        "postmatch_form_status_1_5": 2.6,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发半场被换下。",
+        "source_status": "confirmed_subbed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-25",
@@ -5335,7 +6511,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.6,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -5491,6 +6667,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "穆罕默德·达乌德",
+          "english_name": "Mohammad Al-Dawoud",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.6,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -5521,7 +6716,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.6,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "player_id": "JOR-26",
@@ -5565,7 +6790,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "form_status_1_5": 2.3,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads - Jordan section",
@@ -5708,6 +6933,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_JOR_1-3_ARG",
+          "date": "2026-06-28",
+          "opponent": "阿根廷",
+          "player": "阿纳斯·巴达维",
+          "english_name": "Anas Badawi",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.3,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -5738,7 +6982,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_JOR_1-3_ARG",
+        "date": "2026-06-28",
+        "opponent": "阿根廷",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+          "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     }
   ],
   "team_style_facts": [
@@ -5787,9 +7061,10 @@
     "JFA injury replacement note存在英文摘要将替换球员写成 Mohammad Abu Ghoush 与名单表 Mohammad Taha 的不一致；本包保留最终名单表中的 Mohammad Taha，并在来源状态视为 conflicting/supporting。",
     "首轮详细赛后评分未取得可靠公开来源，rating 保持 null，rating_source_status=missing。",
     "批次E：已按Transfermarkt详细页补身价/身高/惯用脚，可匹配 roster 16/26、player_state 16/26；未匹配项保留missing_name_match说明。分钟/评分缺口已补missing note。",
-    "批次E：Transfermarkt可匹配字段已补；未匹配或球员页未给出的身高/惯用脚/身价保持原值，需后续官方或数据商复核。"
+    "批次E：Transfermarkt可匹配字段已补；未匹配或球员页未给出的身高/惯用脚/身价保持原值，需后续官方或数据商复核。",
+    "Round3 2026-06-28_JOR_1-3_ARG: 官方FIFA完整事件表/逐人评分未取得；已用Guardian现场页和新闻源写入partial_source_limited状态。"
   ],
-  "updated_at": "2026-06-23T11:00:00+08:00",
+  "updated_at": "2026-06-28T20:56:26+08:00",
   "gap_remediation_log": [
     {
       "batch": "E",
@@ -6333,6 +7608,344 @@
       "rating_reason": "首轮未出场，状态依据不足，保持中性偏低。",
       "postmatch_form_status_1_5": 2.5,
       "captured_at": "2026-06-21T01:22:42+08:00"
+    },
+    {
+      "player": "亚齐德·阿布莱拉",
+      "english_name": "Yazeed Abulaila",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.8,
+      "postmatch_form_status_1_5": 2.7,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "穆罕默德·阿布哈希什",
+      "english_name": "Mohammad Abu Hashish",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.4,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "阿卜杜拉·纳西卜",
+      "english_name": "Abdallah Nasib",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.8,
+      "postmatch_form_status_1_5": 2.8,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "胡萨姆·阿布达哈卜",
+      "english_name": "Husam Abu Dahab",
+      "started": true,
+      "minutes": 89,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.4,
+      "source_status": "confirmed_injury_watch"
+    },
+    {
+      "player": "亚赞·阿拉伯",
+      "english_name": "Yazan Al-Arab",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 1,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.6,
+      "postmatch_form_status_1_5": 2.6,
+      "source_status": "confirmed_card"
+    },
+    {
+      "player": "阿梅尔·贾穆斯",
+      "english_name": "Amer Jamous",
+      "started": false,
+      "minutes": 14,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.8,
+      "postmatch_form_status_1_5": 2.8,
+      "source_status": "confirmed_sub"
+    },
+    {
+      "player": "穆罕默德·阿布祖赖克",
+      "english_name": "Mohammad Abu Zrayq",
+      "started": false,
+      "minutes": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.7,
+      "source_status": "confirmed_sub"
+    },
+    {
+      "player": "努尔·拉瓦布德",
+      "english_name": "Noor Al-Rawabdeh",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.8,
+      "postmatch_form_status_1_5": 2.8,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "阿里·奥尔万",
+      "english_name": "Ali Olwan",
+      "started": true,
+      "minutes": 89,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.8,
+      "postmatch_form_status_1_5": 2.8,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "穆萨·塔马里",
+      "english_name": "Musa Al-Taamari",
+      "started": false,
+      "minutes": 45,
+      "goals": 1,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3.8,
+      "postmatch_form_status_1_5": 3.4,
+      "source_status": "confirmed_goal"
+    },
+    {
+      "player": "奥德·法库里",
+      "english_name": "Odeh Al-Fakhouri",
+      "started": true,
+      "minutes": 45,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.6,
+      "postmatch_form_status_1_5": 2.6,
+      "source_status": "confirmed_subbed"
+    },
+    {
+      "player": "努尔·巴尼阿蒂亚",
+      "english_name": "Nour Bani Attiah",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.3,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "马哈茂德·马尔迪",
+      "english_name": "Mahmoud Al-Mardi",
+      "started": false,
+      "minutes": 45,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3,
+      "postmatch_form_status_1_5": 3,
+      "source_status": "confirmed_sub"
+    },
+    {
+      "player": "拉贾伊·阿耶德",
+      "english_name": "Rajaei Ayed",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.3,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "易卜拉欣·萨德",
+      "english_name": "Ibrahim Sadeh",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.3,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "穆罕默德·阿布纳迪",
+      "english_name": "Mo Abualnadi",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 3,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "萨利姆·奥贝德",
+      "english_name": "Salim Obaid",
+      "started": false,
+      "minutes": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.7,
+      "source_status": "confirmed_sub"
+    },
+    {
+      "player": "穆罕默德·塔哈",
+      "english_name": "Mohammad Taha",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.3,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "赛义德·罗桑",
+      "english_name": "Saed Al-Rosan",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.6,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "穆罕纳德·阿布塔哈",
+      "english_name": "Mohannad Abu Taha",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 1,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.6,
+      "postmatch_form_status_1_5": 2.6,
+      "source_status": "confirmed_card"
+    },
+    {
+      "player": "尼扎尔·拉什丹",
+      "english_name": "Nizar Al-Rashdan",
+      "started": true,
+      "minutes": 76,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.4,
+      "postmatch_form_status_1_5": 2.5,
+      "source_status": "confirmed_key_error"
+    },
+    {
+      "player": "阿卜杜拉·法库里",
+      "english_name": "Abdallah Al-Fakhouri",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.3,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "伊赫桑·哈达德",
+      "english_name": "Ihsan Haddad",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3.4,
+      "postmatch_form_status_1_5": 3.2,
+      "source_status": "confirmed_assist"
+    },
+    {
+      "player": "阿里·阿扎伊泽",
+      "english_name": "Ali Azaizeh",
+      "started": true,
+      "minutes": 45,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.6,
+      "postmatch_form_status_1_5": 2.6,
+      "source_status": "confirmed_subbed"
+    },
+    {
+      "player": "穆罕默德·达乌德",
+      "english_name": "Mohammad Al-Dawoud",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.6,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "阿纳斯·巴达维",
+      "english_name": "Anas Badawi",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.3,
+      "source_status": "unused_or_not_confirmed_in_live_source"
     }
   ],
   "internal_rating_backfill_status": {
@@ -6373,5 +7986,15 @@
       ],
       "note": "赛后比分、阵型、首发、替补、进球、黄牌与赔率结果用于回测和球员状态迭代。"
     }
-  ]
+  ],
+  "round3_summary": {
+    "match_id": "2026-06-28_JOR_1-3_ARG",
+    "date": "2026-06-28",
+    "opponent": "阿根廷",
+    "result": "约旦 1-3 阿根廷",
+    "status": "partial_source_limited",
+    "player_records": 26,
+    "captured_at": "2026-06-28T20:56:26+08:00",
+    "source_note": "Guardian现场页核验首发和主要事件；部分换人分钟、全量牌面、官方逐人评分未闭合。"
+  }
 }

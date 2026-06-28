@@ -1,0 +1,349 @@
+{
+  "schema_version": "j_group_round3_postmatch_betting_risk_review_v1",
+  "phase": "post_result_betting_settlement_review",
+  "status": "complete_j_group_scope",
+  "created_at": "2026-06-28T00:00:00+08:00",
+  "owner": "jingcai_betting_risk_agent",
+  "scope": [
+    "Algeria vs Austria",
+    "Jordan vs Argentina"
+  ],
+  "no_new_betting_advice": true,
+  "source_log": [
+    {
+      "type": "project_plan",
+      "path": "data/outputs/betting_risk/jkl-round3-75yuan-5to6-ticket-discussion-plan-20260627.json"
+    },
+    {
+      "type": "project_review",
+      "path": "data/outputs/betting_risk/jkl-round3-r1-r5-bold-plan-review-20260627.json"
+    },
+    {
+      "type": "thread_output",
+      "path": "data/thread_outputs/jkl-round3-75yuan-20260627/betting-risk.json"
+    },
+    {
+      "type": "prediction",
+      "path": "data/outputs/match_predictions/j-group-round3-v3-quant-prediction-20260627.json"
+    },
+    {
+      "type": "result_source",
+      "source": "The Guardian live report",
+      "url": "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+      "captured_at": "2026-06-28",
+      "used_for": "Algeria 3-3 Austria final score"
+    },
+    {
+      "type": "result_source",
+      "source": "The Guardian live report",
+      "url": "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-vs-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+      "captured_at": "2026-06-28",
+      "used_for": "Jordan 1-3 Argentina final score"
+    }
+  ],
+  "actual_results": [
+    {
+      "match_no": "071",
+      "match": "Algeria vs Austria",
+      "final_score": "3-3",
+      "ordinary_1x2_result": "draw",
+      "handicap_line_home": 1,
+      "handicap_result": {
+        "selection_hit": "Algeria +1 handicap win",
+        "real_condition": "Algeria draw, so Algeria +1 wins after adjustment"
+      },
+      "model_pre_match_reference": {
+        "probabilities_after_red_team": {
+          "algeria_win": 0.315,
+          "draw": 0.33,
+          "austria_win": 0.355
+        },
+        "top5_scores": [
+          "1-1",
+          "0-1",
+          "1-0",
+          "0-0",
+          "1-2"
+        ],
+        "totals": {
+          "over_2_5": 0.4433,
+          "under_2_5": 0.5567
+        }
+      }
+    },
+    {
+      "match_no": "072",
+      "match": "Jordan vs Argentina",
+      "final_score": "1-3",
+      "ordinary_1x2_result": "Argentina win",
+      "handicap_line_home": 2,
+      "handicap_result": {
+        "selection_hit": "Jordan +2 handicap draw",
+        "real_condition": "Argentina win by exactly 2 goals"
+      },
+      "model_pre_match_reference": {
+        "probabilities_after_red_team": {
+          "jordan_win": 0.12,
+          "draw": 0.24,
+          "argentina_win": 0.64
+        },
+        "top5_scores": [
+          "0-1",
+          "0-2",
+          "0-3",
+          "1-1",
+          "1-2"
+        ],
+        "totals": {
+          "over_2_5": 0.4587,
+          "under_2_5": 0.5413
+        }
+      }
+    }
+  ],
+  "j_group_leg_settlement": [
+    {
+      "source": "75yuan_plan",
+      "ticket_id": "T1",
+      "leg": "Jordan +2 handicap win",
+      "stake_scope": "18 RMB ticket; J leg is the only leg",
+      "actual_result": "Jordan +2 handicap draw",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss",
+      "settlement_reason": "Argentina won by exactly 2, while the selected leg required Jordan not to lose or Argentina by exactly 1.",
+      "failure_categories": [
+        "bet_translation_error",
+        "model_tail_error"
+      ],
+      "notes": "The model top-score cluster already included 0-2; selecting only +2 win omitted the exact two-goal margin."
+    },
+    {
+      "source": "75yuan_plan",
+      "ticket_id": "T4",
+      "leg": "Algeria +1 handicap draw",
+      "stake_scope": "10 RMB 4-leg ticket",
+      "actual_result": "Algeria +1 handicap win",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_j_leg",
+      "settlement_reason": "The leg required Austria by exactly 1; actual match was a draw.",
+      "failure_categories": [
+        "draw_floor_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "Pre-match model and market both warned that draw was a central risk."
+    },
+    {
+      "source": "75yuan_plan",
+      "ticket_id": "T4",
+      "leg": "Jordan +2 handicap draw",
+      "stake_scope": "10 RMB 4-leg ticket",
+      "actual_result": "Jordan +2 handicap draw",
+      "leg_hit": true,
+      "ticket_effect": "leg_hit_but_ticket_already_missed_on_071",
+      "settlement_reason": "Argentina won by exactly 2.",
+      "failure_categories": [],
+      "notes": "This confirms the need to separate Argentina win from Argentina exact-margin buckets."
+    },
+    {
+      "source": "75yuan_plan",
+      "ticket_id": "T6",
+      "leg": "Algeria win",
+      "stake_scope": "5 RMB 3-leg ticket",
+      "actual_result": "draw",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_j_leg",
+      "settlement_reason": "The selected ordinary 1X2 leg excluded draw; actual match drew 3-3.",
+      "failure_categories": [
+        "draw_floor_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "This was a tail branch, but the draw floor was too large to omit in a multi-leg ticket."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R1",
+      "leg": "Jordan +2 handicap win",
+      "stake_scope": "R1 user stake 16 RMB; full ticket also had non-J legs",
+      "actual_result": "Jordan +2 handicap draw",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_j_leg",
+      "settlement_reason": "Argentina won by exactly 2, not by exactly 1 or less.",
+      "failure_categories": [
+        "bet_translation_error",
+        "model_tail_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "R1 treated +2 win as low-score resistance, but the model had a strong 0-2 margin cluster."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R2",
+      "leg": "Algeria win or Austria win, excluding draw",
+      "stake_scope": "R2 user stake 16 RMB; full ticket also had non-J legs",
+      "actual_result": "draw",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_j_leg",
+      "settlement_reason": "The selected double-outcome structure deliberately excluded the actual 3-3 draw.",
+      "failure_categories": [
+        "draw_floor_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "This is the clearest J-group portfolio error: the highest-risk omitted state was the result."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R3",
+      "leg": "Algeria +1 handicap draw",
+      "stake_scope": "R3 6x4 exact-margin system; J leg contribution only",
+      "actual_result": "Algeria +1 handicap win",
+      "leg_hit": false,
+      "ticket_effect": "one_j_leg_miss; full_system_requires_K_L_settlement",
+      "settlement_reason": "The leg required Austria by exactly 1; actual was a draw.",
+      "failure_categories": [
+        "draw_floor_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "In a 6x4 structure, this leg can be omitted by some combinations, so full R3 settlement is outside J-only scope."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R3",
+      "leg": "Jordan +2 handicap draw",
+      "stake_scope": "R3 6x4 exact-margin system; J leg contribution only",
+      "actual_result": "Jordan +2 handicap draw",
+      "leg_hit": true,
+      "ticket_effect": "leg_hit; full_system_requires_K_L_settlement",
+      "settlement_reason": "Argentina won by exactly 2.",
+      "failure_categories": [],
+      "notes": "The exact-margin read was correct for 072."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R4",
+      "leg": "Jordan exact score 0-1 or 0-2",
+      "stake_scope": "R4 user stake 12 RMB; exact-score ticket",
+      "actual_result": "Jordan 1-3 Argentina",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_j_leg",
+      "settlement_reason": "Argentina won by two, but Jordan scored and Argentina reached three goals.",
+      "failure_categories": [
+        "model_tail_error",
+        "bet_translation_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "The margin thesis was close, but the exact-score conversion was too narrow and missed BTTS/over tail."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R5",
+      "leg": "Austria win",
+      "stake_scope": "R5 user stake 12 RMB; full ticket also had non-J legs",
+      "actual_result": "draw",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_j_leg",
+      "settlement_reason": "The selected ordinary 1X2 leg required Austria to win; actual match was 3-3.",
+      "failure_categories": [
+        "draw_floor_error",
+        "model_tail_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "Austria direction was plausible pre-match, but the draw floor and 3-3 total-goal tail were both under-protected."
+    }
+  ],
+  "special_checks": {
+    "071_excluding_draw": {
+      "result": "failed",
+      "actual": "Algeria 3-3 Austria",
+      "diagnosis": "Draw exclusion was the key structural miss. It should be classified as draw_floor_error plus portfolio_structure_error."
+    },
+    "071_austria_win_or_handicap_draw": {
+      "austria_win": "miss",
+      "algeria_plus1_handicap_draw": "miss",
+      "diagnosis": "Austria by exactly one was a narrow-margin branch; actual draw invalidated both Austria win and +1 draw."
+    },
+    "072_jordan_plus2_win_or_draw": {
+      "jordan_plus2_win": "miss",
+      "jordan_plus2_draw": "hit",
+      "diagnosis": "Argentina by exactly two was the correct settlement bucket. Low-score resistance legs that stopped at +2 win missed the central 0-2/2-goal margin corridor."
+    },
+    "argentina_score_cluster": {
+      "pre_match_top5": [
+        "0-1",
+        "0-2",
+        "0-3",
+        "1-1",
+        "1-2"
+      ],
+      "actual": "1-3",
+      "diagnosis": "Argentina win direction and two-goal margin were captured by nearby model paths, but exact-score tickets missed because Jordan scored and Argentina reached three goals. Classify as model_tail_error plus bet_translation_error for narrow score tickets."
+    }
+  },
+  "model_diagnosis": {
+    "direction_hits": [
+      "Jordan vs Argentina ordinary direction: Argentina win"
+    ],
+    "direction_misses_or_partial": [
+      "Algeria vs Austria was a draw; ordinary Algeria win or Austria win legs missed."
+    ],
+    "draw_floor_errors": [
+      "071 anti-draw structures failed directly on the 3-3 draw.",
+      "R2 removed the key draw state despite model draw near 33% and market draw warning."
+    ],
+    "tail_errors": [
+      "071 total-goal tail: model leaned under 2.5 at 55.7%, but actual 3-3 was a six-goal outlier.",
+      "072 exact-score tail: 1-3 sat outside Top5 despite Argentina two-goal margin being close to 0-2."
+    ],
+    "market_or_context_errors": [
+      "Third-round late-game state produced a high-event 071 draw rather than the low-event draw/one-goal corridors.",
+      "Argentina rotation did not prevent a 3-goal output, while Jordan still scored."
+    ]
+  },
+  "betting_model_diagnosis": {
+    "bet_translation_errors": [
+      "T1/R1 selected Jordan +2 win while model score cluster already contained 0-2, the actual +2 draw margin.",
+      "R4 converted Argentina low-score cluster into 0-1/0-2 only and missed 1-3."
+    ],
+    "portfolio_structure_errors": [
+      "R2 anti-draw leg made the most important 071 risk fatal.",
+      "T4/R3 exact-margin chains were too dependent on narrow one-goal/two-goal branches.",
+      "T6/R5 tail tickets depended on ordinary wins while draw remained large."
+    ],
+    "hedge_independence": [
+      "J legs that looked like protection were not independent if they omitted the exact draw or exact-margin bucket."
+    ],
+    "narrow_path_risk": [
+      "Exact margin and exact score should remain separated from match direction and ordinary win probability.",
+      "Argentina win by two was a successful margin bucket, but exact 0-2 was not robust enough."
+    ]
+  },
+  "rule_updates": [
+    {
+      "rule": "anti_draw_gate",
+      "update": "If model draw is at or above 30%, or market draw is materially higher than model, any leg that explicitly excludes draw must be capped as high variance and cannot be used as coverage."
+    },
+    {
+      "rule": "handicap_bucket_split",
+      "update": "For +2 and -1 markets, split win/draw/loss by exact real-score margin before portfolio construction; do not merge +2 win and +2 draw under a generic small-loss label."
+    },
+    {
+      "rule": "score_cluster_translation",
+      "update": "When Top5 contains adjacent score corridors such as 0-1, 0-2, 0-3 and 1-2, exact-score tickets must document omitted BTTS and one-extra-goal tails."
+    },
+    {
+      "rule": "late_group_round_tail",
+      "update": "Third-round simultaneous matches need a late-event tail layer; 071 shows low-event pre-match reads can become 3-3 when stoppage-time incentives and qualification math collide."
+    },
+    {
+      "rule": "leg_vs_ticket_settlement",
+      "update": "Report leg hit separately from ticket hit. T4 had the 072 exact-margin leg hit, but the ticket failed once 071 missed."
+    },
+    {
+      "rule": "no_new_postmatch_betting",
+      "update": "Post-result reviews may update settlement and rules only; they must not propose fresh purchase paths from observed outcomes."
+    }
+  ],
+  "final_verdict": {
+    "status": "postmatch_review_complete_no_new_betting",
+    "summary": "J-group betting-risk lesson is not that favorite or underdog directions were broadly wrong; the main failures were draw exclusion in 071, exact-margin overuse, and narrow score translation around Argentina's two-goal win."
+  }
+}

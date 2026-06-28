@@ -1,0 +1,342 @@
+{
+  "schema_version": "k_group_round3_postmatch_betting_risk_review_v1",
+  "phase": "post_result_betting_settlement_review",
+  "status": "complete_k_group_scope",
+  "created_at": "2026-06-28T00:00:00+08:00",
+  "owner": "jingcai_betting_risk_agent",
+  "scope": [
+    "Colombia vs Portugal",
+    "DR Congo vs Uzbekistan"
+  ],
+  "no_new_betting_advice": true,
+  "source_log": [
+    {
+      "type": "main_thread_verified_result",
+      "detail": "User/main thread supplied K group final-score focus: Colombia 0-0 Portugal and DR Congo 3-1 Uzbekistan."
+    },
+    {
+      "type": "project_plan",
+      "path": "data/outputs/betting_risk/jkl-round3-75yuan-5to6-ticket-discussion-plan-20260627.json"
+    },
+    {
+      "type": "project_review",
+      "path": "data/outputs/betting_risk/jkl-round3-r1-r5-bold-plan-review-20260627.json"
+    },
+    {
+      "type": "prediction",
+      "path": "data/outputs/match_predictions/k-group-round3-quant-prediction-20260627.json"
+    }
+  ],
+  "actual_results": [
+    {
+      "match_no": "069",
+      "match": "Colombia vs Portugal",
+      "final_score": "0-0",
+      "ordinary_1x2_result": "draw",
+      "handicap_line_home": 1,
+      "handicap_result": {
+        "selection_hit": "Colombia +1 handicap win",
+        "real_condition": "Colombia draw, so Colombia +1 wins after adjustment"
+      },
+      "model_pre_match_reference": {
+        "final_probabilities": {
+          "colombia_win": 0.278,
+          "draw": 0.261,
+          "portugal_win": 0.461
+        },
+        "top_scorelines": [
+          "1-1",
+          "0-1",
+          "1-2",
+          "1-0",
+          "0-2"
+        ],
+        "margin_bucket_probability": {
+          "colombia_plus1_win_real_win_or_draw": 0.5592,
+          "colombia_plus1_draw_portugal_by_1": 0.2244,
+          "colombia_plus1_loss_portugal_by_2_plus": 0.2164
+        }
+      }
+    },
+    {
+      "match_no": "070",
+      "match": "DR Congo vs Uzbekistan",
+      "final_score": "3-1",
+      "ordinary_1x2_result": "DR Congo win",
+      "handicap_line_home": -1,
+      "handicap_result": {
+        "selection_hit": "DR Congo -1 handicap win",
+        "real_condition": "DR Congo won by 2 goals"
+      },
+      "model_pre_match_reference": {
+        "final_probabilities": {
+          "dr_congo_win": 0.5,
+          "draw": 0.255,
+          "uzbekistan_win": 0.245
+        },
+        "top_scorelines": [
+          "1-0",
+          "1-1",
+          "2-0",
+          "2-1",
+          "0-0"
+        ],
+        "margin_bucket_probability": {
+          "dr_congo_by_1": 0.2432,
+          "dr_congo_by_2_plus": 0.2444,
+          "draw": 0.2622,
+          "uzbekistan_win": 0.2502
+        }
+      }
+    }
+  ],
+  "k_group_leg_settlement": [
+    {
+      "source": "75yuan_plan",
+      "ticket_id": "T2",
+      "leg": "Colombia +1 handicap win",
+      "stake_scope": "17 RMB 2-leg ticket; K leg only",
+      "actual_result": "Colombia +1 handicap win",
+      "leg_hit": true,
+      "ticket_effect": "k_leg_hit; full_ticket_requires_L_group_settlement",
+      "settlement_reason": "The real match was 0-0, which satisfies Colombia real win/draw for +1 handicap win.",
+      "failure_categories": [],
+      "notes": "This leg correctly captured draw-management and Portugal non-win risk."
+    },
+    {
+      "source": "75yuan_plan",
+      "ticket_id": "T3",
+      "leg": "DR Congo -1 handicap loss",
+      "stake_scope": "15 RMB 2-leg ticket; K leg only",
+      "actual_result": "DR Congo -1 handicap win",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_k_leg",
+      "settlement_reason": "The selected leg required DR Congo draw/loss in the real match; actual DR Congo won by 2.",
+      "failure_categories": [
+        "model_tail_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "The model treated non-cover as value, but 3-1 showed the must-win/two-plus margin tail was under-protected."
+    },
+    {
+      "source": "75yuan_plan",
+      "ticket_id": "T5",
+      "leg": "Colombia win",
+      "stake_scope": "10 RMB 3-leg ticket",
+      "actual_result": "draw",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_k_leg",
+      "settlement_reason": "The leg required Colombia to win; actual match was 0-0.",
+      "failure_categories": [
+        "draw_floor_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "The draw was a live model path and a key third-round script."
+    },
+    {
+      "source": "75yuan_plan",
+      "ticket_id": "T5",
+      "leg": "DR Congo -1 handicap draw",
+      "stake_scope": "10 RMB 3-leg ticket",
+      "actual_result": "DR Congo -1 handicap win",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_k_leg",
+      "settlement_reason": "The leg required DR Congo by exactly 1; actual margin was 2.",
+      "failure_categories": [
+        "model_tail_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "The one-goal corridor was too narrow for a must-win match with Uzbekistan chase risk."
+    },
+    {
+      "source": "75yuan_plan",
+      "ticket_id": "T6",
+      "leg": "Uzbekistan win",
+      "stake_scope": "5 RMB 3-leg ticket",
+      "actual_result": "DR Congo win",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_k_leg",
+      "settlement_reason": "The leg required Uzbekistan to win; actual DR Congo won 3-1.",
+      "failure_categories": [
+        "model_direction_error",
+        "model_tail_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "The underdog-tail branch was overwhelmed by DR Congo direction and margin."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R1",
+      "leg": "Colombia +1 handicap win",
+      "stake_scope": "R1 user stake 16 RMB; K leg only",
+      "actual_result": "Colombia +1 handicap win",
+      "leg_hit": true,
+      "ticket_effect": "k_leg_hit; full_ticket_requires_non_K_settlement",
+      "settlement_reason": "0-0 is Colombia real draw, which hits Colombia +1 handicap win.",
+      "failure_categories": [],
+      "notes": "The K leg worked, but it should still be described as a handicap settlement hit rather than an ordinary Colombia direction hit."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R2",
+      "leg": "Colombia +1 handicap win/draw combined",
+      "stake_scope": "R2 user stake 16 RMB; K leg only",
+      "actual_result": "Colombia +1 handicap win",
+      "leg_hit": true,
+      "ticket_effect": "k_leg_hit; full_ticket_requires_other_legs",
+      "settlement_reason": "0-0 satisfies the wider Colombia +1 protection bucket.",
+      "failure_categories": [],
+      "notes": "The wide handicap protection included draw and therefore handled the 0-0 correctly."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R2",
+      "leg": "DR Congo -1 handicap draw",
+      "stake_scope": "R2 user stake 16 RMB; K leg only",
+      "actual_result": "DR Congo -1 handicap win",
+      "leg_hit": false,
+      "ticket_effect": "ticket_miss_from_k_leg",
+      "settlement_reason": "The leg required DR Congo by exactly 1; actual margin was 2.",
+      "failure_categories": [
+        "model_tail_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "Exact one-goal margin failed because the 2+ tail arrived."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R3",
+      "leg": "Colombia +1 handicap draw",
+      "stake_scope": "R3 6x4 exact-margin system; K leg contribution only",
+      "actual_result": "Colombia +1 handicap win",
+      "leg_hit": false,
+      "ticket_effect": "one_k_leg_miss; full_system_requires_other_legs",
+      "settlement_reason": "The leg required Portugal by exactly 1; actual match was 0-0.",
+      "failure_categories": [
+        "draw_floor_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "The exact Portugal one-goal corridor ignored the 0-0 draw-management path."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R3",
+      "leg": "DR Congo -1 handicap draw",
+      "stake_scope": "R3 6x4 exact-margin system; K leg contribution only",
+      "actual_result": "DR Congo -1 handicap win",
+      "leg_hit": false,
+      "ticket_effect": "one_k_leg_miss; full_system_requires_other_legs",
+      "settlement_reason": "The leg required DR Congo by exactly 1; actual margin was 2.",
+      "failure_categories": [
+        "model_tail_error",
+        "portfolio_structure_error"
+      ],
+      "notes": "The system used exact-margin corridors; K group produced one draw and one two-goal win instead."
+    },
+    {
+      "source": "R1_R5_review",
+      "ticket_id": "R5",
+      "leg": "DR Congo -1 handicap win",
+      "stake_scope": "R5 user stake 12 RMB; K leg only",
+      "actual_result": "DR Congo -1 handicap win",
+      "leg_hit": true,
+      "ticket_effect": "k_leg_hit; full_ticket_requires_non_K_settlement",
+      "settlement_reason": "DR Congo won by 2 goals, matching the selected 2+ margin.",
+      "failure_categories": [],
+      "notes": "This was the correct K-group tail bucket, but R5 still needs non-K legs for full settlement."
+    }
+  ],
+  "special_checks": {
+    "069_colombia_plus1_win_or_win_draw": {
+      "colombia_plus1_win": "hit",
+      "colombia_plus1_win_draw_combined": "hit",
+      "diagnosis": "0-0 was exactly the draw-management path that +1 protection needed to include."
+    },
+    "069_colombia_plus1_draw": {
+      "result": "miss",
+      "required": "Portugal win by exactly 1",
+      "actual": "0-0 draw",
+      "diagnosis": "This is draw_floor_error and narrow exact-margin risk."
+    },
+    "070_dr_congo_minus1_win_or_draw": {
+      "dr_congo_minus1_win": "hit",
+      "dr_congo_minus1_draw": "miss",
+      "diagnosis": "3-1 landed in the two-plus margin bucket, not the exact one-goal bucket."
+    },
+    "colombia_0_0_impact": {
+      "diagnosis": "The 0-0 result validates draw-management and low-event risk. Ordinary Colombia win or Portugal exact one-goal legs fail; Colombia +1 protection hits."
+    },
+    "dr_congo_3_1_impact": {
+      "diagnosis": "The 3-1 result validates DR Congo direction and 2+ margin tail, while invalidating non-cover and exact one-goal tickets."
+    }
+  },
+  "model_diagnosis": {
+    "direction_hits": [
+      "DR Congo ordinary direction: model had DR Congo as the top 1X2 outcome and actual DR Congo won."
+    ],
+    "direction_misses_or_partial": [
+      "Colombia vs Portugal ordinary model leaned Portugal, but actual was draw; draw floor was material and should not have been subordinated to Portugal direction."
+    ],
+    "draw_floor_errors": [
+      "069 exact Portugal-by-one and Colombia-win branches failed on 0-0.",
+      "Colombia +1 protection hit because it preserved the draw path."
+    ],
+    "tail_errors": [
+      "070 actual 3-1 exceeded the exact one-goal corridor and the under-2.5 lean.",
+      "DR Congo 2+ margin was a modeled tail around 24.4%, but multiple tickets treated non-cover or exact one-goal as more useful."
+    ],
+    "market_or_context_errors": [
+      "K group third-round motivation made DR Congo's 2+ route more live than the non-cover construction allowed.",
+      "Colombia's draw-enough context correctly suppressed Portugal win but not necessarily Colombia win."
+    ]
+  },
+  "betting_model_diagnosis": {
+    "bet_translation_errors": [
+      "Some K legs described Colombia +1 protection correctly, but later ticket narratives risked treating it as a Colombia direction call. It settled via 0-0 draw.",
+      "DR Congo -1 loss was a non-cover bucket, not a broad 'DR Congo cautious game' guarantee; 3-1 showed why the win/margin split must stay explicit."
+    ],
+    "portfolio_structure_errors": [
+      "T3 paired two margin-sensitive non-cover legs; K leg failed on DR Congo 2+.",
+      "T5 combined ordinary Colombia win with exact DR Congo one-goal margin; both were too narrow for actual K outcomes.",
+      "R3 exact-margin system missed both K exact-margin legs."
+    ],
+    "hedge_independence": [
+      "Colombia +1 protection was a valid K hedge, but it does not independently protect tickets if paired with fragile non-K or exact-margin legs.",
+      "DR Congo -1 win tail hit in R5, but other legs can still make the full ticket fail."
+    ],
+    "narrow_path_risk": [
+      "069 0-0 proves draw floor must be retained in top-race matches.",
+      "070 3-1 proves must-win favorites can jump from one-goal corridor to two-plus with chase-state help."
+    ]
+  },
+  "rule_updates": [
+    {
+      "rule": "draw_enough_context_gate",
+      "update": "When a team can achieve its group objective with a draw, ordinary opponent-win and exact opponent-by-one legs must carry draw_floor_error risk by default."
+    },
+    {
+      "rule": "handicap_protection_label",
+      "update": "A +1 handicap win that hits on 0-0 must be recorded as handicap protection, not as a match-direction hit."
+    },
+    {
+      "rule": "must_win_margin_tail",
+      "update": "For must-win teams facing an opponent that must chase, keep the 2+ margin bucket visible even when market value appears to favor non-cover."
+    },
+    {
+      "rule": "exact_margin_cap",
+      "update": "Exact one-goal margin legs such as Colombia +1 draw or DR Congo -1 draw should remain high-variance and must not be stacked heavily across several matches."
+    },
+    {
+      "rule": "leg_vs_ticket_settlement",
+      "update": "K legs can hit while the full ticket misses elsewhere; postmatch review must separate leg settlement from ticket settlement."
+    },
+    {
+      "rule": "no_new_postmatch_betting",
+      "update": "Post-result reviews update risk rules only and must not propose new purchase paths from observed outcomes."
+    }
+  ],
+  "final_verdict": {
+    "status": "postmatch_review_complete_no_new_betting",
+    "summary": "K-group lesson is a split one: Colombia +1 protection worked because it preserved 0-0, while DR Congo non-cover and exact one-goal structures failed because 3-1 landed in the two-plus margin tail."
+  }
+}

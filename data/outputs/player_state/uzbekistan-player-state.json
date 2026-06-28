@@ -52,7 +52,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.4,
       "form_reason": "首发门将，Guardian 记录第65分钟对 Luis Diaz 射门扑救脱手导致失球；评分源缺失。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -207,7 +207,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "失三球，防线保护不足。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "乌特基尔·尤苏波夫",
+        "english_name": "Utkir Yusupov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "失三球，防线保护不足。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.4,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.4,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "阿卜杜沃希德·内马托夫",
@@ -256,7 +274,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 1.7,
+      "form_status_1_5": 2.6,
       "form_reason": "替补门将未出场；首轮状态只能按名单可用性保守记录。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -391,7 +409,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "多源确认门前乌龙/触球归属存在细节冲突；门线和低平球处理负面。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "阿卜杜沃希德·内马托夫",
+        "english_name": "Abduvohid Nematov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "博蒂拉利·埃尔加舍夫",
@@ -440,7 +476,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "三号门将未出场，缺评分。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -585,7 +621,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "博蒂拉利·埃尔加舍夫",
+        "english_name": "Botirali Ergashev",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "鲁斯塔姆·阿舒尔马托夫",
@@ -634,7 +688,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "首发中卫，53分钟处理 Mojica 传中；78分钟被换下，防线丢3球。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -777,7 +831,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "鲁斯塔姆·阿舒尔马托夫",
+        "english_name": "Rustam Ashurmatov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "法鲁赫·赛菲耶夫",
@@ -826,7 +898,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3,
+      "form_status_1_5": 2.6,
       "form_reason": "中场休息登场后球队推进改善，但完整评分缺失。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -969,7 +1041,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "法鲁赫·赛菲耶夫",
+        "english_name": "Farrukh Sayfiev",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "霍吉阿克巴尔·阿利乔诺夫",
@@ -1018,7 +1108,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "名单内后卫，首轮未出场；状态缺逐项评分。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -1153,7 +1243,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "霍吉阿克巴尔·阿利乔诺夫",
+        "english_name": "Khojiakbar Alijonov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "舍尔佐德·纳斯鲁拉耶夫",
@@ -1202,7 +1310,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "首发翼卫半场被换，球队上半场低位被压制。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -1345,7 +1453,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "舍尔佐德·纳斯鲁拉耶夫",
+        "english_name": "Sherzod Nasrullaev",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "乌马尔·埃什穆罗多夫",
@@ -1394,7 +1520,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "替补中卫未出场。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -1539,7 +1665,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "乌马尔·埃什穆罗多夫",
+        "english_name": "Umar Eshmurodov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "阿卜杜科迪尔·胡萨诺夫",
@@ -1589,7 +1733,7 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "player_state_update_status": "partial",
-      "form_status_1_5": 1.9,
+      "form_status_1_5": 2.3,
       "form_reason": "首发中卫但有黄牌和多次边路防守压力，球队丢3球；评分源缺失。",
       "source_log": [
         {
@@ -1743,7 +1887,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "第四球触球链存在冲突归因；防线横移和禁区保护压力极大。"
+      "form_status_reason": "点球/防线风险需复核，下调。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "阿卜杜科迪尔·胡萨诺夫",
+        "english_name": "Abdukodir Khusanov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "点球/防线风险需复核，下调。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.3,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.3,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "阿卜杜拉·阿卜杜拉耶夫",
@@ -1792,7 +1954,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "首发右中卫，球队5-4-1/3-4-3结构中承压。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -1935,7 +2097,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "阿卜杜拉·阿卜杜拉耶夫",
+        "english_name": "Abdulla Abdullaev",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "贝赫鲁兹·卡里莫夫",
@@ -1984,7 +2164,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "首发翼卫，45+2分钟阻断 Diaz 反击时险些吃牌；评分缺失。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -2127,7 +2307,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "贝赫鲁兹·卡里莫夫",
+        "english_name": "Bekhruz Karimov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "贾洪吉尔·乌罗佐夫",
@@ -2176,7 +2374,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "替补登场参与末段追分，补时丢第三球。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -2319,7 +2517,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "贾洪吉尔·乌罗佐夫",
+        "english_name": "Jakhongir Urozov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "阿瓦兹别克·乌尔马萨利耶夫",
@@ -2368,7 +2584,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "后防替补未出场，缺评分。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -2512,7 +2728,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "阿瓦兹别克·乌尔马萨利耶夫",
+        "english_name": "Avazbek Ulmasaliev",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "奥塔别克·舒库罗夫",
@@ -2561,7 +2795,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3,
+      "form_status_1_5": 2.6,
       "form_reason": "中场主力，84分钟尝试加快节奏并赢得任意球；球队中场控制有限。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -2704,7 +2938,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "奥塔别克·舒库罗夫",
+        "english_name": "Otabek Shukurov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "贾洛利丁·马沙里波夫",
@@ -2753,7 +3005,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.2,
+      "form_status_1_5": 2.7,
       "form_reason": "经验型前场球员首轮未出场，第二轮前状态缺官方说明。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -2888,7 +3140,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "推进被限制，未能持续把球队带出低位。"
+      "form_status_reason": "早球领先但后段崩盘，防线尾部风险继续上升。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "贾洛利丁·马沙里波夫",
+        "english_name": "Jaloliddin Masharipov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "早球领先但后段崩盘，防线尾部风险继续上升。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.7,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.7,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "奥迪尔琼·哈姆罗别科夫",
@@ -2937,7 +3207,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.1,
+      "form_status_1_5": 2.6,
       "form_reason": "中场轮换未出场，无法基于首轮评分。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -3072,7 +3342,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "对Pedro Neto犯规送出危险任意球，随后被Nuno Mendes破门。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "奥迪尔琼·哈姆罗别科夫",
+        "english_name": "Odiljon Hamrobekov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "奥斯顿·乌鲁诺夫",
@@ -3121,7 +3409,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.7,
       "form_reason": "首发前场，半场被换下；球队下半场攻势由调整后改善。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -3264,7 +3552,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "早球领先但后段崩盘，防线尾部风险继续上升。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "奥斯顿·乌鲁诺夫",
+        "english_name": "Oston Urunov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "早球领先但后段崩盘，防线尾部风险继续上升。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.7,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.7,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "贾姆希德·伊斯坎德罗夫",
@@ -3313,7 +3619,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "替补中场未出场。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -3458,7 +3764,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "贾姆希德·伊斯坎德罗夫",
+        "english_name": "Jamshid Iskanderov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "多斯顿别克·哈姆达莫夫",
@@ -3507,7 +3831,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3,
+      "form_status_1_5": 2.6,
       "form_reason": "半场登场后参与右路/左路推进，88分钟远射制造角球，90+3分钟接近头球机会。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -3650,7 +3974,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "多斯顿别克·哈姆达莫夫",
+        "english_name": "Dostonbek Khamdamov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "阿博斯别克·法伊祖拉耶夫",
@@ -3699,7 +4041,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 4,
+      "form_status_1_5": 2.8,
       "form_reason": "60分钟打入乌兹别克斯坦世界杯首球，49分钟后在左路更活跃；无稳定评分源。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -3854,7 +4196,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "早球领先但后段崩盘，防线尾部风险继续上升。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "阿博斯别克·法伊祖拉耶夫",
+        "english_name": "Abbosbek Fayzullaev",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "早球领先但后段崩盘，防线尾部风险继续上升。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.8,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.8,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "阿克马尔·莫兹戈沃伊",
@@ -3903,7 +4263,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3,
+      "form_status_1_5": 2.6,
       "form_reason": "首发中场，90分钟获得禁区角射门机会但高出。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -4046,7 +4406,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "阿克马尔·莫兹戈沃伊",
+        "english_name": "Akmal Mozgovoy",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "阿齐兹琼·加尼耶夫",
@@ -4095,7 +4473,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "中场替补未出场，首轮状态缺评分。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -4230,7 +4608,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "阿齐兹琼·加尼耶夫",
+        "english_name": "Azizjon Ganiev",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "舍尔佐德·埃萨诺夫",
@@ -4279,7 +4675,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "名单内中场，首轮未出场。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -4423,7 +4819,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "舍尔佐德·埃萨诺夫",
+        "english_name": "Sherzod Esanov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "埃尔多尔·肖穆罗多夫",
@@ -4472,7 +4886,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.2,
+      "form_status_1_5": 3.8,
       "form_reason": "队长/支点前锋，60分钟倒钩造成门将脱手并形成 Fayzullaev 进球；65分钟前中场被断导致反击失球。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -4627,7 +5041,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "前场支点和反击连接被葡萄牙压制，缺少稳定射门服务。"
+      "form_status_reason": "第10分钟破门，仍保留反击终结价值。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "埃尔多尔·肖穆罗多夫",
+        "english_name": "Eldor Shomurodov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "第10分钟破门，仍保留反击终结价值。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.8,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.8,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "伊戈尔·谢尔盖耶夫",
@@ -4676,7 +5108,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "补时短暂登场，样本不足。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -4819,7 +5251,25 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "伊戈尔·谢尔盖耶夫",
+        "english_name": "Igor Sergeev",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "阿齐兹别克·阿莫诺夫",
@@ -4868,7 +5318,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "78分钟登场参与末段追分，未见关键事件。",
       "player_state_update_status": "partial",
       "source_log": [
@@ -5001,12 +5451,30 @@
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
       },
-      "form_status_reason": "团队层面0-5失利，未核验到个人出场事件；下一场需复核首发和伤停。"
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "刚果金",
+        "player": "阿齐兹别克·阿莫诺夫",
+        "english_name": "Azizbek Amonov",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     }
   ],
-  "updated_at": "2026-06-24T09:37:50+08:00",
+  "updated_at": "2026-06-28T22:05:00+08:00",
   "status": "partial_postmatch_synced",
-  "player_state_update_status": "updated_round2_postmatch_partial_ratings",
+  "player_state_update_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
   "update_basis": "单场复盘已落盘；乌兹别克斯坦26人首发/分钟/换人/进球/助攻/牌线索/伤停状态/评分缺口说明已同步。官方逐人评分、全量技术统计和完整官方牌表仍缺。",
   "postmatch_review_file": "比赛\\已完成比赛\\小组赛\\K组\\2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md",
   "gaps_and_conflicts": [
@@ -5645,5 +6113,36 @@
       "url": "https://www.bigrapidsnews.com/sports/article/portugal-sticks-with-ronaldo-against-uzbekistan-22316960.php",
       "note": "交叉验证5-0、C罗双响、Nematov乌龙归属。"
     }
-  ]
+  ],
+  "round3_postmatch_update": {
+    "match_id": "2026-06-28_DRC_3-1_UZB",
+    "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+    "opponent": "刚果金",
+    "result": "1-3 loss",
+    "captured_at": "2026-06-28T22:05:00+08:00",
+    "status": "早球领先但后段崩盘，防线尾部风险继续上升。",
+    "source_log": [
+      {
+        "name": "Sky Sports DR Congo 3-1 Uzbekistan match report",
+        "url": "https://www.skysports.com/football/dr-congo-vs-uzbekistan/report/549801",
+        "status": "score/goals/report"
+      },
+      {
+        "name": "The Guardian DR Congo vs Uzbekistan live",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-dr-congo-v-uzbekistan-updates-cod-vs-uzb-group-k-match-score-latest",
+        "status": "event_chain_partial"
+      },
+      {
+        "name": "FIFA match centre DR Congo vs Uzbekistan",
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-center/400018000",
+        "status": "result_reference_partial"
+      }
+    ],
+    "data_gaps": [
+      "官方逐人完整出场分钟、扑救、预期进球、黄红牌、同源外部球员评分未完全闭合。",
+      "葡萄牙、哥伦比亚部分首发名单来自媒体快照，仍需赛会/官方技术报告复核。",
+      "刚果金3-1乌兹别克斯坦的点球制造者、全部换人和补时细节需官方事件表补齐。"
+    ]
+  },
+  "round3_internal_rating_logs": []
 }

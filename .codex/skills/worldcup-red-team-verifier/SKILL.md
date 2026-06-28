@@ -125,6 +125,21 @@ Return `hold` if official lineups, key availability, market snapshots, or a core
 
 Return `pass` only when the chain is complete enough for the current task and the remaining uncertainty is clearly disclosed.
 
+## Betting Settlement Red-Team Requirements
+
+When real results are known for a prior betting discussion, red-team the settlement and responsibility chain. Do not propose new bets.
+
+Require the main output to show:
+
+- actual result for every match used by the plan
+- hit/miss status for every ticket
+- total stake, total payout, and net return
+- whether each miss is `model_direction_error`, `model_tail_error`, `bet_translation_error`, or `portfolio_structure_error`
+- examples where one leg hit but the whole ticket failed
+- whether discussion-only language was still too executable
+
+Return `revise` if the review hides a losing net result behind partial hit language, treats a correct match direction as a ticket success, ignores a model-identified scoreline that the ticket omitted, or fails to explain high-variance exact-score and parlay losses.
+
 ## Third-Round Review Requirements
 
 For final group-round predictions, return `revise` or `hold` unless these items are explicitly present or explicitly marked unavailable:

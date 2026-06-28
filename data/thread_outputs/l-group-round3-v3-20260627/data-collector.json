@@ -1,0 +1,877 @@
+{
+  "phase": "pre_match_data_collection",
+  "status": "partial_source_limited",
+  "schema_note": "L组第三轮v3预测前置事实包；只采事实，不给比分预测、不提供胜平负结论或投注建议。",
+  "generated_at": "2026-06-27T14:59:54+08:00",
+  "captured_at": "2026-06-27T14:59:54+08:00",
+  "owner": "worldcup-data-collector",
+  "group": "L",
+  "round": 3,
+  "scope": [
+    "克罗地亚 vs 加纳",
+    "巴拿马 vs 英格兰"
+  ],
+  "betting_boundary": {
+    "status": "discussion_only_hold",
+    "reason": "T-75官方首发未公布；巴拿马vs英格兰普通胜平负未取得同源开售快照；赔率只作为事实快照，不构成投注建议。"
+  },
+  "group_table_after_round2": [
+    {
+      "rank": 1,
+      "team": "英格兰",
+      "played": 2,
+      "points": 4,
+      "gf": 4,
+      "ga": 2,
+      "gd": 2,
+      "context_label": "Guardian 2026-06-27称英格兰已至少锁定32强资格，但仍争小组第一。"
+    },
+    {
+      "rank": 2,
+      "team": "加纳",
+      "played": 2,
+      "points": 4,
+      "gf": 1,
+      "ga": 0,
+      "gd": 1,
+      "context_label": "两场零封，低位防守稳定性是前两轮关键事实输入。"
+    },
+    {
+      "rank": 3,
+      "team": "克罗地亚",
+      "played": 2,
+      "points": 3,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
+      "context_label": "第二轮1-0巴拿马后保留出线竞争；老将负荷与小胜路径需跟踪。"
+    },
+    {
+      "rank": 4,
+      "team": "巴拿马",
+      "played": 2,
+      "points": 0,
+      "gf": 0,
+      "ga": 2,
+      "gd": -2,
+      "context_label": "两场均0-1，进攻上限不足；出线形势需按官方第三名规则复核，本包不输出结论。"
+    }
+  ],
+  "previous_results_and_postmortem_inputs": [
+    {
+      "match": "英格兰 4-2 克罗地亚",
+      "date": "2026-06-17",
+      "postmortem_file": "比赛/已完成比赛/小组赛/L组/2026-06-17_英格兰_4-2_克罗地亚_复盘.md",
+      "facts_for_model_input": [
+        "英格兰4-2，阵型4-2-3-1；Kane 12'点球、42'头球，Bellingham 47'，Rashford 85'。",
+        "克罗地亚3-4-2-1，Baturina 36'、Musa 45+5'；转换和经验路径存在，但防线下半场被打穿。",
+        "Guardian live记录81分钟xG英格兰2.36、克罗地亚0.38，用作首轮质量信号。"
+      ]
+    },
+    {
+      "match": "加纳 1-0 巴拿马",
+      "date": "2026-06-17",
+      "postmortem_file": "比赛/已完成比赛/小组赛/L组/2026-06-17_加纳_1-0_巴拿马_复盘.md",
+      "facts_for_model_input": [
+        "Caleb Yirenkyi 90+5'进球，Brandon Thomas-Asante助攻。",
+        "Lawrence Ati-Zigi在47分钟/半场窗口被Benjamin Asare换下，下一场可用性需复核。",
+        "Panama首轮4-4-2，Cesar Blackman 72'、Carlos Harvey 90+9'黄牌；进攻未转化。"
+      ]
+    },
+    {
+      "match": "英格兰 0-0 加纳",
+      "date": "2026-06-23",
+      "postmortem_file": "比赛/已完成比赛/小组赛/L组/2026-06-23_英格兰_0-0_加纳_复盘.md",
+      "facts_for_model_input": [
+        "英格兰控场但未破加纳低位；Nico O'Reilly、Harry Kane后段机会未转化。",
+        "加纳中卫Jerome Opoku、Jonas Adjetey禁区正面和二点保护质量高。",
+        "Reece James与Jordan Ayew对抗后接受治疗，Guardian赛前进一步确认腿筋问题。"
+      ]
+    },
+    {
+      "match": "巴拿马 0-1 克罗地亚",
+      "date": "2026-06-23",
+      "postmortem_file": "比赛/已完成比赛/小组赛/L组/2026-06-24_巴拿马_0-1_克罗地亚_复盘.md",
+      "facts_for_model_input": [
+        "克罗地亚半场换上Ante Budimir与Andrej Kramaric；Budimir 54'打入唯一进球。",
+        "Luka Modric达成国家队第200场里程碑，继续承担节奏控制。",
+        "Yoel Barcenas因对Modric身体冲撞吃黄牌；Panama后段依赖传中和定位球，但中路渗透不足。"
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "match_id": "L-R3-CRO-GHA-20260627",
+      "match_no": "周六067",
+      "teams": {
+        "home": "克罗地亚",
+        "away": "加纳"
+      },
+      "kickoff_beijing": "2026-06-28T05:00:00+08:00",
+      "kickoff_local": "2026-06-27T17:00:00-04:00",
+      "venue": "Philadelphia Stadium",
+      "host_city": "Philadelphia",
+      "neutral_site": true,
+      "source_status": "probable_official_schedule_context",
+      "source_log": [
+        {
+          "source": "本地L组三轮预测JSON",
+          "url": "data/outputs/match_predictions/l-group-round3-quant-prediction-20260626.json",
+          "captured_at": "2026-06-26T22:50:00+08:00",
+          "supports_fields": "match_no kickoff odds fixture_note"
+        },
+        {
+          "source": "FIFA schedule mirror / local schedule context",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
+          "captured_at": "2026-06-27T14:59:54+08:00",
+          "supports_fields": "fixture_date venue"
+        }
+      ]
+    },
+    {
+      "match_id": "L-R3-PAN-ENG-20260627",
+      "match_no": "周六068",
+      "teams": {
+        "home": "巴拿马",
+        "away": "英格兰"
+      },
+      "kickoff_beijing": "2026-06-28T05:00:00+08:00",
+      "kickoff_local": "2026-06-27T17:00:00-04:00",
+      "venue": "New York New Jersey Stadium",
+      "host_city": "East Rutherford / New York New Jersey",
+      "neutral_site": true,
+      "source_status": "probable_official_schedule_context",
+      "source_log": [
+        {
+          "source": "本地L组三轮预测JSON",
+          "url": "data/outputs/match_predictions/l-group-round3-quant-prediction-20260626.json",
+          "captured_at": "2026-06-26T22:50:00+08:00",
+          "supports_fields": "match_no kickoff odds fixture_note"
+        },
+        {
+          "source": "Guardian England Panama preview/news",
+          "url": "https://www.theguardian.com/football/2026/jun/27/england-world-cup-thomas-tuchel-panama",
+          "captured_at": "2026-06-27T14:59:54+08:00",
+          "supports_fields": "England group status Reece James injury Rice concern likely right-back shuffle"
+        },
+        {
+          "source": "FIFA schedule mirror / local schedule context",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
+          "captured_at": "2026-06-27T14:59:54+08:00",
+          "supports_fields": "fixture_date venue"
+        }
+      ]
+    }
+  ],
+  "predicted_lineups": [
+    {
+      "match_id": "L-R3-CRO-GHA-20260627",
+      "match": "克罗地亚 vs 加纳",
+      "official_lineup_gate": {
+        "status": "missing",
+        "gate": "T-75官方首发发布后必须重核；若门将、核心中场或中锋位变化超过2人，模型应重跑。",
+        "expected_check_time_beijing": "2026-06-28T03:45:00+08:00"
+      },
+      "source_status": "probable_not_official",
+      "captured_at": "2026-06-27T14:59:54+08:00",
+      "teams": [
+        {
+          "team": "克罗地亚",
+          "formation": "3-4-2-1",
+          "lineup_confidence": "medium_low",
+          "source_basis": [
+            "英格兰4-2克罗地亚复盘首发",
+            "巴拿马0-1克罗地亚复盘胜负手",
+            "croatia-player-state round2状态"
+          ],
+          "starters": [
+            {
+              "position": "GK",
+              "chinese_name": "多米尼克·利瓦科维奇",
+              "english_name": "Dominik Livakovic",
+              "role_note": "主力门将口径，第二轮后状态值3.5。"
+            },
+            {
+              "position": "RCB",
+              "chinese_name": "约西普·舒塔洛",
+              "english_name": "Josip Sutalo",
+              "role_note": "右中卫，对抗与出球。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "卢卡·武什科维奇",
+              "english_name": "Luka Vuskovic",
+              "role_note": "三中卫中路防空。"
+            },
+            {
+              "position": "LCB",
+              "chinese_name": "约什科·格瓦迪奥尔",
+              "english_name": "Josko Gvardiol",
+              "role_note": "左中卫推进和防守覆盖。"
+            },
+            {
+              "position": "RWB",
+              "chinese_name": "约西普·斯塔尼希奇",
+              "english_name": "Josip Stanisic",
+              "role_note": "右路上下往返，第二轮后状态值3.8。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "卢卡·莫德里奇",
+              "english_name": "Luka Modric",
+              "role_note": "节奏核心，第二轮达成国家队200场里程碑。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "马特奥·科瓦契奇",
+              "english_name": "Mateo Kovacic",
+              "role_note": "推进与抗压出球。"
+            },
+            {
+              "position": "LWB",
+              "chinese_name": "伊万·佩里希奇",
+              "english_name": "Ivan Perisic",
+              "role_note": "左翼卫/边路传中，首轮有助攻。"
+            },
+            {
+              "position": "AM",
+              "chinese_name": "马丁·巴图里纳",
+              "english_name": "Martin Baturina",
+              "role_note": "首轮36'进球，前腰推进。"
+            },
+            {
+              "position": "AM/SS",
+              "chinese_name": "安德雷·克拉马里奇",
+              "english_name": "Andrej Kramaric",
+              "role_note": "第二轮半场替补后改变禁区连接。"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "安特·布迪米尔",
+              "english_name": "Ante Budimir",
+              "role_note": "第二轮54'唯一进球，首发竞争上升。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "chinese_name": "佩塔尔·苏契奇",
+              "english_name": "Petar Sucic",
+              "trigger": "若需要三中场覆盖或保护Modric负荷，可替代Baturina/Kramaric之一。"
+            },
+            {
+              "chinese_name": "马里奥·帕沙利奇",
+              "english_name": "Mario Pasalic",
+              "trigger": "需要二线前插和禁区高度时进入首发。"
+            },
+            {
+              "chinese_name": "佩塔尔·穆萨",
+              "english_name": "Petar Musa",
+              "trigger": "若继续首轮中锋口径，可与Budimir竞争单箭头。"
+            },
+            {
+              "chinese_name": "马林·庞格拉契奇",
+              "english_name": "Marin Pongracic",
+              "trigger": "若后防更强调身体对抗，可进入三中卫。"
+            }
+          ],
+          "availability_summary": {
+            "injuries_confirmed": [],
+            "suspension_confirmed": [],
+            "yellow_card_or_discipline_risk": [],
+            "minutes_risk": [
+              "Modric连续高负荷，虽第二轮状态关键，但第三轮需关注分钟管理。",
+              "Budimir/Kramaric半场替补奏效后，前场首发口径仍未由官方确认。"
+            ]
+          }
+        },
+        {
+          "team": "加纳",
+          "formation": "4-4-1-1 / 4-2-3-1",
+          "lineup_confidence": "medium_low",
+          "source_basis": [
+            "加纳1-0巴拿马复盘首发与换人",
+            "英格兰0-0加纳复盘",
+            "ghana-player-state round2状态",
+            "本地L组三轮预测JSON ghi_keeper_doubtful风险"
+          ],
+          "starters": [
+            {
+              "position": "GK",
+              "chinese_name": "本杰明·阿萨雷",
+              "english_name": "Benjamin Asare",
+              "role_note": "Ati-Zigi首轮被换下后门将候选；官方首发前保持冲突。"
+            },
+            {
+              "position": "RB",
+              "chinese_name": "凯莱布·伊伦基",
+              "english_name": "Caleb Yirenkyi",
+              "role_note": "首轮90+5'进球，边路推进与后插上。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "乔纳斯·阿杰泰",
+              "english_name": "Jonas Adjetey",
+              "role_note": "第二轮低位防线关键点，状态值4.2。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "杰罗姆·奥波库",
+              "english_name": "Jerome Opoku",
+              "role_note": "对英格兰禁区正面保护核心，状态值4.2。"
+            },
+            {
+              "position": "LB",
+              "chinese_name": "吉迪恩·门萨",
+              "english_name": "Gideon Mensah",
+              "role_note": "左路防守和推进。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "托马斯·帕尔特伊",
+              "english_name": "Thomas Partey",
+              "role_note": "中场对抗和节奏保护；可用性需临场复核。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "埃利沙·奥乌苏",
+              "english_name": "Elisha Owusu",
+              "role_note": "中场覆盖，首轮首发后第二轮防守结构参考。"
+            },
+            {
+              "position": "RM",
+              "chinese_name": "安托万·塞梅尼奥",
+              "english_name": "Antoine Semenyo",
+              "role_note": "身体对抗和反击持球。"
+            },
+            {
+              "position": "AM/SS",
+              "chinese_name": "乔丹·阿尤",
+              "english_name": "Jordan Ayew",
+              "role_note": "前场连接、对抗和经验点。"
+            },
+            {
+              "position": "LM",
+              "chinese_name": "卡马尔丁·苏莱曼纳",
+              "english_name": "Kamaldeen Sulemana",
+              "role_note": "左路推进；首轮58'被换下后仍是首发候选。"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "布兰登·托马斯-阿桑特",
+              "english_name": "Brandon Thomas-Asante",
+              "role_note": "首轮替补助攻制胜球，首发竞争上升。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "chinese_name": "劳伦斯·阿蒂-齐吉",
+              "english_name": "Lawrence Ati-Zigi",
+              "trigger": "若赛前确认伤情无碍，可回到门将首发。"
+            },
+            {
+              "chinese_name": "伊尼亚基·威廉姆斯",
+              "english_name": "Inaki Williams",
+              "trigger": "若需要更直接纵深与中锋冲击，可替代Thomas-Asante或边路位。"
+            },
+            {
+              "chinese_name": "阿卜杜勒·法塔武",
+              "english_name": "Abdul Fatawu",
+              "trigger": "需要右路速度或反击时进入首发/早换。"
+            },
+            {
+              "chinese_name": "夸西·西博",
+              "english_name": "Kwasi Sibo",
+              "trigger": "若重视中场防守和领先守势，可替代一名攻击手。"
+            }
+          ],
+          "availability_summary": {
+            "injuries_confirmed": [],
+            "suspension_confirmed": [],
+            "yellow_card_or_discipline_risk": [
+              "Caleb Yirenkyi首轮本地口径保留早段黄牌，需官方完整牌表复核。"
+            ],
+            "minutes_risk": [
+              "Ati-Zigi首轮被换下，第三轮门将首发存在冲突。",
+              "Partey可用性在上一版数据质量旗标中标为需复核。"
+            ]
+          }
+        }
+      ],
+      "lineup_conflicts": [
+        "Ghana门将位Asare/Ati-Zigi未锁定；Ati-Zigi首轮被换下后的可用性仍是关键缺口。",
+        "Croatia前场Budimir、Kramaric、Musa、Baturina之间的首发组合未有官方确认。",
+        "Croatia若从3-4-2-1切换为4后卫，Gvardiol/Perisic站位和边路推进权重需重估。"
+      ]
+    },
+    {
+      "match_id": "L-R3-PAN-ENG-20260627",
+      "match": "巴拿马 vs 英格兰",
+      "official_lineup_gate": {
+        "status": "missing",
+        "gate": "T-75官方首发发布后必须重核；若England因Reece James/Rice调整导致右后卫或双后腰变化，模型应重跑。",
+        "expected_check_time_beijing": "2026-06-28T03:45:00+08:00"
+      },
+      "source_status": "probable_not_official",
+      "captured_at": "2026-06-27T14:59:54+08:00",
+      "teams": [
+        {
+          "team": "巴拿马",
+          "formation": "5-4-1 / 4-4-2 low block",
+          "lineup_confidence": "medium_low",
+          "source_basis": [
+            "加纳1-0巴拿马复盘首发",
+            "巴拿马0-1克罗地亚复盘",
+            "panama-player-state round2状态"
+          ],
+          "starters": [
+            {
+              "position": "GK",
+              "chinese_name": "奥兰多·莫斯克拉",
+              "english_name": "Orlando Mosquera",
+              "role_note": "主力门将口径，前两轮低比分失利。"
+            },
+            {
+              "position": "RB/RWB",
+              "chinese_name": "塞萨尔·布莱克曼",
+              "english_name": "Cesar Blackman",
+              "role_note": "首轮72'黄牌，边路防守和推进。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "何塞·科尔多瓦",
+              "english_name": "Jose Cordoba",
+              "role_note": "中卫核心，禁区防守。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "吉奥瓦尼·拉莫斯",
+              "english_name": "Jiovany Ramos",
+              "role_note": "中卫对抗。"
+            },
+            {
+              "position": "LB/LCB",
+              "chinese_name": "安德烈斯·安德拉德",
+              "english_name": "Andres Andrade",
+              "role_note": "左侧防守。"
+            },
+            {
+              "position": "RWB/RM",
+              "chinese_name": "阿米尔·穆里略",
+              "english_name": "Amir Murillo",
+              "role_note": "边路推进和对抗亮点。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "克里斯蒂安·马丁内斯",
+              "english_name": "Cristian Martinez",
+              "role_note": "中场覆盖；首轮63'被换下。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "卡洛斯·哈维",
+              "english_name": "Carlos Harvey",
+              "role_note": "首轮90+9'黄牌，纪律风险需复核。"
+            },
+            {
+              "position": "LM/LW",
+              "chinese_name": "何塞·路易斯·罗德里格斯",
+              "english_name": "Jose Luis Rodriguez",
+              "role_note": "边路推进；训练冲突传闻只作低可信风险，不作硬事实。"
+            },
+            {
+              "position": "AM/RW",
+              "chinese_name": "约埃尔·巴尔塞纳斯",
+              "english_name": "Yoel Barcenas",
+              "role_note": "第二轮对Modric冲撞吃黄牌，定位球/边路传中。"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "塞西利奥·沃特曼",
+              "english_name": "Cecilio Waterman",
+              "role_note": "中锋支点；首轮63'被Fajardo换下。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "chinese_name": "何塞·法哈多",
+              "english_name": "Jose Fajardo",
+              "trigger": "若需要更直接禁区抢点，可替代Waterman。"
+            },
+            {
+              "chinese_name": "伊斯梅尔·迪亚斯",
+              "english_name": "Ismael Diaz",
+              "trigger": "追分时增加边路/前场冲击。"
+            },
+            {
+              "chinese_name": "阿尼巴尔·戈多伊",
+              "english_name": "Anibal Godoy",
+              "trigger": "若低位防守需要经验中场，可进入首发。"
+            },
+            {
+              "chinese_name": "阿达尔贝托·卡拉斯基利亚",
+              "english_name": "Adalberto Carrasquilla",
+              "trigger": "上一版数据质量旗标称首发/出场需临场确认；若可用，将提高中场持球。"
+            }
+          ],
+          "availability_summary": {
+            "injuries_confirmed": [],
+            "suspension_confirmed": [],
+            "yellow_card_or_discipline_risk": [
+              "Cesar Blackman首轮72'黄牌。",
+              "Carlos Harvey首轮90+9'黄牌。",
+              "Yoel Barcenas第二轮黄牌。"
+            ],
+            "minutes_risk": [
+              "Carrasquilla首发/出场状态上一版标为uncertain。",
+              "两轮0进球后前场组合和阵型冒险程度存在不确定。"
+            ]
+          }
+        },
+        {
+          "team": "英格兰",
+          "formation": "4-2-3-1",
+          "lineup_confidence": "medium_low",
+          "source_basis": [
+            "英格兰4-2克罗地亚复盘首发与评分",
+            "英格兰0-0加纳复盘",
+            "england-player-state round2状态",
+            "Guardian 2026-06-27 Thomas Tuchel/Panama preview"
+          ],
+          "starters": [
+            {
+              "position": "GK",
+              "chinese_name": "乔丹·皮克福德",
+              "english_name": "Jordan Pickford",
+              "role_note": "主力门将口径；若已锁定出线后轮换需T-75确认。"
+            },
+            {
+              "position": "RB",
+              "chinese_name": "埃兹里·孔萨",
+              "english_name": "Ezri Konsa",
+              "role_note": "Guardian称Reece James缺席后可能移至右后卫。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "约翰·斯通斯",
+              "english_name": "John Stones",
+              "role_note": "中卫出球和防线组织。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "马克·格伊",
+              "english_name": "Marc Guehi",
+              "role_note": "中卫轮换/保护John Stones负荷的候选首发。"
+            },
+            {
+              "position": "LB",
+              "chinese_name": "尼科·奥赖利",
+              "english_name": "Nico O'Reilly",
+              "role_note": "第二轮后段机会，左路推进。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "科比·梅努",
+              "english_name": "Kobbie Mainoo",
+              "role_note": "Guardian称Rice fitness concern时可替代其位置。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "埃利奥特·安德森",
+              "english_name": "Elliot Anderson",
+              "role_note": "首轮助攻Bellingham，推进和连接。"
+            },
+            {
+              "position": "AM",
+              "chinese_name": "裘德·贝林厄姆",
+              "english_name": "Jude Bellingham",
+              "role_note": "Guardian称小组仍有争第一压力，未必能休。"
+            },
+            {
+              "position": "RW",
+              "chinese_name": "布卡约·萨卡",
+              "english_name": "Bukayo Saka",
+              "role_note": "第二轮替补带来边路和后点威胁，Guardian称可首发。"
+            },
+            {
+              "position": "LW",
+              "chinese_name": "马库斯·拉什福德",
+              "english_name": "Marcus Rashford",
+              "role_note": "首轮替补进球，Guardian称可首发。"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "哈里·凯恩",
+              "english_name": "Harry Kane",
+              "role_note": "首轮两球；Guardian称若争小组第一，Kane未必休。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "chinese_name": "德克兰·赖斯",
+              "english_name": "Declan Rice",
+              "trigger": "若赛前确认适合首发，可替代Mainoo或Anderson；当前Guardian称fitness concern。"
+            },
+            {
+              "chinese_name": "诺尼·马杜埃凯",
+              "english_name": "Noni Madueke",
+              "trigger": "若维持首轮右路爆点口径，可与Saka竞争右边锋。"
+            },
+            {
+              "chinese_name": "摩根·罗杰斯",
+              "english_name": "Morgan Rogers",
+              "trigger": "若Bellingham保护负荷，可进入前腰/左路。"
+            },
+            {
+              "chinese_name": "杰德·斯彭斯",
+              "english_name": "Djed Spence",
+              "trigger": "若Konsa不改踢右后卫，可作为边后卫轮换。"
+            },
+            {
+              "chinese_name": "奥利·沃特金斯",
+              "english_name": "Ollie Watkins",
+              "trigger": "若Kane休息或限制分钟，可替代中锋。"
+            }
+          ],
+          "availability_summary": {
+            "injuries_confirmed": [
+              "Guardian 2026-06-27称Reece James因腿筋问题缺席Panama和32强。"
+            ],
+            "suspension_confirmed": [],
+            "yellow_card_or_discipline_risk": [],
+            "minutes_risk": [
+              "Declan Rice存在fitness concern；Kobbie Mainoo是替代候选。",
+              "England已至少锁定32强资格，但仍争小组第一，Bellingham/Kane休息幅度不确定。"
+            ]
+          }
+        }
+      ],
+      "lineup_conflicts": [
+        "England右后卫：Reece James伤缺，Konsa移位是Guardian口径，但T-75仍需确认。",
+        "England中场：Rice fitness concern，Mainoo首发只是probable_not_official。",
+        "Panama前锋Waterman/Fajardo和Carrasquilla可用性、首发状态未锁定。",
+        "Panama是否改用5后卫低位或继续4-4-2，需官方首发确认。"
+      ]
+    }
+  ],
+  "team_state_availability": [
+    {
+      "team": "克罗地亚",
+      "player_state_file": "data/outputs/player_state/croatia-player-state.json",
+      "status": "round2_available_partial_minutes",
+      "captured_at": "2026-06-24T09:54:21+08:00",
+      "key_available_players": [
+        "Luka Modric",
+        "Mateo Kovacic",
+        "Josko Gvardiol",
+        "Dominik Livakovic",
+        "Ante Budimir"
+      ],
+      "risk_notes": [
+        "Modric老将负荷与分钟管理。",
+        "Budimir/Kramaric半场替补奏效后首发组合不确定。"
+      ]
+    },
+    {
+      "team": "加纳",
+      "player_state_file": "data/outputs/player_state/ghana-player-state.json",
+      "status": "round2_available_partial_minutes",
+      "captured_at": "2026-06-24T09:54:21+08:00",
+      "key_available_players": [
+        "Jonas Adjetey",
+        "Jerome Opoku",
+        "Thomas Partey",
+        "Antoine Semenyo",
+        "Jordan Ayew"
+      ],
+      "risk_notes": [
+        "Ati-Zigi首轮被换下后的可用性仍需官方确认。",
+        "Partey可用性在上一版数据质量旗标中需要复核。"
+      ]
+    },
+    {
+      "team": "巴拿马",
+      "player_state_file": "data/outputs/player_state/panama-player-state.json",
+      "status": "round2_available_partial_minutes",
+      "captured_at": "2026-06-24T09:54:21+08:00",
+      "key_available_players": [
+        "Orlando Mosquera",
+        "Jose Cordoba",
+        "Amir Murillo",
+        "Yoel Barcenas",
+        "Cecilio Waterman"
+      ],
+      "risk_notes": [
+        "Carrasquilla首发/出场不确定。",
+        "两轮0进球，前场组合和阵型冒险程度不确定。",
+        "Blackman/Harvey/Barcenas黄牌风险需官方累计牌表复核。"
+      ]
+    },
+    {
+      "team": "英格兰",
+      "player_state_file": "data/outputs/player_state/england-player-state.json",
+      "status": "round2_available_partial_minutes",
+      "captured_at": "2026-06-24T09:54:21+08:00",
+      "key_available_players": [
+        "Harry Kane",
+        "Jude Bellingham",
+        "Bukayo Saka",
+        "Marcus Rashford",
+        "Jordan Pickford"
+      ],
+      "risk_notes": [
+        "Reece James已被Guardian报道伤缺Panama和32强。",
+        "Declan Rice有fitness concern，Kobbie Mainoo可能替代。",
+        "已至少晋级，但争第一导致主力休息幅度不确定。"
+      ]
+    }
+  ],
+  "odds_snapshot": [
+    {
+      "match_id": "L-R3-CRO-GHA-20260627",
+      "match": "克罗地亚 vs 加纳",
+      "source_primary": "中国足彩网竞彩混合页",
+      "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-26T17:43:00+08:00",
+      "ordinary_spf": {
+        "status": "available_snapshot",
+        "odds": {
+          "home": 1.6,
+          "draw": 3.05,
+          "away": 5.65
+        }
+      },
+      "handicap_spf": {
+        "status": "available_snapshot",
+        "handicap_home": -1,
+        "odds": {
+          "home": 2.92,
+          "draw": 3.35,
+          "away": 2.05
+        }
+      },
+      "same_source_completeness": "spf_and_handicap_available; totals_not_in_snapshot",
+      "usage_boundary": "market_fact_only"
+    },
+    {
+      "match_id": "L-R3-PAN-ENG-20260627",
+      "match": "巴拿马 vs 英格兰",
+      "source_primary": "中国足彩网竞彩混合页",
+      "url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-26T17:43:00+08:00",
+      "ordinary_spf": {
+        "status": "not_on_sale_or_not_captured",
+        "odds": null
+      },
+      "handicap_spf": {
+        "status": "available_snapshot",
+        "handicap_home": 2,
+        "odds": {
+          "home": 2.48,
+          "draw": 3.9,
+          "away": 2.13
+        }
+      },
+      "same_source_completeness": "handicap_only; ordinary_spf_missing; totals_not_in_snapshot",
+      "usage_boundary": "market_fact_only"
+    }
+  ],
+  "gaps_and_conflicts": [
+    {
+      "field": "official_lineups",
+      "status": "missing",
+      "note": "两场T-75官方首发均未到发布窗口；当前predicted_lineups只能作为probable_not_official输入。"
+    },
+    {
+      "field": "Panama vs England ordinary_spf",
+      "status": "missing",
+      "note": "上一版本地快照只取得巴拿马+2让球胜平负，普通胜平负未开售/未抓到。"
+    },
+    {
+      "field": "totals_odds",
+      "status": "missing",
+      "note": "本地竞彩快照未包含大小球同源盘口。"
+    },
+    {
+      "field": "Ghana goalkeeper",
+      "status": "conflicting",
+      "note": "Ati-Zigi首轮被换下；Asare可作为预计首发，但官方未确认，T-75必须复核。"
+    },
+    {
+      "field": "England injuries",
+      "status": "partial_source_limited",
+      "note": "Guardian确认Reece James伤缺并称Rice有fitness concern；需官方队医/首发确认最终可用性。"
+    },
+    {
+      "field": "yellow_card_accumulation",
+      "status": "uncertain",
+      "note": "Blackman、Harvey、Barcenas、Yirenkyi等牌面需官方累计牌表复核。"
+    },
+    {
+      "field": "Panama training dispute",
+      "status": "low_confidence_external_signal",
+      "note": "搜索结果提示Waterman与Jose Luis Rodriguez训练冲突，但未稳定打开核验；本包只作为低可信团队氛围风险，不进入首发硬结论。"
+    }
+  ],
+  "source_log": [
+    {
+      "source": "项目README/线程状态/工作流纪律/项目架构",
+      "url": "local_project_docs",
+      "captured_at": "2026-06-27T14:59:54+08:00",
+      "supports_fields": "workflow boundary file discipline current thread state"
+    },
+    {
+      "source": "worldcup-data-collector skill",
+      "url": ".codex/skills/worldcup-data-collector/SKILL.md",
+      "captured_at": "2026-06-27T14:59:54+08:00",
+      "supports_fields": "facts_only predicted_lineups odds_snapshot source_policy"
+    },
+    {
+      "source": "worldcup-quant-prediction-system skill",
+      "url": ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+      "captured_at": "2026-06-27T14:59:54+08:00",
+      "supports_fields": "v3 predicted lineup standard third-round context gate"
+    },
+    {
+      "source": "单场量化预测标准模板 v3",
+      "url": "data/templates/match-prediction-standard-template-v3.md",
+      "captured_at": "2026-06-27T14:59:54+08:00",
+      "supports_fields": "predicted lineup required fields and T-75 gate"
+    },
+    {
+      "source": "上一版L组三轮预测JSON",
+      "url": "data/outputs/match_predictions/l-group-round3-quant-prediction-20260626.json",
+      "captured_at": "2026-06-26T22:50:00+08:00",
+      "supports_fields": "group table fixtures odds previous model context"
+    },
+    {
+      "source": "Guardian England through / Reece James injury",
+      "url": "https://www.theguardian.com/football/2026/jun/27/england-through-to-last-32-of-the-world-cup-after-uruguay-exit-against-spain",
+      "captured_at": "2026-06-27T14:59:54+08:00",
+      "supports_fields": "England through last32 Reece James hamstring Panama absence"
+    },
+    {
+      "source": "Guardian Tuchel Panama preview",
+      "url": "https://www.theguardian.com/football/2026/jun/27/england-world-cup-thomas-tuchel-panama",
+      "captured_at": "2026-06-27T14:59:54+08:00",
+      "supports_fields": "England top spot context Reece James out Rice concern Mainoo/Saka/Rashford possible starters"
+    },
+    {
+      "source": "L组已完成复盘与四队player_state",
+      "url": "比赛/已完成比赛/小组赛/L组/*.md; data/outputs/player_state/*",
+      "captured_at": "2026-06-27T14:59:54+08:00",
+      "supports_fields": "first two rounds results player status cards minutes risk postmatch state"
+    }
+  ],
+  "handoff_notes": [
+    "模型线程可读取predicted_lineups，但必须把两场official_lineup_gate视为hold，T-75后重跑。",
+    "英格兰关键新事实：Reece James伤缺，Rice fitness concern；Konsa/Mainoo/Saka/Rashford首发信号来自Guardian，仍非官方首发。",
+    "加纳关键缺口：Ati-Zigi门将可用性；若回到首发或Asare首发，会影响门将状态输入但不应被过度放大。",
+    "克罗地亚关键口径：Budimir/Kramaric第二轮替补奏效，前场首发组合不确定；Modric负荷需监控。",
+    "竞彩/投注线程只能使用discussion_only_hold，直到官方首发、普通SPF/同源盘口和最新伤停齐全。"
+  ],
+  "validation_expectations": {
+    "json_parse_required": true,
+    "markdown_pair": "data/thread_outputs/l-group-round3-v3-20260627/data-collector.md",
+    "prediction_boundary": "no_score_prediction_no_wdl_conclusion_no_betting_advice"
+  }
+}

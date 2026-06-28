@@ -45,7 +45,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "门线反应",
         "长传发动"
@@ -126,8 +126,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 3,
-      "form_status_reason": "只丢一球，整体防线压力下保持比赛悬念。",
+      "form_status_1_5": 2.8,
+      "form_status_reason": "失2球，防线保护有限。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -229,6 +229,23 @@
         "postmatch_form_status_1_5": 3,
         "injury_status_after_match": "no_new_official_report",
         "note": "只丢一球，整体防线压力下保持比赛悬念。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "奥兰多·莫斯克拉",
+        "english_name": "Orlando Mosquera",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "失2球，防线保护有限。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.8,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.8,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -268,7 +285,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "禁区保护"
       ],
@@ -348,8 +365,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -451,6 +468,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "塞萨尔·萨穆迪奥",
+        "english_name": "César Samudio",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -490,7 +524,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "经验",
         "门线反应"
@@ -571,8 +605,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -674,6 +708,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "路易斯·梅希亚",
+        "english_name": "Luis Mejía",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -713,7 +764,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "左脚出球",
         "防空",
@@ -796,7 +847,7 @@
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
       "form_status_1_5": 2.8,
-      "form_status_reason": "禁区保护总体尚可，但对 Budimir 终结点限制不足。",
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -898,6 +949,23 @@
         "postmatch_form_status_1_5": 2.8,
         "injury_status_after_match": "no_new_official_report",
         "note": "禁区保护总体尚可，但对 Budimir 终结点限制不足。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "何塞·科尔多瓦",
+        "english_name": "José Córdoba",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.8,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.8,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -937,7 +1005,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "防空",
         "出球中卫"
@@ -1018,8 +1086,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2.9,
-      "form_status_reason": "三中卫体系承担较多横移压力。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "83分钟黄牌，Kane进球中被抢点压制。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -1121,6 +1189,23 @@
         "postmatch_form_status_1_5": 2.9,
         "injury_status_after_match": "no_new_official_report",
         "note": "三中卫体系承担较多横移压力。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "安德烈斯·安德拉德",
+        "english_name": "Andrés Andrade",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "83分钟黄牌，Kane进球中被抢点压制。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -1160,7 +1245,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "防空强",
         "身体对抗"
@@ -1241,8 +1326,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -1344,6 +1429,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "埃德加多·法里尼亚",
+        "english_name": "Edgardo Fariña",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -1383,7 +1485,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "正面对抗",
         "补位"
@@ -1464,8 +1566,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2.7,
-      "form_status_reason": "首发后防，76分钟附近被换下口径待官方技术报告核验。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -1567,6 +1669,23 @@
         "postmatch_form_status_1_5": 2.7,
         "injury_status_after_match": "no_new_official_report",
         "note": "首发后防，76分钟附近被换下口径待官方技术报告核验。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "吉奥瓦尼·拉莫斯",
+        "english_name": "Jiovany Ramos",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -1606,7 +1725,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "防线指挥",
         "定位球争顶"
@@ -1687,8 +1806,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -1790,6 +1909,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "菲德尔·埃斯科瓦尔",
+        "english_name": "Fidel Escobar",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -1829,7 +1965,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "防空",
         "经验"
@@ -1910,8 +2046,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -2013,6 +2149,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "罗德里克·米勒",
+        "english_name": "Roderick Miller",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -2052,7 +2205,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "套边",
         "左路推进"
@@ -2133,8 +2286,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -2236,6 +2389,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "豪尔赫·古铁雷斯",
+        "english_name": "Jorge Gutiérrez",
+        "started": "是",
+        "minutes": 88,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -2275,7 +2445,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "左脚定位球",
         "经验"
@@ -2356,8 +2526,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -2459,6 +2629,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "埃里克·戴维斯",
+        "english_name": "Éric Davis",
+        "started": "替补",
+        "minutes": 2,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -2498,7 +2685,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "边路推进",
         "后点冲击",
@@ -2580,8 +2767,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 3.4,
-      "form_status_reason": "边路推进和对抗是巴拿马主要亮点。",
+      "form_status_1_5": 2.7,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -2683,6 +2870,23 @@
         "postmatch_form_status_1_5": 3.4,
         "injury_status_after_match": "no_new_official_report",
         "note": "边路推进和对抗是巴拿马主要亮点。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "阿米尔·穆里略",
+        "english_name": "Amir Murillo",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.7,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.7,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -2722,7 +2926,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "边路覆盖",
         "推进"
@@ -2803,8 +3007,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2.8,
-      "form_status_reason": "边翼卫往返有消耗，进攻效率一般。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -2906,6 +3110,23 @@
         "postmatch_form_status_1_5": 2.8,
         "injury_status_after_match": "no_new_official_report",
         "note": "边翼卫往返有消耗，进攻效率一般。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "塞萨尔·布莱克曼",
+        "english_name": "César Blackman",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -2945,7 +3166,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "覆盖",
         "短传连接"
@@ -3026,8 +3247,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2.8,
-      "form_status_reason": "参与中场覆盖，未能形成持续向前传递。",
+      "form_status_1_5": 2.7,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -3129,6 +3350,23 @@
         "postmatch_form_status_1_5": 2.8,
         "injury_status_after_match": "no_new_official_report",
         "note": "参与中场覆盖，未能形成持续向前传递。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "克里斯蒂安·马丁内斯",
+        "english_name": "Cristian Martínez",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.7,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.7,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -3168,7 +3406,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "二点保护",
         "身体对抗"
@@ -3249,8 +3487,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2.8,
-      "form_status_reason": "中场对抗积极，但中路推进质量不足。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -3352,6 +3590,23 @@
         "postmatch_form_status_1_5": 2.8,
         "injury_status_after_match": "no_new_official_report",
         "note": "中场对抗积极，但中路推进质量不足。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "卡洛斯·哈维",
+        "english_name": "Carlos Harvey",
+        "started": "是",
+        "minutes": 88,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -3391,7 +3646,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "防守站位",
         "节奏控制"
@@ -3472,8 +3727,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -3575,6 +3830,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "阿尼巴尔·戈多伊",
+        "english_name": "Aníbal Godoy",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -3614,7 +3886,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "持球推进",
         "转移",
@@ -3696,8 +3968,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -3799,6 +4071,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "阿达尔贝托·卡拉斯基利亚",
+        "english_name": "Adalberto Carrasquilla",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -3838,7 +4127,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "左路速度",
         "传中",
@@ -3921,7 +4210,7 @@
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
       "form_status_1_5": 2.7,
-      "form_status_reason": "边路传中参与较多，但传中质量和禁区连接不足。",
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -4023,6 +4312,23 @@
         "postmatch_form_status_1_5": 2.7,
         "injury_status_after_match": "no_new_official_report",
         "note": "边路传中参与较多，但传中质量和禁区连接不足。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "何塞·路易斯·罗德里格斯",
+        "english_name": "José Luis Rodríguez",
+        "started": "是",
+        "minutes": 72,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.7,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.7,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -4062,7 +4368,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "边中转换",
         "抢点"
@@ -4143,8 +4449,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -4246,6 +4552,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "伊斯梅尔·迪亚斯",
+        "english_name": "Ismael Díaz",
+        "started": "替补",
+        "minutes": 18,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -4285,7 +4608,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "右路推进",
         "传中"
@@ -4366,8 +4689,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2.5,
-      "form_status_reason": "吃到黄牌，纪律风险上调；进攻贡献未转化。",
+      "form_status_1_5": 2.7,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -4469,6 +4792,23 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "吃到黄牌，纪律风险上调；进攻贡献未转化。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "约埃尔·巴尔塞纳斯",
+        "english_name": "Yoel Bárcenas",
+        "started": "是",
+        "minutes": 72,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.7,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.7,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -4508,7 +4848,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "速度",
         "边路轮换"
@@ -4589,8 +4929,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -4692,6 +5032,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "塞萨尔·亚尼斯",
+        "english_name": "César Yanis",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -4731,7 +5088,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "小范围配合",
         "经验"
@@ -4812,8 +5169,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -4915,6 +5272,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "阿尔贝托·金特罗",
+        "english_name": "Alberto Quintero",
+        "started": "替补",
+        "minutes": 2,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -4954,7 +5328,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "禁区终结",
         "机动"
@@ -5035,8 +5409,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 2.7,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -5138,6 +5512,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "托马斯·罗德里格斯",
+        "english_name": "Tomás Rodríguez",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.7,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.7,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -5177,7 +5568,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "纵深冲刺",
         "禁区冲击"
@@ -5258,8 +5649,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 2,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -5361,6 +5752,23 @@
         "postmatch_form_status_1_5": 2,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "阿萨里亚斯·隆多尼奥",
+        "english_name": "Azarías Londoño",
+        "started": "替补",
+        "minutes": 18,
+        "event_summary": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -5400,7 +5808,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "支点",
         "抢点"
@@ -5482,7 +5890,7 @@
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
       "form_status_1_5": 2.6,
-      "form_status_reason": "前场支点和射门威胁偏低。",
+      "form_status_reason": "53分钟黄牌，90+1越位进球无效。",
       "internal_rating_proxy": 2,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -5584,6 +5992,23 @@
         "postmatch_form_status_1_5": 2.6,
         "injury_status_after_match": "no_new_official_report",
         "note": "前场支点和射门威胁偏低。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "何塞·法哈多",
+        "english_name": "José Fajardo",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "53分钟黄牌，90+1越位进球无效。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     },
     {
@@ -5623,7 +6048,7 @@
           "captured_at": "2026-06-21T00:45:00+08:00"
         }
       ],
-      "form_status_captured_at": "2026-06-21T00:45:00+08:00",
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00",
       "technical_tags": [
         "背身支点",
         "空中对抗",
@@ -5705,8 +6130,8 @@
       "rating_source_status": "coverage_incomplete",
       "rating_missing_note": "未找到覆盖本场双方26人的同场同源可靠外部评分；external_rating保留null，不以主观判断补分。",
       "captured_at": "2026-06-21T02:35:00+08:00",
-      "form_status_1_5": 3,
-      "form_status_reason": "内部模型输入值，基于本场可核验分钟、首发/替补、进球、助攻、牌、伤停/可用性生成；不是外部评分、预测或投注结论。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "internal_rating_proxy": 3,
       "internal_rating_proxy_basis": "derived_from_verified_minutes_events_cards_availability_and_role",
       "latest_match_update": {
@@ -5808,6 +6233,23 @@
         "postmatch_form_status_1_5": 3,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "英格兰",
+        "player": "塞西利奥·沃特曼",
+        "english_name": "Cecilio Waterman",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
       }
     }
   ],
@@ -5954,7 +6396,7 @@
   ],
   "rating_policy_updated_at": "2026-06-21T03:35:00+08:00",
   "rating_policy_note": "external_rating is nullable and only populated when a reliable same-match same-source rating is available; otherwise rating_source_status/rating_missing_note explain the gap and internal_rating_proxy may mirror form_status_1_5 as a non-external model helper.",
-  "player_state_update_status": "updated_round2_postmatch",
+  "player_state_update_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
   "latest_match_update": {
     "match": "2026-06-17 Ghana 1-0 Panama",
     "player_state_update_status": "updated",
@@ -5966,7 +6408,7 @@
     "rating_source_status": "coverage_incomplete",
     "note": "官方完整逐人评分未取得；必需动态字段已用可靠公开源补齐。"
   },
-  "updated_at": "2026-06-24T09:54:21+08:00",
+  "updated_at": "2026-06-28T22:35:00+08:00",
   "internal_rating_policy_updated_at": "2026-06-21T02:55:00+08:00",
   "internal_match_rating_policy_updated_at": "2026-06-21T03:55:00+08:00",
   "internal_match_rating_policy_note": "internal_match_rating_1_5 is an internal model score, 1.0-5.0 with one decimal, derived from verified match events and form_status_1_5; it is not an external rating.",
@@ -6474,5 +6916,63 @@
     "review_file": "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\L组\\2026-06-17_加纳_1-0_巴拿马_复盘.md"
   },
   "round_context": "巴拿马 0-1 克罗地亚 第二轮赛后迭代：写入 round2、内部评分、状态值与伤停观察项。",
-  "round2_source_status": "Guardian live + FOX boxscore, internal ratings"
+  "round2_source_status": "Guardian live + FOX boxscore, internal ratings",
+  "round3_postmatch_update": {
+    "match_id": "2026-06-28_PAN_0-2_ENG",
+    "match": "2026-06-28_巴拿马_0-2_英格兰",
+    "opponent": "英格兰",
+    "result": "0-2 loss",
+    "captured_at": "2026-06-28T22:35:00+08:00",
+    "status": "高线高压前60分钟有效，但终结不足且被核心组合连续破局。",
+    "source_log": [
+      {
+        "source": "The Guardian live - Panama 0-2 England",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/panama-v-england-world-cup-2026-live-updates",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "starting_lineups",
+          "goals",
+          "assists",
+          "substitutions",
+          "cards",
+          "injury watch",
+          "group table"
+        ],
+        "source_status": "confirmed_primary_live"
+      },
+      {
+        "source": "Times of India - England vs Panama result",
+        "url": "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/england-vs-panama-fifa-world-cup-match-result-jude-bellingham-record-breaker-harry-kane-guide-england-into-favourable-knockout-bracket/articleshow/132044172.cms",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "goalscorers",
+          "England top group context"
+        ],
+        "source_status": "supporting"
+      },
+      {
+        "source": "The Times live - England vs Panama",
+        "url": "https://www.thetimes.com/sport/football/world-cup/article/england-vs-panama-live-score-updates-world-cup-2026-latest-news-commentary-dc6kps9r7",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "England XI",
+          "Quansah injury",
+          "Bellingham/Kane goals",
+          "Rice fitness context"
+        ],
+        "source_status": "supporting"
+      }
+    ],
+    "data_gaps": [
+      "FIFA官方完整事件表未取得。",
+      "两场官方完整逐人分钟、全部替补补时细节和完整技术统计未闭合。",
+      "同源外部逐人评分未取得；后续成员表/player_state应将 external_rating 设为 null，并写 rating_source_status/rating_missing_note。",
+      "克罗地亚 2-1 加纳部分助攻未由当前可靠源确认，Petar Sucic和Derrick Luckassen进球 assist 保留 null。",
+      "加纳 Antoine Semenyo、英格兰 Jarell Quansah 的赛后伤情需后续官方/队医或发布会源复核。",
+      "本包只提供结构化事实输入，未直接更新四队 canonical 成员表或 player_state。"
+    ]
+  },
+  "round3_internal_rating_logs": []
 }

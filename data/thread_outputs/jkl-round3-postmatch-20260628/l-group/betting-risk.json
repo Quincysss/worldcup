@@ -1,0 +1,297 @@
+{
+  "schema_version": "postmatch_betting_risk_review_v1",
+  "created_at": "2026-06-28T00:00:00+08:00",
+  "scope": {
+    "group": "L",
+    "round": 3,
+    "matches": [
+      "067 克罗地亚 vs 加纳",
+      "068 巴拿马 vs 英格兰"
+    ],
+    "review_type": "discussion_only_postmatch_settlement",
+    "no_new_betting_advice": true
+  },
+  "status": "postmatch_review_complete_no_new_betting",
+  "source_files_reviewed": [
+    "README.md",
+    "赔率与投注/购彩方案组合标准_20260625.md",
+    ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+    "data/outputs/betting_risk/jkl-round3-75yuan-5to6-ticket-discussion-plan-20260627.json",
+    "data/outputs/betting_risk/jkl-round3-r1-r5-bold-plan-review-20260627.json",
+    "data/outputs/match_predictions/l-group-round3-v3-quant-prediction-20260627.json"
+  ],
+  "actual_results": [
+    {
+      "match_no": "067",
+      "match": "克罗地亚 vs 加纳",
+      "actual_score": "2-1",
+      "ordinary_1x2_result": "克罗地亚胜",
+      "home_handicap": -1,
+      "handicap_result": "让平",
+      "handicap_translation": "克罗地亚 -1 后为 1-1；克罗地亚赢1球对应让球平，不对应让球负。",
+      "total_goals": 3,
+      "correct_score": "2-1",
+      "half_full_time_status": "not_settled_without_halftime_score",
+      "halftime_score_available_in_review_inputs": false
+    },
+    {
+      "match_no": "068",
+      "match": "巴拿马 vs 英格兰",
+      "actual_score": "0-2",
+      "ordinary_1x2_result": "英格兰胜",
+      "home_handicap": 2,
+      "handicap_result": "让平",
+      "handicap_translation": "巴拿马 +2 后为 2-2；英格兰赢2球对应让球平，不对应让球胜或让球负。",
+      "total_goals": 2,
+      "correct_score": "0-2",
+      "half_full_time_status": "not_settled_without_halftime_score",
+      "halftime_score_available_in_review_inputs": false
+    }
+  ],
+  "market_type_settlement_reference": {
+    "067_croatia_ghana": {
+      "ordinary_1x2": {
+        "home_win": "hit",
+        "draw": "miss",
+        "away_win": "miss"
+      },
+      "handicap_minus1": {
+        "home_win": "miss",
+        "draw": "hit",
+        "away_win": "miss"
+      },
+      "correct_score": {
+        "2-1": "hit_if_selected",
+        "1-0": "miss",
+        "2-0": "miss",
+        "1-1": "miss",
+        "0-1": "miss"
+      },
+      "total_goals": {
+        "exact_3_goals": "hit_if_selected",
+        "under_2_5": "miss",
+        "over_2_5": "hit_if_selected",
+        "under_3_5": "hit_if_selected",
+        "over_3_5": "miss"
+      },
+      "half_full_time": {
+        "status": "not_in_prior_l_group_tickets_and_halftime_score_missing",
+        "settlement_note": "半全场必须知道半场比分；本次只读输入未给半场比分，不能判定具体半全场选项。"
+      }
+    },
+    "068_panama_england": {
+      "ordinary_1x2": {
+        "home_win": "miss",
+        "draw": "miss",
+        "away_win": "hit"
+      },
+      "handicap_plus2": {
+        "home_win": "miss",
+        "draw": "hit",
+        "away_win": "miss"
+      },
+      "correct_score": {
+        "0-2": "hit_if_selected",
+        "0-1": "miss",
+        "0-3": "miss",
+        "0-4": "miss",
+        "1-2": "miss"
+      },
+      "total_goals": {
+        "exact_2_goals": "hit_if_selected",
+        "under_2_5": "hit_if_selected",
+        "over_2_5": "miss",
+        "under_3_5": "hit_if_selected",
+        "over_3_5": "miss"
+      },
+      "half_full_time": {
+        "status": "not_in_prior_l_group_tickets_and_halftime_score_missing",
+        "settlement_note": "半全场必须知道半场比分；本次只读输入未给半场比分，不能判定具体半全场选项。"
+      }
+    }
+  },
+  "ticket_settlement_75yuan_l_group_legs": [
+    {
+      "ticket_id": "T2",
+      "leg": "067 克罗地亚 -1 让球负",
+      "stake_context": "T2 2串1 discussion_only reference",
+      "leg_result": "miss",
+      "settlement_reason": "实际克罗地亚 2-1 加纳，克罗地亚赢1球，-1 后为让平；让球负需要克罗地亚真实平或负。",
+      "failure_categories": [
+        "bet_translation_error",
+        "portfolio_structure_error"
+      ],
+      "ticket_level_note": "L组腿未中，T2 整票失效；不能把克罗地亚未赢2球误结算为让球负命中。"
+    },
+    {
+      "ticket_id": "T3",
+      "leg": "068 巴拿马 +2 让球胜",
+      "stake_context": "T3 2串1 discussion_only reference",
+      "leg_result": "miss",
+      "settlement_reason": "实际巴拿马 0-2 英格兰，英格兰赢2球，+2 后为让平；让球胜需要巴拿马不败或英格兰只赢1球。",
+      "failure_categories": [
+        "bet_translation_error",
+        "portfolio_structure_error"
+      ],
+      "ticket_level_note": "L组腿未中，T3 整票失效；赛前模型 Top5 已含 0-2，转成 +2 让胜时漏掉关键桶。"
+    },
+    {
+      "ticket_id": "T4",
+      "leg": "067 克罗地亚 -1 让球平",
+      "stake_context": "T4 4串1 exact-margin discussion reference",
+      "leg_result": "hit",
+      "settlement_reason": "实际克罗地亚赢1球，正好对应 -1 让平。",
+      "failure_categories": [],
+      "ticket_level_note": "L组此腿命中，但 T4 仍需其他组腿全部命中；腿命中不等于整票兑现。"
+    },
+    {
+      "ticket_id": "T4",
+      "leg": "068 巴拿马 +2 让球平",
+      "stake_context": "T4 4串1 exact-margin discussion reference",
+      "leg_result": "hit",
+      "settlement_reason": "实际英格兰赢2球，正好对应巴拿马 +2 让平。",
+      "failure_categories": [],
+      "ticket_level_note": "L组此腿命中，但 T4 仍需其他组腿全部命中；腿命中不等于整票兑现。"
+    },
+    {
+      "ticket_id": "T5",
+      "leg": "067 克罗地亚 vs 加纳 平局",
+      "stake_context": "T5 3串1 discussion reference",
+      "leg_result": "miss",
+      "settlement_reason": "实际克罗地亚 2-1 获胜，不是普通平局。",
+      "failure_categories": [
+        "model_direction_error",
+        "portfolio_structure_error"
+      ],
+      "ticket_level_note": "L组腿未中，T5 整票失效。"
+    },
+    {
+      "ticket_id": "T6",
+      "leg": "067 加纳胜",
+      "stake_context": "T6 3串1 tail-branch discussion reference",
+      "leg_result": "miss",
+      "settlement_reason": "实际克罗地亚 2-1 获胜，加纳胜方向未兑现。",
+      "failure_categories": [
+        "model_direction_error",
+        "portfolio_structure_error"
+      ],
+      "ticket_level_note": "L组腿未中，T6 整票失效。"
+    }
+  ],
+  "ticket_settlement_r1_r5_l_group_legs": [
+    {
+      "ticket_id": "R1",
+      "leg": "067 克罗地亚 -1 客胜 / 让球负",
+      "leg_result": "miss",
+      "settlement_reason": "实际克罗地亚赢1球，对应 -1 让平，不是让球负。",
+      "failure_categories": [
+        "bet_translation_error",
+        "portfolio_structure_error"
+      ],
+      "ticket_level_note": "R1 的 L组腿未中；该腿不能按克罗地亚未穿两球来结算。"
+    },
+    {
+      "ticket_id": "R3",
+      "leg": "067 克罗地亚 -1 让球平",
+      "leg_result": "hit",
+      "settlement_reason": "实际克罗地亚赢1球，命中精确净胜一球桶。",
+      "failure_categories": [],
+      "ticket_level_note": "R3 为 6x4 系统，L组腿命中只说明该腿贡献，整票需汇总 J/K 其他腿。"
+    },
+    {
+      "ticket_id": "R3",
+      "leg": "068 巴拿马 +2 让球平",
+      "leg_result": "hit",
+      "settlement_reason": "实际英格兰赢2球，命中精确净胜两球桶。",
+      "failure_categories": [],
+      "ticket_level_note": "R3 为 6x4 系统，L组腿命中只说明该腿贡献，整票需汇总 J/K 其他腿。"
+    },
+    {
+      "ticket_id": "R4",
+      "leg": "067 克罗地亚 -1 让球负",
+      "leg_result": "miss",
+      "settlement_reason": "实际克罗地亚赢1球，对应 -1 让平。",
+      "failure_categories": [
+        "bet_translation_error",
+        "portfolio_structure_error"
+      ],
+      "ticket_level_note": "R4 的 067 腿未中。"
+    },
+    {
+      "ticket_id": "R4",
+      "leg": "068 巴拿马 0-2 / 0-3 / 0-4 比分簇",
+      "leg_result": "hit",
+      "settlement_reason": "实际巴拿马 0-2 英格兰，命中比分簇中的 0-2。",
+      "failure_categories": [],
+      "ticket_level_note": "R4 的 068 比分腿命中，但 067 腿未中且整票还涉及非 L 组腿。"
+    },
+    {
+      "ticket_id": "R5",
+      "leg": "068 巴拿马 +2 让球负",
+      "leg_result": "miss",
+      "settlement_reason": "巴拿马 +2 让球负需要英格兰赢3球或以上；实际英格兰只赢2球，为让平。",
+      "failure_categories": [
+        "model_tail_error",
+        "bet_translation_error",
+        "portfolio_structure_error"
+      ],
+      "ticket_level_note": "R5 的 L组强穿尾部未兑现；0-2 本来在模型 Top5，不能被 3+ 尾部覆盖。"
+    }
+  ],
+  "model_and_betting_diagnosis": {
+    "direction_hits": [
+      "067 克罗地亚普通胜方向兑现。",
+      "068 英格兰普通胜方向兑现。"
+    ],
+    "scoreline_hits": [
+      "068 0-2 在模型 Top5 中且 R4 比分簇包含 0-2。",
+      "067 2-1 不在模型 Top5，但与克罗地亚一球胜让平桶一致。"
+    ],
+    "draw_floor_errors": [
+      "067 赛前平局约 29%-30.5%，T5 取平未中，但该平局风险本身不应被简单删除；实际落在克罗地亚一球胜。",
+      "068 赛前 0-0/1-1 低比分尾部存在，但真实走向为英格兰两球胜。"
+    ],
+    "model_tail_errors": [
+      "R5 把 068 推到英格兰 3+，实际停在 2 球；属于尾部过度选择。",
+      "067 从模型 Top5 的 1-0/0-0/1-1/2-0/0-1 跳到 2-1，BTTS 一球胜尾部需要保留。"
+    ],
+    "bet_translation_errors": [
+      "067 克罗地亚赢1球必须结算为 -1 让平，不是 -1 让负。",
+      "068 英格兰赢2球必须结算为巴拿马 +2 让平，不是 +2 让胜或 +2 让负。",
+      "T3 漏掉模型 Top5 中的 0-2，对应 +2 让平桶。"
+    ],
+    "portfolio_structure_errors": [
+      "T2/T3 将关键 L组净胜球桶串入多腿，桶位错配后直接造成整票失效。",
+      "T4/R3 的 L组精确净胜球腿命中，但这类腿仍高度依赖其他组精确路径，不能当作独立保护。",
+      "R4 的 068 比分命中但 067 腿失败，说明比分命中不能覆盖同票其他腿风险。"
+    ]
+  },
+  "rule_update_suggestions": [
+    {
+      "rule": "handicap_bucket_must_be_settled_first",
+      "update": "赛后复盘先按真实净胜球落桶，再讨论模型方向。克罗地亚赢1球为 -1 让平；英格兰赢2球为巴拿马 +2 让平。"
+    },
+    {
+      "rule": "top_scoreline_to_handicap_alignment",
+      "update": "模型 Top5 含 0-2 时，不能只取 +2 让胜或 3+ 强穿尾部；必须说明 +2 让平桶的存在。"
+    },
+    {
+      "rule": "one_goal_favorite_win_is_not_resistance_loss",
+      "update": "主队 -1 场景下，主队赢1球不是让球负。任何把不赢两球误写成让负的口径都归为 bet_translation_error。"
+    },
+    {
+      "rule": "leg_hit_not_ticket_hit",
+      "update": "T4/R3/R4 出现 L组腿命中的同时，仍需看其他组腿；不得用局部命中描述整票兑现。"
+    },
+    {
+      "rule": "no_new_postmatch_betting",
+      "update": "赛后复盘只更新结算和风控规则，不从赛果反推出新的投注方案。"
+    }
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "no_placeholder_markers": true,
+    "no_executable_betting_language": true,
+    "forbidden_new_betting_advice": false
+  }
+}

@@ -5,7 +5,7 @@
   "group": "K",
   "status": "complete_current_stage",
   "created_at": "2026-06-20T23:58:00+08:00",
-  "updated_at": "2026-06-24T18:30:00+08:00",
+  "updated_at": "2026-06-28T22:05:00+08:00",
   "owner": "worldcup-data-collector",
   "scope": "K组哥伦比亚球员状态表",
   "players": [
@@ -118,9 +118,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 3.5,
-      "form_status_reason": "零封刚果金，比赛压力主要来自零星反击和终段定位球，状态稳定。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 4.0,
+      "form_status_reason": "零封葡萄牙，防线沟通稳定。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "门线反应",
         "高球处理",
@@ -416,6 +416,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "卡米洛·巴尔加斯",
+        "english_name": "Camilo Vargas",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "零封葡萄牙，防线沟通稳定。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 4.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 4.0,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -521,8 +538,8 @@
         }
       ],
       "form_status_1_5": 2.6,
-      "form_status_reason": "本场未登场；事件流未记录出场。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "身高覆盖",
         "禁区保护"
@@ -797,7 +814,24 @@
           "postmatch_form_status_1_5": 2.6,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "阿尔瓦罗·蒙特罗",
+        "english_name": "Álvaro Montero",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "大卫·奥斯皮纳",
@@ -902,8 +936,8 @@
         }
       ],
       "form_status_1_5": 2.6,
-      "form_status_reason": "本场未登场；事件流未记录出场。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "经验",
         "门线反应"
@@ -1178,7 +1212,24 @@
           "postmatch_form_status_1_5": 2.6,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "大卫·奥斯皮纳",
+        "english_name": "David Ospina",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "约翰·卢库米",
@@ -1289,9 +1340,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 3.6,
-      "form_status_reason": "替补登场后制造禁区身体对抗和进球前空间，支点价值上调。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 3.5,
+      "form_status_reason": "低事件控场守住小组第一。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "左脚出球",
         "防空",
@@ -1587,6 +1638,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "约翰·卢库米",
+        "english_name": "Jhon Lucumí",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "低事件控场守住小组第一。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.5,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -1698,9 +1766,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 3.5,
-      "form_status_reason": "中卫线完成零封，39分钟有射正威胁，防线推进较稳。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 3.7,
+      "form_status_reason": "补时头球被VAR/越位取消，防守端稳定。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "对抗",
         "回追速度",
@@ -1996,6 +2064,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "达文森·桑切斯",
+        "english_name": "Davinson Sánchez",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "补时头球被VAR/越位取消，防守端稳定。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.7,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.7,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -2101,8 +2186,8 @@
         }
       ],
       "form_status_1_5": 2.6,
-      "form_status_reason": "本场未登场；事件流未记录出场。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "正面对抗",
         "替补防守"
@@ -2377,7 +2462,24 @@
           "postmatch_form_status_1_5": 2.6,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "威勒·迪塔",
+        "english_name": "Willer Ditta",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "耶里·米纳",
@@ -2482,8 +2584,8 @@
         }
       ],
       "form_status_1_5": 2.6,
-      "form_status_reason": "本场未登场；事件流未记录出场。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "防空强",
         "定位球争顶"
@@ -2758,7 +2860,24 @@
           "postmatch_form_status_1_5": 2.6,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "耶里·米纳",
+        "english_name": "Yerry Mina",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "德伊韦尔·马查多",
@@ -2862,9 +2981,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 2.6,
-      "form_status_reason": "本场未登场；事件流未记录出场。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 3.2,
+      "form_status_reason": "低事件控场守住小组第一。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "左路推进",
         "套边"
@@ -3139,7 +3258,24 @@
           "postmatch_form_status_1_5": 2.6,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "德伊韦尔·马查多",
+        "english_name": "Deiver Machado",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "低事件控场守住小组第一。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.2,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.2,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "约翰·莫希卡",
@@ -3243,9 +3379,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 3.2,
-      "form_status_reason": "首发打满，7分钟吃黄；Sportsdunia评分6.5，纪律风险略升。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "传中",
         "左路覆盖"
@@ -3519,7 +3655,24 @@
           "postmatch_form_status_1_5": 3.2,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "约翰·莫希卡",
+        "english_name": "Johan Mojica",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "丹尼尔·穆尼奥斯",
@@ -3630,9 +3783,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 4.4,
-      "form_status_reason": "76分钟前插打入制胜球，右后卫连续两轮进球，模型需上调其后点冲击和弱侧终结权重。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "后插上",
         "禁区终结",
@@ -3928,6 +4081,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "丹尼尔·穆尼奥斯",
+        "english_name": "Daniel Muñoz",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -4032,9 +4202,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 2.6,
-      "form_status_reason": "本场未登场；事件流未记录出场。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 3.3,
+      "form_status_reason": "低事件控场守住小组第一。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "经验",
         "防守轮换"
@@ -4309,7 +4479,24 @@
           "postmatch_form_status_1_5": 2.6,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "圣地亚哥·阿里亚斯",
+        "english_name": "Santiago Arias",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "低事件控场守住小组第一。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.3,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.3,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "理查德·里奥斯",
@@ -4420,9 +4607,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 3.2,
-      "form_status_reason": "77分钟出场帮助收尾，状态维持。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "推进",
         "对抗",
@@ -4719,6 +4906,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "理查德·里奥斯",
+        "english_name": "Richard Ríos",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -4830,9 +5034,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 3.2,
-      "form_status_reason": "中场屏障贡献稳定，但90+4黄牌提示高对抗下纪律风险。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 3.5,
+      "form_status_reason": "低事件控场守住小组第一。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "拦截",
         "空中对抗",
@@ -5128,6 +5332,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "杰弗森·莱尔马",
+        "english_name": "Jefferson Lerma",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "低事件控场守住小组第一。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.5,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -5232,9 +5453,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 2.8,
-      "form_status_reason": "90+3换下Jhon Arias，补时短时间出场；评分缺失。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "覆盖",
         "短传连接"
@@ -5509,7 +5730,24 @@
           "postmatch_form_status_1_5": 2.8,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "凯文·卡斯塔尼奥",
+        "english_name": "Kevin Castaño",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "古斯塔沃·普埃尔塔",
@@ -5620,9 +5858,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 3.5,
-      "form_status_reason": "双后腰出球和二点保护合格，延续首轮积极信号。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "中场覆盖",
         "前插助攻"
@@ -5917,6 +6155,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "古斯塔沃·普埃尔塔",
+        "english_name": "Gustavo Puerta",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -6028,9 +6283,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 4,
-      "form_status_reason": "58分钟替补后送出制胜助攻，提升哥伦比亚面对低位防线时的直塞解法权重。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "对抗",
         "防守补位"
@@ -6326,6 +6581,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "胡安·波尔蒂利亚",
+        "english_name": "Juan Portilla",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -6431,8 +6703,8 @@
         }
       ],
       "form_status_1_5": 2.6,
-      "form_status_reason": "本场未登场；事件流未记录出场。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "持球推进",
         "肋部创造"
@@ -6707,7 +6979,24 @@
           "postmatch_form_status_1_5": 2.6,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "豪尔赫·卡拉斯卡尔",
+        "english_name": "Jorge Carrascal",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "胡安·费尔南多·金特罗",
@@ -6812,8 +7101,8 @@
         }
       ],
       "form_status_1_5": 2.6,
-      "form_status_reason": "本场未登场；事件流未记录出场。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "左脚定位球",
         "最后一传"
@@ -7088,7 +7377,24 @@
           "postmatch_form_status_1_5": 2.6,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "胡安·费尔南多·金特罗",
+        "english_name": "Juan Fernando Quintero",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "哈梅斯·罗德里格斯",
@@ -7199,9 +7505,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 3.3,
-      "form_status_reason": "首发组织和定位球承担较多，58分钟被昆特罗换下，体能管理信号明显。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 3.7,
+      "form_status_reason": "制造关键机会，低事件局仍有传威胁。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "左脚传球",
         "定位球",
@@ -7497,6 +7803,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "哈梅斯·罗德里格斯",
+        "english_name": "James Rodríguez",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "制造关键机会，低事件局仍有传威胁。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.7,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.7,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -7608,9 +7931,9 @@
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
       ],
-      "form_status_1_5": 3,
-      "form_status_reason": "首发中锋牵制有限，58分钟被科尔多瓦换下，下一场中锋位竞争加剧。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_1_5": 3.3,
+      "form_status_reason": "持续牵制葡萄牙边路，但未形成进球。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "一对一突破",
         "纵深冲刺",
@@ -7906,6 +8229,23 @@
           "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-dr-congo-jun-23-2026-game-boxscore-647663",
           "https://www.theguardian.com/football/live/2026/jun/24/fifa-world-cup-2026-live-colombia-v-dr-congo-updates-col-vs-cod-group-k-match-score-latest"
         ]
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "路易斯·迪亚斯",
+        "english_name": "Luis Díaz",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "持续牵制葡萄牙边路，但未形成进球。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.3,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.3,
+        "captured_at": "2026-06-28T22:05:00+08:00"
       }
     },
     {
@@ -8010,9 +8350,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 2.8,
-      "form_status_reason": "90+3换下Luis Díaz，补时短时间出场；评分缺失。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "速度",
         "边路突破"
@@ -8287,7 +8627,24 @@
           "postmatch_form_status_1_5": 2.8,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "安德烈斯·戈麦斯",
+        "english_name": "Andrés Gómez",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "哈明顿·坎帕斯",
@@ -8391,9 +8748,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 4.2,
-      "form_status_reason": "72分钟换下James，90+9头球锁定3-1；替补未见可靠数字评分。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "左脚内切",
         "替补冲击",
@@ -8669,7 +9026,24 @@
           "postmatch_form_status_1_5": 4.2,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "哈明顿·坎帕斯",
+        "english_name": "Jáminton Campaz",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "约翰·阿里亚斯",
@@ -8773,9 +9147,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 3.5,
-      "form_status_reason": "首发至补时被换下，右路连接和压迫；Sportsdunia评分6.7。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 3.4,
+      "form_status_reason": "低事件控场守住小组第一。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "跑动连接",
         "反抢覆盖",
@@ -9050,7 +9424,24 @@
           "postmatch_form_status_1_5": 3.5,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "约翰·阿里亚斯",
+        "english_name": "Jhon Arias",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "低事件控场守住小组第一。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.4,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.4,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "路易斯·苏亚雷斯",
@@ -9154,9 +9545,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 3.4,
-      "form_status_reason": "首发80分钟，牵制中卫但无进球；Sportsdunia评分6.7。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "禁区终结",
         "背身支点"
@@ -9430,7 +9821,24 @@
           "postmatch_form_status_1_5": 3.4,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "路易斯·苏亚雷斯",
+        "english_name": "Luis Suárez",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "库乔·埃尔南德斯",
@@ -9534,9 +9942,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 3.8,
-      "form_status_reason": "80分钟换下Luis Suárez，90+9助攻Campaz；替补评分缺失。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "前场压迫",
         "横传助攻",
@@ -9812,7 +10220,24 @@
           "postmatch_form_status_1_5": 3.8,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "库乔·埃尔南德斯",
+        "english_name": "Cucho Hernández",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "chinese_name": "约翰·科尔多瓦",
@@ -9916,9 +10341,9 @@
           "captured_at": "2026-06-21T00:20:00+08:00"
         }
       ],
-      "form_status_1_5": 2.6,
-      "form_status_reason": "本场未登场；事件流未记录出场。 该数值为赛后模型输入值，不是投注结论。",
-      "form_status_captured_at": "2026-06-21T00:20:00+08:00",
+      "form_status_1_5": 3.3,
+      "form_status_reason": "早段头球/射门威胁，终结未兑现。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "technical_tags": [
         "背身支点",
         "空中对抗"
@@ -10193,11 +10618,28 @@
           "postmatch_form_status_1_5": 2.6,
           "captured_at": "2026-06-21T01:22:42+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "葡萄牙",
+        "player": "约翰·科尔多瓦",
+        "english_name": "Jhon Córdoba",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "早段头球/射门威胁，终结未兑现。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.3,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.3,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     }
   ],
   "player_count": 26,
-  "player_state_update_status": "updated_round2_colombia_1_0_dr_congo",
+  "player_state_update_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
   "round1_match_update": {
     "match_id": "2026-06-17_uzbekistan_1-3_colombia",
     "score": "Uzbekistan 1-3 Colombia",
@@ -10954,5 +11396,36 @@
     "captured_at": "2026-06-24T18:30:00+08:00",
     "source_status": "FOX_Guardian_cross_checked_partial_player_ratings",
     "rating_policy": "external same-source ratings not available; internal 1-5 ratings derived from minutes, role, events, and verified match narrative."
-  }
+  },
+  "round3_postmatch_update": {
+    "match_id": "2026-06-28_COL_0-0_POR",
+    "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+    "opponent": "葡萄牙",
+    "result": "0-0 draw",
+    "captured_at": "2026-06-28T22:05:00+08:00",
+    "status": "低事件控场守住小组第一。",
+    "source_log": [
+      {
+        "name": "Fox Sports Colombia vs Portugal match center",
+        "url": "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-portugal-jun-27-2026-game-boxscore-647665",
+        "status": "score/event_stats_partial"
+      },
+      {
+        "name": "Indian Express Colombia 0-0 Portugal live/report",
+        "url": "https://indianexpress.com/article/sports/football/colombia-vs-portugal-live-score-fifa-world-cup-2026-group-k-10083777/",
+        "status": "lineups/shots/event_chain_partial"
+      },
+      {
+        "name": "The Guardian Colombia vs Portugal live",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-colombia-v-portugal-updates-col-vs-por-group-k-match-score-latest",
+        "status": "match_narrative_partial"
+      }
+    ],
+    "data_gaps": [
+      "官方逐人完整出场分钟、扑救、预期进球、黄红牌、同源外部球员评分未完全闭合。",
+      "葡萄牙、哥伦比亚部分首发名单来自媒体快照，仍需赛会/官方技术报告复核。",
+      "刚果金3-1乌兹别克斯坦的点球制造者、全部换人和补时细节需官方事件表补齐。"
+    ]
+  },
+  "round3_internal_rating_logs": []
 }

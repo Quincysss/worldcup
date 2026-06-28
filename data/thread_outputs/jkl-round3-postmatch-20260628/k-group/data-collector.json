@@ -1,0 +1,77 @@
+{
+  "schema_version": "round3_postmatch_data_packet_v1",
+  "status": "partial_thread_fallback_after_data_collector_system_error",
+  "generated_at": "2026-06-28T22:05:00+08:00",
+  "owner": "main-thread-as-data-fallback",
+  "role_thread_status": {
+    "data_collector": "systemError/no k-group data-collector output found",
+    "modeler": "completed",
+    "tactics": "completed_source_limited",
+    "red_team": "completed_hold",
+    "betting_risk": "completed_postmatch_no_new_advice"
+  },
+  "scope": "K组第三轮两场赛后事实包，用于复盘与成员表 partial 更新。",
+  "matches": [
+    {
+      "match_id": "2026-06-28_K_R3_COL_POR",
+      "match_cn": "哥伦比亚 0-0 葡萄牙",
+      "actual_score": "0-0",
+      "facts": [
+        "哥伦比亚以平局锁定K组第一，葡萄牙第二出线。",
+        "哥伦比亚射门数量明显更多；补时阶段达文森·桑切斯头球被VAR/越位判定取消。",
+        "迪奥戈·科斯塔多次关键扑救，詹姆斯·罗德里格斯、科尔多瓦、阿里亚斯等制造威胁。",
+        "葡萄牙进攻端节奏偏急，C罗和布鲁诺的终结质量未能兑现赛前xG倾向。"
+      ],
+      "source_log": [
+        {
+          "name": "Fox Sports Colombia vs Portugal match center",
+          "url": "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-portugal-jun-27-2026-game-boxscore-647665",
+          "status": "score/event_stats_partial"
+        },
+        {
+          "name": "Indian Express Colombia 0-0 Portugal live/report",
+          "url": "https://indianexpress.com/article/sports/football/colombia-vs-portugal-live-score-fifa-world-cup-2026-group-k-10083777/",
+          "status": "lineups/shots/event_chain_partial"
+        },
+        {
+          "name": "The Guardian Colombia vs Portugal live",
+          "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-colombia-v-portugal-updates-col-vs-por-group-k-match-score-latest",
+          "status": "match_narrative_partial"
+        }
+      ]
+    },
+    {
+      "match_id": "2026-06-28_K_R3_DRC_UZB",
+      "match_cn": "刚果金 3-1 乌兹别克斯坦",
+      "actual_score": "3-1",
+      "facts": [
+        "乌兹别克斯坦第10分钟由埃尔多尔·肖穆罗多夫先入一球。",
+        "刚果金下半场反扑，约阿内·维萨第68分钟点球扳平，菲斯顿·马耶莱第78分钟反超，维萨补时再入一球。",
+        "刚果金完成逆转并获得队史/本届关键胜利，三球尾部和让球穿盘明显高于赛前中位数。",
+        "乌兹别克斯坦连续多场防线承压，领先后仍未守住低位，后段追分与体能崩盘共同放大失球。"
+      ],
+      "source_log": [
+        {
+          "name": "Sky Sports DR Congo 3-1 Uzbekistan match report",
+          "url": "https://www.skysports.com/football/dr-congo-vs-uzbekistan/report/549801",
+          "status": "score/goals/report"
+        },
+        {
+          "name": "The Guardian DR Congo vs Uzbekistan live",
+          "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-dr-congo-v-uzbekistan-updates-cod-vs-uzb-group-k-match-score-latest",
+          "status": "event_chain_partial"
+        },
+        {
+          "name": "FIFA match centre DR Congo vs Uzbekistan",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-center/400018000",
+          "status": "result_reference_partial"
+        }
+      ]
+    }
+  ],
+  "data_gaps": [
+    "官方逐人完整出场分钟、扑救、预期进球、黄红牌、同源外部球员评分未完全闭合。",
+    "葡萄牙、哥伦比亚部分首发名单来自媒体快照，仍需赛会/官方技术报告复核。",
+    "刚果金3-1乌兹别克斯坦的点球制造者、全部换人和补时细节需官方事件表补齐。"
+  ]
+}

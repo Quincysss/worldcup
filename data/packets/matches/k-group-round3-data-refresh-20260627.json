@@ -1,0 +1,184 @@
+{
+  "packet_id": "k-group-round3-data-refresh-20260627",
+  "phase": "data_refresh",
+  "group": "K",
+  "round": 3,
+  "created_at": "2026-06-27T14:35:00+08:00",
+  "status": "partial_thread_fallback",
+  "scope": [
+    "哥伦比亚 vs 葡萄牙",
+    "刚果金 vs 乌兹别克斯坦"
+  ],
+  "current_table": [
+    {"team": "哥伦比亚", "points": 6, "goal_difference": 3, "goals_for": 4, "goals_against": 1},
+    {"team": "葡萄牙", "points": 4, "goal_difference": 5, "goals_for": 6, "goals_against": 1},
+    {"team": "刚果金", "points": 1, "goal_difference": -1, "goals_for": 1, "goals_against": 2},
+    {"team": "乌兹别克斯坦", "points": 0, "goal_difference": -7, "goals_for": 1, "goals_against": 8}
+  ],
+  "fixtures": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "date": "2026-06-28",
+      "kickoff_bst": "00:30",
+      "kickoff_beijing": "07:30",
+      "venue": "Hard Rock Stadium, Miami Gardens",
+      "lottery_match_no": "周六069"
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "date": "2026-06-28",
+      "kickoff_bst": "00:30",
+      "kickoff_beijing": "07:30",
+      "venue": "Mercedes-Benz Stadium, Atlanta",
+      "lottery_match_no": "周六070"
+    }
+  ],
+  "predicted_lineups": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "source_status": "probable_not_official",
+      "captured_at": "2026-06-27T15:20:00+08:00",
+      "home": {
+        "team": "哥伦比亚",
+        "formation": "4-3-3",
+        "confidence": "medium",
+        "xi": [
+          "卡米洛·巴尔加斯",
+          "丹尼尔·穆尼奥斯",
+          "达文森·桑切斯",
+          "约翰·卢库米",
+          "约翰·莫希卡",
+          "古斯塔沃·普埃尔塔",
+          "杰斐逊·莱尔马",
+          "约翰·阿里亚斯",
+          "哈梅斯·罗德里格斯",
+          "路易斯·苏亚雷斯",
+          "路易斯·迪亚斯"
+        ],
+        "rotation_watch": [
+          "约翰·科尔多瓦",
+          "胡安·金特罗",
+          "米格尔·博尔哈"
+        ]
+      },
+      "away": {
+        "team": "葡萄牙",
+        "formation": "4-2-3-1",
+        "confidence": "medium",
+        "xi": [
+          "迪奥戈·科斯塔",
+          "若昂·坎塞洛",
+          "鲁本·迪亚斯",
+          "雷纳托·韦加",
+          "努诺·门德斯",
+          "若昂·内维斯",
+          "维蒂尼亚",
+          "佩德罗·内托",
+          "布鲁诺·费尔南德斯",
+          "若昂·菲利克斯",
+          "克里斯蒂亚诺·罗纳尔多"
+        ],
+        "rotation_watch": [
+          "贝尔纳多·席尔瓦",
+          "拉斐尔·莱奥"
+        ]
+      }
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "source_status": "probable_not_official",
+      "captured_at": "2026-06-27T15:20:00+08:00",
+      "home": {
+        "team": "刚果金",
+        "formation": "5-3-2",
+        "confidence": "medium",
+        "xi": [
+          "利昂内尔·姆帕西-恩佐",
+          "阿龙·万-比萨卡",
+          "尚塞尔·姆本巴",
+          "阿克塞尔·图安泽贝",
+          "史蒂夫·卡普阿迪",
+          "阿图尔·马苏亚库",
+          "诺亚·萨迪基",
+          "萨缪尔·穆图萨米",
+          "埃多·卡扬贝",
+          "塞德里克·巴坎布",
+          "约安·维萨"
+        ],
+        "rotation_watch": [
+          "恩加尔·阿耶尔·穆考",
+          "西奥·邦贡达",
+          "纳塔纳埃尔·姆布库"
+        ]
+      },
+      "away": {
+        "team": "乌兹别克斯坦",
+        "formation": "3-2-4-1",
+        "confidence": "medium_low",
+        "xi": [
+          "阿卜杜沃希德·内马托夫",
+          "阿卜杜科迪尔·胡萨诺夫",
+          "阿卜杜拉·阿卜杜拉耶夫",
+          "鲁斯塔姆琼·阿舒尔马托夫",
+          "贝赫鲁兹容·卡里莫夫",
+          "谢尔佐德·纳斯鲁拉耶夫",
+          "阿齐兹容·加尼耶夫",
+          "奥迪尔琼·哈姆罗别科夫",
+          "奥塔别克·舒库罗夫",
+          "阿博斯别克·法伊祖拉耶夫",
+          "埃尔多尔·肖穆罗多夫"
+        ],
+        "rotation_watch": [
+          "霍吉阿克巴尔·阿利若诺夫",
+          "阿克马尔·莫兹戈沃伊",
+          "贾姆希德·伊斯坎德罗夫"
+        ]
+      }
+    }
+  ],
+  "odds_snapshot": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "source": "500.com local html snapshot",
+      "captured_at": "2026-06-26/2026-06-27 local snapshot",
+      "spf": {"home": 4.23, "draw": 3.28, "away": 1.70},
+      "rq": {"line": "home +1", "home_plus_1_win": 1.90, "home_plus_1_draw": 3.45, "home_plus_1_loss": 3.20},
+      "cross_check": "中国足彩网普通SPF约4.10/3.25/1.73"
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "source": "500.com local html snapshot",
+      "captured_at": "2026-06-26/2026-06-27 local snapshot",
+      "spf": {"home": 1.67, "draw": 3.82, "away": 3.72},
+      "rq": {"line": "home -1", "home_minus_1_win": 3.10, "home_minus_1_draw": 3.45, "home_minus_1_loss": 1.94},
+      "cross_check": "中国足彩网普通SPF约1.67/3.82/3.72"
+    }
+  ],
+  "availability_status": {
+    "official_lineups_t75": "missing",
+    "latest_injury_suspension": "partial",
+    "same_source_totals_odds": "missing",
+    "source_note": "公开预览未提示两场重大新增伤病；仍需赛前官方阵容和最新伤停确认。"
+  },
+  "source_log": [
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_葡萄牙_1-1_刚果金_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-23_葡萄牙_5-0_乌兹别克斯坦_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-24_哥伦比亚_1-0_刚果金_复盘.md",
+    "https://www.skysports.com/football/news/12040/13543106/world-cup-2026-group-k-guide-fixtures-schedule-standings-and-odds-for-portugal-dr-congo-uzbekistan-and-colombia",
+    "https://www.si.com/soccer/portugal-predicted-lineup-vs-colombia-world-cup-6-27-26",
+    "https://www.si.com/soccer/dr-congo-vs-uzbekistan-world-cup-preview-predictions-lineups-6-27-26",
+    "https://www.sportsgambler.com/betting-tips/football/colombia-vs-portugal-prediction-lineups-odds-2026-06-27/",
+    "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/colombia-vs-portugal-prediction-team-news-lineups_600099.html",
+    "https://www.sportsgambler.com/betting-tips/football/dr-congo-vs-uzbekistan-prediction-lineups-odds-2026-06-27/",
+    "https://scores24.live/en/soccer/m-27-06-2026-dr-congo-uzbekistan-prediction",
+    "https://www.racingpost.com/sport/football-tips/world-cup-2026/colombia-vs-portugal-predictions-team-news-odds-betting-tips-bet-builder-aKyTw0q1oiEh/",
+    "https://www.racingpost.com/sport/football-tips/world-cup-2026/dr-congo-vs-uzbekistan-predictions-team-news-odds-betting-tips-bet-builder-a23Km7L6DpS6/"
+  ],
+  "gaps_and_conflicts": [
+    "数据采集线程本轮回包范围错误，主线程兜底。",
+    "官方T-75首发缺失。",
+    "同源大小球赔率缺失。",
+    "完整黄牌累计和停赛风险未锁定。"
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "phase": "group_round3_postmatch_tactics",
+  "group": "K",
+  "round": 3,
+  "status": "partial_source_limited",
+  "created_at": "2026-06-28T00:00:00+08:00",
+  "updated_at": "2026-06-28T00:00:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "K组第三轮两场赛后战术复盘；不输出比分预测、胜平负概率或投注建议。",
+  "source_log": [
+    "工作流纪律.md",
+    ".codex/skills/worldcup-tactics-coach/SKILL.md",
+    "data/packets/matches/k-group-round3-data-refresh-20260627.json",
+    "data/thread_outputs/k-group-round3-prediction-20260627/tactics-coach.json",
+    "data/outputs/match_predictions/k-group-round3-quant-prediction-20260627.json",
+    "比赛/未开始比赛/小组赛/K组/2026-06-28_哥伦比亚_vs_葡萄牙_量化预测.md",
+    "比赛/未开始比赛/小组赛/K组/2026-06-28_刚果金_vs_乌兹别克斯坦_量化预测.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-23_葡萄牙_5-0_乌兹别克斯坦_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-24_哥伦比亚_1-0_刚果金_复盘.md",
+    "data/outputs/knockout/round-of-32-bracket-20260627.json",
+    "比赛/未开始比赛/32强/M83_2026-07-02_葡萄牙_vs_加纳_32强.md",
+    "比赛/未开始比赛/32强/M87_2026-07-03_哥伦比亚_vs_克罗地亚_32强.md"
+  ],
+  "verified_postmatch_fact_status": {
+    "local_k_round3_postmatch_packet": "not_found",
+    "local_single_match_reviews": "not_found",
+    "official_lineups_minutes_events": "missing",
+    "usable_verified_fact": "32强落位文件显示哥伦比亚为1K、葡萄牙为2K，但两个K/L相关槽位仍标provisional_pending_final_table_confirmation；可作为结果方向线索，不能替代最终比分、实际阵型、换人和事件流。"
+  },
+  "data_gaps": [
+    "哥伦比亚 vs 葡萄牙最终比分、半场比分、进球/红黄牌/换人分钟缺失。",
+    "刚果金 vs 乌兹别克斯坦最终比分、半场比分、进球/红黄牌/换人分钟缺失。",
+    "两场官方首发、实际阵型、控球/射门/xG/定位球/传中/抢断等技术报告缺失。",
+    "四队 player_state 和成员表尚未有第三轮逐场评分与出场分钟回灌。",
+    "哥伦比亚1K、葡萄牙2K仍需官方最终积分榜与FIFA bracket确认。"
+  ],
+  "matches": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "postmatch_fact_status": "score_lineups_minutes_missing",
+      "verified_group_outcome_hint": "round-of-32 files place Colombia as 1K and Portugal as 2K provisionally; this indicates Colombia likely protected top spot, but exact result and tactical implementation are not locally verified.",
+      "actual_shape_and_plan": {
+        "status": "pending_data_collector",
+        "colombia": "不可把赛前4-3-3/4-2-3-1预计阵型写成实际阵型；需官方首发、James/Quintero、Munoz、Luis Diaz实际分钟。",
+        "portugal": "不可把赛前4-2-3-1预计阵型写成实际阵型；需确认Ronaldo、Bruno、Cancelo、Nuno Mendes、Leao/Bernardo/Neto实际使用。"
+      },
+      "phase_review": {
+        "pressing_and_block_height": "赛前判断葡萄牙具备宽度和压迫上限，但哥伦比亚可用平局/低风险管理压低节奏。若哥伦比亚确认为1K，该管理口径暂时被结果线索支持。",
+        "transitions": "赛前关键是哥伦比亚Munoz弱侧前插/Luis Diaz单点反击对葡萄牙边后卫身后，以及葡萄牙若先取得优势后Leao/Bruno/Cancelo转换尾部。缺进球时间线和反击次数，不能判定哪条路径兑现。",
+        "set_pieces": "葡萄牙定位球与二次进攻是强项，哥伦比亚也有James/Quintero脚法和高点。缺定位球数量、主罚者和落点质量。",
+        "key_matchups": "Munoz vs Nuno Mendes身后、Luis Diaz vs Cancelo/右中卫保护、Bruno/Vitinha vs Lerma/Puerta中路保护、Ronaldo禁区占点 vs Davinson/Lucumi。",
+        "substitution_triggers": "需确认哥伦比亚是否用Quintero/Cordoba/Borja调整破局，葡萄牙是否用Leao/Bernardo/Semedo/Ramos改变速度或控球。",
+        "game_state_changes": "赛前判断哥伦比亚平局收益高、葡萄牙争头名需更主动。若哥伦比亚最终1K，优先复核其是否在持平/领先阶段降低开放度。"
+      },
+      "pre_match_tactical_audit": [
+        {"claim": "哥伦比亚平局/头名管理会压低比赛开放度。", "postmatch_read": "哥伦比亚1K线索支持该口径，但需比分和比赛状态确认。", "confidence": "medium"},
+        {"claim": "葡萄牙5-0乌兹别克斯坦不能直接外推到对哥伦比亚。", "postmatch_read": "若葡萄牙仅为2K，该谨慎判断暂时保留。缺本场技术统计，不作进一步下修。", "confidence": "medium"},
+        {"claim": "哥伦比亚Munoz/Diaz反击可制衡葡萄牙边路压迫。", "postmatch_read": "需官方事件流确认，暂不把对位优势写成实际兑现。", "confidence": "low"}
+      ],
+      "model_parameter_updates": {
+        "哥伦比亚": {
+          "pressing_adjustment": {"direction": "hold", "magnitude": 0.0, "evidence": "实际压迫高度缺失；赛前仅支持阶段性前压。", "confidence": "low", "model_note": "等待官方事件流。"},
+          "transition_attack_adjustment": {"direction": "hold_positive_context", "magnitude": 0.1, "evidence": "1K线索说明哥伦比亚反制/控场至少未崩，但反击兑现缺证据。", "confidence": "low", "model_note": "只保留对葡萄牙边后卫身后的对位通道。"},
+          "transition_defense_risk": {"direction": "hold", "magnitude": 0.0, "evidence": "缺葡萄牙转换事件和进球时间线。", "confidence": "low", "model_note": "不做赛后长期调整。"},
+          "set_piece_advantage": {"direction": "hold", "magnitude": 0.0, "evidence": "缺定位球事件。", "confidence": "low", "model_note": "等待技术报告。"},
+          "game_state_tendency": {"direction": "confirm_management", "magnitude": 0.4, "evidence": "赛前6分、平局价值高；1K线索与管理局兼容。", "confidence": "medium", "model_note": "后续已出线/争头名场景应保留draw-management开关。"},
+          "third_round_motivation_tactical_shift": {"direction": "confirm_controlled", "magnitude": 0.2, "evidence": "头名动机存在，但不等于全场高压，1K线索支持控制优先。", "confidence": "medium", "model_note": "与draw_management合并限幅。"}
+        },
+        "葡萄牙": {
+          "pressing_adjustment": {"direction": "hold_positive", "magnitude": 0.1, "evidence": "葡萄牙压迫与宽度是稳定结构，但2K线索提示未必压倒哥伦比亚。", "confidence": "medium", "model_note": "不要将二轮5-0压迫收益直接外推。"},
+          "transition_attack_adjustment": {"direction": "hold", "magnitude": 0.0, "evidence": "缺哥伦比亚压上后葡萄牙转换事件流。", "confidence": "low", "model_note": "等待进球链/射门链确认。"},
+          "transition_defense_risk": {"direction": "hold_or_slight_up", "magnitude": 0.1, "evidence": "若未拿到1K，哥伦比亚反制通道可能有效；但缺具体事件。", "confidence": "low", "model_note": "只作为对强对手边后卫身后风险提醒。"},
+          "set_piece_advantage": {"direction": "hold_positive", "magnitude": 0.1, "evidence": "葡萄牙定位球优势来自前两轮，但本场是否兑现未知。", "confidence": "medium_low", "model_note": "与Nuno/Bruno/Ronaldo player_state重复限幅。"},
+          "game_state_tendency": {"direction": "revise_ceiling_down", "magnitude": -0.2, "evidence": "2K线索与赛前'热门但不可深外推'一致。", "confidence": "medium", "model_note": "后续强队二轮大胜后遇到高质量对手，压低无条件大胜尾部。"},
+          "third_round_motivation_tactical_shift": {"direction": "hold", "magnitude": 0.0, "evidence": "争头名动机成立，但2K线索说明动机不等于稳定压制。", "confidence": "medium", "model_note": "动机只影响风险偏好，不直接上修进攻效率。"}
+        }
+      },
+      "player_state_role_updates_suggested": [
+        "哥伦比亚：优先回灌Munoz、Luis Diaz、James/Quintero、Lerma、Davinson Sanchez、Vargas实际首发与事件。",
+        "葡萄牙：优先回灌Ronaldo、Bruno、Nuno Mendes、Cancelo、Leao/Bernardo/Neto、Vitinha、Joao Neves实际分钟和定位球/转换职责。"
+      ]
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "postmatch_fact_status": "score_lineups_minutes_missing",
+      "verified_group_outcome_hint": "round-of-32 placement does not include DR Congo or Uzbekistan; this suggests neither reached the listed knockout slots, but exact result and final third-place comparison are not locally verified.",
+      "actual_shape_and_plan": {
+        "status": "pending_data_collector",
+        "dr_congo": "不可把赛前5-3-2/5-4-1预计阵型写成实际阵型；需确认是否从五后卫转向更主动4-3-3或双前锋压上。",
+        "uzbekistan": "不可把赛前3-2-4-1/3-4-3预计阵型写成实际阵型；需确认门将/中卫链条是否调整、Fayzullaev和Shomurodov实际职责。"
+      },
+      "phase_review": {
+        "pressing_and_block_height": "赛前判断刚果金会先保低位结构再根据必须赢压力提速；乌兹别克斯坦0分但防线崩盘后也不宜全场高压。缺实际站位和压迫数据。",
+        "transitions": "核心是刚果金Wissa/Bakambu/Masauku直接反击与乌兹别克Fayzullaev/Shomurodov单点。若两队均未进入32强，应检查是否出现低效率互攻或后段追分未兑现。",
+        "set_pieces": "刚果金首轮定位球二次进攻有效，乌兹别克二轮定位球防守/危险区域犯规是弱点；缺本场定位球结果。",
+        "key_matchups": "Wissa/Bakambu vs Khusanov/中卫横移；Masuaku边路推进 vs 乌兹边翼卫回防；Fayzullaev接球区 vs 刚果金后腰保护；Shomurodov支点 vs Mbemba/Tuanzebe。",
+        "substitution_triggers": "刚果金需确认Bongonda/Mbuku/Sadiki等是否提高进攻人数；乌兹需确认Alijonov/Mozgovoy/边翼卫调整是否修复防线。",
+        "game_state_changes": "赛前判断两队均没有舒服平局价值，但刚果金更现实。若两队均未落入32强，必须复核'必须赢'是否没有转化为有效进攻，或是否被低位/终结问题吞掉。"
+      },
+      "pre_match_tactical_audit": [
+        {"claim": "刚果金方向优势主要来自防守与转换，不支持深度外推。", "postmatch_read": "若未晋级，说明仅有方向优势和必须赢动机不足以支持稳定突破；但缺比分。", "confidence": "medium"},
+        {"claim": "乌兹别克斯坦防线崩盘风险高，但仍有单点反击窗口。", "postmatch_read": "缺事件流，暂不判定窗口是否兑现。", "confidence": "low"},
+        {"claim": "两队后30分钟会受第三名横向和另一场比分强烈驱动。", "postmatch_read": "仍需最终积分榜和实时比分时间线确认。", "confidence": "low"}
+      ],
+      "model_parameter_updates": {
+        "刚果金": {
+          "pressing_adjustment": {"direction": "hold_neutral", "magnitude": 0.0, "evidence": "缺实际压迫高度；赛前不支持长时间高压。", "confidence": "low", "model_note": "等待事件流。"},
+          "transition_attack_adjustment": {"direction": "hold_or_slight_down", "magnitude": -0.1, "evidence": "若未晋级，Wissa/Bakambu转换可能未足够兑现；但缺比分和射门链。", "confidence": "low", "model_note": "先冻结，待技术统计后判断。"},
+          "transition_defense_risk": {"direction": "hold_contextual", "magnitude": 0.0, "evidence": "必须赢后段风险仍成立，实际是否被打穿未知。", "confidence": "low", "model_note": "作为game-state触发保留。"},
+          "set_piece_advantage": {"direction": "hold_positive", "magnitude": 0.1, "evidence": "刚果金前两轮定位球/高点样本仍可用，本场兑现未知。", "confidence": "medium_low", "model_note": "等待定位球事件。"},
+          "game_state_tendency": {"direction": "revise_must_win_efficiency", "magnitude": -0.2, "evidence": "若未进入32强，必须赢动机可能没有转化为有效进攻。", "confidence": "medium_low", "model_note": "后续把动机和进攻质量拆开。"},
+          "third_round_motivation_tactical_shift": {"direction": "confirm_but_cap", "magnitude": 0.2, "evidence": "1分必须争胜语境成立，但执行质量待补。", "confidence": "medium", "model_note": "只上修风险偏好，不直接上修xG。"}
+        },
+        "乌兹别克斯坦": {
+          "pressing_adjustment": {"direction": "hold_negative", "magnitude": 0.0, "evidence": "赛前不支持稳定高压；本场事实缺失。", "confidence": "low", "model_note": "等待实际阵型。"},
+          "transition_attack_adjustment": {"direction": "hold", "magnitude": 0.0, "evidence": "Fayzullaev/Shomurodov窗口缺本场证据。", "confidence": "low", "model_note": "不和player_state重复。"},
+          "transition_defense_risk": {"direction": "hold_high_contextual", "magnitude": 0.1, "evidence": "前两轮失球和必须赢后段风险成立，实际被打穿程度未知。", "confidence": "medium_low", "model_note": "先丢球后非线性上升。"},
+          "set_piece_advantage": {"direction": "hold", "magnitude": 0.0, "evidence": "缺本场定位球进攻/防守事件。", "confidence": "low", "model_note": "等待技术报告。"},
+          "game_state_tendency": {"direction": "confirm_open_late", "magnitude": 0.2, "evidence": "0分处境确认后段必须打开，但未验证执行效果。", "confidence": "medium", "model_note": "只作为后段风险，不上修稳定进攻。"},
+          "third_round_motivation_tactical_shift": {"direction": "confirm_but_low_quality", "magnitude": 0.2, "evidence": "理论机会要求赢球，但二轮0-5后防线/心理风险高。", "confidence": "medium", "model_note": "动机与质量拆分。"}
+        }
+      },
+      "player_state_role_updates_suggested": [
+        "刚果金：优先回灌Mpasi、Mbemba、Tuanzebe、Wan-Bissaka、Masuaku、Wissa、Bakambu、Bongonda/Mbuku实际分钟和攻守职责。",
+        "乌兹别克斯坦：优先回灌Nematov/门将、Khusanov、Ashurmatov、Fayzullaev、Shomurodov、边翼卫与中场调整、牌面和失误。"
+      ]
+    }
+  ],
+  "double_counting_warnings": [
+    "葡萄牙二轮5-0、边路优势、定位球、Bruno/Ronaldo/Nuno状态不能重复满额叠加。",
+    "哥伦比亚1K落位、draw management、两连胜和防守稳定不能同时上修为强攻能力。",
+    "刚果金低位防守、门将扑救和set-piece floor应拆开；不能因未晋级就直接否定防守结构。",
+    "乌兹别克斯坦二轮崩盘、第三轮动机和防线风险需合并限幅，避免三重惩罚。"
+  ],
+  "handoff_notes": {
+    "to_data_collector": [
+      "请补两场最终比分、半场比分、官方首发、实际阵型、换人分钟、牌面、进球助攻、技术统计和官方比赛报告。",
+      "请确认K组最终积分榜、哥伦比亚1K与葡萄牙2K是否已由FIFA/官方落位确认。"
+    ],
+    "to_modeler": [
+      "当前只能低置信使用：Colombia draw-management/top-spot control、Portugal ceiling cap against stronger opponent、DR Congo motivation-quality split、Uzbekistan open-late but low-quality risk。",
+      "缺比分和事件流前，不要用本包作为完整赛后回测依据。"
+    ],
+    "to_roster_player_state": [
+      "四队第三轮成员表/player_state更新状态应为blocked或partial，直到官方首发分钟和事件表补齐。"
+    ]
+  }
+}

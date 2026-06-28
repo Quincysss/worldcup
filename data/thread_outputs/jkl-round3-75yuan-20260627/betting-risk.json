@@ -1,0 +1,496 @@
+﻿{
+  "metadata": {
+    "phase": "betting_risk_portfolio_review",
+    "owner": "jingcai_betting_risk_agent",
+    "created_at": "2026-06-27T16:00:00+08:00",
+    "scope": "J/K/L group round 3 six-match 75 RMB discussion-only portfolio",
+    "status": "discussion_only_hold",
+    "betting_gate_status": "hold_not_executable",
+    "source_files": [
+      "data/thread_outputs/jkl-round3-75yuan-20260627/data-collector.json",
+      "data/thread_outputs/jkl-round3-75yuan-20260627/modeler.json",
+      "data/thread_outputs/jkl-round3-75yuan-20260627/red-team.json",
+      "data/thread_outputs/jkl-round3-75yuan-20260627/red-team.md",
+      "data/thread_outputs/j-group-round3-v3-20260627/red-team.json",
+      "data/thread_outputs/k-group-round3-prediction-20260627/red-team.json",
+      "data/thread_outputs/l-group-round3-v3-20260627/red-team.json",
+      "data/outputs/match_predictions/j-group-round3-v3-quant-prediction-20260627.json",
+      "data/outputs/match_predictions/k-group-round3-quant-prediction-20260627.json",
+      "data/outputs/match_predictions/l-group-round3-v3-quant-prediction-20260627.json",
+      "赔率与投注/购彩方案组合标准_20260625.md"
+    ]
+  },
+  "global_gate_conclusion": {
+    "stake_total_executable": 0,
+    "discussion_budget_reference": 75,
+    "theoretical_ticket_total": 75,
+    "ticket_count_reference": 6,
+    "core_bucket_reference_rmb": 50,
+    "entertainment_bucket_reference_rmb": 25,
+    "all_tickets_status": "not_executable_before_gates_clear",
+    "combined_red_team_verdict": "hold_not_executable",
+    "hard_gate_failures": [
+      {
+        "gate": "T-75 official lineups",
+        "status": "missing",
+        "effect": "hold_not_executable"
+      },
+      {
+        "gate": "latest injury, suspension and minutes limits",
+        "status": "partial_source_limited",
+        "effect": "hold_not_executable"
+      },
+      {
+        "gate": "official China Jingcai live odds",
+        "status": "partial local and online snapshots only",
+        "effect": "discussion_only_hold"
+      },
+      {
+        "gate": "same-source markets for all used plays",
+        "status": "incomplete",
+        "missing": [
+          "ordinary 1X2 for Panama vs England",
+          "ordinary 1X2 for Jordan vs Argentina",
+          "same-source total-goals odds values",
+          "same-source exact-score odds values",
+          "same-source half-full-time odds values",
+          "over-under dxq markets"
+        ],
+        "effect": "hold_not_executable"
+      },
+      {
+        "gate": "red-team verdict",
+        "status": "blocked",
+        "detail": "Combined JKL red-team verdict is hold_not_executable; individual J/K/L red-team gates remain hold or betting-hold.",
+        "effect": "hold_not_executable"
+      }
+    ],
+    "odds_source_note": {
+      "primary_snapshot": "500.com local snapshot / China Sports Lottery cross-check",
+      "primary_captured_at": "2026-06-27T15:22:04+08:00",
+      "online_recheck": "China Sports Lottery online recheck",
+      "online_recheck_captured_at": "2026-06-27T15:25:09+08:00",
+      "conflict_note": "Local 500 snapshot and online recheck contain conflicting same-market prices for multiple matches; all payout numbers are discussion references."
+    }
+  },
+  "market_availability_summary": [
+    {
+      "match_no": "067",
+      "match": "Croatia vs Ghana",
+      "ordinary_1x2": "available",
+      "handicap": "Croatia -1 available",
+      "total_goals": "active without captured odds",
+      "same_source_completeness": "incomplete"
+    },
+    {
+      "match_no": "068",
+      "match": "Panama vs England",
+      "ordinary_1x2": "not open",
+      "handicap": "Panama +2 available",
+      "total_goals": "active without captured odds",
+      "same_source_completeness": "incomplete"
+    },
+    {
+      "match_no": "069",
+      "match": "Colombia vs Portugal",
+      "ordinary_1x2": "available",
+      "handicap": "Colombia +1 available",
+      "total_goals": "active without captured odds",
+      "same_source_completeness": "incomplete"
+    },
+    {
+      "match_no": "070",
+      "match": "DR Congo vs Uzbekistan",
+      "ordinary_1x2": "available",
+      "handicap": "DR Congo -1 available",
+      "total_goals": "active without captured odds",
+      "same_source_completeness": "incomplete"
+    },
+    {
+      "match_no": "071",
+      "match": "Algeria vs Austria",
+      "ordinary_1x2": "available",
+      "handicap": "Algeria +1 available",
+      "total_goals": "active without captured odds",
+      "same_source_completeness": "incomplete"
+    },
+    {
+      "match_no": "072",
+      "match": "Jordan vs Argentina",
+      "ordinary_1x2": "not open",
+      "handicap": "Jordan +2 available",
+      "total_goals": "active without captured odds",
+      "same_source_completeness": "incomplete"
+    }
+  ],
+  "portfolio_reference": [
+    {
+      "ticket_id": "T1",
+      "ticket_name": "Jordan plus-two small-loss corridor",
+      "bucket_type": "core_reference",
+      "parlay_type": "single",
+      "discussion_stake_rmb": 18,
+      "theoretical_max_return_rmb": 41.04,
+      "is_executable": false,
+      "execution_status": "not_executable_before_gates_clear",
+      "red_team_status": "hold_not_executable",
+      "legs": [
+        {
+          "match": "Jordan vs Argentina",
+          "market": "handicap_wdl",
+          "selection": "Jordan +2 handicap win",
+          "odds": 2.28,
+          "settlement_condition": "Jordan real win or draw, or Argentina wins by exactly 1 goal.",
+          "model_support": "Model mapping gives Jordan +2 handicap win 55.7% versus market no-vig 38.8%; this is a margin bucket, not an ordinary 1X2 statement.",
+          "relationship": "aligned"
+        }
+      ],
+      "hit_conditions": [
+        "Jordan avoid defeat, or Argentina win by exactly one goal."
+      ],
+      "failure_conditions": [
+        "Argentina win by two or more goals."
+      ],
+      "maximum_risk_points": [
+        "Argentina rotation and late transition tail can move the margin from small win into two-plus.",
+        "Ordinary 1X2 is not open, so market calibration is incomplete."
+      ]
+    },
+    {
+      "ticket_id": "T2",
+      "ticket_name": "Colombia plus-one with Ghana result resistance",
+      "bucket_type": "core_reference",
+      "parlay_type": "2-leg parlay",
+      "discussion_stake_rmb": 17,
+      "theoretical_max_return_rmb": 66.22,
+      "is_executable": false,
+      "execution_status": "not_executable_before_gates_clear",
+      "red_team_status": "hold_not_executable",
+      "legs": [
+        {
+          "match": "Colombia vs Portugal",
+          "market": "handicap_wdl",
+          "selection": "Colombia +1 handicap win",
+          "odds": 1.9,
+          "settlement_condition": "Colombia real win or draw.",
+          "model_support": "Model mapping gives Colombia +1 handicap win 55.9% versus market no-vig 46.6%.",
+          "relationship": "aligned"
+        },
+        {
+          "match": "Croatia vs Ghana",
+          "market": "handicap_wdl",
+          "selection": "Croatia -1 handicap loss",
+          "odds": 2.05,
+          "settlement_condition": "Croatia real draw or Ghana real win.",
+          "model_support": "Model top scores include 0-0, 1-1 and 0-1 near the leading cluster; Croatia one-goal win and two-plus win are separate settlement layers.",
+          "relationship": "value_override"
+        }
+      ],
+      "hit_conditions": [
+        "Colombia do not lose to Portugal.",
+        "Ghana avoid defeat against Croatia."
+      ],
+      "failure_conditions": [
+        "Portugal beat Colombia.",
+        "Croatia win the real match."
+      ],
+      "maximum_risk_points": [
+        "This ticket leans against two market favorites and can fail if favorite quality converts early.",
+        "Croatia-Ghana has late incentive volatility; a Croatia chase state can break the Ghana result-resistance leg."
+      ]
+    },
+    {
+      "ticket_id": "T3",
+      "ticket_name": "Panama plus-two with DR Congo margin resistance",
+      "bucket_type": "core_reference",
+      "parlay_type": "2-leg parlay",
+      "discussion_stake_rmb": 15,
+      "theoretical_max_return_rmb": 72.17,
+      "is_executable": false,
+      "execution_status": "not_executable_before_gates_clear",
+      "red_team_status": "hold_not_executable",
+      "legs": [
+        {
+          "match": "Panama vs England",
+          "market": "handicap_wdl",
+          "selection": "Panama +2 handicap win",
+          "odds": 2.48,
+          "settlement_condition": "Panama real win or draw, or England wins by exactly 1 goal.",
+          "model_support": "Model mapping gives Panama +2 handicap win 59.8%; England win direction is not the same as England winning by two or more.",
+          "relationship": "aligned"
+        },
+        {
+          "match": "DR Congo vs Uzbekistan",
+          "market": "handicap_wdl",
+          "selection": "DR Congo -1 handicap loss",
+          "odds": 1.94,
+          "settlement_condition": "DR Congo real draw or Uzbekistan real win.",
+          "model_support": "Model mapping gives this margin bucket 51.2%, reflecting high draw and chase-tail uncertainty rather than a direct 1X2 direction.",
+          "relationship": "value_override"
+        }
+      ],
+      "hit_conditions": [
+        "England win by at most one goal, or fail to win.",
+        "DR Congo do not win the real match."
+      ],
+      "failure_conditions": [
+        "England win by two or more goals.",
+        "DR Congo win the real match."
+      ],
+      "maximum_risk_points": [
+        "Both legs are margin-sensitive and can be invalidated by early goals.",
+        "Panama ordinary 1X2 is not open and England lineups are highly material."
+      ]
+    },
+    {
+      "ticket_id": "T4",
+      "ticket_name": "Four exact-margin corridor",
+      "bucket_type": "entertainment_high_variance",
+      "parlay_type": "4-leg parlay",
+      "discussion_stake_rmb": 10,
+      "theoretical_max_return_rmb": 2188.06,
+      "is_executable": false,
+      "execution_status": "not_executable_before_gates_clear",
+      "red_team_status": "hold_not_executable",
+      "legs": [
+        {
+          "match": "Algeria vs Austria",
+          "market": "handicap_wdl",
+          "selection": "Algeria +1 handicap draw",
+          "odds": 4.35,
+          "settlement_condition": "Austria win by exactly 1 goal.",
+          "model_support": "Exact-margin bucket from model mapping; variance is high.",
+          "relationship": "hedge"
+        },
+        {
+          "match": "Jordan vs Argentina",
+          "market": "handicap_wdl",
+          "selection": "Jordan +2 handicap draw",
+          "odds": 3.85,
+          "settlement_condition": "Argentina win by exactly 2 goals.",
+          "model_support": "Top-score cluster includes 0-2, but 0-1 and 0-3 remain nearby.",
+          "relationship": "hedge"
+        },
+        {
+          "match": "Croatia vs Ghana",
+          "market": "handicap_wdl",
+          "selection": "Croatia -1 handicap draw",
+          "odds": 3.35,
+          "settlement_condition": "Croatia win by exactly 1 goal.",
+          "model_support": "Top score 1-0 is the leading scoreline, but draw paths are also close.",
+          "relationship": "hedge"
+        },
+        {
+          "match": "Panama vs England",
+          "market": "handicap_wdl",
+          "selection": "Panama +2 handicap draw",
+          "odds": 3.9,
+          "settlement_condition": "England win by exactly 2 goals.",
+          "model_support": "Top-score cluster includes 0-2, but 0-1 and low-score tail remain important.",
+          "relationship": "hedge"
+        }
+      ],
+      "hit_conditions": [
+        "All four exact-margin outcomes occur together."
+      ],
+      "failure_conditions": [
+        "Any one match lands outside the exact-margin corridor."
+      ],
+      "maximum_risk_points": [
+        "Four exact margins are highly fragile.",
+        "This depends on tail alignment and cannot be used as coverage.",
+        "Theoretical return is high because hit probability is low."
+      ]
+    },
+    {
+      "ticket_id": "T5",
+      "ticket_name": "Three-leg draw-and-one-goal branch",
+      "bucket_type": "entertainment_high_variance",
+      "parlay_type": "3-leg parlay",
+      "discussion_stake_rmb": 10,
+      "theoretical_max_return_rmb": 445.12,
+      "is_executable": false,
+      "execution_status": "not_executable_before_gates_clear",
+      "red_team_status": "hold_not_executable",
+      "legs": [
+        {
+          "match": "Colombia vs Portugal",
+          "market": "ordinary_1x2",
+          "selection": "Colombia win",
+          "odds": 4.23,
+          "settlement_condition": "Colombia win in 90-minute full time.",
+          "model_support": "Model delta is positive versus market, but ordinary win remains medium-high variance.",
+          "relationship": "hedge"
+        },
+        {
+          "match": "DR Congo vs Uzbekistan",
+          "market": "handicap_wdl",
+          "selection": "DR Congo -1 handicap draw",
+          "odds": 3.45,
+          "settlement_condition": "DR Congo win by exactly 1 goal.",
+          "model_support": "Top scores include 1-0 and 2-1, but draw and Uzbekistan paths remain material.",
+          "relationship": "hedge"
+        },
+        {
+          "match": "Croatia vs Ghana",
+          "market": "ordinary_1x2",
+          "selection": "draw",
+          "odds": 3.05,
+          "settlement_condition": "Croatia and Ghana finish level after 90 minutes.",
+          "model_support": "Draw is 29.0% in model and market, with 0-0 and 1-1 both near top-score cluster.",
+          "relationship": "hedge"
+        }
+      ],
+      "hit_conditions": [
+        "Colombia win, DR Congo win by exactly one, and Croatia-Ghana finish level."
+      ],
+      "failure_conditions": [
+        "Any leg misses its narrow result condition."
+      ],
+      "maximum_risk_points": [
+        "This combines one underdog win, one exact margin, and one draw.",
+        "It is a high-variance branch, not a stabilizer."
+      ]
+    },
+    {
+      "ticket_id": "T6",
+      "ticket_name": "Three underdog-tail branch",
+      "bucket_type": "entertainment_high_variance",
+      "parlay_type": "3-leg parlay",
+      "discussion_stake_rmb": 5,
+      "theoretical_max_return_rmb": 352.07,
+      "is_executable": false,
+      "execution_status": "not_executable_before_gates_clear",
+      "red_team_status": "hold_not_executable",
+      "legs": [
+        {
+          "match": "Algeria vs Austria",
+          "market": "ordinary_1x2",
+          "selection": "Algeria win",
+          "odds": 3.35,
+          "settlement_condition": "Algeria win in 90-minute full time.",
+          "model_support": "Model delta is positive versus market but Austria remains the slight model 1X2 leader.",
+          "relationship": "hedge"
+        },
+        {
+          "match": "DR Congo vs Uzbekistan",
+          "market": "ordinary_1x2",
+          "selection": "Uzbekistan win",
+          "odds": 3.72,
+          "settlement_condition": "Uzbekistan win in 90-minute full time.",
+          "model_support": "Must-win chase path exists, but model still leans DR Congo/draw more than Uzbekistan win.",
+          "relationship": "hedge"
+        },
+        {
+          "match": "Croatia vs Ghana",
+          "market": "ordinary_1x2",
+          "selection": "Ghana win",
+          "odds": 5.65,
+          "settlement_condition": "Ghana win in 90-minute full time.",
+          "model_support": "Ghana transition and set-piece tail exists, but model lists it as a conflict candidate for normal allocation.",
+          "relationship": "conflict"
+        }
+      ],
+      "hit_conditions": [
+        "All three underdog-tail results occur together."
+      ],
+      "failure_conditions": [
+        "Any favorite or draw scenario interrupts the branch."
+      ],
+      "maximum_risk_points": [
+        "This is the lowest-stake tail branch in the reference set.",
+        "It contains a conflict leg and cannot be counted as protection."
+      ]
+    }
+  ],
+  "amount_validation": {
+    "discussion_budget_reference_rmb": 75,
+    "sum_ticket_reference_stakes_rmb": 75,
+    "core_reference_rmb": 50,
+    "entertainment_reference_rmb": 25,
+    "core_ticket_count": 3,
+    "entertainment_ticket_count": 3,
+    "executable_stake_rmb": 0,
+    "amount_rules_status": "pass_for_discussion_reference_only"
+  },
+  "portfolio_return_notes": {
+    "simple_sum_of_ticket_max_returns_rmb": 3164.68,
+    "compatible_max_return_estimate_rmb": 2188.06,
+    "compatible_max_return_note": "T4 conflicts with most other tickets on exact-margin outcomes; maximum compatible return is not the simple sum.",
+    "minimum_return_warning": "No positive return floor exists because all tickets can miss together."
+  },
+  "candidate_play_pool": {
+    "steady_observation_candidates": [
+      "Jordan +2 handicap win: Jordan real win/draw or Argentina by exactly one.",
+      "Panama +2 handicap win: Panama real win/draw or England by exactly one.",
+      "Colombia +1 handicap win: Colombia real win or draw.",
+      "Croatia -1 handicap loss: Croatia real draw or Ghana real win.",
+      "DR Congo -1 handicap loss: DR Congo real draw or Uzbekistan real win."
+    ],
+    "medium_risk_candidates": [
+      "Austria win ordinary 1X2: aligned with slight model 1X2 lead, but draw floor is high.",
+      "Algeria +1 handicap draw: Austria by exactly one.",
+      "Croatia -1 handicap draw: Croatia by exactly one.",
+      "DR Congo -1 handicap draw: DR Congo by exactly one.",
+      "Panama +2 handicap draw: England by exactly two.",
+      "Jordan +2 handicap draw: Argentina by exactly two."
+    ],
+    "high_return_entertainment_candidates": [
+      "Four exact-margin handicap chain using only captured handicap prices.",
+      "Three-leg draw-and-one-goal branch.",
+      "Three underdog-tail branch.",
+      "Exact score, total goals and half-full-time are observe-only because odds values were not captured."
+    ],
+    "deleted_candidates": [
+      "Portugal ordinary win as a main allocation candidate: model-market delta is negative and red-team warns public/recency premium.",
+      "Croatia ordinary win as a main allocation candidate: model-market delta is negative and draw tail is high.",
+      "Croatia -1 handicap win: needs Croatia by two-plus and model does not support a strong margin path.",
+      "Panama +2 handicap loss: needs England by three-plus and model flags low-score tail.",
+      "Jordan +2 handicap loss: needs Argentina by three-plus and model flags rotation and small-win corridors.",
+      "Algeria +1 handicap win: market price is below model support.",
+      "DR Congo ordinary win as a main allocation candidate: model-market delta is negative and draw floor is live."
+    ],
+    "live_waiting_items": [
+      "T-75 official lineups for all six matches.",
+      "Final injury, suspension, card and minutes update.",
+      "Official China Jingcai live odds with sale status.",
+      "Same-source ordinary 1X2, handicap, total goals, exact score and half-full-time odds if those plays are used.",
+      "Fresh red-team recheck after lineups and odds."
+    ]
+  },
+  "correlation_check": {
+    "highly_correlated_paths": [
+      "T1 and T4 both depend on Jordan-Argentina margin, but they are mutually exclusive between Argentina by one and by two.",
+      "T3 and T4 both depend on Panama-England margin, but they are mutually exclusive between England by one-or-less and exactly two.",
+      "T2, T4, T5 and T6 all touch Croatia-Ghana; this creates single-match concentration and conflicting result branches.",
+      "T2 and T3 both lean against favorite-margin assumptions."
+    ],
+    "mutual_exclusion": [
+      "Croatia -1 handicap loss, Croatia -1 handicap draw, Croatia draw and Ghana win cannot all settle together.",
+      "Jordan +2 handicap win and Jordan +2 handicap draw cannot settle together.",
+      "Panama +2 handicap win and Panama +2 handicap draw cannot settle together.",
+      "Algeria win and Algeria +1 handicap draw cannot settle together."
+    ],
+    "same_model_assumptions": [
+      "Favorite small-win and low-score assumptions recur in Jordan-Argentina, Panama-England and Croatia-Ghana.",
+      "Third-round simultaneous-match state changes can move multiple legs at once.",
+      "Low-event Poisson clusters support several legs, so early red cards or penalties can damage multiple tickets."
+    ],
+    "dispersion_notes": [
+      "The reference set uses six matches, but Croatia-Ghana appears in four tickets and should be treated as concentrated.",
+      "Entertainment tickets do not create independent coverage; they are separate tail branches.",
+      "There is no guaranteed fallback scenario and no executable return floor."
+    ]
+  },
+  "high_return_entertainment_warning": [
+    "High theoretical return is produced by low hit probability and narrow settlement conditions.",
+    "Exact-margin, 3-leg and 4-leg chains depend on tail alignment.",
+    "These branches must not be increased in size before live gates clear.",
+    "Score, total-goal and half-full-time plays remain observe-only until concrete same-source odds are captured."
+  ],
+  "skip_option": {
+    "status": "available_and_preferred_under_current_gates",
+    "reason": "With T-75 lineups missing, final availability partial, market chain incomplete and red-team hold active, skipping or waiting is the cleanest gate-compliant option."
+  }
+}
+

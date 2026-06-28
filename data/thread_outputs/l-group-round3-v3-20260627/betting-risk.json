@@ -1,0 +1,310 @@
+{
+  "metadata": {
+    "phase": "betting_risk_review",
+    "group": "L",
+    "round": 3,
+    "scope": [
+      "克罗地亚 vs 加纳",
+      "巴拿马 vs 英格兰"
+    ],
+    "created_at": "2026-06-27T00:00:00+08:00",
+    "owner": "竞彩 / 投注风险 agent",
+    "status": "discussion_only_hold",
+    "betting_gate_status": "hold_not_executable",
+    "source_baseline": {
+      "v3_directory_existed_before_task": false,
+      "fallback_prediction_json": "data/outputs/match_predictions/l-group-round3-quant-prediction-20260626.json",
+      "thread_outputs": [
+        "data/thread_outputs/l-group-round3-prediction-20260626/data-collector.md",
+        "data/thread_outputs/l-group-round3-prediction-20260626/tactics-coach.md",
+        "data/thread_outputs/l-group-round3-prediction-20260626/modeler.md",
+        "data/thread_outputs/l-group-round3-prediction-20260626/red-team.md"
+      ]
+    }
+  },
+  "hard_gates": {
+    "t75_official_lineups": {
+      "status": "missing",
+      "effect": "hold_not_executable"
+    },
+    "latest_injury_suspension_minutes": {
+      "status": "not_fully_verified",
+      "watch_items": [
+        "加纳 Ati-Zigi / Partey",
+        "英格兰 Rice / Saka / Reece James",
+        "克罗地亚老将分钟负荷",
+        "巴拿马 Carrasquilla 首发与体能"
+      ],
+      "effect": "hold_not_executable"
+    },
+    "official_china_jingcai_odds": {
+      "status": "partial_snapshot_only",
+      "source": "中国足彩网竞彩混合页",
+      "captured_at": "2026-06-26T17:43:00+08:00",
+      "effect": "discussion_only_hold"
+    },
+    "same_source_1x2_handicap_totals": {
+      "status": "incomplete",
+      "missing": [
+        "克罗地亚 vs 加纳同源大小球",
+        "巴拿马 vs 英格兰普通胜平负",
+        "巴拿马 vs 英格兰同源大小球"
+      ],
+      "effect": "hold_not_executable"
+    },
+    "red_team_gate": {
+      "status": "blocked",
+      "verdict": "revise_for_probability / hold_for_betting",
+      "effect": "hold_not_executable"
+    }
+  },
+  "odds_snapshot_status": {
+    "official_jingcai": {
+      "status": "partial",
+      "source": "中国足彩网竞彩混合页",
+      "captured_at": "2026-06-26T17:43:00+08:00",
+      "execution_quality": "insufficient"
+    },
+    "500": {
+      "status": "not_found_for_l_group_round3",
+      "execution_quality": "unavailable"
+    },
+    "local_snapshot": {
+      "status": "partial",
+      "files_or_sources": [
+        "data/outputs/match_predictions/l-group-round3-quant-prediction-20260626.json",
+        "data/thread_outputs/l-group-round3-prediction-20260626/data-collector.md"
+      ],
+      "execution_quality": "insufficient"
+    }
+  },
+  "matches": [
+    {
+      "match": "克罗地亚 vs 加纳",
+      "match_no": "周六067",
+      "kickoff_note": "FIFA口径为2026-06-27 17:00 ET，即北京时间2026-06-28 05:00；竞彩编号不等同FIFA Match ID。",
+      "model": {
+        "xg": {
+          "croatia": 1.28,
+          "ghana": 0.78
+        },
+        "final_1x2": {
+          "croatia": 0.5038,
+          "draw": 0.2902,
+          "ghana": 0.206
+        },
+        "totals": {
+          "over25": 0.3396,
+          "under25": 0.6604
+        },
+        "top_scorelines": [
+          {
+            "score": "1-0",
+            "probability": 0.1631
+          },
+          {
+            "score": "0-0",
+            "probability": 0.1275
+          },
+          {
+            "score": "1-1",
+            "probability": 0.1273
+          },
+          {
+            "score": "2-0",
+            "probability": 0.1044
+          },
+          {
+            "score": "0-1",
+            "probability": 0.0994
+          }
+        ]
+      },
+      "odds": {
+        "source": "中国足彩网竞彩混合页",
+        "captured_at": "2026-06-26T17:43:00+08:00",
+        "spf": {
+          "status": "available",
+          "odds": [
+            1.6,
+            3.05,
+            5.65
+          ],
+          "market_implied_no_vig": {
+            "croatia": 0.5532,
+            "draw": 0.2902,
+            "ghana": 0.1566
+          }
+        },
+        "rq_spf": {
+          "status": "available",
+          "handicap": "克罗地亚 -1",
+          "odds": [
+            2.92,
+            3.35,
+            2.05
+          ],
+          "market_implied_no_vig": {
+            "rq_win": 0.3034,
+            "rq_draw": 0.2645,
+            "rq_loss": 0.4322
+          },
+          "translation": {
+            "rq_win": "克罗地亚真实赢2球或以上",
+            "rq_draw": "克罗地亚真实赢1球",
+            "rq_loss": "双方打平或加纳真实获胜"
+          }
+        },
+        "totals": {
+          "status": "missing"
+        }
+      },
+      "model_market_alignment": {
+        "direction_alignment": "partial",
+        "notes": [
+          "模型支持克罗地亚小优势，但市场胜平负比模型更偏克罗地亚。",
+          "模型Top5集中在1球差与平局，未支持高置信净胜扩展。",
+          "让球-1与模型比分簇只部分一致。"
+        ]
+      },
+      "risk_observations": [
+        "加纳打平可接受，低位防守与反击尾部需要保留。",
+        "60-75分钟同组比分变化会改变两队风险偏好。",
+        "缺同源大小球，不能验证低比分模型是否被市场充分吸收。"
+      ],
+      "waiting_items": [
+        "T-75官方首发",
+        "Ati-Zigi / Partey可用性",
+        "克罗地亚中场与边后卫轮换",
+        "同源胜平负/让球/大小球完整快照"
+      ],
+      "invalidators": [
+        "克罗地亚大幅轮换或控分钟",
+        "加纳关键防守/门将缺口扩大",
+        "盘口继续压低克罗地亚但大小球未同步抬升"
+      ],
+      "status": "discussion_only_hold"
+    },
+    {
+      "match": "巴拿马 vs 英格兰",
+      "match_no": "周六068",
+      "kickoff_note": "FIFA口径为2026-06-27 17:00 ET，即北京时间2026-06-28 05:00；竞彩编号不等同FIFA Match ID。",
+      "model": {
+        "xg": {
+          "panama": 0.5,
+          "england": 1.75
+        },
+        "final_1x2": {
+          "panama": 0.0999,
+          "draw": 0.2199,
+          "england": 0.6802
+        },
+        "totals": {
+          "over25": 0.3907,
+          "under25": 0.6093
+        },
+        "top_scorelines": [
+          {
+            "score": "0-1",
+            "probability": 0.1844
+          },
+          {
+            "score": "0-2",
+            "probability": 0.1614
+          },
+          {
+            "score": "0-0",
+            "probability": 0.1054
+          },
+          {
+            "score": "0-3",
+            "probability": 0.0941
+          },
+          {
+            "score": "1-1",
+            "probability": 0.0922
+          }
+        ]
+      },
+      "odds": {
+        "source": "中国足彩网竞彩混合页",
+        "captured_at": "2026-06-26T17:43:00+08:00",
+        "spf": {
+          "status": "not_open"
+        },
+        "rq_spf": {
+          "status": "available",
+          "handicap": "巴拿马 +2",
+          "odds": [
+            2.48,
+            3.9,
+            2.13
+          ],
+          "market_implied_no_vig": {
+            "rq_win": 0.3571,
+            "rq_draw": 0.2271,
+            "rq_loss": 0.4158
+          },
+          "translation": {
+            "rq_win": "巴拿马真实胜/平，或英格兰真实赢1球",
+            "rq_draw": "英格兰真实赢2球",
+            "rq_loss": "英格兰真实赢3球或以上"
+          }
+        },
+        "totals": {
+          "status": "missing"
+        }
+      },
+      "model_market_alignment": {
+        "direction_alignment": "incomplete_due_missing_spf",
+        "notes": [
+          "模型支持英格兰胜方向，但普通胜平负未开售，不能做同源1X2校准。",
+          "让球+2需要拆成英格兰赢1、赢2、赢3+，不能由英格兰胜方向直接替代。",
+          "模型Top5仍有0-1、0-2、0-0、1-1低比分路径。"
+        ]
+      },
+      "risk_observations": [
+        "英格兰第二轮0-0提示控球优势不等于稳定破密防。",
+        "巴拿马必须冒险可能增加后段空间，也可能先把比赛拖入低事件。",
+        "缺普通胜平负和同源大小球，深让球信号无法独立校验。"
+      ],
+      "waiting_items": [
+        "T-75官方首发",
+        "英格兰关键球员分钟限制",
+        "巴拿马Carrasquilla首发与体能",
+        "普通胜平负是否开售",
+        "同源胜平负/让球/大小球完整快照"
+      ],
+      "invalidators": [
+        "英格兰明显轮换或控分钟",
+        "巴拿马核心中场首发提升控节奏能力",
+        "大小球偏低但+2深胜方向继续升温"
+      ],
+      "status": "discussion_only_hold"
+    }
+  ],
+  "correlation_and_portfolio_boundary": {
+    "status": "discussion_only_hold",
+    "notes": [
+      "两场同组同时开球，60-75分钟后的策略会被另一场比分影响。",
+      "克罗地亚小胜/平局尾部与英格兰低比分胜存在低事件相关性。",
+      "英格兰大胜尾部与克罗地亚后段强攻都依赖比赛打开，不能当作独立低风险组合。",
+      "让球、比分、半全场和三串一均应标为高方差讨论项。"
+    ],
+    "non_purchase_option": "等待官方首发、最终伤停和完整同源盘口"
+  },
+  "final_verdict": {
+    "status": "hold_not_executable",
+    "reason": "T-75官方首发、最终伤停/分钟限制、完整官方竞彩与同源胜平负/让球/大小球快照未满足，且红队为revise_for_probability / hold_for_betting。",
+    "allowed_output": [
+      "risk_observation",
+      "discussion_only",
+      "hold"
+    ],
+    "disallowed_output": [
+      "executable_ticket",
+      "stake_plan",
+      "purchase_instruction"
+    ]
+  }
+}

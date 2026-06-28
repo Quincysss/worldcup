@@ -1,0 +1,934 @@
+{
+  "phase": "market_gate_data_collection",
+  "status": "partial_source_limited",
+  "schema_note": "JKL组三轮75元discussion_only方案前置数据采集包；只记录事实、赔率可得性和闸门，不给预测、不做购彩建议。",
+  "generated_at": "2026-06-27T15:22:04+08:00",
+  "captured_at": "2026-06-27T15:22:04+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": [
+    "J组第三轮",
+    "K组第三轮",
+    "L组第三轮"
+  ],
+  "input_prediction_files": [
+    "data/outputs/match_predictions/j-group-round3-v3-quant-prediction-20260627.json",
+    "data/outputs/match_predictions/k-group-round3-quant-prediction-20260627.json",
+    "data/outputs/match_predictions/l-group-round3-v3-quant-prediction-20260627.json"
+  ],
+  "global_gates": {
+    "official_t75_lineups": {
+      "status": "missing",
+      "gate": "hold_not_executable",
+      "note": "六场均未到或未取得T-75官方首发。"
+    },
+    "latest_injury_suspension_minutes": {
+      "status": "partial_source_limited",
+      "gate": "hold_not_executable",
+      "note": "已读取三组预测与线程输出中的伤停/轮换风险，但没有官方临场首发与最终队医确认。"
+    },
+    "official_china_jingcai_live_chain": {
+      "status": "partial_local_snapshot",
+      "gate": "discussion_only_hold",
+      "note": "可核来源为本地中国足彩网/500快照；未形成官方即时完整链。"
+    },
+    "same_source_1x2_handicap_total_goals_half_full_score": {
+      "status": "incomplete",
+      "gate": "hold_not_executable",
+      "note": "500快照给出比分/总进球/半全场active标记，但未给这些玩法的具体赔率；当前只捕获普通胜平负和让球胜平负赔率。"
+    },
+    "betting_or_purchase_advice": {
+      "status": "not_provided",
+      "note": "本包只做事实采集，不输出票据、金额分配、主推或投注建议。"
+    }
+  },
+  "market_availability_legend": {
+    "candidate_pool_with_odds": "当前本地快照有具体赔率；仍受T-75和完整盘口闸门限制，只是数据候选。",
+    "observe_only_active_no_odds": "本地快照显示玩法active，但未捕获具体赔率，不能进入候选池。",
+    "missing_or_not_open": "未开售、未抓到或玩法标记不可用。",
+    "hold_not_executable": "官方首发/最终伤停/完整赔率链未满足，不能执行。"
+  },
+  "source_files_parsed": [
+    {
+      "source": "500.com竞彩本地快照",
+      "path": "data/tmp_500_jczq_20260626.html",
+      "source_url": "https://trade.500.com/jczq/?playid=269&g=2&date=2026-06-27",
+      "captured_at_from_snapshot": "2026-06-26/2026-06-27 local snapshot",
+      "supports_fields": [
+        "竞彩编号",
+        "比赛日期/时间",
+        "buyendtime",
+        "普通胜平负赔率",
+        "让球胜平负赔率",
+        "比分/总进球/半全场active标记"
+      ]
+    },
+    {
+      "source": "中国足彩网竞彩混合页本地快照",
+      "path": "data/tmp_zgzcw_jcmini_20260626.html",
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at_from_snapshot": "2026-06-26 local snapshot",
+      "supports_fields": [
+        "竞彩编号",
+        "队名",
+        "胜平负/让球玩法入口",
+        "比分/总进球/半全场入口存在性"
+      ]
+    },
+    {
+      "source": "中国足彩网竞彩混合页在线复核",
+      "path": null,
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-27T15:25:09+08:00",
+      "supports_fields": [
+        "竞彩编号",
+        "开售状态",
+        "普通胜平负赔率",
+        "让球胜平负赔率"
+      ],
+      "source_status": "online_recheck_available_but_odds_differ_from_local_500_snapshot"
+    }
+  ],
+  "matches": [
+    {
+      "group": "L",
+      "match_no": "周六067",
+      "match": "克罗地亚 vs 加纳",
+      "fixture": {
+        "home": "克罗地亚",
+        "away": "加纳",
+        "kickoff_beijing": "2026-06-28T05:00:00+08:00",
+        "buy_end_time_local_snapshot": "2026-06-27T23:00:00+08:00",
+        "venue": "Philadelphia Stadium",
+        "source_status": "confirmed_in_local_prediction_and_500_snapshot"
+      },
+      "market_snapshot": {
+        "source": "500.com local snapshot / 中国足彩网 cross-check",
+        "captured_at": "2026-06-27T15:22:04+08:00",
+        "ordinary_spf": {
+          "availability": "candidate_pool_with_odds",
+          "single_game_flag": true,
+          "odds": {
+            "home_win": 1.60,
+            "draw": 3.05,
+            "away_win": 5.65
+          }
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": -1,
+          "single_game_flag": false,
+          "odds": {
+            "home_handicap_win": 2.92,
+            "handicap_draw": 3.35,
+            "away_handicap_win": 2.05
+          }
+        },
+        "correct_score": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "total_goals": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "half_full_time": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "over_under_dxq": {
+          "availability": "missing_or_not_open",
+          "active_flags": {
+            "single": false,
+            "parlay": false
+          },
+          "odds": null
+        },
+        "same_source_completeness": "incomplete"
+      },
+      "online_recheck": {
+        "source": "中国足彩网竞彩混合页在线复核",
+        "captured_at": "2026-06-27T15:25:09+08:00",
+        "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "ordinary_spf": {
+          "availability": "candidate_pool_with_odds",
+          "odds": {
+            "home_win": 1.64,
+            "draw": 3.05,
+            "away_win": 5.20
+          }
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": -1,
+          "odds": {
+            "home_handicap_win": 3.25,
+            "handicap_draw": 3.15,
+            "away_handicap_win": 1.99
+          }
+        },
+        "source_consistency_vs_500_snapshot": "conflicting_odds_values_same_market"
+      },
+      "availability_and_risk": {
+        "t75_official_lineup_gate": "missing",
+        "latest_injury_suspension_status": "partial_source_limited",
+        "key_watch_items": [
+          "加纳 Ati-Zigi / Asare 门将口径冲突",
+          "加纳 Partey 可用性需复核",
+          "克罗地亚 Modric 老将负荷",
+          "克罗地亚 Budimir/Kramaric/Musa 前场组合未锁"
+        ],
+        "source_conflicts": [
+          "加纳门将位未由官方首发确认。",
+          "克罗地亚公开预测源存在3-4-2-1/4-2-3-1口径差异。"
+        ]
+      },
+      "market_availability": {
+        "candidate_pool": [
+          "ordinary_spf",
+          "handicap_spf"
+        ],
+        "observe_only": [
+          "correct_score",
+          "total_goals",
+          "half_full_time"
+        ],
+        "missing": [
+          "over_under_dxq"
+        ],
+        "gate": "hold_not_executable"
+      }
+    },
+    {
+      "group": "L",
+      "match_no": "周六068",
+      "match": "巴拿马 vs 英格兰",
+      "fixture": {
+        "home": "巴拿马",
+        "away": "英格兰",
+        "kickoff_beijing": "2026-06-28T05:00:00+08:00",
+        "buy_end_time_local_snapshot": "2026-06-27T23:00:00+08:00",
+        "venue": "New York New Jersey Stadium",
+        "source_status": "confirmed_in_local_prediction_and_500_snapshot"
+      },
+      "market_snapshot": {
+        "source": "500.com local snapshot / 中国足彩网 cross-check",
+        "captured_at": "2026-06-27T15:22:04+08:00",
+        "ordinary_spf": {
+          "availability": "missing_or_not_open",
+          "single_game_flag": false,
+          "odds": null,
+          "note": "500快照显示未开售。"
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": 2,
+          "single_game_flag": true,
+          "odds": {
+            "home_handicap_win": 2.48,
+            "handicap_draw": 3.90,
+            "away_handicap_win": 2.13
+          }
+        },
+        "correct_score": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "total_goals": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "half_full_time": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "over_under_dxq": {
+          "availability": "missing_or_not_open",
+          "active_flags": {
+            "single": false,
+            "parlay": false
+          },
+          "odds": null
+        },
+        "same_source_completeness": "incomplete"
+      },
+      "online_recheck": {
+        "source": "中国足彩网竞彩混合页在线复核",
+        "captured_at": "2026-06-27T15:25:09+08:00",
+        "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "ordinary_spf": {
+          "availability": "missing_or_not_open",
+          "odds": null
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": 2,
+          "odds": {
+            "home_handicap_win": 2.60,
+            "handicap_draw": 4.00,
+            "away_handicap_win": 2.02
+          }
+        },
+        "source_consistency_vs_500_snapshot": "same_open_status_but_conflicting_handicap_odds"
+      },
+      "availability_and_risk": {
+        "t75_official_lineup_gate": "missing",
+        "latest_injury_suspension_status": "partial_source_limited",
+        "key_watch_items": [
+          "England Reece James腿筋伤缺Panama和32强",
+          "Declan Rice fitness concern",
+          "England已至少晋级但仍争小组第一，Kane/Bellingham分钟不确定",
+          "Panama Carrasquilla首发/出场不确定"
+        ],
+        "source_conflicts": [
+          "England右后卫和双后腰口径需T-75确认。",
+          "Panama 5后卫低位与4-4-2低位口径未锁。"
+        ]
+      },
+      "market_availability": {
+        "candidate_pool": [
+          "handicap_spf"
+        ],
+        "observe_only": [
+          "correct_score",
+          "total_goals",
+          "half_full_time"
+        ],
+        "missing": [
+          "ordinary_spf",
+          "over_under_dxq"
+        ],
+        "gate": "hold_not_executable"
+      }
+    },
+    {
+      "group": "K",
+      "match_no": "周六069",
+      "match": "哥伦比亚 vs 葡萄牙",
+      "fixture": {
+        "home": "哥伦比亚",
+        "away": "葡萄牙",
+        "kickoff_beijing": "2026-06-28T07:30:00+08:00",
+        "buy_end_time_local_snapshot": "2026-06-27T23:00:00+08:00",
+        "venue": "Hard Rock Stadium, Miami Gardens",
+        "source_status": "confirmed_in_prediction_and_500_snapshot"
+      },
+      "market_snapshot": {
+        "source": "500.com local snapshot / 中国足彩网 cross-check",
+        "captured_at": "2026-06-27T15:22:04+08:00",
+        "ordinary_spf": {
+          "availability": "candidate_pool_with_odds",
+          "single_game_flag": true,
+          "odds": {
+            "home_win": 4.23,
+            "draw": 3.28,
+            "away_win": 1.70
+          }
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": 1,
+          "single_game_flag": false,
+          "odds": {
+            "home_handicap_win": 1.90,
+            "handicap_draw": 3.45,
+            "away_handicap_win": 3.20
+          }
+        },
+        "correct_score": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "total_goals": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "half_full_time": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "over_under_dxq": {
+          "availability": "missing_or_not_open",
+          "active_flags": {
+            "single": false,
+            "parlay": false
+          },
+          "odds": null
+        },
+        "same_source_completeness": "incomplete"
+      },
+      "online_recheck": {
+        "source": "中国足彩网竞彩混合页在线复核",
+        "captured_at": "2026-06-27T15:25:09+08:00",
+        "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "ordinary_spf": {
+          "availability": "candidate_pool_with_odds",
+          "odds": {
+            "home_win": 3.50,
+            "draw": 3.68,
+            "away_win": 1.75
+          }
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": 1,
+          "odds": {
+            "home_handicap_win": 1.85,
+            "handicap_draw": 3.62,
+            "away_handicap_win": 3.20
+          }
+        },
+        "source_consistency_vs_500_snapshot": "conflicting_odds_values_same_market"
+      },
+      "availability_and_risk": {
+        "t75_official_lineup_gate": "missing",
+        "latest_injury_suspension_status": "partial_source_limited",
+        "key_watch_items": [
+          "Portugal前场Bernardo Silva / Rafael Leao / Pedro Neto / Joao Felix轮换风险",
+          "Colombia打平可锁第一的节奏管理",
+          "T-75前无官方首发"
+        ],
+        "source_conflicts": [
+          "Portugal前场多源预计首发有分歧。",
+          "Colombia中锋Luis Suarez/Jhon Cordoba口径需复核。"
+        ]
+      },
+      "market_availability": {
+        "candidate_pool": [
+          "ordinary_spf",
+          "handicap_spf"
+        ],
+        "observe_only": [
+          "correct_score",
+          "total_goals",
+          "half_full_time"
+        ],
+        "missing": [
+          "over_under_dxq"
+        ],
+        "gate": "hold_not_executable"
+      }
+    },
+    {
+      "group": "K",
+      "match_no": "周六070",
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "fixture": {
+        "home": "刚果金",
+        "away": "乌兹别克斯坦",
+        "kickoff_beijing": "2026-06-28T07:30:00+08:00",
+        "buy_end_time_local_snapshot": "2026-06-27T23:00:00+08:00",
+        "venue": "Mercedes-Benz Stadium, Atlanta",
+        "source_status": "confirmed_in_prediction_and_500_snapshot"
+      },
+      "market_snapshot": {
+        "source": "500.com local snapshot / 中国足彩网 cross-check",
+        "captured_at": "2026-06-27T15:22:04+08:00",
+        "ordinary_spf": {
+          "availability": "candidate_pool_with_odds",
+          "single_game_flag": false,
+          "odds": {
+            "home_win": 1.67,
+            "draw": 3.82,
+            "away_win": 3.72
+          }
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": -1,
+          "single_game_flag": false,
+          "odds": {
+            "home_handicap_win": 3.10,
+            "handicap_draw": 3.45,
+            "away_handicap_win": 1.94
+          }
+        },
+        "correct_score": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "total_goals": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "half_full_time": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "over_under_dxq": {
+          "availability": "missing_or_not_open",
+          "active_flags": {
+            "single": false,
+            "parlay": false
+          },
+          "odds": null
+        },
+        "same_source_completeness": "incomplete"
+      },
+      "online_recheck": {
+        "source": "中国足彩网竞彩混合页在线复核",
+        "captured_at": "2026-06-27T15:25:09+08:00",
+        "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "ordinary_spf": {
+          "availability": "candidate_pool_with_odds",
+          "odds": {
+            "home_win": 1.50,
+            "draw": 3.96,
+            "away_win": 4.75
+          }
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": -1,
+          "odds": {
+            "home_handicap_win": 2.71,
+            "handicap_draw": 3.25,
+            "away_handicap_win": 2.21
+          }
+        },
+        "source_consistency_vs_500_snapshot": "conflicting_odds_values_same_market"
+      },
+      "availability_and_risk": {
+        "t75_official_lineup_gate": "missing",
+        "latest_injury_suspension_status": "partial_source_limited",
+        "key_watch_items": [
+          "DR Congo 5-3-2 / 4-3-3阵型冲突",
+          "Uzbekistan边翼卫和中场调整",
+          "Uzbekistan防线连续失球后的首发变化"
+        ],
+        "source_conflicts": [
+          "DR Congo是否加入Bongonda改三前锋有冲突。",
+          "Uzbekistan Alijonov/Mozgovoy是否首发需T-75。"
+        ]
+      },
+      "market_availability": {
+        "candidate_pool": [
+          "ordinary_spf",
+          "handicap_spf"
+        ],
+        "observe_only": [
+          "correct_score",
+          "total_goals",
+          "half_full_time"
+        ],
+        "missing": [
+          "over_under_dxq"
+        ],
+        "gate": "hold_not_executable"
+      }
+    },
+    {
+      "group": "J",
+      "match_no": "周六071",
+      "match": "阿尔及利亚 vs 奥地利",
+      "fixture": {
+        "home": "阿尔及利亚",
+        "away": "奥地利",
+        "kickoff_beijing": "2026-06-28T10:00:00+08:00",
+        "buy_end_time_local_snapshot": "2026-06-27T23:00:00+08:00",
+        "venue": "Kansas City / Arrowhead Stadium",
+        "source_status": "confirmed_in_prediction_and_500_snapshot"
+      },
+      "market_snapshot": {
+        "source": "500.com local snapshot / 中国足彩网 cross-check",
+        "captured_at": "2026-06-27T15:22:04+08:00",
+        "ordinary_spf": {
+          "availability": "candidate_pool_with_odds",
+          "single_game_flag": false,
+          "odds": {
+            "home_win": 3.35,
+            "draw": 2.11,
+            "away_win": 2.80
+          }
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": 1,
+          "single_game_flag": false,
+          "odds": {
+            "home_handicap_win": 1.31,
+            "handicap_draw": 4.35,
+            "away_handicap_win": 7.35
+          }
+        },
+        "correct_score": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "total_goals": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "half_full_time": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "over_under_dxq": {
+          "availability": "missing_or_not_open",
+          "active_flags": {
+            "single": false,
+            "parlay": false
+          },
+          "odds": null
+        },
+        "same_source_completeness": "incomplete"
+      },
+      "online_recheck": {
+        "source": "中国足彩网竞彩混合页在线复核",
+        "captured_at": "2026-06-27T15:25:09+08:00",
+        "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "ordinary_spf": {
+          "availability": "candidate_pool_with_odds",
+          "odds": {
+            "home_win": 3.54,
+            "draw": 2.07,
+            "away_win": 2.75
+          }
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": 1,
+          "odds": {
+            "home_handicap_win": 1.33,
+            "handicap_draw": 4.30,
+            "away_handicap_win": 6.90
+          }
+        },
+        "source_consistency_vs_500_snapshot": "conflicting_odds_values_same_market"
+      },
+      "availability_and_risk": {
+        "t75_official_lineup_gate": "missing",
+        "latest_injury_suspension_status": "partial_source_limited",
+        "key_watch_items": [
+          "Algeria Benbouali/Gouiri/Mahrez前场组合",
+          "Ramiz Zerrouki纪律/分钟风险",
+          "Austria Gregoritsch/Arnautovic中锋竞争",
+          "David Alaba minutes_monitor"
+        ],
+        "source_conflicts": [
+          "Algeria 4-4-2与4-2-3-1口径冲突。",
+          "Austria中锋与Alaba位置未锁。"
+        ]
+      },
+      "market_availability": {
+        "candidate_pool": [
+          "ordinary_spf",
+          "handicap_spf"
+        ],
+        "observe_only": [
+          "correct_score",
+          "total_goals",
+          "half_full_time"
+        ],
+        "missing": [
+          "over_under_dxq"
+        ],
+        "gate": "hold_not_executable"
+      }
+    },
+    {
+      "group": "J",
+      "match_no": "周六072",
+      "match": "约旦 vs 阿根廷",
+      "fixture": {
+        "home": "约旦",
+        "away": "阿根廷",
+        "kickoff_beijing": "2026-06-28T10:00:00+08:00",
+        "buy_end_time_local_snapshot": "2026-06-27T23:00:00+08:00",
+        "venue": "Dallas / AT&T Stadium",
+        "source_status": "confirmed_in_prediction_and_500_snapshot"
+      },
+      "market_snapshot": {
+        "source": "500.com local snapshot / 中国足彩网 cross-check",
+        "captured_at": "2026-06-27T15:22:04+08:00",
+        "ordinary_spf": {
+          "availability": "missing_or_not_open",
+          "single_game_flag": false,
+          "odds": null,
+          "note": "500快照显示未开售。"
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": 2,
+          "single_game_flag": true,
+          "odds": {
+            "home_handicap_win": 2.28,
+            "handicap_draw": 3.85,
+            "away_handicap_win": 2.32
+          }
+        },
+        "correct_score": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "total_goals": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "half_full_time": {
+          "availability": "observe_only_active_no_odds",
+          "active_flags": {
+            "single": true,
+            "parlay": true
+          },
+          "odds": null
+        },
+        "over_under_dxq": {
+          "availability": "missing_or_not_open",
+          "active_flags": {
+            "single": false,
+            "parlay": false
+          },
+          "odds": null
+        },
+        "same_source_completeness": "incomplete"
+      },
+      "online_recheck": {
+        "source": "中国足彩网竞彩混合页在线复核",
+        "captured_at": "2026-06-27T15:25:09+08:00",
+        "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+        "ordinary_spf": {
+          "availability": "missing_or_not_open",
+          "odds": null
+        },
+        "handicap_spf": {
+          "availability": "candidate_pool_with_odds",
+          "handicap_home": 2,
+          "odds": {
+            "home_handicap_win": 2.52,
+            "handicap_draw": 3.90,
+            "away_handicap_win": 2.10
+          }
+        },
+        "source_consistency_vs_500_snapshot": "same_open_status_but_conflicting_handicap_odds"
+      },
+      "availability_and_risk": {
+        "t75_official_lineup_gate": "missing",
+        "latest_injury_suspension_status": "partial_source_limited",
+        "key_watch_items": [
+          "Argentina Messi替补/轮换信号",
+          "Cristian Romero负荷/伤情疑问",
+          "Argentina多位置轮换",
+          "Jordan Abu Dahab黄牌纪律风险"
+        ],
+        "source_conflicts": [
+          "Argentina轮换程度和Messi是否首发需T-75确认。",
+          "Jordan 3-4-3/5-4-1实际站位未锁。"
+        ]
+      },
+      "market_availability": {
+        "candidate_pool": [
+          "handicap_spf"
+        ],
+        "observe_only": [
+          "correct_score",
+          "total_goals",
+          "half_full_time"
+        ],
+        "missing": [
+          "ordinary_spf",
+          "over_under_dxq"
+        ],
+        "gate": "hold_not_executable"
+      }
+    }
+  ],
+  "summary_market_availability": {
+    "ordinary_spf_with_odds": [
+      "周六067 克罗地亚 vs 加纳",
+      "周六069 哥伦比亚 vs 葡萄牙",
+      "周六070 刚果金 vs 乌兹别克斯坦",
+      "周六071 阿尔及利亚 vs 奥地利"
+    ],
+    "ordinary_spf_missing_or_not_open": [
+      "周六068 巴拿马 vs 英格兰",
+      "周六072 约旦 vs 阿根廷"
+    ],
+    "handicap_spf_with_odds": [
+      "周六067 克罗地亚 vs 加纳",
+      "周六068 巴拿马 vs 英格兰",
+      "周六069 哥伦比亚 vs 葡萄牙",
+      "周六070 刚果金 vs 乌兹别克斯坦",
+      "周六071 阿尔及利亚 vs 奥地利",
+      "周六072 约旦 vs 阿根廷"
+    ],
+    "correct_score_active_no_odds_captured": [
+      "周六067",
+      "周六068",
+      "周六069",
+      "周六070",
+      "周六071",
+      "周六072"
+    ],
+    "total_goals_active_no_odds_captured": [
+      "周六067",
+      "周六068",
+      "周六069",
+      "周六070",
+      "周六071",
+      "周六072"
+    ],
+    "half_full_time_active_no_odds_captured": [
+      "周六067",
+      "周六068",
+      "周六069",
+      "周六070",
+      "周六071",
+      "周六072"
+    ],
+    "over_under_dxq_missing_or_not_open": [
+      "周六067",
+      "周六068",
+      "周六069",
+      "周六070",
+      "周六071",
+      "周六072"
+    ],
+    "usable_for_candidate_pool_before_final_gate": [
+      "ordinary_spf where odds captured",
+      "handicap_spf where odds captured"
+    ],
+    "observe_only_until_odds_captured": [
+      "correct_score",
+      "total_goals",
+      "half_full_time"
+    ],
+    "global_execution_gate": "hold_not_executable"
+  },
+  "gaps_and_conflicts": [
+    "六场T-75官方首发均missing。",
+    "最新官方伤停、停赛、黄牌累计和分钟限制未完全闭合。",
+    "周六068与周六072普通胜平负未开售/未抓到。",
+    "比分、总进球、半全场虽在500快照显示active，但未捕获具体赔率。",
+    "大小球/over-under dxq在500快照为0，未开售或未支持。",
+    "中国足彩网快照为胜平负/让球页，不能替代比分/总进球/半全场具体赔率页。",
+    "2026-06-27T15:25:09+08:00在线复核中国足彩网可访问，但与本地500快照赔率存在同市场数值差异；需要终盘同源快照后才能闭合。",
+    "所有市场字段只作为事实和来源，不转换为购彩建议。"
+  ],
+  "source_log": [
+    {
+      "source": "worldcup-data-collector skill",
+      "path": ".codex/skills/worldcup-data-collector/SKILL.md",
+      "captured_at": "2026-06-27T15:22:04+08:00",
+      "fields_supported": "facts-only boundary, odds snapshot capture, gate handling"
+    },
+    {
+      "source": "J组v3预测JSON",
+      "path": "data/outputs/match_predictions/j-group-round3-v3-quant-prediction-20260627.json",
+      "captured_at": "2026-06-27T15:22:04+08:00",
+      "fields_supported": "fixture, predicted_lineup gate, injury/rotation risks, baseline odds"
+    },
+    {
+      "source": "K组三轮预测JSON",
+      "path": "data/outputs/match_predictions/k-group-round3-quant-prediction-20260627.json",
+      "captured_at": "2026-06-27T15:22:04+08:00",
+      "fields_supported": "fixture, predicted_lineup gate, injury/rotation risks, baseline odds"
+    },
+    {
+      "source": "L组v3预测JSON",
+      "path": "data/outputs/match_predictions/l-group-round3-v3-quant-prediction-20260627.json",
+      "captured_at": "2026-06-27T15:22:04+08:00",
+      "fields_supported": "fixture, predicted_lineup gate, injury/rotation risks, baseline odds"
+    },
+    {
+      "source": "500.com竞彩本地快照",
+      "path": "data/tmp_500_jczq_20260626.html",
+      "source_url": "https://trade.500.com/jczq/?playid=269&g=2&date=2026-06-27",
+      "captured_at": "2026-06-27T15:22:04+08:00",
+      "fields_supported": "match_no, kickoff, buyendtime, SPF/RQ odds, play active flags"
+    },
+    {
+      "source": "中国足彩网竞彩混合页本地快照",
+      "path": "data/tmp_zgzcw_jcmini_20260626.html",
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-27T15:22:04+08:00",
+      "fields_supported": "match_no, teams, SPF/RQ page, play entry links"
+    },
+    {
+      "source": "中国足彩网竞彩混合页在线复核",
+      "path": null,
+      "source_url": "https://cp.zgzcw.com/lottery/jchtplayvsForJsp.action?lotteryId=47&type=jcmini",
+      "captured_at": "2026-06-27T15:25:09+08:00",
+      "fields_supported": "match_no, teams, ordinary SPF odds, handicap SPF odds, open status",
+      "source_status": "available; odds conflict with local 500 snapshot, preserved as source conflict"
+    },
+    {
+      "source": "J/K/L data-collector and betting-risk thread outputs",
+      "path": "data/thread_outputs/*round3*20260627/*",
+      "captured_at": "2026-06-27T15:22:04+08:00",
+      "fields_supported": "hard gates, injury watch items, source conflicts"
+    }
+  ],
+  "handoff_notes": [
+    "若要形成75元discussion_only方案，当前只能把SPF/RQ作为有赔率的数据候选；比分/总进球/半全场需另抓对应玩法赔率页后才能进入候选池。",
+    "当前全部市场仍受hold_not_executable约束：T-75、最终伤停、官方牌表、同源完整赔率链均未满足。",
+    "本包不含任何投注建议、金额分配或组合推荐。"
+  ]
+}

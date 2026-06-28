@@ -1,0 +1,393 @@
+{
+  "report_id": "i-group-round3-postmortem-20260627",
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "group": "I",
+  "round": 3,
+  "status": "postmatch_review_done_player_tables_blocked",
+  "threads_used": {
+    "data_collector": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+    "tactics_coach": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+    "data_modeler": "019edb8f-536a-7100-84da-e13bfecb0def",
+    "red_team": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+    "betting_risk": "019edb8f-cd0d-7393-bf92-d637962a67e4"
+  },
+  "final_table": [
+    {
+      "rank": 1,
+      "team": "法国",
+      "points": 9,
+      "goal_difference": 8,
+      "outcome": "小组第一出线"
+    },
+    {
+      "rank": 2,
+      "team": "挪威",
+      "points": 6,
+      "goal_difference": 1,
+      "outcome": "小组第二出线"
+    },
+    {
+      "rank": 3,
+      "team": "塞内加尔",
+      "points": 3,
+      "goal_difference": 2,
+      "outcome": "等待第三名横向比较"
+    },
+    {
+      "rank": 4,
+      "team": "伊拉克",
+      "points": 0,
+      "goal_difference": -11,
+      "outcome": "出局"
+    }
+  ],
+  "matches": [
+    {
+      "match": "挪威 vs 法国",
+      "date_project_local": "2026-06-27",
+      "actual_score": {
+        "home": 1,
+        "away": 4
+      },
+      "pre_match_prediction_file": "比赛/未开始比赛/小组赛/I组/2026-06-27_挪威_vs_法国_量化预测.md",
+      "postmatch_file": "比赛/已完成比赛/小组赛/I组/2026-06-27_挪威_1-4_法国_复盘.md",
+      "pre_match_model": {
+        "main_score": "1-1",
+        "expected_goals": {
+          "home": 1.18,
+          "away": 1.4
+        },
+        "probabilities_1x2": {
+          "home": 0.316796,
+          "draw": 0.263189,
+          "away": 0.420015
+        },
+        "top5_scores": [
+          {
+            "score": "1-1",
+            "probability": 0.125
+          },
+          {
+            "score": "0-1",
+            "probability": 0.106
+          },
+          {
+            "score": "1-0",
+            "probability": 0.089
+          },
+          {
+            "score": "1-2",
+            "probability": 0.088
+          },
+          {
+            "score": "0-0",
+            "probability": 0.076
+          }
+        ]
+      },
+      "backtest": {
+        "winner_direction_hit": true,
+        "top5_score_hit": false,
+        "actual_score_probability": 0.014312,
+        "brier_score_1x2": 0.506,
+        "log_loss_1x2": 0.867,
+        "model_tail_error": "france_4_goal_tail_underweighted"
+      },
+      "verified_events": [
+        {
+          "minute": "7",
+          "team": "法国",
+          "player": "登贝莱",
+          "event": "goal"
+        },
+        {
+          "minute": "20",
+          "team": "法国",
+          "player": "登贝莱",
+          "event": "goal"
+        },
+        {
+          "minute": "21",
+          "team": "挪威",
+          "player": "阿斯加德",
+          "event": "goal"
+        },
+        {
+          "minute": "32",
+          "team": "法国",
+          "player": "登贝莱",
+          "event": "goal"
+        },
+        {
+          "minute": "50",
+          "team": "挪威",
+          "player": "Strand Larsen",
+          "event": "penalty_saved_by_maignan"
+        },
+        {
+          "minute": "90+4",
+          "team": "法国",
+          "player": "Doué",
+          "event": "goal"
+        }
+      ],
+      "box_score": {
+        "source": "FOX",
+        "possession": {
+          "home": 43,
+          "away": 57
+        },
+        "shots": {
+          "home": 10,
+          "away": 19
+        },
+        "shots_on_goal": {
+          "home": 5,
+          "away": 10
+        },
+        "xg": {
+          "home": 1.42,
+          "away": 1.12
+        },
+        "chances": {
+          "home": 5,
+          "away": 14
+        },
+        "corners": {
+          "home": 4,
+          "away": 5
+        },
+        "keeper_saves": {
+          "home": 4,
+          "away": 3
+        }
+      },
+      "tactical_findings": [
+        "法国并未按 draw_enough 逻辑降速，开场即展示高转换威胁。",
+        "挪威大幅轮换和追分需求放大了防线纵深暴露。",
+        "法国先入球后仍持续惩罚空间，favorite_transition_ceiling 权重不足。"
+      ],
+      "player_state_update_suggestions": [
+        {
+          "team": "法国",
+          "player": "登贝莱",
+          "direction": "up_strong",
+          "reason": "25分钟帽子戏法"
+        },
+        {
+          "team": "法国",
+          "player": "Maignan",
+          "direction": "up",
+          "reason": "扑出点球，阻断挪威追分窗口"
+        },
+        {
+          "team": "挪威",
+          "player": "阿斯加德",
+          "direction": "up",
+          "reason": "对法国进球"
+        },
+        {
+          "team": "挪威",
+          "player": "Strand Larsen",
+          "direction": "mixed_down",
+          "reason": "点球被扑，影响追分窗口"
+        }
+      ],
+      "parameter_updates": [
+        "raise_favorite_transition_ceiling",
+        "raise_opponent_must_win_exposure_multiplier",
+        "add_draw_enough_but_elite_attack_exception",
+        "add_rotation_quality_gap",
+        "require_margin_bucket_probability"
+      ]
+    },
+    {
+      "match": "塞内加尔 vs 伊拉克",
+      "date_project_local": "2026-06-27",
+      "actual_score": {
+        "home": 5,
+        "away": 0
+      },
+      "pre_match_prediction_file": "比赛/未开始比赛/小组赛/I组/2026-06-27_塞内加尔_vs_伊拉克_量化预测.md",
+      "postmatch_file": "比赛/已完成比赛/小组赛/I组/2026-06-27_塞内加尔_5-0_伊拉克_复盘.md",
+      "pre_match_model": {
+        "main_score": "1-0",
+        "expected_goals": {
+          "home": 1.52,
+          "away": 0.92
+        },
+        "probabilities_1x2": {
+          "home": 0.512779,
+          "draw": 0.258891,
+          "away": 0.22833
+        },
+        "top5_scores": [
+          {
+            "score": "1-0",
+            "probability": 0.132
+          },
+          {
+            "score": "1-1",
+            "probability": 0.122
+          },
+          {
+            "score": "2-0",
+            "probability": 0.101
+          },
+          {
+            "score": "2-1",
+            "probability": 0.093
+          },
+          {
+            "score": "0-0",
+            "probability": 0.087
+          }
+        ]
+      },
+      "backtest": {
+        "winner_direction_hit": true,
+        "top5_score_hit": false,
+        "actual_score_probability": 0.005893,
+        "brier_score_1x2": 0.357,
+        "log_loss_1x2": 0.668,
+        "model_tail_error": "senegal_5_goal_tail_underweighted"
+      },
+      "verified_events": [
+        {
+          "minute": "4",
+          "team": "塞内加尔",
+          "player": "Habib Diarra",
+          "event": "goal"
+        },
+        {
+          "minute": "13",
+          "team": "伊拉克",
+          "player": "Rebin Sulaka",
+          "event": "red_card"
+        },
+        {
+          "minute": "56/57",
+          "team": "塞内加尔",
+          "player": "Ismaïla Sarr",
+          "event": "goal"
+        },
+        {
+          "minute": "59",
+          "team": "塞内加尔",
+          "player": "Pape Gueye",
+          "event": "goal"
+        },
+        {
+          "minute": "71",
+          "team": "塞内加尔",
+          "player": "Pape Gueye",
+          "event": "goal"
+        },
+        {
+          "minute": "82/83",
+          "team": "塞内加尔",
+          "player": "Iliman Ndiaye",
+          "event": "goal"
+        }
+      ],
+      "box_score": {
+        "source": "FOX/ESPN",
+        "possession": {
+          "home": 69,
+          "away": 31
+        },
+        "shots": {
+          "home": 30,
+          "away": 6
+        },
+        "shots_on_goal": {
+          "home": 12,
+          "away": 1
+        },
+        "xg": {
+          "fox_home": 2.67,
+          "fox_away": 0.28,
+          "espn_home": 3.03,
+          "espn_away": 0.18
+        },
+        "chances": {
+          "home": 22,
+          "away": 3
+        },
+        "corners": {
+          "home": 12,
+          "away": 3
+        },
+        "keeper_saves": {
+          "home": 1,
+          "away": 7
+        },
+        "red_cards": {
+          "home": 0,
+          "away": 1
+        }
+      },
+      "tactical_findings": [
+        "早球使伊拉克低位防守计划提前失效。",
+        "13分钟红牌让比赛进入非线性状态，赛前均值不再可直接解释。",
+        "塞内加尔为了第三名横向比较继续追净胜球，tempo drag 不成立。"
+      ],
+      "player_state_update_suggestions": [
+        {
+          "team": "塞内加尔",
+          "player": "Pape Gueye",
+          "direction": "up_strong",
+          "reason": "梅开二度"
+        },
+        {
+          "team": "塞内加尔",
+          "player": "Habib Diarra",
+          "direction": "up",
+          "reason": "4分钟早球"
+        },
+        {
+          "team": "伊拉克",
+          "player": "Rebin Sulaka",
+          "direction": "down_suspension_risk",
+          "reason": "13分钟红牌"
+        },
+        {
+          "team": "伊拉克",
+          "player": "Jalal Hassan",
+          "direction": "mixed",
+          "reason": "丢5球但完成多次扑救"
+        }
+      ],
+      "parameter_updates": [
+        "add_third_place_goal_difference_chase_adjustment",
+        "add_red_card_state_shift",
+        "raise_weak_defense_collapse_risk",
+        "raise_low_attack_opponent_clean_sheet_boost",
+        "require_blowout_tail_probability_3plus_4plus_5plus"
+      ]
+    }
+  ],
+  "red_team_status": "revise_partial",
+  "canonical_player_table_update": {
+    "status": "blocked",
+    "reason": "缺官方完整首发、替补分钟、全量牌面、伤停确认和逐人评分源；本轮仅记录状态调整建议，等待数据采集线程补齐后回灌。"
+  },
+  "betting_risk_review": {
+    "status": "post_result_review_only",
+    "no_new_betting_advice": true,
+    "lessons": [
+      "法国胜方向不等于法国小胜或具体比分簇命中。",
+      "塞内加尔胜方向不等于小球或低比分命中。",
+      "第三轮投注模型必须拆分 1X2、让球、总进球、比分集合和串关相关性。"
+    ]
+  },
+  "source_urls": [
+    "https://www.theguardian.com/football/live/2026/jun/26/norway-v-france-world-cup-2026-live-updates",
+    "https://www.theguardian.com/football/2026/jun/26/france-norway-world-cup-group-i-match-report",
+    "https://www.foxsports.com/soccer/fifa-world-cup-men-norway-vs-france-jun-26-2026-game-boxscore-647676?tab=boxscore",
+    "https://www.theguardian.com/football/live/2026/jun/26/senegal-v-iraq-world-cup-2026-live-updates",
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/senegal-iraq-match-report-highlights",
+    "https://www.espn.com.au/football/report/_/gameId/760474",
+    "https://www.foxsports.com/soccer/fifa-world-cup-men-senegal-vs-iraq-jun-26-2026-game-boxscore-647677?tab=boxscore"
+  ]
+}

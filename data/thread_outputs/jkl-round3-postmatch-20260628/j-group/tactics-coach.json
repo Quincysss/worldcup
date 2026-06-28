@@ -1,0 +1,150 @@
+{
+  "phase": "group_round3_postmatch_tactics",
+  "group": "J",
+  "round": 3,
+  "status": "partial_source_limited",
+  "created_at": "2026-06-28T00:00:00+08:00",
+  "updated_at": "2026-06-28T00:00:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "J组第三轮两场赛后战术复盘；不输出比分预测、胜平负概率或投注建议。",
+  "source_log": [
+    "README.md",
+    "线程状态.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    ".codex/skills/worldcup-tactics-coach/SKILL.md",
+    ".codex/skills/worldcup-tactics-coach/references/tactical-schemas.md",
+    "data/thread_outputs/j-group-round3-v3-20260627/data-collector.json",
+    "data/thread_outputs/j-group-round3-v3-20260627/tactics-coach.json",
+    "data/outputs/match_predictions/j-group-round3-v3-quant-prediction-20260627.json",
+    "比赛/未开始比赛/小组赛/J组/2026-06-28_阿尔及利亚_vs_奥地利_量化预测.md",
+    "比赛/未开始比赛/小组赛/J组/2026-06-28_约旦_vs_阿根廷_量化预测.md",
+    "比赛/已完成比赛/小组赛/J组/2026-06-22_约旦_1-2_阿尔及利亚_复盘.md",
+    "比赛/已完成比赛/小组赛/J组/2026-06-22_阿根廷_2-0_奥地利_复盘.md",
+    "data/outputs/knockout/round-of-32-bracket-20260627.json"
+  ],
+  "verified_postmatch_fact_status": {
+    "local_j_round3_postmatch_packet": "not_found",
+    "local_single_match_reviews": "not_found",
+    "official_lineups_minutes_events": "missing",
+    "usable_verified_fact": "32强落位文件显示阿根廷为1J、奥地利为2J/晋级路径仍标as_things_stand；可用于小组结果方向校验，但不能替代单场比分、实际阵型、换人和事件流。"
+  },
+  "data_gaps": [
+    "阿尔及利亚 vs 奥地利最终比分、半场比分、进球/红黄牌/换人分钟缺失。",
+    "约旦 vs 阿根廷最终比分、半场比分、进球/红黄牌/换人分钟缺失。",
+    "两场官方首发、实际阵型、控球/射门/xG/定位球/传中/抢断等技术报告缺失。",
+    "四队 player_state 和成员表尚未有第三轮逐场评分与出场分钟回灌。",
+    "32强落位可提示阿根廷和奥地利晋级位置，但 J/K/L 部分槽位仍有 as_things_stand/provisional 口径，需数据采集线程升级为 official_confirmed。"
+  ],
+  "matches": [
+    {
+      "match": "阿尔及利亚 vs 奥地利",
+      "postmatch_fact_status": "score_lineups_minutes_missing",
+      "verified_group_outcome_hint": "round-of-32 file places Austria as 2J as-things-stand; this implies Austria likely protected the qualification path, but exact match result is not locally verified.",
+      "actual_shape_and_plan": {
+        "status": "pending_data_collector",
+        "algeria": "不可把赛前预计4-3-3/4-4-2写成实际阵型；需官方首发与开场落位。",
+        "austria": "不可把赛前预计4-2-3-1写成实际阵型；需官方首发、Alaba位置、前锋选择和Laimer角色。"
+      },
+      "phase_review": {
+        "pressing_and_block_height": "赛前主判断是奥地利高压与二点回收对阿尔及利亚第一脚出球形成压力；赛后若奥地利确认为2J，该方向至少没有被结果层推翻，但缺实际抢回、压迫高度和出球失误证据。",
+        "transitions": "赛前判断阿尔及利亚后段会因净胜球/积分压力提高转换投入；是否真正形成高质量反击或反被奥地利打身后，需事件流确认。",
+        "set_pieces": "赛前双方均有定位球路径，阿尔及利亚依赖Mahrez脚法和后点，奥地利依赖Sabitzer/Alaba脚法和高点；缺定位球次数和落点结果。",
+        "key_matchups": "核心对位应复核：Mahrez/Ait-Nouri对奥地利边后卫身后，Seiwald/Laimer/Sabitzer对阿尔及利亚中场抗压，Benbouali/Gouiri对Danso/Alaba/Posch。",
+        "substitution_triggers": "赛前最关键触发是阿尔及利亚Benbouali/Amoura后手、奥地利Arnautovic/Gregoritsch/Wimmer调整；缺换人分钟无法判断教练执行质量。",
+        "game_state_changes": "赛前判断奥地利平局价值更高、阿尔及利亚后段更需冒险。若奥地利最终保持2J，应优先检查奥地利是否在60分钟后转为控风险，或阿尔及利亚打开后未能兑现。"
+      },
+      "pre_match_tactical_audit": [
+        {"claim": "奥地利平局/结果管理价值高于阿尔及利亚。", "postmatch_read": "方向暂时保留；32强落位显示奥地利进入2J，但需比分与比赛状态确认。", "confidence": "medium"},
+        {"claim": "阿尔及利亚后段更可能主动打开。", "postmatch_read": "逻辑仍成立，但缺实际换人、压上和射门时间线，不能判定执行成功或失败。", "confidence": "low"},
+        {"claim": "奥地利高压优势不可等同稳定打穿。", "postmatch_read": "仍应保留；若最终只是守住晋级路径而非明显压制，模型应继续区分过程压迫和终结。", "confidence": "medium"}
+      ],
+      "model_parameter_updates": {
+        "阿尔及利亚": {
+          "pressing_adjustment": {"direction": "hold", "magnitude": 0.0, "evidence": "实际压迫高度缺失；赛前仅支持中位防守加后段前压。", "confidence": "low", "model_note": "等待官方事件流，不做赛后增减。"},
+          "transition_attack_adjustment": {"direction": "hold_or_slight_down", "magnitude": -0.1, "evidence": "若奥地利确认为2J，阿尔及利亚必须赢/抢结果的转换路径未足以改变排名；但缺比分和机会质量。", "confidence": "low", "model_note": "先冻结，待射门/xG确认后再决定是否下修。"},
+          "transition_defense_risk": {"direction": "hold", "magnitude": 0.0, "evidence": "后段压上风险仍是赛前结构判断，缺被反击证据。", "confidence": "low", "model_note": "只保留第三轮情景风险，不回写长期防守。"},
+          "set_piece_advantage": {"direction": "hold", "magnitude": 0.0, "evidence": "缺定位球次数、主罚和落点结果。", "confidence": "low", "model_note": "Mahrez相关加成不与player_state重复。"},
+          "game_state_tendency": {"direction": "confirm_context", "magnitude": 0.2, "evidence": "赛前积分/净胜球语境确认阿尔及利亚应比奥地利更急；结果层未证明其足够有效。", "confidence": "medium", "model_note": "用于第三轮情景层，不回写常规比赛风格。"},
+          "third_round_motivation_tactical_shift": {"direction": "confirm", "magnitude": 0.3, "evidence": "同分但净胜球劣势的赛前事实成立。", "confidence": "high", "model_note": "动机触发正确，但执行质量待补。"}
+        },
+        "奥地利": {
+          "pressing_adjustment": {"direction": "hold_positive", "magnitude": 0.2, "evidence": "前两轮和赛前包均支持高压体系；晋级2J不推翻该基础。", "confidence": "medium", "model_note": "不要与central_control/transition_attack重复满额。"},
+          "transition_attack_adjustment": {"direction": "hold", "magnitude": 0.0, "evidence": "缺反击/二次进攻事件流。", "confidence": "low", "model_note": "待射门链路确认。"},
+          "transition_defense_risk": {"direction": "hold", "magnitude": 0.0, "evidence": "赛前高压身后风险仍成立，缺阿尔及利亚打穿证据。", "confidence": "low", "model_note": "先不长期下修。"},
+          "set_piece_advantage": {"direction": "hold", "magnitude": 0.0, "evidence": "缺定位球事件。", "confidence": "low", "model_note": "等待技术报告。"},
+          "game_state_tendency": {"direction": "confirm", "magnitude": 0.4, "evidence": "奥地利赛前平局价值高，32强落位2J与结果管理脚本兼容。", "confidence": "medium", "model_note": "第三轮模型应保留强draw-management开关。"},
+          "third_round_motivation_tactical_shift": {"direction": "confirm", "magnitude": 0.3, "evidence": "奥地利无需无条件追净胜球的赛前判断未被推翻。", "confidence": "medium", "model_note": "与draw_management合并限幅。"}
+        }
+      },
+      "player_state_role_updates_suggested": [
+        "阿尔及利亚：优先回灌Mahrez、Gouiri、Benbouali、Ait-Nouri、Zerrouki/Bennacer/Bentaleb实际首发、分钟、事件和内部评分。",
+        "奥地利：优先回灌Alaba实际位置与分钟、Laimer角色、Sabitzer创造、Gregoritsch/Arnautovic中锋排序、Posch/后卫牌面。"
+      ]
+    },
+    {
+      "match": "约旦 vs 阿根廷",
+      "postmatch_fact_status": "score_lineups_minutes_missing",
+      "verified_group_outcome_hint": "round-of-32 file places Argentina as confirmed 1J; exact match result and tactical implementation are not locally verified.",
+      "actual_shape_and_plan": {
+        "status": "pending_data_collector",
+        "jordan": "不可把赛前预计5-4-1/3-4-3写成实际阵型；需官方首发和开场无球落位。",
+        "argentina": "不可把赛前预计轮换4-4-2/4-3-3写成实际阵型；需确认Messi、Romero、De Paul、Enzo、Lautaro/Alvarez的实际分钟。"
+      },
+      "phase_review": {
+        "pressing_and_block_height": "赛前判断约旦前段低位、阿根廷选择性压迫且管理核心负荷。阿根廷最终1J确认该管理局未损害小组头名，但缺压迫强度与轮换事实。",
+        "transitions": "约旦主要路径仍应是Al-Taamari/Olwan反击；阿根廷的转换上限依赖约旦后段压出和Alvarez/Nico/Gonzalez等纵深跑。实际是否触发需事件流。",
+        "set_pieces": "赛前认为阿根廷若Messi出场定位球优势明显，若轮换则低位破局下修；约旦定位球为单事件尾部。缺主罚者和定位球结果。",
+        "key_matchups": "核心对位应复核：约旦五后卫禁区前保护对阿根廷中路回撤，Al-Taamari对阿根廷边后卫身后，阿根廷轮换中场对约旦二点球。",
+        "substitution_triggers": "重点确认Messi是否替补登场及时间、阿根廷是否用换人控节奏，约旦是否从低位转3-4-3/双前锋追进球。",
+        "game_state_changes": "阿根廷已6分，赛前判断为保头名、控风险和健康管理；1J确认目标达成，但不能据此判断比赛开放度。"
+      },
+      "pre_match_tactical_audit": [
+        {"claim": "阿根廷轮换/分钟管理会压低无条件大胜尾部。", "postmatch_read": "1J确认阿根廷目标达成；是否压低比分尾部需最终比分和Messi分钟确认。", "confidence": "medium"},
+        {"claim": "约旦低位能扩大前60分钟小比分走廊，但先丢球后风险上升。", "postmatch_read": "缺进球时间线，无法判定低位是否守住关键窗口。", "confidence": "low"},
+        {"claim": "阿根廷central_control和build-up优势是稳定主因。", "postmatch_read": "小组第一落位支持阿根廷基础控制未崩，但缺技术统计，不宜进一步上修。", "confidence": "medium"}
+      ],
+      "model_parameter_updates": {
+        "约旦": {
+          "pressing_adjustment": {"direction": "confirm_negative", "magnitude": -0.2, "evidence": "赛前和球队结构均指向低位，不应按0分动机写成高压。", "confidence": "medium", "model_note": "等待实际无球高度确认。"},
+          "transition_attack_adjustment": {"direction": "hold", "magnitude": 0.0, "evidence": "Al-Taamari路径存在，但缺本场反击事件。", "confidence": "low", "model_note": "不和Al-Taamari player_state重复。"},
+          "transition_defense_risk": {"direction": "hold_high_contextual", "magnitude": 0.2, "evidence": "若约旦后段追分，赛前风险成立；实际是否触发未知。", "confidence": "low", "model_note": "保留为game-state触发，不做全场均值。"},
+          "set_piece_advantage": {"direction": "hold", "magnitude": 0.0, "evidence": "缺定位球结果。", "confidence": "low", "model_note": "等待事件流。"},
+          "game_state_tendency": {"direction": "confirm_low_block_then_chase", "magnitude": 0.2, "evidence": "0分与对阿根廷实力差距共同指向先守后看。", "confidence": "medium", "model_note": "前段低事件，落后后风险上升。"},
+          "third_round_motivation_tactical_shift": {"direction": "confirm_late_only", "magnitude": 0.2, "evidence": "第三轮荣誉/理论第三名动机存在，但不应改变早段低位。", "confidence": "medium", "model_note": "只在后段开启。"}
+        },
+        "阿根廷": {
+          "pressing_adjustment": {"direction": "hold_selective", "magnitude": 0.1, "evidence": "赛前判断选择性压迫和轮换管理；1J达成不需推高持续高压。", "confidence": "medium", "model_note": "若实际Alvarez/Nico首发并高压成功，再上修。"},
+          "transition_attack_adjustment": {"direction": "hold", "magnitude": 0.0, "evidence": "缺约旦压出后反击事件。", "confidence": "low", "model_note": "等待进球链路。"},
+          "transition_defense_risk": {"direction": "hold_low", "magnitude": 0.0, "evidence": "前两轮零封和1J落位支持基础防守稳定，但本场约旦反击质量未知。", "confidence": "medium", "model_note": "暂不再上修零封能力。"},
+          "set_piece_advantage": {"direction": "pending_messi_minutes", "magnitude": 0.0, "evidence": "Messi是否首发/替补和主罚权未核定。", "confidence": "low", "model_note": "必须等官方出场记录。"},
+          "game_state_tendency": {"direction": "confirm_management", "magnitude": 0.4, "evidence": "阿根廷已6分且最终1J，赛前控风险/保头名语境成立。", "confidence": "medium_high", "model_note": "后续强队已出线局继续压低无条件追大胜。"},
+          "third_round_motivation_tactical_shift": {"direction": "confirm_negative_ceiling", "magnitude": -0.3, "evidence": "第三轮目标偏头名和健康管理，而非追净胜球。", "confidence": "medium_high", "model_note": "与rotation_shape_risk合并限幅。"}
+        }
+      },
+      "player_state_role_updates_suggested": [
+        "约旦：优先回灌Al-Taamari、Al-Rashdan、Olwan、Abulaila、Al-Arab、Abu Dahab的首发/分钟/牌面/反击职责。",
+        "阿根廷：优先回灌Messi实际分钟与角色、Alvarez/Lautaro排序、De Paul/Enzo/Mac Allister是否轮休、Romero/Medina/Paredes牌面与伤停风险。"
+      ]
+    }
+  ],
+  "double_counting_warnings": [
+    "奥地利pressing、central control和transition attack属于同一高压二点链，赛后更新不得三次满额加权。",
+    "阿尔及利亚Mahrez/Gouiri/Benbouali的球员状态、转换攻击和换人弹性高度重合，需按首发/替补时段拆分。",
+    "阿根廷1J落位、基础实力、central control和game_state management不可同时堆成大胜尾部。",
+    "约旦低位、draw/low-event floor和防守评分重合；若实际早早丢球，应转为first_goal_collapse_risk而不是长期防守下修。"
+  ],
+  "handoff_notes": {
+    "to_data_collector": [
+      "请补两场最终比分、半场比分、官方首发、实际阵型、换人分钟、牌面、进球助攻、技术统计和官方比赛报告。",
+      "请确认J组最终积分榜、阿根廷1J与奥地利2J是否已由FIFA/官方落位确认。"
+    ],
+    "to_modeler": [
+      "当前只能使用部分赛后参数：阿根廷management tendency、奥地利draw-management context、阿尔及利亚late-chase context、约旦low-block-then-chase context。",
+      "不要在缺比分和事件流时把本包用作完整赛后校准。"
+    ],
+    "to_roster_player_state": [
+      "四队第三轮成员表/player_state更新状态应为blocked或partial，直到官方首发分钟和事件表补齐。"
+    ]
+  }
+}

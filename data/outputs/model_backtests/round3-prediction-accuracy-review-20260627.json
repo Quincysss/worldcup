@@ -1,0 +1,240 @@
+{
+  "schema_version": "round3_prediction_accuracy_review_v1",
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "scope": {
+    "included_groups": ["B", "C", "E", "F", "G", "H", "I"],
+    "included_matches": 14,
+    "excluded": [
+      {
+        "group": "A",
+        "reason": "local round3 postmatch files are not complete in the current workspace"
+      },
+      {
+        "group": "D",
+        "reason": "local round3 postmatch files are not complete in the current workspace"
+      },
+      {
+        "groups": ["J", "K", "L"],
+        "reason": "current workspace has round3 prediction files but not full round3 final-result postmatch closure"
+      }
+    ],
+    "metric_policy": {
+      "prediction_1x2": "highest published/final 1X2 probability where available; otherwise explicit representative pick",
+      "score_top3": "actual exact score appears in the first three listed top_scorelines",
+      "betting_results": "not evaluated in this report"
+    }
+  },
+  "summary": {
+    "result_1x2": {
+      "hits": 10,
+      "total": 14,
+      "accuracy": 0.7143
+    },
+    "score_top3": {
+      "hits": 5,
+      "total": 14,
+      "accuracy": 0.3571
+    },
+    "score_top1": {
+      "hits": 2,
+      "total": 14,
+      "accuracy": 0.1429
+    },
+    "score_top5_reference": {
+      "hits": 7,
+      "total": 14,
+      "accuracy": 0.5,
+      "note": "Top5 is not the requested primary metric, but it is useful for model diagnosis."
+    }
+  },
+  "matches": [
+    {
+      "group": "B",
+      "match": "瑞士 vs 加拿大",
+      "actual_score": "2-1",
+      "actual_1x2": "home_win",
+      "predicted_1x2": "home_win",
+      "result_hit": true,
+      "top3_scores": ["1-1", "1-0", "0-1"],
+      "score_top3_hit": false,
+      "score_top5_hit": true,
+      "diagnosis": "方向层可接受；比分层把第三轮高压下的2-1尾部放在Top5而非Top3。"
+    },
+    {
+      "group": "B",
+      "match": "波黑 vs 卡塔尔",
+      "actual_score": "3-1",
+      "actual_1x2": "home_win",
+      "predicted_1x2": "home_win",
+      "result_hit": true,
+      "top3_scores": ["2-0", "1-0", "2-1"],
+      "score_top3_hit": false,
+      "score_top5_hit": false,
+      "diagnosis": "方向正确；低估波黑扩大比分和卡塔尔荣誉球同时出现的路径。"
+    },
+    {
+      "group": "C",
+      "match": "苏格兰 vs 巴西",
+      "actual_score": "0-3",
+      "actual_1x2": "away_win",
+      "predicted_1x2": "away_win",
+      "result_hit": true,
+      "top3_scores": ["0-2", "0-1", "0-3"],
+      "score_top3_hit": true,
+      "score_top5_hit": true,
+      "diagnosis": "强弱方向和净胜球动机都识别较好，0-3进入Top3。"
+    },
+    {
+      "group": "C",
+      "match": "摩洛哥 vs 海地",
+      "actual_score": "4-2",
+      "actual_1x2": "home_win",
+      "predicted_1x2": "home_win",
+      "result_hit": true,
+      "top3_scores": ["2-0", "3-0", "1-0"],
+      "score_top3_hit": false,
+      "score_top5_hit": false,
+      "diagnosis": "方向正确；模型把海地进球率压得过低，未覆盖4-2这种开放尾部。"
+    },
+    {
+      "group": "E",
+      "match": "厄瓜多尔 vs 德国",
+      "actual_score": "2-1",
+      "actual_1x2": "home_win",
+      "predicted_1x2": "away_win",
+      "result_hit": false,
+      "top3_scores": ["0-1", "1-1", "0-0"],
+      "score_top3_hit": false,
+      "score_top5_hit": false,
+      "diagnosis": "核心方向错误；过度信任德国基线和市场热度，低估德国已基本出线后的轮换/降速，以及厄瓜多尔必须赢球的强动机。"
+    },
+    {
+      "group": "E",
+      "match": "库拉索 vs 科特迪瓦",
+      "actual_score": "0-2",
+      "actual_1x2": "away_win",
+      "predicted_1x2": "away_win",
+      "result_hit": true,
+      "top3_scores": ["0-1", "0-2", "1-1"],
+      "score_top3_hit": true,
+      "score_top5_hit": true,
+      "diagnosis": "方向和比分簇均较好；红队压低大胜尾部后，0-2仍在Top3。"
+    },
+    {
+      "group": "F",
+      "match": "日本 vs 瑞典",
+      "actual_score": "1-1",
+      "actual_1x2": "draw",
+      "predicted_1x2": "home_win",
+      "result_hit": false,
+      "top3_scores": ["1-1", "1-0", "2-1"],
+      "score_top3_hit": true,
+      "score_top5_hit": true,
+      "diagnosis": "比分Top1命中但1X2概率层没命中；模型知道1-1是最高单比分，却把日本胜的总体概率堆得更高，说明发布层与比分簇层没有充分对齐。"
+    },
+    {
+      "group": "F",
+      "match": "突尼斯 vs 荷兰",
+      "actual_score": "1-3",
+      "actual_1x2": "away_win",
+      "predicted_1x2": "away_win",
+      "result_hit": true,
+      "top3_scores": ["0-2", "0-1", "0-3"],
+      "score_top3_hit": false,
+      "score_top5_hit": false,
+      "diagnosis": "方向正确；低估突尼斯荣誉球，同时低估荷兰继续扩大比分的双向开放路径。"
+    },
+    {
+      "group": "G",
+      "match": "新西兰 vs 比利时",
+      "actual_score": "1-5",
+      "actual_1x2": "away_win",
+      "predicted_1x2": "away_win",
+      "result_hit": true,
+      "top3_scores": ["0-1", "0-2", "1-1"],
+      "score_top3_hit": false,
+      "score_top5_hit": false,
+      "diagnosis": "方向正确；严重低估比利时大胜尾部和弱队崩盘风险。"
+    },
+    {
+      "group": "G",
+      "match": "埃及 vs 伊朗",
+      "actual_score": "1-1",
+      "actual_1x2": "draw",
+      "predicted_1x2": "home_win",
+      "result_hit": false,
+      "top3_scores": ["1-0", "0-0", "1-1"],
+      "score_top3_hit": true,
+      "score_top5_hit": true,
+      "diagnosis": "比分Top3命中但1X2层偏向埃及；低事件平局底盘应上调。"
+    },
+    {
+      "group": "H",
+      "match": "佛得角 vs 沙特",
+      "actual_score": "0-0",
+      "actual_1x2": "draw",
+      "predicted_1x2": "home_win",
+      "result_hit": false,
+      "top3_scores": ["1-1", "1-0", "0-1"],
+      "score_top3_hit": false,
+      "score_top5_hit": true,
+      "diagnosis": "方向层错，比分层只在Top4覆盖0-0；第三轮低事件互相牵制和佛得角保守拿分倾向被低估。"
+    },
+    {
+      "group": "H",
+      "match": "乌拉圭 vs 西班牙",
+      "actual_score": "0-1",
+      "actual_1x2": "away_win",
+      "predicted_1x2": "away_win",
+      "result_hit": true,
+      "top3_scores": ["0-1", "0-2", "1-1"],
+      "score_top3_hit": true,
+      "score_top5_hit": true,
+      "diagnosis": "方向和Top1比分均命中；强队领先后降速逻辑处理较好。"
+    },
+    {
+      "group": "I",
+      "match": "挪威 vs 法国",
+      "actual_score": "1-4",
+      "actual_1x2": "away_win",
+      "predicted_1x2": "away_win",
+      "result_hit": true,
+      "top3_scores": ["1-1", "0-1", "1-0"],
+      "score_top3_hit": false,
+      "score_top5_hit": false,
+      "diagnosis": "方向正确；低估法国转换进攻上限和挪威追分后防线暴露。"
+    },
+    {
+      "group": "I",
+      "match": "塞内加尔 vs 伊拉克",
+      "actual_score": "5-0",
+      "actual_1x2": "home_win",
+      "predicted_1x2": "home_win",
+      "result_hit": true,
+      "top3_scores": ["1-0", "1-1", "2-0"],
+      "score_top3_hit": false,
+      "score_top5_hit": false,
+      "diagnosis": "方向正确；严重低估塞内加尔净胜球追逐、弱队崩盘和红牌/状态突变类尾部。"
+    }
+  ],
+  "diagnosis_summary": {
+    "strengths": [
+      "强弱方向识别较稳，尤其是巴西、摩洛哥、科特迪瓦、荷兰、比利时、西班牙、法国、塞内加尔等优势方方向。",
+      "低比分核心簇在若干比赛有效，日本1-1瑞典、埃及1-1伊朗、乌拉圭0-1西班牙都被比分簇捕捉到。",
+      "红队修正后，部分大热深盘风险没有被盲目扩大。"
+    ],
+    "main_errors": [
+      "第三轮平局底盘不足：当一方不败即可接受或双方都能从低事件局面获益时，1X2发布层仍过度偏向一方胜。",
+      "已出线强队轮换/降速估计不足：德国负厄瓜多尔是最典型方向错误。",
+      "大胜尾部不足：新西兰1-5比利时、塞内加尔5-0伊拉克、挪威1-4法国等比分远离普通泊松中心。",
+      "比分簇与1X2发布层不完全一致：日本1-1瑞典、埃及1-1伊朗都说明最高精确比分已经提示平局，但最终1X2概率没有同步上调。"
+    ],
+    "parameter_update_recommendations": [
+      "For final group-round matches, add dynamic draw_floor adjustment of +0.04 to +0.08 when draw-enough, mutual-low-event, or third-place-risk control conditions are present.",
+      "For already-qualified favorites, cap market/favorite boost and add rotation_tempo_drag of -0.10 to -0.25 xG unless official lineups confirm full-strength intent.",
+      "Use a Poisson plus tail-mixture layer for goal-difference chase, eliminated-opponent-collapse, late red-card, or weak-defense-collapse situations.",
+      "When top exact score is draw but 1X2 probability leader is a narrow win under 45%, force red-team review of publication wording and publish as dual-path rather than single direction.",
+      "Report score clusters in addition to exact Top3, because exact scores are sparse and highly sensitive to late-game state."
+    ]
+  }
+}

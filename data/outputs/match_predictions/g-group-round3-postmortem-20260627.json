@@ -1,0 +1,261 @@
+{
+  "schema_version": "worldcup_postmatch_backtest_v2",
+  "generated_at": "2026-06-27T19:20:00+08:00",
+  "group": "G",
+  "round": "group_stage_round_3",
+  "status": "postmatch_review_done_player_tables_blocked",
+  "red_team_verdict": "revise_partial",
+  "red_team_blockers": [
+    "Do not mark complete before official lineups, substitution minutes, cards, injury follow-up, xG/stat source reconciliation, player_state updates and member-table backfill are done.",
+    "Do not overfit Belgium's 5-goal match into a permanent global favorite ceiling boost.",
+    "Do not globally raise draw floor from Egypt-Iran; limit the adjustment to low-tempo, low-block, qualification-incentive contexts."
+  ],
+  "source_threads": {
+    "data_collector": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+    "tactics_coach": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+    "modeler": "019edb8f-536a-7100-84da-e13bfecb0def",
+    "red_team": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+    "betting_risk": "019edb8f-cd0d-7393-bf92-d637962a67e4"
+  },
+  "source_files_read": [
+    "比赛/未开始比赛/小组赛/G组/2026-06-27_新西兰_vs_比利时_量化预测.md",
+    "比赛/未开始比赛/小组赛/G组/2026-06-27_埃及_vs_伊朗_量化预测.md",
+    "data/outputs/match_predictions/g-group-round3-quant-prediction-20260625.json",
+    "比赛/已完成比赛/小组赛/G组/G组第二轮复盘.md"
+  ],
+  "source_urls": [
+    "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-new-zealand-v-belgium-updates-nzl-vs-bel-group-g-match-score-latest",
+    "https://www.foxsports.com/soccer/fifa-world-cup-men-new-zealand-vs-belgium-jun-26-2026-game-boxscore-647680?tab=boxscore",
+    "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-egypt-v-iran-updates-egy-vs-irn-group-g-match-score-latest",
+    "https://www.espn.com/soccer/match/_/gameId/760476",
+    "https://www.foxsports.com/soccer/fifa-world-cup-men-egypt-vs-iran-jun-26-2026-game-boxscore-647681?tab=boxscore"
+  ],
+  "final_group_table": [
+    {
+      "rank": 1,
+      "team": "比利时",
+      "points": 5,
+      "goal_difference": 4,
+      "status": "qualified_group_winner"
+    },
+    {
+      "rank": 2,
+      "team": "埃及",
+      "points": 5,
+      "goal_difference": 2,
+      "status": "qualified_group_runner_up"
+    },
+    {
+      "rank": 3,
+      "team": "伊朗",
+      "points": 3,
+      "goal_difference": 0,
+      "status": "third_place_pending_cross_group"
+    },
+    {
+      "rank": 4,
+      "team": "新西兰",
+      "points": 1,
+      "goal_difference": -6,
+      "status": "eliminated"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "G-R3-20260627-NZL-BEL",
+      "match": "新西兰 1-5 比利时",
+      "actual_score": {
+        "home": 1,
+        "away": 5
+      },
+      "pre_match_probabilities_1x2": {
+        "home": 0.1708,
+        "draw": 0.2202,
+        "away": 0.609
+      },
+      "actual_1x2": "away",
+      "prediction_result": {
+        "match_direction_hit": true,
+        "top_score_hit": false,
+        "actual_score_probability": 0.0109,
+        "brier_score": 0.231,
+        "log_loss": 0.496,
+        "error_classification": [
+          "model_tail_error",
+          "blowout_tail_underweighted",
+          "scoreline_distribution_error"
+        ]
+      },
+      "expected_goals_pre_match": {
+        "home": 0.88,
+        "away": 1.88
+      },
+      "actual_xg_sources": [
+        {
+          "source": "FOX Sports",
+          "home_xg": 0.64,
+          "away_xg": 3.18
+        }
+      ],
+      "key_stats": {
+        "possession": {
+          "home": 45,
+          "away": 55
+        },
+        "shots": {
+          "home": 6,
+          "away": 33
+        },
+        "shots_on_goal": {
+          "home": 2,
+          "away": 10
+        },
+        "corners": {
+          "home": 5,
+          "away": 8
+        },
+        "goalkeeper_saves": {
+          "home": 5,
+          "away": 1
+        }
+      },
+      "tactical_findings": [
+        "比利时胜方向命中，但强队领先后继续扩大优势的第三轮脚本被低估。",
+        "新西兰先丢球后必须冒险，防转换风险非线性上升。",
+        "比利时替补和末段净胜球动机使领先后降速假设失效。"
+      ],
+      "parameter_updates": [
+        {
+          "name": "third_round_blowout_tail_boost",
+          "action": "increase",
+          "reason": "强队必须赢且弱队落后后开放时，3+/4+大胜尾部应上修。"
+        },
+        {
+          "name": "favorite_transition_ceiling",
+          "action": "increase",
+          "reason": "比利时面对抬线弱队时射门和xG上限远高于赛前均值。"
+        },
+        {
+          "name": "first_goal_collapse_risk",
+          "action": "increase",
+          "reason": "低位队先丢球后连续失球概率被低估。"
+        }
+      ],
+      "player_table_update_status": "blocked_pending_official_minutes_and_player_ratings"
+    },
+    {
+      "match_id": "G-R3-20260627-EGY-IRN",
+      "match": "埃及 1-1 伊朗",
+      "actual_score": {
+        "home": 1,
+        "away": 1
+      },
+      "pre_match_probabilities_1x2": {
+        "home": 0.3954,
+        "draw": 0.316,
+        "away": 0.2886
+      },
+      "actual_1x2": "draw",
+      "prediction_result": {
+        "match_direction_hit": false,
+        "draw_probability_covered": true,
+        "top_score_hit": true,
+        "actual_score_probability": 0.1335,
+        "brier_score": 0.708,
+        "log_loss": 1.152,
+        "error_classification": [
+          "draw_floor_partially_underweighted",
+          "top_score_hit",
+          "low_total_hit"
+        ]
+      },
+      "expected_goals_pre_match": {
+        "home": 1.05,
+        "away": 0.85
+      },
+      "actual_xg_sources": [
+        {
+          "source": "ESPN",
+          "home_xg": 0.81,
+          "away_xg": 1.94
+        },
+        {
+          "source": "FOX Sports",
+          "home_xg": 1.25,
+          "away_xg": 1.48
+        }
+      ],
+      "source_conflicts": [
+        {
+          "field": "xG",
+          "description": "ESPN and FOX Sports report materially different xG values; both retained."
+        }
+      ],
+      "key_stats": {
+        "fox_possession": {
+          "home": 62,
+          "away": 38
+        },
+        "fox_shots": {
+          "home": 14,
+          "away": 11
+        },
+        "fox_shots_on_goal": {
+          "home": 3,
+          "away": 3
+        },
+        "fox_corners": {
+          "home": 8,
+          "away": 2
+        },
+        "espn_shots": {
+          "home": 15,
+          "away": 13
+        },
+        "espn_shots_on_target": {
+          "home": 3,
+          "away": 4
+        }
+      },
+      "tactical_findings": [
+        "埃及早段领先但没有持续压死伊朗，领先管理风险暴露。",
+        "伊朗低位、点球/二点和末段VAR绝杀被吹显示平局和冷门尾部真实存在。",
+        "1-1是赛前Top3比分，低比分平局簇应继续保留高权重。"
+      ],
+      "parameter_updates": [
+        {
+          "name": "draw_floor_low_event",
+          "action": "slight_increase",
+          "reason": "平局概率超过30%的第三轮比赛不应被单一主胜叙事覆盖。"
+        },
+        {
+          "name": "btTS_low_total_branch",
+          "action": "slight_increase",
+          "reason": "低总进球比赛仍可能以1-1形式实现双方进球。"
+        },
+        {
+          "name": "iran_set_piece_penalty_tail",
+          "action": "increase",
+          "reason": "伊朗不需要控球优势即可通过禁区事件制造高质量机会。"
+        }
+      ],
+      "player_table_update_status": "blocked_pending_official_minutes_injury_confirmation_and_player_ratings"
+    }
+  ],
+  "global_rule_updates": [
+    "Postmatch reports must distinguish match_direction_hit from top_score_hit and ticket_settlement_hit.",
+    "Round-three predictions must expose margin_bucket_probability and blowout_tail_probability.",
+    "If 0-0 or 1-1 is a high-probability cluster, scoreline-set coverage must not silently omit it.",
+    "Player_state and member-table updates remain incomplete until official minutes, events and internal match ratings are filled."
+  ],
+  "validation": {
+    "json_parse_expected": true,
+    "markdown_outputs": [
+      "比赛/已完成比赛/小组赛/G组/2026-06-27_新西兰_1-5_比利时_复盘.md",
+      "比赛/已完成比赛/小组赛/G组/2026-06-27_埃及_1-1_伊朗_复盘.md",
+      "比赛/已完成比赛/小组赛/G组/G组第三轮复盘.md"
+    ],
+    "player_tables_updated": false,
+    "blocker": "Full player-state/member-table backfill needs official lineups, minutes, substitutions, cards, injuries and player-level rating inputs."
+  }
+}

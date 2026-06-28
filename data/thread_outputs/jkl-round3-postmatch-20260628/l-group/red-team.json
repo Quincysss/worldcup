@@ -1,0 +1,355 @@
+{
+  "schema_version": "l_group_round3_postmatch_red_team_review_v1",
+  "red_team_status": "complete_red_team_review_after_user_result_input_source_limited",
+  "created_at": "2026-06-28T21:12:00+08:00",
+  "owner": "worldcup-red-team-verifier",
+  "scope": [
+    "克罗地亚 vs 加纳",
+    "巴拿马 vs 英格兰"
+  ],
+  "overall_verdict": "hold",
+  "betting_language_blocked": true,
+  "no_betting_advice": true,
+  "actual_results_used": [
+    {
+      "match": "克罗地亚 vs 加纳",
+      "score": "2-1",
+      "source_status": "user_provided_current_task",
+      "local_postmatch_file_found": false
+    },
+    {
+      "match": "巴拿马 vs 英格兰",
+      "score": "0-2",
+      "source_status": "user_provided_current_task",
+      "local_postmatch_file_found": false
+    }
+  ],
+  "source_files_reviewed": [
+    ".codex/skills/worldcup-red-team-verifier/SKILL.md",
+    ".codex/skills/worldcup-red-team-verifier/references/review-checklist.md",
+    ".codex/skills/worldcup-red-team-verifier/references/market-risk.md",
+    "线程状态.md",
+    "data/outputs/match_predictions/l-group-round3-v3-quant-prediction-20260627.json",
+    "data/thread_outputs/l-group-round3-v3-20260627/modeler.json",
+    "data/thread_outputs/l-group-round3-v3-20260627/tactics-coach.json",
+    "data/thread_outputs/l-group-round3-v3-20260627/red-team.json",
+    "比赛/已完成比赛/小组赛/L组"
+  ],
+  "local_closure_status": {
+    "round3_completed_match_files_found": false,
+    "player_state_round3_update_found": false,
+    "member_table_round3_update_found": false,
+    "effect": "赛后方向/比分偏差可审查，但没有官方逐人分钟和评分时，复盘只能 partial/source_limited，不能 complete。"
+  },
+  "blocking_gates": [
+    {
+      "gate": "official postmatch review files",
+      "status": "missing_local_file",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "data-collector/postmatch",
+      "required_fix": "补两场正式复盘：官方首发、换人、逐人分钟、进球/助攻、牌、红牌/点球/定位球/早球、xG/射门。"
+    },
+    {
+      "gate": "canonical member table and player_state update",
+      "status": "missing_round3_records",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "player-state/data",
+      "required_fix": "同步克罗地亚、加纳、巴拿马、英格兰第三轮逐人分钟、事件、内部评分、状态值和伤停。"
+    },
+    {
+      "gate": "pre-match official lineups and market closure",
+      "status": "not closed in reviewed files",
+      "severity": "high",
+      "confidence": "high",
+      "owner": "data/market",
+      "required_fix": "补T-75官方首发、最终伤停/停赛/分钟限制、同源1X2/让球/大小球终盘快照。"
+    }
+  ],
+  "matches": [
+    {
+      "match": "克罗地亚 vs 加纳",
+      "match_id": "2026-06-28_croatia_vs_ghana",
+      "actual_result": "2-1",
+      "verdict": "hold",
+      "model_error_verdict": "revise",
+      "pre_match_snapshot": {
+        "xg": {
+          "croatia": 1.28,
+          "ghana": 0.78
+        },
+        "red_team_after_probabilities": {
+          "croatia_win": 0.485,
+          "draw": 0.305,
+          "ghana_win": 0.21
+        },
+        "model_probabilities_before_red_team": {
+          "croatia_win": 0.503837,
+          "draw": 0.290208,
+          "ghana_win": 0.205955
+        },
+        "top_scores": [
+          "1-0",
+          "0-0",
+          "1-1",
+          "2-0",
+          "0-1"
+        ],
+        "poisson_2_1_probability": 0.08144,
+        "totals": {
+          "over_2_5": 0.339559,
+          "under_2_5": 0.660441,
+          "btts_yes": 0.391011
+        }
+      },
+      "deviation_assessment": {
+        "direction_layer": "hit; Croatia win was first direction",
+        "score_layer": "2-1 was in matrix around 8.1% but outside top5",
+        "totals_layer": "over2.5 and BTTS occurred despite under/BTTS-no leaning",
+        "risk_modes": [
+          "Croatia urgency and late-game win need were correctly identified but the 2-1/BTTS route was under-featured in top scores.",
+          "Ghana low-block/draw-management was real enough to justify red-team caution, but a conceded second goal shows the model must separate draw utility from defensive inevitability.",
+          "Potential set-piece/late-break/second-phase route requires official event chain before parameter changes."
+        ]
+      },
+      "top_concerns": [
+        {
+          "concern": "方向命中不能掩盖比分和总进球尾部低估。",
+          "category": "model",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "克罗地亚胜方向命中，但2-1不在Top5；赛前under2.5约66.0%，实际3球且BTTS。",
+          "why_it_matters": "若复盘只写克罗地亚胜正确，会遗漏加纳进球尾部、后段破局和定位球/转换事件。",
+          "follow_up_check": "补进球时间、定位球/转换来源、红黄牌和换人后xG变化。",
+          "owner": "model/tactics"
+        },
+        {
+          "concern": "第三轮动机与低位守平因子可能没有按时间段建模。",
+          "category": "tournament/tactical",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "赛前已知克罗地亚3分更需要赢、加纳4分有守平价值；实际2-1说明后段破局和追平/反追逻辑必须分段。",
+          "why_it_matters": "将动机平均摊入全场xG会低估60分钟后的禁区投入和比分状态相关事件。",
+          "follow_up_check": "复盘按0-30、30-60、60-90拆解节奏、换人、压上和加纳反击质量。",
+          "owner": "tactics/model"
+        },
+        {
+          "concern": "逐人分钟和评分缺失阻断complete。",
+          "category": "data",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "本地未见克罗地亚/加纳2026-06-28第三轮成员表或player_state记录。",
+          "why_it_matters": "老将分钟、门将选择、Partey/中卫状态、进球球员状态不回写，会污染淘汰赛和回测。",
+          "follow_up_check": "更新两队首发、换人、每名球员分钟、事件、内部评分和状态值。",
+          "owner": "player-state/data"
+        }
+      ],
+      "quant_chain_flags": [
+        {
+          "flag": "small_sample_overfit",
+          "severity": "medium",
+          "confidence": "high",
+          "detail": "三轮样本里克罗地亚从4-2失利到连续小胜，不能直接上修为稳定强队；需按对手和情境拆分。"
+        },
+        {
+          "flag": "poisson_underweights_state_correlation",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "2-1说明一旦出现早球、追分或换人破局，BTTS和over2.5尾部比静态低总进球更厚。"
+        },
+        {
+          "flag": "duplicate_counting_risk",
+          "severity": "medium",
+          "confidence": "high",
+          "detail": "克罗地亚经验/中场控制/市场支持/第三轮必须赢可能在strength、tactics、third_round_context和market中重复。"
+        },
+        {
+          "flag": "market_experience_premium",
+          "severity": "medium",
+          "confidence": "medium",
+          "detail": "市场克罗地亚胜去水约55.3%，强于模型；赛果方向命中不证明市场经验溢价必然合理。"
+        }
+      ],
+      "parameter_update_risks": [
+        "不要把2-1直接上修为克罗地亚常规攻击强度；先分离第三轮必须赢、换人、定位球/后段破局。",
+        "不要把加纳失利解读为低位防守失效；其进球说明转换/定位球或单点事件仍需保留。",
+        "不要因为BTTS命中就全面上修加纳进攻，必须看射门质量和进球来源。"
+      ],
+      "required_fixes": [
+        {
+          "owner": "data-collector/postmatch",
+          "fix": "补克罗地亚2-1加纳事件链、官方首发、换人、射门/xG、进球来源。"
+        },
+        {
+          "owner": "player-state",
+          "fix": "更新克罗地亚/加纳逐人分钟、评分、进球/助攻/牌/伤停和状态值。"
+        },
+        {
+          "owner": "modeler",
+          "fix": "校准third_round_late_break、BTTS_tail、set_piece_or_second_phase_tail，并审计重复计权。"
+        }
+      ]
+    },
+    {
+      "match": "巴拿马 vs 英格兰",
+      "match_id": "2026-06-28_panama_vs_england",
+      "actual_result": "0-2",
+      "verdict": "hold",
+      "model_error_verdict": "revise",
+      "pre_match_snapshot": {
+        "xg": {
+          "panama": 0.5,
+          "england": 1.75
+        },
+        "red_team_after_probabilities": {
+          "panama_win": 0.115,
+          "draw": 0.24,
+          "england_win": 0.645
+        },
+        "model_probabilities_before_red_team": {
+          "panama_win": 0.099919,
+          "draw": 0.21987,
+          "england_win": 0.680211
+        },
+        "top_scores": [
+          "0-1",
+          "0-2",
+          "0-0",
+          "0-3",
+          "1-1"
+        ],
+        "poisson_0_2_probability": 0.161393,
+        "totals": {
+          "over_2_5": 0.390661,
+          "under_2_5": 0.609339,
+          "btts_yes": 0.325095
+        }
+      },
+      "deviation_assessment": {
+        "direction_layer": "hit; England win was first direction",
+        "score_layer": "exact score 0-2 was Top2 and well-covered",
+        "totals_layer": "under2.5 and BTTS-no were model-aligned and occurred",
+        "risk_modes": [
+          "England low-block conversion risk was appropriately capped by red-team; 0-2 fits controlled favorite path rather than blowout.",
+          "Panama attacking weakness and England clean-sheet path were well represented.",
+          "Still cannot complete because official lineups,逐人分钟, and ratings are absent locally."
+        ]
+      },
+      "top_concerns": [
+        {
+          "concern": "赛果命中度高，但不能升级为complete。",
+          "category": "data",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "0-2为Top2，方向/小球/BTTS-no均贴近模型；但本地缺第三轮复盘、官方逐人分钟和评分。",
+          "why_it_matters": "回测如果没有出场与轮换信息，会错误评估英格兰首发强度、分钟管理和巴拿马防线状态。",
+          "follow_up_check": "补官方首发、换人、分钟、评分和伤停状态。",
+          "owner": "data/player-state"
+        },
+        {
+          "concern": "强队胜方向命中不能过度外推到favorite ceiling。",
+          "category": "model",
+          "severity": "medium",
+          "confidence": "high",
+          "evidence": "实际0-2是控制型小胜；赛前红队已要求不要把英格兰写成自动打穿或3+稳定路径。",
+          "why_it_matters": "若参数更新只看英格兰赢球，会错误上调强队大胜尾部。",
+          "follow_up_check": "拆分英格兰胜、净胜2、净胜3+和低位破局时间。",
+          "owner": "model"
+        },
+        {
+          "concern": "伤停/首发过期风险需要赛后关闭。",
+          "category": "availability",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "赛前文件仍标Reece James、Rice、Kane/Bellingham/Saka等轮换/分钟管理待T-75确认。",
+          "why_it_matters": "如果实际首发与预测不同，0-2回测不能归功于同一条赛前模型链。",
+          "follow_up_check": "比对预测XI与官方XI，记录核心轮换和分钟限制。",
+          "owner": "data/team-news"
+        }
+      ],
+      "quant_chain_flags": [
+        {
+          "flag": "scoreline_hit_but_context_missing",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "0-2 Top2命中，但没有官方首发/分钟/事件链，不能判断是模型因子命中还是阵容差异后的巧合。"
+        },
+        {
+          "flag": "favorite_ceiling_overfit_risk",
+          "severity": "medium",
+          "confidence": "high",
+          "detail": "0-2支持英格兰控制小胜，不支持无条件提高3+大胜尾部。"
+        },
+        {
+          "flag": "poisson_tail_review",
+          "severity": "medium",
+          "confidence": "medium",
+          "detail": "本场未体现红牌/早球/大比分尾部，但仍需事件链确认是否有早球、点球或低位久攻后破局。"
+        },
+        {
+          "flag": "market_missing_ordinary_1x2",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "赛前普通胜平负缺失，不能用赛果回补市场校准有效性。"
+        }
+      ],
+      "parameter_update_risks": [
+        "不要因为0-2命中就放松T-75首发闸门；阵容和分钟必须先核验。",
+        "不要把英格兰胜率或大胜上限一并上调；0-2更支持小胜/低位破局路径。",
+        "不要把巴拿马零进球直接下修为完全无威胁，需看是否有反击、定位球或被早球改变计划。"
+      ],
+      "required_fixes": [
+        {
+          "owner": "data-collector/postmatch",
+          "fix": "补巴拿马0-2英格兰事件链、官方首发、换人、射门/xG、进球时间。"
+        },
+        {
+          "owner": "player-state",
+          "fix": "更新巴拿马/英格兰逐人分钟、评分、进球/助攻/牌/伤停和状态值。"
+        },
+        {
+          "owner": "modeler",
+          "fix": "在回测中拆分方向命中、比分Top2命中、小球命中和强队大胜未发生。"
+        }
+      ]
+    }
+  ],
+  "postmatch_review_quality_flags": [
+    {
+      "flag": "partial_only_until_player_minutes_and_ratings",
+      "severity": "blocker",
+      "confidence": "high",
+      "detail": "若官方逐人分钟和评分缺失，L组三轮复盘必须标partial/source_limited，不能complete。"
+    },
+    {
+      "flag": "direction_hit_not_full_model_pass",
+      "severity": "high",
+      "confidence": "high",
+      "detail": "克罗地亚方向命中但2-1/BTTS/over2.5尾部需revise；英格兰0-2命中较好但仍不能绕过数据闭环。"
+    },
+    {
+      "flag": "betting_language_block",
+      "severity": "blocker",
+      "confidence": "high",
+      "detail": "不允许将赛后命中转写为投注建议、稳胆或可执行表达。"
+    }
+  ],
+  "handoff": {
+    "verdict": "hold",
+    "must_fix": [
+      "补两场正式复盘与官方事件链。",
+      "同步四队成员表与player_state第三轮逐人分钟、评分、事件和状态值。",
+      "克罗地亚2-1加纳：复核后段破局、BTTS、over2.5、定位球/转换/换人尾部。",
+      "巴拿马0-2英格兰：保留小胜路径命中，但禁止上修强队大胜ceiling。",
+      "回测必须拆分方向、比分、总进球、BTTS、盘口/让球，不得混写。"
+    ],
+    "owners": {
+      "data-collector/postmatch": "官方赛果事件链与技术统计",
+      "player-state": "四队成员表和状态表",
+      "tactics-coach": "战术证伪/兑现链",
+      "modeler": "参数校准、回测拆分和重复计权审计",
+      "main": "阻断项清除前不得发布complete或投注化语言"
+    }
+  }
+}

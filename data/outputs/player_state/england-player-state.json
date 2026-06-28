@@ -4,9 +4,9 @@
   "team_en": "England",
   "group": "L组",
   "status": "complete",
-  "player_state_update_status": "updated_round2_postmatch",
+  "player_state_update_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
   "created_at": "2026-06-21T01:18:00+08:00",
-  "updated_at": "2026-06-24T09:54:21+08:00",
+  "updated_at": "2026-06-28T22:35:00+08:00",
   "owner": "worldcup-data-collector-england",
   "round_context": "英格兰 0-0 加纳 第二轮赛后迭代：写入 round2、内部评分、状态值与伤停观察项。",
   "players": [
@@ -50,7 +50,7 @@
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
       "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场，保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -135,7 +135,25 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "迪恩·亨德森",
+        "english_name": "Dean Henderson",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "詹姆斯·特拉福德",
@@ -177,7 +195,7 @@
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
       "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场，保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -262,7 +280,25 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "詹姆斯·特拉福德",
+        "english_name": "James Trafford",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "乔丹·皮克福德",
@@ -303,8 +339,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.8,
-      "form_status_reason": "零封但一次出击处理有风险，内部状态小幅下调。",
+      "form_status_1_5": 3.6,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -410,7 +446,25 @@
         "postmatch_form_status_1_5": 2.8,
         "injury_status_after_match": "no_new_official_report",
         "note": "零封但一次出击处理有风险，内部状态小幅下调。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "乔丹·皮克福德",
+        "english_name": "Jordan Pickford",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.6,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "马克·格伊",
@@ -451,8 +505,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.1,
-      "form_status_reason": "中卫线整体稳定但进攻端帮助有限。",
+      "form_status_1_5": 3.5,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮替补进入轮换样本。",
       "source_log": [
         {
@@ -558,7 +612,25 @@
         "postmatch_form_status_1_5": 3.1,
         "injury_status_after_match": "no_new_official_report",
         "note": "中卫线整体稳定但进攻端帮助有限。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "马克·格伊",
+        "english_name": "Marc Guéhi",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "贾雷尔·宽萨",
@@ -600,7 +672,7 @@
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
       "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场，保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_reason": "60分钟黄牌并脚踝伤退，63分钟被换下。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -685,7 +757,25 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "贾雷尔·宽萨",
+        "english_name": "Jarell Quansah",
+        "started": "是",
+        "minutes": 63,
+        "event_summary": "60分钟黄牌并脚踝伤退，63分钟被换下。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "埃兹里·孔萨",
@@ -726,8 +816,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.9,
-      "form_status_reason": "有关键补防，但整体出球和推进贡献有限。",
+      "form_status_1_5": 3.4,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -833,7 +923,25 @@
         "postmatch_form_status_1_5": 2.9,
         "injury_status_after_match": "no_new_official_report",
         "note": "有关键补防，但整体出球和推进贡献有限。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "埃兹里·孔萨",
+        "english_name": "Ezri Konsa",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.4,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.4,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "特雷沃·查洛巴",
@@ -875,7 +983,7 @@
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
       "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场，保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -960,7 +1068,25 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "特雷沃·查洛巴",
+        "english_name": "Trevoh Chalobah",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "约翰·斯通斯",
@@ -1001,8 +1127,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3,
-      "form_status_reason": "首轮首发并参与4-2取胜，个人状态中性偏稳。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -1108,7 +1234,25 @@
         "postmatch_form_status_1_5": 3,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "约翰·斯通斯",
+        "english_name": "John Stones",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "丹·伯恩",
@@ -1150,7 +1294,7 @@
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
       "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场，保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -1235,7 +1379,25 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "丹·伯恩",
+        "english_name": "Dan Burn",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "尼科·奥赖利",
@@ -1276,8 +1438,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.2,
-      "form_status_reason": "替补后制造后点机会，头球击中横梁/接近破门。",
+      "form_status_1_5": 3.4,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -1383,7 +1545,25 @@
         "postmatch_form_status_1_5": 3.2,
         "injury_status_after_match": "no_new_official_report",
         "note": "替补后制造后点机会，头球击中横梁/接近破门。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "尼科·奥赖利",
+        "english_name": "Nico O'Reilly",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.4,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.4,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "杰德·斯彭斯",
@@ -1424,8 +1604,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.8,
-      "form_status_reason": "左路推进有限，66分钟被 O'Reilly 替换。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮替补进入轮换样本。",
       "source_log": [
         {
@@ -1531,7 +1711,25 @@
         "postmatch_form_status_1_5": 2.8,
         "injury_status_after_match": "no_new_official_report",
         "note": "左路推进有限，66分钟被 O'Reilly 替换。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "杰德·斯彭斯",
+        "english_name": "Djed Spence",
+        "started": "替补",
+        "minutes": 27,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "里斯·詹姆斯",
@@ -1572,8 +1770,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.2,
-      "form_status_reason": "开局活跃；与 Jordan Ayew 对抗后接受治疗，标记赛前复核。",
+      "form_status_1_5": 2.0,
+      "form_status_reason": "赛前伤缺。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -1679,7 +1877,25 @@
         "postmatch_form_status_1_5": 3.2,
         "injury_status_after_match": "monitor",
         "note": "开局活跃；与 Jordan Ayew 对抗后接受治疗，标记赛前复核。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "里斯·詹姆斯",
+        "english_name": "Reece James",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "赛前伤缺。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "乔丹·亨德森",
@@ -1720,8 +1936,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场，保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -1806,7 +2022,25 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "乔丹·亨德森",
+        "english_name": "Jordan Henderson",
+        "started": "替补",
+        "minutes": 5,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "德克兰·赖斯",
@@ -1847,8 +2081,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.6,
-      "form_status_reason": "上半场英格兰最稳定中场，推进和覆盖均较好。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "轻伤/黄牌管理，替补未出场。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -1954,7 +2188,25 @@
         "postmatch_form_status_1_5": 3.6,
         "injury_status_after_match": "no_new_official_report",
         "note": "上半场英格兰最稳定中场，推进和覆盖均较好。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "德克兰·赖斯",
+        "english_name": "Declan Rice",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "轻伤/黄牌管理，替补未出场。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "埃利奥特·安德森",
@@ -1995,8 +2247,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.8,
-      "form_status_reason": "控球偏慢，未能持续打穿加纳中场。",
+      "form_status_1_5": 3.3,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -2102,7 +2354,25 @@
         "postmatch_form_status_1_5": 2.8,
         "injury_status_after_match": "no_new_official_report",
         "note": "控球偏慢，未能持续打穿加纳中场。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "埃利奥特·安德森",
+        "english_name": "Elliot Anderson",
+        "started": "是",
+        "minutes": 85,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.3,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.3,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "科比·梅努",
@@ -2144,7 +2414,7 @@
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
       "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场，保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -2229,7 +2499,25 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "科比·梅努",
+        "english_name": "Kobbie Mainoo",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "裘德·贝林厄姆",
@@ -2270,8 +2558,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.2,
-      "form_status_reason": "第50场国家队出场，活动范围大但决定性不足。",
+      "form_status_1_5": 4.9,
+      "form_status_reason": "62分钟破门，67分钟助攻Kane，73分钟下场。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -2377,7 +2665,25 @@
         "postmatch_form_status_1_5": 3.2,
         "injury_status_after_match": "no_new_official_report",
         "note": "第50场国家队出场，活动范围大但决定性不足。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "裘德·贝林厄姆",
+        "english_name": "Jude Bellingham",
+        "started": "是",
+        "minutes": 73,
+        "event_summary": "62分钟破门，67分钟助攻Kane，73分钟下场。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 4.9,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 4.9,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "摩根·罗杰斯",
@@ -2418,8 +2724,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.1,
-      "form_status_reason": "替补提供活力，样本仍短。",
+      "form_status_1_5": 3.2,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮替补进入轮换样本。",
       "source_log": [
         {
@@ -2525,7 +2831,25 @@
         "postmatch_form_status_1_5": 3.1,
         "injury_status_after_match": "no_new_official_report",
         "note": "替补提供活力，样本仍短。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "摩根·罗杰斯",
+        "english_name": "Morgan Rogers",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.2,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.2,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "埃贝雷奇·埃泽",
@@ -2566,8 +2890,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.8,
-      "form_status_reason": "替补影响有限。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -2652,7 +2976,25 @@
         "postmatch_form_status_1_5": 2.8,
         "injury_status_after_match": "no_new_official_report",
         "note": "替补影响有限。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "埃贝雷奇·埃泽",
+        "english_name": "Eberechi Eze",
+        "started": "替补",
+        "minutes": 17,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "安东尼·戈登",
@@ -2693,8 +3035,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.4,
-      "form_status_reason": "边路首发冲击不够，66分钟被 Saka 替换。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -2800,7 +3142,25 @@
         "postmatch_form_status_1_5": 2.4,
         "injury_status_after_match": "no_new_official_report",
         "note": "边路首发冲击不够，66分钟被 Saka 替换。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "安东尼·戈登",
+        "english_name": "Anthony Gordon",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "马库斯·拉什福德",
@@ -2842,7 +3202,7 @@
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
       "form_status_1_5": 3.1,
-      "form_status_reason": "替补阶段参与提速，但没有终结输出。",
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮替补进入轮换样本。",
       "source_log": [
         {
@@ -2948,7 +3308,25 @@
         "postmatch_form_status_1_5": 3.1,
         "injury_status_after_match": "no_new_official_report",
         "note": "替补阶段参与提速，但没有终结输出。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "马库斯·拉什福德",
+        "english_name": "Marcus Rashford",
+        "started": "是",
+        "minutes": 90,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.1,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.1,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "布卡约·萨卡",
@@ -2989,8 +3367,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.7,
-      "form_status_reason": "替补后明显提升边路节奏和威胁。",
+      "form_status_1_5": 3.9,
+      "form_status_reason": "62分钟角球助攻/制造破局，63分钟下场。",
       "model_note": "首轮替补进入轮换样本。",
       "source_log": [
         {
@@ -3096,7 +3474,25 @@
         "postmatch_form_status_1_5": 3.7,
         "injury_status_after_match": "no_new_official_report",
         "note": "替补后明显提升边路节奏和威胁。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "布卡约·萨卡",
+        "english_name": "Bukayo Saka",
+        "started": "是",
+        "minutes": 63,
+        "event_summary": "62分钟角球助攻/制造破局，63分钟下场。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.9,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.9,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "诺尼·马杜埃凯",
@@ -3137,8 +3533,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.1,
-      "form_status_reason": "有直接性，但最终传球质量不足。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -3244,7 +3640,25 @@
         "postmatch_form_status_1_5": 3.1,
         "injury_status_after_match": "no_new_official_report",
         "note": "有直接性，但最终传球质量不足。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "诺尼·马杜埃凯",
+        "english_name": "Noni Madueke",
+        "started": "替补",
+        "minutes": 27,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "哈里·凯恩",
@@ -3285,8 +3699,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.1,
-      "form_status_reason": "上半场安静，后段错过补射机会。",
+      "form_status_1_5": 4.5,
+      "form_status_reason": "67分钟头球破门，85分钟下场。",
       "model_note": "首轮进入Tuchel首发样本。",
       "source_log": [
         {
@@ -3392,7 +3806,25 @@
         "postmatch_form_status_1_5": 3.1,
         "injury_status_after_match": "no_new_official_report",
         "note": "上半场安静，后段错过补射机会。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "哈里·凯恩",
+        "english_name": "Harry Kane",
+        "started": "是",
+        "minutes": 85,
+        "event_summary": "67分钟头球破门，85分钟下场。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 4.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 4.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "奥利·沃特金斯",
@@ -3433,8 +3865,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场，保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -3519,7 +3951,25 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "奥利·沃特金斯",
+        "english_name": "Ollie Watkins",
+        "started": "替补",
+        "minutes": 5,
+        "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     },
     {
       "chinese_name": "伊万·托尼",
@@ -3561,7 +4011,7 @@
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
       "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场，保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_reason": "未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未登场，保持轮换/深度跟踪。",
       "source_log": [
         {
@@ -3646,7 +4096,25 @@
         "postmatch_form_status_1_5": 2.5,
         "injury_status_after_match": "no_new_official_report",
         "note": "本场未取得稳定个人级事件，保留团队层面状态迭代。"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_PAN_0-2_ENG",
+        "match": "2026-06-28_巴拿马_0-2_英格兰",
+        "date": "2026-06-28",
+        "opponent": "巴拿马",
+        "player": "伊万·托尼",
+        "english_name": "Ivan Toney",
+        "started": "否",
+        "minutes": 0,
+        "event_summary": "未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, minutes, goals/assists/cards, injury, tactical event involvement. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:35:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:35:00+08:00"
     }
   ],
   "team_style_facts": [
@@ -4320,5 +4788,454 @@
     "records": 26,
     "review_file": "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\L组\\2026-06-17_英格兰_4-2_克罗地亚_复盘.md"
   },
-  "round2_source_status": "Guardian player ratings + England Football match centre"
+  "round2_source_status": "Guardian player ratings + England Football match centre",
+  "round3_postmatch_update": {
+    "match_id": "2026-06-28_PAN_0-2_ENG",
+    "match": "2026-06-28_巴拿马_0-2_英格兰",
+    "opponent": "巴拿马",
+    "result": "2-0 win",
+    "captured_at": "2026-06-28T22:35:00+08:00",
+    "status": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+    "source_log": [
+      {
+        "source": "The Guardian live - Panama 0-2 England",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/panama-v-england-world-cup-2026-live-updates",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "starting_lineups",
+          "goals",
+          "assists",
+          "substitutions",
+          "cards",
+          "injury watch",
+          "group table"
+        ],
+        "source_status": "confirmed_primary_live"
+      },
+      {
+        "source": "Times of India - England vs Panama result",
+        "url": "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/england-vs-panama-fifa-world-cup-match-result-jude-bellingham-record-breaker-harry-kane-guide-england-into-favourable-knockout-bracket/articleshow/132044172.cms",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "goalscorers",
+          "England top group context"
+        ],
+        "source_status": "supporting"
+      },
+      {
+        "source": "The Times live - England vs Panama",
+        "url": "https://www.thetimes.com/sport/football/world-cup/article/england-vs-panama-live-score-updates-world-cup-2026-latest-news-commentary-dc6kps9r7",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "England XI",
+          "Quansah injury",
+          "Bellingham/Kane goals",
+          "Rice fitness context"
+        ],
+        "source_status": "supporting"
+      }
+    ],
+    "data_gaps": [
+      "FIFA官方完整事件表未取得。",
+      "两场官方完整逐人分钟、全部替补补时细节和完整技术统计未闭合。",
+      "同源外部逐人评分未取得；后续成员表/player_state应将 external_rating 设为 null，并写 rating_source_status/rating_missing_note。",
+      "克罗地亚 2-1 加纳部分助攻未由当前可靠源确认，Petar Sucic和Derrick Luckassen进球 assist 保留 null。",
+      "加纳 Antoine Semenyo、英格兰 Jarell Quansah 的赛后伤情需后续官方/队医或发布会源复核。",
+      "本包只提供结构化事实输入，未直接更新四队 canonical 成员表或 player_state。"
+    ]
+  },
+  "round3_internal_rating_logs": [
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "迪恩·亨德森",
+      "english_name": "Dean Henderson",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "詹姆斯·特拉福德",
+      "english_name": "James Trafford",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "乔丹·皮克福德",
+      "english_name": "Jordan Pickford",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.6,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "马克·格伊",
+      "english_name": "Marc Guéhi",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.5,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "贾雷尔·宽萨",
+      "english_name": "Jarell Quansah",
+      "started": "是",
+      "minutes": 63,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "60分钟黄牌并脚踝伤退，63分钟被换下。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "埃兹里·孔萨",
+      "english_name": "Ezri Konsa",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.4,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "特雷沃·查洛巴",
+      "english_name": "Trevoh Chalobah",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "约翰·斯通斯",
+      "english_name": "John Stones",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "丹·伯恩",
+      "english_name": "Dan Burn",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "尼科·奥赖利",
+      "english_name": "Nico O'Reilly",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.4,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "杰德·斯彭斯",
+      "english_name": "Djed Spence",
+      "started": "替补",
+      "minutes": 27,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "里斯·詹姆斯",
+      "english_name": "Reece James",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.0,
+      "event_summary": "赛前伤缺。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "乔丹·亨德森",
+      "english_name": "Jordan Henderson",
+      "started": "替补",
+      "minutes": 5,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "德克兰·赖斯",
+      "english_name": "Declan Rice",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "轻伤/黄牌管理，替补未出场。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "埃利奥特·安德森",
+      "english_name": "Elliot Anderson",
+      "started": "是",
+      "minutes": 85,
+      "internal_match_rating_1_5": 3.3,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "科比·梅努",
+      "english_name": "Kobbie Mainoo",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "裘德·贝林厄姆",
+      "english_name": "Jude Bellingham",
+      "started": "是",
+      "minutes": 73,
+      "internal_match_rating_1_5": 4.9,
+      "event_summary": "62分钟破门，67分钟助攻Kane，73分钟下场。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "摩根·罗杰斯",
+      "english_name": "Morgan Rogers",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.2,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "埃贝雷奇·埃泽",
+      "english_name": "Eberechi Eze",
+      "started": "替补",
+      "minutes": 17,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "安东尼·戈登",
+      "english_name": "Anthony Gordon",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "马库斯·拉什福德",
+      "english_name": "Marcus Rashford",
+      "started": "是",
+      "minutes": 90,
+      "internal_match_rating_1_5": 3.1,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "布卡约·萨卡",
+      "english_name": "Bukayo Saka",
+      "started": "是",
+      "minutes": 63,
+      "internal_match_rating_1_5": 3.9,
+      "event_summary": "62分钟角球助攻/制造破局，63分钟下场。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "诺尼·马杜埃凯",
+      "english_name": "Noni Madueke",
+      "started": "替补",
+      "minutes": 27,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "哈里·凯恩",
+      "english_name": "Harry Kane",
+      "started": "是",
+      "minutes": 85,
+      "internal_match_rating_1_5": 4.5,
+      "event_summary": "67分钟头球破门，85分钟下场。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "奥利·沃特金斯",
+      "english_name": "Ollie Watkins",
+      "started": "替补",
+      "minutes": 5,
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "前60分钟破局困难，Bellingham-Kane五分钟窗口完成控制型胜利。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_PAN_0-2_ENG",
+      "match": "2026-06-28_巴拿马_0-2_英格兰",
+      "date": "2026-06-28",
+      "opponent": "巴拿马",
+      "player": "伊万·托尼",
+      "english_name": "Ivan Toney",
+      "started": "否",
+      "minutes": 0,
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:35:00+08:00"
+    }
+  ]
 }

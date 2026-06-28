@@ -42,6 +42,7 @@ When the output will feed a match prediction, group projection, or backtest, pro
 - `form_status_1_5` for each relevant player, allowing one decimal place from 1.0 to 5.0, with a short reason and source context.
 - injury, suspension, availability, and minutes-risk fields.
 - expected or confirmed starter status, starts, substitution role, and recent minutes.
+- predicted-lineup fields for each match prediction: probable formation, probable XI, rotation candidates, lineup confidence, source log, conflicts, and the T-75 official-lineup gate. Before T-75 official lineups, confidence normally must not exceed `medium`; higher confidence requires explicit multi-source or official-adjacent evidence.
 - recent performance: goals, assists, cards, xG/xA or shot data when available, and external ratings only when same-source coverage is reliable.
 - rating fields: `external_rating`, `rating_source`, `rating_source_status`, `rating_missing_note`, `internal_rating_proxy`, and `internal_rating_proxy_basis`. The model should rely primarily on `form_status_1_5`, per-match `internal_match_rating_1_5`, minutes, events, availability, and role evidence; external ratings are an auxiliary factor.
 - club, league, market value, position, role, preferred foot, height, and squad status when available.

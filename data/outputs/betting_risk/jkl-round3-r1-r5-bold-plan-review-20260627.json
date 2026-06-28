@@ -1,0 +1,222 @@
+{
+  "schema_version": "jkl_round3_bold_plan_review_v1",
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "status": "discussion_only_hold",
+  "betting_gate": {
+    "stake_total_executable": 0,
+    "discussion_budget_reference": 75,
+    "required_before_execution": [
+      "T-75 official lineups for all used matches",
+      "latest injury/suspension/minutes-risk check",
+      "official China Sports Lottery live odds",
+      "same-source odds for every used market",
+      "red-team status not hold/revise"
+    ],
+    "current_verdict": "hold_not_executable"
+  },
+  "source_files": [
+    "赔率与投注/JKL组第三轮75元_5-6票discussion_only方案_20260627.md",
+    "data/outputs/betting_risk/jkl-round3-75yuan-5to6-ticket-discussion-plan-20260627.json",
+    "data/outputs/match_predictions/j-group-round3-v3-quant-prediction-20260627.json",
+    "data/outputs/match_predictions/k-group-round3-quant-prediction-20260627.json",
+    "data/outputs/match_predictions/l-group-round3-v3-quant-prediction-20260627.json"
+  ],
+  "leg_reference": {
+    "067_croatia_minus1_away_win": {
+      "translation": "克罗地亚真实平/负，即加纳不败",
+      "translation_correct": true,
+      "model_probability": 0.5173,
+      "market_implied_probability": 0.4322,
+      "relationship": "value_resistance_leg_discussion_only"
+    },
+    "067_croatia_minus1_draw": {
+      "translation": "克罗地亚真实赢1球",
+      "translation_correct": true,
+      "model_probability": 0.2593,
+      "market_implied_probability": 0.2645,
+      "relationship": "narrow_margin_no_clear_edge"
+    },
+    "068_panama_plus2_home_win": {
+      "translation": "巴拿马真实胜/平，或英格兰只赢1球",
+      "translation_correct": true,
+      "model_probability": 0.5976,
+      "market_implied_probability": 0.3571,
+      "relationship": "low_score_resistance_leg_discussion_only"
+    },
+    "068_panama_plus2_draw": {
+      "translation": "英格兰真实赢2球",
+      "translation_correct": true,
+      "model_probability": 0.2139,
+      "market_implied_probability": 0.2271,
+      "relationship": "exact_margin_no_clear_edge"
+    },
+    "068_panama_plus2_away_win": {
+      "translation": "英格兰真实赢3球或以上",
+      "translation_correct": true,
+      "model_probability": 0.1885,
+      "market_implied_probability": 0.4158,
+      "relationship": "blowout_tail_observation_with_market_overpricing_warning"
+    },
+    "069_colombia_plus1_home_win": {
+      "translation": "哥伦比亚真实胜/平",
+      "translation_correct": true,
+      "model_probability": 0.5592,
+      "market_implied_probability": 0.4663,
+      "relationship": "model_aligned_value_resistance"
+    },
+    "069_colombia_plus1_home_win_draw": {
+      "translation": "哥伦比亚真实胜/平，或葡萄牙只赢1球",
+      "translation_correct": true,
+      "model_probability_estimate": 0.7836,
+      "relationship": "wide_handicap_protection"
+    },
+    "069_colombia_plus1_draw": {
+      "translation": "葡萄牙真实赢1球",
+      "translation_correct": true,
+      "model_probability": 0.2244,
+      "relationship": "exact_margin"
+    },
+    "070_drc_minus1_home_win": {
+      "translation": "刚果金真实赢2球或以上",
+      "translation_correct": true,
+      "model_probability": 0.2444,
+      "relationship": "must_win_blowout_tail_but_no_clear_market_edge"
+    },
+    "070_drc_minus1_draw": {
+      "translation": "刚果金真实赢1球",
+      "translation_correct": true,
+      "model_probability": 0.2432,
+      "market_implied_probability": 0.257,
+      "relationship": "exact_margin_no_clear_edge"
+    },
+    "071_algeria_ordinary_home_or_away": {
+      "translation": "阿尔及利亚胜或奥地利胜，排除平局",
+      "translation_correct": true,
+      "model_probability": 0.67,
+      "relationship": "anti_draw_leg_with_market_conflict"
+    },
+    "071_austria_ordinary_away_win": {
+      "translation": "奥地利真实胜",
+      "translation_correct": true,
+      "model_probability": 0.355,
+      "market_implied_probability": 0.3162,
+      "relationship": "slight_model_delta_but_draw_market_warning"
+    },
+    "071_algeria_plus1_draw": {
+      "translation": "奥地利真实赢1球",
+      "translation_correct": true,
+      "model_probability": 0.2213,
+      "market_implied_probability": 0.2036,
+      "relationship": "exact_margin_light_delta"
+    },
+    "072_jordan_plus2_home_win": {
+      "translation": "约旦真实胜/平，或阿根廷只赢1球",
+      "translation_correct": true,
+      "model_probability": 0.5566,
+      "market_implied_probability": 0.3884,
+      "relationship": "low_score_resistance_value_leg"
+    },
+    "072_jordan_plus2_draw": {
+      "translation": "阿根廷真实赢2球",
+      "translation_correct": true,
+      "model_probability": 0.219,
+      "market_implied_probability": 0.23,
+      "relationship": "exact_margin_no_clear_edge"
+    }
+  },
+  "tickets": [
+    {
+      "ticket_id": "R1",
+      "judgement": "reasonable_but_downgrade_to_medium_risk_discussion_only",
+      "stake_user": 16,
+      "stake_review": "acceptable only as discussion reference; if combined with R3/R5, reduce to 10-12",
+      "leg_relationships": [
+        "067 克罗地亚(-1)客胜: value_resistance_leg",
+        "069 哥伦比亚(+1)主胜: model_aligned_value_resistance",
+        "072 约旦(+2)主胜: low_score_resistance_value_leg"
+      ],
+      "translation_check": "all_correct",
+      "main_risk": "Three legs all lean toward favorites not covering or underdogs resisting; this is not independent diversification.",
+      "red_team_status": "hold"
+    },
+    {
+      "ticket_id": "R2",
+      "judgement": "keep_only_as_entertainment_or_low_stake_observation",
+      "stake_user": 16,
+      "stake_review": "too high for current 75 budget; prefer 8-10 discussion reference",
+      "leg_relationships": [
+        "069 哥伦比亚(+1)主胜平: wide handicap protection",
+        "070 刚果金(-1)主平: exact one-goal path, no clear edge",
+        "071 阿尔及利亚胜/奥地利胜: anti-draw leg, conflicts with strong market draw signal"
+      ],
+      "translation_check": "all_correct",
+      "main_risk": "R2 contains one wide-protection leg, one exact-margin leg, and one anti-draw leg where market draw is very high; the structure is not stable enough for 16.",
+      "red_team_status": "hold"
+    },
+    {
+      "ticket_id": "R3",
+      "judgement": "6x4_is_better_than_6_leg_all_parlay_but_budget_too_high",
+      "stake_user": 30,
+      "stake_review": "reduce to 10-16 discussion reference; 30 is 40% of budget and too much for exact-margin entertainment",
+      "translation_check": "all_correct",
+      "estimated_leg_probabilities": {
+        "067 Croatia wins by 1": 0.2593,
+        "068 England wins by 2": 0.2139,
+        "069 Portugal wins by 1": 0.2244,
+        "070 DR Congo wins by 1": 0.2432,
+        "071 Austria wins by 1": 0.2213,
+        "072 Argentina wins by 2": 0.219
+      },
+      "main_risk": "All legs are exact-margin corridors around 21-26%; 6x4 spreads the risk better than 6-leg all串, but it is still a concentrated exact-margin thesis.",
+      "red_team_status": "hold"
+    },
+    {
+      "ticket_id": "R4",
+      "judgement": "plot_reasonable_but_observation_only_due_exact_score_odds_missing",
+      "stake_user": 12,
+      "stake_review": "12 can only be a theoretical discussion amount; no executable or payout wording because exact-score odds are missing",
+      "translation_check": "handicap_leg_correct; exact-score legs need same-source odds before valuation",
+      "leg_relationships": [
+        "067 克罗地亚(-1)客胜: Ghana resistance path",
+        "约旦 0-1/0-2: Argentina low-score win cluster",
+        "巴拿马 0-2/0-3/0-4: England 2+ to 4+ score cluster; 0-3 is in model top5, 0-4 is blowout tail"
+      ],
+      "main_risk": "Exact score parlay variance is very high; without same-source exact-score odds, risk/reward cannot be evaluated.",
+      "red_team_status": "hold"
+    },
+    {
+      "ticket_id": "R5",
+      "judgement": "valid_as_high_variance_tail_ticket_not_as_conflict_delete",
+      "stake_user": 12,
+      "stake_review": "keep only as 5-8, at most 10, discussion reference; not a main allocation",
+      "translation_check": "all_correct",
+      "leg_relationships": [
+        "068 巴拿马(+2)客胜: England 3+ blowout tail; model 18.85%, market appears much hotter at 41.58%",
+        "070 刚果金(-1)主胜: DR Congo 2+ must-win tail; model 24.44%, no clear market edge",
+        "071 奥地利胜: slight model delta but draw market warning"
+      ],
+      "main_risk": "R5 is coherent as a strong-team/necessary-win blowout branch, especially after adding big-score tail thinking, but the first two legs are not obvious value at current market-implied prices.",
+      "red_team_status": "hold"
+    }
+  ],
+  "portfolio_advice": {
+    "should_replace_original_file": false,
+    "recommended_file_action": "Add R1-R5 as a bold-plan review appendix or separate file; do not overwrite the existing standard 75-yuan plan.",
+    "if_using_75_discussion_budget": {
+      "R1": "10-12",
+      "R2": "8-10",
+      "R3": "10-16",
+      "R4": "observation_only; no payout without exact-score odds",
+      "R5": "5-8, max 10",
+      "reserve_or_wait": "remaining budget should stay as wait/skip because gates are not clear"
+    },
+    "r3_vs_six_leg_all_parlay": "6x4 is materially more reasonable than a 6-leg all串 because it allows two exact-margin legs to fail, but 30 yuan is still too much for a low-probability exact-margin thesis.",
+    "global_final_option": "skip_or_wait_for_live_recheck"
+  },
+  "validation": {
+    "no_executable_instruction": true,
+    "no_certainty_language": true,
+    "stake_total_executable": 0,
+    "status": "discussion_only_hold"
+  }
+}

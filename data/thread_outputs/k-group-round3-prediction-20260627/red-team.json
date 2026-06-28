@@ -1,0 +1,255 @@
+{
+  "phase": "match_prediction_red_team_review",
+  "group": "K",
+  "round": 3,
+  "status": "complete_red_team_review_pending_model_chain",
+  "owner": "worldcup-red-team-verifier",
+  "scope": [
+    "Colombia vs Portugal",
+    "DR Congo vs Uzbekistan"
+  ],
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "updated_at": "2026-06-27T00:00:00+08:00",
+  "verdict": "hold",
+  "publish_gate": "hold_until_round3_quant_chain_and_live_gates",
+  "betting_language_blocked": true,
+  "source_log": [
+    "README.md",
+    "线程状态.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    ".codex/skills/worldcup-red-team-verifier/SKILL.md",
+    ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+    "data/outputs/match_predictions/k-group-round2-quant-prediction-20260623.json",
+    "data/outputs/postmatch/k-group-round2-portugal-uzbekistan-postmatch-20260624.json",
+    "data/outputs/postmatch/k-group-round2-colombia-drcongo-postmatch-20260624.json",
+    "data/thread_outputs/k-group-round2-recalc-20260623/red-team.md",
+    "data/thread_outputs/k-group-round2-portugal-uzbekistan-postmatch-20260624/red-team.md",
+    "data/thread_outputs/k-group-round2-colombia-drcongo-postmatch-20260624/red-team.md",
+    "four team packets, tactics packets, rosters, player_state files"
+  ],
+  "group_context": {
+    "standings_inferred_from_local_round2_postmatch": [
+      {
+        "team": "Colombia",
+        "points": 6,
+        "context": "draw likely enough for first place"
+      },
+      {
+        "team": "Portugal",
+        "points": 4,
+        "context": "win needed for first place; top-two position likely but lineup/rotation still material"
+      },
+      {
+        "team": "DR Congo",
+        "points": 1,
+        "context": "draw protects third in group, win improves best-third comparison"
+      },
+      {
+        "team": "Uzbekistan",
+        "points": 0,
+        "context": "must win to overtake DR Congo for third"
+      }
+    ],
+    "same_time_dependency": "Both K-group round-three matches should be treated as simultaneous; late-game risk appetite can change with the other match score.",
+    "official_tiebreaker_status": "not refreshed in round3 packet"
+  },
+  "matches": [
+    {
+      "match": "Colombia vs Portugal",
+      "verdict": "hold",
+      "publish_gate": "discussion_only_until_round3_model_and_live_gates",
+      "top_concerns": [
+        {
+          "concern": "Small-sample overfit from Colombia two wins and Portugal 5-0",
+          "category": "data",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "Available local inputs are round1/round2 predictions and postmatch reviews; no round3 model chain was found.",
+          "why_it_matters": "Recent results can be counted as form, player_state, tactics, and market signal at the same time.",
+          "follow_up_check": "Model should explicitly cap duplicate weighting from round2 results.",
+          "owner": "model"
+        },
+        {
+          "concern": "Third-round incentive may suppress tempo",
+          "category": "tournament",
+          "severity": "high",
+          "confidence": "medium",
+          "evidence": "Colombia has six points; Portugal has four points and likely top-two safety.",
+          "why_it_matters": "A draw-management script can raise the draw floor and lower open-play volume.",
+          "follow_up_check": "Add motivation_profile, strategic_tempo_adjustment, and simulated_group_outcomes.",
+          "owner": "model"
+        },
+        {
+          "concern": "Lineup, injury, suspension, and minutes gates are unresolved",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "No K round3 data packet or T-75 official lineup file was found.",
+          "why_it_matters": "Portugal rotation and Colombia key-player minutes can change both xG and tempo.",
+          "follow_up_check": "Refresh T-75 lineups, final injuries, yellow-card suspension, and minutes-risk table.",
+          "owner": "data"
+        },
+        {
+          "concern": "Market overheating cannot be audited",
+          "category": "market",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "No same-source round3 1X2, handicap, and totals snapshot was found.",
+          "why_it_matters": "Portugal name plus 5-0 and Colombia two-win narrative can create opposite public premiums.",
+          "follow_up_check": "Collect official/same-source 1X2, handicap, totals, overround, and capture time.",
+          "owner": "data"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "Colombia draw-management keeps the match low event and pushes 0-0 or 1-1 higher than a generic model would show.",
+        "Portugal scores first and Colombia's chase state creates a transition-heavy tail.",
+        "Colombia set pieces or late substitutes break a controlled Portugal possession script.",
+        "Early card, penalty, or red card invalidates a narrow Poisson score cluster."
+      ],
+      "overconfidence_flags": [
+        "Do not carry Portugal 5-0 blowout tail directly into this stronger matchup.",
+        "Do not treat Colombia 1-0 over DR Congo as weak attack; shot volume and pressure mattered.",
+        "Do not use old player_state as proof of official round3 availability."
+      ],
+      "market_flags": [
+        "Portugal public-team premium and 5-0 recency premium are live risks.",
+        "Colombia two-win/top-of-group narrative can also become overheated.",
+        "No same-source market chain means betting-ready language is blocked."
+      ],
+      "quant_chain_flags": [
+        "missing_round3_factor_inputs",
+        "missing_round3_factor_weights",
+        "missing_round3_expected_goals",
+        "missing_round3_poisson_matrix",
+        "missing_round3_1x2_totals_top_scores",
+        "duplicate_counting_risk",
+        "poisson_state_correlation_tail_risk"
+      ],
+      "recommended_probability_adjustment": "Do not replace the model probability. Before official lineups, cap single-side certainty: if either team is above roughly 45%, require review; draw floor should remain in roughly the 27%-31% discussion band unless T-75 lineups and same-source odds justify otherwise.",
+      "missing_data": [
+        "round3 quant prediction",
+        "round3 data packet",
+        "round3 tactical matchup packet",
+        "T-75 official lineups",
+        "final injury/suspension/minutes risk",
+        "same-source 1X2/handicap/totals odds",
+        "weather/referee/pitch snapshot"
+      ],
+      "handoff_notes": "Hold publication beyond discussion-only. Main thread must block all betting wording while verdict remains hold."
+    },
+    {
+      "match": "DR Congo vs Uzbekistan",
+      "verdict": "hold",
+      "publish_gate": "discussion_only_until_round3_model_and_live_gates",
+      "top_concerns": [
+        {
+          "concern": "Motivation is not equal to stable attacking quality",
+          "category": "tournament",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "DR Congo can preserve third with a draw; Uzbekistan must win to overtake for third.",
+          "why_it_matters": "One side may begin cautiously while the other only becomes fully open later.",
+          "follow_up_check": "Model separate first-60 and late-game incentive states.",
+          "owner": "model"
+        },
+        {
+          "concern": "Uzbekistan 0-5 collapse may be overfit",
+          "category": "data",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "Portugal postmatch review says early goals, set pieces, and errors amplified the scoreline.",
+          "why_it_matters": "A single collapse should not erase Uzbekistan's transition and set-piece routes.",
+          "follow_up_check": "Apply blowout-tail learning conditionally rather than as a permanent team downgrade.",
+          "owner": "model"
+        },
+        {
+          "concern": "DR Congo defensive signal may be goalkeeper-driven",
+          "category": "tactical",
+          "severity": "medium",
+          "confidence": "high",
+          "evidence": "Colombia postmatch review noted heavy shot pressure and goalkeeper high-save signal.",
+          "why_it_matters": "Goalkeeper high points should not be translated into team defensive stability.",
+          "follow_up_check": "Separate goalkeeper form from defensive-block rating.",
+          "owner": "model"
+        },
+        {
+          "concern": "Market and live availability gates are missing",
+          "category": "market",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "No round3 official/same-source odds or T-75 lineups were found.",
+          "why_it_matters": "This is a narrow third-place match where lineup and odds movement can swing the forecast.",
+          "follow_up_check": "Refresh official lineups, final injuries, official card table, and same-source odds.",
+          "owner": "data"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "Low-event draw if DR Congo protects third and Uzbekistan starts cautiously.",
+        "Uzbekistan scores first from set piece or second ball, flipping DR Congo into chase mode.",
+        "DR Congo transition win if Uzbekistan pushes fullbacks/wingbacks high after 60 minutes.",
+        "Early card, penalty, red card, or goalkeeper error creates a scoreline outside the central Poisson cluster."
+      ],
+      "overconfidence_flags": [
+        "Do not price DR Congo as a stable favorite solely from Portugal 1-1 and Colombia 0-1.",
+        "Do not price Uzbekistan as noncompetitive solely from the Portugal 5-0 defeat.",
+        "Do not convert must-win motivation into full-strength attacking xG without lineup support."
+      ],
+      "market_flags": [
+        "Any handicap wording must be translated into real-score conditions before use.",
+        "A possible DR Congo not-lose market signal would not equal a DR Congo win signal.",
+        "No same-source market chain means betting-ready language is blocked."
+      ],
+      "quant_chain_flags": [
+        "missing_round3_factor_inputs",
+        "missing_round3_expected_goals",
+        "missing_round3_poisson_matrix",
+        "draw_floor_risk",
+        "first_goal_state_shift_risk",
+        "red_card_and_goalkeeper_error_tail_risk"
+      ],
+      "recommended_probability_adjustment": "Do not replace the model probability. Before official lineups, avoid any side above roughly 43%-45% without review; maintain a draw discussion band around 28%-32% and explicitly raise both first-goal and late-chase tails.",
+      "missing_data": [
+        "round3 quant prediction",
+        "round3 data packet",
+        "round3 tactical matchup packet",
+        "T-75 official lineups",
+        "final injury/suspension/minutes risk",
+        "same-source 1X2/handicap/totals odds",
+        "weather/referee/pitch snapshot"
+      ],
+      "handoff_notes": "Hold publication beyond discussion-only. The match needs separate draw-protection, must-win chase, and collapse-tail branches."
+    }
+  ],
+  "global_quant_chain_flags": [
+    "new_model_missing",
+    "round3_data_packet_missing",
+    "round3_tactics_packet_missing",
+    "sample_size_risk",
+    "duplicate_counting_risk",
+    "poisson_tail_risk",
+    "market_gate_missing"
+  ],
+  "blocking_gates": [
+    "T-75 official lineups",
+    "final injuries/suspensions/minutes risk",
+    "official card accumulation confirmation",
+    "same-source 1X2/handicap/totals odds",
+    "round3 quant model chain",
+    "round3 tactical matchup packet"
+  ],
+  "owner_followups": {
+    "data": [
+      "Refresh group table, official tiebreakers, lineups, injury/suspension/minutes, weather/referee, and same-source odds."
+    ],
+    "tactics": [
+      "Provide third-round matchup scripts with leading/trailing/draw-management branches."
+    ],
+    "model": [
+      "Publish factor_inputs, weights, xG, Poisson, 1X2, totals, top scores, simulated group outcomes, and explicit anti-double-counting notes."
+    ],
+    "main": [
+      "Keep output discussion_only; block all betting language while verdict is hold."
+    ]
+  }
+}

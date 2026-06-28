@@ -1,0 +1,983 @@
+{
+  "report_id": "k-group-round3-quant-prediction-20260627",
+  "phase": "match_prediction",
+  "group": "K",
+  "round": 3,
+  "created_at": "2026-06-27T14:35:00+08:00",
+  "status": "discussion_only_red_team_hold",
+  "betting_gate": "hold_not_executable",
+  "thread_participation": {
+    "data_collector": {
+      "thread_id": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+      "status": "dispatched_but_wrong_scope_response",
+      "note": "线程回包串到 I 组旧任务；主线程用本地文件与外部来源兜底事实包。"
+    },
+    "tactics_coach": {
+      "thread_id": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+      "status": "in_progress_at_integration",
+      "note": "已读取其阶段性回报：葡萄牙边路/定位球/领先后压制、哥伦比亚右后卫弱侧前插、刚果金防守稳定但进攻出口有限。"
+    },
+    "data_modeler": {
+      "thread_id": "019edb8f-536a-7100-84da-e13bfecb0def",
+      "status": "in_progress_at_integration",
+      "note": "主线程复用 scripts/modeling/poisson.py 完成可验证矩阵。"
+    },
+    "red_team": {
+      "thread_id": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+      "status": "completed_hold",
+      "note": "子线程最终红队 verdict=hold；本轮仅允许 discussion_only 输出，投注闸门 hold。"
+    },
+    "betting_risk": {
+      "thread_id": "019edb8f-cd0d-7393-bf92-d637962a67e4",
+      "status": "completed",
+      "outputs": [
+        "data/thread_outputs/k-group-round3-prediction-20260627/betting-risk.md",
+        "data/thread_outputs/k-group-round3-prediction-20260627/betting-risk.json"
+      ]
+    }
+  },
+  "group_table_snapshot": {
+    "after_round": 2,
+    "teams": [
+      {
+        "team": "哥伦比亚",
+        "points": 6,
+        "goal_difference": 3,
+        "goals_for": 4,
+        "goals_against": 1,
+        "qualification_state": "qualified_top_race",
+        "third_round_need": "打平锁定小组第一，输球大概率小组第二。"
+      },
+      {
+        "team": "葡萄牙",
+        "points": 4,
+        "goal_difference": 5,
+        "goals_for": 6,
+        "goals_against": 1,
+        "qualification_state": "qualified_or_nearly_qualified_top_race",
+        "third_round_need": "必须击败哥伦比亚才能小组第一；打平基本第二。"
+      },
+      {
+        "team": "刚果金",
+        "points": 1,
+        "goal_difference": -1,
+        "goals_for": 1,
+        "goals_against": 2,
+        "qualification_state": "must_win_for_third_or_theoretical_second",
+        "third_round_need": "击败乌兹别克斯坦可到4分，争取第三名晋级，并在葡萄牙大败时理论争第二。"
+      },
+      {
+        "team": "乌兹别克斯坦",
+        "points": 0,
+        "goal_difference": -7,
+        "goals_for": 1,
+        "goals_against": 8,
+        "qualification_state": "theoretical_only",
+        "third_round_need": "必须取胜且依赖其他小组，净胜球劣势极大。"
+      }
+    ],
+    "tiebreaker_note": "按世界杯小组常规口径先看积分、净胜球、进球数；完整公平竞赛/抽签等后续口径未在本地锁定。"
+  },
+  "factor_weights": {
+    "baseline_strength": 0.24,
+    "recent_attack_defense": 0.20,
+    "player_state_injury_rotation": 0.18,
+    "tactical_matchup": 0.12,
+    "schedule_environment": 0.06,
+    "third_round_context": 0.12,
+    "market_calibration": 0.08
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-28_K_R3_COL_POR",
+      "match": "哥伦比亚 vs 葡萄牙",
+      "date": "2026-06-28",
+      "kickoff": {
+        "bst": "00:30",
+        "beijing_time": "07:30",
+        "venue": "Hard Rock Stadium, Miami Gardens"
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27T15:20:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "home": {
+          "team": "哥伦比亚",
+          "formation": "4-3-3",
+          "confidence": "medium",
+          "predicted_xi": [
+            {
+              "position": "门将",
+              "player_cn": "卡米洛·巴尔加斯",
+              "player_en": "Camilo Vargas",
+              "role_note": "一门，负责后场第一脚出球。"
+            },
+            {
+              "position": "右后卫",
+              "player_cn": "丹尼尔·穆尼奥斯",
+              "player_en": "Daniel Munoz",
+              "role_note": "关键前插点，弱侧冲刺和后点包抄。"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "达文森·桑切斯",
+              "player_en": "Davinson Sanchez",
+              "role_note": "主防C罗禁区触点和高球。"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "约翰·卢库米",
+              "player_en": "Jhon Lucumi",
+              "role_note": "左中卫，保护莫希卡身后。"
+            },
+            {
+              "position": "左后卫",
+              "player_cn": "约翰·莫希卡",
+              "player_en": "Johan Mojica",
+              "role_note": "面对葡萄牙右路推进，防守负荷高。"
+            },
+            {
+              "position": "中场",
+              "player_cn": "古斯塔沃·普埃尔塔",
+              "player_en": "Gustavo Puerta",
+              "role_note": "中场覆盖和第一道反抢。"
+            },
+            {
+              "position": "中场",
+              "player_cn": "杰斐逊·莱尔马",
+              "player_en": "Jefferson Lerma",
+              "role_note": "中路对抗、二点球和禁区前保护。"
+            },
+            {
+              "position": "中场/右前卫",
+              "player_cn": "约翰·阿里亚斯",
+              "player_en": "Jhon Arias",
+              "role_note": "右肋连接，协助穆尼奥斯形成边路推进。"
+            },
+            {
+              "position": "前腰/右边锋",
+              "player_cn": "哈梅斯·罗德里格斯",
+              "player_en": "James Rodriguez",
+              "role_note": "定位球和最后一传核心。"
+            },
+            {
+              "position": "中锋",
+              "player_cn": "路易斯·苏亚雷斯",
+              "player_en": "Luis Suarez",
+              "role_note": "禁区支点，牵制迪亚斯和阿里亚斯身前空间。"
+            },
+            {
+              "position": "左边锋",
+              "player_cn": "路易斯·迪亚斯",
+              "player_en": "Luis Diaz",
+              "role_note": "主要单点爆破和转换推进。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "约翰·科尔多瓦",
+              "player_en": "Jhon Cordoba",
+              "trigger": "若来源或官方首发从路易斯·苏亚雷斯切到科尔多瓦，中锋支点和冲击方式需要调整。"
+            },
+            {
+              "player_cn": "胡安·金特罗",
+              "player_en": "Juan Quintero",
+              "trigger": "若需要更强定位球和阵地战最后一传，可替代或轮换哈梅斯。"
+            },
+            {
+              "player_cn": "米格尔·博尔哈",
+              "player_en": "Miguel Borja",
+              "trigger": "若哥伦比亚需要更强禁区终结，可作为中锋替补。"
+            }
+          ]
+        },
+        "away": {
+          "team": "葡萄牙",
+          "formation": "4-2-3-1",
+          "confidence": "medium",
+          "predicted_xi": [
+            {
+              "position": "门将",
+              "player_cn": "迪奥戈·科斯塔",
+              "player_en": "Diogo Costa",
+              "role_note": "一门，面对哥伦比亚转换需要处理身后球。"
+            },
+            {
+              "position": "右后卫",
+              "player_cn": "若昂·坎塞洛",
+              "player_en": "Joao Cancelo",
+              "role_note": "右路内收和前插，第二轮助攻后首发概率高。"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "鲁本·迪亚斯",
+              "player_en": "Ruben Dias",
+              "role_note": "防线领袖，主防哥伦比亚中锋和定位球。"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "雷纳托·韦加",
+              "player_en": "Renato Veiga",
+              "role_note": "左中卫，承担出球和横移保护。"
+            },
+            {
+              "position": "左后卫",
+              "player_cn": "努诺·门德斯",
+              "player_en": "Nuno Mendes",
+              "role_note": "左路推进和定位球威胁，需防穆尼奥斯身后冲刺。"
+            },
+            {
+              "position": "后腰",
+              "player_cn": "若昂·内维斯",
+              "player_en": "Joao Neves",
+              "role_note": "反抢和覆盖，保护两个边后卫前插后的空间。"
+            },
+            {
+              "position": "后腰",
+              "player_cn": "维蒂尼亚",
+              "player_en": "Vitinha",
+              "role_note": "节奏控制和中路推进。"
+            },
+            {
+              "position": "右边锋",
+              "player_cn": "佩德罗·内托",
+              "player_en": "Pedro Neto",
+              "role_note": "拉宽和冲击莫希卡一侧。"
+            },
+            {
+              "position": "前腰",
+              "player_cn": "布鲁诺·费尔南德斯",
+              "player_en": "Bruno Fernandes",
+              "role_note": "最后一传、定位球和禁区前二点。"
+            },
+            {
+              "position": "左边锋",
+              "player_cn": "若昂·菲利克斯",
+              "player_en": "Joao Felix",
+              "role_note": "内收连接，和努诺·门德斯形成左路肋部配合。"
+            },
+            {
+              "position": "中锋",
+              "player_cn": "克里斯蒂亚诺·罗纳尔多",
+              "player_en": "Cristiano Ronaldo",
+              "role_note": "禁区终结和高球焦点。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "贝尔纳多·席尔瓦",
+              "player_en": "Bernardo Silva",
+              "trigger": "若马丁内斯希望加强控球和右肋连接，可能替代佩德罗·内托或若昂·菲利克斯。"
+            },
+            {
+              "player_cn": "拉斐尔·莱奥",
+              "player_en": "Rafael Leao",
+              "trigger": "若需要更直接的左路冲刺，可替代若昂·菲利克斯。"
+            }
+          ]
+        },
+        "source_log": [
+          {
+            "source": "SportsGambler",
+            "url": "https://www.sportsgambler.com/betting-tips/football/colombia-vs-portugal-prediction-lineups-odds-2026-06-27/",
+            "supports": [
+              "Colombia 4-3-3 predicted XI",
+              "Portugal 4-2-3-1 predicted XI",
+              "no reported injuries or suspensions"
+            ]
+          },
+          {
+            "source": "Sports Mole",
+            "url": "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/colombia-vs-portugal-prediction-team-news-lineups_600099.html",
+            "supports": [
+              "possible starting lineups for both teams",
+              "Bernardo Silva and Rafael Leao pushing for Portugal starts"
+            ]
+          },
+          {
+            "source": "Sports Illustrated",
+            "url": "https://www.si.com/soccer/portugal-predicted-lineup-vs-colombia-world-cup-6-27-26",
+            "supports": [
+              "Portugal likely unchanged",
+              "Diogo Costa, Cancelo, Dias, Veiga, Nuno Mendes, Joao Neves, Vitinha, Pedro Neto, Bruno Fernandes, Joao Felix, Ronaldo"
+            ]
+          }
+        ],
+        "gaps_and_conflicts": [
+          "官方首发未公布，T-75 前必须重核。",
+          "葡萄牙前场存在贝尔纳多·席尔瓦/拉斐尔·莱奥替代佩德罗·内托或若昂·菲利克斯的轮换风险。",
+          "哥伦比亚哈梅斯、阿里亚斯、普埃尔塔的中前场站位在不同来源中有 4-3-3/4-2-3-1 解读差异。"
+        ]
+      },
+      "factor_inputs": {
+        "team_a": {
+          "team": "哥伦比亚",
+          "baseline_strength": 78,
+          "attack_signal": 76,
+          "defense_signal": 78,
+          "player_state": 79,
+          "key_positive": [
+            "两连胜，已进4球失1球。",
+            "穆尼奥斯连续成为右路/后点破局点。",
+            "路易斯·迪亚斯、金特罗/科尔多瓦替补链有不同解法。"
+          ],
+          "key_risk": [
+            "哥伦比亚打平即可第一，可能降低末段冒险。",
+            "对刚果金20射9正只进1球，终结效率有波动。",
+            "官方T-75首发未确认。"
+          ]
+        },
+        "team_b": {
+          "team": "葡萄牙",
+          "baseline_strength": 85,
+          "attack_signal": 87,
+          "defense_signal": 81,
+          "player_state": 84,
+          "key_positive": [
+            "第二轮5-0击败乌兹别克斯坦，C罗、布鲁诺、努诺·门德斯、坎塞洛、莱奥状态上调。",
+            "必须赢才能小组第一，攻击意愿更清晰。",
+            "边后卫宽度、定位球和中场直塞形成多通道进攻。"
+          ],
+          "key_risk": [
+            "首轮1-1刚果金显示领先后稳定压制不总是成立。",
+            "Ronaldo中心化会影响前场压迫和流动性。",
+            "若哥伦比亚接受平局，比赛可能进入低风险控场区。"
+          ]
+        }
+      },
+      "team_strength_score": {
+        "哥伦比亚": 78.4,
+        "葡萄牙": 84.6
+      },
+      "attack_score": {
+        "哥伦比亚": 76.5,
+        "葡萄牙": 87.0
+      },
+      "defense_score": {
+        "哥伦比亚": 78.0,
+        "葡萄牙": 81.5
+      },
+      "adjustments": {
+        "player_state_adjustment": {
+          "哥伦比亚": 0.6,
+          "葡萄牙": 1.4,
+          "note": "葡萄牙二轮攻击状态更热；哥伦比亚稳定但终结效率未完全兑现。"
+        },
+        "injury_adjustment": {
+          "哥伦比亚": -0.1,
+          "葡萄牙": -0.2,
+          "note": "无可靠新增重大伤停；T-75首发缺失，保守扣分。"
+        },
+        "tactical_matchup_adjustment": {
+          "哥伦比亚": 0.3,
+          "葡萄牙": 0.5,
+          "note": "哥伦比亚右路穆尼奥斯前插可攻击葡萄牙边后卫身后；葡萄牙宽度和定位球质量更强。"
+        },
+        "schedule_environment_adjustment": {
+          "哥伦比亚": 0.1,
+          "葡萄牙": 0.0,
+          "note": "迈阿密中立场，旅行差异未见决定性优势。"
+        },
+        "third_round_context_adjustment": {
+          "哥伦比亚": 0.4,
+          "葡萄牙": 0.8,
+          "note": "哥伦比亚打平第一抬高平局，葡萄牙必须赢抬高进攻风险和转换尾部。"
+        },
+        "market_adjustment": {
+          "哥伦比亚": -0.8,
+          "葡萄牙": 1.1,
+          "note": "竞彩/500市场明显偏葡萄牙，模型只部分吸收，避免热门过热全额跟随。"
+        }
+      },
+      "third_round_context": {
+        "motivation_profile": {
+          "哥伦比亚": "draw_enough_for_first",
+          "葡萄牙": "must_win_for_first"
+        },
+        "simultaneous_match_dependency": "刚果金若大胜且葡萄牙大败才可能影响葡萄牙第二名安全感，现实概率低；对本场主要影响是小组第一争夺。",
+        "rotation_risk": {
+          "哥伦比亚": "medium",
+          "葡萄牙": "low_medium"
+        },
+        "strategic_tempo_adjustment": "平局在哥伦比亚侧有高价值，葡萄牙若迟迟不进球会增加后段开放度。"
+      },
+      "expected_goals": {
+        "pre_market": {
+          "哥伦比亚": 1.21,
+          "葡萄牙": 1.42
+        },
+        "final": {
+          "哥伦比亚": 1.18,
+          "葡萄牙": 1.48
+        }
+      },
+      "poisson_score_matrix": {
+        "team_a": "哥伦比亚",
+        "team_b": "葡萄牙",
+        "probability_unit": "probability",
+        "visible_max_goals": 5,
+        "scores_0_to_5": {
+          "0": {"0": 0.069948, "1": 0.103523, "2": 0.076607, "3": 0.037793, "4": 0.013983, "5": 0.004139},
+          "1": {"0": 0.082539, "1": 0.122158, "2": 0.090397, "3": 0.044596, "4": 0.0165, "5": 0.004884},
+          "2": {"0": 0.048698, "1": 0.072073, "2": 0.053334, "3": 0.026311, "4": 0.009735, "5": 0.002882},
+          "3": {"0": 0.019155, "1": 0.028349, "2": 0.020978, "3": 0.010349, "4": 0.003829, "5": 0.001133},
+          "4": {"0": 0.005651, "1": 0.008363, "2": 0.006189, "3": 0.003053, "4": 0.00113, "5": 0.000334},
+          "5": {"0": 0.001334, "1": 0.001974, "2": 0.00146, "3": 0.000721, "4": 0.000267, "5": 0.000079}
+        },
+        "visible_matrix_mass": 0.994446,
+        "visible_tail_probability": 0.005554
+      },
+      "probabilities_1x2_raw_poisson": {
+        "哥伦比亚胜": 0.302175,
+        "平": 0.257001,
+        "葡萄牙胜": 0.440823
+      },
+      "odds_implied_probability": {
+        "source": "500.com本地快照 tmp_500_jczq_20260626.html；周六069",
+        "captured_at": "2026-06-26/2026-06-27 local snapshot",
+        "odds_1x2": {
+          "哥伦比亚胜": 4.23,
+          "平": 3.28,
+          "葡萄牙胜": 1.70
+        },
+        "no_vig_probability": {
+          "哥伦比亚胜": 0.2093,
+          "平": 0.2699,
+          "葡萄牙胜": 0.5208
+        },
+        "handicap": {
+          "line": "哥伦比亚 +1",
+          "odds": {
+            "哥伦比亚(+1)胜": 1.90,
+            "哥伦比亚(+1)平": 3.45,
+            "哥伦比亚(+1)负": 3.20
+          }
+        }
+      },
+      "model_market_delta": {
+        "raw_poisson_minus_market": {
+          "哥伦比亚胜": 0.0929,
+          "平": -0.0129,
+          "葡萄牙胜": -0.0800
+        },
+        "final_minus_market": {
+          "哥伦比亚胜": 0.0687,
+          "平": -0.0089,
+          "葡萄牙胜": -0.0598
+        }
+      },
+      "totals_probabilities": {
+        "over_1_5": 0.74399,
+        "under_1_5": 0.25601,
+        "over_2_5": 0.496527,
+        "under_2_5": 0.503473,
+        "over_3_5": 0.27711,
+        "under_3_5": 0.72289,
+        "both_teams_to_score_yes": 0.5350
+      },
+      "margin_bucket_probability": {
+        "哥伦比亚赢1球": 0.1789,
+        "哥伦比亚赢2球以上": 0.1232,
+        "平局": 0.2570,
+        "葡萄牙赢1球": 0.2244,
+        "葡萄牙赢2球以上": 0.2164
+      },
+      "top_scorelines": [
+        {"score": "1-1", "probability": 0.122158},
+        {"score": "0-1", "probability": 0.103523},
+        {"score": "1-2", "probability": 0.090397},
+        {"score": "1-0", "probability": 0.082539},
+        {"score": "0-2", "probability": 0.076607}
+      ],
+      "final_probabilities": {
+        "哥伦比亚胜": 0.278,
+        "平": 0.261,
+        "葡萄牙胜": 0.461
+      },
+      "confidence_interval": {
+        "哥伦比亚胜": [0.23, 0.33],
+        "平": [0.23, 0.30],
+        "葡萄牙胜": [0.40, 0.52]
+      },
+      "red_team_status": "hold",
+      "quality_notes": [
+        "官方首发/T-75未锁定。",
+        "葡萄牙热门方向可能已被市场充分定价。",
+        "哥伦比亚平局价值较高，可能压低比赛后段开放度。"
+      ],
+      "postmatch_error": null,
+      "parameter_updates": null
+    },
+    {
+      "match_id": "2026-06-28_K_R3_DRC_UZB",
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "date": "2026-06-28",
+      "kickoff": {
+        "bst": "00:30",
+        "beijing_time": "07:30",
+        "venue": "Mercedes-Benz Stadium, Atlanta"
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27T15:20:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "home": {
+          "team": "刚果金",
+          "formation": "5-3-2",
+          "confidence": "medium",
+          "predicted_xi": [
+            {
+              "position": "门将",
+              "player_cn": "利昂内尔·姆帕西-恩佐",
+              "player_en": "Lionel Mpasi-Nzau",
+              "role_note": "一门，前两轮防守韧性的关键。"
+            },
+            {
+              "position": "右中卫/右后卫",
+              "player_cn": "阿龙·万-比萨卡",
+              "player_en": "Aaron Wan-Bissaka",
+              "role_note": "一对一防守强，五后卫中可作为右翼卫或右侧保护点。"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "尚塞尔·姆本巴",
+              "player_en": "Chancel Mbemba",
+              "role_note": "防线领袖和定位球争顶点。"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "阿克塞尔·图安泽贝",
+              "player_en": "Axel Tuanzebe",
+              "role_note": "中卫横移和身后保护。"
+            },
+            {
+              "position": "左中卫",
+              "player_cn": "史蒂夫·卡普阿迪",
+              "player_en": "Steve Kapuadi",
+              "role_note": "五后卫左侧防守，保护马苏亚库前压后空间。"
+            },
+            {
+              "position": "左翼卫",
+              "player_cn": "阿图尔·马苏亚库",
+              "player_en": "Arthur Masuaku",
+              "role_note": "左路推进和传中，前两轮有助攻贡献。"
+            },
+            {
+              "position": "中场",
+              "player_cn": "诺亚·萨迪基",
+              "player_en": "Noah Sadiki",
+              "role_note": "提高中场活力，部分来源将穆考列为备选。"
+            },
+            {
+              "position": "中场",
+              "player_cn": "萨缪尔·穆图萨米",
+              "player_en": "Samuel Moutoussamy",
+              "role_note": "中场覆盖和横向保护。"
+            },
+            {
+              "position": "中场",
+              "player_cn": "埃多·卡扬贝",
+              "player_en": "Edo Kayembe",
+              "role_note": "中场对抗和二点球。"
+            },
+            {
+              "position": "前锋",
+              "player_cn": "塞德里克·巴坎布",
+              "player_en": "Cedric Bakambu",
+              "role_note": "禁区终结和反击接应。"
+            },
+            {
+              "position": "前锋",
+              "player_cn": "约安·维萨",
+              "player_en": "Yoane Wissa",
+              "role_note": "最主要的纵深冲击和射门点。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "恩加尔·阿耶尔·穆考",
+              "player_en": "Ngal Ayel Mukau",
+              "trigger": "若德尚布雷延续第二轮中场结构，可能替代萨迪基首发。"
+            },
+            {
+              "player_cn": "西奥·邦贡达",
+              "player_en": "Theo Bongonda",
+              "trigger": "若从5-3-2改为4-3-3或需要边锋，可能进入首发。"
+            },
+            {
+              "player_cn": "纳塔纳埃尔·姆布库",
+              "player_en": "Nathanael Mbuku",
+              "trigger": "若需要后手速度，可作为下半场边路冲击点。"
+            }
+          ]
+        },
+        "away": {
+          "team": "乌兹别克斯坦",
+          "formation": "3-2-4-1",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "门将",
+              "player_cn": "阿卜杜沃希德·内马托夫",
+              "player_en": "Abduvohid Nematov",
+              "role_note": "预计继续首发，但前两轮失球后承压。"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "阿卜杜科迪尔·胡萨诺夫",
+              "player_en": "Abdukodir Khusanov",
+              "role_note": "后防核心，对抗和牌面风险都高。"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "阿卜杜拉·阿卜杜拉耶夫",
+              "player_en": "Abdulla Abdullaev",
+              "role_note": "三中卫中路保护。"
+            },
+            {
+              "position": "中后卫",
+              "player_cn": "鲁斯塔姆琼·阿舒尔马托夫",
+              "player_en": "Rustamjon Ashurmatov",
+              "role_note": "左中卫，防刚果金右路转换。"
+            },
+            {
+              "position": "右翼卫",
+              "player_cn": "贝赫鲁兹容·卡里莫夫",
+              "player_en": "Behruzjon Karimov",
+              "role_note": "边路推进和回追压力大。"
+            },
+            {
+              "position": "左翼卫",
+              "player_cn": "谢尔佐德·纳斯鲁拉耶夫",
+              "player_en": "Sherzod Nasrulloev",
+              "role_note": "主口径左翼卫；阿利若诺夫/莫兹戈沃伊为调整候选。"
+            },
+            {
+              "position": "中场",
+              "player_cn": "阿齐兹容·加尼耶夫",
+              "player_en": "Azizjon Ganiev",
+              "role_note": "中路推进和远射，第二轮曾有被取消进球情境。"
+            },
+            {
+              "position": "中场",
+              "player_cn": "奥迪尔琼·哈姆罗别科夫",
+              "player_en": "Odildzhon Khamrobekov",
+              "role_note": "防守覆盖和二点球。"
+            },
+            {
+              "position": "中前场",
+              "player_cn": "奥塔别克·舒库罗夫",
+              "player_en": "Otabek Shukurov",
+              "role_note": "前插和二线射门。"
+            },
+            {
+              "position": "前腰",
+              "player_cn": "阿博斯别克·法伊祖拉耶夫",
+              "player_en": "Abbosbek Fayzullaev",
+              "role_note": "最关键的前场持球点。"
+            },
+            {
+              "position": "中锋",
+              "player_cn": "埃尔多尔·肖穆罗多夫",
+              "player_en": "Eldor Shomurodov",
+              "role_note": "支点和第一终结点。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_cn": "赛义德马特·米尔赛托夫",
+              "player_en": "Sayidmat Mirsaidov",
+              "trigger": "若卡纳瓦罗大幅调整防线，可能进入后防轮换名单。"
+            },
+            {
+              "player_cn": "霍吉阿克巴尔·阿利若诺夫",
+              "player_en": "Khojiakbar Alijonov",
+              "trigger": "Racing Post 提到其可能推动首发，主要竞争边翼卫位置。"
+            },
+            {
+              "player_cn": "阿克马尔·莫兹戈沃伊",
+              "player_en": "Akmal Mozgovoy",
+              "trigger": "若需要加强中场身体对抗和覆盖，可替代中场或边路人选。"
+            }
+          ]
+        },
+        "source_log": [
+          {
+            "source": "SportsGambler",
+            "url": "https://www.sportsgambler.com/betting-tips/football/dr-congo-vs-uzbekistan-prediction-lineups-odds-2026-06-27/",
+            "supports": [
+              "DR Congo 5-3-2 predicted XI",
+              "Uzbekistan 3-2-4-1 predicted XI",
+              "no reported injuries or suspensions"
+            ]
+          },
+          {
+            "source": "Scores24",
+            "url": "https://scores24.live/en/soccer/m-27-06-2026-dr-congo-uzbekistan-prediction",
+            "supports": [
+              "DR Congo possible attacking variant with Bongonda",
+              "Uzbekistan predicted XI",
+              "both teams available"
+            ]
+          },
+          {
+            "source": "Racing Post",
+            "url": "https://www.racingpost.com/sport/football-tips/world-cup-2026/dr-congo-vs-uzbekistan-predictions-team-news-odds-betting-tips-bet-builder-a23Km7L6DpS6/",
+            "supports": [
+              "DR Congo no injury concerns",
+              "Uzbekistan no injury issues",
+              "Alijonov and Mozgovoy pushing after Portugal defeat"
+            ]
+          }
+        ],
+        "gaps_and_conflicts": [
+          "刚果金存在5-3-2、4-3-3和带邦贡达的三前锋口径冲突。",
+          "乌兹别克斯坦边翼卫与中场人选存在纳斯鲁拉耶夫、阿利若诺夫、莫兹戈沃伊的来源分歧。",
+          "官方首发未公布，T-75 前必须重核。"
+        ]
+      },
+      "factor_inputs": {
+        "team_a": {
+          "team": "刚果金",
+          "baseline_strength": 68,
+          "attack_signal": 66,
+          "defense_signal": 72,
+          "player_state": 70,
+          "key_positive": [
+            "1-1逼平葡萄牙、0-1小负哥伦比亚，防守样本强。",
+            "姆帕西、姆本巴、图安泽贝、万-比萨卡等防守状态较稳。",
+            "威萨、巴坎布具备反击和禁区终结路径。"
+          ],
+          "key_risk": [
+            "前两轮只进1球，阵地战创造力不足。",
+            "必须赢可能迫使从5后卫转4-3-3，削弱防线稳定。",
+            "官方首发与伤停未锁定。"
+          ]
+        },
+        "team_b": {
+          "team": "乌兹别克斯坦",
+          "baseline_strength": 63,
+          "attack_signal": 61,
+          "defense_signal": 54,
+          "player_state": 58,
+          "key_positive": [
+            "法伊祖拉耶夫、肖穆罗多夫仍有单点和支点威胁。",
+            "卡纳瓦罗可能调整为更主动的3-4-2-1。",
+            "无胜压力下可能踢得更直接。"
+          ],
+          "key_risk": [
+            "两轮失8球，门将-中卫链条连续出错。",
+            "净胜球极差，必须冒险会暴露转换防守。",
+            "胡萨诺夫有牌面/对抗风险。"
+          ]
+        }
+      },
+      "team_strength_score": {
+        "刚果金": 69.2,
+        "乌兹别克斯坦": 61.0
+      },
+      "attack_score": {
+        "刚果金": 66.5,
+        "乌兹别克斯坦": 61.5
+      },
+      "defense_score": {
+        "刚果金": 72.0,
+        "乌兹别克斯坦": 54.5
+      },
+      "adjustments": {
+        "player_state_adjustment": {
+          "刚果金": 0.5,
+          "乌兹别克斯坦": -0.9,
+          "note": "刚果金防守个体状态较稳；乌兹别克门将/中卫链条在二轮被显著下调。"
+        },
+        "injury_adjustment": {
+          "刚果金": 0.0,
+          "乌兹别克斯坦": 0.0,
+          "note": "公开预览口径称两队暂无重大伤病，但官方首发仍缺。"
+        },
+        "tactical_matchup_adjustment": {
+          "刚果金": 0.8,
+          "乌兹别克斯坦": 0.2,
+          "note": "刚果金若提升为4-3-3可增加进攻人数；乌兹别克斯坦也有肖穆罗多夫/法伊祖拉耶夫反击窗口。"
+        },
+        "schedule_environment_adjustment": {
+          "刚果金": 0.1,
+          "乌兹别克斯坦": -0.1,
+          "note": "亚特兰大中立场，乌兹别克斯坦此前跨墨西哥/休斯敦后体能压力略高。"
+        },
+        "third_round_context_adjustment": {
+          "刚果金": 0.9,
+          "乌兹别克斯坦": 0.3,
+          "note": "两队都需胜，但刚果金4分晋级概率更现实；乌兹别克斯坦更接近理论希望。"
+        },
+        "market_adjustment": {
+          "刚果金": 0.4,
+          "乌兹别克斯坦": -0.1,
+          "note": "市场偏刚果金，但让球盘不支持深胜。"
+        }
+      },
+      "third_round_context": {
+        "motivation_profile": {
+          "刚果金": "must_win_for_best_third_and_theoretical_second",
+          "乌兹别克斯坦": "must_win_theoretical_only"
+        },
+        "simultaneous_match_dependency": "若哥伦比亚击败葡萄牙且刚果金大胜，刚果金理论有二名尾部；更现实目标是4分第三。",
+        "rotation_risk": {
+          "刚果金": "low",
+          "乌兹别克斯坦": "medium"
+        },
+        "strategic_tempo_adjustment": "刚果金需要从防守稳定转向更主动；乌兹别克若先丢球，大比分尾部和牌面风险上升。"
+      },
+      "expected_goals": {
+        "pre_market": {
+          "刚果金": 1.44,
+          "乌兹别克斯坦": 0.99
+        },
+        "final": {
+          "刚果金": 1.48,
+          "乌兹别克斯坦": 0.98
+        }
+      },
+      "poisson_score_matrix": {
+        "team_a": "刚果金",
+        "team_b": "乌兹别克斯坦",
+        "probability_unit": "probability",
+        "visible_max_goals": 5,
+        "scores_0_to_5": {
+          "0": {"0": 0.085435, "1": 0.083726, "2": 0.041026, "3": 0.013402, "4": 0.003283, "5": 0.000644},
+          "1": {"0": 0.126444, "1": 0.123915, "2": 0.060718, "3": 0.019835, "4": 0.004859, "5": 0.000952},
+          "2": {"0": 0.093568, "1": 0.091697, "2": 0.044932, "3": 0.014678, "4": 0.003596, "5": 0.000705},
+          "3": {"0": 0.04616, "1": 0.045237, "2": 0.022166, "3": 0.007241, "4": 0.001774, "5": 0.000348},
+          "4": {"0": 0.017079, "1": 0.016738, "2": 0.008202, "3": 0.002679, "4": 0.000656, "5": 0.000129},
+          "5": {"0": 0.005055, "1": 0.004954, "2": 0.002428, "3": 0.000793, "4": 0.000194, "5": 0.000038}
+        },
+        "visible_matrix_mass": 0.995287,
+        "visible_tail_probability": 0.004713
+      },
+      "probabilities_1x2_raw_poisson": {
+        "刚果金胜": 0.487574,
+        "平": 0.262218,
+        "乌兹别克斯坦胜": 0.250208
+      },
+      "odds_implied_probability": {
+        "source": "500.com本地快照 tmp_500_jczq_20260626.html；周六070",
+        "captured_at": "2026-06-26/2026-06-27 local snapshot",
+        "odds_1x2": {
+          "刚果金胜": 1.67,
+          "平": 3.82,
+          "乌兹别克斯坦胜": 3.72
+        },
+        "no_vig_probability": {
+          "刚果金胜": 0.5302,
+          "平": 0.2318,
+          "乌兹别克斯坦胜": 0.2380
+        },
+        "handicap": {
+          "line": "刚果金 -1",
+          "odds": {
+            "刚果金(-1)胜": 3.10,
+            "刚果金(-1)平": 3.45,
+            "刚果金(-1)负": 1.94
+          }
+        }
+      },
+      "model_market_delta": {
+        "raw_poisson_minus_market": {
+          "刚果金胜": -0.0426,
+          "平": 0.0304,
+          "乌兹别克斯坦胜": 0.0122
+        },
+        "final_minus_market": {
+          "刚果金胜": -0.0302,
+          "平": 0.0232,
+          "乌兹别克斯坦胜": 0.0070
+        }
+      },
+      "totals_probabilities": {
+        "over_1_5": 0.704395,
+        "under_1_5": 0.295605,
+        "over_2_5": 0.445886,
+        "under_2_5": 0.554114,
+        "over_3_5": 0.233909,
+        "under_3_5": 0.766091,
+        "both_teams_to_score_yes": 0.4825
+      },
+      "margin_bucket_probability": {
+        "刚果金赢1球": 0.2432,
+        "刚果金赢2球以上": 0.2444,
+        "平局": 0.2622,
+        "乌兹别克斯坦赢1球": 0.1610,
+        "乌兹别克斯坦赢2球以上": 0.0892
+      },
+      "top_scorelines": [
+        {"score": "1-0", "probability": 0.126444},
+        {"score": "1-1", "probability": 0.123915},
+        {"score": "2-0", "probability": 0.093568},
+        {"score": "2-1", "probability": 0.091697},
+        {"score": "0-0", "probability": 0.085435}
+      ],
+      "final_probabilities": {
+        "刚果金胜": 0.500,
+        "平": 0.255,
+        "乌兹别克斯坦胜": 0.245
+      },
+      "confidence_interval": {
+        "刚果金胜": [0.44, 0.56],
+        "平": [0.22, 0.29],
+        "乌兹别克斯坦胜": [0.20, 0.30]
+      },
+      "red_team_status": "hold",
+      "quality_notes": [
+        "两队都必须赢，动机不等于有效进攻质量。",
+        "刚果金防守数据强，但若主动变阵可能牺牲防守。",
+        "乌兹别克斯坦防线失球尾部高，但肖穆罗多夫/法伊祖拉耶夫仍有进球窗口。"
+      ],
+      "postmatch_error": null,
+      "parameter_updates": null
+    }
+  ],
+  "source_log": [
+    {
+      "source": "Sky Sports Group K guide",
+      "url": "https://www.skysports.com/football/news/12040/13543106/world-cup-2026-group-k-guide-fixtures-schedule-standings-and-odds-for-portugal-dr-congo-uzbekistan-and-colombia",
+      "supports": ["fixture", "venue", "squad baseline", "FIFA rankings"]
+    },
+    {
+      "source": "Sports Illustrated Portugal predicted lineup",
+      "url": "https://www.si.com/soccer/portugal-predicted-lineup-vs-colombia-world-cup-6-27-26",
+      "supports": ["Portugal likely XI", "Portugal unchanged possibility"]
+    },
+    {
+      "source": "Sports Illustrated DR Congo vs Uzbekistan preview",
+      "url": "https://www.si.com/soccer/dr-congo-vs-uzbekistan-world-cup-preview-predictions-lineups-6-27-26",
+      "supports": ["DR Congo tactical-shift note", "third-round motivation"]
+    },
+    {
+      "source": "Racing Post Colombia vs Portugal preview",
+      "url": "https://www.racingpost.com/sport/football-tips/world-cup-2026/colombia-vs-portugal-predictions-team-news-odds-betting-tips-bet-builder-aKyTw0q1oiEh/",
+      "supports": ["kickoff", "venue", "Colombia draw/top context"]
+    },
+    {
+      "source": "Racing Post DR Congo vs Uzbekistan preview",
+      "url": "https://www.racingpost.com/sport/football-tips/world-cup-2026/dr-congo-vs-uzbekistan-predictions-team-news-odds-betting-tips-bet-builder-a23Km7L6DpS6/",
+      "supports": ["kickoff", "venue", "team news", "predicted lineups"]
+    },
+    {
+      "source": "500.com local odds snapshot",
+      "url": "data/tmp_500_jczq_20260626.html",
+      "supports": ["China lottery odds snapshot", "handicap translation"]
+    },
+    {
+      "source": "中国足彩网 local odds snapshot",
+      "url": "data/tmp_zgzcw_jcmini_20260626.html",
+      "supports": ["China lottery odds cross-check"]
+    }
+  ],
+  "gaps_and_conflicts": [
+    "T-75官方首发未公布或未落本地。",
+    "最新官方伤停、停赛、黄牌累计需赛前再次核验。",
+    "中国竞彩赔率只有本地快照，未抓到同源大小球。",
+    "数据采集线程本轮回包疑似串到I组旧任务，主线程采用本地文件与外部来源兜底。",
+    "红队线程最终 verdict=hold，本轮仅作为讨论型预测发布。"
+  ]
+}

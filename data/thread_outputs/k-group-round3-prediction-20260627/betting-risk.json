@@ -1,0 +1,150 @@
+{
+  "schema_version": "betting_risk_observation_v1",
+  "phase": "betting_risk",
+  "group": "K",
+  "round": 3,
+  "status": "discussion_only_hold",
+  "betting_gate": "hold_not_executable",
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "owner": "betting-risk",
+  "scope": "K组第三轮两场比赛竞彩/投注风险观察：哥伦比亚 vs 葡萄牙；刚果金 vs 乌兹别克斯坦。",
+  "source_log": [
+    "README.md",
+    "线程状态.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    "赔率与投注/购彩方案组合标准_20260625.md",
+    ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+    "data/outputs/postmatch/k-group-round2-portugal-uzbekistan-postmatch-20260624.json",
+    "data/outputs/postmatch/k-group-round2-colombia-drcongo-postmatch-20260624.json",
+    "data/thread_outputs/k-group-round2-portugal-uzbekistan-postmatch-20260624/red-team.md",
+    "data/thread_outputs/k-group-round2-colombia-drcongo-postmatch-20260624/red-team.md",
+    "比赛/未开始比赛/小组赛/K组/K组第二轮量化预测汇总_20260623.md",
+    "赔率与投注/K-L组第二轮竞彩方案_20260623/betting-risk.md"
+  ],
+  "missing_fields": [
+    "K组第三轮完整量化预测文件未在本地检出",
+    "T-75m官方首发未取得",
+    "最新伤停/停赛/分钟限制未取得",
+    "官方中国竞彩即时赔率未取得",
+    "同源1X2/让球/大小球快照未取得",
+    "K组第三轮红队verdict未取得"
+  ],
+  "hard_gates": {
+    "official_t_minus_75_lineups": "missing",
+    "latest_injuries_suspensions_minutes": "missing",
+    "official_china_jingcai_odds": "missing",
+    "same_source_1x2_handicap_totals_snapshot": "missing",
+    "red_team_verdict": "missing_for_round3",
+    "release_status": "hold_not_executable"
+  },
+  "group_context_inferred_from_completed_rounds": {
+    "colombia": {
+      "points": 6,
+      "known_results": [
+        "乌兹别克斯坦 1-3 哥伦比亚",
+        "哥伦比亚 1-0 刚果金"
+      ],
+      "risk_note": "已锁定较强出线位置，第三轮可能受小组第一争夺、轮换和节奏管理影响。"
+    },
+    "portugal": {
+      "points": 4,
+      "known_results": [
+        "葡萄牙 1-1 刚果金",
+        "葡萄牙 5-0 乌兹别克斯坦"
+      ],
+      "risk_note": "5-0说明大胜尾部存在，但红队要求避免把单场滚雪球过拟合为永久深盘能力。"
+    },
+    "dr_congo": {
+      "points": 1,
+      "known_results": [
+        "葡萄牙 1-1 刚果金",
+        "哥伦比亚 1-0 刚果金"
+      ],
+      "risk_note": "低位、防空、门将高光和反击路径存在，但出球与持续进攻不足。"
+    },
+    "uzbekistan": {
+      "points": 0,
+      "known_results": [
+        "乌兹别克斯坦 1-3 哥伦比亚",
+        "葡萄牙 5-0 乌兹别克斯坦"
+      ],
+      "risk_note": "防线和门将连续承压，第三轮若争第三名可能开放，但弱队崩盘尾部与反击进球尾部并存。"
+    }
+  },
+  "matches": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "status": "discussion_only_hold",
+      "model_status": "round3_model_pending",
+      "market_status": "official_jingcai_and_same_source_snapshot_missing",
+      "risk_observations": [
+        "两队均有小组排名动机，但已取得较好积分，第三轮节奏可能随另一场比分和轮换变化。",
+        "哥伦比亚第二轮1-0低比分命中方向，但20射9正显示压制真实存在；不能简单同时上调进攻效率和追低比分。",
+        "葡萄牙第二轮5-0显示强队滚雪球与4+尾部，但红队明确要求避免把单场大胜过拟合成所有深盘均可承受。",
+        "若只讨论方向，哥伦比亚/葡萄牙均不能脱离官方首发、伤停和赔率链直接进入票据结构。"
+      ],
+      "handicap_translation_required": [
+        "若哥伦比亚受让或让球，必须先翻译为真实比分区间，再判断是否与模型方向一致。",
+        "若葡萄牙让球，必须拆分为葡萄牙赢1球、赢2球、赢3球及以上，不得用葡萄牙胜替代让球结算。",
+        "任何让球平、精确净胜或比分组合默认高方差，只能保留为风险观察。"
+      ],
+      "model_bet_alignment_notes": [
+        "胜平负方向、让球档位、大小球和比分集合必须分开评价。",
+        "葡萄牙大胜尾部可作为风险层，不可直接转为主仓或串关核心。",
+        "哥伦比亚胜面若被市场压低回报，需要检查平局尾部和葡萄牙反击/定位球尾部。"
+      ],
+      "correlation_notes": [
+        "本场若与刚果金 vs 乌兹别克斯坦串关，需考虑同组实时比分对两场末段策略的共同影响。",
+        "不能把两场的热门或必须争胜叙事视为低相关；第三轮同组比赛存在动机相关性。"
+      ],
+      "downgrade_triggers": [
+        "任一队核心轮换或分钟限制明显",
+        "官方竞彩普通胜平负未开售或只剩让球玩法",
+        "同源大小球缺失",
+        "红队verdict为hold或revise",
+        "盘口显示深让过热但缺少首发利好"
+      ]
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "status": "discussion_only_hold",
+      "model_status": "round3_model_pending",
+      "market_status": "official_jingcai_and_same_source_snapshot_missing",
+      "risk_observations": [
+        "两队都处于争取第三名横向比较的压力场景，比赛可能从谨慎转为末段开放。",
+        "刚果金前两轮低位抵抗和门将表现可见，但红队提示不能把门将高光线性外推为整体防守升级。",
+        "乌兹别克斯坦第二轮0-5暴露防线崩盘尾部，但也不能把对葡萄牙的崩盘直接外推到对刚果金。",
+        "本场更需要关注低比分平局、单方先丢后的开放尾部、定位球和反击转换。"
+      ],
+      "handicap_translation_required": [
+        "若刚果金让球，必须拆成刚果金赢1球、赢2球及以上、未胜等真实区间。",
+        "若乌兹别克斯坦受让，受让胜和平局可能存在包含关系，不得同时当作独立保险。",
+        "让球平、比分和半全场默认高方差，只能作风险观察。"
+      ],
+      "model_bet_alignment_notes": [
+        "若模型只给小优势，不能把单胜写成低风险。",
+        "若赔率显示一方明显过热，需要保留平局和反击尾部。",
+        "任何对冲项必须能独立兑现，否则标记为hedge_not_independent。"
+      ],
+      "correlation_notes": [
+        "本场与哥伦比亚 vs 葡萄牙同组同时段时，另一场比分会改变第三名和小组排名动机。",
+        "末段若一方需要净胜球，大小球和比分尾部会突然变宽，赛前固定小比分串需要降级。"
+      ],
+      "downgrade_triggers": [
+        "官方首发显示防守核心缺阵或门将更换",
+        "最新停赛/黄牌风险未核验",
+        "官方竞彩或同源盘口缺失",
+        "市场只给让球不开放普通胜平负",
+        "红队verdict为hold或revise"
+      ]
+    }
+  ],
+  "global_avoidance": [
+    "不输出可执行购买建议。",
+    "不输出串关票据、金额或回报测算。",
+    "不使用确定性收益或煽动性表达。",
+    "不把胜平负方向命中概率等同于让球、比分或串关结算概率。"
+  ],
+  "final_verdict": "hold_not_executable"
+}

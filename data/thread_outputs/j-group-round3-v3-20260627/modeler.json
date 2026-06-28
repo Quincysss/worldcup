@@ -1,0 +1,1079 @@
+{
+  "metadata": {
+    "phase": "j_group_round3_v3_quant_prediction",
+    "group": "J",
+    "round": 3,
+    "status": "completed_pre_red_team_pending_discussion_only",
+    "created_at": "2026-06-27T00:00:00+08:00",
+    "owner": "worldcup-data-modeler",
+    "template": "match-prediction-standard-template-v3",
+    "scope": [
+      "Algeria vs Austria",
+      "Jordan vs Argentina"
+    ],
+    "betting_gate_status": "discussion_only_hold",
+    "source_log": [
+      "README.md",
+      "thread status local file",
+      "workflow discipline local file",
+      "project architecture local file",
+      ".codex/skills/worldcup-data-modeler/SKILL.md",
+      ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+      "data/templates/match-prediction-standard-template-v3.md",
+      "data/outputs/match_predictions/j-group-round3-quant-prediction-20260626.json",
+      "data/thread_outputs/j-group-round3-prediction-20260626/*.md",
+      "local J group round1/round2 postmatch reviews",
+      "four local player_state JSON files"
+    ],
+    "input_readiness": {
+      "existing_prediction_json": "available_20260626",
+      "v3_thread_outputs": "directory_created_no_upstream_files_found_before_model_write",
+      "data_collector_summary": "partial_thread_fallback_from_20260626",
+      "tactics_summary": "completed_from_20260626",
+      "predicted_lineups": "probable_not_official_from_local_player_state_and_usage",
+      "official_t75_lineups": "missing",
+      "odds_snapshot": "partial_ordinary_missing_for_jordan_argentina"
+    }
+  },
+  "group_table_after_round2": [
+    {
+      "rank": 1,
+      "team": "阿根廷",
+      "points": 6,
+      "gf": 5,
+      "ga": 0,
+      "gd": 5
+    },
+    {
+      "rank": 2,
+      "team": "奥地利",
+      "points": 3,
+      "gf": 3,
+      "ga": 3,
+      "gd": 0
+    },
+    {
+      "rank": 3,
+      "team": "阿尔及利亚",
+      "points": 3,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2
+    },
+    {
+      "rank": 4,
+      "team": "约旦",
+      "points": 0,
+      "gf": 2,
+      "ga": 5,
+      "gd": -3
+    }
+  ],
+  "factor_weights": {
+    "baseline_strength": 0.22,
+    "attack": 0.14,
+    "defense": 0.14,
+    "player_state": 0.13,
+    "injury_suspension_minutes": 0.08,
+    "tactical_matchup": 0.12,
+    "schedule_environment": 0.05,
+    "third_round_context": 0.14,
+    "market": 0.08
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-28_algeria_vs_austria",
+      "match_no": "周六071",
+      "home_team": "Algeria",
+      "away_team": "Austria",
+      "kickoff_beijing": "2026-06-28 10:00",
+      "status": "v3_pre_match_discussion_only",
+      "factor_inputs": {
+        "baseline_strength": "Austria hold a small squad/structure edge; Algeria have comparable front-line individual quality but less stable defensive record.",
+        "attack": "Algeria Mahrez/Gouiri/Maza/Chaibi route upgraded after Jordan comeback; Austria press, set pieces and Sabitzer creation remain active.",
+        "defense": "Austria conceded 3 total after two rounds but held Algeria-level opponent structure better; Algeria conceded 4 and can be stressed by high press.",
+        "player_state": "Algeria Gouiri/Mahrez up, Zerrouki/Boudaoui minutes/discipline mixed; Austria Sabitzer/Seiwald stable, Alaba minutes watch, striker conversion mixed.",
+        "injury_suspension_minutes": "No final T-75 confirmation; Alaba and Algeria midfield choices remain minutes/role watch.",
+        "tactical_matchup": "Austria high press and second balls vs Algeria first pass; Algeria late acceleration and wide individual quality vs Austria fullback space.",
+        "schedule_environment": "Simultaneous final round at Beijing 10:00; no clear environment edge from local files.",
+        "market": "Ordinary SPF market has unusually high draw no-vig around 42.0%, pushing model to keep draw floor."
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+        "official_lineup_gate": "T-75 official XI required before final model lock",
+        "home": {
+          "source_status": "probable_not_official",
+          "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+          "official_lineup_gate": "T-75 official XI required before final model lock",
+          "team": "Algeria",
+          "formation": "4-3-3",
+          "confidence": "medium_low",
+          "source_log": [
+            "local player_state/algeria-player-state.json",
+            "J round2 postmatch review",
+            "20260626 J round3 data/model thread summaries"
+          ],
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_en": "Luca Zidane",
+              "player_cn": null,
+              "role_note": "shot-stopper; distribution under press is a risk"
+            },
+            {
+              "position": "RB",
+              "player_en": "Rafik Belghali",
+              "player_cn": null,
+              "role_note": "right-back outlet and recovery runner"
+            },
+            {
+              "position": "CB",
+              "player_en": "Aissa Mandi",
+              "player_cn": null,
+              "role_note": "box defender and aerial reference"
+            },
+            {
+              "position": "CB",
+              "player_en": "Ramy Bensebaini",
+              "player_cn": null,
+              "role_note": "left centre-back, set-piece target"
+            },
+            {
+              "position": "LB",
+              "player_en": "Rayan Ait-Nouri",
+              "player_cn": null,
+              "role_note": "left progression and carry threat"
+            },
+            {
+              "position": "DM",
+              "player_en": "Nabil Bentaleb",
+              "player_cn": null,
+              "role_note": "screen and first forward pass"
+            },
+            {
+              "position": "CM",
+              "player_en": "Ramiz Zerrouki",
+              "player_cn": null,
+              "role_note": "discipline risk; may be replaced if booked or slow under press"
+            },
+            {
+              "position": "AM",
+              "player_en": "Ibrahim Maza",
+              "player_cn": null,
+              "role_note": "between-lines progression"
+            },
+            {
+              "position": "RW",
+              "player_en": "Riyad Mahrez",
+              "player_cn": null,
+              "role_note": "primary right-side chance creator"
+            },
+            {
+              "position": "LW",
+              "player_en": "Fares Chaibi",
+              "player_cn": null,
+              "role_note": "left/half-space delivery"
+            },
+            {
+              "position": "ST",
+              "player_en": "Amine Gouiri",
+              "player_cn": null,
+              "role_note": "link striker and finishing route"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_en": "Hicham Boudaoui",
+              "player_cn": null,
+              "trigger": "starts if coach prioritizes midfield running over Zerrouki control"
+            },
+            {
+              "player_en": "Anis Hadj Moussa",
+              "player_cn": null,
+              "trigger": "wide speed if Algeria need a late goal"
+            },
+            {
+              "player_en": "Mohamed Amoura",
+              "player_cn": null,
+              "trigger": "late direct runner if Austria press high"
+            }
+          ],
+          "model_impact_if_changed": [
+            "If Zerrouki is dropped for a runner, Algeria transition xG can rise but card/control risk changes.",
+            "If Mahrez is not fit to start, Algeria attack score should drop 0.06-0.10 xG."
+          ]
+        },
+        "away": {
+          "source_status": "probable_not_official",
+          "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+          "official_lineup_gate": "T-75 official XI required before final model lock",
+          "team": "Austria",
+          "formation": "4-2-3-1",
+          "confidence": "medium",
+          "source_log": [
+            "local player_state/austria-player-state.json",
+            "Argentina 2-0 Austria postmatch review",
+            "20260626 J round3 tactics thread summary"
+          ],
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_en": "Alexander Schlager",
+              "player_cn": null,
+              "role_note": "starting keeper"
+            },
+            {
+              "position": "RB",
+              "player_en": "Konrad Laimer",
+              "player_cn": null,
+              "role_note": "pressing fullback and counterpress trigger"
+            },
+            {
+              "position": "CB",
+              "player_en": "Kevin Danso",
+              "player_cn": null,
+              "role_note": "duel defender"
+            },
+            {
+              "position": "CB",
+              "player_en": "Philipp Lienhart",
+              "player_cn": null,
+              "role_note": "box protection and aerial defense"
+            },
+            {
+              "position": "LB",
+              "player_en": "David Alaba",
+              "player_cn": null,
+              "role_note": "left build-up/set-piece role; minutes management risk"
+            },
+            {
+              "position": "DM",
+              "player_en": "Nicolas Seiwald",
+              "player_cn": null,
+              "role_note": "central screen and pressing balance"
+            },
+            {
+              "position": "CM",
+              "player_en": "Xaver Schlager",
+              "player_cn": null,
+              "role_note": "ball-winning and second-ball connector"
+            },
+            {
+              "position": "AM",
+              "player_en": "Marcel Sabitzer",
+              "player_cn": null,
+              "role_note": "main creator and set-piece option"
+            },
+            {
+              "position": "RW",
+              "player_en": "Romano Schmid",
+              "player_cn": null,
+              "role_note": "inside-right combination player"
+            },
+            {
+              "position": "LW",
+              "player_en": "Paul Wanner",
+              "player_cn": null,
+              "role_note": "wide/half-space ball carrier"
+            },
+            {
+              "position": "ST",
+              "player_en": "Michael Gregoritsch",
+              "player_cn": null,
+              "role_note": "starting striker; conversion risk vs compact blocks"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_en": "Marko Arnautovic",
+              "player_cn": null,
+              "trigger": "starts or early enters if Austria need box presence"
+            },
+            {
+              "player_en": "Patrick Wimmer",
+              "player_cn": null,
+              "trigger": "wide runner if Algeria fullbacks push high"
+            },
+            {
+              "player_en": "Alexander Prass",
+              "player_cn": null,
+              "trigger": "left-sided energy and rest-management option"
+            }
+          ],
+          "model_impact_if_changed": [
+            "If Alaba is rested, Austria build-up score falls but defensive pace may improve.",
+            "If Arnautovic starts, Austria box xG rises slightly while pressing intensity may fall."
+          ]
+        },
+        "gaps_and_conflicts": [
+          "Official starting XI not published.",
+          "Lineup confidence is capped at medium before T-75.",
+          "More than two starter changes or any formation flip requires xG/Poisson rerun."
+        ]
+      },
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "attack": 0.14,
+        "defense": 0.14,
+        "player_state": 0.13,
+        "injury_suspension_minutes": 0.08,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.14,
+        "market": 0.08
+      },
+      "team_strength_score": {
+        "home": 66,
+        "away": 70
+      },
+      "attack_score": {
+        "home": 67,
+        "away": 69
+      },
+      "defense_score": {
+        "home": 61,
+        "away": 67
+      },
+      "player_state_adjustment": {
+        "home": 0.04,
+        "away": 0.01,
+        "note": "Algeria attacking state upgraded after second-round comeback; Austria process stable but finishing vs Argentina downgraded."
+      },
+      "injury_adjustment": {
+        "home": -0.01,
+        "away": -0.02,
+        "note": "No hard absence, but Austria Alaba/minutes and Algeria midfield discipline keep small risk penalty."
+      },
+      "tactical_matchup_adjustment": {
+        "home": 0.02,
+        "away": 0.03,
+        "note": "Austria process edge remains, Algeria late speed prevents over-discounting home win tail."
+      },
+      "schedule_environment_adjustment": {
+        "home": 0,
+        "away": 0,
+        "note": "Same kickoff and no local weather edge available."
+      },
+      "third_round_context": {
+        "group_table_snapshot": [
+          {
+            "rank": 1,
+            "team": "阿根廷",
+            "points": 6,
+            "gf": 5,
+            "ga": 0,
+            "gd": 5
+          },
+          {
+            "rank": 2,
+            "team": "奥地利",
+            "points": 3,
+            "gf": 3,
+            "ga": 3,
+            "gd": 0
+          },
+          {
+            "rank": 3,
+            "team": "阿尔及利亚",
+            "points": 3,
+            "gf": 2,
+            "ga": 4,
+            "gd": -2
+          },
+          {
+            "rank": 4,
+            "team": "约旦",
+            "points": 0,
+            "gf": 2,
+            "ga": 5,
+            "gd": -3
+          }
+        ],
+        "qualification_state": "Both on 3 points; Austria have better GD and higher draw value, Algeria likely need a win or strong third-place comparison.",
+        "simultaneous_match_dependency": "Jordan vs Argentina can alter third-place threshold psychologically, but both J matches kick off together.",
+        "strategic_tempo_adjustment": "Draw floor raised; if level after 60 minutes Algeria has stronger need to open game.",
+        "rotation_risk": "Medium-low; both still have meaningful qualification stakes.",
+        "yellow_card_suspension_risk": "T-75/final disciplinary check missing.",
+        "third_round_context_adjustment": {
+          "draw": 0.038,
+          "home_win": -0.008,
+          "away_win": -0.03
+        }
+      },
+      "market_adjustment": {
+        "home": -0.008,
+        "draw": 0.038,
+        "away": -0.03,
+        "note": "Market draw signal and red-team revise reduce Austria raw Poisson edge."
+      },
+      "expected_goals": {
+        "pre_market": {
+          "home": 1.14,
+          "away": 1.31
+        },
+        "final": {
+          "home": 1.14,
+          "away": 1.31
+        },
+        "note": "v3 keeps 20260626 red-team-calibrated xG baseline; market calibration affects final 1X2, not xG."
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0-0": 0.086294,
+          "0-1": 0.113045,
+          "0-2": 0.074044,
+          "0-3": 0.032333,
+          "0-4": 0.010589,
+          "0-5": 0.002774,
+          "1-0": 0.098375,
+          "1-1": 0.128871,
+          "1-2": 0.08441,
+          "1-3": 0.036859,
+          "1-4": 0.012071,
+          "1-5": 0.003163,
+          "2-0": 0.056074,
+          "2-1": 0.073456,
+          "2-2": 0.048114,
+          "2-3": 0.02101,
+          "2-4": 0.006881,
+          "2-5": 0.001803,
+          "3-0": 0.021308,
+          "3-1": 0.027913,
+          "3-2": 0.018283,
+          "3-3": 0.007984,
+          "3-4": 0.002615,
+          "3-5": 0.000685,
+          "4-0": 0.006073,
+          "4-1": 0.007955,
+          "4-2": 0.005211,
+          "4-3": 0.002275,
+          "4-4": 0.000745,
+          "4-5": 0.000195,
+          "5-0": 0.001385,
+          "5-1": 0.001814,
+          "5-2": 0.001188,
+          "5-3": 0.000519,
+          "5-4": 0.00017,
+          "5-5": 0.000045
+        },
+        "tail_probability": 0.003473,
+        "matrix_sum_check": 1
+      },
+      "raw_poisson_probabilities_1x2": {
+        "home_win": 0.323156,
+        "draw": 0.272054,
+        "away_win": 0.40479
+      },
+      "probabilities_1x2": {
+        "home_win": 0.315,
+        "draw": 0.31,
+        "away_win": 0.375
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.443299,
+        "under_2_5": 0.556701,
+        "over_3_5": 0.231791,
+        "under_3_5": 0.768209,
+        "btts_yes": 0.496655,
+        "btts_no": 0.503345
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.128871
+        },
+        {
+          "score": "0-1",
+          "probability": 0.113045
+        },
+        {
+          "score": "1-0",
+          "probability": 0.098375
+        },
+        {
+          "score": "0-0",
+          "probability": 0.086294
+        },
+        {
+          "score": "1-2",
+          "probability": 0.08441
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_spf": {
+          "odds": [
+            3.35,
+            2.11,
+            2.8
+          ],
+          "raw_implied": [
+            0.298507,
+            0.473934,
+            0.357143
+          ],
+          "overround": 1.129584,
+          "normalized": [
+            0.264263,
+            0.419565,
+            0.316172
+          ]
+        },
+        "handicap_spf": {
+          "handicap": "+1 Algeria",
+          "odds": [
+            1.31,
+            4.35,
+            7.35
+          ],
+          "raw_implied": [
+            0.763359,
+            0.229885,
+            0.136054
+          ],
+          "overround": 1.129298,
+          "normalized": [
+            0.675959,
+            0.203565,
+            0.120477
+          ]
+        },
+        "source": "ZGZCW/500 local snapshots captured 2026-06-26; ordinary and handicap SPF available"
+      },
+      "model_market_delta": {
+        "home_win": 0.050737,
+        "draw": -0.109565,
+        "away_win": 0.058828
+      },
+      "confidence_interval": {
+        "home_win": [
+          0.26,
+          0.37
+        ],
+        "draw": [
+          0.25,
+          0.36
+        ],
+        "away_win": [
+          0.31,
+          0.44
+        ],
+        "home_xg": [
+          0.92,
+          1.38
+        ],
+        "away_xg": [
+          1.05,
+          1.58
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "status": "pre_red_team_v3_equal_to_20260626_calibrated_baseline",
+        "home_win": 0.315,
+        "draw": 0.31,
+        "away_win": 0.375
+      },
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "Previous red-team stance was revise, but this v3 file is pre-red-team pending by request.",
+        "Draw market is much higher than raw Poisson; do not treat Austria as a stable-win script.",
+        "T-75 lineups and latest odds can move draw/home-tail materially."
+      ]
+    },
+    {
+      "match_id": "2026-06-28_jordan_vs_argentina",
+      "match_no": "周六072",
+      "home_team": "Jordan",
+      "away_team": "Argentina",
+      "kickoff_beijing": "2026-06-28 10:00",
+      "status": "v3_pre_match_discussion_only",
+      "factor_inputs": {
+        "baseline_strength": "Argentina have elite strength and a 6-point, +5 GD start; Jordan remain bottom but not zero-resistance.",
+        "attack": "Argentina Messi/Lautaro/Almada/De Paul chain; Jordan Al-Taamari/Olwan counter route and set pieces.",
+        "defense": "Argentina have two clean sheets; Jordan conceded 5 but showed first-half resistance vs Algeria.",
+        "player_state": "Messi at top internal state but age/load risk; Jordan Al-Taamari/Al-Rashdan/Olwan are the main live paths.",
+        "injury_suspension_minutes": "No official T-75 lineups. Messi/Argentina rotation and Romero minutes require recheck.",
+        "tactical_matchup": "Argentina control and chance quality vs Jordan back five; Jordan low block can slow tempo and keep 0-1/0-2 corridor live.",
+        "schedule_environment": "Same kickoff; Argentina likely manage health and first place rather than chase unnecessary margin.",
+        "market": "Ordinary SPF unavailable; Jordan +2 handicap market warns against automatically expanding Argentina 3+ margin tail."
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+        "official_lineup_gate": "T-75 official XI required before final model lock",
+        "home": {
+          "source_status": "probable_not_official",
+          "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+          "official_lineup_gate": "T-75 official XI required before final model lock",
+          "team": "Jordan",
+          "formation": "5-4-1 / 3-4-3 defensive",
+          "confidence": "medium_low",
+          "source_log": [
+            "local player_state/jordan-player-state.json",
+            "Jordan 1-2 Algeria postmatch review",
+            "local member table first-two-round usage"
+          ],
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_en": "Yazeed Abulaila",
+              "player_cn": null,
+              "role_note": "starting keeper; high-volume save role"
+            },
+            {
+              "position": "RWB",
+              "player_en": "Ihsan Haddad",
+              "player_cn": null,
+              "role_note": "right wingback and low-block outlet"
+            },
+            {
+              "position": "CB",
+              "player_en": "Yazan Al-Arab",
+              "player_cn": null,
+              "role_note": "central defender and aerial clearance"
+            },
+            {
+              "position": "CB",
+              "player_en": "Abdallah Nasib",
+              "player_cn": null,
+              "role_note": "box defender"
+            },
+            {
+              "position": "CB",
+              "player_en": "Mo Abualnadi",
+              "player_cn": null,
+              "role_note": "left centre-back cover"
+            },
+            {
+              "position": "LWB",
+              "player_en": "Mohannad Abu Taha",
+              "player_cn": null,
+              "role_note": "left/wingback recovery runner"
+            },
+            {
+              "position": "CM",
+              "player_en": "Nizar Al-Rashdan",
+              "player_cn": null,
+              "role_note": "ball-winning and late-box threat"
+            },
+            {
+              "position": "CM",
+              "player_en": "Noor Al-Rawabdeh",
+              "player_cn": null,
+              "role_note": "screening midfielder"
+            },
+            {
+              "position": "RW",
+              "player_en": "Musa Al-Taamari",
+              "player_cn": null,
+              "role_note": "primary transition carrier"
+            },
+            {
+              "position": "LW",
+              "player_en": "Mahmoud Al-Mardi",
+              "player_cn": null,
+              "role_note": "wide counter outlet"
+            },
+            {
+              "position": "ST",
+              "player_en": "Ali Olwan",
+              "player_cn": null,
+              "role_note": "front reference and finishing route"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_en": "Odeh Al-Fakhouri",
+              "player_cn": null,
+              "trigger": "starts if Jordan want a more natural 3-4-3 front line"
+            },
+            {
+              "player_en": "Husam Abu Dahab",
+              "player_cn": null,
+              "trigger": "extra defender if protecting a draw or narrow deficit"
+            },
+            {
+              "player_en": "Rajaei Ayed",
+              "player_cn": null,
+              "trigger": "midfield fresh legs after 60 minutes"
+            }
+          ],
+          "model_impact_if_changed": [
+            "If Al-Taamari is unavailable or limited, Jordan xG should drop by 0.08-0.12.",
+            "If Jordan use a true back five, draw and under tails rise but comeback ability falls."
+          ]
+        },
+        "away": {
+          "source_status": "probable_not_official",
+          "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+          "official_lineup_gate": "T-75 official XI required before final model lock",
+          "team": "Argentina",
+          "formation": "4-4-2 / 4-3-3 hybrid",
+          "confidence": "medium_low",
+          "source_log": [
+            "local player_state/argentina-player-state.json",
+            "Argentina 2-0 Austria postmatch review",
+            "20260626 J round3 tactics thread summary"
+          ],
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_en": "Emiliano Martinez",
+              "player_cn": null,
+              "role_note": "starting keeper and clean-sheet anchor"
+            },
+            {
+              "position": "RB",
+              "player_en": "Nahuel Molina",
+              "player_cn": null,
+              "role_note": "right-side width and recovery pace"
+            },
+            {
+              "position": "CB",
+              "player_en": "Cristian Romero",
+              "player_cn": null,
+              "role_note": "duel defender; probable but minutes watch"
+            },
+            {
+              "position": "CB",
+              "player_en": "Lisandro Martinez",
+              "player_cn": null,
+              "role_note": "left centre-back and progression"
+            },
+            {
+              "position": "LB",
+              "player_en": "Facundo Medina",
+              "player_cn": null,
+              "role_note": "left-back/third-CB hybrid"
+            },
+            {
+              "position": "CM",
+              "player_en": "Rodrigo De Paul",
+              "player_cn": null,
+              "role_note": "right-sided shuttler and Messi connector"
+            },
+            {
+              "position": "CM",
+              "player_en": "Enzo Fernandez",
+              "player_cn": null,
+              "role_note": "central circulation"
+            },
+            {
+              "position": "CM",
+              "player_en": "Alexis Mac Allister",
+              "player_cn": null,
+              "role_note": "press resistance and late support"
+            },
+            {
+              "position": "LW",
+              "player_en": "Thiago Almada",
+              "player_cn": null,
+              "role_note": "left/inside creative runner"
+            },
+            {
+              "position": "SS",
+              "player_en": "Lionel Messi",
+              "player_cn": null,
+              "role_note": "primary creator/finisher; age-load management risk"
+            },
+            {
+              "position": "ST",
+              "player_en": "Lautaro Martinez",
+              "player_cn": null,
+              "role_note": "box striker and pressing reference"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_en": "Julian Alvarez",
+              "player_cn": null,
+              "trigger": "starts if Messi or Lautaro minutes are managed"
+            },
+            {
+              "player_en": "Leandro Paredes",
+              "player_cn": null,
+              "trigger": "control option if Argentina prioritize low tempo"
+            },
+            {
+              "player_en": "Nicolas Gonzalez",
+              "player_cn": null,
+              "trigger": "wide runner if Jordan back five sits too deep"
+            }
+          ],
+          "model_impact_if_changed": [
+            "If Messi is rested or capped below 60 minutes, Argentina xG should drop 0.15-0.25 and draw tail rises.",
+            "If Argentina heavily rotate, favorite ceiling tail must be capped further."
+          ]
+        },
+        "gaps_and_conflicts": [
+          "Official starting XI not published.",
+          "Lineup confidence is capped at medium before T-75.",
+          "More than two starter changes or any formation flip requires xG/Poisson rerun."
+        ]
+      },
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "attack": 0.14,
+        "defense": 0.14,
+        "player_state": 0.13,
+        "injury_suspension_minutes": 0.08,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.14,
+        "market": 0.08
+      },
+      "team_strength_score": {
+        "home": 54,
+        "away": 84
+      },
+      "attack_score": {
+        "home": 51,
+        "away": 85
+      },
+      "defense_score": {
+        "home": 52,
+        "away": 84
+      },
+      "player_state_adjustment": {
+        "home": 0,
+        "away": 0.07,
+        "note": "Argentina state remains elite; Jordan counter players are live but defensive fatigue remains negative."
+      },
+      "injury_adjustment": {
+        "home": -0.01,
+        "away": -0.05,
+        "note": "Argentina rotation/Messi minutes are the key uncertainty; Jordan availability mostly probable but source quality partial."
+      },
+      "tactical_matchup_adjustment": {
+        "home": 0.01,
+        "away": 0.07,
+        "note": "Argentina control edge large, but low-block tempo cap keeps deep blowout tail moderated."
+      },
+      "schedule_environment_adjustment": {
+        "home": 0.01,
+        "away": -0.02,
+        "note": "Third-round health/rotation management slightly suppresses Argentina ceiling."
+      },
+      "third_round_context": {
+        "group_table_snapshot": [
+          {
+            "rank": 1,
+            "team": "阿根廷",
+            "points": 6,
+            "gf": 5,
+            "ga": 0,
+            "gd": 5
+          },
+          {
+            "rank": 2,
+            "team": "奥地利",
+            "points": 3,
+            "gf": 3,
+            "ga": 3,
+            "gd": 0
+          },
+          {
+            "rank": 3,
+            "team": "阿尔及利亚",
+            "points": 3,
+            "gf": 2,
+            "ga": 4,
+            "gd": -2
+          },
+          {
+            "rank": 4,
+            "team": "约旦",
+            "points": 0,
+            "gf": 2,
+            "ga": 5,
+            "gd": -3
+          }
+        ],
+        "qualification_state": "Argentina on 6 points and +5 GD are very likely first; Jordan on 0 points need a win and external third-place help.",
+        "simultaneous_match_dependency": "Algeria-Austria result can affect third-place threshold, but Jordan need a result regardless.",
+        "strategic_tempo_adjustment": "Argentina control-risk mode raises under/draw tails versus raw mismatch; Jordan late chase can reopen space.",
+        "rotation_risk": "Medium; Argentina may protect Messi or senior starters.",
+        "yellow_card_suspension_risk": "Final card/suspension check missing.",
+        "third_round_context_adjustment": {
+          "home_win": 0.009,
+          "draw": 0.027,
+          "away_win": -0.036
+        }
+      },
+      "market_adjustment": {
+        "home": 0.009,
+        "draw": 0.027,
+        "away": -0.036,
+        "note": "No ordinary SPF; red-team and +2 handicap signal cap Argentina 3+ margin tail and lower raw away win."
+      },
+      "expected_goals": {
+        "pre_market": {
+          "home": 0.56,
+          "away": 1.95
+        },
+        "final": {
+          "home": 0.56,
+          "away": 1.95
+        },
+        "note": "v3 keeps 20260626 red-team-calibrated xG baseline; market calibration affects final 1X2, not xG."
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0-0": 0.081268,
+          "0-1": 0.158473,
+          "0-2": 0.154511,
+          "0-3": 0.100432,
+          "0-4": 0.048961,
+          "0-5": 0.019095,
+          "1-0": 0.04551,
+          "1-1": 0.088745,
+          "1-2": 0.086526,
+          "1-3": 0.056242,
+          "1-4": 0.027418,
+          "1-5": 0.010693,
+          "2-0": 0.012743,
+          "2-1": 0.024849,
+          "2-2": 0.024227,
+          "2-3": 0.015748,
+          "2-4": 0.007677,
+          "2-5": 0.002994,
+          "3-0": 0.002379,
+          "3-1": 0.004638,
+          "3-2": 0.004522,
+          "3-3": 0.00294,
+          "3-4": 0.001433,
+          "3-5": 0.000559,
+          "4-0": 0.000333,
+          "4-1": 0.000649,
+          "4-2": 0.000633,
+          "4-3": 0.000412,
+          "4-4": 0.000201,
+          "4-5": 0.000078,
+          "5-0": 0.000037,
+          "5-1": 0.000073,
+          "5-2": 0.000071,
+          "5-3": 0.000046,
+          "5-4": 0.000022,
+          "5-5": 0.000009
+        },
+        "tail_probability": 0.014852,
+        "matrix_sum_check": 1
+      },
+      "raw_poisson_probabilities_1x2": {
+        "home_win": 0.096944,
+        "draw": 0.19739,
+        "away_win": 0.705666
+      },
+      "probabilities_1x2": {
+        "home_win": 0.106,
+        "draw": 0.224,
+        "away_win": 0.67
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.458749,
+        "under_2_5": 0.541251,
+        "over_3_5": 0.244564,
+        "under_3_5": 0.755436,
+        "btts_yes": 0.367785,
+        "btts_no": 0.632215
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.158473
+        },
+        {
+          "score": "0-2",
+          "probability": 0.154511
+        },
+        {
+          "score": "0-3",
+          "probability": 0.100432
+        },
+        {
+          "score": "1-1",
+          "probability": 0.088745
+        },
+        {
+          "score": "1-2",
+          "probability": 0.086526
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_spf": null,
+        "handicap_spf": {
+          "handicap": "+2 Jordan",
+          "odds": [
+            2.28,
+            3.85,
+            2.32
+          ],
+          "raw_implied": [
+            0.438596,
+            0.25974,
+            0.431034
+          ],
+          "overround": 1.129371,
+          "normalized": [
+            0.388355,
+            0.229987,
+            0.381659
+          ]
+        },
+        "source": "ZGZCW/500 local snapshots captured 2026-06-26; ordinary SPF unavailable, handicap SPF only"
+      },
+      "model_market_delta": {
+        "home_win": null,
+        "draw": null,
+        "away_win": null,
+        "note": "ordinary 1X2 not available; handicap market cannot be translated into direct 1X2 delta"
+      },
+      "confidence_interval": {
+        "home_win": [
+          0.07,
+          0.15
+        ],
+        "draw": [
+          0.17,
+          0.28
+        ],
+        "away_win": [
+          0.61,
+          0.74
+        ],
+        "home_xg": [
+          0.38,
+          0.78
+        ],
+        "away_xg": [
+          1.55,
+          2.3
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "status": "pre_red_team_v3_equal_to_20260626_calibrated_baseline",
+        "home_win": 0.106,
+        "draw": 0.224,
+        "away_win": 0.67
+      },
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "Previous red-team stance was revise for blowout tail; v3 status remains pending by request.",
+        "Ordinary SPF missing; do not use +2 handicap as direct 1X2 market probability.",
+        "Messi/Argentina rotation can lower away xG and raise 0-1/0-2 corridor."
+      ]
+    }
+  ],
+  "validation_policy": {
+    "json_parse_required": true,
+    "probability_sum_tolerance": 0.002,
+    "poisson_matrix_tail_required": true,
+    "prohibited_betting_advice": true
+  }
+}

@@ -1,0 +1,507 @@
+{
+  "phase": "group_round3_tactics",
+  "group": "K",
+  "status": "partial",
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "updated_at": "2026-06-27T00:00:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "K组第三轮哥伦比亚vs葡萄牙、刚果金vs乌兹别克斯坦战术对位与模型可用因子；不含比分、胜平负概率或投注建议。",
+  "source_log": [
+    "README.md",
+    "线程状态.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    ".codex/skills/worldcup-tactics-coach/SKILL.md",
+    ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_乌兹别克斯坦_1-3_哥伦比亚_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-17_葡萄牙_1-1_刚果金_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-23_葡萄牙_5-0_乌兹别克斯坦_复盘.md",
+    "比赛/已完成比赛/小组赛/K组/2026-06-24_哥伦比亚_1-0_刚果金_复盘.md",
+    "data/packets/tactics/colombia-tactics-packet.json",
+    "data/packets/tactics/portugal-tactics-packet.json",
+    "data/packets/tactics/dr-congo-tactics-packet.json",
+    "data/packets/tactics/uzbekistan-tactics-packet.json",
+    "data/outputs/player_state/colombia-player-state.json",
+    "data/outputs/player_state/portugal-player-state.json",
+    "data/outputs/player_state/dr-congo-player-state.json",
+    "data/outputs/player_state/uzbekistan-player-state.json"
+  ],
+  "data_gaps": [
+    "T-75官方首发不可得，轮换与分钟管理只能按前两轮使用和第三轮动机估计。",
+    "第三轮官方伤停、累计黄牌停赛、完整训练动态未核定。",
+    "K组第三轮实时同步比分触发策略只能做赛前情景因子，不能固化为单一路径。",
+    "部分第二轮逐人外部评分缺同源稳定数据，player_state中存在内部评分代理。"
+  ],
+  "group_context": {
+    "table_inference": "哥伦比亚与葡萄牙均4分，末轮直接争小组第一；刚果金1分、乌兹别克斯坦0分，刚果金必须争胜才有更现实出线窗口，乌兹别克斯坦需要赢球且依赖横向条件。",
+    "third_round_context_note": "哥伦比亚vs葡萄牙更偏头名与轮换/控风险博弈；刚果金vs乌兹别克斯坦更偏低位纪律、必须赢后段抬线和先丢球崩盘风险。"
+  },
+  "matches": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "fixture_status": "confirmed_by_task",
+      "tactical_summary": "哥伦比亚的左路迪亚斯吸包夹、穆尼奥斯弱侧前插和昆特罗/科尔多瓦替补直塞，是对葡萄牙边后卫身后与中卫横移的主要考验。葡萄牙二轮5-0显示边路宽度、布鲁诺二次组织、定位球和领先后持续压制都处在上行，但面对哥伦比亚不应把乌兹别克斯坦式崩盘直接外推。",
+      "teams": {
+        "哥伦比亚": {
+          "shape": "4-2-3-1，可转4-3-3；中前场通过James/Quintero连接，Luis Diaz拉开左路，Daniel Munoz提供右后卫弱侧终结。",
+          "quant_factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.5,
+              "evidence": "战术包写明可中高位锁边路和后腰第一脚；前两轮对乌兹别克斯坦、刚果金都能把对手压回低位。",
+              "confidence": "medium",
+              "model_note": "只给小幅加成；葡萄牙Vitinha/Bruno出球抗压强，不能按弱队出球模型处理。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "mixed",
+              "magnitude": 0.2,
+              "evidence": "哥伦比亚有Lerma/Puerta保护和James节奏点，但葡萄牙可用边锋与前腰切断后腰接球。",
+              "confidence": "medium",
+              "model_note": "作为稳定性因子，不要和中场控制优势重复满额叠加。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.7,
+              "evidence": "Luis Diaz首轮反击进球；葡萄牙边后卫宽度压上后身后空间是已知风险。",
+              "confidence": "medium_high",
+              "model_note": "与Diaz个人状态、attack_score共线，建议限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": 0.6,
+              "evidence": "穆尼奥斯持续前插是破局点，同时会给葡萄牙Leao/Neto/Cancelo侧转换空间。",
+              "confidence": "medium",
+              "model_note": "若T-75显示边后卫保守，风险下调；若争头名主动压上，风险上调。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.6,
+              "evidence": "Luis Diaz稳定吸包夹，Munoz连续两轮进球并被player_state上调为弱侧终结点。",
+              "confidence": "high",
+              "model_note": "和球员状态重复计权风险高；更适合作为对位分布调整而非总攻击大幅加成。"
+            },
+            "central_control_advantage": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": "James/Quintero能提供最后一传，但葡萄牙Vitinha、Bruno、Joao Neves控制质量更高。",
+              "confidence": "medium",
+              "model_note": "不建议给哥伦比亚中路控制正加成；可保留创造型换人分支。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": "战术包强调James脚法和高点；葡萄牙首轮被刚果金角球二次进攻扳平。",
+              "confidence": "medium",
+              "model_note": "葡萄牙自身定位球强，净优势有限；不要与set_piece进球历史重复满额叠加。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": 0.5,
+              "evidence": "面对葡萄牙Ronaldo禁区占点、Leao后段冲刺和Bruno纵向传递，哥伦比亚中卫横移会被拉扯。",
+              "confidence": "medium",
+              "model_note": "强度取决于是否主动争第一；若保守控风险，风险下调。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.6,
+              "evidence": "第二轮58分钟Quintero和Cordoba登场后改变直塞和9号位牵制，76分钟制胜。",
+              "confidence": "high",
+              "model_note": "应作为后60分钟破局加成；不要和首发James创造力简单相加。"
+            },
+            "game_state_tendency": {
+              "direction": "mixed",
+              "magnitude": 0.3,
+              "evidence": "打平对哥伦比亚争第一可能仍有价值，但面对葡萄牙若先失球会提升边后卫与前场压迫。",
+              "confidence": "medium",
+              "model_note": "用情景分支处理：领先/平局控风险，落后提高转换和防线风险。"
+            },
+            "third_round_motivation_tactical_shift": {
+              "direction": "mixed",
+              "magnitude": 0.4,
+              "evidence": "两队同积4分，直接争头名；哥伦比亚已基本掌握出线主动但头名价值仍在。",
+              "confidence": "medium",
+              "model_note": "不要把争头名机械等同全场高压；主要影响后30分钟风险偏好。"
+            },
+            "rotation_shape_risk": {
+              "direction": "negative",
+              "magnitude": 0.4,
+              "evidence": "已取得两连胜/4分，可能存在James分钟管理和首发轮换；T-75未确认。",
+              "confidence": "medium_low",
+              "model_note": "若James/Quintero/Munoz任何一环轮休，进攻形态需重估。"
+            },
+            "draw_management_tendency": {
+              "direction": "positive",
+              "magnitude": 0.6,
+              "evidence": "同积4分且晋级前景好，若比赛持平，哥伦比亚未必无条件冒险。",
+              "confidence": "medium",
+              "model_note": "压低前60分钟总节奏；若葡萄牙领先则该因子失效。"
+            },
+            "goal_difference_chase_risk": {
+              "direction": "neutral",
+              "magnitude": 0.1,
+              "evidence": "头名主要由直接对话决定，净胜球不是唯一初始驱动。",
+              "confidence": "medium",
+              "model_note": "仅在另一场大比分和实时排名复杂化时小幅启用。"
+            },
+            "late_game_information_risk": {
+              "direction": "mixed",
+              "magnitude": 0.4,
+              "evidence": "另一场会影响第三名和潜在排名，但本场头名博弈主要由直接比分决定。",
+              "confidence": "medium",
+              "model_note": "晚段风险低于刚果金vs乌兹别克斯坦，但不可置零。"
+            }
+          }
+        },
+        "葡萄牙": {
+          "shape": "4-3-3/4-2-3-1；通过Cancelo/Nuno Mendes宽度、Bruno二次组织、Ronaldo禁区占点和Leao后段冲击建立攻击链。",
+          "quant_factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": "二轮对乌兹别克斯坦前场压迫压碎第一脚出球；但Ronaldo角色会影响第一线压迫强度。",
+              "confidence": "medium",
+              "model_note": "只给中低幅度；面对哥伦比亚不能复制对弱出球队的压迫收益。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.7,
+              "evidence": "Vitinha、Bruno、Joao Neves能稳定连接；二轮5-0中中场控制顺畅。",
+              "confidence": "high",
+              "model_note": "与baseline/player_state有重叠，建议以抗压稳定性方式入模。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.8,
+              "evidence": "Bruno纵向球、Leao后段冲刺、Cancelo/Semedo宽度均在二轮兑现。",
+              "confidence": "high",
+              "model_note": "若哥伦比亚边后卫继续高位，打开favorite_transition_ceiling；限幅避免与attack_score重复。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": 0.5,
+              "evidence": "首轮被刚果金直接路线和定位球二次进攻扳平；边后卫前压后身后仍是风险。",
+              "confidence": "medium",
+              "model_note": "哥伦比亚Diaz/Munoz使该风险高于对乌兹别克斯坦。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.9,
+              "evidence": "二轮Cancelo助攻、Nuno Mendes任意球和边路推进、Leao替补进球均被player_state上调。",
+              "confidence": "high",
+              "model_note": "这是葡萄牙最主要战术正因子，但与球员状态重复，应设置上限。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.6,
+              "evidence": "Bruno/Vitinha/Joao Neves能占据节奏；哥伦比亚中路更多依赖创造点而非全场控制。",
+              "confidence": "medium_high",
+              "model_note": "不代表持续高压；领先后可能转控风险。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.8,
+              "evidence": "二轮Nuno Mendes直接任意球、Bruno低平角球制造乌龙；首轮自身也有高点威胁。",
+              "confidence": "high",
+              "model_note": "定位球已反映在最近进球中，追加加成需封顶。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": 0.4,
+              "evidence": "面对Diaz和Munoz弱侧前插，葡萄牙边后卫压上后中卫横移压力增加。",
+              "confidence": "medium",
+              "model_note": "若T-75显示更稳的后腰/边后卫组合，可下调。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.5,
+              "evidence": "首轮Martinez先后使用Conceicao、Leao、Semedo、Ramos；二轮Leao/Semedo后段进球链兑现。",
+              "confidence": "medium_high",
+              "model_note": "作为后段提速牌，不要和首发边路优势重复满额叠加。"
+            },
+            "game_state_tendency": {
+              "direction": "mixed",
+              "magnitude": 0.4,
+              "evidence": "首轮早领先后未扩大并被扳平；二轮2-0后继续压制打成5-0，说明对手质量和比赛目标决定节奏。",
+              "confidence": "medium",
+              "model_note": "需情景化：领先哥伦比亚可能控风险，若对手压上则转换尾部上修。"
+            },
+            "third_round_motivation_tactical_shift": {
+              "direction": "mixed",
+              "magnitude": 0.5,
+              "evidence": "同积4分争头名，葡萄牙有赢下直接对话的动力，但出线主动较强。",
+              "confidence": "medium",
+              "model_note": "增加强首发概率，但不自动提高全场大胜倾向。"
+            },
+            "rotation_shape_risk": {
+              "direction": "negative",
+              "magnitude": 0.5,
+              "evidence": "二轮大胜后核心如Ronaldo、Bruno、Nuno、Cancelo存在分钟管理可能；T-75未确认。",
+              "confidence": "medium_low",
+              "model_note": "若轮换幅度大，应下修压迫和定位球执行稳定性。"
+            },
+            "draw_management_tendency": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": "4分在手，若平局足以保有理想路径，Martinez可能先控风险。",
+              "confidence": "medium",
+              "model_note": "压低无谓对攻；但若哥伦比亚先得势，葡萄牙替补提速强。"
+            },
+            "goal_difference_chase_risk": {
+              "direction": "neutral",
+              "magnitude": 0.2,
+              "evidence": "葡萄牙二轮已积累净胜优势，末轮主要看直接对话。",
+              "confidence": "medium",
+              "model_note": "不建议按二轮5-0继续上调追净胜球欲望。"
+            },
+            "late_game_information_risk": {
+              "direction": "mixed",
+              "magnitude": 0.4,
+              "evidence": "另一场结果影响小组第三生态，但本场头名由自身比分主导。",
+              "confidence": "medium",
+              "model_note": "晚段更多由本场比分决定，实时信息影响中等。"
+            }
+          }
+        }
+      }
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "fixture_status": "confirmed_by_task",
+      "tactical_summary": "刚果金前两轮证明五后卫低位、门将姆帕西和Wissa/Bakambu反击能拖住强队，但对哥伦比亚时前场连线不足。乌兹别克斯坦经历1-3和0-5后，Fayzullaev仍是少数高质量推进点，但门将-中卫链条、危险区域犯规和落后后出球压力是主要风险。",
+      "teams": {
+        "刚果金": {
+          "shape": "5-3-2/5-4-1为主，落后时增加速度点或中锋；核心是低位密度、姆帕西扑救、Wissa/Bakambu直接反击。",
+          "quant_factors": {
+            "pressing_adjustment": {
+              "direction": "neutral",
+              "magnitude": 0.1,
+              "evidence": "战术包定位为阶段性压迫，更多中低位保持紧凑；对乌兹别克斯坦可适度压第一脚。",
+              "confidence": "medium",
+              "model_note": "不要把必须赢误读成长时间高压；刚果金更适合选择性压迫。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": 0.4,
+              "evidence": "第二轮对哥伦比亚反击出口少，中场难连续向前；长期被压时第一脚质量不足。",
+              "confidence": "medium_high",
+              "model_note": "若乌兹别克斯坦主动压上，该短板会被放大；否则影响有限。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.6,
+              "evidence": "首轮Wissa定位球二次进攻得分，Bakambu有中柱/支点信号；乌兹别克斯坦落后后防线横移差。",
+              "confidence": "medium",
+              "model_note": "与Wissa/Bakambu状态重复，建议限幅；主要在乌兹别克斯坦压上时启用。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": 0.5,
+              "evidence": "必须争胜会使五后卫以外的中场保护变薄；Fayzullaev和Shomurodov有反击窗口。",
+              "confidence": "medium",
+              "model_note": "领先后下调，落后或后段必须赢时上调。"
+            },
+            "wide_channel_advantage": {
+              "direction": "neutral",
+              "magnitude": 0.2,
+              "evidence": "Masuaku/Wan-Bissaka提供边翼卫防守与定位球，但进攻贡献不稳定。",
+              "confidence": "medium",
+              "model_note": "不宜给强正加成；更多体现为防守宽度。"
+            },
+            "central_control_advantage": {
+              "direction": "negative",
+              "magnitude": 0.3,
+              "evidence": "对哥伦比亚时中场难以持续向前，前锋缺少舒服第一落点。",
+              "confidence": "medium",
+              "model_note": "中央控制弱不等于进攻无效；反击和定位球另算。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.7,
+              "evidence": "首轮45+5 Wissa利用角球二次进攻扳平葡萄牙；Mbemba/Bakambu等高点有威胁。",
+              "confidence": "high",
+              "model_note": "可上修单事件尾部，但与高点/反击不要重复满额。"
+            },
+            "defensive_line_risk": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": "五后卫对葡萄牙、哥伦比亚都能拖低比分；姆帕西第二轮6次扑救状态上调。",
+              "confidence": "medium_high",
+              "model_note": "门将扑救不能完全转化为防线强度；防线被射门压制仍需保留。"
+            },
+            "coach_substitution_risk": {
+              "direction": "mixed",
+              "magnitude": 0.4,
+              "evidence": "Desabre落后后会增加速度和直接冲击；Mbuku/Sadiki等替补有活力但可能削弱结构。",
+              "confidence": "medium",
+              "model_note": "换人是双向波动因子，非纯正加成。"
+            },
+            "game_state_tendency": {
+              "direction": "mixed",
+              "magnitude": 0.6,
+              "evidence": "刚果金1分，末轮需要胜利来争取主动；但开局仍更可能先保结构。",
+              "confidence": "medium_high",
+              "model_note": "前60分钟低位，后30分钟若未领先则提速和防转风险同步上升。"
+            },
+            "third_round_motivation_tactical_shift": {
+              "direction": "positive",
+              "magnitude": 0.7,
+              "evidence": "1分处境使刚果金不能只满足守平，末段必须增加禁区人数和直接球。",
+              "confidence": "medium_high",
+              "model_note": "提升后段进攻投入，同时上修失控风险。"
+            },
+            "rotation_shape_risk": {
+              "direction": "neutral",
+              "magnitude": 0.2,
+              "evidence": "必须争胜降低大轮换概率，但连续高强度低位防守带来体能风险。",
+              "confidence": "medium",
+              "model_note": "主要关注体能与边翼卫负荷，而非主动轮换。"
+            },
+            "draw_management_tendency": {
+              "direction": "negative",
+              "magnitude": -0.7,
+              "evidence": "平局只到2分，主动出线价值低。",
+              "confidence": "high",
+              "model_note": "后段不宜压低风险；但开场仍可能低事件。"
+            },
+            "goal_difference_chase_risk": {
+              "direction": "positive",
+              "magnitude": 0.5,
+              "evidence": "若另一场形势或第三名横向比较不利，刚果金可能追更多进球。",
+              "confidence": "medium",
+              "model_note": "作为后段尾部，不要提前均匀铺到全场xG。"
+            },
+            "late_game_information_risk": {
+              "direction": "positive",
+              "magnitude": 0.8,
+              "evidence": "本场两队第三名/出线依赖另一场和横向积分，末段信息会改变风险偏好。",
+              "confidence": "high",
+              "model_note": "需要第三轮情景模拟层单独处理。"
+            }
+          }
+        },
+        "乌兹别克斯坦": {
+          "shape": "3-4-3/5-4-1，可在落后时改4-2-3-1；Fayzullaev负责创造，Shomurodov支点，但后场门将-中卫链条受二轮重创。",
+          "quant_factors": {
+            "pressing_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": "战术包不支持长时间高压；二轮被葡萄牙压制后更可能先稳结构。",
+              "confidence": "medium",
+              "model_note": "若必须追分，压迫上升但质量和身后风险同步恶化。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.7,
+              "evidence": "首轮对哥伦比亚、二轮对葡萄牙均显示出球被压制；门将/中卫低平球处理下调。",
+              "confidence": "high",
+              "model_note": "可直接下修后场抗压；避免与defensive_line_risk重复过量。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "mixed",
+              "magnitude": 0.3,
+              "evidence": "Fayzullaev首轮进球，Shomurodov可做支点，但二轮被葡萄牙压制，持续供给不足。",
+              "confidence": "medium",
+              "model_note": "保留反击单点，不上修稳定open-play attack。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": 0.8,
+              "evidence": "首轮1-1后很快因中场被断被Diaz反击；二轮边中协防和禁区保护集体掉线。",
+              "confidence": "high",
+              "model_note": "若落后追分，该因子应非线性上升。"
+            },
+            "wide_channel_advantage": {
+              "direction": "negative",
+              "magnitude": -0.4,
+              "evidence": "边翼卫身后是战术包长期风险；对葡萄牙被两翼牵引拉开。",
+              "confidence": "medium_high",
+              "model_note": "面对刚果金边路不如葡萄牙强，降幅小于二轮。"
+            },
+            "central_control_advantage": {
+              "direction": "neutral",
+              "magnitude": 0.1,
+              "evidence": "Shukurov/Mozgovoy可提供一定中场稳定，但面对身体对抗和低位密度创造有限。",
+              "confidence": "medium",
+              "model_note": "不建议大幅上调中路控制；更多是防守平衡。"
+            },
+            "set_piece_advantage": {
+              "direction": "neutral",
+              "magnitude": 0.2,
+              "evidence": "Khusanov等高点有价值，但二轮危险区域犯规和定位球防守连续出问题。",
+              "confidence": "medium",
+              "model_note": "进攻定位球小幅保留，防守定位球风险另计。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": 0.9,
+              "evidence": "二轮0-5暴露低位第一落点保护、门将中卫处理、危险区域犯规和后段崩盘。",
+              "confidence": "high",
+              "model_note": "刚果金攻击效率不如葡萄牙，需限幅；但先丢球后崩盘风险高。"
+            },
+            "coach_substitution_risk": {
+              "direction": "mixed",
+              "magnitude": 0.4,
+              "evidence": "首轮半场换Khamdamov/Sayfiev后推进改善并扳平；但再次落后后终结质量不足。",
+              "confidence": "medium_high",
+              "model_note": "换人可改善推进，但也会削弱防守结构。"
+            },
+            "game_state_tendency": {
+              "direction": "mixed",
+              "magnitude": 0.7,
+              "evidence": "0分处境要求争胜，但前两轮失8球使其开局仍可能先低位自保。",
+              "confidence": "medium_high",
+              "model_note": "前段低位，后段必须打开；总波动来自比分状态。"
+            },
+            "third_round_motivation_tactical_shift": {
+              "direction": "positive",
+              "magnitude": 0.6,
+              "evidence": "只有赢球才保留理论横向机会，不能长期只守低位。",
+              "confidence": "medium",
+              "model_note": "只上修后段风险偏好，不直接上修进攻效率。"
+            },
+            "rotation_shape_risk": {
+              "direction": "negative",
+              "magnitude": 0.6,
+              "evidence": "二轮0-5后门将/中卫链条、首发取舍和心理状态均需调整；T-75未确认。",
+              "confidence": "medium",
+              "model_note": "若更换门将或中卫组合，防线均值和方差都需重估。"
+            },
+            "draw_management_tendency": {
+              "direction": "negative",
+              "magnitude": -0.9,
+              "evidence": "0分球队平局几乎无主动价值。",
+              "confidence": "high",
+              "model_note": "后30分钟应降低低事件保持概率。"
+            },
+            "goal_difference_chase_risk": {
+              "direction": "positive",
+              "magnitude": 0.6,
+              "evidence": "若仍有第三名横向理论机会，必须争进球；但执行质量有限。",
+              "confidence": "medium",
+              "model_note": "提高尾部开放性，不等于提高乌兹别克斯坦胜面。"
+            },
+            "late_game_information_risk": {
+              "direction": "positive",
+              "magnitude": 0.8,
+              "evidence": "另一场比分和第三名横向条件会决定是否继续冒险。",
+              "confidence": "medium_high",
+              "model_note": "必须进入第三轮情景模拟层，尤其70分钟后。"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "double_counting_warnings": [
+    "葡萄牙边路优势、C罗/布鲁诺/努诺状态和二轮5-0不能四次满额叠加；建议合成为wide_channel_advantage + set_piece_advantage + favorite_transition_ceiling的限幅组合。",
+    "哥伦比亚的Luis Diaz状态、Munoz前插和transition_attack_adjustment高度相关；模型应避免把球员状态与对位优势重复计满。",
+    "刚果金姆帕西高扑救只应上调门将状态和低比分尾部，不能直接把整体防线强度整体抬高。",
+    "乌兹别克斯坦二轮0-5既影响防线风险也影响心理/轮换，不要在defensive_line_risk、rotation_shape_risk和player_state中三重惩罚。"
+  ],
+  "handoff_to_model": [
+    "哥伦比亚vs葡萄牙：强队方向与深穿/大胜尾部必须拆分；本场更适合以宽度、定位球、后段换人和头名动机做情景加权。",
+    "刚果金vs乌兹别克斯坦：前60分钟低位/谨慎权重与后30分钟必须赢开放权重并存，应加入third_round_scoreboard_pressure。",
+    "新增或沿用字段：favorite_transition_ceiling、opponent_must_win_exposure、first_goal_collapse_risk、recognized_score_cluster_coverage、third_round_scoreboard_pressure。",
+    "所有因子状态为partial，T-75首发和最终伤停/停赛确认后应刷新。"
+  ]
+}

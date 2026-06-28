@@ -95,6 +95,20 @@ Return:
 
 Use `references/output-schemas.md` for JSON-compatible shapes.
 
+## Betting-Plan Backtest Support
+
+Do not give betting advice. When reviewing a previous betting discussion after real results are known, help the main thread separate football-model errors from ticket-construction errors.
+
+Required diagnostic categories:
+
+- `model_direction_error`: the predicted 1X2 direction or non-loss direction failed.
+- `model_tail_error`: the direction was right but the margin, exact score, heavy-tail scoreline, red-card effect, rotation effect, or late substitution scoring tail was too low.
+- `draw_floor_error`: the model underweighted a low-event or qualification-sufficient draw.
+- `bet_translation_error`: the model identified a path such as 0-0 or 1-1, but the betting ticket omitted it.
+- `portfolio_structure_error`: the leg was plausible in isolation but lost because it was bound into an overcorrelated or overleveraged parlay.
+
+For scoreline and handicap-related backtests, report `covered_scorelines`, `uncovered_model_scorelines`, `tail_loss_paths`, and `ticket_settlement_probability_gap` whenever possible. Never claim the model was correct merely because the match winner was correct; ticket settlement is a separate layer.
+
 ## Output Discipline
 
 For World Cup work, choose the output size based on the user's current request and the reusable value of the result. Write durable model packets, probability JSON, and reusable reports to local files when they need to persist, but do not force skeleton-first file creation or smallest-loop batching as a mandatory workflow. Before updating existing files, check whether valid content already exists and preserve it. Subagent outputs should be summarized into key conclusions, quantitative deltas, and handoff notes unless the user asks for full detail.

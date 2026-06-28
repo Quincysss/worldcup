@@ -4,9 +4,9 @@
   "team_en": "DR Congo",
   "group": "K",
   "status": "partial",
-  "player_state_update_status": "updated_round2_colombia_1_0_dr_congo",
+  "player_state_update_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
   "created_at": "2026-06-20T22:49:59+08:00",
-  "updated_at": "2026-06-24T18:30:00+08:00",
+  "updated_at": "2026-06-28T22:05:00+08:00",
   "captured_at": "2026-06-20T23:49:10+08:00",
   "owner": "worldcup-data-collector-dr-congo",
   "scope": "同步K组第一轮葡萄牙1-1刚果金后的刚果金球员状态；不主写单场复盘，复盘主责为葡萄牙线程。",
@@ -85,7 +85,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 4.2,
+      "form_status_1_5": 2.6,
       "form_reason": "首发打满，终场前处理传中和角球稳健。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -216,8 +216,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "6次扑救让刚果金保留到最后，虽失一球仍是本队最佳；下一轮门将状态显著上调。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -249,7 +249,24 @@
           "note": "6次扑救让刚果金保留到最后，虽失一球仍是本队最佳；下一轮门将状态显著上调。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "利昂内尔·姆帕西",
+        "english_name": "Lionel Mpasi",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -296,7 +313,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -430,7 +447,26 @@
           "postmatch_form_status_1_5": 2,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "蒂莫西·法尤卢",
+        "english_name": "Timothy Fayulu",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。"
     },
     {
       "number": null,
@@ -477,7 +513,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -611,7 +647,26 @@
           "postmatch_form_status_1_5": 2,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "马蒂厄·埃波洛",
+        "english_name": "Matthieu Epolo",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。"
     },
     {
       "number": null,
@@ -658,7 +713,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.5,
+      "form_status_1_5": 3.3,
       "form_reason": "队长和中卫核心，带队守住1分。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -799,8 +854,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "中卫核心支撑低位防线，终段也参与一次射门威胁。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "早丢球后带队稳住防线。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -832,7 +887,24 @@
           "note": "中卫核心支撑低位防线，终段也参与一次射门威胁。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "尚塞尔·姆本巴",
+        "english_name": "Chancel Mbemba",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "早丢球后带队稳住防线。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.3,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.3,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -879,7 +951,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.2,
+      "form_status_1_5": 3.4,
       "form_reason": "首发左翼卫，完成五后卫防守任务。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -1020,8 +1092,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "左翼卫和定位球参与度较高，但被迫长期退守。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "逆转取胜，后段加速与两球以上尾部兑现。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -1053,7 +1125,24 @@
           "note": "左翼卫和定位球参与度较高，但被迫长期退守。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "阿蒂尔·马苏亚库",
+        "english_name": "Arthur Masuaku",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "逆转取胜，后段加速与两球以上尾部兑现。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.4,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.4,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -1100,7 +1189,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.5,
+      "form_status_1_5": 2.6,
       "form_reason": "终场前替补守比分，完成收尾。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -1234,7 +1323,26 @@
           "postmatch_form_status_1_5": 2.5,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "热代翁·卡卢卢",
+        "english_name": "Gedeon Kalulu",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。"
     },
     {
       "number": null,
@@ -1281,7 +1389,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -1422,8 +1530,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "72分钟登场补充边路/中场机动。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -1455,7 +1563,24 @@
           "note": "72分钟登场补充边路/中场机动。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "约里斯·卡延贝",
+        "english_name": "Joris Kayembe",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -1502,7 +1627,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -1636,7 +1761,26 @@
           "postmatch_form_status_1_5": 2,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "迪伦·巴图宾西卡",
+        "english_name": "Dylan Batubinsika",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。"
     },
     {
       "number": null,
@@ -1683,7 +1827,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.2,
+      "form_status_1_5": 2.6,
       "form_reason": "多次处理禁区威胁，被现场报道点名表现突出。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -1824,8 +1968,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "禁区防守工作量大，整体抗压合格。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -1857,7 +2001,24 @@
           "note": "禁区防守工作量大，整体抗压合格。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "阿克塞尔·图安泽贝",
+        "english_name": "Axel Tuanzebe",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -1904,7 +2065,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.3,
+      "form_status_1_5": 2.6,
       "form_reason": "首发右翼卫，高强度防守后被换下。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -2045,8 +2206,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "五后卫右侧承担大量防守，进攻贡献有限。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -2078,7 +2239,24 @@
           "note": "五后卫右侧承担大量防守，进攻贡献有限。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "阿隆·万-比萨卡",
+        "english_name": "Aaron Wan-Bissaka",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -2125,7 +2303,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -2249,7 +2427,26 @@
           "postmatch_form_status_1_5": 2,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "洛基·布希里",
+        "english_name": "Rocky Bushiri",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。"
     },
     {
       "number": null,
@@ -2296,7 +2493,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.2,
+      "form_status_1_5": 2.6,
       "form_reason": "首发五后卫之一，多次及时补位。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -2437,8 +2634,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "五后卫左中卫轮转补位较多，仍被哥伦比亚弱侧插上击穿一次。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -2470,7 +2667,24 @@
           "note": "五后卫左中卫轮转补位较多，仍被哥伦比亚弱侧插上击穿一次。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "史蒂夫·卡普阿迪",
+        "english_name": "Steve Kapuadi",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -2517,7 +2731,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 3.2,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -2641,7 +2855,26 @@
           "postmatch_form_status_1_5": 2,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "梅沙克·埃利亚",
+        "english_name": "Meschak Elia",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "逆转取胜，后段加速与两球以上尾部兑现。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.2,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.2,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "逆转取胜，后段加速与两球以上尾部兑现。"
     },
     {
       "number": null,
@@ -2688,7 +2921,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.9,
+      "form_status_1_5": 3.3,
       "form_reason": "首发中场覆盖范围稳定，终场前制造反击。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -2829,8 +3062,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "中路覆盖消耗大，推进和反击连接不足。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "逆转取胜，后段加速与两球以上尾部兑现。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -2862,7 +3095,24 @@
           "note": "中路覆盖消耗大，推进和反击连接不足。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "萨穆埃尔·穆图萨米",
+        "english_name": "Samuel Moutoussamy",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "逆转取胜，后段加速与两球以上尾部兑现。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.3,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.3,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -2909,7 +3159,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.8,
+      "form_status_1_5": 2.6,
       "form_reason": "首发中场参与反击和防守，传中质量一般。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -3050,8 +3300,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "72分钟被换下，中场抗压和向前传递不足。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable_role_pressure",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -3083,7 +3333,24 @@
           "note": "72分钟被换下，中场抗压和向前传递不足。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "埃多·卡延贝",
+        "english_name": "Edo Kayembe",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -3130,7 +3397,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.7,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -3271,8 +3538,8 @@
       "assists": 0,
       "yellow_cards": 2,
       "red_cards": 0,
-      "form_status_reason": "72分钟登场，FOX事件页黄牌显示存在重复/时间冲突，纪律风险保守上调。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable_card_watch",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -3304,7 +3571,24 @@
           "note": "72分钟登场，FOX事件页黄牌显示存在重复/时间冲突，纪律风险保守上调。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "夏尔·皮克尔",
+        "english_name": "Charles Pickel",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -3351,7 +3635,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -3485,7 +3769,26 @@
           "postmatch_form_status_1_5": 2,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "盖尔·卡库塔",
+        "english_name": "Gael Kakuta",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。"
     },
     {
       "number": null,
@@ -3532,7 +3835,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3,
+      "form_status_1_5": 2.6,
       "form_reason": "58分钟替补后参与多次反击推进。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -3673,8 +3976,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "半场登场改善中场活力，但未能改变长期被压制局面。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -3706,7 +4009,24 @@
           "note": "半场登场改善中场活力，但未能改变长期被压制局面。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "诺亚·萨迪基",
+        "english_name": "Noah Sadiki",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -3753,7 +4073,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.2,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -3894,8 +4214,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "82分钟登场后制造晚段射正/角球信号，可作为追分替补观察。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable_impact_sub",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -3927,7 +4247,24 @@
           "note": "82分钟登场后制造晚段射正/角球信号，可作为追分替补观察。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "纳塔纳埃尔·姆布库",
+        "english_name": "Nathanael Mbuku",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -3974,7 +4311,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.8,
+      "form_status_1_5": 2.6,
       "form_reason": "首发中场，50分钟前插制造机会后被换下。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -4115,8 +4452,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "半场被换下，刚果金中场出球受压明显。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable_role_pressure",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -4148,7 +4485,24 @@
           "note": "半场被换下，刚果金中场出球受压明显。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "恩加莱耶尔·穆考",
+        "english_name": "Ngalayel Mukau",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -4195,7 +4549,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -4329,7 +4683,26 @@
           "postmatch_form_status_1_5": 2,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "布赖恩·西彭加",
+        "english_name": "Brian Cipenga",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。"
     },
     {
       "number": null,
@@ -4376,7 +4749,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.8,
+      "form_status_1_5": 3.2,
       "form_reason": "首发前锋持续牵制，并有中柱机会。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -4517,8 +4890,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "首发前锋获得支援有限，57分钟被班扎换下。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "逆转取胜，后段加速与两球以上尾部兑现。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable_role_pressure",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -4550,7 +4923,24 @@
           "note": "首发前锋获得支援有限，57分钟被班扎换下。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "塞德里克·巴坎布",
+        "english_name": "Cedric Bakambu",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "逆转取胜，后段加速与两球以上尾部兑现。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.2,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.2,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -4597,7 +4987,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 2.6,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -4731,7 +5121,26 @@
           "postmatch_form_status_1_5": 2,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "泰奥·邦贡达",
+        "english_name": "Theo Bongonda",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。"
     },
     {
       "number": null,
@@ -4778,7 +5187,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2,
+      "form_status_1_5": 4.2,
       "form_reason": "未出场，状态待赛前继续观察。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -4912,7 +5321,26 @@
           "postmatch_form_status_1_5": 2,
           "captured_at": "2026-06-20T23:49:10+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "菲斯顿·马耶莱",
+        "english_name": "Fiston Mayele",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "第78分钟反超，改变出线局势。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 4.2,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 4.2,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
+      "form_status_reason": "第78分钟反超，改变出线局势。"
     },
     {
       "number": null,
@@ -4959,7 +5387,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 3.2,
+      "form_status_1_5": 4.8,
       "form_reason": "45+5分钟头球扳平，首轮状态上调。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -5100,8 +5528,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "少量反击中仍是最有威胁前点，但整体供给不足。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "点球扳平并补时锁定胜局，本场核心。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -5133,7 +5561,24 @@
           "note": "少量反击中仍是最有威胁前点，但整体供给不足。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "约阿内·威萨",
+        "english_name": "Yoane Wissa",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "点球扳平并补时锁定胜局，本场核心。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 4.8,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 4.8,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     },
     {
       "number": null,
@@ -5180,7 +5625,7 @@
         "internal_match_rating_note": "项目内部模型评分，依据首发/分钟、进球、助攻、牌、角色和form_status_1_5生成；不是外部评分。",
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
-      "form_status_1_5": 2.9,
+      "form_status_1_5": 2.6,
       "form_reason": "85分钟替补，负责收尾压阵。",
       "next_match_availability_note": "本场未见新增伤停或停赛公开确认；第二轮赛前仍需复核官方名单。",
       "source_log": [
@@ -5321,8 +5766,8 @@
       "assists": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "form_status_reason": "57分钟替补登场，拿球支点效果有限。",
-      "form_status_captured_at": "2026-06-24T18:30:00+08:00",
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00",
       "availability_status": "probable",
       "injury_status_note": "本场赛后未见可靠新增伤停公开确认；下一轮赛前仍需复核官方名单。",
       "round2_match_update": {
@@ -5354,7 +5799,24 @@
           "note": "57分钟替补登场，拿球支点效果有限。",
           "captured_at": "2026-06-24T18:30:00+08:00"
         }
-      ]
+      ],
+      "round3_match_update": {
+        "match_id": "2026-06-28_DRC_3-1_UZB",
+        "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+        "date": "2026-06-28",
+        "opponent": "乌兹别克斯坦",
+        "player": "西蒙·班扎",
+        "english_name": "Simon Banza",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      }
     }
   ],
   "gaps_and_conflicts": [
@@ -5994,5 +6456,375 @@
     "captured_at": "2026-06-24T18:30:00+08:00",
     "source_status": "FOX_Guardian_cross_checked_partial_player_ratings",
     "rating_policy": "external same-source ratings not available; internal 1-5 ratings derived from minutes, role, events, and verified match narrative."
-  }
+  },
+  "round3_postmatch_update": {
+    "match_id": "2026-06-28_DRC_3-1_UZB",
+    "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+    "opponent": "乌兹别克斯坦",
+    "result": "3-1 win",
+    "captured_at": "2026-06-28T22:05:00+08:00",
+    "status": "逆转取胜，后段加速与两球以上尾部兑现。",
+    "source_log": [
+      {
+        "name": "Sky Sports DR Congo 3-1 Uzbekistan match report",
+        "url": "https://www.skysports.com/football/dr-congo-vs-uzbekistan/report/549801",
+        "status": "score/goals/report"
+      },
+      {
+        "name": "The Guardian DR Congo vs Uzbekistan live",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-dr-congo-v-uzbekistan-updates-cod-vs-uzb-group-k-match-score-latest",
+        "status": "event_chain_partial"
+      },
+      {
+        "name": "FIFA match centre DR Congo vs Uzbekistan",
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-center/400018000",
+        "status": "result_reference_partial"
+      }
+    ],
+    "data_gaps": [
+      "官方逐人完整出场分钟、扑救、预期进球、黄红牌、同源外部球员评分未完全闭合。",
+      "葡萄牙、哥伦比亚部分首发名单来自媒体快照，仍需赛会/官方技术报告复核。",
+      "刚果金3-1乌兹别克斯坦的点球制造者、全部换人和补时细节需官方事件表补齐。"
+    ]
+  },
+  "round3_internal_rating_logs": [
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "利昂内尔·姆帕西",
+      "english_name": "Lionel Mpasi",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "蒂莫西·法尤卢",
+      "english_name": "Timothy Fayulu",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "马蒂厄·埃波洛",
+      "english_name": "Matthieu Epolo",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "尚塞尔·姆本巴",
+      "english_name": "Chancel Mbemba",
+      "internal_match_rating_1_5": 3.3,
+      "event_summary": "早丢球后带队稳住防线。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "阿蒂尔·马苏亚库",
+      "english_name": "Arthur Masuaku",
+      "internal_match_rating_1_5": 3.4,
+      "event_summary": "逆转取胜，后段加速与两球以上尾部兑现。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "热代翁·卡卢卢",
+      "english_name": "Gedeon Kalulu",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "约里斯·卡延贝",
+      "english_name": "Joris Kayembe",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "迪伦·巴图宾西卡",
+      "english_name": "Dylan Batubinsika",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "阿克塞尔·图安泽贝",
+      "english_name": "Axel Tuanzebe",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "阿隆·万-比萨卡",
+      "english_name": "Aaron Wan-Bissaka",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "洛基·布希里",
+      "english_name": "Rocky Bushiri",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "史蒂夫·卡普阿迪",
+      "english_name": "Steve Kapuadi",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "梅沙克·埃利亚",
+      "english_name": "Meschak Elia",
+      "internal_match_rating_1_5": 3.2,
+      "event_summary": "逆转取胜，后段加速与两球以上尾部兑现。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "萨穆埃尔·穆图萨米",
+      "english_name": "Samuel Moutoussamy",
+      "internal_match_rating_1_5": 3.3,
+      "event_summary": "逆转取胜，后段加速与两球以上尾部兑现。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "埃多·卡延贝",
+      "english_name": "Edo Kayembe",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "夏尔·皮克尔",
+      "english_name": "Charles Pickel",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "盖尔·卡库塔",
+      "english_name": "Gael Kakuta",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "诺亚·萨迪基",
+      "english_name": "Noah Sadiki",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "纳塔纳埃尔·姆布库",
+      "english_name": "Nathanael Mbuku",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "恩加莱耶尔·穆考",
+      "english_name": "Ngalayel Mukau",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "布赖恩·西彭加",
+      "english_name": "Brian Cipenga",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "塞德里克·巴坎布",
+      "english_name": "Cedric Bakambu",
+      "internal_match_rating_1_5": 3.2,
+      "event_summary": "逆转取胜，后段加速与两球以上尾部兑现。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "泰奥·邦贡达",
+      "english_name": "Theo Bongonda",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "菲斯顿·马耶莱",
+      "english_name": "Fiston Mayele",
+      "internal_match_rating_1_5": 4.2,
+      "event_summary": "第78分钟反超，改变出线局势。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "约阿内·威萨",
+      "english_name": "Yoane Wissa",
+      "internal_match_rating_1_5": 4.8,
+      "event_summary": "点球扳平并补时锁定胜局，本场核心。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_DRC_3-1_UZB",
+      "match": "2026-06-28_刚果金_3-1_乌兹别克斯坦",
+      "date": "2026-06-28",
+      "opponent": "乌兹别克斯坦",
+      "player": "西蒙·班扎",
+      "english_name": "Simon Banza",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    }
+  ]
 }

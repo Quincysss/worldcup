@@ -1,0 +1,919 @@
+{
+  "schema_version": "single_match_quant_prediction_v3",
+  "project": "E:/worldcup",
+  "group": "J",
+  "round": 3,
+  "created_at": "2026-06-27T15:30:00+08:00",
+  "status": "discussion_only_hold",
+  "template": "data/templates/match-prediction-standard-template-v3.md",
+  "thread_coordination": {
+    "data_collector_thread": {
+      "thread_id": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+      "status": "partial_output_received",
+      "output_paths": [
+        "data/thread_outputs/j-group-round3-v3-20260627/data-collector.json"
+      ]
+    },
+    "tactics_thread": {
+      "thread_id": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+      "status": "output_received_raw_json_parse_failed_due_encoding",
+      "output_paths": [
+        "data/thread_outputs/j-group-round3-v3-20260627/tactics-coach.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/tactics-coach.json"
+      ]
+    },
+    "model_thread": {
+      "thread_id": "019edb8f-536a-7100-84da-e13bfecb0def",
+      "status": "output_received_raw_json_parse_failed_due_encoding",
+      "output_paths": [
+        "data/thread_outputs/j-group-round3-v3-20260627/modeler.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/modeler.json"
+      ]
+    },
+    "red_team_thread": {
+      "thread_id": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+      "status": "output_received_raw_json_parse_failed_due_encoding",
+      "verdict": "hold",
+      "output_paths": [
+        "data/thread_outputs/j-group-round3-v3-20260627/red-team.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/red-team.json"
+      ]
+    },
+    "betting_risk_thread": {
+      "thread_id": "019edb8f-cd0d-7393-bf92-d637962a67e4",
+      "status": "output_received_raw_json_parse_failed_due_encoding",
+      "verdict": "hold_not_executable",
+      "output_paths": [
+        "data/thread_outputs/j-group-round3-v3-20260627/betting-risk.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/betting-risk.json"
+      ]
+    }
+  },
+  "group_table_after_round2": [
+    {
+      "rank": 1,
+      "team": "阿根廷",
+      "points": 6,
+      "gf": 5,
+      "ga": 0,
+      "gd": 5
+    },
+    {
+      "rank": 2,
+      "team": "奥地利",
+      "points": 3,
+      "gf": 3,
+      "ga": 3,
+      "gd": 0
+    },
+    {
+      "rank": 3,
+      "team": "阿尔及利亚",
+      "points": 3,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2
+    },
+    {
+      "rank": 4,
+      "team": "约旦",
+      "points": 0,
+      "gf": 2,
+      "ga": 5,
+      "gd": -3
+    }
+  ],
+  "factor_weights": {
+    "baseline_strength": 0.22,
+    "attack": 0.14,
+    "defense": 0.14,
+    "player_state": 0.13,
+    "injury_suspension_minutes": 0.08,
+    "tactical_matchup": 0.12,
+    "schedule_environment": 0.05,
+    "third_round_context": 0.14,
+    "market": 0.08
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-28_algeria_vs_austria",
+      "match_no": "周六071",
+      "home_team": "阿尔及利亚",
+      "away_team": "奥地利",
+      "kickoff_beijing": "2026-06-28 10:00",
+      "venue": "堪萨斯城 Arrowhead Stadium",
+      "conclusion": {
+        "summary": "奥地利纸面和压迫结构小优，但平局价值高，阿尔及利亚后段主动打开比赛的概率也高。发布口径只能是讨论级，红队为 hold。",
+        "final_probabilities": {
+          "home_win": 0.315,
+          "draw": 0.33,
+          "away_win": 0.355
+        },
+        "confidence": "medium_low",
+        "betting_status": "discussion_only_hold"
+      },
+      "first_two_rounds_reading": [
+        "阿尔及利亚首轮0-3负阿根廷，暴露出出球抗压和防线横移问题；第二轮2-1逆转约旦，古伊里、马赫雷斯和替补中锋弹性上修。",
+        "奥地利首轮3-1胜约旦，压迫、二点和定位球有效；第二轮0-2负阿根廷，说明面对高控球队时最后一传和禁区转化不足。",
+        "小组形势让奥地利的平局价值高于阿尔及利亚；若60分钟后仍平，阿尔及利亚更可能主动提速。"
+      ],
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27T15:30:00+08:00",
+        "official_lineup_gate": "T-75 official XI required",
+        "home": {
+          "team": "阿尔及利亚",
+          "formation": "4-4-2",
+          "confidence": "medium",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_name_cn": "卢卡·齐达内",
+              "player_name_en": "Luca Zidane",
+              "role": "门线与短传出球，面对奥地利高压需要降低横传风险"
+            },
+            {
+              "position": "RB",
+              "player_name_cn": "拉菲克·贝尔加利",
+              "player_name_en": "Rafik Belghali",
+              "role": "右路保护马赫雷斯身后空间"
+            },
+            {
+              "position": "CB",
+              "player_name_cn": "艾萨·曼迪",
+              "player_name_en": "Aissa Mandi",
+              "role": "防线指挥与禁区争顶"
+            },
+            {
+              "position": "CB",
+              "player_name_cn": "拉米·本塞拜尼",
+              "player_name_en": "Ramy Bensebaini",
+              "role": "左中卫/左后卫摇摆，定位球后点"
+            },
+            {
+              "position": "LB",
+              "player_name_cn": "拉扬·艾特-努里",
+              "player_name_en": "Rayan Ait-Nouri",
+              "role": "左路推进和反击第一推进点"
+            },
+            {
+              "position": "RM",
+              "player_name_cn": "里亚德·马赫雷斯",
+              "player_name_en": "Riyad Mahrez",
+              "role": "右路内收创造、定位球和最后一传"
+            },
+            {
+              "position": "CM",
+              "player_name_cn": "希沙姆·布达维",
+              "player_name_en": "Hicham Boudaoui",
+              "role": "中场跑动、覆盖和二点保护"
+            },
+            {
+              "position": "CM",
+              "player_name_cn": "纳比勒·本塔莱布",
+              "player_name_en": "Nabil Bentaleb",
+              "role": "后腰屏障与第一脚向前"
+            },
+            {
+              "position": "LM",
+              "player_name_cn": "易卜拉欣·马扎",
+              "player_name_en": "Ibrahim Maza",
+              "role": "左肋推进和反击提速"
+            },
+            {
+              "position": "ST",
+              "player_name_cn": "纳迪尔·本布阿利",
+              "player_name_en": "Nadhir Benbouali",
+              "role": "禁区支点和二点终结"
+            },
+            {
+              "position": "ST",
+              "player_name_cn": "阿明·古伊里",
+              "player_name_en": "Amine Gouiri",
+              "role": "连接型前锋和终结点"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_name_cn": "法雷斯·沙伊比",
+              "player_name_en": "Fares Chaibi",
+              "trigger": "若改4-2-3-1或需要更多传中/定位球脚法，可能替代本布阿利或马扎"
+            },
+            {
+              "player_name_cn": "拉米兹·泽鲁基",
+              "player_name_en": "Ramiz Zerrouki",
+              "trigger": "若优先控球和后腰站位，可能进入双后腰"
+            },
+            {
+              "player_name_cn": "穆罕默德·阿穆拉",
+              "player_name_en": "Mohamed Amoura",
+              "trigger": "腿筋问题待核，若进入名单更像后段速度点"
+            }
+          ]
+        },
+        "away": {
+          "team": "奥地利",
+          "formation": "4-2-3-1",
+          "confidence": "medium",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_name_cn": "亚历山大·施拉格",
+              "player_name_en": "Alexander Schlager",
+              "role": "门将与高位防线身后保护"
+            },
+            {
+              "position": "RB",
+              "player_name_cn": "康拉德·莱默",
+              "player_name_en": "Konrad Laimer",
+              "role": "边后卫/中场摇摆，高压触发点"
+            },
+            {
+              "position": "CB",
+              "player_name_cn": "凯文·丹索",
+              "player_name_en": "Kevin Danso",
+              "role": "对抗古伊里和本布阿利"
+            },
+            {
+              "position": "CB",
+              "player_name_cn": "大卫·阿拉巴",
+              "player_name_en": "David Alaba",
+              "role": "后场出球、定位球和防线指挥"
+            },
+            {
+              "position": "LB",
+              "player_name_cn": "菲利普·姆韦内",
+              "player_name_en": "Philipp Mwene",
+              "role": "左路回防马赫雷斯内收"
+            },
+            {
+              "position": "DM",
+              "player_name_cn": "尼古拉斯·赛瓦尔德",
+              "player_name_en": "Nicolas Seiwald",
+              "role": "后腰屏障与反抢第一层"
+            },
+            {
+              "position": "DM",
+              "player_name_cn": "哈维·施拉格",
+              "player_name_en": "Xaver Schlager",
+              "role": "二点球和高压连续性"
+            },
+            {
+              "position": "RW",
+              "player_name_cn": "罗马诺·施密德",
+              "player_name_en": "Romano Schmid",
+              "role": "右路内收组合"
+            },
+            {
+              "position": "AM",
+              "player_name_cn": "卡尼·楚克乌梅卡",
+              "player_name_en": "Carney Chukwuemeka",
+              "role": "前腰接应和中路推进"
+            },
+            {
+              "position": "LW",
+              "player_name_cn": "马塞尔·萨比策",
+              "player_name_en": "Marcel Sabitzer",
+              "role": "前场压迫指挥、定位球和远射"
+            },
+            {
+              "position": "ST",
+              "player_name_cn": "马尔科·阿瑙托维奇",
+              "player_name_en": "Marko Arnautovic",
+              "role": "禁区支点和终结点"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_name_cn": "米夏埃尔·格雷戈里奇",
+              "player_name_en": "Michael Gregoritsch",
+              "trigger": "若优先压迫连续性或保护阿瑙托维奇，可首发或早换"
+            },
+            {
+              "player_name_cn": "克里斯托夫·鲍姆加特纳",
+              "player_name_en": "Christoph Baumgartner",
+              "trigger": "若需要肋部前插和二次进攻"
+            },
+            {
+              "player_name_cn": "帕特里克·维默尔",
+              "player_name_en": "Patrick Wimmer",
+              "trigger": "若需要边路速度冲击艾特-努里身后"
+            }
+          ]
+        },
+        "lineup_conflicts": [
+          "阿尔及利亚存在4-4-2与4-2-3-1冲突：SI倾向本布阿利+古伊里双前锋，RotoWire/Scores24更倾向沙伊比或马扎进入三前卫。",
+          "奥地利中锋存在阿瑙托维奇与格雷戈里奇冲突；阿拉巴位置也可能在中卫/左后卫间调整。",
+          "官方首发未发布，T-75后任一队两名以上核心变化必须重跑xG和泊松矩阵。"
+        ]
+      },
+      "lineup_model_impact": [
+        "若马赫雷斯缺席或只替补，阿尔及利亚xG下修0.08-0.12，定位球和低位破局同步下降。",
+        "若阿穆拉恢复并能出场，阿尔及利亚后段转换xG上修0.05-0.08，但仍需核验腿筋风险。",
+        "若阿瑙托维奇首发，奥地利禁区支点和传中价值上修；若格雷戈里奇首发，压迫连续性更强但终结波动仍在。",
+        "若阿拉巴缺席或位置后移异常，奥地利出球和定位球二点保护需要下修。"
+      ],
+      "factor_inputs": {
+        "baseline_strength": "奥地利整体结构和压迫强度小优，阿尔及利亚个体创造不弱。",
+        "attack": "阿尔及利亚依赖马赫雷斯、马扎、古伊里和后段替补提速；奥地利依赖压迫后快速进入禁区、萨比策和定位球。",
+        "defense": "阿尔及利亚前两轮丢4球，防线横移和抗高压出球有风险；奥地利面对阿根廷时防守组织被证明有上限。",
+        "player_state": "阿尔及利亚二轮进攻状态上修；奥地利压迫过程稳定但终结效率波动。",
+        "injury_suspension_minutes": "官方伤停和T-75首发未闭合，阿穆拉、阿拉巴和奥地利中锋选择是关键。",
+        "tactical_matchup": "奥地利高压和二点回收对阿尔及利亚出球形成压力；阿尔及利亚两翼反击能打奥地利高位身后。",
+        "schedule_environment": "同组同时开球，天气/旅行未见决定性优势。",
+        "market": "普通胜平负快照显示平局隐含概率偏高，市场更强调第三轮互相牵制。"
+      },
+      "team_strength_score": {
+        "home": 66,
+        "away": 70
+      },
+      "attack_score": {
+        "home": 67,
+        "away": 69
+      },
+      "defense_score": {
+        "home": 61,
+        "away": 67
+      },
+      "adjustments": {
+        "player_state_adjustment": {
+          "home_xg": 0.04,
+          "away_xg": 0.01
+        },
+        "injury_adjustment": {
+          "home_xg": -0.01,
+          "away_xg": -0.02
+        },
+        "tactical_matchup_adjustment": {
+          "home_xg": 0.02,
+          "away_xg": 0.03
+        },
+        "schedule_environment_adjustment": {
+          "home_xg": 0.0,
+          "away_xg": 0.0
+        },
+        "market_adjustment": {
+          "home_win": 0.0,
+          "draw": 0.02,
+          "away_win": -0.02
+        }
+      },
+      "expected_goals": {
+        "home": 1.14,
+        "away": 1.31
+      },
+      "poisson_score_matrix": {
+        "range": "0-0_to_5-5",
+        "values": {
+          "0-0": 0.086294,
+          "0-1": 0.113045,
+          "0-2": 0.074044,
+          "0-3": 0.032333,
+          "0-4": 0.010589,
+          "0-5": 0.002774,
+          "1-0": 0.098375,
+          "1-1": 0.128871,
+          "1-2": 0.08441,
+          "1-3": 0.036859,
+          "1-4": 0.012071,
+          "1-5": 0.003163,
+          "2-0": 0.056074,
+          "2-1": 0.073456,
+          "2-2": 0.048114,
+          "2-3": 0.02101,
+          "2-4": 0.006881,
+          "2-5": 0.001803,
+          "3-0": 0.021308,
+          "3-1": 0.027913,
+          "3-2": 0.018283,
+          "3-3": 0.007984,
+          "3-4": 0.002615,
+          "3-5": 0.000685,
+          "4-0": 0.006073,
+          "4-1": 0.007955,
+          "4-2": 0.005211,
+          "4-3": 0.002275,
+          "4-4": 0.000745,
+          "4-5": 0.000195,
+          "5-0": 0.001385,
+          "5-1": 0.001814,
+          "5-2": 0.001188,
+          "5-3": 0.000519,
+          "5-4": 0.00017,
+          "5-5": 0.000045
+        },
+        "tail_probability": 0.003473
+      },
+      "raw_poisson_probabilities_1x2": {
+        "home_win": 0.323156,
+        "draw": 0.272054,
+        "away_win": 0.40479
+      },
+      "probabilities_1x2": {
+        "home_win": 0.315,
+        "draw": 0.33,
+        "away_win": 0.355
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.443299,
+        "under_2_5": 0.556701,
+        "over_3_5": 0.231791,
+        "under_3_5": 0.768209,
+        "btts_yes": 0.496655,
+        "btts_no": 0.503345
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.128871
+        },
+        {
+          "score": "0-1",
+          "probability": 0.113045
+        },
+        {
+          "score": "1-0",
+          "probability": 0.098375
+        },
+        {
+          "score": "0-0",
+          "probability": 0.086294
+        },
+        {
+          "score": "1-2",
+          "probability": 0.08441
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_spf": {
+          "odds": {
+            "home": 3.35,
+            "draw": 2.11,
+            "away": 2.8
+          },
+          "no_vig_probability": {
+            "home": 0.264263,
+            "draw": 0.419565,
+            "away": 0.316172
+          },
+          "captured_at": "2026-06-26",
+          "source": "本地中国足彩网/500快照"
+        },
+        "handicap_spf": {
+          "handicap": "阿尔及利亚 +1",
+          "odds": {
+            "home_plus1_win": 1.31,
+            "home_plus1_draw": 4.35,
+            "home_plus1_loss": 7.35
+          },
+          "captured_at": "2026-06-26"
+        },
+        "totals": null
+      },
+      "model_market_delta": {
+        "home_win": 0.050737,
+        "draw": -0.089565,
+        "away_win": 0.038828,
+        "note": "市场平局显著高于模型最终讨论概率，须保留冲突。"
+      },
+      "red_team_status": "hold",
+      "red_team_risks": [
+        "T-75官方首发缺失。",
+        "同源大小球赔率缺失。",
+        "平局市场信号明显高于模型，需要避免把奥地利写成低风险方向。",
+        "第三轮实时比分和净胜球需求会放大后段非线性尾部。"
+      ],
+      "source_index": [
+        "data/thread_outputs/j-group-round3-v3-20260627/data-collector.json",
+        "data/thread_outputs/j-group-round3-v3-20260627/tactics-coach.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/modeler.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/red-team.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/betting-risk.md",
+        "Sports Illustrated: Algeria vs Austria preview and predicted lineups, captured 2026-06-27",
+        "RotoWire/Scores24 predicted-lineup snippets, captured 2026-06-27",
+        "The Guardian Algeria-Austria preview, captured 2026-06-27"
+      ],
+      "postmatch_error": null,
+      "parameter_updates": null
+    },
+    {
+      "match_id": "2026-06-28_jordan_vs_argentina",
+      "match_no": "周六072",
+      "home_team": "约旦",
+      "away_team": "阿根廷",
+      "kickoff_beijing": "2026-06-28 10:00",
+      "venue": "阿灵顿 AT&T Stadium",
+      "conclusion": {
+        "summary": "阿根廷方向优势明确，但第三轮头名和健康管理让大胜尾部不能机械放大。约旦低位守住前60分钟时，0-1/0-2/1-1走廊会变宽。发布口径只能是讨论级，红队为 hold。",
+        "final_probabilities": {
+          "home_win": 0.12,
+          "draw": 0.24,
+          "away_win": 0.64
+        },
+        "confidence": "medium_low",
+        "betting_status": "discussion_only_hold"
+      },
+      "first_two_rounds_reading": [
+        "约旦首轮1-3负奥地利，第二轮1-2负阿尔及利亚，反击和定位球能制造事件，但领先/守势管理和后段防线稳定性不足。",
+        "阿根廷首轮3-0阿尔及利亚、第二轮2-0奥地利，控场、零封和定位球/终结质量都在线。",
+        "阿根廷6分且净胜球+5，第三轮目标更接近控风险、保头名和管理核心负荷；约旦仍有理论第三名和尊严战动机。"
+      ],
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27T15:30:00+08:00",
+        "official_lineup_gate": "T-75 official XI required",
+        "home": {
+          "team": "约旦",
+          "formation": "3-4-3",
+          "confidence": "medium",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_name_cn": "亚齐德·阿布莱拉",
+              "player_name_en": "Yazeed Abulaila",
+              "role": "高扑救量门将，低位防守第一稳定点"
+            },
+            {
+              "position": "CB",
+              "player_name_cn": "亚赞·阿拉伯",
+              "player_name_en": "Yazan Al-Arab",
+              "role": "中卫对抗和防空"
+            },
+            {
+              "position": "CB",
+              "player_name_cn": "阿卜杜拉·纳西布",
+              "player_name_en": "Abdallah Nasib",
+              "role": "中路禁区保护"
+            },
+            {
+              "position": "CB",
+              "player_name_cn": "胡萨姆·阿布达哈卜",
+              "player_name_en": "Husam Abu Dahab",
+              "role": "三中卫左/右侧补位"
+            },
+            {
+              "position": "RWB",
+              "player_name_cn": "伊赫桑·哈达德",
+              "player_name_en": "Ehsan Haddad",
+              "role": "右路防守与反击第一脚"
+            },
+            {
+              "position": "CM",
+              "player_name_cn": "尼扎尔·拉什丹",
+              "player_name_en": "Nizar Al-Rashdan",
+              "role": "二点球、后插上和定位球威胁"
+            },
+            {
+              "position": "CM",
+              "player_name_cn": "努尔·拉瓦布德",
+              "player_name_en": "Noor Al-Rawabdeh",
+              "role": "中场屏障和禁区前保护"
+            },
+            {
+              "position": "LWB",
+              "player_name_cn": "穆罕纳德·阿布塔哈",
+              "player_name_en": "Mohannad Abu Taha",
+              "role": "左路回防与偶发推进"
+            },
+            {
+              "position": "RW",
+              "player_name_cn": "穆萨·塔马里",
+              "player_name_en": "Mousa Al-Tamari",
+              "role": "最重要的转换推进点"
+            },
+            {
+              "position": "CF",
+              "player_name_cn": "阿里·奥尔万",
+              "player_name_en": "Ali Olwan",
+              "role": "支点、反击终结和前场第一落点"
+            },
+            {
+              "position": "LW",
+              "player_name_cn": "马哈茂德·马尔迪",
+              "player_name_en": "Mahmoud Al-Mardi",
+              "role": "左路反击和禁区弱侧"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_name_cn": "阿纳斯·阿布哈希什",
+              "player_name_en": "Anas Abu Hashish",
+              "trigger": "若需要更保守的翼卫/边路防守"
+            },
+            {
+              "player_name_cn": "拉贾伊·阿耶德",
+              "player_name_en": "Rajaei Ayed",
+              "trigger": "60分钟后中场体能保护"
+            },
+            {
+              "player_name_cn": "奥德·法库里",
+              "player_name_en": "Odeh Al-Fakhouri",
+              "trigger": "落后时增加前场支点"
+            }
+          ]
+        },
+        "away": {
+          "team": "阿根廷",
+          "formation": "4-4-2",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_name_cn": "埃米利亚诺·马丁内斯",
+              "player_name_en": "Emiliano Martinez",
+              "role": "门线稳定和后场指挥"
+            },
+            {
+              "position": "RB",
+              "player_name_cn": "冈萨洛·蒙铁尔",
+              "player_name_en": "Gonzalo Montiel",
+              "role": "右路防守与保守宽度"
+            },
+            {
+              "position": "CB",
+              "player_name_cn": "尼古拉斯·奥塔门迪",
+              "player_name_en": "Nicolas Otamendi",
+              "role": "经验中卫和定位球防守"
+            },
+            {
+              "position": "CB",
+              "player_name_cn": "利桑德罗·马丁内斯",
+              "player_name_en": "Lisandro Martinez",
+              "role": "左中卫出球和地面对抗"
+            },
+            {
+              "position": "LB",
+              "player_name_cn": "尼古拉斯·塔利亚菲科",
+              "player_name_en": "Nicolas Tagliafico",
+              "role": "左路稳态防守和压迫保护"
+            },
+            {
+              "position": "RM",
+              "player_name_cn": "罗德里戈·德保罗",
+              "player_name_en": "Rodrigo De Paul",
+              "role": "右中场覆盖、压迫和连接"
+            },
+            {
+              "position": "CM",
+              "player_name_cn": "莱安德罗·帕雷德斯",
+              "player_name_en": "Leandro Paredes",
+              "role": "节奏控制和长传转移"
+            },
+            {
+              "position": "CM",
+              "player_name_cn": "恩佐·费尔南德斯",
+              "player_name_en": "Enzo Fernandez",
+              "role": "中场推进、二点和控球"
+            },
+            {
+              "position": "LM",
+              "player_name_cn": "蒂亚戈·阿尔马达",
+              "player_name_en": "Thiago Almada",
+              "role": "左肋跑动和前场连接"
+            },
+            {
+              "position": "SS",
+              "player_name_cn": "尼科·冈萨雷斯",
+              "player_name_en": "Nicolas Gonzalez",
+              "role": "前场机动、压迫和弱侧冲刺"
+            },
+            {
+              "position": "ST",
+              "player_name_cn": "胡利安·阿尔瓦雷斯",
+              "player_name_en": "Julian Alvarez",
+              "role": "中锋、前场压迫和纵深跑动"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_name_cn": "利昂内尔·梅西",
+              "player_name_en": "Lionel Messi",
+              "trigger": "可能休息、替补或有限出场；若首发则定位球和低位破局显著上修"
+            },
+            {
+              "player_name_cn": "马科斯·塞内西",
+              "player_name_en": "Marcos Senesi",
+              "trigger": "若保护罗梅罗/利桑德罗，可能进入中卫"
+            },
+            {
+              "player_name_cn": "埃塞基耶尔·帕拉西奥斯",
+              "player_name_en": "Exequiel Palacios",
+              "trigger": "若德保罗或恩佐轮休，进入中场"
+            },
+            {
+              "player_name_cn": "乔瓦尼·洛塞尔索",
+              "player_name_en": "Giovani Lo Celso",
+              "trigger": "若需要轮换创造型中场"
+            },
+            {
+              "player_name_cn": "何塞·洛佩斯",
+              "player_name_en": "Jose Lopez",
+              "trigger": "若锋线大轮换，可能获得首发或后段时间"
+            }
+          ]
+        },
+        "lineup_conflicts": [
+          "SI倾向梅西休息、阿尔瓦雷斯首发；RotoWire/Ladbrokes/RacingPost对塞内西、巴尔科、帕拉西奥斯、洛塞尔索、朱利亚诺·西蒙尼、何塞·洛佩斯和梅西是否首发存在明显冲突。",
+          "克里斯蒂安·罗梅罗有膝部/负荷管理疑问，多源倾向不冒险或谨慎使用。",
+          "约旦阵型在3-4-3、3-4-2-1和5-4-1之间切换，实际站位要等官方首发和开场落位。"
+        ]
+      },
+      "lineup_model_impact": [
+        "若梅西首发且预计60分钟以上，阿根廷xG上修0.15-0.25，定位球和低位破局显著提高。",
+        "若阿根廷大轮换两名以上中场核心，阿根廷胜率和3+净胜尾部下修，平局尾部上修。",
+        "若塔马里缺席或不满状态，约旦xG下修0.08-0.12，反击威胁下降。",
+        "若约旦明确五后卫低位，前60分钟小比分和小球概率上修，但先丢球后崩盘尾部也上修。"
+      ],
+      "factor_inputs": {
+        "baseline_strength": "阿根廷实力、控场和两轮零封优势明显；约旦不是零抵抗，但常规阵地能力弱。",
+        "attack": "阿根廷阿尔瓦雷斯/冈萨雷斯/阿尔马达路线，若梅西出场则上限更高；约旦主要靠塔马里、奥尔万和定位球。",
+        "defense": "阿根廷前两轮零封，结构稳定；约旦前两轮丢5球，后段管理偏弱。",
+        "player_state": "阿根廷核心状态好但负荷管理强；约旦反击球员可用但防线压力大。",
+        "injury_suspension_minutes": "梅西、罗梅罗和阿根廷轮换分钟是最大不确定；约旦无重大公开伤停但需T-75再核。",
+        "tactical_matchup": "阿根廷控球和低位破局对约旦五后卫；约旦仅在断球后第一脚和定位球有事件价值。",
+        "schedule_environment": "同组同时开球，阿根廷可根据头名安全边际控制风险。",
+        "market": "普通胜平负未完整开售，约旦+2让球盘提示阿根廷三球以上并非低波动事件。"
+      },
+      "team_strength_score": {
+        "home": 54,
+        "away": 84
+      },
+      "attack_score": {
+        "home": 51,
+        "away": 85
+      },
+      "defense_score": {
+        "home": 52,
+        "away": 84
+      },
+      "adjustments": {
+        "player_state_adjustment": {
+          "home_xg": 0.0,
+          "away_xg": 0.07
+        },
+        "injury_adjustment": {
+          "home_xg": -0.01,
+          "away_xg": -0.05
+        },
+        "tactical_matchup_adjustment": {
+          "home_xg": 0.01,
+          "away_xg": 0.07
+        },
+        "schedule_environment_adjustment": {
+          "home_xg": 0.01,
+          "away_xg": -0.02
+        },
+        "market_adjustment": {
+          "home_win": 0.014,
+          "draw": 0.016,
+          "away_win": -0.03
+        }
+      },
+      "expected_goals": {
+        "home": 0.56,
+        "away": 1.95
+      },
+      "poisson_score_matrix": {
+        "range": "0-0_to_5-5",
+        "values": {
+          "0-0": 0.081268,
+          "0-1": 0.158473,
+          "0-2": 0.154511,
+          "0-3": 0.100432,
+          "0-4": 0.048961,
+          "0-5": 0.019095,
+          "1-0": 0.04551,
+          "1-1": 0.088745,
+          "1-2": 0.086526,
+          "1-3": 0.056242,
+          "1-4": 0.027418,
+          "1-5": 0.010693,
+          "2-0": 0.012743,
+          "2-1": 0.024849,
+          "2-2": 0.024227,
+          "2-3": 0.015748,
+          "2-4": 0.007677,
+          "2-5": 0.002994,
+          "3-0": 0.002379,
+          "3-1": 0.004638,
+          "3-2": 0.004522,
+          "3-3": 0.00294,
+          "3-4": 0.001433,
+          "3-5": 0.000559,
+          "4-0": 0.000333,
+          "4-1": 0.000649,
+          "4-2": 0.000633,
+          "4-3": 0.000412,
+          "4-4": 0.000201,
+          "4-5": 0.000078,
+          "5-0": 0.000037,
+          "5-1": 0.000073,
+          "5-2": 0.000071,
+          "5-3": 0.000046,
+          "5-4": 0.000022,
+          "5-5": 0.000009
+        },
+        "tail_probability": 0.014852
+      },
+      "raw_poisson_probabilities_1x2": {
+        "home_win": 0.096944,
+        "draw": 0.19739,
+        "away_win": 0.705666
+      },
+      "probabilities_1x2": {
+        "home_win": 0.12,
+        "draw": 0.24,
+        "away_win": 0.64
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.458749,
+        "under_2_5": 0.541251,
+        "over_3_5": 0.244564,
+        "under_3_5": 0.755436,
+        "btts_yes": 0.367785,
+        "btts_no": 0.632215
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.158473
+        },
+        {
+          "score": "0-2",
+          "probability": 0.154511
+        },
+        {
+          "score": "0-3",
+          "probability": 0.100432
+        },
+        {
+          "score": "1-1",
+          "probability": 0.088745
+        },
+        {
+          "score": "1-2",
+          "probability": 0.086526
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_spf": null,
+        "handicap_spf": {
+          "handicap": "约旦 +2",
+          "odds": {
+            "home_plus2_win": 2.28,
+            "home_plus2_draw": 3.85,
+            "home_plus2_loss": 2.32
+          },
+          "no_vig_probability": {
+            "home_plus2_win": 0.388355,
+            "home_plus2_draw": 0.229987,
+            "home_plus2_loss": 0.381659
+          },
+          "captured_at": "2026-06-26",
+          "source": "本地中国足彩网/500快照"
+        },
+        "totals": null
+      },
+      "model_market_delta": {
+        "home_win": null,
+        "draw": null,
+        "away_win": null,
+        "note": "普通胜平负缺失，不能用约旦+2让球盘替代1X2校准。"
+      },
+      "red_team_status": "hold",
+      "red_team_risks": [
+        "T-75官方首发和阿根廷轮换计划缺失。",
+        "普通胜平负缺失，同源大小球缺失。",
+        "阿根廷胜、阿根廷赢2球、阿根廷赢3球以上是不同结算层级，不能混写。",
+        "泊松模型容易低估早球/红牌/先丢球后约旦打开带来的尾部。"
+      ],
+      "source_index": [
+        "data/thread_outputs/j-group-round3-v3-20260627/data-collector.json",
+        "data/thread_outputs/j-group-round3-v3-20260627/tactics-coach.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/modeler.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/red-team.md",
+        "data/thread_outputs/j-group-round3-v3-20260627/betting-risk.md",
+        "Sports Illustrated: Jordan vs Argentina preview and predicted lineups, captured 2026-06-27",
+        "RotoWire Jordan vs Argentina preview, captured 2026-06-27",
+        "Ladbrokes Jordan vs Argentina preview, captured 2026-06-27",
+        "RacingPost Jordan vs Argentina team-news snippet, captured 2026-06-27"
+      ],
+      "postmatch_error": null,
+      "parameter_updates": null
+    }
+  ],
+  "open_data_gaps": [
+    "T-75官方首发未发布，所有预计首发均为probable_not_official。",
+    "两场最终伤停、停赛、黄牌累积和分钟限制仍需临场核验。",
+    "阿尔及利亚 vs 奥地利缺同源大小球快照；约旦 vs 阿根廷缺普通胜平负和同源大小球快照。",
+    "子线程原始JSON存在编码/引号损坏，主线程已重新整合为本文件作为可解析发布合同。",
+    "FIFA官方赛前比赛中心、最终天气、完整裁判信息和官方首发仍未闭合。"
+  ],
+  "validation_policy": {
+    "json_parse_required": true,
+    "predicted_xi_count_required": 11,
+    "probability_sum_tolerance": 0.002,
+    "poisson_tail_required": true,
+    "betting_language": "discussion_only_or_hold"
+  }
+}

@@ -4,9 +4,9 @@
   "team_en": "Portugal",
   "group": "K组",
   "status": "complete",
-  "player_state_update_status": "updated_round2_postmatch_partial_ratings",
+  "player_state_update_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
   "created_at": "2026-06-21T00:12:00+08:00",
-  "updated_at": "2026-06-24T09:37:50+08:00",
+  "updated_at": "2026-06-28T22:05:00+08:00",
   "owner": "worldcup-data-collector-portugal",
   "round_context": "葡萄牙 K组第二轮 葡萄牙 5-0 乌兹别克斯坦；已同步单场事件、内部评分、状态值、伤停/可用性缺口。",
   "players": [
@@ -47,8 +47,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.6,
-      "form_status_reason": "首发零封，后场压力低于首轮。",
+      "form_status_1_5": 4.3,
+      "form_status_reason": "多次关键扑救保住0-0。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -156,7 +156,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "迪奥戈·科斯塔",
+        "english_name": "Diogo Costa",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "多次关键扑救保住0-0。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 4.3,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 4.3,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "鲁伊·席尔瓦",
@@ -196,8 +214,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场或未可靠核验登场，状态保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -294,7 +312,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "鲁伊·席尔瓦",
+        "english_name": "Rui Silva",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "若泽·萨",
@@ -334,8 +370,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场或未可靠核验登场，状态保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -432,7 +468,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "若泽·萨",
+        "english_name": "José Sá",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "鲁本·迪亚斯",
@@ -472,8 +526,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.5,
-      "form_status_reason": "首发零封，防线组织稳定。",
+      "form_status_1_5": 3.3,
+      "form_status_reason": "必须赢球压力未转化为进球，作为小组第二出线。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -581,7 +635,25 @@
         "injury_status_after_match": "conflicting",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "鲁本·迪亚斯",
+        "english_name": "Rúben Dias",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.3,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.3,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "贡萨洛·伊纳西奥",
@@ -621,8 +693,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场或未可靠核验登场，状态保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -719,7 +791,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "贡萨洛·伊纳西奥",
+        "english_name": "Gonçalo Inácio",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "托马斯·阿劳若",
@@ -758,8 +848,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3,
-      "form_status_reason": "首轮首发，球队1-1未能扩大优势；无同源评分，维持中性。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -867,7 +957,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "托马斯·阿劳若",
+        "english_name": "Tomás Araújo",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "雷纳托·韦加",
@@ -906,8 +1014,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.5,
-      "form_status_reason": "首发零封，低风险推进。",
+      "form_status_1_5": 3.1,
+      "form_status_reason": "必须赢球压力未转化为进球，作为小组第二出线。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -1015,7 +1123,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "雷纳托·韦加",
+        "english_name": "Renato Veiga",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.1,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.1,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "努诺·门德斯",
@@ -1054,8 +1180,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 4.2,
-      "form_status_reason": "直接任意球破门，左路控制和定位球执行是关键优势。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -1163,7 +1289,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "努诺·门德斯",
+        "english_name": "Nuno Mendes",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "马特乌斯·努内斯",
@@ -1203,8 +1347,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场或未可靠核验登场，状态保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -1301,7 +1445,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "马特乌斯·努内斯",
+        "english_name": "Matheus Nunes",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "迪奥戈·达洛特",
@@ -1341,8 +1503,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场或未可靠核验登场，状态保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "必须赢球压力未转化为进球，作为小组第二出线。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -1439,7 +1601,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "迪奥戈·达洛特",
+        "english_name": "Diogo Dalot",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "若昂·坎塞洛",
@@ -1478,8 +1658,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 4,
-      "form_status_reason": "右路底线回敲制造C罗首球，宽度和插上质量突出。",
+      "form_status_1_5": 2.8,
+      "form_status_reason": "半场被调整/轮换风险继续观察。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -1587,7 +1767,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "若昂·坎塞洛",
+        "english_name": "João Cancelo",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "半场被调整/轮换风险继续观察。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.8,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.8,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "内尔松·塞梅多",
@@ -1626,8 +1824,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.6,
-      "form_status_reason": "后段右路低平传中参与莱奥进球链。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -1735,7 +1933,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "内尔松·塞梅多",
+        "english_name": "Nélson Semedo",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "维蒂尼亚",
@@ -1774,8 +1990,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.7,
-      "form_status_reason": "控球节奏稳定，支持高位围攻。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -1883,7 +2099,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "维蒂尼亚",
+        "english_name": "Vitinha",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "鲁本·内维斯",
@@ -1923,8 +2157,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场或未可靠核验登场，状态保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.8,
+      "form_status_reason": "必须赢球压力未转化为进球，作为小组第二出线。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -2021,7 +2255,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "鲁本·内维斯",
+        "english_name": "Rúben Neves",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.8,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.8,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "萨穆·科斯塔",
@@ -2061,8 +2313,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场或未可靠核验登场，状态保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -2159,7 +2411,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "萨穆·科斯塔",
+        "english_name": "Samú Costa",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "若昂·内维斯",
@@ -2198,8 +2468,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.7,
-      "form_status_reason": "中场控制顺畅，帮助球队压住反击第一波。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "必须赢球压力未转化为进球，作为小组第二出线。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -2307,7 +2577,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "若昂·内维斯",
+        "english_name": "João Neves",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "弗朗西斯科·特林康",
@@ -2347,8 +2635,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场或未可靠核验登场，状态保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -2445,7 +2733,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "弗朗西斯科·特林康",
+        "english_name": "Francisco Trincão",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "布鲁诺·费尔南德斯",
@@ -2484,8 +2790,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 4.3,
-      "form_status_reason": "纵向传递、低平角球和右路转移均制造进球链。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "有推进和射门但未改变低事件格局。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -2593,7 +2899,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "布鲁诺·费尔南德斯",
+        "english_name": "Bruno Fernandes",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "有推进和射门但未改变低事件格局。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "贝尔纳多·席尔瓦",
@@ -2632,8 +2956,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3,
-      "form_status_reason": "首轮首发，球队1-1未能扩大优势；无同源评分，维持中性。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -2741,7 +3065,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "贝尔纳多·席尔瓦",
+        "english_name": "Bernardo Silva",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "拉斐尔·莱奥",
@@ -2780,8 +3122,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 4,
-      "form_status_reason": "替补/后段冲击收获第五球，适合继续作为提速牌。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -2889,7 +3231,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "拉斐尔·莱奥",
+        "english_name": "Rafael Leão",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "贡萨洛·格德斯",
@@ -2929,8 +3289,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 2.5,
-      "form_status_reason": "首轮未登场或未可靠核验登场，状态保持中性偏谨慎。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -3027,7 +3387,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "贡萨洛·格德斯",
+        "english_name": "Gonçalo Guedes",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "佩德罗·内托",
@@ -3066,8 +3444,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.7,
-      "form_status_reason": "制造第二球任意球，边路压迫和持球牵制有效。",
+      "form_status_1_5": 3.0,
+      "form_status_reason": "必须赢球压力未转化为进球，作为小组第二出线。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -3175,7 +3553,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "佩德罗·内托",
+        "english_name": "Pedro Neto",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 3.0,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 3.0,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "弗朗西斯科·孔塞桑",
@@ -3214,8 +3610,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3,
-      "form_status_reason": "首轮替补登场，角色明确但时间有限。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -3323,7 +3719,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "弗朗西斯科·孔塞桑",
+        "english_name": "Francisco Conceição",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "若昂·菲利克斯",
@@ -3363,8 +3777,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3.4,
-      "form_status_reason": "前场轮转参与度尚可，直接事件较少。",
+      "form_status_1_5": 2.8,
+      "form_status_reason": "必须赢球压力未转化为进球，作为小组第二出线。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -3461,7 +3875,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "若昂·菲利克斯",
+        "english_name": "João Félix",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.8,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.8,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "贡萨洛·拉莫斯",
@@ -3500,8 +3932,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 3,
-      "form_status_reason": "首轮替补登场，角色明确但时间有限。 此字段为模型输入，不是投注结论。",
+      "form_status_1_5": 2.6,
+      "form_status_reason": "未见关键事件或未登场，状态证据不足/角色未变化。",
       "model_note": "首轮未首发；后续按轮换/可用性复核。",
       "source_log": [
         {
@@ -3609,7 +4041,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "贡萨洛·拉莫斯",
+        "english_name": "Gonçalo Ramos",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.6,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.6,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     },
     {
       "chinese_name": "克里斯蒂亚诺·罗纳尔多",
@@ -3648,8 +4098,8 @@
         "internal_match_rating_basis": "依据分钟、首发/替补、进球、助攻、牌、事件摘要、角色和form_status_1_5派生；项目内部评分，不代表外部评分。",
         "internal_match_rating_updated_at": "2026-06-21T01:22:42+08:00"
       },
-      "form_status_1_5": 4.6,
-      "form_status_reason": "上半场双响，打破本届进球荒并刷新世界杯连续届数进球纪录。",
+      "form_status_1_5": 2.5,
+      "form_status_reason": "终结和越位边界未兑现赛前预期。",
       "model_note": "首轮已进入Martínez用人样本。",
       "source_log": [
         {
@@ -3757,7 +4207,25 @@
         "injury_status_after_match": "probable",
         "injury_note_after_match": "未取得赛后官方伤停通报；下一场赛前需T-75首发与伤停再核验。",
         "updated_at": "2026-06-24T09:37:50+08:00"
-      }
+      },
+      "round3_match_update": {
+        "match_id": "2026-06-28_COL_0-0_POR",
+        "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+        "date": "2026-06-28",
+        "opponent": "哥伦比亚",
+        "player": "克里斯蒂亚诺·罗纳尔多",
+        "english_name": "Cristiano Ronaldo",
+        "started": "unknown_pending_official_report",
+        "minutes": null,
+        "event_summary": "终结和越位边界未兑现赛前预期。",
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source_external_rating",
+        "internal_match_rating_1_5": 2.5,
+        "rating_reason": "Internal 1-5 score derived from verified result, role, event involvement, goal/assist/card/VAR/penalty/goalkeeper and tactical narrative. Partial until official full event report.",
+        "postmatch_form_status_1_5": 2.5,
+        "captured_at": "2026-06-28T22:05:00+08:00"
+      },
+      "form_status_captured_at": "2026-06-28T22:05:00+08:00"
     }
   ],
   "team_style_facts": [
@@ -4391,6 +4859,376 @@
       "name": "AP syndicated report",
       "url": "https://www.bigrapidsnews.com/sports/article/portugal-sticks-with-ronaldo-against-uzbekistan-22316960.php",
       "note": "交叉验证5-0、C罗双响、Nematov乌龙归属。"
+    }
+  ],
+  "round3_postmatch_update": {
+    "match_id": "2026-06-28_COL_0-0_POR",
+    "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+    "opponent": "哥伦比亚",
+    "result": "0-0 draw",
+    "captured_at": "2026-06-28T22:05:00+08:00",
+    "status": "必须赢球压力未转化为进球，作为小组第二出线。",
+    "source_log": [
+      {
+        "name": "Fox Sports Colombia vs Portugal match center",
+        "url": "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-portugal-jun-27-2026-game-boxscore-647665",
+        "status": "score/event_stats_partial"
+      },
+      {
+        "name": "Indian Express Colombia 0-0 Portugal live/report",
+        "url": "https://indianexpress.com/article/sports/football/colombia-vs-portugal-live-score-fifa-world-cup-2026-group-k-10083777/",
+        "status": "lineups/shots/event_chain_partial"
+      },
+      {
+        "name": "The Guardian Colombia vs Portugal live",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-colombia-v-portugal-updates-col-vs-por-group-k-match-score-latest",
+        "status": "match_narrative_partial"
+      }
+    ],
+    "data_gaps": [
+      "官方逐人完整出场分钟、扑救、预期进球、黄红牌、同源外部球员评分未完全闭合。",
+      "葡萄牙、哥伦比亚部分首发名单来自媒体快照，仍需赛会/官方技术报告复核。",
+      "刚果金3-1乌兹别克斯坦的点球制造者、全部换人和补时细节需官方事件表补齐。"
+    ]
+  },
+  "round3_internal_rating_logs": [
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "迪奥戈·科斯塔",
+      "english_name": "Diogo Costa",
+      "internal_match_rating_1_5": 4.3,
+      "event_summary": "多次关键扑救保住0-0。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "鲁伊·席尔瓦",
+      "english_name": "Rui Silva",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "若泽·萨",
+      "english_name": "José Sá",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "鲁本·迪亚斯",
+      "english_name": "Rúben Dias",
+      "internal_match_rating_1_5": 3.3,
+      "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "贡萨洛·伊纳西奥",
+      "english_name": "Gonçalo Inácio",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "托马斯·阿劳若",
+      "english_name": "Tomás Araújo",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "雷纳托·韦加",
+      "english_name": "Renato Veiga",
+      "internal_match_rating_1_5": 3.1,
+      "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "努诺·门德斯",
+      "english_name": "Nuno Mendes",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "马特乌斯·努内斯",
+      "english_name": "Matheus Nunes",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "迪奥戈·达洛特",
+      "english_name": "Diogo Dalot",
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "若昂·坎塞洛",
+      "english_name": "João Cancelo",
+      "internal_match_rating_1_5": 2.8,
+      "event_summary": "半场被调整/轮换风险继续观察。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "内尔松·塞梅多",
+      "english_name": "Nélson Semedo",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "维蒂尼亚",
+      "english_name": "Vitinha",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "鲁本·内维斯",
+      "english_name": "Rúben Neves",
+      "internal_match_rating_1_5": 2.8,
+      "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "萨穆·科斯塔",
+      "english_name": "Samú Costa",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "若昂·内维斯",
+      "english_name": "João Neves",
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "弗朗西斯科·特林康",
+      "english_name": "Francisco Trincão",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "布鲁诺·费尔南德斯",
+      "english_name": "Bruno Fernandes",
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "有推进和射门但未改变低事件格局。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "贝尔纳多·席尔瓦",
+      "english_name": "Bernardo Silva",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "拉斐尔·莱奥",
+      "english_name": "Rafael Leão",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "贡萨洛·格德斯",
+      "english_name": "Gonçalo Guedes",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "佩德罗·内托",
+      "english_name": "Pedro Neto",
+      "internal_match_rating_1_5": 3.0,
+      "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "弗朗西斯科·孔塞桑",
+      "english_name": "Francisco Conceição",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "若昂·菲利克斯",
+      "english_name": "João Félix",
+      "internal_match_rating_1_5": 2.8,
+      "event_summary": "必须赢球压力未转化为进球，作为小组第二出线。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "贡萨洛·拉莫斯",
+      "english_name": "Gonçalo Ramos",
+      "internal_match_rating_1_5": 2.6,
+      "event_summary": "未见关键事件或未登场，状态证据不足/角色未变化。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
+    },
+    {
+      "match_id": "2026-06-28_COL_0-0_POR",
+      "match": "2026-06-28_哥伦比亚_0-0_葡萄牙",
+      "date": "2026-06-28",
+      "opponent": "哥伦比亚",
+      "player": "克里斯蒂亚诺·罗纳尔多",
+      "english_name": "Cristiano Ronaldo",
+      "internal_match_rating_1_5": 2.5,
+      "event_summary": "终结和越位边界未兑现赛前预期。",
+      "external_rating": null,
+      "rating_source_status": "unavailable_same_source_external_rating",
+      "captured_at": "2026-06-28T22:05:00+08:00"
     }
   ]
 }

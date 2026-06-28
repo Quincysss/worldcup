@@ -1,0 +1,289 @@
+{
+  "schema_version": "j_group_round3_postmatch_red_team_review_v1",
+  "red_team_status": "complete_red_team_review_source_limited",
+  "created_at": "2026-06-28T20:55:00+08:00",
+  "owner": "worldcup-red-team-verifier",
+  "scope": [
+    "阿尔及利亚 vs 奥地利",
+    "约旦 vs 阿根廷"
+  ],
+  "overall_verdict": "hold",
+  "betting_language_blocked": true,
+  "no_betting_advice": true,
+  "source_files_reviewed": [
+    "README.md",
+    "线程状态.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    ".codex/skills/worldcup-red-team-verifier/SKILL.md",
+    ".codex/skills/worldcup-red-team-verifier/references/review-checklist.md",
+    ".codex/skills/worldcup-red-team-verifier/references/market-risk.md",
+    "data/outputs/match_predictions/j-group-round3-v3-quant-prediction-20260627.json",
+    "data/thread_outputs/j-group-round3-v3-20260627/data-collector.json",
+    "data/thread_outputs/j-group-round3-v3-20260627/modeler.json",
+    "data/thread_outputs/j-group-round3-v3-20260627/red-team.json",
+    "data/thread_outputs/j-group-round3-v3-20260627/betting-risk.json",
+    "data/thread_outputs/jkl-round3-75yuan-20260627/red-team.json",
+    "data/outputs/knockout/round-of-32-bracket-20260627.json",
+    "比赛/未开始比赛/32强/32强对阵落位_20260627.md",
+    "比赛/已完成比赛/小组赛/J组"
+  ],
+  "postmatch_source_status": {
+    "official_or_local_round3_score_files_found": false,
+    "local_completed_j_group_round3_review_found": false,
+    "partial_bracket_signal": [
+      "阿根廷落位 1J，M86 阿根廷 vs 佛得角为 confirmed。",
+      "奥地利落位 2J，M84 西班牙 vs 奥地利为 as_things_stand。"
+    ],
+    "red_team_effect": "只能做赛后偏差风险复核，不能宣称比分、让球、大小球或逐票结算命中。"
+  },
+  "hard_blockers": [
+    {
+      "blocker": "J组第三轮两场真实比分缺本地正式复盘/赛果文件",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "data-collector/postmatch",
+      "required_fix": "补两场官方赛果、半场比分、进球时间、红黄牌、换人、xG/射门和复盘文件。"
+    },
+    {
+      "blocker": "四队成员表与 player_state 未见 2026-06-28 第三轮赛后迭代",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "data-collector/player-state",
+      "required_fix": "把阿尔及利亚、奥地利、约旦、阿根廷第三轮出场、分钟、事件和状态值写回 canonical member table 与 player_state。"
+    },
+    {
+      "blocker": "赛前 T-75 首发、最终伤停和赔率闸门此前为 hold，不应在赛后被自动视为已满足",
+      "severity": "high",
+      "confidence": "high",
+      "owner": "main/data/market",
+      "required_fix": "补临场首发、最终伤停/停赛、同源 1X2/让球/大小球终盘快照，并标明 capture time。"
+    }
+  ],
+  "matches": [
+    {
+      "match": "阿尔及利亚 vs 奥地利",
+      "match_id": "2026-06-28_algeria_vs_austria",
+      "verdict": "hold",
+      "pre_match_snapshot": {
+        "xg": {
+          "algeria": 1.14,
+          "austria": 1.31
+        },
+        "final_probabilities_discussion_only": {
+          "algeria_win": 0.315,
+          "draw": 0.33,
+          "austria_win": 0.355
+        },
+        "top_scores": [
+          "1-1",
+          "0-1",
+          "1-0",
+          "0-0",
+          "1-2"
+        ],
+        "pre_match_red_team": "hold; 奥地利小优但平局价值和阿尔及利亚后段提速尾部必须保留。"
+      },
+      "actual_result_review": {
+        "exact_score_status": "missing_local_authoritative_result",
+        "partial_direction_signal": "奥地利落位 2J，说明赛后主线不能写成阿尔及利亚明确压过奥地利；但比分和是否平局/奥地利胜未闭合。",
+        "deviation_classification_status": "partial_only",
+        "must_not_claim": [
+          "不能把奥地利 2J 落位直接写成奥地利胜。",
+          "不能把方向层未输推断为让球、比分或大小球命中。",
+          "不能用赛前模型 Top5 反推真实比分。"
+        ]
+      },
+      "top_concerns": [
+        {
+          "severity": "blocker",
+          "confidence": "high",
+          "concern": "真实比分和比赛事件缺失，无法判断赛前平局权重、奥地利小优、阿尔及利亚后段提速哪一项被证伪。"
+        },
+        {
+          "severity": "high",
+          "confidence": "high",
+          "concern": "成员表/player_state 仍主要停留在前两轮；若第三轮有人轮换、吃牌、伤退或关键进球，当前状态链不能用于 32 强或参数更新。"
+        },
+        {
+          "severity": "high",
+          "confidence": "medium",
+          "concern": "若赛后复盘只写奥地利晋级或方向正确，会隐藏赛前市场平局热、模型三项接近和让球精确净胜层级风险。"
+        }
+      ],
+      "quant_chain_flags": [
+        {
+          "flag": "small_sample_and_third_round_context",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "前两轮样本已经强依赖第三轮动机；赛后不能因为奥地利 2J 就上修奥地利常规强度，需先分离平局价值、净胜球需求和同步比赛影响。"
+        },
+        {
+          "flag": "poisson_state_dependency",
+          "severity": "medium",
+          "confidence": "high",
+          "detail": "赛前已标记早球、红牌、末段必须进球和同组同步信息会破坏独立泊松；赛后需用事件时间线复核，不能只看终场方向。"
+        },
+        {
+          "flag": "market_draw_signal",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "普通 SPF 去水平局约 42%，高于模型平局；若复盘忽略该差异，市场风险链未闭合。"
+        }
+      ],
+      "parameter_update_risks": [
+        "不要用奥地利 2J 落位单独上调奥地利压迫/强度参数；可能只是第三轮平局价值兑现。",
+        "不要用阿尔及利亚未出线直接下调其攻击状态；需要确认是否首发、是否早球/红牌/追分打开导致。",
+        "不要把比分缺失情况下的方向层判断写入 Brier/Log loss 或比分命中统计。"
+      ],
+      "required_fixes": [
+        {
+          "owner": "data-collector/postmatch",
+          "fix": "补正式赛果、半场、进球/牌/换人、官方首发和技术统计。"
+        },
+        {
+          "owner": "tactics-coach",
+          "fix": "说明奥地利高压、平局价值、阿尔及利亚末段提速是否实际发生。"
+        },
+        {
+          "owner": "modeler",
+          "fix": "在比分确认前禁止写入参数更新；确认后分离第三轮动机与长期能力。"
+        },
+        {
+          "owner": "player-state",
+          "fix": "更新两队第三轮分钟、事件、纪律和状态值。"
+        }
+      ]
+    },
+    {
+      "match": "约旦 vs 阿根廷",
+      "match_id": "2026-06-28_jordan_vs_argentina",
+      "verdict": "hold",
+      "pre_match_snapshot": {
+        "xg": {
+          "jordan": 0.56,
+          "argentina": 1.95
+        },
+        "final_probabilities_discussion_only": {
+          "jordan_win": 0.12,
+          "draw": 0.24,
+          "argentina_win": 0.64
+        },
+        "top_scores": [
+          "0-1",
+          "0-2",
+          "0-3",
+          "1-1",
+          "1-2"
+        ],
+        "pre_match_red_team": "hold; 阿根廷第一方向明确，但轮换、控风险、低位小胜和平局尾部必须保留。"
+      },
+      "actual_result_review": {
+        "exact_score_status": "missing_local_authoritative_result",
+        "partial_direction_signal": "阿根廷落位 1J 且 32 强对阵 confirmed；方向层大概率未被证伪，但比分、净胜球、让球和大小球层级未闭合。",
+        "deviation_classification_status": "partial_only",
+        "must_not_claim": [
+          "不能把阿根廷 1J 等同于阿根廷胜比分命中。",
+          "不能把阿根廷方向层命中等同于约旦 +2、阿根廷赢 2 球或 3+ 深穿命中。",
+          "不能在缺比分时判断 0-1/0-2/0-3 Top5 覆盖是否成功。"
+        ]
+      },
+      "top_concerns": [
+        {
+          "severity": "blocker",
+          "confidence": "high",
+          "concern": "真实比分缺失，无法判断红队赛前要求上调平局/小胜走廊、压低 3+ 大胜尾部是否正确。"
+        },
+        {
+          "severity": "high",
+          "confidence": "high",
+          "concern": "阿根廷轮换、Messi 出场分钟、Romero/后防负荷和约旦五后卫低位若未写入成员表，后续 32 强预测会继承过期 player_state。"
+        },
+        {
+          "severity": "high",
+          "confidence": "high",
+          "concern": "普通 1X2、同源大小球此前缺失；赛后不能用让球盘或晋级落位反补市场校准。"
+        }
+      ],
+      "quant_chain_flags": [
+        {
+          "flag": "favorite_direction_vs_margin",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "阿根廷胜、阿根廷赢 2 球、阿根廷 3+ 是不同模型/结算层级；复盘必须拆开，禁止方向命中掩盖盘口或比分风险。"
+        },
+        {
+          "flag": "rotation_and_motivation_confounding",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "阿根廷已 6 分且净胜球优势大，赛果受轮换和控风险影响；不能直接作为强队基础胜率或大胜尾部参数样本。"
+        },
+        {
+          "flag": "poisson_tail_validation_missing",
+          "severity": "medium",
+          "confidence": "high",
+          "detail": "缺事件时间线，无法验证早球、红牌、约旦压出后反击大胜尾部或低位压节奏。"
+        }
+      ],
+      "parameter_update_risks": [
+        "不要因为阿根廷 1J 就上调强队胜率 ceiling；这可能是既有优势正常兑现。",
+        "不要在缺比分时下调约旦低位和平局尾部；若实际为小负，红队赛前警告可能是命中风险。",
+        "不要把阿根廷方向层命中写成比分 Top5、让球或大小球命中。"
+      ],
+      "required_fixes": [
+        {
+          "owner": "data-collector/postmatch",
+          "fix": "补正式赛果、半场、进球/牌/换人、官方首发和技术统计。"
+        },
+        {
+          "owner": "tactics-coach",
+          "fix": "复核阿根廷是否控节奏/轮换，约旦是否低位守到 50-60 分钟，以及何时被迫压出。"
+        },
+        {
+          "owner": "modeler",
+          "fix": "比分确认前不写 Brier/Log loss 和参数更新；确认后拆分方向、净胜球、Top score 和大小球。"
+        },
+        {
+          "owner": "player-state",
+          "fix": "更新两队第三轮分钟、轮换、纪律、伤停和状态值，尤其阿根廷核心负荷。"
+        }
+      ]
+    }
+  ],
+  "postmatch_review_quality_flags": [
+    {
+      "flag": "failure_hiding_check",
+      "severity": "high",
+      "confidence": "high",
+      "detail": "当前未发现 J 组三轮赛后复盘文件；后续复盘若只写阿根廷/奥地利落位而不写比分、盘口层级和红队赛前 hold，应判 revise。"
+    },
+    {
+      "flag": "direction_hit_mislabel",
+      "severity": "blocker",
+      "confidence": "high",
+      "detail": "方向层、比分层、让球层、大小球层、组合票层必须逐项分开；不得用方向命中掩盖净亏或盘口失败。"
+    },
+    {
+      "flag": "member_state_incomplete",
+      "severity": "blocker",
+      "confidence": "high",
+      "detail": "player_state 与成员表未见第三轮更新，不允许把复盘状态升级为 complete。"
+    }
+  ],
+  "handoff": {
+    "verdict": "hold",
+    "blocking_items": [
+      "缺两场本地正式真实比分与事件链。",
+      "缺第三轮官方首发/换人/牌/伤停/技术统计闭环。",
+      "四队成员表与 player_state 未见第三轮赛后迭代。",
+      "不得把阿根廷 1J、奥地利 2J 落位写成比分、盘口或投注层命中。"
+    ],
+    "owners": {
+      "data-collector/postmatch": "补官方赛果、事件链、首发、技术统计和复盘文件。",
+      "player-state": "同步四队成员表与 data/outputs/player_state。",
+      "tactics-coach": "解释赛前假设被证伪/命中的具体战术链。",
+      "modeler": "比分和事件链补齐后再做 Brier/Log loss、参数更新和尾部复核。",
+      "main": "在阻断项清除前禁止 complete 状态和投注化表述。"
+    }
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "schema_version": "k_group_round3_postmatch_red_team_review_v1",
+  "red_team_status": "complete_red_team_review_after_user_result_input_source_limited",
+  "created_at": "2026-06-28T21:05:00+08:00",
+  "owner": "worldcup-red-team-verifier",
+  "scope": [
+    "哥伦比亚 vs 葡萄牙",
+    "刚果金 vs 乌兹别克斯坦"
+  ],
+  "overall_verdict": "hold",
+  "betting_language_blocked": true,
+  "no_betting_advice": true,
+  "actual_results_used": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "score": "0-0",
+      "source_status": "user_provided_current_task",
+      "local_postmatch_file_found": false
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "score": "3-1",
+      "source_status": "user_provided_current_task",
+      "local_postmatch_file_found": false
+    }
+  ],
+  "source_files_reviewed": [
+    "README.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    ".codex/skills/worldcup-red-team-verifier/SKILL.md",
+    ".codex/skills/worldcup-red-team-verifier/references/review-checklist.md",
+    ".codex/skills/worldcup-red-team-verifier/references/market-risk.md",
+    "线程状态.md",
+    "data/outputs/match_predictions/k-group-round3-quant-prediction-20260627.json",
+    "data/packets/matches/k-group-round3-data-refresh-20260627.json",
+    "data/reviews/red_team/k-group-round3-prediction-red-team-20260627.json",
+    "data/thread_outputs/k-group-round3-prediction-20260627/tactics-coach.json",
+    "比赛/已完成比赛/小组赛/K组"
+  ],
+  "local_closure_status": {
+    "round3_completed_match_files_found": false,
+    "player_state_round3_update_found": false,
+    "member_table_round3_update_found": false,
+    "effect": "赛果偏差可做红队审查，但复盘与状态闭环不能标 complete。"
+  },
+  "blocking_gates": [
+    {
+      "gate": "official postmatch event chain",
+      "status": "missing_local_file",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "data-collector/postmatch",
+      "required_fix": "补两场正式复盘：首发、半场、进球、点球、VAR越位、门将扑救、红黄牌、换人、xG/射门。"
+    },
+    {
+      "gate": "canonical player_state and member table update",
+      "status": "missing_round3_records",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "player-state/data",
+      "required_fix": "同步哥伦比亚、葡萄牙、刚果金、乌兹别克斯坦第三轮分钟、事件、评分、伤停和状态值。"
+    },
+    {
+      "gate": "pre-match T-75 and final odds closure",
+      "status": "not found as closed in reviewed files",
+      "severity": "high",
+      "confidence": "high",
+      "owner": "data/market",
+      "required_fix": "补官方首发、最终伤停/停赛、同源1X2/让球/大小球终盘快照。"
+    }
+  ],
+  "matches": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "match_id": "2026-06-28_K_R3_COL_POR",
+      "actual_result": "0-0",
+      "verdict": "hold",
+      "model_error_verdict": "revise",
+      "pre_match_snapshot": {
+        "xg": {
+          "colombia": 1.18,
+          "portugal": 1.48
+        },
+        "final_probabilities": {
+          "colombia_win": 0.278,
+          "draw": 0.261,
+          "portugal_win": 0.461
+        },
+        "top_scores": [
+          "1-1",
+          "0-1",
+          "1-2",
+          "1-0",
+          "0-2"
+        ],
+        "poisson_0_0_probability": 0.069948,
+        "totals": {
+          "over_2_5": 0.496527,
+          "under_2_5": 0.503473,
+          "over_1_5": 0.74399
+        },
+        "market_note": "市场去水葡萄牙胜约52.1%，模型最终仍给葡萄牙46.1%，赛前红队已标葡萄牙热门偏热和哥伦比亚平局价值。"
+      },
+      "deviation_assessment": {
+        "direction_layer": "missed_favorite_direction; actual draw",
+        "score_layer": "0-0 was in matrix but outside top5, low-event goalless tail underemphasized",
+        "totals_layer": "under and especially under1.5 tail understated by over1.5 74.4%",
+        "risk_modes_confirmed_or_needing_event_chain": [
+          "draw_floor was present but too low for a match where Colombia could accept first place by avoiding loss and Portugal faced favorite-tax pressure.",
+          "goalkeeper_save variance likely central to a 0-0 but local event chain is missing.",
+          "VAR/offside disallowance tail is named by the task and must be encoded as correlated event risk, not ignored as noise.",
+          "Portugal favorite heat and market-public bias were correctly flagged pre-match."
+        ]
+      },
+      "top_concerns": [
+        {
+          "concern": "0-0 tail was visible but not operationally prominent.",
+          "category": "model/data",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "0-0 Poisson约6.99%，不在Top5；赛前最终平局仅26.1%，且over1.5高达74.4%。",
+          "why_it_matters": "低事件、门将扑救、VAR越位和头名控风险共同作用时，单纯xG均值会高估进球兑现。",
+          "follow_up_check": "复盘必须列出射正、重大机会、门将扑救、越位/VAR取消进球和关键禁区事件。",
+          "owner": "data/model"
+        },
+        {
+          "concern": "市场与强队名气导致葡萄牙方向过热。",
+          "category": "market",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "市场去水葡萄牙胜约52.1%，模型最终46.1%，实际0-0。",
+          "why_it_matters": "若赛后只说葡萄牙不败或过程占优，会隐藏热门税和draw_floor不足。",
+          "follow_up_check": "回测模型市场校准，检查 favorite tax 是否应进一步限幅。",
+          "owner": "market/model"
+        },
+        {
+          "concern": "成员状态闭环缺失。",
+          "category": "availability/data",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "本地未见四队2026-06-28第三轮成员表/player_state记录。",
+          "why_it_matters": "门将、后卫和被VAR影响的攻击手状态如果不回写，会污染32强预测。",
+          "follow_up_check": "更新哥伦比亚和葡萄牙第三轮逐人分钟、扑救/错失/越位/伤停/黄牌。",
+          "owner": "player-state"
+        }
+      ],
+      "quant_chain_flags": [
+        {
+          "flag": "draw_floor_underweighted",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "模型知道哥伦比亚平局价值，但最终平局26.1%和0-0约7.0%不足以体现低事件管理。"
+        },
+        {
+          "flag": "goalkeeper_save_and_var_offside_tail_missing",
+          "severity": "high",
+          "confidence": "medium",
+          "detail": "用户点名门将扑救/VAR越位尾部；本地无事件链确认，模型字段也未显式承载这类相关事件。"
+        },
+        {
+          "flag": "xg_to_scoreline_correlation",
+          "severity": "medium",
+          "confidence": "high",
+          "detail": "独立泊松用1.18-1.48均值会摊薄0-0；对门将高扑救、越位取消和双方控风险的相关事件表达不足。"
+        },
+        {
+          "flag": "market_calibration_limit",
+          "severity": "medium",
+          "confidence": "high",
+          "detail": "红队赛前已压葡萄牙热度，但仍需复核葡萄牙强队/公众队的校准上限。"
+        }
+      ],
+      "parameter_update_risks": [
+        "不要把0-0简单归因于葡萄牙进攻弱化；需先分离哥伦比亚平局效用、门将表现、VAR越位和终结噪声。",
+        "不要过度上调所有强强对话的draw_floor；只在双方都有低风险管理、市场热门过热、门将/VAR/越位事件链支持时触发。",
+        "不要把哥伦比亚防守整体强度大幅上修，除非复盘确认其限制了高质量机会而非依赖扑救/越位。"
+      ],
+      "required_fixes": [
+        {
+          "owner": "data-collector/postmatch",
+          "fix": "补0-0事件链，特别是门将扑救、VAR越位/进球取消、射门质量和官方首发。"
+        },
+        {
+          "owner": "modeler",
+          "fix": "增加或校准 draw_floor_dynamic、goalkeeper_save_variance、VAR_offside_disallowance_tail。"
+        },
+        {
+          "owner": "player-state",
+          "fix": "更新两队门将、防线、被取消进球/越位相关攻击手状态。"
+        }
+      ]
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "match_id": "2026-06-28_K_R3_DRC_UZB",
+      "actual_result": "3-1",
+      "verdict": "hold",
+      "model_error_verdict": "revise",
+      "pre_match_snapshot": {
+        "xg": {
+          "dr_congo": 1.48,
+          "uzbekistan": 0.98
+        },
+        "final_probabilities": {
+          "dr_congo_win": 0.5,
+          "draw": 0.255,
+          "uzbekistan_win": 0.245
+        },
+        "top_scores": [
+          "1-0",
+          "1-1",
+          "2-0",
+          "2-1",
+          "0-0"
+        ],
+        "poisson_3_1_probability": 0.045237,
+        "totals": {
+          "over_2_5": 0.445886,
+          "under_2_5": 0.554114,
+          "over_3_5": 0.233909
+        },
+        "margin_bucket": {
+          "dr_congo_win_2_plus": 0.2444,
+          "dr_congo_win_1": 0.2432
+        }
+      },
+      "deviation_assessment": {
+        "direction_layer": "hit; DR Congo win was first direction",
+        "score_layer": "missed exact/top score; 3-1 was in matrix around 4.5% but outside top5",
+        "totals_layer": "over2.5 and four-goal tail underweighted; under2.5 was slightly favored",
+        "risk_modes_confirmed_or_needing_event_chain": [
+          "must-win second-half escalation was recognized qualitatively but not strong enough in score/top-score output.",
+          "penalty event tail is named by the task and must be checked in official event chain.",
+          "late goal tail was under-modeled relative to actual 3-1 outcome.",
+          "Uzbekistan defensive collapse after chasing was correctly flagged but needs larger nonlinear tail."
+        ]
+      },
+      "top_concerns": [
+        {
+          "concern": "方向命中不能掩盖大比分/总进球尾部低估。",
+          "category": "model",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "模型给刚果金胜50.0%，但Top5集中1-0/1-1/2-0/2-1/0-0；实际3-1。",
+          "why_it_matters": "若复盘只写刚果金方向正确，会错过must-win后段升级和乌兹别克追分崩盘参数。",
+          "follow_up_check": "分拆方向、净胜2+、over2.5、late goal和penalty事件。",
+          "owner": "model"
+        },
+        {
+          "concern": "must-win second-half escalation 未充分量化。",
+          "category": "tournament/tactical",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "赛前战术包已写刚果金前60分钟低位、后30分钟必须提速，实际3-1符合后段开放尾部。",
+          "why_it_matters": "第三轮不能把动机均匀摊进xG；应按比分状态和时间段非线性增加尾部。",
+          "follow_up_check": "复盘确认进球时间、换人、是否点球、末段是否因乌兹别克压出产生空间。",
+          "owner": "tactics/model"
+        },
+        {
+          "concern": "成员状态缺口阻断后续参数落地。",
+          "category": "data",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "本地未见刚果金/乌兹别克斯坦第三轮player_state或成员表更新。",
+          "why_it_matters": "进球、点球、晚段进球、牌和门将/中卫崩盘若不回写，会让淘汰赛或总结模型读到旧状态。",
+          "follow_up_check": "补全出场分钟、进球/助攻/点球/黄红牌/关键失误和内部评分。",
+          "owner": "player-state"
+        }
+      ],
+      "quant_chain_flags": [
+        {
+          "flag": "must_win_escalation_underweighted",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "模型有third_round_context，但Top5仍偏1-0/1-1/2-0/2-1/0-0，未充分反映后段双方必须打开。"
+        },
+        {
+          "flag": "penalty_and_late_goal_tail",
+          "severity": "high",
+          "confidence": "medium",
+          "detail": "用户点名点球和晚段进球尾部；需官方事件链确认后把点球、危险区域犯规、追分压出合并进相关事件层。"
+        },
+        {
+          "flag": "uzbekistan_collapse_tail",
+          "severity": "medium",
+          "confidence": "high",
+          "detail": "赛前已知道乌兹别克前两轮失8球，但实际3-1说明在落后/必须追分状态下防线方差仍需加厚。"
+        },
+        {
+          "flag": "direction_vs_margin_misread",
+          "severity": "high",
+          "confidence": "high",
+          "detail": "刚果金胜方向命中，不能自动视为让球、总进球或比分层命中。"
+        }
+      ],
+      "parameter_update_risks": [
+        "不要把3-1全部转化为刚果金基础进攻强度上修；更可能是第三轮必须赢、点球/晚段、乌兹别克压出后的状态依赖。",
+        "不要三重惩罚乌兹别克防线：二轮0-5、三轮1-3、player_state防线下修需要去重。",
+        "不要用单场3-1过度提高所有must-win球队的大球概率；应限制在弱防线、落后追分和晚段换人触发条件下。"
+      ],
+      "required_fixes": [
+        {
+          "owner": "data-collector/postmatch",
+          "fix": "补3-1事件链，确认点球、进球时间、晚段进球、换人和红黄牌。"
+        },
+        {
+          "owner": "tactics-coach",
+          "fix": "验证刚果金是否从低位转主动、乌兹别克是否因追分暴露转换。"
+        },
+        {
+          "owner": "modeler",
+          "fix": "校准 third_round_scoreboard_pressure、penalty_tail、late_goal_tail、opponent_must_win_exposure。"
+        },
+        {
+          "owner": "player-state",
+          "fix": "更新刚果金进攻球员和乌兹别克门将/中卫链条的第三轮状态。"
+        }
+      ]
+    }
+  ],
+  "postmatch_review_quality_flags": [
+    {
+      "flag": "do_not_hide_failure_with_direction_hit",
+      "severity": "blocker",
+      "confidence": "high",
+      "detail": "刚果金方向命中，但比分、总进球和尾部路径需要 revise；不能写成模型全中。"
+    },
+    {
+      "flag": "do_not_hide_portugal_favorite_miss",
+      "severity": "high",
+      "confidence": "high",
+      "detail": "哥伦比亚0-0葡萄牙应标为葡萄牙方向和大于1.5球倾向失败，同时承认红队赛前已经提示热门过热与平局价值。"
+    },
+    {
+      "flag": "player_state_blocks_complete",
+      "severity": "blocker",
+      "confidence": "high",
+      "detail": "未同步成员表/player_state前，复盘只能是source_limited或partial，不能complete。"
+    }
+  ],
+  "handoff": {
+    "verdict": "hold",
+    "must_fix": [
+      "补两场本地正式复盘和事件链。",
+      "同步四队成员表与player_state第三轮记录。",
+      "哥伦比亚0-0葡萄牙：复核draw_floor、门将扑救、VAR越位、低事件控风险和市场热门税。",
+      "刚果金3-1乌兹别克斯坦：复核must-win后段升级、点球、晚段进球和乌兹别克追分崩盘。",
+      "模型更新必须分离方向、比分、总进球、让球和事件尾部。"
+    ],
+    "owners": {
+      "data-collector/postmatch": "官方赛果事件链与技术统计",
+      "player-state": "四队成员表和状态表",
+      "tactics-coach": "战术证伪/兑现链",
+      "modeler": "参数校准和去重",
+      "main": "阻断项清除前不得发布complete或投注化语言"
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "phase": "postmatch_data_collection",
+  "status": "partial_source_limited",
+  "group": "J",
+  "captured_at": "2026-06-28T20:56:26+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": [
+    "阿尔及利亚 3-3 奥地利",
+    "约旦 1-3 阿根廷"
+  ],
+  "player_state_update_status": "partial",
+  "matches": [
+    {
+      "match_id": "2026-06-28_ALG_3-3_AUT",
+      "final_score": "阿尔及利亚 3-3 奥地利",
+      "venue": "Kansas City Stadium / Arrowhead Stadium",
+      "lineups_source_status": "Guardian confirmed XI",
+      "goals": [
+        {
+          "minute": "28",
+          "team": "奥地利",
+          "player": "Marko Arnautovic",
+          "assist": null,
+          "source_status": "goal_confirmed_assist_missing"
+        },
+        {
+          "minute": "45",
+          "team": "阿尔及利亚",
+          "player": "Rafik Belghali",
+          "assist": null,
+          "source_status": "goal_confirmed_assist_missing"
+        },
+        {
+          "minute": "54",
+          "team": "奥地利",
+          "player": "Marcel Sabitzer",
+          "assist": "Konrad Laimer",
+          "source_status": "assist_from_live_text"
+        },
+        {
+          "minute": "60",
+          "team": "阿尔及利亚",
+          "player": "Riyad Mahrez",
+          "assist": null,
+          "source_status": "goal_confirmed_assist_missing"
+        },
+        {
+          "minute": "90+4",
+          "team": "阿尔及利亚",
+          "player": "Riyad Mahrez",
+          "assist": null,
+          "source_status": "goal_confirmed_assist_missing"
+        },
+        {
+          "minute": "90+5",
+          "team": "奥地利",
+          "player": "Sasa Kalajdzic",
+          "assist": null,
+          "source_status": "goal_confirmed_assist_missing"
+        }
+      ],
+      "cards": [
+        {
+          "minute": "11",
+          "team": "奥地利",
+          "player": "Marko Arnautovic",
+          "card": "yellow",
+          "source_status": "Guardian live text"
+        }
+      ],
+      "injuries_or_fitness": [
+        {
+          "team": "奥地利",
+          "player": "David Alaba",
+          "note": "62分钟被换下，现场源称可能有体能/健康担忧",
+          "source_status": "injury_watch"
+        },
+        {
+          "team": "奥地利",
+          "player": "Marko Arnautovic",
+          "note": "17分钟一度跛行但继续比赛",
+          "source_status": "fitness_watch"
+        }
+      ],
+      "team_records_updated": {
+        "algeria": 26,
+        "austria": 26
+      },
+      "source_log": [
+        "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+        "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+        "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+      ],
+      "gaps": [
+        "官方FIFA完整事件表未取得",
+        "全量换人分钟未闭合",
+        "同场同源逐人评分未取得",
+        "部分助攻未确认"
+      ]
+    },
+    {
+      "match_id": "2026-06-28_JOR_1-3_ARG",
+      "final_score": "约旦 1-3 阿根廷",
+      "venue": "Dallas / AT&T Stadium",
+      "lineups_source_status": "Guardian confirmed XI",
+      "goals": [
+        {
+          "minute": "19",
+          "team": "阿根廷",
+          "player": "Giovani Lo Celso",
+          "assist": null,
+          "type": "free_kick",
+          "source_status": "Guardian live text"
+        },
+        {
+          "minute": "31",
+          "team": "阿根廷",
+          "player": "Lautaro Martinez",
+          "assist": null,
+          "type": "penalty",
+          "source_status": "Guardian live text"
+        },
+        {
+          "minute": "55",
+          "team": "约旦",
+          "player": "Musa Al-Taamari",
+          "assist": "Ihsan Haddad",
+          "type": "open_play",
+          "source_status": "Guardian live text"
+        },
+        {
+          "minute": "80",
+          "team": "阿根廷",
+          "player": "Lionel Messi",
+          "assist": null,
+          "type": "free_kick",
+          "source_status": "Guardian live text"
+        }
+      ],
+      "cards": [
+        {
+          "minute": "19",
+          "team": "约旦",
+          "player": "Mohannad Abu Taha",
+          "card": "yellow",
+          "source_status": "Guardian live text"
+        },
+        {
+          "minute": "64",
+          "team": "约旦",
+          "player": "Yazan Al-Arab",
+          "card": "yellow",
+          "source_status": "Guardian live text"
+        }
+      ],
+      "injuries_or_fitness": [
+        {
+          "team": "约旦",
+          "player": "Husam Abu Dahab",
+          "note": "89分钟担架离场，需后续伤情确认",
+          "source_status": "injury_watch"
+        }
+      ],
+      "team_records_updated": {
+        "jordan": 26,
+        "argentina": 26
+      },
+      "source_log": [
+        "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-jordan-v-argentina-updates-jor-vs-arg-group-j-match-score-latest",
+        "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/lionel-messi-creates-history-as-argentina-beat-jordan-3-1-to-complete-perfect-group-stage/articleshow/132045479.cms",
+        "https://cadenaser.com/nacional/2026/06/28/jordania-1-3-argentina-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+      ],
+      "gaps": [
+        "官方FIFA完整事件表未取得",
+        "同场同源逐人评分未取得"
+      ]
+    }
+  ],
+  "updated_files": [
+    "data/outputs/player_state/algeria-player-state.json",
+    "data/outputs/player_state/austria-player-state.json",
+    "data/outputs/player_state/jordan-player-state.json",
+    "data/outputs/player_state/argentina-player-state.json",
+    "队伍/阿尔及利亚/成员表.md",
+    "队伍/奥地利/成员表.md",
+    "队伍/约旦/成员表.md",
+    "队伍/阿根廷/成员表.md",
+    "data/packets/rosters/algeria-roster.json",
+    "data/packets/rosters/austria-roster.json",
+    "data/packets/rosters/jordan-roster.json",
+    "data/packets/rosters/argentina-roster.json"
+  ],
+  "gaps_and_conflicts": [
+    "FIFA官方完整事件表/逐人评分未闭合，因此player_state_update_status=partial。",
+    "阿尔及利亚-奥地利全量换人分钟与部分助攻缺官方确认。",
+    "奥地利Alaba、Arnautovic与约旦Abu Dahab存在伤情/体能观察点，需要下一轮前复核。",
+    "外部评分未取得可靠同场同源数据，external_rating=null。"
+  ]
+}

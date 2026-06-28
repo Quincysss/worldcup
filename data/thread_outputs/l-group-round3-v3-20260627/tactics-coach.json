@@ -1,0 +1,291 @@
+{
+  "phase": "group_round3_v3_tactics",
+  "group": "L",
+  "status": "partial_source_limited",
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "updated_at": "2026-06-27T00:00:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "L组第三轮v3预测战术因子包；包含预计首发战术影响，不含比分、胜平负概率或投注建议。",
+  "data_packet_status": "l-group-round3-v3 data collector packet not found locally; using existing L round3 prediction files, first two rounds postmatch reviews, tactics packets, player_state and local v3 template.",
+  "template_reference": "data/templates/match-prediction-standard-template-v3.md",
+  "source_log": [
+    "README.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    ".codex/skills/worldcup-tactics-coach/SKILL.md",
+    ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+    "data/templates/match-prediction-standard-template-v3.md",
+    "data/outputs/match_predictions/l-group-round3-quant-prediction-20260626.json",
+    "比赛/未开始比赛/小组赛/L组/2026-06-28_克罗地亚_vs_加纳_量化预测.md",
+    "比赛/未开始比赛/小组赛/L组/2026-06-28_巴拿马_vs_英格兰_量化预测.md",
+    "比赛/已完成比赛/小组赛/L组/2026-06-17_英格兰_4-2_克罗地亚_复盘.md",
+    "比赛/已完成比赛/小组赛/L组/2026-06-17_加纳_1-0_巴拿马_复盘.md",
+    "比赛/已完成比赛/小组赛/L组/2026-06-23_英格兰_0-0_加纳_复盘.md",
+    "比赛/已完成比赛/小组赛/L组/2026-06-24_巴拿马_0-1_克罗地亚_复盘.md",
+    "data/packets/tactics/croatia-tactics-packet.json",
+    "data/packets/tactics/ghana-tactics-packet.json",
+    "data/packets/tactics/panama-tactics-packet.json",
+    "data/packets/tactics/england-tactics-packet.json",
+    "data/outputs/player_state/croatia-player-state.json",
+    "data/outputs/player_state/ghana-player-state.json",
+    "data/outputs/player_state/panama-player-state.json",
+    "data/outputs/player_state/england-player-state.json"
+  ],
+  "missing_fields": [
+    "T-75 official starting XIs unavailable.",
+    "L round3 v3 data collector packet not found under data/packets/matches.",
+    "Final injuries, suspensions, card accumulation and minutes limits require pre-match refresh.",
+    "Ghana goalkeeper availability and England/Croatia veteran minutes need same-day confirmation."
+  ],
+  "group_context": {
+    "after_round2": "英格兰与加纳同为4分，打平管理价值高；克罗地亚3分且更需要主动拿结果；巴拿马0分但仍有第三名与荣誉战动机。",
+    "third_round_model_note": "L组第三轮不能只按强弱分层。克罗地亚-加纳是控节奏中场优势对低位转换和守平管理；巴拿马-英格兰是低位抗压、轮换和英格兰破密集效率的组合。60分钟后需引入同组实时信息驱动。"
+  },
+  "matches": [
+    {
+      "match": "克罗地亚 vs 加纳",
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27T00:00:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before final model lock; if either team changes formation or rotates more than two core roles, rerun xG, tempo and tactical matchup factors.",
+        "home": {
+          "team": "克罗地亚",
+          "predicted_formation": "4-3-3",
+          "alternate_formations": ["4-2-3-1", "3-4-2-1"],
+          "lineup_confidence": "medium",
+          "starters": [
+            {"position": "GK", "player": "多米尼克·利瓦科维奇 Dominik Livakovic", "role": "门线与传中处理，第二轮零封后稳定性上修。"},
+            {"position": "RB", "player": "约西普·斯塔尼希奇 Josip Stanisic", "role": "右路攻防与弱侧推进，参与第二轮关键进攻链。"},
+            {"position": "CB", "player": "约西普·舒塔洛 Josip Sutalo", "role": "正面保护和禁区落点处理。"},
+            {"position": "CB", "player": "约什科·格瓦迪奥尔 Josko Gvardiol", "role": "左侧出球和推进；第二轮半场被换下需复核负荷。"},
+            {"position": "LB", "player": "伊万·佩里希奇 Ivan Perisic", "role": "左路宽度、传中和后点经验。"},
+            {"position": "CM", "player": "卢卡·莫德里奇 Luka Modric", "role": "节奏核心、抗压接应和弱侧转移。"},
+            {"position": "CM", "player": "马特奥·科瓦契奇 Mateo Kovacic", "role": "中场抗压推进和转换第一脚。"},
+            {"position": "CM", "player": "马丁·巴图里纳 Martin Baturina", "role": "肋部连接和前场第二线接应。"},
+            {"position": "RW", "player": "马里奥·帕沙利奇 Mario Pasalic", "role": "右肋前插、二点球和定位球高度。"},
+            {"position": "CF", "player": "安特·布迪米尔 Ante Budimir", "role": "禁区支点和制胜球后上修的终结点。"},
+            {"position": "LW", "player": "安德雷·克拉马里奇 Andrej Kramaric", "role": "左/中路串联、禁区前终结支援和后手可变性。"}
+          ],
+          "rotation_candidates": [
+            {"player": "佩塔尔·穆萨 Petar Musa", "trigger": "若需要更早压迫或保护Budimir负荷，可改打中锋；会降低禁区终结确定性。"},
+            {"player": "佩塔尔·苏契奇 Petar Sucic", "trigger": "若要增加跑动和中场覆盖，替换Baturina或老将分钟。"},
+            {"player": "卢卡·武什科维奇 Luka Vuskovic", "trigger": "若Gvardiol负荷存疑或改三中卫，进入中卫线。"}
+          ],
+          "lineup_model_impact": [
+            "Budimir首发会提高禁区触球、传中价值和定位球高点，但不等同于稳定大幅上修总进攻。",
+            "Modric/Kovacic同时首发提高build-up resistance与central control，但两者与节奏压低高度共线，需限幅。",
+            "若Gvardiol缺席或改替补，左侧出球和防转换保护同步下修。"
+          ]
+        },
+        "away": {
+          "team": "加纳",
+          "predicted_formation": "4-2-3-1",
+          "alternate_formations": ["4-4-1-1", "5-4-1"],
+          "lineup_confidence": "medium_low",
+          "starters": [
+            {"position": "GK", "player": "本杰明·阿萨雷 Benjamin Asare", "role": "第二轮零封英格兰后更可信；Ati-Zigi可用性仍是T-75变量。"},
+            {"position": "RB", "player": "马文·塞纳亚 Marvin Senaya", "role": "右路防守和后点保护。"},
+            {"position": "CB", "player": "乔纳斯·阿杰泰 Jonas Adjetey", "role": "正面封堵与高质量中卫组合核心。"},
+            {"position": "CB", "player": "杰罗姆·奥波库 Jerome Opoku", "role": "禁区保护、二点球和低位防线指挥。"},
+            {"position": "LB", "player": "吉迪恩·门萨 Gideon Mensah", "role": "左路防守、后点处理和宽度保护。"},
+            {"position": "DM", "player": "托马斯·帕尔特伊 Thomas Partey", "role": "中场屏障、第一转移和防线前保护。"},
+            {"position": "DM", "player": "夸西·西博 Kwasi Sibo", "role": "二点球覆盖和中场距离控制。"},
+            {"position": "RW", "player": "安托万·塞梅尼奥 Antoine Semenyo", "role": "转换推进、身体对抗和右路牵制。"},
+            {"position": "AM", "player": "乔丹·阿尤 Jordan Ayew", "role": "前场护球、造犯规和反击第一停球点。"},
+            {"position": "LW", "player": "欧内斯特·努阿马 Ernest Nuamah", "role": "左路速度和反击拉伸。"},
+            {"position": "CF", "player": "伊尼亚基·威廉姆斯 Inaki Williams", "role": "纵深牵制和中卫转身压力。"}
+          ],
+          "rotation_candidates": [
+            {"player": "劳伦斯·阿蒂-齐吉 Lawrence Ati-Zigi", "trigger": "若赛前确认完全可用，可能回到门将位；门将状态和出击选择需重跑。"},
+            {"player": "布兰登·托马斯-阿桑特 Brandon Thomas-Asante", "trigger": "若需要后段冲击或直接终结，替换中锋/边锋；提高late box threat。"},
+            {"player": "阿卜杜勒·法塔武 Abdul Fatawu", "trigger": "若需要更快边路和反击单点，60分钟后进入右路。"},
+            {"player": "卡马尔丁·苏莱曼纳 Kamaldeen Sulemana", "trigger": "若需要左路一对一或反击推进，替换Nuamah。"}
+          ],
+          "lineup_model_impact": [
+            "Asare首发可保留第二轮防守稳定性，但门将样本短，不能过度上修clean defensive floor。",
+            "Adjetey/Opoku/Partey同时首发提升低位防守和中路保护；该提升与player_state防守评分高度重合，需限幅。",
+            "Semenyo/Ayew/Inaki组合提高转换牵制，但阵地战创造力仍不应大幅上修。"
+          ]
+        },
+        "t75_rerun_conditions": [
+          "Ghana goalkeeper switches between Asare and Ati-Zigi, rerun shot-stopping confidence, cross handling and late-game risk.",
+          "Gvardiol absent or Croatia changes to back three, rerun Croatia build-up, wide channel and transition defense factors.",
+          "Budimir not starting, lower Croatia box presence, set-piece target value and cross conversion.",
+          "Ghana uses 5-4-1 instead of 4-2-3-1, lower tempo and central access while increasing draw-management floor."
+        ]
+      },
+      "teams": {
+        "克罗地亚": {
+          "quant_factors": {
+            "pressing_adjustment": {"direction": "neutral", "magnitude": 0.1, "evidence": "战术包显示克罗地亚更偏中位控节奏，第三轮虽需主动但不适合编码成持续高压。", "confidence": "medium", "model_note": "只给局部前压；不要与必须赢动机重复上修。"},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.8, "evidence": "Modric/Kovacic/Baturina和Gvardiol出球能拆中低压，第二轮通过中场控制压低巴拿马推进。", "confidence": "medium_high", "model_note": "与central_control高度共线，合并限幅。"},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.3, "evidence": "克罗地亚转换不是纯速度型，但Kramaric/Budimir后手提高第一脚和禁区到达。", "confidence": "medium", "model_note": "作为低到中等加成，避免与锋线form重复。"},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.5, "evidence": "边后卫压上与老将回追会被Semenyo/Ayew/Inaki打身后。", "confidence": "medium_high", "model_note": "若三中卫或更保守边后卫配置可回调。"},
+            "wide_channel_advantage": {"direction": "neutral", "magnitude": 0.1, "evidence": "Perisic/Stanisic有宽度，但Ghana边路回防和中卫保护在第二轮对英格兰有效。", "confidence": "medium", "model_note": "不要把宽度优势单独满额叠加到传中xG。"},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.8, "evidence": "克罗地亚核心优势仍是中场节奏和弱侧转移；加纳更愿意让出控球。", "confidence": "high", "model_note": "与build-up resistance共线，建议只保留一个主权重。"},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.4, "evidence": "Budimir、Pasalic、中卫高度和Modric脚法提供定位球地板。", "confidence": "medium", "model_note": "与Budimir首发/player_state高点重复时限幅。"},
+            "defensive_line_risk": {"direction": "negative", "magnitude": -0.4, "evidence": "对加纳纵深跑和身体对抗，克罗地亚防线速度与体能存在尾部风险。", "confidence": "medium", "model_note": "若防线更深则降低身后风险但降低压制强度。"},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.7, "evidence": "第二轮半场Budimir/Kramaric调整直接改变禁区质量，Dalic后手明确。", "confidence": "medium_high", "model_note": "与bench/player_state重复时只作为时段因子。"},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.6, "evidence": "克罗地亚需要主动拿结果，但教练底色仍是控节奏和减少来回冲刺。", "confidence": "medium_high", "model_note": "前60分钟控节奏，后30分钟随同组信息加速。"},
+            "third_round_motivation_tactical_shift": {"direction": "positive", "magnitude": 0.8, "evidence": "3分位置使克罗地亚比加纳更需要从控球转向禁区投入。", "confidence": "high", "model_note": "只影响节奏/换人/压上，不直接转成结果概率。"},
+            "rotation_shape_risk": {"direction": "neutral", "magnitude": 0.2, "evidence": "必须抢结果降低大轮换概率，但Gvardiol、Modric等分钟需复核。", "confidence": "medium", "model_note": "T-75若老将轮休两人以上，重跑中场控制。"},
+            "draw_management_tendency": {"direction": "negative", "magnitude": -0.6, "evidence": "平局价值低于取胜，后段更可能放弃纯控球。", "confidence": "high", "model_note": "不要套用克罗地亚传统控平标签。"},
+            "goal_difference_chase_risk": {"direction": "positive", "magnitude": 0.4, "evidence": "若另一场信息或第三名比较不利，后段会增加传中和中锋人数。", "confidence": "medium", "model_note": "仅在60分钟后触发。"},
+            "late_game_information_risk": {"direction": "positive", "magnitude": 0.8, "evidence": "同组同时开球，克罗地亚战术选择会被英格兰-巴拿马实时状态影响。", "confidence": "high", "model_note": "模型需做分段情景，不宜静态全场平均。"}
+          }
+        },
+        "加纳": {
+          "quant_factors": {
+            "pressing_adjustment": {"direction": "negative", "magnitude": -0.2, "evidence": "Queiroz口径与前两轮表现更偏紧凑中低位，压迫是场景化而非全场。", "confidence": "medium_high", "model_note": "低压不等于被动失守，应与低事件地板共同编码。"},
+            "build_up_resistance_adjustment": {"direction": "neutral", "magnitude": 0.1, "evidence": "Partey可提供第一转移，但加纳主要通过边路/锋线直接出口而非长控。", "confidence": "medium", "model_note": "不要上修为稳定控球能力。"},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.6, "evidence": "Semenyo、Ayew、Inaki能牵制英格兰并限制对手无成本压上。", "confidence": "medium_high", "model_note": "与前场player_state同源，建议保留为转换通道因子。"},
+            "transition_defense_risk": {"direction": "positive", "magnitude": 0.4, "evidence": "Adjetey/Opoku/Partey保护第二轮经受英格兰压迫，低位回收质量高。", "confidence": "medium_high", "model_note": "若改主动压上，风险方向需重跑。"},
+            "wide_channel_advantage": {"direction": "neutral", "magnitude": 0.2, "evidence": "Yirenkyi/Mensah/Semenyo边路对抗好，但克罗地亚弱侧转移成熟。", "confidence": "medium", "model_note": "宽度主要体现在限制对手和反击，不是阵地压制。"},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.5, "evidence": "加纳会让出部分球权，面对Modric/Kovacic中场控制处于劣势。", "confidence": "high", "model_note": "不应因此下修防守质量到同等幅度。"},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.3, "evidence": "身体条件、Adjetey/Opoku和Thomas-Asante后手提供定位球二点。", "confidence": "medium", "model_note": "与防线身高/player_state重复限幅。"},
+            "defensive_line_risk": {"direction": "positive", "magnitude": 0.6, "evidence": "第二轮低位保护Kane/Bellingham区域成功，禁区前压缩可靠。", "confidence": "medium_high", "model_note": "这是降低风险因子；不可重复计入整体防守评分。"},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.4, "evidence": "Thomas-Asante首轮后手破局，Fatawu/Sulemana可提供速度。", "confidence": "medium", "model_note": "后手主要增加转换尾部，不增加稳定阵地xG。"},
+            "game_state_tendency": {"direction": "negative", "magnitude": -0.7, "evidence": "4分和守平价值使加纳倾向压低节奏、保护中路和避免开放互攻。", "confidence": "high", "model_note": "作为draw_floor/low_event触发，不输出结果倾向。"},
+            "third_round_motivation_tactical_shift": {"direction": "neutral", "magnitude": 0.2, "evidence": "加纳有争头名动机但出线安全感更高，战术上更偏风险控制。", "confidence": "medium_high", "model_note": "不要把积分优势编码成主动进攻上修。"},
+            "rotation_shape_risk": {"direction": "negative", "magnitude": -0.5, "evidence": "门将Ati-Zigi/Asare选择和前场排序仍不明，可能改变防线沟通与出击。", "confidence": "medium", "model_note": "T-75门将与后腰组合是硬重跑条件。"},
+            "draw_management_tendency": {"direction": "positive", "magnitude": 0.9, "evidence": "打平管理价值高，第二轮已证明可用低位纪律压低英格兰机会质量。", "confidence": "high", "model_note": "与game_state_tendency合并，不要重复扩大平局尾部。"},
+            "goal_difference_chase_risk": {"direction": "negative", "magnitude": -0.2, "evidence": "加纳无强烈净胜球追逐压力，除非同组信息极端不利。", "confidence": "medium", "model_note": "默认不触发；后段信息触发时再更新。"},
+            "late_game_information_risk": {"direction": "positive", "magnitude": 0.7, "evidence": "若另一场英格兰状态改变小组头名/出线路径，加纳可能调整从守平到反击偷袭。", "confidence": "high", "model_note": "建议按60-75分钟信息窗口分段。"}
+          }
+        }
+      },
+      "double_counting_warnings": [
+        "Croatia midfield control, build-up resistance and Modric/Kovacic player_state are the same tactical chain; cap combined positive effect.",
+        "Ghana defensive line stability, Adjetey/Opoku/Partey player_state and draw management overlap; use one defensive floor channel.",
+        "Ghana transition attack and Semenyo/Ayew/Inaki form should not be added as both player and team attack boosts."
+      ]
+    },
+    {
+      "match": "巴拿马 vs 英格兰",
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27T00:00:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before final model lock; if England rotates more than two front-six roles or Panama changes back-line count, rerun xG, tempo and matchup factors.",
+        "home": {
+          "team": "巴拿马",
+          "predicted_formation": "5-4-1",
+          "alternate_formations": ["4-4-2", "3-4-2-1"],
+          "lineup_confidence": "medium_low",
+          "starters": [
+            {"position": "GK", "player": "奥兰多·莫斯克拉 Orlando Mosquera", "role": "高压下门线和传中处理；前两轮保持比赛悬念。"},
+            {"position": "RWB", "player": "阿米尔·穆里略 Amir Murillo", "role": "主要推进点和对抗出口。"},
+            {"position": "CB", "player": "何塞·科尔多瓦 Jose Cordoba", "role": "禁区保护和对抗中锋。"},
+            {"position": "CB", "player": "吉奥瓦尼·拉莫斯 Jiovany Ramos", "role": "中路落点保护；换人分钟需复核。"},
+            {"position": "CB", "player": "安德烈斯·安德拉德 Andres Andrade", "role": "左中卫横移和防后点。"},
+            {"position": "LWB", "player": "塞萨尔·布莱克曼 Cesar Blackman", "role": "边翼卫往返和低位防守，牌面风险需监控。"},
+            {"position": "CM", "player": "卡洛斯·哈维 Carlos Harvey", "role": "中场对抗和禁区弧保护。"},
+            {"position": "CM", "player": "阿尼瓦尔·戈多伊 Anibal Godoy", "role": "经验型中场保护；Carrasquilla若可用则替代为推进核心。"},
+            {"position": "RM", "player": "约埃尔·巴尔塞纳斯 Yoel Barcenas", "role": "右路传中和反击出口，纪律风险上调。"},
+            {"position": "LM", "player": "伊斯梅尔·迪亚斯 Ismael Diaz", "role": "左路速度和后段冲刺。"},
+            {"position": "CF", "player": "何塞·法哈多 Jose Fajardo", "role": "支点和第一落点，终结质量偏弱。"}
+          ],
+          "rotation_candidates": [
+            {"player": "塞西利奥·沃特曼 Cecilio Waterman", "trigger": "若需要更早长传支点或替换Fajardo。"},
+            {"player": "克里斯蒂安·马丁内斯 Cristian Martinez", "trigger": "若要增强中场覆盖和低位保护。"},
+            {"player": "阿尔贝托·金特罗 Alberto Quintero", "trigger": "若落后后需要边路传中和经验。"},
+            {"player": "阿达尔韦托·卡拉斯基利亚 Adalberto Carrasquilla", "trigger": "若T-75确认可首发，巴拿马中路推进、定位球和节奏均需重跑。"}
+          ],
+          "lineup_model_impact": [
+            "5-4-1提高前60分钟低位抗压和低事件地板，但会进一步压低阵地战xG。",
+            "Carrasquilla若首发，build-up resistance和central progression上修；若缺席，巴拿马更依赖长传与边路第二点。",
+            "Barcenas/Blackman牌面和边翼卫消耗会提高后段防线风险。"
+          ]
+        },
+        "away": {
+          "team": "英格兰",
+          "predicted_formation": "4-2-3-1",
+          "alternate_formations": ["4-3-3", "3-4-2-1"],
+          "lineup_confidence": "medium",
+          "starters": [
+            {"position": "GK", "player": "乔丹·皮克福德 Jordan Pickford", "role": "后场发起和防反出击；第二轮出击细节需复核。"},
+            {"position": "RB", "player": "里斯·詹姆斯 Reece James", "role": "右路推进和传中；与Jordan Ayew对抗后治疗需T-75复核。"},
+            {"position": "CB", "player": "埃兹里·孔萨 Ezri Konsa", "role": "防反保护和右中卫出球。"},
+            {"position": "CB", "player": "马克·格伊 Marc Guehi", "role": "左中卫覆盖和定位球高点。"},
+            {"position": "LB", "player": "尼科·奥赖利 Nico O'Reilly", "role": "左路后点冲击和宽度，第二轮替补威胁上修。"},
+            {"position": "DM", "player": "德克兰·赖斯 Declan Rice", "role": "攻转守支点、定位球脚法和中场覆盖。"},
+            {"position": "CM", "player": "埃利奥特·安德森 Elliot Anderson", "role": "接应和控球节奏；破低位速度需谨慎。"},
+            {"position": "RW", "player": "布卡约·萨卡 Bukayo Saka", "role": "右路一对一和低位破局第一点。"},
+            {"position": "AM", "player": "裘德·贝林厄姆 Jude Bellingham", "role": "十号位前插、二点和禁区冲击。"},
+            {"position": "LW", "player": "马库斯·拉什福德 Marcus Rashford", "role": "左路纵深和后段提速。"},
+            {"position": "CF", "player": "哈里·凯恩 Harry Kane", "role": "中锋回撤、禁区终结和定位球高点。"}
+          ],
+          "rotation_candidates": [
+            {"player": "诺尼·马杜埃凯 Noni Madueke", "trigger": "若Saka负荷受限或需要更直接右路突破。"},
+            {"player": "安东尼·戈登 Anthony Gordon", "trigger": "若需要左路压迫和速度，替换Rashford或改4-3-3。"},
+            {"player": "摩根·罗杰斯 Morgan Rogers", "trigger": "若Bellingham负荷管理或需要十号位活力。"},
+            {"player": "伊万·托尼 Ivan Toney", "trigger": "若低位久攻不下，需要第二中锋/禁区高点。"},
+            {"player": "约翰·斯通斯 John Stones", "trigger": "若需要更强出球或三中卫控场。"}
+          ],
+          "lineup_model_impact": [
+            "Saka/Bellingham/Kane同时首发提高低位破局与禁区质量，但第二轮已证明控制不等于自动转化。",
+            "Rashford或Gordon首发决定左路是纵深冲击还是压迫覆盖；会影响节奏和wide_channel_advantage。",
+            "若Tuchel轮换前场两人以上，进攻上限和化学反应都需重跑。"
+          ]
+        },
+        "t75_rerun_conditions": [
+          "England rotates two or more of Kane, Bellingham, Saka, Rice, rerun attack, central control and set-piece factors.",
+          "Reece James unavailable or managed, rerun right-side width, crossing and rest-defense risk.",
+          "Panama starts Carrasquilla, rerun build-up resistance, central progression and set-piece delivery.",
+          "Panama uses 4-4-2 instead of 5-4-1, lower low-block floor and increase transition defense risk."
+        ]
+      },
+      "teams": {
+        "巴拿马": {
+          "quant_factors": {
+            "pressing_adjustment": {"direction": "negative", "magnitude": -0.5, "evidence": "战术包和前两轮显示巴拿马更现实是中低位切碎比赛，面对英格兰不会持续高压。", "confidence": "high", "model_note": "低压与低事件同源，限幅。"},
+            "build_up_resistance_adjustment": {"direction": "negative", "magnitude": -0.7, "evidence": "前两轮持续出球和中路推进偏弱；Carrasquilla状态/首发不明。", "confidence": "medium_high", "model_note": "若Carrasquilla首发可回调到-0.3。"},
+            "transition_attack_adjustment": {"direction": "neutral", "magnitude": 0.2, "evidence": "Murillo和边路能推进，但最后一传和禁区连接不足。", "confidence": "medium", "model_note": "只保留单事件尾部，不上修稳定攻击。"},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.7, "evidence": "若后段追分或边翼卫压上，会暴露英格兰边锋身后空间。", "confidence": "medium_high", "model_note": "前60分钟低位风险较低，后段上升。"},
+            "wide_channel_advantage": {"direction": "neutral", "magnitude": 0.1, "evidence": "Murillo是亮点，但对Saka/Rashford/James/O'Reilly组合难形成稳定优势。", "confidence": "medium", "model_note": "主要作为反击出口而非压制优势。"},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.8, "evidence": "中场推进和二点保护不足，面对Rice/Bellingham/Anderson处于明显劣势。", "confidence": "high", "model_note": "不要与build-up resistance重复满额。"},
+            "set_piece_advantage": {"direction": "neutral", "magnitude": 0.2, "evidence": "巴拿马身体对抗和定位球有基础，但落点质量和纪律不稳。", "confidence": "medium", "model_note": "仅给小幅单事件通道。"},
+            "defensive_line_risk": {"direction": "negative", "magnitude": -0.5, "evidence": "两场低比分失利说明低位能抗压，但面对英格兰边路与替补冲击后段风险上升。", "confidence": "medium", "model_note": "分段：前低后高。"},
+            "coach_substitution_risk": {"direction": "neutral", "magnitude": 0.2, "evidence": "Christiansen可换上速度或支点，但前两轮替补未显著改变创造力。", "confidence": "medium", "model_note": "不应作为正向进攻强因子。"},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.5, "evidence": "0分带来荣誉/第三名动机，但实力结构使其大概率先守后看。", "confidence": "medium_high", "model_note": "先低位，若后段需要结果才开放。"},
+            "third_round_motivation_tactical_shift": {"direction": "positive", "magnitude": 0.4, "evidence": "仍有第三名和荣誉战动机，后段可更直接。", "confidence": "medium", "model_note": "不要转成稳定进球能力。"},
+            "rotation_shape_risk": {"direction": "negative", "magnitude": -0.5, "evidence": "Carrasquilla可用性、五后卫/四后卫选择和边翼卫消耗都是结构变量。", "confidence": "medium", "model_note": "T-75若阵型变为4-4-2需重跑。"},
+            "draw_management_tendency": {"direction": "negative", "magnitude": -0.5, "evidence": "0分使单纯守平价值较低，但前段仍会因能力差距选择低位。", "confidence": "medium_high", "model_note": "低位不等于主动守平。"},
+            "goal_difference_chase_risk": {"direction": "positive", "magnitude": 0.5, "evidence": "若同组信息显示第三名比较需要进球，后段会放大压上和防线暴露。", "confidence": "medium", "model_note": "只在60分钟后触发。"},
+            "late_game_information_risk": {"direction": "positive", "magnitude": 0.8, "evidence": "同组克罗地亚-加纳状态会改变巴拿马第三名理论路径。", "confidence": "high", "model_note": "需要实时情景开关。"}
+          }
+        },
+        "英格兰": {
+          "quant_factors": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.5, "evidence": "Tuchel可用4-2-3-1形成前场压迫，Saka/Rashford/Gordon/Madueke提供触发。", "confidence": "medium", "model_note": "若轮换或Kane压迫负荷管理，下修。"},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.8, "evidence": "Rice、Stones/Konsa、Bellingham和边后卫能稳定通过低压。", "confidence": "medium_high", "model_note": "与central_control共线，合并限幅。"},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.5, "evidence": "首轮下半场提速和替补冲击曾打开局面，Saka/Rashford可攻击翼卫身后。", "confidence": "medium_high", "model_note": "与favorite ceiling tail相关，但需受轮换限制。"},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.3, "evidence": "边后卫压上后Rice与中卫距离是主要风险，巴拿马仍有Murillo边路出口。", "confidence": "medium", "model_note": "不是大风险，但会影响零封/低事件假设。"},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.8, "evidence": "Saka、Rashford/Madueke/Gordon和James/O'Reilly对巴拿马边翼卫消耗有明显优势。", "confidence": "high", "model_note": "与前场球员状态和攻击评分重复限幅。"},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.7, "evidence": "Rice/Bellingham/Anderson在控球和二点保护上明显强于巴拿马中场。", "confidence": "high", "model_note": "不要把控球优势自动等同高转化。"},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.5, "evidence": "Rice脚法、Kane/CB高点和英格兰定位球体系有稳定优势。", "confidence": "medium_high", "model_note": "与Kane/CB player_state和攻击评分合并限幅。"},
+            "defensive_line_risk": {"direction": "positive", "magnitude": 0.4, "evidence": "整体防线质量高，但首轮转换丢球和第二轮Pickford出击细节提示不能零风险。", "confidence": "medium", "model_note": "正向表示风险较低；若大轮换中卫/边后卫需下修。"},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.8, "evidence": "首轮Saka/Rashford/Rogers等替补显著提速，板凳深度是主要后段优势。", "confidence": "high", "model_note": "与rotation and favorite ceiling同源，阶段化入模。"},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.5, "evidence": "4分位置允许管理节奏，但争头名和避免复杂路径仍会保持主动。", "confidence": "medium_high", "model_note": "前段控风险，后段视另一场信息调整。"},
+            "third_round_motivation_tactical_shift": {"direction": "neutral", "magnitude": 0.3, "evidence": "英格兰有出线和头名动机，但不必无条件拉高节奏。", "confidence": "medium_high", "model_note": "避免把强队动机转成无限上限。"},
+            "rotation_shape_risk": {"direction": "negative", "magnitude": -0.7, "evidence": "Tuchel可能管理Kane/Bellingham/Saka/Rice或后防分钟，阵型化学反应会波动。", "confidence": "medium", "model_note": "T-75核心轮换超过两人即重跑。"},
+            "draw_management_tendency": {"direction": "positive", "magnitude": 0.6, "evidence": "英格兰4分，若另一场信息有利，后段更可能控球降风险。", "confidence": "medium", "model_note": "与game_state_tendency合并，不要重复压低节奏。"},
+            "goal_difference_chase_risk": {"direction": "neutral", "magnitude": 0.2, "evidence": "争头名存在净胜球考虑，但出线安全优先，追差不会作为默认主逻辑。", "confidence": "medium", "model_note": "只有另一场同步信息触发才上修。"},
+            "late_game_information_risk": {"direction": "positive", "magnitude": 0.7, "evidence": "克罗地亚-加纳状态会影响英格兰是否继续加速或进入控场。", "confidence": "high", "model_note": "需要60-75分钟信息分支。"}
+          }
+        }
+      },
+      "double_counting_warnings": [
+        "England wide advantage, Saka/Rashford/Kane player_state and attack rating overlap; cap combined attack boost.",
+        "England substitution strength, rotation risk and favorite ceiling tail are the same bench-depth chain; use staged impact.",
+        "Panama low block resilience and defensive rating overlap; do not double-count as both draw floor and defensive-line boost.",
+        "Carrasquilla availability affects build-up, set pieces and central control simultaneously; treat as one T-75 switch."
+      ]
+    }
+  ],
+  "handoff_to_model": [
+    "Use predicted lineup block before factor scoring per v3 template.",
+    "Encode Croatia-Ghana as central-control versus draw-management/transition duel, with late information switch.",
+    "Encode Panama-England as England wide/bench edge versus Panama low block and England rotation/low-block-breaking uncertainty.",
+    "Do not convert any tactical factor here into scoreline, win-draw-loss probability or betting advice."
+  ]
+}

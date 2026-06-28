@@ -1,0 +1,864 @@
+{
+  "phase": "pre_match_data_collection",
+  "status": "partial_source_limited",
+  "schema_note": "J组第三轮v3预测前置事实包；只采事实，不给比分预测、不提供投注建议。",
+  "generated_at": "2026-06-27T14:50:19+08:00",
+  "captured_at": "2026-06-27T14:50:19+08:00",
+  "owner": "worldcup-data-collector",
+  "group": "J",
+  "round": 3,
+  "scope": [
+    "阿尔及利亚 vs 奥地利",
+    "约旦 vs 阿根廷"
+  ],
+  "betting_boundary": {
+    "status": "discussion_only_hold",
+    "reason": "T-75官方首发未公布；约旦vs阿根廷普通胜平负未取得同源开售快照；赔率只作为事实快照，不构成投注建议。"
+  },
+  "group_table_after_round2": [
+    {
+      "rank": 1,
+      "team": "阿根廷",
+      "played": 2,
+      "points": 6,
+      "gf": 5,
+      "ga": 0,
+      "gd": 5,
+      "context_label": "已锁定出线，公开来源显示第三轮存在核心轮换/负荷管理信号。"
+    },
+    {
+      "rank": 2,
+      "team": "奥地利",
+      "played": 2,
+      "points": 3,
+      "gf": 3,
+      "ga": 3,
+      "gd": 0,
+      "context_label": "3分且净胜球领先阿尔及利亚；同分比较下平局价值较高。"
+    },
+    {
+      "rank": 3,
+      "team": "阿尔及利亚",
+      "played": 2,
+      "points": 3,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2,
+      "context_label": "3分但净胜球落后奥地利；第三轮对阵奥地利具有直接排名意义。"
+    },
+    {
+      "rank": 4,
+      "team": "约旦",
+      "played": 2,
+      "points": 0,
+      "gf": 2,
+      "ga": 5,
+      "gd": -3,
+      "context_label": "0分；需要赛后官方小组第三规则与其他组结果复核，数据包不输出晋级判断。"
+    }
+  ],
+  "previous_results_and_postmortem_inputs": [
+    {
+      "match": "阿根廷 3-0 阿尔及利亚",
+      "date": "2026-06-16",
+      "postmortem_file": "比赛/已完成比赛/小组赛/J组/2026-06-16_阿根廷_3-0_阿尔及利亚_复盘.md",
+      "facts_for_model_input": [
+        "阿根廷零封且终结效率兑现，Messi/前场终结上限已在本地player_state上修。",
+        "阿尔及利亚面对顶级控场队时出球和转换兑现不足。"
+      ]
+    },
+    {
+      "match": "奥地利 3-1 约旦",
+      "date": "2026-06-16",
+      "postmortem_file": "比赛/已完成比赛/小组赛/J组/2026-06-16_奥地利_3-1_约旦_复盘.md",
+      "facts_for_model_input": [
+        "奥地利高压、后段持续进攻和总进球尾部被上修。",
+        "约旦有单点反击进球路径，但防守后段抗压和受让稳定性下修。"
+      ]
+    },
+    {
+      "match": "阿根廷 2-0 奥地利",
+      "date": "2026-06-22",
+      "postmortem_file": "比赛/已完成比赛/小组赛/J组/2026-06-22_阿根廷_2-0_奥地利_复盘.md",
+      "facts_for_model_input": [
+        "阿根廷4-4-2控场，Messi 38'、90+5'进球；9'点球未进。",
+        "奥地利压迫没有持续转化为高质量机会；Posch黄牌后纪律风险上调。"
+      ]
+    },
+    {
+      "match": "约旦 1-2 阿尔及利亚",
+      "date": "2026-06-22",
+      "postmortem_file": "比赛/已完成比赛/小组赛/J组/2026-06-22_约旦_1-2_阿尔及利亚_复盘.md",
+      "facts_for_model_input": [
+        "约旦上半场由Nizar Al-Rashdan 36'进球，Musa Al-Taamari助攻。",
+        "阿尔及利亚下半场由Nadhir Benbouali 69'、Amine Gouiri 82'逆转；Riyad Mahrez助攻Benbouali。",
+        "Ramiz Zerrouki 44'黄牌后半场被换下，纪律/角色风险需继续跟踪。"
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "match_id": "J-R3-071",
+      "match_no": "周六071",
+      "teams": {
+        "home": "阿尔及利亚",
+        "away": "奥地利"
+      },
+      "kickoff_beijing": "2026-06-28T10:00:00+08:00",
+      "kickoff_local_status": "needs_official_match_centre_recheck",
+      "venue": "Kansas City Stadium",
+      "host_city": "Kansas City",
+      "neutral_site": true,
+      "source_status": "probable_official_schedule_context",
+      "source_log": [
+        {
+          "source": "本地J组三轮预测JSON",
+          "url": "data/outputs/match_predictions/j-group-round3-quant-prediction-20260626.json",
+          "captured_at": "2026-06-26T23:30:00+08:00",
+          "supports_fields": "match_no kickoff_beijing teams odds"
+        },
+        {
+          "source": "Guardian赛前背景",
+          "url": "https://www.theguardian.com/football/2026/jun/26/algeria-austria-1982-world-cup-shame-of-gijon-west-germany",
+          "captured_at": "2026-06-27T14:50:19+08:00",
+          "supports_fields": "group_table venue_context kickoff_context third_round_context"
+        },
+        {
+          "source": "FIFA schedule mirror / local schedule context",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
+          "captured_at": "2026-06-27T14:50:19+08:00",
+          "supports_fields": "fixture_date venue"
+        }
+      ]
+    },
+    {
+      "match_id": "J-R3-072",
+      "match_no": "周六072",
+      "teams": {
+        "home": "约旦",
+        "away": "阿根廷"
+      },
+      "kickoff_beijing": "2026-06-28T10:00:00+08:00",
+      "kickoff_local_status": "needs_official_match_centre_recheck",
+      "venue": "Dallas Stadium",
+      "host_city": "Dallas",
+      "neutral_site": true,
+      "source_status": "probable_official_schedule_context",
+      "source_log": [
+        {
+          "source": "本地J组三轮预测JSON",
+          "url": "data/outputs/match_predictions/j-group-round3-quant-prediction-20260626.json",
+          "captured_at": "2026-06-26T23:30:00+08:00",
+          "supports_fields": "match_no kickoff_beijing teams odds"
+        },
+        {
+          "source": "Times of India赛前报道",
+          "url": "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/fifa-world-cup-record-breaker-lionel-messi-rested-for-argentinas-group-finale-against-jordan/articleshow/132027044.cms",
+          "captured_at": "2026-06-27T14:50:19+08:00",
+          "supports_fields": "Argentina rotation signal Messi bench report"
+        },
+        {
+          "source": "FIFA schedule mirror / local schedule context",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
+          "captured_at": "2026-06-27T14:50:19+08:00",
+          "supports_fields": "fixture_date venue"
+        }
+      ]
+    }
+  ],
+  "predicted_lineups": [
+    {
+      "match_id": "J-R3-071",
+      "match": "阿尔及利亚 vs 奥地利",
+      "official_lineup_gate": {
+        "status": "missing",
+        "gate": "T-75官方首发发布后必须重核；若核心轮换超过2人或阵型变化，模型应重跑。",
+        "expected_check_time_beijing": "2026-06-28T08:45:00+08:00"
+      },
+      "source_status": "probable_not_official",
+      "captured_at": "2026-06-27T14:50:19+08:00",
+      "teams": [
+        {
+          "team": "阿尔及利亚",
+          "formation": "4-3-3",
+          "lineup_confidence": "medium_low",
+          "source_basis": [
+            "本地player_state第二轮已更新",
+            "约旦1-2阿尔及利亚复盘",
+            "Guardian赛前小组形势背景"
+          ],
+          "starters": [
+            {
+              "position": "GK",
+              "chinese_name": "卢卡·齐达内",
+              "english_name": "Luca Zidane",
+              "role_note": "连续出场门将；未见新增伤停。"
+            },
+            {
+              "position": "RB",
+              "chinese_name": "拉菲克·贝尔加利",
+              "english_name": "Rafik Belghali",
+              "role_note": "右路防守与推进。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "艾萨·曼迪",
+              "english_name": "Aissa Mandi",
+              "role_note": "中卫经验点。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "拉米·本塞拜尼",
+              "english_name": "Ramy Bensebaini",
+              "role_note": "左脚中卫/后场出球与定位球防守。"
+            },
+            {
+              "position": "LB",
+              "chinese_name": "拉扬·艾特-努里",
+              "english_name": "Rayan Ait-Nouri",
+              "role_note": "左路推进与内收持球。"
+            },
+            {
+              "position": "DM",
+              "chinese_name": "纳比勒·本塔莱布",
+              "english_name": "Nabil Bentaleb",
+              "role_note": "中场拦截和第一脚分球。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "易卜拉欣·马扎",
+              "english_name": "Ibrahim Maza",
+              "role_note": "推进和前腰连接；状态值已上修。"
+            },
+            {
+              "position": "CM/AM",
+              "chinese_name": "法雷斯·沙伊比",
+              "english_name": "Fares Chaibi",
+              "role_note": "定位球/肋部传球。"
+            },
+            {
+              "position": "RW",
+              "chinese_name": "利雅得·马赫雷斯",
+              "english_name": "Riyad Mahrez",
+              "role_note": "右路核心，第二轮助攻Benbouali。"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "阿明·古伊里",
+              "english_name": "Amine Gouiri",
+              "role_note": "第二轮82'制胜球；中锋/左路终结。"
+            },
+            {
+              "position": "LW/CF",
+              "chinese_name": "纳迪尔·本布阿利",
+              "english_name": "Nadhir Benbouali",
+              "role_note": "第二轮替补进球后首发竞争上升。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "chinese_name": "阿尼斯·哈吉·穆萨",
+              "english_name": "Anis Hadj Moussa",
+              "trigger": "若保持首轮右路冲击配置，可替代Benbouali或Mahrez身边边锋位。"
+            },
+            {
+              "chinese_name": "拉米兹·泽鲁基",
+              "english_name": "Ramiz Zerrouki",
+              "trigger": "若教练仍需要专职后腰可回到首发；但第二轮黄牌与半场换下导致纪律/角色风险。"
+            },
+            {
+              "chinese_name": "穆罕默德·阿穆拉",
+              "english_name": "Mohamed Amoura",
+              "trigger": "需要纵深冲刺或追分时提前登场。"
+            },
+            {
+              "chinese_name": "胡瑟姆·奥亚尔",
+              "english_name": "Houssem Aouar",
+              "trigger": "若中场需要更强控球和前插，可替代一名推进中场。"
+            }
+          ],
+          "availability_summary": {
+            "injuries_confirmed": [],
+            "suspension_confirmed": [],
+            "yellow_card_or_discipline_risk": [
+              "Ramiz Zerrouki第二轮44'黄牌后半场被换下，标为纪律/分钟风险。"
+            ],
+            "minutes_risk": [
+              "Benbouali第二轮替补改变比赛，首发与替补角色存在不确定。",
+              "Mahrez第二轮助攻后仍需核验是否首发或作为高杠杆替补。"
+            ]
+          }
+        },
+        {
+          "team": "奥地利",
+          "formation": "4-2-3-1",
+          "lineup_confidence": "medium_low",
+          "source_basis": [
+            "本地player_state第二轮已更新",
+            "阿根廷2-0奥地利复盘",
+            "奥地利3-1约旦复盘"
+          ],
+          "starters": [
+            {
+              "position": "GK",
+              "chinese_name": "亚历山大-施拉格尔",
+              "english_name": "Alexander Schlager",
+              "role_note": "连续首发门将口径；未见新增伤停。"
+            },
+            {
+              "position": "RB",
+              "chinese_name": "康拉德-莱默尔",
+              "english_name": "Konrad Laimer",
+              "role_note": "右侧压迫和前插覆盖。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "斯特凡-波施",
+              "english_name": "Stefan Posch",
+              "role_note": "后防主力；第二轮黄牌后纪律风险上调。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "凯文-丹索",
+              "english_name": "Kevin Danso",
+              "role_note": "中卫对抗和防空。"
+            },
+            {
+              "position": "LB",
+              "chinese_name": "大卫-阿拉巴",
+              "english_name": "David Alaba",
+              "role_note": "左侧/中卫多面手；标记minutes_monitor。"
+            },
+            {
+              "position": "DM",
+              "chinese_name": "尼古拉斯-塞瓦尔德",
+              "english_name": "Nicolas Seiwald",
+              "role_note": "防守中场与二点保护。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "克萨韦尔-施拉格尔",
+              "english_name": "Xaver Schlager",
+              "role_note": "中场覆盖和压迫衔接。"
+            },
+            {
+              "position": "AM",
+              "chinese_name": "马塞尔-萨比策",
+              "english_name": "Marcel Sabitzer",
+              "role_note": "前场组织、定位球和远射。"
+            },
+            {
+              "position": "RW",
+              "chinese_name": "罗马诺-施密德",
+              "english_name": "Romano Schmid",
+              "role_note": "首轮进球点，二线插上。"
+            },
+            {
+              "position": "LW",
+              "chinese_name": "帕特里克-维默尔",
+              "english_name": "Patrick Wimmer",
+              "role_note": "替补冲击后首发竞争，提供边路速度。"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "米夏埃尔-格雷戈里奇",
+              "english_name": "Michael Gregoritsch",
+              "role_note": "中锋支点；阿瑙托维奇是主要竞争者。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "chinese_name": "马尔科-阿瑙托维奇",
+              "english_name": "Marko Arnautovic",
+              "trigger": "若需要更强禁区支点或经验中锋，可替代Gregoritsch首发。"
+            },
+            {
+              "chinese_name": "亚历山大-普拉斯",
+              "english_name": "Alexander Prass",
+              "trigger": "若左路需要更保守覆盖或Alaba内收，可进入左侧首发。"
+            },
+            {
+              "chinese_name": "保罗-万纳",
+              "english_name": "Paul Wanner",
+              "trigger": "需要年轻创造力或追分时提高出场顺位。"
+            },
+            {
+              "chinese_name": "菲利普-林哈特",
+              "english_name": "Philipp Lienhart",
+              "trigger": "若后防更强调防空或Posch黄牌风险被规避，可进入中卫位。"
+            }
+          ],
+          "availability_summary": {
+            "injuries_confirmed": [
+              "本地奥地利player_state记录Baumgartner伤退后由Dejan Ljubicic补入名单。"
+            ],
+            "suspension_confirmed": [],
+            "yellow_card_or_discipline_risk": [
+              "Stefan Posch第二轮40'黄牌，纪律风险上调。"
+            ],
+            "minutes_risk": [
+              "David Alaba标记minutes_monitor。",
+              "Gregoritsch/Arnautovic中锋首发口径未锁定。"
+            ]
+          }
+        }
+      ],
+      "lineup_conflicts": [
+        "阿尔及利亚前场Benbouali、Gouiri、Mahrez、Hadj Moussa四人中三人首发口径未有官方确认。",
+        "奥地利中锋位Gregoritsch与Arnautovic存在首发竞争；Alaba具体位置也可能改变后防结构。"
+      ]
+    },
+    {
+      "match_id": "J-R3-072",
+      "match": "约旦 vs 阿根廷",
+      "official_lineup_gate": {
+        "status": "missing",
+        "gate": "T-75官方首发发布后必须重核；若阿根廷轮换超过2人或Messi实际首发，模型应重跑。",
+        "expected_check_time_beijing": "2026-06-28T08:45:00+08:00"
+      },
+      "source_status": "probable_not_official",
+      "captured_at": "2026-06-27T14:50:19+08:00",
+      "teams": [
+        {
+          "team": "约旦",
+          "formation": "3-4-3",
+          "lineup_confidence": "medium_low",
+          "source_basis": [
+            "本地player_state第二轮已更新",
+            "约旦1-2阿尔及利亚复盘",
+            "奥地利3-1约旦复盘"
+          ],
+          "starters": [
+            {
+              "position": "GK",
+              "chinese_name": "亚齐德·阿布莱拉",
+              "english_name": "Yazeed Abulaila",
+              "role_note": "主力门将；前两轮均可用。"
+            },
+            {
+              "position": "RCB",
+              "chinese_name": "伊赫桑·哈达德",
+              "english_name": "Ihsan Haddad",
+              "role_note": "右侧防守与对抗。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "亚赞·阿拉伯",
+              "english_name": "Yazan Al-Arab",
+              "role_note": "中卫对抗与防空。"
+            },
+            {
+              "position": "LCB",
+              "chinese_name": "阿卜杜拉·纳西卜",
+              "english_name": "Abdallah Nasib",
+              "role_note": "左中卫/禁区保护。"
+            },
+            {
+              "position": "RWB",
+              "chinese_name": "穆罕纳德·阿布塔哈",
+              "english_name": "Mohannad Abu Taha",
+              "role_note": "边翼卫/中场覆盖。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "努尔·拉瓦布德",
+              "english_name": "Noor Al-Rawabdeh",
+              "role_note": "中场覆盖和防线前保护。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "尼扎尔·拉什丹",
+              "english_name": "Nizar Al-Rashdan",
+              "role_note": "第二轮36'进球，状态值上调。"
+            },
+            {
+              "position": "LWB",
+              "chinese_name": "胡萨姆·阿布达哈卜",
+              "english_name": "Husam Abu Dahab",
+              "role_note": "左侧防守；第二轮黄牌后纪律风险上调。"
+            },
+            {
+              "position": "RW",
+              "chinese_name": "穆萨·塔马里",
+              "english_name": "Musa Al-Taamari",
+              "role_note": "核心反击点，第二轮助攻Rashdan。"
+            },
+            {
+              "position": "CF",
+              "chinese_name": "阿里·奥尔万",
+              "english_name": "Ali Olwan",
+              "role_note": "首轮进球路径，前场支点/终结。"
+            },
+            {
+              "position": "LW",
+              "chinese_name": "马哈茂德·马尔迪",
+              "english_name": "Mahmoud Al-Mardi",
+              "role_note": "左路反击和回防。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "chinese_name": "穆罕默德·阿布祖赖克",
+              "english_name": "Mohammad Abu Zrayq",
+              "trigger": "若需要更直接边路冲击，可替代Mardi或Olwan一侧。"
+            },
+            {
+              "chinese_name": "萨利姆·奥贝德",
+              "english_name": "Salim Obaid",
+              "trigger": "若左侧防守需要规避Abu Dahab黄牌风险，可进入后防。"
+            },
+            {
+              "chinese_name": "阿里·阿扎伊泽",
+              "english_name": "Ali Azaizeh",
+              "trigger": "落后追分时作为前场替补。"
+            }
+          ],
+          "availability_summary": {
+            "injuries_confirmed": [],
+            "suspension_confirmed": [],
+            "yellow_card_or_discipline_risk": [
+              "Husam Abu Dahab第二轮64'黄牌，纪律风险上调。"
+            ],
+            "minutes_risk": [
+              "球队连续承压，后防与翼卫体能风险为中等。"
+            ]
+          }
+        },
+        {
+          "team": "阿根廷",
+          "formation": "4-4-2 / 4-3-3 rotation",
+          "lineup_confidence": "medium_low",
+          "source_basis": [
+            "本地player_state第二轮已更新",
+            "阿根廷2-0奥地利复盘",
+            "Times of India赛前报道称Messi将替补并被负荷管理"
+          ],
+          "starters": [
+            {
+              "position": "GK",
+              "chinese_name": "赫罗尼莫·鲁利",
+              "english_name": "Geronimo Rulli",
+              "role_note": "轮换门将候选；若Emiliano Martinez继续首发需T-75修正。"
+            },
+            {
+              "position": "RB",
+              "chinese_name": "贡萨洛·蒙铁尔",
+              "english_name": "Gonzalo Montiel",
+              "role_note": "右后卫轮换；本地状态表未见新增伤停。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "尼古拉斯·奥塔门迪",
+              "english_name": "Nicolas Otamendi",
+              "role_note": "经验中卫，轮换阵容中的稳定点。"
+            },
+            {
+              "position": "CB",
+              "chinese_name": "法昆多·梅迪纳",
+              "english_name": "Facundo Medina",
+              "role_note": "第二轮助攻Messi，状态值上调。"
+            },
+            {
+              "position": "LB",
+              "chinese_name": "尼古拉斯·塔利亚菲科",
+              "english_name": "Nicolas Tagliafico",
+              "role_note": "左路防守和经验。"
+            },
+            {
+              "position": "DM",
+              "chinese_name": "莱安德罗·帕雷德斯",
+              "english_name": "Leandro Paredes",
+              "role_note": "中场出球；第二轮补时黄牌后纪律风险需复核。"
+            },
+            {
+              "position": "CM",
+              "chinese_name": "恩佐·费尔南德斯",
+              "english_name": "Enzo Fernandez",
+              "role_note": "中场推进和控球。"
+            },
+            {
+              "position": "CM/AM",
+              "chinese_name": "蒂亚戈·阿尔马达",
+              "english_name": "Thiago Almada",
+              "role_note": "轮换创造点，适合低风险控球局。"
+            },
+            {
+              "position": "LW",
+              "chinese_name": "尼科·冈萨雷斯",
+              "english_name": "Nico Gonzalez",
+              "role_note": "左路冲击与回防。"
+            },
+            {
+              "position": "ST",
+              "chinese_name": "胡利安·阿尔瓦雷斯",
+              "english_name": "Julian Alvarez",
+              "role_note": "前场压迫和纵深跑动。"
+            },
+            {
+              "position": "ST",
+              "chinese_name": "劳塔罗·马丁内斯",
+              "english_name": "Lautaro Martinez",
+              "role_note": "禁区终结；若Messi替补，承担主要射门点。"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "chinese_name": "利昂内尔·梅西",
+              "english_name": "Lionel Messi",
+              "trigger": "Times of India报道称Scaloni确认其替补并稍后登场；若T-75显示首发，阿根廷进攻权重和定位球权重需重跑。"
+            },
+            {
+              "chinese_name": "埃米利亚诺·马丁内斯",
+              "english_name": "Emiliano Martinez",
+              "trigger": "若教练不轮换门将，则替代Rulli。"
+            },
+            {
+              "chinese_name": "亚历克西斯·麦卡利斯特",
+              "english_name": "Alexis Mac Allister",
+              "trigger": "若中场不大轮换，替代Almada或Paredes。"
+            },
+            {
+              "chinese_name": "罗德里戈·德保罗",
+              "english_name": "Rodrigo De Paul",
+              "trigger": "若保持主力压迫体系，可进入右中场。"
+            },
+            {
+              "chinese_name": "朱利亚诺·西蒙尼",
+              "english_name": "Giuliano Simeone",
+              "trigger": "若阿根廷扩大轮换，可作为边路首发候选。"
+            }
+          ],
+          "availability_summary": {
+            "injuries_confirmed": [],
+            "suspension_confirmed": [],
+            "yellow_card_or_discipline_risk": [
+              "Leandro Paredes第二轮90+2'黄牌；是否累计停赛需官方牌表复核。",
+              "Facundo Medina第二轮76'黄牌；需复核累计牌风险。"
+            ],
+            "minutes_risk": [
+              "Messi高龄/高负荷，Times of India报道称第三轮替补并稍后登场。",
+              "Argentina已6分，存在多位置轮换风险。"
+            ]
+          }
+        }
+      ],
+      "lineup_conflicts": [
+        "Times of India报道Messi替补，但talkSPORT搜索摘要仍称Messi可能保持核心影响；本包按轮换信号处理，T-75必须重核。",
+        "阿根廷门将和中场轮换幅度没有官方名单支持，只能标probable_not_official。"
+      ]
+    }
+  ],
+  "team_state_availability": [
+    {
+      "team": "阿尔及利亚",
+      "player_state_file": "data/outputs/player_state/algeria-player-state.json",
+      "status": "round2_postmatch_updated_in_canonical_player_state",
+      "captured_at": "2026-06-23T11:00:00+08:00",
+      "key_available_players": [
+        "Riyad Mahrez",
+        "Amine Gouiri",
+        "Nadhir Benbouali",
+        "Rayan Ait-Nouri",
+        "Aissa Mandi"
+      ],
+      "risk_notes": [
+        "Ramiz Zerrouki纪律/分钟风险。",
+        "Benbouali首发还是替补未锁定。"
+      ]
+    },
+    {
+      "team": "奥地利",
+      "player_state_file": "data/outputs/player_state/austria-player-state.json",
+      "status": "round2_postmatch_updated_in_canonical_player_state",
+      "captured_at": "2026-06-23T11:00:00+08:00",
+      "key_available_players": [
+        "Marcel Sabitzer",
+        "Konrad Laimer",
+        "Nicolas Seiwald",
+        "Kevin Danso",
+        "Michael Gregoritsch"
+      ],
+      "risk_notes": [
+        "Stefan Posch黄牌纪律风险。",
+        "David Alaba minutes_monitor。",
+        "Baumgartner伤退已由Dejan Ljubicic补入名单。"
+      ]
+    },
+    {
+      "team": "约旦",
+      "player_state_file": "data/outputs/player_state/jordan-player-state.json",
+      "status": "round2_postmatch_updated_in_canonical_player_state",
+      "captured_at": "2026-06-23T11:00:00+08:00",
+      "key_available_players": [
+        "Musa Al-Taamari",
+        "Nizar Al-Rashdan",
+        "Ali Olwan",
+        "Yazeed Abulaila"
+      ],
+      "risk_notes": [
+        "Husam Abu Dahab黄牌纪律风险。",
+        "后防连续承压，翼卫和中卫体能风险中等。"
+      ]
+    },
+    {
+      "team": "阿根廷",
+      "player_state_file": "data/outputs/player_state/argentina-player-state.json",
+      "status": "round2_postmatch_updated_in_canonical_player_state",
+      "captured_at": "2026-06-23T11:00:00+08:00",
+      "key_available_players": [
+        "Lionel Messi",
+        "Lautaro Martinez",
+        "Julian Alvarez",
+        "Enzo Fernandez",
+        "Facundo Medina"
+      ],
+      "risk_notes": [
+        "Messi预计替补/负荷管理信号来自赛前报道，非官方首发。",
+        "Paredes、Medina黄牌累计需官方牌表复核。",
+        "已6分导致整体轮换风险上升。"
+      ]
+    }
+  ],
+  "odds_snapshot": [
+    {
+      "match_id": "J-R3-071",
+      "match": "阿尔及利亚 vs 奥地利",
+      "source_primary": "中国足彩网竞彩混合页本地快照 data/tmp_zgzcw_jcmini_20260626.html",
+      "source_cross_check": "500.com 竞彩页本地快照 data/tmp_500_jczq_20260626.html",
+      "captured_at": "2026-06-26",
+      "ordinary_spf": {
+        "status": "available_snapshot",
+        "odds": {
+          "home": 3.35,
+          "draw": 2.11,
+          "away": 2.8
+        }
+      },
+      "handicap_spf": {
+        "status": "available_snapshot",
+        "handicap_home": 1,
+        "odds": {
+          "home": 1.31,
+          "draw": 4.35,
+          "away": 7.35
+        }
+      },
+      "same_source_completeness": "spf_and_handicap_available; totals_not_in_snapshot",
+      "usage_boundary": "market_fact_only"
+    },
+    {
+      "match_id": "J-R3-072",
+      "match": "约旦 vs 阿根廷",
+      "source_primary": "中国足彩网竞彩混合页本地快照 data/tmp_zgzcw_jcmini_20260626.html",
+      "source_cross_check": "500.com 竞彩页本地快照 data/tmp_500_jczq_20260626.html",
+      "captured_at": "2026-06-26",
+      "ordinary_spf": {
+        "status": "not_on_sale_or_not_captured",
+        "odds": null
+      },
+      "handicap_spf": {
+        "status": "available_snapshot",
+        "handicap_home": 2,
+        "odds": {
+          "home": 2.28,
+          "draw": 3.85,
+          "away": 2.32
+        }
+      },
+      "same_source_completeness": "handicap_only; ordinary_spf_missing; totals_not_in_snapshot",
+      "usage_boundary": "market_fact_only"
+    }
+  ],
+  "gaps_and_conflicts": [
+    {
+      "field": "official_lineups",
+      "status": "missing",
+      "note": "两场T-75官方首发均未到发布窗口；当前predicted_lineups只能作为probable_not_official输入。"
+    },
+    {
+      "field": "fixture_local_time",
+      "status": "partial_source_limited",
+      "note": "本地文件稳定给出北京时间2026-06-28 10:00；当地开球时间需FIFA match centre临场复核。"
+    },
+    {
+      "field": "Jordan vs Argentina ordinary_spf",
+      "status": "missing",
+      "note": "上一版本地快照只取得约旦+2让球胜平负，普通胜平负未开售/未抓到。"
+    },
+    {
+      "field": "totals_odds",
+      "status": "missing",
+      "note": "本地竞彩快照未包含大小球同源盘口。"
+    },
+    {
+      "field": "latest_injury_press_conference",
+      "status": "partial_source_limited",
+      "note": "已取得Messi轮换报道和本地player_state风险；四队最新官方发布会/训练伤停未完整抓取。"
+    },
+    {
+      "field": "Argentina lineup conflict",
+      "status": "conflicting",
+      "note": "Times of India称Scaloni确认Messi替补；其他公开预测摘要仍强调Messi核心影响。处理为Messi替补信号，但必须T-75重核。"
+    },
+    {
+      "field": "yellow_card_accumulation",
+      "status": "uncertain",
+      "note": "本地复盘记录Posch、Paredes、Medina、Zerrouki、Abu Dahab黄牌风险，但官方累计停赛表未在本包完整核验。"
+    }
+  ],
+  "source_log": [
+    {
+      "source": "项目README/线程状态/工作流纪律/项目架构",
+      "url": "local_project_docs",
+      "captured_at": "2026-06-27T14:50:19+08:00",
+      "supports_fields": "workflow boundary file discipline current thread state"
+    },
+    {
+      "source": "worldcup-data-collector skill",
+      "url": ".codex/skills/worldcup-data-collector/SKILL.md",
+      "captured_at": "2026-06-27T14:50:19+08:00",
+      "supports_fields": "facts_only predicted_lineups odds_snapshot source_policy"
+    },
+    {
+      "source": "worldcup-quant-prediction-system skill",
+      "url": ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+      "captured_at": "2026-06-27T14:50:19+08:00",
+      "supports_fields": "v3 predicted lineup standard third-round context gate"
+    },
+    {
+      "source": "上一版J组三轮预测JSON",
+      "url": "data/outputs/match_predictions/j-group-round3-quant-prediction-20260626.json",
+      "captured_at": "2026-06-26T23:30:00+08:00",
+      "supports_fields": "group table fixtures odds previous model context"
+    },
+    {
+      "source": "Guardian Algeria-Austria preview",
+      "url": "https://www.theguardian.com/football/2026/jun/26/algeria-austria-1982-world-cup-shame-of-gijon-west-germany",
+      "captured_at": "2026-06-27T14:50:19+08:00",
+      "supports_fields": "Algeria Austria group table third-round context venue/kickoff background"
+    },
+    {
+      "source": "Times of India Argentina-Jordan preview",
+      "url": "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/fifa-world-cup-record-breaker-lionel-messi-rested-for-argentinas-group-finale-against-jordan/articleshow/132027044.cms",
+      "captured_at": "2026-06-27T14:50:19+08:00",
+      "supports_fields": "Messi bench rotation signal Argentina workload"
+    },
+    {
+      "source": "J组已完成复盘与四队player_state",
+      "url": "比赛/已完成比赛/小组赛/J组/*.md; data/outputs/player_state/*",
+      "captured_at": "2026-06-27T14:50:19+08:00",
+      "supports_fields": "first two rounds results player status cards minutes risk postmatch state"
+    }
+  ],
+  "handoff_notes": [
+    "模型线程可读取predicted_lineups，但必须把两场official_lineup_gate视为hold，T-75后重跑。",
+    "阿根廷轮换是本包最关键新事实：Messi替补信号会影响首发阵型、定位球和进攻权重。",
+    "阿尔及利亚vs奥地利的平局价值、1982背景和直接排名语境只作为第三轮情境事实，不输出赛果倾向。",
+    "竞彩/投注线程只能使用discussion_only_hold，直到官方首发、普通SPF/同源盘口和最新伤停齐全。"
+  ],
+  "validation_expectations": {
+    "json_parse_required": true,
+    "markdown_pair": "data/thread_outputs/j-group-round3-v3-20260627/data-collector.md",
+    "prediction_boundary": "no_score_prediction_no_betting_advice"
+  }
+}

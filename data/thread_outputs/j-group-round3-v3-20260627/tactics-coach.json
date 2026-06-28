@@ -1,0 +1,283 @@
+{
+  "phase": "group_round3_v3_tactics",
+  "group": "J",
+  "status": "partial",
+  "created_at": "2026-06-27T00:00:00+08:00",
+  "updated_at": "2026-06-27T00:00:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "J组第三轮v3预测战术因子包；包含预计首发战术影响，不含比分、胜平负概率或投注建议。",
+  "data_packet_status": "j-group-round3-v3 data packet not found locally; using existing J round3 prediction files, prior postmatch reviews, tactics packets, player_state and local v3 template.",
+  "template_reference": "data/templates/match-prediction-standard-template-v3.md",
+  "source_log": [
+    "README.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    ".codex/skills/worldcup-tactics-coach/SKILL.md",
+    ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+    "data/templates/match-prediction-standard-template-v3.md",
+    "data/outputs/match_predictions/j-group-round3-quant-prediction-20260626.json",
+    "比赛/未开始比赛/小组赛/J组/2026-06-28_阿尔及利亚_vs_奥地利_量化预测.md",
+    "比赛/未开始比赛/小组赛/J组/2026-06-28_约旦_vs_阿根廷_量化预测.md",
+    "比赛/已完成比赛/小组赛/J组/2026-06-16_奥地利_3-1_约旦_复盘.md",
+    "比赛/已完成比赛/小组赛/J组/2026-06-16_阿根廷_3-0_阿尔及利亚_复盘.md",
+    "比赛/已完成比赛/小组赛/J组/2026-06-22_约旦_1-2_阿尔及利亚_复盘.md",
+    "比赛/已完成比赛/小组赛/J组/2026-06-22_阿根廷_2-0_奥地利_复盘.md",
+    "data/packets/tactics/algeria-tactics-packet.json",
+    "data/packets/tactics/austria-tactics-packet.json",
+    "data/packets/tactics/jordan-tactics-packet.json",
+    "data/packets/tactics/argentina-tactics-packet.json",
+    "data/outputs/player_state/algeria-player-state.json",
+    "data/outputs/player_state/austria-player-state.json",
+    "data/outputs/player_state/jordan-player-state.json",
+    "data/outputs/player_state/argentina-player-state.json"
+  ],
+  "missing_fields": [
+    "T-75 official starting XIs unavailable.",
+    "J round3 v3 data collector packet not found under data/packets/matches.",
+    "Final injuries, suspensions, card accumulation and minutes limits require pre-match refresh.",
+    "Same-source official technical/player rating details for some prior matches remain partial."
+  ],
+  "group_context": {
+    "after_round2": "阿根廷6分且净胜球优势明显，主要目标是控风险和保头名；奥地利与阿尔及利亚均3分但奥地利净胜球更好；约旦0分但仍有理论第三名和荣誉战动机。",
+    "third_round_model_note": "本组第三轮必须拆分前60分钟的谨慎/控节奏与后30分钟的比分信息驱动。阿尔及利亚比奥地利更可能在持平或不利时主动打开；阿根廷更可能阶段性压迫和管理核心负荷；约旦低位起手但若先丢球或需要进球会放大转换防守风险。"
+  },
+  "matches": [
+    {
+      "match": "阿尔及利亚 vs 奥地利",
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27T00:00:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before final model lock; if either team changes formation or rotates more than two core roles, rerun xG and tactical matchup factors.",
+        "home": {
+          "team": "阿尔及利亚",
+          "predicted_formation": "4-3-3",
+          "alternate_formations": ["4-2-3-1", "4-1-4-1"],
+          "lineup_confidence": "medium",
+          "starters": [
+            {"position": "GK", "player": "卢卡·齐达内 Luca Zidane", "role": "门线与短传起点；被奥地利压迫时需减少横传冒险。"},
+            {"position": "RB", "player": "拉菲克·贝尔加利 Rafik Belghali", "role": "右路保护与支援Mahrez，重点防奥地利左侧压迫。"},
+            {"position": "CB", "player": "艾萨·曼迪 Aissa Mandi", "role": "防线指挥和定位球高点。"},
+            {"position": "CB", "player": "拉米·本塞拜尼 Ramy Bensebaini", "role": "左中卫/左后卫摇摆，负责对抗和后点保护。"},
+            {"position": "LB", "player": "拉扬·艾特-努里 Rayan Ait-Nouri", "role": "左路推进出口，能把反击从低位带出。"},
+            {"position": "DM", "player": "纳比勒·本塔莱布 Nabil Bentaleb", "role": "防守屏障与二点球保护。"},
+            {"position": "CM", "player": "伊斯梅尔·本纳赛尔 Ismael Bennacer", "role": "中场接应与抗压出球；若不可用需下修build-up。"},
+            {"position": "CM", "player": "法雷斯·沙伊比 Fares Chaibi", "role": "肋部连接和定位球/传中脚法。"},
+            {"position": "RW", "player": "利雅得·马赫雷斯 Riyad Mahrez", "role": "右路内收创造、定位球和最后一传。"},
+            {"position": "CF", "player": "阿明·古伊里 Amine Gouiri", "role": "中锋/左肋连接，第二轮逆转中的终结上修。"},
+            {"position": "LW", "player": "易卜拉欣·马扎 Ibrahim Maza", "role": "左侧推进与反击提速。"}
+          ],
+          "rotation_candidates": [
+            {"player": "纳迪尔·本布阿利 Nadhir Benbouali", "trigger": "若需要更直接的禁区支点或半场后追分，应提前登场；会提高box presence和二点终结。"},
+            {"player": "阿尼斯·哈吉·穆萨 Anis Hadj Moussa", "trigger": "若Mahrez负荷受限或需要右路速度，替换边锋位。"},
+            {"player": "侯赛姆·奥亚尔 Houssem Aouar", "trigger": "若需要更多中路控球和肋部前插，进入8号/10号区域。"}
+          ],
+          "lineup_model_impact": [
+            "Mahrez首发提高定位球、右路创造和低位破局，但体能/回防会影响右路防守。",
+            "Benbouali首发或早登场会提高阿尔及利亚禁区触球和后段总节奏，但可能削弱中场控制。",
+            "若Ait-Nouri缺席，阿尔及利亚左路推进和反击出口下修。"
+          ]
+        },
+        "away": {
+          "team": "奥地利",
+          "predicted_formation": "4-2-3-1",
+          "alternate_formations": ["4-4-2", "4-3-3"],
+          "lineup_confidence": "medium",
+          "starters": [
+            {"position": "GK", "player": "亚历山大·施拉格尔 Alexander Schlager", "role": "门将与高位防线身后保护。"},
+            {"position": "RB", "player": "康拉德·莱默尔 Konrad Laimer", "role": "边后卫/中场摇摆，高压触发和二点回收。"},
+            {"position": "CB", "player": "凯文·丹索 Kevin Danso", "role": "对抗型中卫，处理Gouiri/Benbouali支点。"},
+            {"position": "CB", "player": "大卫·阿拉巴 David Alaba", "role": "防线指挥和出球；健康状态决定build-up质量。"},
+            {"position": "LB", "player": "菲利普·姆韦内 Philipp Mwene", "role": "边路推进与回防，防Mahrez内收。"},
+            {"position": "DM", "player": "尼古拉斯·塞瓦尔德 Nicolas Seiwald", "role": "后腰保护和反抢第一层。"},
+            {"position": "DM", "player": "克萨韦尔·施拉格尔 Xaver Schlager", "role": "二点球、覆盖和高压连续性。"},
+            {"position": "AM", "player": "马塞尔·萨比策 Marcel Sabitzer", "role": "前场压迫指挥、定位球与禁区前射门。"},
+            {"position": "RW", "player": "帕特里克·维默尔 Patrick Wimmer", "role": "右路速度和反抢后直接推进。"},
+            {"position": "LW", "player": "克里斯托夫·鲍姆加特纳 Christoph Baumgartner", "role": "左肋前插和二次进攻。"},
+            {"position": "CF", "player": "米夏埃尔·格雷戈里奇 Michael Gregoritsch", "role": "中锋支点与高球争夺；终结波动需监控。"}
+          ],
+          "rotation_candidates": [
+            {"player": "马尔科·阿瑙托维奇 Marko Arnautovic", "trigger": "若需要更强禁区支点或落后追分，提前替换中锋。"},
+            {"player": "亚历山大·普拉斯 Alexander Prass", "trigger": "若左路需要更强往返和压迫覆盖。"},
+            {"player": "保罗·万纳 Paul Wanner", "trigger": "若需要前场创造和右/中路小范围处理。"}
+          ],
+          "lineup_model_impact": [
+            "Alaba首发提升出球、防线指挥和定位球二点保护；若缺席，defensive_line_risk和build-up失误风险上调。",
+            "Arnautovic首发或早登场提高禁区终结和传中价值，但可能降低前场压迫连续性。",
+            "Laimer若回中场而非右后卫，会提升中路压迫，但边路防Mahrez需要重估。"
+          ]
+        },
+        "t75_rerun_conditions": [
+          "Alaba缺席或改打替补，奥地利防线与出球因子必须重跑。",
+          "Mahrez、Ait-Nouri或Gouiri任一缺席，阿尔及利亚右路创造、左路推进或前场终结需重估。",
+          "Benbouali首发而非替补，阿尔及利亚节奏和禁区人数上调，同时中场防守下修。",
+          "奥地利改双前锋或阿尔及利亚改双后腰，xG、节奏和转换风险需重跑。"
+        ]
+      },
+      "teams": {
+        "阿尔及利亚": {
+          "quant_factors": {
+            "pressing_adjustment": {"direction": "neutral", "magnitude": 0.1, "evidence": "战术包显示阿尔及利亚可阶段性前压，但面对奥地利高压更现实是中位防守和反击。", "confidence": "medium", "model_note": "不要上修为持续高压；主要给后段追分情景。"},
+            "build_up_resistance_adjustment": {"direction": "negative", "magnitude": -0.4, "evidence": "首轮对阿根廷出球和禁区到达率不足；奥地利高压和二点回收强。", "confidence": "medium_high", "model_note": "若Bennacer首发且状态良好可小幅回调。"},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.6, "evidence": "Mahrez、Maza、Ait-Nouri、Gouiri提供反击和肋部推进；第二轮下半场逆转显示前场质量可兑现。", "confidence": "medium_high", "model_note": "与Mahrez/Gouiri/player_state重复，限幅处理。"},
+            "transition_defense_risk": {"direction": "negative", "magnitude": 0.5, "evidence": "若60分钟后仍需主动打开，中场身后和边后卫前压会给奥地利二次冲击。", "confidence": "medium", "model_note": "后段情景上修，不要均匀铺到全场。"},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.4, "evidence": "Mahrez右路内收和Ait-Nouri左路推进是主要创造链。", "confidence": "medium", "model_note": "若奥地利Laimer/Mwene配置强，宽路优势需下调。"},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.3, "evidence": "奥地利Seiwald/Laimer/Sabitzer压迫强，阿尔及利亚中路更依赖Bennacer单点抗压。", "confidence": "medium", "model_note": "中央控制不等于无创造；转换单独保留。"},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.4, "evidence": "Mahrez脚法和后点高点是弱势对局重要路径。", "confidence": "medium", "model_note": "与Mahrez状态重复，追加加成封顶。"},
+            "defensive_line_risk": {"direction": "negative", "magnitude": 0.5, "evidence": "首轮面对顶级控场队零封失败；奥地利高压后的禁区前快速射门和定位球需防。", "confidence": "medium", "model_note": "奥地利终结波动会限制该风险转化。"},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.7, "evidence": "第二轮半场调整后Benbouali进球、Gouiri逆转，替补中锋和后手提速被复盘要求上修。", "confidence": "high", "model_note": "应单列后60分钟上修，不要并入首发xG全场均值。"},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.7, "evidence": "阿尔及利亚3分但净胜球落后，后段更可能主动加速。", "confidence": "high", "model_note": "前段谨慎，后段根据比分显著打开。"},
+            "third_round_motivation_tactical_shift": {"direction": "positive", "magnitude": 0.8, "evidence": "与奥地利同分但净胜球落后，平局价值低于对手。", "confidence": "high", "model_note": "提升后段风险偏好，不直接等同全场进攻效率。"},
+            "rotation_shape_risk": {"direction": "neutral", "magnitude": 0.2, "evidence": "出线压力降低主动轮换概率，但Zerrouki纪律和中场组合仍需确认。", "confidence": "medium", "model_note": "重点看中场三人和中锋选择。"},
+            "draw_management_tendency": {"direction": "negative", "magnitude": -0.7, "evidence": "平局对阿尔及利亚价值不如奥地利，尤其净胜球落后。", "confidence": "high", "model_note": "60分钟后降低低事件维持概率。"},
+            "goal_difference_chase_risk": {"direction": "positive", "magnitude": 0.5, "evidence": "净胜球劣势可能迫使后段追进球。", "confidence": "medium_high", "model_note": "只在实时小组形势不利时启用。"},
+            "late_game_information_risk": {"direction": "positive", "magnitude": 0.8, "evidence": "约旦vs阿根廷同步结果会影响第三名横向和末段策略。", "confidence": "medium_high", "model_note": "纳入第三轮模拟层，重点70分钟后。"}
+          }
+        },
+        "奥地利": {
+          "quant_factors": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.8, "evidence": "Rangnick体系高压和反抢是核心；首轮对约旦压迫兑现。", "confidence": "high", "model_note": "压迫优势不等于稳定多进球，需和终结效率分离。"},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.4, "evidence": "Alaba、Seiwald、Sabitzer提供出球和二点，但阿根廷一战显示强压下最后一脚不足。", "confidence": "medium", "model_note": "Alaba缺席时转为neutral或negative。"},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.5, "evidence": "抢下球后直接找Baumgartner/Sabitzer/中锋，适合打阿尔及利亚后段打开。", "confidence": "medium_high", "model_note": "和pressing_adjustment共线，限幅。"},
+            "transition_defense_risk": {"direction": "negative", "magnitude": 0.5, "evidence": "高压背后空间是战术包既有风险，Mahrez/Maza/Ait-Nouri能打边路反击。", "confidence": "medium", "model_note": "若奥地利后段接受平局，风险下调。"},
+            "wide_channel_advantage": {"direction": "neutral", "magnitude": 0.2, "evidence": "奥地利边路往返强，但阿尔及利亚两侧Mahrez/Ait-Nouri也有质量。", "confidence": "medium", "model_note": "宽路不宜单独大幅加成。"},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.5, "evidence": "Laimer/Seiwald/Sabitzer的强度和二点回收优于阿尔及利亚中场稳定性。", "confidence": "medium_high", "model_note": "不要与pressing重复满额。"},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.5, "evidence": "定位球脚法与高点是对低/中位防守重要破局手段。", "confidence": "medium", "model_note": "阿尔及利亚也有Mahrez脚法，净优势中等。"},
+            "defensive_line_risk": {"direction": "negative", "magnitude": 0.4, "evidence": "压迫被绕过后需要中卫速度和后腰补位；Alaba健康是关键。", "confidence": "medium", "model_note": "T-75确认Alaba和后腰组合后调整。"},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.4, "evidence": "阿瑙托维奇、普拉斯、维默尔可改变追分阶段冲击，但第二轮对阿根廷更多是零散攻势。", "confidence": "medium", "model_note": "替补提升冲击，不应大幅上修常规阵地xG。"},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.5, "evidence": "奥地利平局价值较高，领先或持平时未必持续冒险；落后才加速。", "confidence": "high", "model_note": "前60分钟可保持强压，但后段可能转为结果管理。"},
+            "third_round_motivation_tactical_shift": {"direction": "mixed", "magnitude": 0.4, "evidence": "3分且净胜球优于阿尔及利亚，平局价值高。", "confidence": "high", "model_note": "降低无谓冒险，提高draw management。"},
+            "rotation_shape_risk": {"direction": "neutral", "magnitude": 0.2, "evidence": "出线压力仍在，主动大轮换概率低；但Alaba健康和前锋选择需确认。", "confidence": "medium", "model_note": "核心轮换超过两人需重跑压迫和定位球因子。"},
+            "draw_management_tendency": {"direction": "positive", "magnitude": 0.7, "evidence": "平局价值由积分和净胜球形势支撑。", "confidence": "high", "model_note": "提高低事件尾部，尤其比分持平后。"},
+            "goal_difference_chase_risk": {"direction": "negative", "magnitude": -0.2, "evidence": "奥地利无需从开场追净胜球，结果优先。", "confidence": "medium_high", "model_note": "只有另一场极端信息才上调。"},
+            "late_game_information_risk": {"direction": "positive", "magnitude": 0.7, "evidence": "另一场阿根廷和约旦结果会影响奥地利是否继续保平或争胜。", "confidence": "medium_high", "model_note": "第三轮模拟需要显式接入。"}
+          }
+        }
+      }
+    },
+    {
+      "match": "约旦 vs 阿根廷",
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27T00:00:00+08:00",
+        "official_lineup_gate": "T-75 official XI required before final model lock; Argentina core minutes plan and Jordan back-five shape are mandatory rerun gates.",
+        "home": {
+          "team": "约旦",
+          "predicted_formation": "5-4-1",
+          "alternate_formations": ["3-4-3", "4-2-3-1"],
+          "lineup_confidence": "medium",
+          "starters": [
+            {"position": "GK", "player": "亚齐德·阿布莱拉 Yazeed Abulaila", "role": "高压下门线与出球选择，少冒险。"},
+            {"position": "RWB", "player": "伊赫桑·哈达德 Ihsan Haddad", "role": "右路防守和反击第一脚。"},
+            {"position": "CB", "player": "亚赞·阿拉伯 Yazan Al-Arab", "role": "禁区防空和定位球高点。"},
+            {"position": "CB", "player": "阿卜杜拉·纳西卜 Abdallah Nasib", "role": "中路保护与盯防中锋。"},
+            {"position": "CB", "player": "穆罕默德·阿布纳迪 Mo Abualnadi", "role": "左中卫补位和低位横移。"},
+            {"position": "LWB", "player": "穆罕纳德·阿布塔哈 Mohannad Abu Taha", "role": "左路回防和偶发推进。"},
+            {"position": "CM", "player": "尼扎尔·拉什丹 Nizar Al-Rashdan", "role": "二点球、后插上和定位球进攻；前两轮状态上修。"},
+            {"position": "CM", "player": "努尔·拉瓦布德 Noor Al-Rawabdeh", "role": "中场屏障和保护禁区前沿。"},
+            {"position": "RW", "player": "穆萨·塔马里 Musa Al-Taamari", "role": "主要反击推进点，对阿根廷边后卫身后发起冲刺。"},
+            {"position": "LW", "player": "阿里·奥尔万 Ali Olwan", "role": "第二反击点和边路内收射门。"},
+            {"position": "CF", "player": "奥德·法库里 Odeh Al-Fakhouri", "role": "支点和第一落点，服务反击二点。"}
+          ],
+          "rotation_candidates": [
+            {"player": "马哈茂德·马尔迪 Mahmoud Al-Mardi", "trigger": "若需要左路速度或落后追分，替换边路/前锋。"},
+            {"player": "阿里·奥尔万 Ali Olwan", "trigger": "若未首发，应作为后段反击或双前锋触发点。"},
+            {"player": "第二中锋/攻击中场候选", "trigger": "若60分钟后仍需进球，可从5-4-1转3-4-3。"}
+          ],
+          "lineup_model_impact": [
+            "五后卫首发上调低事件和禁区保护，但下调常规阵地xG。",
+            "Al-Taamari首发是约旦反击xG的核心；缺席则transition_attack显著下修。",
+            "若改3-4-3，约旦进攻投入上升，但defensive_line_risk和first_goal_collapse_risk同步上升。"
+          ]
+        },
+        "away": {
+          "team": "阿根廷",
+          "predicted_formation": "4-4-2",
+          "alternate_formations": ["4-3-3", "4-2-3-1"],
+          "lineup_confidence": "medium",
+          "starters": [
+            {"position": "GK", "player": "埃米利亚诺·马丁内斯 Emiliano Martinez", "role": "门线稳定和后场指挥。"},
+            {"position": "RB", "player": "纳韦尔·莫利纳 Nahuel Molina", "role": "右路宽度和防反保护。"},
+            {"position": "CB", "player": "克里斯蒂安·罗梅罗 Cristian Romero", "role": "对抗、前顶和定位球防守。"},
+            {"position": "CB", "player": "利桑德罗·马丁内斯 Lisandro Martinez", "role": "左中卫出球和地面对抗。"},
+            {"position": "LB", "player": "法昆多·梅迪纳 Facundo Medina", "role": "左侧保护和后插/助攻信号；需管控黄牌和负荷。"},
+            {"position": "RM", "player": "罗德里戈·德保罗 Rodrigo De Paul", "role": "右中场覆盖、压迫和Messi保护。"},
+            {"position": "CM", "player": "恩佐·费尔南德斯 Enzo Fernandez", "role": "中场出球、二点和节奏控制。"},
+            {"position": "CM", "player": "亚历克西斯·麦卡利斯特 Alexis Mac Allister", "role": "中路连接和反压迫。"},
+            {"position": "LM", "player": "蒂亚戈·阿尔马达 Thiago Almada", "role": "肋部跑动、前场连接和替代边锋宽度。"},
+            {"position": "SS", "player": "利昂内尔·梅西 Lionel Messi", "role": "自由人、定位球、最后一传和终结；分钟计划是核心变量。"},
+            {"position": "CF", "player": "劳塔罗·马丁内斯 Lautaro Martinez", "role": "中锋牵制和禁区终结。"}
+          ],
+          "rotation_candidates": [
+            {"player": "胡利安·阿尔瓦雷斯 Julian Alvarez", "trigger": "若Messi或Lautaro管理分钟，首发/提前登场提高压迫和纵深。"},
+            {"player": "尼科·冈萨雷斯 Nico Gonzalez", "trigger": "若需要左路速度和后段冲击。"},
+            {"player": "尼古拉斯·奥塔门迪 Nicolas Otamendi", "trigger": "若Romero或Lisandro轮换，维持中卫经验但速度需下修。"},
+            {"player": "莱安德罗·帕雷德斯 Leandro Paredes", "trigger": "若领先后控节奏或保护中场，替换中场进入控场模式。"}
+          ],
+          "lineup_model_impact": [
+            "Messi首发显著提高定位球、低位破局和终结质量，但高龄负荷使下半场节奏可能下修。",
+            "若Argentina轮换Messi/De Paul/Enzo中两人以上，pressing和central_control需下修，draw management与低事件上修。",
+            "Julian Alvarez首发会提高前场压迫和转换，但可能改变Messi接球自由度。"
+          ]
+        },
+        "t75_rerun_conditions": [
+          "Messi替补或轮休，阿根廷set_piece、central_control和低位破局必须重跑。",
+          "阿根廷轮换两名以上中场核心，pressing/build-up/tempo全部重跑。",
+          "约旦不使用五后卫而改3-4-3或4-2-3-1，约旦xG和防线风险同步重跑。",
+          "Al-Taamari缺席，约旦transition_attack和set-piece/反击尾部明显下修。"
+        ]
+      },
+      "teams": {
+        "约旦": {
+          "quant_factors": {
+            "pressing_adjustment": {"direction": "negative", "magnitude": -0.5, "evidence": "战术包显示约旦不太可能持续高压，面对阿根廷更应中低位保护。", "confidence": "high", "model_note": "不要按必须进球直接上修高压；后段才打开。"},
+            "build_up_resistance_adjustment": {"direction": "negative", "magnitude": -0.7, "evidence": "前两轮被奥地利/阿尔及利亚压迫后守势管理下降，面对阿根廷控场更难短传出球。", "confidence": "high", "model_note": "长传反击另计，不代表控球推进。"},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.5, "evidence": "Al-Taamari和Al-Naimat/Olwan是主要反击出口；前两轮均有偷球/单点路径。", "confidence": "medium_high", "model_note": "与Al-Taamari状态重复，限幅。"},
+            "transition_defense_risk": {"direction": "negative", "magnitude": 0.8, "evidence": "若落后从5-4-1打开，边翼卫身后会给阿根廷Messi第一脚和前锋纵深。", "confidence": "high", "model_note": "first_goal_collapse_risk需单独提高。"},
+            "wide_channel_advantage": {"direction": "negative", "magnitude": -0.3, "evidence": "约旦边翼卫主要承担防守，进攻宽度不稳定；阿根廷边后卫和中场保护更成熟。", "confidence": "medium", "model_note": "Al-Taamari个体反击不等于宽路整体优势。"},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.8, "evidence": "阿根廷中场三人组和Messi回撤会压制约旦中路控球。", "confidence": "high", "model_note": "大幅下修阵地进攻稳定性。"},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.3, "evidence": "定位球和Al-Arab等高点是约旦对强队的重要路径。", "confidence": "medium", "model_note": "单事件尾部，不能上修常规xG太多。"},
+            "defensive_line_risk": {"direction": "negative", "magnitude": 0.7, "evidence": "低位五后卫可抗压，但前两轮显示先丢球后受让稳定性下降。", "confidence": "medium_high", "model_note": "五后卫首发降低早段风险，先丢球后快速上调。"},
+            "coach_substitution_risk": {"direction": "mixed", "magnitude": 0.4, "evidence": "Sellami倾向先保结构，落后再增加前场人数；会同时提高进攻和失位。", "confidence": "medium", "model_note": "双向波动因子。"},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.7, "evidence": "0分球队有理论第三名和荣誉战动机，但开场面对阿根廷仍应低位。", "confidence": "medium_high", "model_note": "前60分钟低事件，落后后开放。"},
+            "third_round_motivation_tactical_shift": {"direction": "positive", "magnitude": 0.4, "evidence": "约旦0分仍需争取理论第三名和进球表现。", "confidence": "medium", "model_note": "只提升后段冒险，不提升早段控球能力。"},
+            "rotation_shape_risk": {"direction": "neutral", "magnitude": 0.3, "evidence": "弱队核心不太会主动轮换，但阵型可能在5后卫和3-4-3间切换。", "confidence": "medium", "model_note": "阵型变化比人员轮换更关键。"},
+            "draw_management_tendency": {"direction": "negative", "magnitude": -0.5, "evidence": "平局对0分约旦价值有限，但守到后段会先保护不崩。", "confidence": "medium", "model_note": "不是全场开放；后段低事件逐渐衰减。"},
+            "goal_difference_chase_risk": {"direction": "positive", "magnitude": 0.5, "evidence": "若仍有理论第三名横向机会，后段会提高进攻人数。", "confidence": "medium", "model_note": "与late_game_information_risk联动。"},
+            "late_game_information_risk": {"direction": "positive", "magnitude": 0.8, "evidence": "另一场结果会影响约旦理论第三名路径和末段冒险程度。", "confidence": "medium_high", "model_note": "70分钟后显著情景化。"}
+          }
+        },
+        "阿根廷": {
+          "quant_factors": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.4, "evidence": "阿根廷选择性压迫成熟，但第三轮控风险和核心负荷管理会限制持续高压。", "confidence": "medium_high", "model_note": "若Alvarez首发，上调压迫；若Messi轮休，前场结构重估。"},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.8, "evidence": "对奥地利高压仍能稳定把球送到Messi/前锋连接区，控场能力强。", "confidence": "high", "model_note": "与baseline strength共线，限幅。"},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.6, "evidence": "Messi第一脚和Alvarez/Lautaro纵深是高价值机会来源；约旦打开后空间增大。", "confidence": "high", "model_note": "只在约旦压出或先丢球后上修。"},
+            "transition_defense_risk": {"direction": "negative", "magnitude": 0.3, "evidence": "约旦Al-Taamari反击和定位球仍有路径；阿根廷边路身后是战术包风险。", "confidence": "medium", "model_note": "风险保留但不宜过高。"},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.5, "evidence": "Molina/Medina与边中场能拉开约旦五后卫横移。", "confidence": "medium", "model_note": "若轮换边后卫，需下修。"},
+            "central_control_advantage": {"direction": "positive", "magnitude": 1.0, "evidence": "Enzo、Mac Allister、De Paul和Messi回撤对约旦中路形成明显控制。", "confidence": "high", "model_note": "强因子，但与基础实力和player_state重叠，模型封顶。"},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.7, "evidence": "Messi定位球和阿根廷禁区对抗是低位破局武器。", "confidence": "high", "model_note": "若Messi不首发，立即下修。"},
+            "defensive_line_risk": {"direction": "positive", "magnitude": 0.2, "evidence": "连续零封信号上修，Romero/Lisandro/Emiliano稳定；但反击身后仍需保留。", "confidence": "medium_high", "model_note": "正向表示风险低；若中卫大轮换则改为neutral。"},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.5, "evidence": "Scaloni领先后能用Paredes/Otamendi等控节奏，也可用Nico/Alvarez加纵深。", "confidence": "medium_high", "model_note": "换人更多影响节奏和净胜尾部，而非单向提升xG。"},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.6, "evidence": "6分优势下主要目标是控风险保头名和健康；领先后更可能降速。", "confidence": "high", "model_note": "下调无条件大胜尾部，上调管理局。"},
+            "third_round_motivation_tactical_shift": {"direction": "negative", "magnitude": -0.4, "evidence": "阿根廷已6分，主要动机不是追大比分而是头名、健康与纪律。", "confidence": "high", "model_note": "降低持续高压和深度追击。"},
+            "rotation_shape_risk": {"direction": "negative", "magnitude": 0.8, "evidence": "Messi高龄/高负荷，阿根廷已有出线主动，核心分钟管理是最大变量。", "confidence": "medium_high", "model_note": "T-75核心轮换超过两人必须重跑。"},
+            "draw_management_tendency": {"direction": "positive", "magnitude": 0.6, "evidence": "若比赛按阿根廷节奏进入领先或持平，Scaloni倾向控节奏。", "confidence": "medium_high", "model_note": "不代表战意低，只是降低比赛开放。"},
+            "goal_difference_chase_risk": {"direction": "negative", "magnitude": -0.4, "evidence": "净胜球优势较大，追更多净胜球不是主要初始目标。", "confidence": "medium_high", "model_note": "只有另一场实时极端变化才上修。"},
+            "late_game_information_risk": {"direction": "mixed", "magnitude": 0.5, "evidence": "另一场影响头名数学安全边际，但阿根廷主动权大。", "confidence": "medium", "model_note": "低于约旦，但仍需第三轮情景层。"}
+          }
+        }
+      }
+    }
+  ],
+  "double_counting_warnings": [
+    "阿根廷：Messi状态、定位球、低位破局和central_control高度相关，应合成为有限上修；不要叠成无条件大胜。",
+    "奥地利：pressing_adjustment、central_control_advantage和transition_attack_adjustment共享高压二点链，不能满额重复。",
+    "阿尔及利亚：Mahrez、Gouiri、Benbouali和coach_substitution_risk均指向后段进攻弹性，建议分首发与替补阶段处理。",
+    "约旦：Al-Taamari反击、低位防守和定位球只能保留单事件尾部，不应同时大幅上修常规攻击。"
+  ],
+  "handoff_to_model": [
+    "v3预测文档必须把预计首发放在因子评分前；T-75前source_status保持probable_not_official。",
+    "阿尔及利亚vs奥地利应重点建模：奥地利平局管理、阿尔及利亚后段主动打开、Benbouali替补中锋弹性。",
+    "约旦vs阿根廷应重点建模：阿根廷轮换/分钟管理、约旦低位0-60分钟、先丢球后的first_goal_collapse_risk。",
+    "禁止把本战术包转写为比分、胜平负概率或投注建议。"
+  ]
+}

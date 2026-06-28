@@ -1,0 +1,167 @@
+{
+  "task": "GHI_round3_100_rmb_discussion_only_settlement_review",
+  "generated_at": "2026-06-27T00:00:00+08:00",
+  "source_plan": "赔率与投注/GHI组第三轮100元discussion_only方案_模型集中版_20260626.md",
+  "review_type": "post_result_ticket_settlement",
+  "status": "settlement_review_complete_external_scores_used",
+  "thread_participation": {
+    "data_collector": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+    "tactics_coach": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+    "modeler": "019edb8f-536a-7100-84da-e13bfecb0def",
+    "red_team": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+    "betting_risk": "019edb8f-cd0d-7393-bf92-d637962a67e4",
+    "summary": "all five related role threads reported; main thread integrated the settlement and rule updates"
+  },
+  "local_postmatch_files_found": false,
+  "actual_results": {
+    "Norway_vs_France": "1-4",
+    "Senegal_vs_Iraq": "5-0",
+    "Uruguay_vs_Spain": "0-1",
+    "Cape_Verde_vs_Saudi_Arabia": "0-0",
+    "New_Zealand_vs_Belgium": "1-5",
+    "Egypt_vs_Iran": "1-1"
+  },
+  "ticket_settlement": [
+    {
+      "ticket_id": 1,
+      "stake_rmb": 24,
+      "hit": true,
+      "payout_rmb": 26.81,
+      "settlement_reason": "France win and Spain win both settled successfully.",
+      "failure_category": null
+    },
+    {
+      "ticket_id": 2,
+      "stake_rmb": 8,
+      "hit": false,
+      "payout_rmb": 0,
+      "settlement_reason": "Spain won by one goal, but France won by three goals instead of exactly one.",
+      "failure_category": ["model_tail_error", "narrow_handicap_path"]
+    },
+    {
+      "ticket_id": 3,
+      "stake_rmb": 24,
+      "hit": true,
+      "payout_rmb": 48.45,
+      "settlement_reason": "Egypt draw and Cape Verde draw both settled within win/draw coverage.",
+      "failure_category": null
+    },
+    {
+      "ticket_id": 4,
+      "stake_rmb": 14,
+      "hit": false,
+      "payout_rmb": 0,
+      "settlement_reason": "France win and Spain win settled, but Egypt drew instead of winning.",
+      "failure_category": ["bet_translation_error", "overweighted_single_win_in_high_draw_match"]
+    },
+    {
+      "ticket_id": 5,
+      "stake_rmb": 6,
+      "hit": false,
+      "payout_rmb": 0,
+      "settlement_reason": "Spain 0-1 settled, but Norway did not win and Egypt did not win.",
+      "failure_category": ["hedge_not_independent", "conflict_leg_failed"]
+    },
+    {
+      "ticket_id": 6,
+      "stake_rmb": 12,
+      "hit": false,
+      "payout_rmb": 0,
+      "settlement_reason": "Uruguay 0-1 Spain settled, but Norway 1-4 France was outside the selected score cluster.",
+      "failure_category": ["model_tail_error", "exact_score_variance", "core_correlation"]
+    },
+    {
+      "ticket_id": 7,
+      "stake_rmb": 12,
+      "hit": false,
+      "payout_rmb": 0,
+      "settlement_reason": "Egypt 1-1 settled, but Cape Verde 0-0 was not included in the selected score cluster.",
+      "failure_category": ["bet_translation_error", "uncovered_model_scoreline"]
+    }
+  ],
+  "settlement_summary": {
+    "stake_rmb": 100,
+    "total_payout_rmb": 75.26,
+    "net_return_rmb": -24.74,
+    "hit_ticket_ids": [1, 3],
+    "missed_ticket_ids": [2, 4, 5, 6, 7]
+  },
+  "model_diagnosis": {
+    "direction_hits": [
+      "France win",
+      "Spain win",
+      "Egypt non-loss",
+      "Cape Verde non-loss",
+      "Belgium win",
+      "Senegal win"
+    ],
+    "scoreline_hits": [
+      "Uruguay 0-1 Spain",
+      "Egypt 1-1 Iran"
+    ],
+    "major_errors": [
+      "France 4-1, Belgium 5-1, and Senegal 5-0 show underweighted third-round blowout tails.",
+      "Cape Verde 0-0 shows low-event draw coverage was identified in the model but not carried into the exact-score ticket.",
+      "Egypt 1-1 shows that a high-draw match should not feed Egypt-win-only legs in leveraged tickets."
+    ]
+  },
+  "rule_updates": [
+    "Separate match direction probability from ticket settlement probability.",
+    "Require covered_scorelines and uncovered_model_scorelines for score tickets.",
+    "Require tail_loss_paths when a favorite win is narrowed to exact one-goal or exact-score legs.",
+    "For high-draw matches, ban single-win legs inside high-leverage parlays unless market edge is explicitly positive.",
+    "A hedge ticket must be able to pay independently when the main narrative breaks; otherwise classify it as high-variance conflict parlay."
+  ],
+  "new_model_fields": [
+    "margin_bucket_probability",
+    "blowout_tail_probability_3plus",
+    "blowout_tail_probability_4plus",
+    "scoreline_set_probability",
+    "leg_condition_probability",
+    "ticket_joint_probability",
+    "ticket_actual_settlement",
+    "model_hit_but_ticket_miss_reason",
+    "third_round_blowout_trigger",
+    "low_score_draw_split_0_0_vs_1_1",
+    "favorite_lead_state_assumption",
+    "recognized_score_cluster_coverage"
+  ],
+  "source_log": [
+    {
+      "match": "Norway vs France",
+      "result": "Norway 1-4 France",
+      "source": "ESPN/AP",
+      "url": "https://www.espn.com.au/football/match/_/gameId/760475/france-norway"
+    },
+    {
+      "match": "Senegal vs Iraq",
+      "result": "Senegal 5-0 Iraq",
+      "source": "ESPN/AP",
+      "url": "https://africa.espn.com/football/match/_/gameId/760474/iraq-senegal"
+    },
+    {
+      "match": "Uruguay vs Spain",
+      "result": "Uruguay 0-1 Spain",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/football/2026/jun/27/uruguay-spain-world-cup-match-report"
+    },
+    {
+      "match": "Cape Verde vs Saudi Arabia",
+      "result": "Cape Verde 0-0 Saudi Arabia",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/football/2026/jun/27/cape-verde-saudi-arabia-world-cup-match-report"
+    },
+    {
+      "match": "New Zealand vs Belgium",
+      "result": "New Zealand 1-5 Belgium",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-new-zealand-v-belgium-updates-nzl-vs-bel-group-g-match-score-latest"
+    },
+    {
+      "match": "Egypt vs Iran",
+      "result": "Egypt 1-1 Iran",
+      "source": "FOX Sports",
+      "url": "https://www.foxsports.com/soccer/fifa-world-cup-men-egypt-vs-iran-jun-26-2026-game-boxscore-647681"
+    }
+  ]
+}

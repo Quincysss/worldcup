@@ -1,0 +1,156 @@
+{
+  "phase": "betting_risk_observation_refresh",
+  "group": "I",
+  "status": "hold_not_executable",
+  "betting_execution_status": "discussion_only_hold",
+  "created_at": "2026-06-22T00:00:00+08:00",
+  "updated_at": "2026-06-22T21:50:00+08:00",
+  "owner": "竞彩/投注风险 agent",
+  "scope": "I group round 2 betting risk refresh; discussion only, not executable.",
+  "inputs_expected": [
+    "赔率与投注/I组第二轮竞彩风险观察_20260621.md",
+    "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+    "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+    "data/reviews/red_team/i-group-round2-reprediction-red-team-20260622.json",
+    "data/reviews/red_team/i-group-round2-reprediction-red-team-20260622.md",
+    "data/packets/matches/i-group-round2-data-refresh-20260622.json",
+    "T-75m official lineups",
+    "official China Sports Lottery live odds",
+    "same-source 1X2/handicap/totals snapshot"
+  ],
+  "source_log": [
+    {
+      "path": "赔率与投注/I组第二轮竞彩风险观察_20260621.md",
+      "status": "read"
+    },
+    {
+      "path": "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+      "status": "read",
+      "captured_at": "2026-06-21T18:45:00+08:00"
+    },
+    {
+      "path": "data/outputs/match_predictions/i-group-round2-quant-reprediction-20260622.json",
+      "status": "in_progress_skeleton",
+      "issue": "matches empty; model_refresh_pending"
+    },
+    {
+      "path": "data/reviews/red_team/i-group-round2-reprediction-red-team-20260622.json",
+      "status": "in_progress_skeleton",
+      "issue": "no final verdict; red_team_pending"
+    },
+    {
+      "path": "data/packets/matches/i-group-round2-data-refresh-20260622.json",
+      "status": "in_progress_skeleton",
+      "issue": "matches empty; live facts not filled"
+    },
+    {
+      "path": ".codex/skills/worldcup-red-team-verifier/references/market-risk.md",
+      "status": "read"
+    }
+  ],
+  "gate_status": {
+    "t_minus_75_official_lineups": "missing",
+    "latest_injury_suspension_minutes": "missing_or_unverified",
+    "official_china_jingcai_odds": "not_obtained",
+    "same_source_1x2_handicap_totals": "not_obtained",
+    "red_team_verdict": "pending_not_pass",
+    "overall": "hold_not_executable"
+  },
+  "model_status": {
+    "old_model_available": true,
+    "old_model_captured_at": "2026-06-21T18:45:00+08:00",
+    "new_model_status": "model_refresh_pending",
+    "new_model_reason": "file exists but status is in_progress and matches is empty"
+  },
+  "match_observations": [
+    {
+      "match": "France vs Iraq",
+      "old_model_probabilities": {
+        "france_win": 0.7999,
+        "draw": 0.1366,
+        "iraq_win": 0.0634
+      },
+      "old_top_scorelines": ["2-0", "3-0", "1-0", "2-1", "4-0"],
+      "observation_items": [
+        "France advantage remains clear in old model, but deep handicap depends on lineup and pace.",
+        "France -3 draw/loss structure is an anti-deep-win observation, not an executable ticket statement."
+      ],
+      "waiting_items": [
+        "France official lineup and minutes risk",
+        "Iraq Aymen Hussein starter status",
+        "official China Jingcai handicap and odds snapshot"
+      ],
+      "avoid_items": [
+        "deep France handicap decisions before lineups",
+        "scoreline combinations before official odds"
+      ],
+      "failure_conditions": [
+        "France early goal and sustained high tempo",
+        "Iraq red card or defensive collapse",
+        "France substitutes continue late scoring pressure"
+      ]
+    },
+    {
+      "match": "Norway vs Senegal",
+      "old_model_probabilities": {
+        "norway_win": 0.4914,
+        "draw": 0.2349,
+        "senegal_win": 0.2737
+      },
+      "old_top_scorelines": ["1-1", "2-1", "1-0", "2-0", "1-2"],
+      "observation_items": [
+        "Norway win/draw structure protects against draw but not Senegal win.",
+        "Old model keeps Senegal win tail at 27.4%, so this leg cannot be treated as low-risk."
+      ],
+      "waiting_items": [
+        "Haaland and Odegaard official starter status",
+        "Senegal pace-unit starter status",
+        "same-source 1X2 and totals snapshot"
+      ],
+      "avoid_items": [
+        "upgrading Norway side before Senegal lineup",
+        "adding more legs to Norway-related structures"
+      ],
+      "failure_conditions": [
+        "Senegal scores first and attacks transition space",
+        "Norway fullbacks over-advance without midfield cover",
+        "Haaland or Odegaard absent or minutes-limited"
+      ]
+    }
+  ],
+  "user_ticket_context": {
+    "structure": "France -3 handicap draw/loss + Norway win/draw",
+    "status": "discussion_only_observation",
+    "hit_conditions": [
+      "France does not win by 4 or more",
+      "Norway does not lose to Senegal"
+    ],
+    "main_risks": [
+      "France wins by 4 or more",
+      "Senegal wins outright"
+    ],
+    "downgrade_triggers": [
+      "France strong lineup plus Iraq defensive absences",
+      "Senegal pace starters complete plus Norway aggressive fullbacks"
+    ]
+  },
+  "candidate_status": {
+    "new_candidates_added": false,
+    "existing_user_structure": "observe_only",
+    "downgraded_if": [
+      "official lineups conflict with old assumptions",
+      "official odds shorten without team-news support",
+      "red team remains hold or revise"
+    ],
+    "avoid": [
+      "additional scoreline legs",
+      "deep handicap expansion",
+      "mixing third-party odds with official markets"
+    ]
+  },
+  "handoff_notes": [
+    "Keep all betting language in discussion_only_hold until gates clear.",
+    "Do not update to executable status without official lineups, official Jingcai odds, same-source market snapshot, and red-team pass.",
+    "New model and red team files must be re-read after content fill."
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "report_id": "k-group-round3-betting-risk-20260627",
+  "group": "K",
+  "round": 3,
+  "created_at": "2026-06-27T14:58:00+08:00",
+  "status": "discussion_only_hold",
+  "execution_permission": "not_allowed",
+  "global_gate": {
+    "official_starting_xi_t75": false,
+    "latest_injury_confirmed": false,
+    "official_jczq_odds_snapshot": true,
+    "same_source_1x2_handicap_totals": false,
+    "red_team_pass": false
+  },
+  "matches": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "model_probabilities": {
+        "哥伦比亚胜": 0.278,
+        "平": 0.261,
+        "葡萄牙胜": 0.461
+      },
+      "odds_snapshot": {
+        "source": "500.com local snapshot",
+        "spf": {
+          "哥伦比亚胜": 4.23,
+          "平": 3.28,
+          "葡萄牙胜": 1.70
+        },
+        "handicap": {
+          "line": "哥伦比亚 +1",
+          "win": 1.90,
+          "draw": 3.45,
+          "loss": 3.20
+        }
+      },
+      "risk_view": "葡萄牙不败方向更合理，但客胜赔率偏热，平局路径需要重点保留。",
+      "execution_view": "discussion_only"
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "model_probabilities": {
+        "刚果金胜": 0.500,
+        "平": 0.255,
+        "乌兹别克斯坦胜": 0.245
+      },
+      "odds_snapshot": {
+        "source": "500.com local snapshot",
+        "spf": {
+          "刚果金胜": 1.67,
+          "平": 3.82,
+          "乌兹别克斯坦胜": 3.72
+        },
+        "handicap": {
+          "line": "刚果金 -1",
+          "win": 3.10,
+          "draw": 3.45,
+          "loss": 1.94
+        }
+      },
+      "risk_view": "刚果金胜率最高，但让球盘不支持深胜高置信，1-1 和 0-0 风险不能忽略。",
+      "execution_view": "discussion_only"
+    }
+  ],
+  "prohibited_language": [
+    "主推",
+    "稳胆",
+    "包赢",
+    "重注",
+    "可执行购彩建议"
+  ],
+  "required_before_any_execution": [
+    "T-75 官方首发",
+    "最新伤停确认",
+    "官方竞彩胜平负/让球/大小球同源快照",
+    "红队状态不为 hold 或 revise",
+    "投注模型给出组合相关性和最坏回撤"
+  ]
+}

@@ -1,0 +1,307 @@
+﻿{
+  "schema_version": "worldcup_red_team_review_v3",
+  "phase": "match_prediction_red_team_review",
+  "group": "J",
+  "round": 3,
+  "version": "v3",
+  "created_at": "2026-06-27T15:10:00+08:00",
+  "red_team_status": "complete_red_team_review",
+  "overall_verdict": "hold",
+  "betting_language_blocked": true,
+  "review_scope": [
+    "Algeria vs Austria",
+    "Jordan vs Argentina"
+  ],
+  "source_files_reviewed": [
+    "README.md",
+    "线程状态.md",
+    "工作流纪律.md",
+    "项目架构.md",
+    ".codex/skills/worldcup-red-team-verifier/SKILL.md",
+    ".codex/skills/worldcup-red-team-verifier/references/review-checklist.md",
+    ".codex/skills/worldcup-red-team-verifier/references/market-risk.md",
+    ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+    "data/templates/match-prediction-standard-template-v3.md",
+    "data/outputs/match_predictions/j-group-round3-quant-prediction-20260626.json",
+    "data/thread_outputs/j-group-round3-prediction-20260626/data-collector.md",
+    "data/thread_outputs/j-group-round3-prediction-20260626/tactics-coach.md",
+    "data/thread_outputs/j-group-round3-prediction-20260626/modeler.md",
+    "data/thread_outputs/j-group-round3-prediction-20260626/red-team.md",
+    "data/thread_outputs/j-group-round3-v3-20260627/betting-risk.md",
+    "data/thread_outputs/j-group-round3-v3-20260627/betting-risk.json",
+    "比赛/未开始比赛/小组赛/J组/2026-06-28_阿尔及利亚_vs_奥地利_量化预测.md",
+    "比赛/未开始比赛/小组赛/J组/2026-06-28_约旦_vs_阿根廷_量化预测.md",
+    "比赛/未开始比赛/小组赛/J组/J组第三轮量化预测汇总_20260626.md"
+  ],
+  "v3_contract_flags": [
+    {
+      "flag": "predicted_lineups_required_but_not_structured",
+      "severity": "high",
+      "confidence": "high",
+      "detail": "现有 J 组三轮预测 Markdown 仅写 T-75 正式首发未公布、使用首发预测与负荷判断，未按 v3 固定输出 predicted_lineups、XI、轮换候选、来源冲突和重跑触发。"
+    },
+    {
+      "flag": "baseline_quant_json_not_parseable",
+      "severity": "high",
+      "confidence": "high",
+      "detail": "data/outputs/match_predictions/j-group-round3-quant-prediction-20260626.json 当前 ConvertFrom-Json 解析失败，不能作为 v3 发布合同的可机读基线。"
+    },
+    {
+      "flag": "v3_upstream_model_data_tactics_files_absent",
+      "severity": "medium",
+      "confidence": "high",
+      "detail": "data/thread_outputs/j-group-round3-v3-20260627/ 中仅发现 betting-risk 文件，未发现同目录 v3 数据、战术、模型产物。"
+    }
+  ],
+  "blocking_gates": [
+    {
+      "gate": "T-75 official lineups",
+      "status": "missing",
+      "owner": "data/team-news",
+      "blocking_effect": "must hold final publication and all betting-style language"
+    },
+    {
+      "gate": "final injuries, suspensions, minutes limits",
+      "status": "not final",
+      "owner": "data/team-news",
+      "blocking_effect": "must rerun or cap player-state and rotation-sensitive probabilities"
+    },
+    {
+      "gate": "v3 predicted_lineups section",
+      "status": "missing in reviewed baseline",
+      "owner": "data/tactics/model",
+      "blocking_effect": "cannot pass v3 standard until probable XI, confidence, conflicts and model impact are structured"
+    },
+    {
+      "gate": "same-source 1X2, handicap and totals odds snapshot",
+      "status": "incomplete",
+      "owner": "market/betting-risk",
+      "blocking_effect": "odds can only be discussion-level calibration"
+    },
+    {
+      "gate": "ordinary 1X2 for Jordan vs Argentina",
+      "status": "unavailable in reviewed snapshot",
+      "owner": "market/betting-risk",
+      "blocking_effect": "do not substitute Jordan +2 handicap market for ordinary 1X2 calibration"
+    }
+  ],
+  "matches": [
+    {
+      "match": "Algeria vs Austria",
+      "match_cn": "阿尔及利亚 vs 奥地利",
+      "match_no": "周六071",
+      "kickoff_beijing": "2026-06-28 10:00",
+      "verdict": "hold",
+      "model_snapshot_reviewed": {
+        "xg": {
+          "algeria": 1.14,
+          "austria": 1.31
+        },
+        "final_1x2": {
+          "algeria_win": 0.315,
+          "draw": 0.31,
+          "austria_win": 0.375
+        },
+        "top_scores": [
+          "1-1",
+          "0-1",
+          "1-0",
+          "0-0",
+          "1-2"
+        ],
+        "totals": {
+          "over_2_5": 0.443,
+          "under_2_5": 0.557
+        }
+      },
+      "top_concerns": [
+        {
+          "severity": "high",
+          "confidence": "high",
+          "concern": "v3 首发合同缺失。当前只能确认 T-75 官方首发未公布，无法核验奥地利高压结构、阿尔及利亚边路/前场持球点和后段提速路径是否仍成立。"
+        },
+        {
+          "severity": "high",
+          "confidence": "high",
+          "concern": "第三轮动机对称性不足。奥地利 3 分且净胜球占优，平局价值高；阿尔及利亚 3 分但净胜球落后，后段可能主动加速，赛况依赖不能被静态 Poisson 完整表达。"
+        },
+        {
+          "severity": "medium",
+          "confidence": "high",
+          "concern": "市场对平局定价显著重。普通胜平负去水平局约 42.0%，高于模型校准平局 31.0%，需要解释市场差异，不能把奥地利 37.5% 写成低风险方向。"
+        },
+        {
+          "severity": "medium",
+          "confidence": "medium",
+          "concern": "因子重复计权风险。奥地利实力、高压、二点球、定位球和首轮/次轮表现可能在 team strength、tactical、player_state 与 market calibration 中重复上修。"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "阿尔及利亚前 60 分钟守住平局后被迫争净胜球，末段比赛从小球基线转为高方差攻防。",
+        "奥地利接受平局或小负可控情境，降低压迫强度，模型的客胜优势兑现不足。",
+        "早球或红牌改变双方第三轮目标函数，静态 1.14-1.31 xG 低估尾部比分。"
+      ],
+      "overconfidence_flags": [
+        "胜平负三项接近，任何单边表达都应降级。",
+        "Top score 1-1 仅约 12.9%，比分置信度不应外推为窄路径结论。",
+        "JSON 不可解析，发布层不能宣称完整可机读闭环。"
+      ],
+      "market_flags": [
+        "普通胜平负与让球胜平负有单时点快照，但缺同源大小球。",
+        "市场平局去水概率高于模型，需复查是否来自小组形势、同步比赛或盘口防平。",
+        "阿尔及利亚 +1 让球口径不能替代真实胜平负方向。"
+      ],
+      "quant_chain_flags": [
+        "泊松独立进球假设低估早球、红牌、末段必须进球和同步比赛信息传导。",
+        "第三轮情境、player_state、战术优势和市场校准之间存在重复计权检查缺口。",
+        "未发现 v3 结构化 predicted_lineups。"
+      ],
+      "recommended_probability_adjustment": {
+        "type": "cap_and_review_band",
+        "suggestion": "在 T-75 官方首发和最终伤停前，不应提高奥地利胜 37.5%；建议把奥地利胜审查带压回约 34-36%，平局保持或上调到约 32-34%，并保留阿尔及利亚一球胜与末段转大尾部。",
+        "not_a_replacement_prediction": true
+      },
+      "missing_data": [
+        "T-75 official lineups",
+        "structured v3 predicted_lineups with XI, confidence, conflicts and rerun triggers",
+        "final injury/suspension/minutes-limit update",
+        "same-source totals odds",
+        "validated parseable v3 quant JSON"
+      ],
+      "handoff_notes": [
+        {
+          "owner": "data/team-news",
+          "request": "补齐 T-75 官方首发、最终伤停、停赛、黄牌风险和分钟限制。"
+        },
+        {
+          "owner": "tactics",
+          "request": "把阿尔及利亚后段提速、奥地利平局价值和同步比赛依赖映射到 v3 tactical/model impact。"
+        },
+        {
+          "owner": "model",
+          "request": "修复 JSON 可解析性，补充 predicted_lineups，重检 draw/late-chaos tail 与重复计权。"
+        },
+        {
+          "owner": "market",
+          "request": "补同源 1X2/handicap/totals 临场快照并解释平局市场差异。"
+        }
+      ]
+    },
+    {
+      "match": "Jordan vs Argentina",
+      "match_cn": "约旦 vs 阿根廷",
+      "match_no": "周六072",
+      "kickoff_beijing": "2026-06-28 10:00",
+      "verdict": "hold",
+      "model_snapshot_reviewed": {
+        "xg": {
+          "jordan": 0.56,
+          "argentina": 1.95
+        },
+        "final_1x2": {
+          "jordan_win": 0.106,
+          "draw": 0.224,
+          "argentina_win": 0.67
+        },
+        "top_scores": [
+          "0-1",
+          "0-2",
+          "0-3",
+          "1-1",
+          "1-2"
+        ],
+        "totals": {
+          "over_2_5": 0.459,
+          "under_2_5": 0.541
+        }
+      },
+      "top_concerns": [
+        {
+          "severity": "high",
+          "confidence": "high",
+          "concern": "普通 1X2 未开售或未抓到，只有约旦 +2 让球快照；不能用深盘让球替代胜平负市场校准。"
+        },
+        {
+          "severity": "high",
+          "confidence": "high",
+          "concern": "阿根廷 6 分净胜球 +5 的第三轮目标更偏控风险、保头名和健康，轮换和压节奏会直接影响 67.0% 胜率与 0-3/深穿尾部。"
+        },
+        {
+          "severity": "high",
+          "confidence": "high",
+          "concern": "v3 预计首发未结构化。阿根廷核心是否轮休、约旦是否五后卫低位、替补触发和阵型变化都需要 T-75 后重检。"
+        },
+        {
+          "severity": "medium",
+          "confidence": "medium",
+          "concern": "强队标签、前两轮成绩、控场战术和市场信号可能重复推高阿根廷胜率，同时又低估低位守到 50-60 分钟后的平局/小胜走廊。"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "阿根廷大幅轮换并接受低节奏控场，导致 0-1、0-2 或 1-1 走廊变宽。",
+        "约旦五后卫低位和定位球取得先手，模型低估早球后的比赛状态切换。",
+        "若另一场比分使阿根廷无需冒险，深穿和大比分尾部继续收缩；若约旦后段压出，则反而出现反击大胜尾部。"
+      ],
+      "overconfidence_flags": [
+        "medium-high 0.65 在 T-75 前偏高，尤其缺普通 1X2 与结构化首发。",
+        "阿根廷胜、阿根廷赢 2 球、阿根廷赢 3 球以上是不同结算层级，不能混写。",
+        "Top score 0-1 与 0-2 接近，且 1-1 在 Top5 内，不能用方向命中掩盖比分/让球风险。"
+      ],
+      "market_flags": [
+        "普通胜平负缺失。",
+        "同源大小球缺失。",
+        "约旦 +2 让球盘显示三球以上深穿并非低波动事件。"
+      ],
+      "quant_chain_flags": [
+        "Poisson 对红牌、早球、强队轮换、低位压节奏和必须追净胜球的状态依赖表达不足。",
+        "强队实力、球员状态、战术控场、市场校准之间需要去重审计。",
+        "旧量化 JSON 解析失败，v3 发布链条不可直接通过。"
+      ],
+      "recommended_probability_adjustment": {
+        "type": "favorite_cap_and_tail_raise",
+        "suggestion": "在 T-75 官方首发、最终伤停和普通 1X2 未补齐前，阿根廷胜 67.0% 建议进入约 62-65% 审查带；上调平局/约旦守住小负尾部，同时保留被迫压出后的阿根廷反击大胜尾部，但不得把 3+ 尾部写成稳定路径。",
+        "not_a_replacement_prediction": true
+      },
+      "missing_data": [
+        "ordinary 1X2 market snapshot",
+        "T-75 official lineups",
+        "structured v3 predicted_lineups with rotation candidates",
+        "final Argentina rotation/minutes plan and Jordan defensive setup confirmation",
+        "same-source totals odds",
+        "validated parseable v3 quant JSON"
+      ],
+      "handoff_notes": [
+        {
+          "owner": "data/team-news",
+          "request": "补阿根廷轮换、核心分钟限制、约旦阵型与最终伤停。"
+        },
+        {
+          "owner": "tactics",
+          "request": "明确阿根廷控节奏/阶段压迫与约旦低位五后卫的重跑触发。"
+        },
+        {
+          "owner": "model",
+          "request": "对阿根廷胜率加临场 cap，拆分胜率、净胜 2 球、净胜 3+ 和比分 Top5，不得互相背书。"
+        },
+        {
+          "owner": "market",
+          "request": "补普通 1X2、让球、大小球同源快照；禁止用 +2 让球盘替代普通胜平负。"
+        }
+      ]
+    }
+  ],
+  "alternative_scenarios": [
+    "双场同开下，阿尔及利亚 vs 奥地利的平局或末段进球会改变约旦 vs 阿根廷的风险偏好解读。",
+    "J 组第三名横向比较若变化，可能放大末段追净胜球、守小负或接受平局的策略分叉。",
+    "红牌、点球、早球和门将波动属于高相关事件，当前独立 Poisson 需要尾部折扣。"
+  ],
+  "follow_up_checks": [
+    "T-75 后逐队核验官方首发、替补席、阵型和核心轮休。",
+    "复核最终伤停、停赛、黄牌停赛风险、分钟限制和赛程负荷。",
+    "补齐同源普通胜平负、让球胜平负、大小球赔率，并记录 capture time 与销售状态。",
+    "修复 J 组三轮量化 JSON 可解析性并补 v3 predicted_lineups 字段。",
+    "对第三轮动机、同步比赛依赖和 market draw signal 做模型去重审计。"
+  ],
+  "publish_gate": "hold until official lineups, final availability, complete odds chain, parseable v3 JSON and red-team recheck are complete"
+}
+

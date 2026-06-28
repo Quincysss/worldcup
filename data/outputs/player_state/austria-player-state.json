@@ -6,10 +6,10 @@
   "group": "J组",
   "status": "complete",
   "created_at": "2026-06-20T23:20:00+08:00",
-  "updated_at": "2026-06-23T11:00:00+08:00",
+  "updated_at": "2026-06-28T20:56:26+08:00",
   "owner": "worldcup-data-collector",
   "scope": "奥地利球员状态表",
-  "player_state_update_status": "round2_postmatch_updated_in_canonical_player_state",
+  "player_state_update_status": "partial",
   "players": [
     {
       "squad_number": 1,
@@ -70,8 +70,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首发丢1球，面对约旦多次反击和4次射正，完成基础门线任务。",
-      "form_status_1_5": 3,
-      "form_reason": "面对梅西双响失两球，未出现明确低级失误。",
+      "form_status_1_5": 2.9,
+      "form_reason": "丢3球，球队晋级但门将状态下修。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -215,6 +215,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "亚历山大-施拉格尔",
+          "english_name": "Alexander Schlager",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "首发门将，3-3失3球。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.8,
+          "rating_reason": "丢3球，球队晋级但门将状态下修。",
+          "postmatch_form_status_1_5": 2.9,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -244,7 +263,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.8,
+        "postmatch_form_status_1_5": 2.9,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发门将，3-3失3球。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 2,
@@ -306,7 +355,7 @@
       },
       "recent_status": "首轮未出场，后防深度。",
       "form_status_1_5": 1.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -434,6 +483,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "大卫-阿芬格鲁伯",
+          "english_name": "David Affengruber",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 1.8,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -463,7 +531,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 1.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 3,
@@ -525,7 +623,7 @@
       },
       "recent_status": "59分钟替补登场，参与后段防守收束。",
       "form_status_1_5": 3,
-      "form_reason": "中卫线承压，整体没有崩盘但被梅西决定比赛。",
+      "form_reason": "替补登场后球队仍被两度破门。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -669,6 +767,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "凯文-丹索",
+          "english_name": "Kevin Danso",
+          "started": false,
+          "minutes": 28,
+          "event_summary": "62分钟替补Alaba登场。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3,
+          "rating_reason": "替补登场后球队仍被两度破门。",
+          "postmatch_form_status_1_5": 3,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -698,7 +815,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 28,
+        "substitution": "62分钟替补登场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3,
+        "postmatch_form_status_1_5": 3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "62分钟替补Alaba登场。",
+        "source_status": "confirmed_sub",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 4,
@@ -761,8 +908,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首发59分钟，和Seiwald控制中场节奏，后段由替补活力接力。",
-      "form_status_1_5": 3,
-      "form_reason": "中场对抗投入，但向前输送不足。",
+      "form_status_1_5": 3.1,
+      "form_reason": "首发参与压迫，直接事件不足。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -906,6 +1053,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "克萨韦尔-施拉格尔",
+          "english_name": "Xaver Schlager",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "首发前腰/中场。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3.1,
+          "rating_reason": "首发参与压迫，直接事件不足。",
+          "postmatch_form_status_1_5": 3.1,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -935,7 +1101,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3.1,
+        "postmatch_form_status_1_5": 3.1,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发前腰/中场。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 5,
@@ -998,8 +1194,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首发踢满，77分钟角球造成Al-Arab乌龙；68分钟进球因其手球被VAR取消。",
-      "form_status_1_5": 2.6,
-      "form_reason": "40 分钟黄牌，防守压力较大后被换下。",
+      "form_status_1_5": 3,
+      "form_reason": "首发打满，防线承压。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -1143,6 +1339,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "斯特凡-波施",
+          "english_name": "Stefan Posch",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "首发右后卫。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3,
+          "rating_reason": "首发打满，防线承压。",
+          "postmatch_form_status_1_5": 3,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -1172,7 +1387,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "无确认停赛，但黄牌纪律风险上调。"
+      "next_match_availability_note": "无确认停赛，但黄牌纪律风险上调。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3,
+        "postmatch_form_status_1_5": 3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发右后卫。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 6,
@@ -1235,8 +1480,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首发踢满，是控球和反抢结构核心。",
-      "form_status_1_5": 3.1,
-      "form_reason": "中场拦截和横向覆盖尚可。",
+      "form_status_1_5": 3.2,
+      "form_reason": "中场覆盖稳定，有射门威胁。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -1380,6 +1625,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "尼古拉斯-塞瓦尔德",
+          "english_name": "Nicolas Seiwald",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "首发后腰，65分钟远射稍高。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3.2,
+          "rating_reason": "中场覆盖稳定，有射门威胁。",
+          "postmatch_form_status_1_5": 3.2,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -1409,7 +1673,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3.2,
+        "postmatch_form_status_1_5": 3.2,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发后腰，65分钟远射稍高。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 7,
@@ -1472,8 +1766,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "中场替补登场后提高禁区威胁，68分钟进球被吹，90+11罚入点球锁定胜局。",
-      "form_status_1_5": 2.8,
-      "form_reason": "替补后提供支点，但未改变比分。",
+      "form_status_1_5": 3.5,
+      "form_reason": "进球但有黄牌和体能观察点。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -1617,6 +1911,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "马尔科-阿瑙托维奇",
+          "english_name": "Marko Arnautović",
+          "started": true,
+          "minutes": null,
+          "event_summary": "28分钟进球；11分钟黄牌；17分钟一度跛行但继续。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3.7,
+          "rating_reason": "进球但有黄牌和体能观察点。",
+          "postmatch_form_status_1_5": 3.5,
+          "injury_availability": "17分钟后有跛行迹象，下一场需复核。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -1646,7 +1959,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": null,
+        "substitution": "首发，换下时间未由当前可靠源闭合",
+        "goals": 1,
+        "assists": 0,
+        "yellow_cards": 1,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3.7,
+        "postmatch_form_status_1_5": 3.5,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "17分钟后有跛行迹象，下一场需复核。",
+        "key_stats_note": "28分钟进球；11分钟黄牌；17分钟一度跛行但继续。",
+        "source_status": "confirmed_goal_card_minutes_partial",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 8,
@@ -1711,7 +2054,7 @@
       },
       "recent_status": "伤后及时复出并首发59分钟，早段后场组织和定位球参与明显，仍需负荷管理。",
       "form_status_1_5": 3,
-      "form_reason": "首发 67 分钟，更多像负荷管理。",
+      "form_reason": "首发出球核心，但提前下场需关注。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -1855,6 +2198,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "大卫-阿拉巴",
+          "english_name": "David Alaba",
+          "started": true,
+          "minutes": 62,
+          "event_summary": "首发中卫，62分钟被换下；现场源提示可能有体能/健康担忧。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3,
+          "rating_reason": "首发出球核心，但提前下场需关注。",
+          "postmatch_form_status_1_5": 3,
+          "injury_availability": "62分钟被换下，下一场需复核体能/伤情。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -1884,7 +2246,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "未见新增伤停；下一场继续保留 minutes_monitor。"
+      "next_match_availability_note": "未见新增伤停；下一场继续保留 minutes_monitor。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": 62,
+        "substitution": "62分钟被Kevin Danso换下",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3,
+        "postmatch_form_status_1_5": 3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "62分钟被换下，下一场需复核体能/伤情。",
+        "key_stats_note": "首发中卫，62分钟被换下；现场源提示可能有体能/健康担忧。",
+        "source_status": "confirmed_injury_watch",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 9,
@@ -1948,8 +2340,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首发踢满，78分钟黄牌；持续承担推进和前场压迫。",
-      "form_status_1_5": 3.3,
-      "form_reason": "FOX 记录 1 次射正和 32 次传球，定位球参与度最高。",
+      "form_status_1_5": 3.8,
+      "form_reason": "进球并持续参与压迫转换。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -2093,6 +2485,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "马塞尔-萨比策",
+          "english_name": "Marcel Sabitzer",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "54分钟反击破门。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 4,
+          "rating_reason": "进球并持续参与压迫转换。",
+          "postmatch_form_status_1_5": 3.8,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -2122,7 +2533,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 1,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 4,
+        "postmatch_form_status_1_5": 3.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "54分钟反击破门。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 10,
@@ -2186,7 +2627,7 @@
       },
       "recent_status": "首轮未出场，中后场替补。",
       "form_status_1_5": 1.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -2314,6 +2755,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "弗洛里安-格里利奇",
+          "english_name": "Florian Grillitsch",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 1.8,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -2343,7 +2803,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 1.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 11,
@@ -2404,8 +2894,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首轮未出场，中锋轮换。",
-      "form_status_1_5": 2.7,
-      "form_reason": "中锋支点和射门威胁不足，84 分钟左右被换下。",
+      "form_status_1_5": 3,
+      "form_reason": "替补参与但具体分钟缺口。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -2533,6 +3023,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "米夏埃尔-格雷戈里奇",
+          "english_name": "Michael Gregoritsch",
+          "started": false,
+          "minutes": null,
+          "event_summary": "64分钟前后已作为替补参与进攻，具体换人分钟待官方事件表。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3,
+          "rating_reason": "替补参与但具体分钟缺口。",
+          "postmatch_form_status_1_5": 3,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -2562,7 +3071,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": null,
+        "substitution": "替补登场，具体分钟未闭合",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3,
+        "postmatch_form_status_1_5": 3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "64分钟前后已作为替补参与进攻，具体换人分钟待官方事件表。",
+        "source_status": "sub_confirmed_minutes_missing",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 12,
@@ -2624,7 +3163,7 @@
       },
       "recent_status": "首轮未出场，门将替补。",
       "form_status_1_5": 1.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -2752,6 +3291,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "弗洛里安-维格勒",
+          "english_name": "Florian Wiegele",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 1.8,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -2781,7 +3339,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 1.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 13,
@@ -2843,7 +3431,7 @@
       },
       "recent_status": "首轮未出场，门将替补。",
       "form_status_1_5": 1.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -2971,6 +3559,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "帕特里克-彭茨",
+          "english_name": "Patrick Pentz",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 1.8,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3000,7 +3607,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 1.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 14,
@@ -3061,8 +3698,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首发45分钟，队友传中和最后一传支持有限，半场被阿瑙托维奇换下。",
-      "form_status_1_5": 1.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_status_1_5": 3.7,
+      "form_reason": "替补绝平保住奥地利出线。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -3206,6 +3843,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "萨沙-卡拉季奇",
+          "english_name": "Saša Kalajdžić",
+          "started": false,
+          "minutes": null,
+          "event_summary": "90+5分钟绝平进球。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 4,
+          "rating_reason": "替补绝平保住奥地利出线。",
+          "postmatch_form_status_1_5": 3.7,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3235,7 +3891,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": null,
+        "substitution": "终场前替补登场，具体分钟未闭合",
+        "goals": 1,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 4,
+        "postmatch_form_status_1_5": 3.7,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "90+5分钟绝平进球。",
+        "source_status": "confirmed_goal_minutes_partial",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 15,
@@ -3296,8 +3982,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首发踢满，35分钟封堵Al-Taamari补射，防线关键点。",
-      "form_status_1_5": 2.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_status_1_5": 3,
+      "form_reason": "防线失3球但球队晋级。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -3441,6 +4127,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "菲利普-林哈特",
+          "english_name": "Philipp Lienhart",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "首发中卫。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3,
+          "rating_reason": "防线失3球但球队晋级。",
+          "postmatch_form_status_1_5": 3,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3470,7 +4175,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3,
+        "postmatch_form_status_1_5": 3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发中卫。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 16,
@@ -3533,8 +4268,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首发59分钟，面对Al-Taamari/约旦反击压力较大。",
-      "form_status_1_5": 1.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_status_1_5": 3.1,
+      "form_reason": "首发打满，攻守均有参与。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -3678,6 +4413,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "菲利普-姆韦内",
+          "english_name": "Phillipp Mwene",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "首发左后卫，参与边路推进。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3.1,
+          "rating_reason": "首发打满，攻守均有参与。",
+          "postmatch_form_status_1_5": 3.1,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3707,7 +4461,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3.1,
+        "postmatch_form_status_1_5": 3.1,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发左后卫，参与边路推进。",
+        "source_status": "confirmed",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 17,
@@ -3771,7 +4555,7 @@
       },
       "recent_status": "59分钟登场后立即制造禁区动作和射门，替补活力明显。",
       "form_status_1_5": 2.5,
-      "form_reason": "尾段替补，样本很小。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -3915,6 +4699,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "卡尼-楚克乌梅卡",
+          "english_name": "Carney Chukwuemeka",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.5,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -3944,7 +4747,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.5,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 18,
@@ -4008,8 +4841,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "20分钟远射破门，83分钟被Wimmer换下，是首轮进攻亮点。",
-      "form_status_1_5": 2.8,
-      "form_reason": "前场连接有限，78 分钟左右被换下。",
+      "form_status_1_5": 3,
+      "form_reason": "首发但全量分钟未闭合。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -4153,6 +4986,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "罗马诺-施密德",
+          "english_name": "Romano Schmid",
+          "started": true,
+          "minutes": null,
+          "event_summary": "首发右路，具体分钟待官方事件表。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3,
+          "rating_reason": "首发但全量分钟未闭合。",
+          "postmatch_form_status_1_5": 3,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -4182,7 +5034,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": null,
+        "substitution": "首发，换下时间未由当前可靠源闭合",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3,
+        "postmatch_form_status_1_5": 3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "首发右路，具体分钟待官方事件表。",
+        "source_status": "confirmed_start_minutes_partial",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 19,
@@ -4247,7 +5129,7 @@
       },
       "recent_status": "Baumgartner伤退后补入名单，首轮未出场。",
       "form_status_1_5": 1.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -4375,6 +5257,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "德扬-柳比契奇",
+          "english_name": "Dejan Ljubičić",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 1.8,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -4404,7 +5305,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 1.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 20,
@@ -4467,8 +5398,8 @@
         "rating_policy_captured_at": "2026-06-21T03:20:00+08:00"
       },
       "recent_status": "首发踢满，多次前插和末段反击推进，是压迫和转换核心。",
-      "form_status_1_5": 3.1,
-      "form_reason": "右路和中场来回覆盖，进攻端贡献有限。",
+      "form_status_1_5": 3.6,
+      "form_reason": "助攻奥地利第二球，中场/边路推进贡献明确。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -4612,6 +5543,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "康拉德-莱默尔",
+          "english_name": "Konrad Laimer",
+          "started": true,
+          "minutes": 90,
+          "event_summary": "54分钟右路推进后横传助攻Sabitzer。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 3.7,
+          "rating_reason": "助攻奥地利第二球，中场/边路推进贡献明确。",
+          "postmatch_form_status_1_5": 3.6,
+          "injury_availability": "未发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -4641,7 +5591,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": true,
+        "minutes": 90,
+        "substitution": "首发踢满",
+        "goals": 0,
+        "assists": 1,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 3.7,
+        "postmatch_form_status_1_5": 3.6,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未发现新增伤停或停赛。",
+        "key_stats_note": "54分钟右路推进后横传助攻Sabitzer。",
+        "source_status": "confirmed_assist_from_live_text",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 21,
@@ -4705,7 +5685,7 @@
       },
       "recent_status": "83分钟替补登场，参与末段防守和转换，时间有限。",
       "form_status_1_5": 2.9,
-      "form_reason": "尾段有一次射门参与。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -4849,6 +5829,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "帕特里克-维默尔",
+          "english_name": "Patrick Wimmer",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.9,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -4878,7 +5877,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.9,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 22,
@@ -4943,7 +5972,7 @@
       },
       "recent_status": "首轮未出场，左路替补。",
       "form_status_1_5": 3,
-      "form_reason": "替补后参与左路推进。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -5071,6 +6100,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "亚历山大-普拉斯",
+          "english_name": "Alexander Prass",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 3,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -5100,7 +6148,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 3,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 23,
@@ -5164,7 +6242,7 @@
       },
       "recent_status": "首轮未出场，后防替补。",
       "form_status_1_5": 2.9,
-      "form_reason": "替补进入后防线。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -5292,6 +6370,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "马尔科-弗里德尔",
+          "english_name": "Marco Friedl",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.9,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -5321,7 +6418,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.9,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 24,
@@ -5386,7 +6513,7 @@
       },
       "recent_status": "59分钟替补登场，提供年轻创造力和压迫活力。",
       "form_status_1_5": 2.9,
-      "form_reason": "年轻攻击点有跑动但缺关键处理。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -5530,6 +6657,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "保罗-万纳",
+          "english_name": "Paul Wanner",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 2.9,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -5559,7 +6705,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "已出场，未在本轮核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 2.9,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 25,
@@ -5621,7 +6797,7 @@
       },
       "recent_status": "首轮未出场，后防深度。",
       "form_status_1_5": 1.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -5749,6 +6925,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "米夏埃尔-斯沃博达",
+          "english_name": "Michael Svoboda",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 1.8,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -5778,7 +6973,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 1.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     },
     {
       "squad_number": 26,
@@ -5842,7 +7067,7 @@
       },
       "recent_status": "首轮未出场，中场替补。",
       "form_status_1_5": 1.8,
-      "form_reason": "本轮未出场或无关键事件；状态值仅做低权重延续。",
+      "form_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
       "source_log": [
         {
           "source": "2026 FIFA World Cup squads / Austria section",
@@ -5970,6 +7195,25 @@
           "external_rating": null,
           "rating_source_status": "unavailable_same_source",
           "updated_at": "2026-06-23T11:00:00+08:00"
+        },
+        {
+          "match_id": "2026-06-28_AUT_3-3_ALG",
+          "date": "2026-06-28",
+          "opponent": "阿尔及利亚",
+          "player": "亚历山德罗-舍普夫",
+          "english_name": "Alessandro Schöpf",
+          "started": false,
+          "minutes": 0,
+          "event_summary": "未在现场源记录为出场；官方完整事件表未闭合。",
+          "external_rating": null,
+          "external_rating_source": null,
+          "rating_source_status": "unavailable_same_source",
+          "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+          "internal_match_rating_1_5": 2.7,
+          "rating_reason": "0分钟未登场或未被现场源记录为出场，状态证据不足，保持低权重。",
+          "postmatch_form_status_1_5": 1.8,
+          "injury_availability": "未在本场可靠来源中发现新增伤停或停赛。",
+          "captured_at": "2026-06-28T20:56:26+08:00"
         }
       ],
       "round2": {
@@ -5999,7 +7243,37 @@
         ],
         "updated_at": "2026-06-23T11:00:00+08:00"
       },
-      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。"
+      "next_match_availability_note": "本轮未出场；未在核验来源中发现新增伤停或停赛。",
+      "round3": {
+        "match_id": "2026-06-28_AUT_3-3_ALG",
+        "date": "2026-06-28",
+        "opponent": "阿尔及利亚",
+        "review_file": "E:/worldcup/比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+        "started": false,
+        "minutes": 0,
+        "substitution": "未登场/未在可靠现场源记录为替补出场",
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "external_rating": null,
+        "rating_source_status": "unavailable_same_source",
+        "rating_missing_note": "未取得可靠同场同源外部逐人评分；external_rating 保留 null，内部评分为项目模型参考值，不冒充媒体评分。",
+        "internal_match_rating_1_5": 2.7,
+        "postmatch_form_status_1_5": 1.8,
+        "injury_status_after_match": "none_confirmed_in_sources_used",
+        "suspension_status_after_match": "none_confirmed_in_sources_used",
+        "next_match_availability_note": "未在本场可靠来源中发现新增伤停或停赛。",
+        "key_stats_note": "未在现场源记录为出场；官方完整事件表未闭合。",
+        "source_status": "unused_or_not_confirmed_in_live_source",
+        "source_urls": [
+          "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+          "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/austria-algeria-seal-round-of-32-spots-after-thrilling-3-3-draw-at-fifa-world-cup-2026/articleshow/132046003.cms",
+          "https://cadenaser.com/nacional/2026/06/28/argelia-3-3-austria-resumen-resultado-y-goles-del-partido-del-grupo-j-del-mundial-2026-cadena-ser/"
+        ],
+        "captured_at": "2026-06-28T20:56:26+08:00",
+        "updated_at": "2026-06-28T20:56:26+08:00"
+      }
     }
   ],
   "team_state_summary": {
@@ -6080,7 +7354,8 @@
     "Christoph Baumgartner 6月2日伤退、Dejan Ljubičić 6月10日替补进入名单，已在来源冲突/动态说明中保留。",
     "补时阶段较长；分钟以常规90分钟口径记录，未按90+11累计到101分钟。",
     "批次E：已按Transfermarkt详细页补身价/身高/惯用脚，可匹配 roster 26/26、player_state 26/26；未匹配项保留missing_name_match说明。分钟/评分缺口已补missing note。",
-    "批次E：Transfermarkt可匹配字段已补；未匹配或球员页未给出的身高/惯用脚/身价保持原值，需后续官方或数据商复核。"
+    "批次E：Transfermarkt可匹配字段已补；未匹配或球员页未给出的身高/惯用脚/身价保持原值，需后续官方或数据商复核。",
+    "Round3 2026-06-28_AUT_3-3_ALG: 官方FIFA完整事件表/逐人评分未取得；已用Guardian现场页和新闻源写入partial_source_limited状态。"
   ],
   "gap_remediation_log": [
     {
@@ -6617,6 +7892,344 @@
       "rating_reason": "首轮未出场，中场替补。",
       "postmatch_form_status_1_5": 2,
       "captured_at": "2026-06-21T01:22:42+08:00"
+    },
+    {
+      "player": "亚历山大-施拉格尔",
+      "english_name": "Alexander Schlager",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.8,
+      "postmatch_form_status_1_5": 2.9,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "大卫-阿芬格鲁伯",
+      "english_name": "David Affengruber",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 1.8,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "凯文-丹索",
+      "english_name": "Kevin Danso",
+      "started": false,
+      "minutes": 28,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3,
+      "postmatch_form_status_1_5": 3,
+      "source_status": "confirmed_sub"
+    },
+    {
+      "player": "克萨韦尔-施拉格尔",
+      "english_name": "Xaver Schlager",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3.1,
+      "postmatch_form_status_1_5": 3.1,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "斯特凡-波施",
+      "english_name": "Stefan Posch",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3,
+      "postmatch_form_status_1_5": 3,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "尼古拉斯-塞瓦尔德",
+      "english_name": "Nicolas Seiwald",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3.2,
+      "postmatch_form_status_1_5": 3.2,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "马尔科-阿瑙托维奇",
+      "english_name": "Marko Arnautović",
+      "started": true,
+      "minutes": null,
+      "goals": 1,
+      "assists": 0,
+      "yellow_cards": 1,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3.7,
+      "postmatch_form_status_1_5": 3.5,
+      "source_status": "confirmed_goal_card_minutes_partial"
+    },
+    {
+      "player": "大卫-阿拉巴",
+      "english_name": "David Alaba",
+      "started": true,
+      "minutes": 62,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3,
+      "postmatch_form_status_1_5": 3,
+      "source_status": "confirmed_injury_watch"
+    },
+    {
+      "player": "马塞尔-萨比策",
+      "english_name": "Marcel Sabitzer",
+      "started": true,
+      "minutes": 90,
+      "goals": 1,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 4,
+      "postmatch_form_status_1_5": 3.8,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "弗洛里安-格里利奇",
+      "english_name": "Florian Grillitsch",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 1.8,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "米夏埃尔-格雷戈里奇",
+      "english_name": "Michael Gregoritsch",
+      "started": false,
+      "minutes": null,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3,
+      "postmatch_form_status_1_5": 3,
+      "source_status": "sub_confirmed_minutes_missing"
+    },
+    {
+      "player": "弗洛里安-维格勒",
+      "english_name": "Florian Wiegele",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 1.8,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "帕特里克-彭茨",
+      "english_name": "Patrick Pentz",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 1.8,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "萨沙-卡拉季奇",
+      "english_name": "Saša Kalajdžić",
+      "started": false,
+      "minutes": null,
+      "goals": 1,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 4,
+      "postmatch_form_status_1_5": 3.7,
+      "source_status": "confirmed_goal_minutes_partial"
+    },
+    {
+      "player": "菲利普-林哈特",
+      "english_name": "Philipp Lienhart",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3,
+      "postmatch_form_status_1_5": 3,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "菲利普-姆韦内",
+      "english_name": "Phillipp Mwene",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3.1,
+      "postmatch_form_status_1_5": 3.1,
+      "source_status": "confirmed"
+    },
+    {
+      "player": "卡尼-楚克乌梅卡",
+      "english_name": "Carney Chukwuemeka",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.5,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "罗马诺-施密德",
+      "english_name": "Romano Schmid",
+      "started": true,
+      "minutes": null,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3,
+      "postmatch_form_status_1_5": 3,
+      "source_status": "confirmed_start_minutes_partial"
+    },
+    {
+      "player": "德扬-柳比契奇",
+      "english_name": "Dejan Ljubičić",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 1.8,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "康拉德-莱默尔",
+      "english_name": "Konrad Laimer",
+      "started": true,
+      "minutes": 90,
+      "goals": 0,
+      "assists": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 3.7,
+      "postmatch_form_status_1_5": 3.6,
+      "source_status": "confirmed_assist_from_live_text"
+    },
+    {
+      "player": "帕特里克-维默尔",
+      "english_name": "Patrick Wimmer",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.9,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "亚历山大-普拉斯",
+      "english_name": "Alexander Prass",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 3,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "马尔科-弗里德尔",
+      "english_name": "Marco Friedl",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.9,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "保罗-万纳",
+      "english_name": "Paul Wanner",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 2.9,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "米夏埃尔-斯沃博达",
+      "english_name": "Michael Svoboda",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 1.8,
+      "source_status": "unused_or_not_confirmed_in_live_source"
+    },
+    {
+      "player": "亚历山德罗-舍普夫",
+      "english_name": "Alessandro Schöpf",
+      "started": false,
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "internal_match_rating_1_5": 2.7,
+      "postmatch_form_status_1_5": 1.8,
+      "source_status": "unused_or_not_confirmed_in_live_source"
     }
   ],
   "internal_rating_backfill_status": {
@@ -6626,7 +8239,7 @@
     "records": 26,
     "review_file": "E:\\worldcup\\比赛\\已完成比赛\\小组赛\\J组\\2026-06-16_奥地利_3-1_约旦_复盘.md"
   },
-  "captured_at": "2026-06-23T11:00:00+08:00",
+  "captured_at": "2026-06-28T20:56:26+08:00",
   "round2_summary": {
     "match": "奥地利 0-2 阿根廷",
     "date": "2026-06-22",
@@ -6636,5 +8249,15 @@
       "https://www.foxsports.com/soccer/fifa-world-cup-men-argentina-vs-austria-jun-22-2026-game-boxscore-647656"
     ],
     "update_policy": "直接迭代 canonical 成员表.md 与 player_state JSON，不新增派生成员表文件。"
+  },
+  "round3_summary": {
+    "match_id": "2026-06-28_AUT_3-3_ALG",
+    "date": "2026-06-28",
+    "opponent": "阿尔及利亚",
+    "result": "奥地利 3-3 阿尔及利亚",
+    "status": "partial_source_limited",
+    "player_records": 26,
+    "captured_at": "2026-06-28T20:56:26+08:00",
+    "source_note": "Guardian现场页核验首发和主要事件；部分换人分钟、全量牌面、官方逐人评分未闭合。"
   }
 }

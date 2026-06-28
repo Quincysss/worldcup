@@ -1,0 +1,178 @@
+{
+  "schema_version": "group_round3_postmatch_v1",
+  "phase": "postmatch_review",
+  "group": "J",
+  "round": 3,
+  "status": "partial_player_state_updated_source_limited",
+  "created_at": "2026-06-28T21:25:00+08:00",
+  "updated_at": "2026-06-28T21:25:00+08:00",
+  "thread_participation": {
+    "data_collector": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+    "tactics": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+    "modeler": "019edb8f-536a-7100-84da-e13bfecb0def",
+    "red_team": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+    "betting_risk": "019edb8f-cd0d-7393-bf92-d637962a67e4"
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-28_ALG_3-3_AUT",
+      "file": "比赛/已完成比赛/小组赛/J组/2026-06-28_阿尔及利亚_3-3_奥地利_复盘.md",
+      "actual_result": {
+        "home": "阿尔及利亚",
+        "away": "奥地利",
+        "score": "3-3",
+        "outcome": "draw",
+        "total_goals": 6
+      },
+      "key_events": [
+        "阿瑙托维奇上半场为奥地利领先。",
+        "贝尔加利半场前为阿尔及利亚扳平。",
+        "萨比策下半场再度帮助奥地利领先。",
+        "马赫雷斯先扳平，又在补时阶段打入看似决定命运的第三球。",
+        "卡拉季奇替补登场后补时头球追成3-3，奥地利以小组第二晋级，阿尔及利亚以第三名晋级。"
+      ],
+      "prediction_backtest": {
+        "pre_match_1x2": {
+          "home_win": 0.315,
+          "draw": 0.33,
+          "away_win": 0.355
+        },
+        "primary_direction_hit": false,
+        "actual_bucket_probability": 0.33,
+        "top3_score_hit": false,
+        "top5_score_hit": false,
+        "actual_score_probability": 0.007984,
+        "xg_pre_match": {
+          "home": 1.14,
+          "away": 1.31
+        },
+        "total_goal_error": 3.55,
+        "totals_error": "模型偏向 under 2.5/3.5，实际为6球大比分平局。"
+      },
+      "diagnosis": {
+        "model": "平局风险被识别，但被奥地利小优叙事压在第二层；更大的问题是把第三轮平局激励理解成低事件，而非补时阶段会突然打开的高事件平局。",
+        "tactics": "双方都有接受平局的区间，但一旦补时进球改变出线排序，比赛会从控风险瞬间切到生死球，独立泊松低估了这种状态相关性。",
+        "player_state": "马赫雷斯、贝尔加利、萨比策、卡拉季奇、阿瑙托维奇均需上调事件权重；阿拉巴/阿瑙托维奇有体能观察点。"
+      },
+      "player_state_update_status": "partial",
+      "member_table_updates": [
+        "队伍/阿尔及利亚/成员表.md",
+        "队伍/奥地利/成员表.md"
+      ],
+      "player_state_files": [
+        "data/outputs/player_state/algeria-player-state.json",
+        "data/outputs/player_state/austria-player-state.json"
+      ],
+      "source_log": [
+        "https://www.theguardian.com/football/live/2026/jun/28/fifa-world-cup-2026-live-algeria-v-austria-updates-alg-vs-aut-group-j-match-score-latest",
+        "https://www.skysports.com/football/news/12309/13556709/world-cup-2026-algeria-3-3-austria-sasa-kalajdzic-scores-96th-minute-equaliser-amid-incredible-finish-which-sees-both-sides-reach-knockouts"
+      ]
+    },
+    {
+      "match_id": "2026-06-28_JOR_1-3_ARG",
+      "file": "比赛/已完成比赛/小组赛/J组/2026-06-28_约旦_1-3_阿根廷_复盘.md",
+      "actual_result": {
+        "home": "约旦",
+        "away": "阿根廷",
+        "score": "1-3",
+        "outcome": "away_win",
+        "total_goals": 4
+      },
+      "key_events": [
+        "洛塞尔索任意球为阿根廷领先。",
+        "劳塔罗点球扩大比分。",
+        "塔马里下半场为约旦扳回一球。",
+        "梅西替补登场后用任意球锁定3-1。",
+        "阿根廷轮换幅度大，但精英替补和定位球仍保留进球上限。"
+      ],
+      "prediction_backtest": {
+        "pre_match_1x2": {
+          "home_win": 0.12,
+          "draw": 0.24,
+          "away_win": 0.64
+        },
+        "primary_direction_hit": true,
+        "actual_bucket_probability": 0.64,
+        "top3_score_hit": false,
+        "top5_score_hit": false,
+        "actual_score_probability": 0.056242,
+        "xg_pre_match": {
+          "home": 0.56,
+          "away": 1.95
+        },
+        "total_goal_error": 1.49,
+        "handicap_read": "约旦+2让平命中，说明两球差桶比只取约旦+2让胜更合理。"
+      },
+      "diagnosis": {
+        "model": "阿根廷胜方向正确，但轮换降速折扣过强；模型没有充分连接约旦进一球和阿根廷仍能进三球的BTTS+三球簇。",
+        "tactics": "阿根廷大轮换并未压掉定位球质量；梅西替补登场使低位破局和终结尾部重新抬升。",
+        "player_state": "洛塞尔索、劳塔罗、梅西上调；塔马里维持约旦反击核心；阿布达哈布伤情需下一轮前复核。"
+      },
+      "player_state_update_status": "partial",
+      "member_table_updates": [
+        "队伍/约旦/成员表.md",
+        "队伍/阿根廷/成员表.md"
+      ],
+      "player_state_files": [
+        "data/outputs/player_state/jordan-player-state.json",
+        "data/outputs/player_state/argentina-player-state.json"
+      ],
+      "source_log": [
+        "https://www.theguardian.com/football/2026/jun/28/argentian-jordan-world-cup-group-j-match-report",
+        "https://rg.org/en-ca/news/soccer/messi-free-kick-argentina-beat-jordan-world-cup"
+      ]
+    }
+  ],
+  "group_table_after_round3": [
+    {
+      "team": "阿根廷",
+      "points": 9,
+      "goal_difference": 7,
+      "status": "1J, 晋级32强"
+    },
+    {
+      "team": "奥地利",
+      "points": 4,
+      "goal_difference": 0,
+      "status": "2J, 晋级32强"
+    },
+    {
+      "team": "阿尔及利亚",
+      "points": 4,
+      "goal_difference": -2,
+      "status": "第三名晋级32强"
+    },
+    {
+      "team": "约旦",
+      "points": 0,
+      "goal_difference": -5,
+      "status": "小组出局"
+    }
+  ],
+  "parameter_updates": [
+    {
+      "key": "round3_late_event_volatility_tail",
+      "update": "+0.03 to +0.06 when simultaneous table state can flip late"
+    },
+    {
+      "key": "high_event_draw_branch",
+      "update": "新增：平局不只低比分，互利平局也可能在补时变成3-3类高事件平局"
+    },
+    {
+      "key": "elite_favorite_rotation_ceiling",
+      "update": "+0.04 to +0.08 to favorite scoring tail when elite substitutes/set-piece takers remain available"
+    },
+    {
+      "key": "underdog_btts_floor",
+      "update": "+0.02 to +0.04 when underdog has transition/set-piece path and favorite rotates defense"
+    },
+    {
+      "key": "handicap_bucket_separation",
+      "update": "强制拆分+2让胜、让平、让负；不能把小负保护写成单一桶"
+    }
+  ],
+  "quality_notes": [
+    "数据采集线程已回灌四队成员表和player_state，但FIFA官方完整事件表、部分助攻、全量换人和同场同源逐人评分仍缺，因此为partial。",
+    "不输出新投注建议；竞彩内容仅做赛后风险归因。"
+  ]
+}

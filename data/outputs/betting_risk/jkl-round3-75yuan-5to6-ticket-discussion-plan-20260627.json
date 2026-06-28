@@ -1,0 +1,508 @@
+{
+  "schema_version": "jkl_round3_75yuan_discussion_plan_v1",
+  "generated_at": "2026-06-27T16:10:00+08:00",
+  "status": "discussion_only_hold",
+  "betting_gate_status": "hold_not_executable",
+  "stake_total_executable": 0,
+  "discussion_budget_reference": 75,
+  "theoretical_ticket_total": 75,
+  "ticket_count": 6,
+  "thread_participation": {
+    "data_collector": {
+      "thread_id": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+      "status": "completed",
+      "outputs": [
+        "data/thread_outputs/jkl-round3-75yuan-20260627/data-collector.json",
+        "data/thread_outputs/jkl-round3-75yuan-20260627/data-collector.md"
+      ]
+    },
+    "modeler": {
+      "thread_id": "019edb8f-536a-7100-84da-e13bfecb0def",
+      "status": "completed",
+      "outputs": [
+        "data/thread_outputs/jkl-round3-75yuan-20260627/modeler.json",
+        "data/thread_outputs/jkl-round3-75yuan-20260627/modeler.md"
+      ]
+    },
+    "red_team": {
+      "thread_id": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+      "status": "completed",
+      "overall_verdict": "hold_not_executable",
+      "outputs": [
+        "data/thread_outputs/jkl-round3-75yuan-20260627/red-team.json",
+        "data/thread_outputs/jkl-round3-75yuan-20260627/red-team.md"
+      ]
+    },
+    "betting_risk": {
+      "thread_id": "019edb8f-cd0d-7393-bf92-d637962a67e4",
+      "status": "completed",
+      "outputs": [
+        "data/thread_outputs/jkl-round3-75yuan-20260627/betting-risk.json",
+        "data/thread_outputs/jkl-round3-75yuan-20260627/betting-risk.md"
+      ]
+    }
+  },
+  "global_gate_conclusion": {
+    "today_executable": false,
+    "hard_gate_failures": [
+      {
+        "gate": "T-75 official lineups",
+        "status": "missing_for_all_six_matches",
+        "effect": "hold_not_executable"
+      },
+      {
+        "gate": "latest injury, suspension and minutes limits",
+        "status": "partial_source_limited",
+        "effect": "hold_not_executable"
+      },
+      {
+        "gate": "official China Jingcai live odds",
+        "status": "partial_local_snapshot_and_online_recheck_conflicts",
+        "effect": "discussion_only_hold"
+      },
+      {
+        "gate": "same-source markets for all used plays",
+        "status": "incomplete",
+        "missing": [
+          "ordinary 1X2 for Panama vs England",
+          "ordinary 1X2 for Jordan vs Argentina",
+          "same-source total-goals odds values",
+          "same-source exact-score odds values",
+          "same-source half-full-time odds values",
+          "over-under dxq markets"
+        ],
+        "effect": "hold_not_executable"
+      },
+      {
+        "gate": "red-team verdict",
+        "status": "hold_not_executable",
+        "effect": "hold_not_executable"
+      }
+    ],
+    "odds_source_note": {
+      "primary_snapshot": "500.com local snapshot / China Sports Lottery cross-check",
+      "primary_captured_at": "2026-06-27T15:22:04+08:00",
+      "online_recheck": "China Sports Lottery online recheck",
+      "online_recheck_captured_at": "2026-06-27T15:25:09+08:00",
+      "conflict_note": "Local 500 snapshot and online recheck contain conflicting same-market prices for multiple matches; payout numbers are discussion references only."
+    }
+  },
+  "tickets": [
+    {
+      "ticket_id": "T1",
+      "ticket_name": "约旦 +2 小负走廊",
+      "bucket_type": "主仓参考",
+      "parlay_type": "单关",
+      "discussion_stake_rmb": 18,
+      "theoretical_max_return_rmb": 41.04,
+      "execution_status": "not_executable_before_gates_clear",
+      "is_executable": false,
+      "red_team_status": "hold",
+      "legs": [
+        {
+          "match": "约旦 vs 阿根廷",
+          "market": "让球胜平负",
+          "selection": "约旦 +2 让球胜",
+          "odds": 2.28,
+          "model_probability": 0.5566,
+          "market_implied_probability": 0.3884,
+          "edge_or_no_edge": "positive_model_delta_discussion_only",
+          "variance_level": "medium",
+          "settlement_condition": "约旦真实胜或平，或阿根廷只赢1球"
+        }
+      ],
+      "hit_conditions": [
+        "约旦不败，或阿根廷只赢1球"
+      ],
+      "failure_conditions": [
+        "阿根廷赢2球或以上"
+      ],
+      "model_support_points": [
+        "模型映射给约旦 +2 让球胜 55.66%，高于市场去水 38.84%",
+        "这是净胜球档位，不是普通胜平负判断"
+      ],
+      "maximum_risk_points": [
+        "阿根廷轮换与后段转换可能推高净胜球",
+        "约旦 vs 阿根廷普通胜平负未开"
+      ]
+    },
+    {
+      "ticket_id": "T2",
+      "ticket_name": "哥伦比亚 +1 搭加纳抗结果",
+      "bucket_type": "主仓参考",
+      "parlay_type": "2串1",
+      "discussion_stake_rmb": 17,
+      "theoretical_max_return_rmb": 66.22,
+      "execution_status": "not_executable_before_gates_clear",
+      "is_executable": false,
+      "red_team_status": "hold",
+      "legs": [
+        {
+          "match": "哥伦比亚 vs 葡萄牙",
+          "market": "让球胜平负",
+          "selection": "哥伦比亚 +1 让球胜",
+          "odds": 1.9,
+          "model_probability": 0.5592,
+          "market_implied_probability": 0.4663,
+          "edge_or_no_edge": "positive_model_delta_discussion_only",
+          "variance_level": "medium",
+          "settlement_condition": "哥伦比亚真实胜或平"
+        },
+        {
+          "match": "克罗地亚 vs 加纳",
+          "market": "让球胜平负",
+          "selection": "克罗地亚 -1 让球负",
+          "odds": 2.05,
+          "model_probability": 0.5173,
+          "market_implied_probability": 0.4322,
+          "edge_or_no_edge": "positive_model_delta_discussion_only",
+          "variance_level": "medium",
+          "settlement_condition": "克罗地亚真实平或负"
+        }
+      ],
+      "hit_conditions": [
+        "哥伦比亚不输给葡萄牙",
+        "克罗地亚不击败加纳"
+      ],
+      "failure_conditions": [
+        "葡萄牙击败哥伦比亚",
+        "克罗地亚击败加纳"
+      ],
+      "model_support_points": [
+        "哥伦比亚 +1 让球胜模型 55.92%",
+        "克罗地亚 -1 让球负模型 51.73%，对应克罗地亚不赢两球以上的宽路径"
+      ],
+      "maximum_risk_points": [
+        "同时站在两个市场热门对面",
+        "早球会显著改变两场分布"
+      ]
+    },
+    {
+      "ticket_id": "T3",
+      "ticket_name": "巴拿马 +2 搭刚果金让球阻断",
+      "bucket_type": "主仓参考",
+      "parlay_type": "2串1",
+      "discussion_stake_rmb": 15,
+      "theoretical_max_return_rmb": 72.17,
+      "execution_status": "not_executable_before_gates_clear",
+      "is_executable": false,
+      "red_team_status": "hold",
+      "legs": [
+        {
+          "match": "巴拿马 vs 英格兰",
+          "market": "让球胜平负",
+          "selection": "巴拿马 +2 让球胜",
+          "odds": 2.48,
+          "model_probability": 0.5976,
+          "market_implied_probability": 0.3571,
+          "edge_or_no_edge": "positive_model_delta_discussion_only",
+          "variance_level": "medium_low",
+          "settlement_condition": "巴拿马真实胜或平，或英格兰只赢1球"
+        },
+        {
+          "match": "刚果金 vs 乌兹别克斯坦",
+          "market": "让球胜平负",
+          "selection": "刚果金 -1 让球负",
+          "odds": 1.94,
+          "model_probability": 0.5124,
+          "market_implied_probability": 0.457,
+          "edge_or_no_edge": "positive_model_delta_discussion_only",
+          "variance_level": "medium",
+          "settlement_condition": "刚果金真实平或负"
+        }
+      ],
+      "hit_conditions": [
+        "英格兰赢1球以内或不胜",
+        "刚果金不胜"
+      ],
+      "failure_conditions": [
+        "英格兰赢2球或以上",
+        "刚果金赢球"
+      ],
+      "model_support_points": [
+        "巴拿马 +2 让球胜模型 59.76%",
+        "刚果金 -1 让球负模型 51.24%"
+      ],
+      "maximum_risk_points": [
+        "两腿均为净胜球敏感项",
+        "早球、红牌和首发轮换会放大误差"
+      ]
+    },
+    {
+      "ticket_id": "T4",
+      "ticket_name": "四场精确净胜球走廊",
+      "bucket_type": "娱乐仓观察",
+      "parlay_type": "4串1",
+      "discussion_stake_rmb": 10,
+      "theoretical_max_return_rmb": 2188.06,
+      "execution_status": "not_executable_before_gates_clear",
+      "is_executable": false,
+      "red_team_status": "hold",
+      "legs": [
+        {
+          "match": "阿尔及利亚 vs 奥地利",
+          "market": "让球胜平负",
+          "selection": "阿尔及利亚 +1 让球平",
+          "odds": 4.35,
+          "model_probability": 0.2213,
+          "market_implied_probability": 0.2036,
+          "edge_or_no_edge": "no_clear_edge",
+          "variance_level": "medium_high",
+          "settlement_condition": "奥地利赢1球"
+        },
+        {
+          "match": "约旦 vs 阿根廷",
+          "market": "让球胜平负",
+          "selection": "约旦 +2 让球平",
+          "odds": 3.85,
+          "model_probability": 0.219,
+          "market_implied_probability": 0.23,
+          "edge_or_no_edge": "no_clear_edge",
+          "variance_level": "medium_high",
+          "settlement_condition": "阿根廷赢2球"
+        },
+        {
+          "match": "克罗地亚 vs 加纳",
+          "market": "让球胜平负",
+          "selection": "克罗地亚 -1 让球平",
+          "odds": 3.35,
+          "model_probability": 0.2593,
+          "market_implied_probability": 0.2645,
+          "edge_or_no_edge": "no_clear_edge",
+          "variance_level": "medium_high",
+          "settlement_condition": "克罗地亚赢1球"
+        },
+        {
+          "match": "巴拿马 vs 英格兰",
+          "market": "让球胜平负",
+          "selection": "巴拿马 +2 让球平",
+          "odds": 3.9,
+          "model_probability": 0.2139,
+          "market_implied_probability": 0.2271,
+          "edge_or_no_edge": "no_clear_edge",
+          "variance_level": "medium_high",
+          "settlement_condition": "英格兰赢2球"
+        }
+      ],
+      "hit_conditions": [
+        "四场同时落在指定精确净胜球"
+      ],
+      "failure_conditions": [
+        "任意一场偏离指定净胜球"
+      ],
+      "model_support_points": [
+        "来自模型比分簇或次级净胜球走廊"
+      ],
+      "maximum_risk_points": [
+        "四个精确净胜球同时发生概率很低",
+        "只能作高风险娱乐仓观察，不能承担覆盖功能"
+      ],
+      "high_return_note": "10元理论回报超过1000元，但命中概率很低，不能加仓"
+    },
+    {
+      "ticket_id": "T5",
+      "ticket_name": "三场平局/一球分支",
+      "bucket_type": "娱乐仓观察",
+      "parlay_type": "3串1",
+      "discussion_stake_rmb": 10,
+      "theoretical_max_return_rmb": 445.12,
+      "execution_status": "not_executable_before_gates_clear",
+      "is_executable": false,
+      "red_team_status": "hold",
+      "legs": [
+        {
+          "match": "哥伦比亚 vs 葡萄牙",
+          "market": "胜平负",
+          "selection": "哥伦比亚胜",
+          "odds": 4.23,
+          "model_probability": 0.278,
+          "market_implied_probability": 0.2093,
+          "edge_or_no_edge": "positive_model_delta_discussion_only",
+          "variance_level": "medium_high",
+          "settlement_condition": "哥伦比亚90分钟内获胜"
+        },
+        {
+          "match": "刚果金 vs 乌兹别克斯坦",
+          "market": "让球胜平负",
+          "selection": "刚果金 -1 让球平",
+          "odds": 3.45,
+          "model_probability": 0.2432,
+          "market_implied_probability": 0.257,
+          "edge_or_no_edge": "no_clear_edge",
+          "variance_level": "medium_high",
+          "settlement_condition": "刚果金赢1球"
+        },
+        {
+          "match": "克罗地亚 vs 加纳",
+          "market": "胜平负",
+          "selection": "平局",
+          "odds": 3.05,
+          "model_probability": 0.2902,
+          "market_implied_probability": 0.2902,
+          "edge_or_no_edge": "no_clear_edge",
+          "variance_level": "medium_high",
+          "settlement_condition": "克罗地亚与加纳90分钟打平"
+        }
+      ],
+      "hit_conditions": [
+        "哥伦比亚胜",
+        "刚果金赢1球",
+        "克罗地亚与加纳打平"
+      ],
+      "failure_conditions": [
+        "任意一腿未落在窄路径"
+      ],
+      "model_support_points": [
+        "哥伦比亚胜相对市场有正向模型差",
+        "刚果金一球胜在比分簇内",
+        "克罗地亚平局约29%"
+      ],
+      "maximum_risk_points": [
+        "包含冷门、精确一球和平局分支，方差很高"
+      ]
+    },
+    {
+      "ticket_id": "T6",
+      "ticket_name": "三场冷门尾部分支",
+      "bucket_type": "娱乐仓观察",
+      "parlay_type": "3串1",
+      "discussion_stake_rmb": 5,
+      "theoretical_max_return_rmb": 352.07,
+      "execution_status": "not_executable_before_gates_clear",
+      "is_executable": false,
+      "red_team_status": "hold",
+      "legs": [
+        {
+          "match": "阿尔及利亚 vs 奥地利",
+          "market": "胜平负",
+          "selection": "阿尔及利亚胜",
+          "odds": 3.35,
+          "model_probability": 0.315,
+          "market_implied_probability": 0.2643,
+          "edge_or_no_edge": "positive_model_delta_discussion_only",
+          "variance_level": "medium_high",
+          "settlement_condition": "阿尔及利亚90分钟内获胜"
+        },
+        {
+          "match": "刚果金 vs 乌兹别克斯坦",
+          "market": "胜平负",
+          "selection": "乌兹别克斯坦胜",
+          "odds": 3.72,
+          "model_probability": 0.245,
+          "market_implied_probability": 0.238,
+          "edge_or_no_edge": "no_clear_edge",
+          "variance_level": "medium_high",
+          "settlement_condition": "乌兹别克斯坦90分钟内获胜"
+        },
+        {
+          "match": "克罗地亚 vs 加纳",
+          "market": "胜平负",
+          "selection": "加纳胜",
+          "odds": 5.65,
+          "model_probability": 0.206,
+          "market_implied_probability": 0.1566,
+          "edge_or_no_edge": "positive_model_delta_discussion_only",
+          "variance_level": "medium_high",
+          "settlement_condition": "加纳90分钟内获胜"
+        }
+      ],
+      "hit_conditions": [
+        "三场均由模型非首选一侧赢球"
+      ],
+      "failure_conditions": [
+        "任意一场热门或平局路径出现"
+      ],
+      "model_support_points": [
+        "三场都有可解释尾部",
+        "均不是主仓参考可承接的低波动路径"
+      ],
+      "maximum_risk_points": [
+        "含冲突腿",
+        "三场尾部需要同时兑现"
+      ]
+    }
+  ],
+  "amount_validation": {
+    "sum_all_discussion_stakes_rmb": 75,
+    "core_reference_sum_rmb": 50,
+    "entertainment_reference_sum_rmb": 25,
+    "core_single_ticket_max_rmb": 18,
+    "core_single_ticket_max_share_of_budget": 0.24,
+    "executable_sum_rmb": 0
+  },
+  "candidate_play_pool": {
+    "lower_variance_candidates": [
+      "约旦 +2 让球胜：约旦不败或阿根廷赢1球",
+      "巴拿马 +2 让球胜：巴拿马不败或英格兰赢1球",
+      "哥伦比亚 +1 让球胜：哥伦比亚真实胜或平",
+      "克罗地亚 -1 让球负：克罗地亚真实平或负",
+      "刚果金 -1 让球负：刚果金真实平或负"
+    ],
+    "medium_risk_candidates": [
+      "奥地利胜：模型略偏奥地利但平局底噪高",
+      "阿尔及利亚 +1 让球平：奥地利赢1球",
+      "克罗地亚 -1 让球平：克罗地亚赢1球",
+      "刚果金 -1 让球平：刚果金赢1球",
+      "约旦 +2 让球平：阿根廷赢2球",
+      "巴拿马 +2 让球平：英格兰赢2球"
+    ],
+    "high_return_entertainment_candidates": [
+      "多场精确净胜球链",
+      "冷门胜串关",
+      "比分、总进球、半全场仅观察：当前未捕获具体同源赔率"
+    ],
+    "removed_items": [
+      "葡萄牙胜进入主仓参考",
+      "克罗地亚胜进入主仓参考",
+      "克罗地亚 -1 让球胜",
+      "巴拿马 +2 让球负",
+      "约旦 +2 让球负",
+      "阿尔及利亚 +1 让球胜",
+      "刚果金胜进入主仓参考"
+    ],
+    "live_wait_items": [
+      "六场 T-75 官方首发",
+      "最终伤停、停赛、黄牌和分钟限制",
+      "官方竞彩即时赔率与销售状态",
+      "使用玩法的同源赔率快照",
+      "首发和赔率后红队复核"
+    ]
+  },
+  "correlation_check": {
+    "highly_correlated": [
+      "T1/T4 都依赖约旦 vs 阿根廷净胜球，但两者互斥",
+      "T3/T4 都依赖巴拿马 vs 英格兰净胜球，但两者互斥",
+      "克罗地亚 vs 加纳出现在 T2/T4/T5/T6，单场集中风险较高"
+    ],
+    "shared_model_assumptions": [
+      "强队小胜",
+      "低比分",
+      "末轮控节奏",
+      "热门不穿深盘"
+    ],
+    "mutually_exclusive_paths": [
+      "约旦 +2 让球胜与约旦 +2 让球平不能同时命中",
+      "巴拿马 +2 让球胜与巴拿马 +2 让球平不能同时命中",
+      "克罗地亚 -1 让球负与克罗地亚 -1 让球平不能同时命中",
+      "克罗地亚平与加纳胜不能同时命中"
+    ],
+    "risk_note": "娱乐票不是独立保护，只是不同尾部剧本；不得把多票合计视为保底回款。"
+  },
+  "high_return_entertainment_warning": {
+    "tickets": [
+      "T4",
+      "T5",
+      "T6"
+    ],
+    "note": "高回报来自低命中概率、精确净胜球、冷门胜和多腿同时发生。T4 满足 10 元理论 1000+ 的赔率形态，但不能加仓，不能计入回款底线。"
+  },
+  "skip_option": {
+    "recommended_current_executable_choice": "skip_or_wait",
+    "reason": "T-75 官方首发、最终伤停、官方竞彩即时赔率、同源玩法快照和红队复核均未全部补齐。"
+  },
+  "validation": {
+    "json_parse": "passed",
+    "no_placeholder_markers": true,
+    "no_executable_betting_language": true
+  }
+}

@@ -19,7 +19,57 @@
     "tactical_packet": null,
     "odds_snapshot": null,
     "official_lineups_status": "missing_until_T_minus_75m",
+    "predicted_lineups_status": "missing_or_probable_not_official",
     "latest_injury_status": "missing_or_partial",
+    "source_log": [],
+    "gaps_and_conflicts": []
+  },
+  "predicted_lineups": {
+    "source_status": "probable_not_official",
+    "captured_at": null,
+    "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+    "team_a": {
+      "team": null,
+      "formation": null,
+      "confidence": null,
+      "predicted_xi": [
+        {
+          "position": null,
+          "player_cn": null,
+          "player_en": null,
+          "role_note": null
+        }
+      ],
+      "rotation_candidates": [
+        {
+          "player_cn": null,
+          "player_en": null,
+          "trigger": null
+        }
+      ],
+      "model_impact_if_changed": []
+    },
+    "team_b": {
+      "team": null,
+      "formation": null,
+      "confidence": null,
+      "predicted_xi": [
+        {
+          "position": null,
+          "player_cn": null,
+          "player_en": null,
+          "role_note": null
+        }
+      ],
+      "rotation_candidates": [
+        {
+          "player_cn": null,
+          "player_en": null,
+          "trigger": null
+        }
+      ],
+      "model_impact_if_changed": []
+    },
     "source_log": [],
     "gaps_and_conflicts": []
   },

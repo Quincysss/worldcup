@@ -1,0 +1,1194 @@
+{
+  "schema_version": "group_round3_postmortem_v2",
+  "status": "completed_with_partial_player_state_updates",
+  "generated_at": "2026-06-28T22:35:00+08:00",
+  "group": "L",
+  "role_threads": {
+    "data_collector": "completed_partial_source_limited",
+    "tactics_coach": "completed_partial_source_limited",
+    "modeler": "completed_model_backtest_partial_player_state",
+    "red_team": "completed_hold",
+    "betting_risk": "completed_postmatch_no_new_advice"
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-28_croatia_vs_ghana",
+      "fixture": "Croatia vs Ghana",
+      "actual_result": {
+        "fixture": "Croatia vs Ghana",
+        "actual_score": "2-1",
+        "home_goals": 2,
+        "away_goals": 1,
+        "outcome": "home_win",
+        "note": "Croatia one-goal win; result direction aligned with model, exact score just outside Top5 but close to median one-goal-win cluster."
+      },
+      "pre_match": {
+        "expected_goals": {
+          "home": 1.28,
+          "away": 0.78,
+          "total": 2.06
+        },
+        "probabilities_1x2_after_red_team": {
+          "home_win": 0.485,
+          "draw": 0.305,
+          "away_win": 0.21
+        },
+        "primary_direction": "home_win",
+        "top_scorelines": [
+          {
+            "score": "1-0",
+            "probability": 0.163141
+          },
+          {
+            "score": "0-0",
+            "probability": 0.127454
+          },
+          {
+            "score": "1-1",
+            "probability": 0.12725
+          },
+          {
+            "score": "2-0",
+            "probability": 0.10441
+          },
+          {
+            "score": "0-1",
+            "probability": 0.099414
+          }
+        ],
+        "totals_probabilities": {
+          "over_2_5": 0.339559,
+          "under_2_5": 0.660441,
+          "over_3_5": 0.153862,
+          "under_3_5": 0.846138,
+          "btts_yes": 0.391011,
+          "btts_no": 0.608989
+        },
+        "odds_implied_probability": {
+          "source": "中国足彩网",
+          "captured_at": "2026-06-26T17:43:00+08:00",
+          "ordinary_spf_odds": {
+            "home": 1.6,
+            "draw": 3.05,
+            "away": 5.65
+          },
+          "no_vig": {
+            "home_win": 0.553166,
+            "draw": 0.290185,
+            "away_win": 0.156649
+          },
+          "handicap": {
+            "home_handicap": -1,
+            "odds": {
+              "home": 2.92,
+              "draw": 3.35,
+              "away": 2.05
+            }
+          }
+        },
+        "red_team_status": "hold"
+      },
+      "backtest_metrics": {
+        "primary_direction_hit": true,
+        "actual_outcome_probability": 0.485,
+        "brier_score_multiclass": 0.40235,
+        "log_loss_actual_bucket": 0.723606,
+        "actual_score_probability_in_matrix": 0.08144,
+        "actual_score_rank_in_0_0_to_5_5_matrix": 6,
+        "top3_score_hit": false,
+        "top5_score_hit": false,
+        "home_goal_abs_error_vs_xg": 0.72,
+        "away_goal_abs_error_vs_xg": 0.22,
+        "total_goal_abs_error_vs_xg_total": 0.94,
+        "over_2_5_actual": true,
+        "under_2_5_model_direction_hit": false,
+        "over_3_5_actual": false,
+        "under_3_5_model_direction_hit": true
+      },
+      "market_calibration_error": {
+        "ordinary_1x2_actual_bucket": "home_win",
+        "ordinary_1x2_model_probability": 0.485,
+        "ordinary_1x2_market_no_vig_probability": 0.553166,
+        "ordinary_1x2_calibration_read": "Market was stronger than model on Croatia home win; actual direction supports market, while red-team discount was directionally conservative.",
+        "handicap_line": "Croatia -1",
+        "handicap_actual_bucket": "handicap draw because Croatia won by exactly one goal",
+        "handicap_model_probability": 0.259318,
+        "handicap_market_no_vig_probability": 0.264452,
+        "handicap_calibration_read": "The exact one-goal win bucket was the correct settlement layer; it must not be replaced by ordinary Croatia win probability."
+      },
+      "postmatch_error": {
+        "type": "direction_hit_score_near_median_total_miss",
+        "summary": "Croatia win direction hit, but 2-1 was just outside Top5 and over 2.5 beat the low-total lean."
+      },
+      "factor_error": {
+        "market_signal": "Market home-win lean helped; red-team discount correctly kept uncertainty but may have reduced Croatia direction too far.",
+        "tactical_signal": "Croatia midfield/control and set-piece/second-phase pressure were enough for the one-goal win, while Ghana still retained one-goal transition/set-piece path.",
+        "player_state_signal": "Croatia veteran control and Budimir/Kramaric-style penalty-box routes were slightly underweighted in the 2-1 branch."
+      },
+      "score_tail_error": {
+        "severity": "low_medium",
+        "actual_score_probability": 0.08144,
+        "diagnosis": "2-1 was not Top5 but carried about 8.1% mass and ranked near the main cluster. This is not a heavy-tail miss; it is a one-goal win plus BTTS/over-2.5 branch that should be more visible."
+      },
+      "draw_floor_error": {
+        "severity": "low",
+        "diagnosis": "Draw floor was not the primary miss. The model already lifted draw after red-team, but actual match confirmed Croatia edge."
+      },
+      "third_round_context_error": {
+        "severity": "medium_low",
+        "diagnosis": "Third-round must-win pressure for Croatia was handled directionally, but the model kept the total-goal profile too low once Ghana had to chase and Croatia could still find a second."
+      }
+    },
+    {
+      "match_id": "2026-06-28_panama_vs_england",
+      "fixture": "Panama vs England",
+      "actual_result": {
+        "fixture": "Panama vs England",
+        "actual_score": "0-2",
+        "home_goals": 0,
+        "away_goals": 2,
+        "outcome": "away_win",
+        "note": "England win and 0-2 exact score hit the Top2 cluster; strong-team late break existed but did not become a blowout."
+      },
+      "pre_match": {
+        "expected_goals": {
+          "home": 0.5,
+          "away": 1.75,
+          "total": 2.25
+        },
+        "probabilities_1x2_after_red_team": {
+          "home_win": 0.115,
+          "draw": 0.24,
+          "away_win": 0.645
+        },
+        "primary_direction": "away_win",
+        "top_scorelines": [
+          {
+            "score": "0-1",
+            "probability": 0.184449
+          },
+          {
+            "score": "0-2",
+            "probability": 0.161393
+          },
+          {
+            "score": "0-0",
+            "probability": 0.105399
+          },
+          {
+            "score": "0-3",
+            "probability": 0.094146
+          },
+          {
+            "score": "1-1",
+            "probability": 0.092224
+          }
+        ],
+        "totals_probabilities": {
+          "over_2_5": 0.390661,
+          "under_2_5": 0.609339,
+          "over_3_5": 0.190567,
+          "under_3_5": 0.809433,
+          "btts_yes": 0.325095,
+          "btts_no": 0.674905
+        },
+        "odds_implied_probability": {
+          "source": "中国足彩网",
+          "captured_at": "2026-06-26T17:43:00+08:00",
+          "ordinary_spf_odds": null,
+          "ordinary_spf_status": "not_on_sale_or_not_captured",
+          "handicap": {
+            "home_handicap": 2,
+            "odds": {
+              "home": 2.48,
+              "draw": 3.9,
+              "away": 2.13
+            },
+            "no_vig": {
+              "handicap_home": 0.357115,
+              "handicap_draw": 0.227089,
+              "handicap_away": 0.415796
+            }
+          }
+        },
+        "red_team_status": "hold"
+      },
+      "backtest_metrics": {
+        "primary_direction_hit": true,
+        "actual_outcome_probability": 0.645,
+        "brier_score_multiclass": 0.19685,
+        "log_loss_actual_bucket": 0.438505,
+        "actual_score_probability_in_matrix": 0.161393,
+        "actual_score_rank_in_0_0_to_5_5_matrix": 2,
+        "top3_score_hit": true,
+        "top5_score_hit": true,
+        "home_goal_abs_error_vs_xg": 0.5,
+        "away_goal_abs_error_vs_xg": 0.25,
+        "total_goal_abs_error_vs_xg_total": 0.25,
+        "over_2_5_actual": false,
+        "under_2_5_model_direction_hit": true,
+        "over_3_5_actual": false,
+        "under_3_5_model_direction_hit": true
+      },
+      "market_calibration_error": {
+        "ordinary_1x2_actual_bucket": "away_win",
+        "ordinary_1x2_model_probability": 0.645,
+        "ordinary_1x2_market_no_vig_probability": null,
+        "ordinary_1x2_calibration_read": "Ordinary 1X2 was missing in the captured packet; England direction is evaluated by model only.",
+        "handicap_line": "Panama +2",
+        "handicap_actual_bucket": "handicap draw because England won by exactly two goals",
+        "handicap_model_probability": 0.213926,
+        "handicap_market_no_vig_probability": 0.227089,
+        "handicap_calibration_read": "The +2 draw bucket matched the final margin; the model had the exact two-goal corridor visible through 0-2 as Top2."
+      },
+      "postmatch_error": {
+        "type": "direction_and_exact_score_hit_late_break_calibrated",
+        "summary": "England win direction hit and 0-2 was Top2. The model captured a strong-team controlled win without forcing a 3+ blowout."
+      },
+      "factor_error": {
+        "market_signal": "Ordinary 1X2 market was missing, but +2 handicap draw aligned with the exact two-goal corridor.",
+        "tactical_signal": "England low-block breaking improved enough for 0-2, but Panama defensive resistance still prevented the blowout tail.",
+        "player_state_signal": "England quality and bench/late-break edge were present, while rotation/minutes management kept the ceiling below a large win."
+      },
+      "score_tail_error": {
+        "severity": "low",
+        "actual_score_probability": 0.161393,
+        "diagnosis": "0-2 was the second-most likely score and hit Top3/Top5. No score-tail miss; the lesson is to keep the two-goal favorite corridor separate from 3+ blowout."
+      },
+      "draw_floor_error": {
+        "severity": "low",
+        "diagnosis": "Draw floor was reasonably discounted; Panama 0-goal attack and England pressure removed the draw path."
+      },
+      "third_round_context_error": {
+        "severity": "low_medium",
+        "diagnosis": "Third-round context was mostly calibrated: England still pushed for group position and found two goals, but rotation/low-block resistance kept the match from becoming a big-margin tail."
+      }
+    }
+  ],
+  "data_packet": {
+    "phase": "postmatch_data_collection",
+    "status": "partial_source_limited",
+    "group": "L",
+    "round": 3,
+    "captured_at": "2026-06-28T21:06:14+08:00",
+    "owner": "worldcup-data-collector",
+    "scope": [
+      "克罗地亚 2-1 加纳",
+      "巴拿马 0-2 英格兰"
+    ],
+    "boundary": "只做赛后事实采集与成员表/player_state回灌输入，不做预测、不做投注建议。",
+    "player_state_update_status_recommendation": "partial",
+    "matches": [
+      {
+        "match_id": "2026-06-27_L_R3_CRO_2-1_GHA",
+        "match": "克罗地亚 vs 加纳",
+        "final_score": {
+          "home": 2,
+          "away": 1,
+          "text": "克罗地亚 2-1 加纳"
+        },
+        "venue": "Philadelphia Stadium",
+        "kickoff_local_source_status": "confirmed_from_pre_match_local_packet",
+        "result_source_status": "confirmed",
+        "starting_lineups": {
+          "source_status": "confirmed_guardian_live",
+          "croatia": [
+            "Dominik Livakovic",
+            "Josip Stanisic",
+            "Josip Sutalo",
+            "Marin Pongracic",
+            "Ivan Perisic",
+            "Luka Modric",
+            "Mateo Kovacic",
+            "Nikola Vlasic",
+            "Petar Sucic",
+            "Martin Baturina",
+            "Ante Budimir"
+          ],
+          "ghana": [
+            "Benjamin Asare",
+            "Marvin Senaya",
+            "Jonas Adjetey",
+            "Derrick Luckassen",
+            "Gideon Mensah",
+            "Thomas Partey",
+            "Elisha Owusu",
+            "Kwasi Sibo",
+            "Kamaldeen Sulemana",
+            "Jordan Ayew",
+            "Antoine Semenyo"
+          ]
+        },
+        "goals": [
+          {
+            "minute": "31",
+            "team": "克罗地亚",
+            "player": "Petar Sucic",
+            "assist": null,
+            "description": "约25码远射入底角。",
+            "source_status": "confirmed_goal_assist_missing"
+          },
+          {
+            "minute": "73",
+            "team": "加纳",
+            "player": "Derrick Luckassen",
+            "assist": null,
+            "description": "后点接任意球后破门，VAR长时间复核后确认有效。",
+            "source_status": "confirmed_goal_assist_missing_var_checked"
+          },
+          {
+            "minute": "83",
+            "team": "克罗地亚",
+            "player": "Nikola Vlasic",
+            "assist": "Luka Modric",
+            "description": "Modric角球助攻，Vlasic头球破门。",
+            "source_status": "confirmed"
+          }
+        ],
+        "cards": [
+          {
+            "minute": "68",
+            "team": "克罗地亚",
+            "player": "Ivan Perisic",
+            "card": "yellow",
+            "reason": "对Abdul Fatawu强硬犯规。",
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "90+4",
+            "team": "加纳",
+            "player": "Kojo Oppong",
+            "card": "yellow",
+            "reason": "战术犯规。",
+            "source_status": "confirmed_guardian_live"
+          }
+        ],
+        "substitutions": [
+          {
+            "minute": "46",
+            "team": "加纳",
+            "players_on": [
+              "Abdul Fatawu",
+              "Kojo Oppong"
+            ],
+            "players_off": [
+              "Jonas Adjetey",
+              "Elisha Owusu"
+            ],
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "67",
+            "team": "克罗地亚",
+            "players_on": [
+              "Igor Matanovic"
+            ],
+            "players_off": [
+              "Ante Budimir"
+            ],
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "72",
+            "team": "加纳",
+            "players_on": [
+              "Brandon Thomas-Asante",
+              "Ernest Nuamah"
+            ],
+            "players_off": [
+              "Kamaldeen Sulemana",
+              "Jordan Ayew"
+            ],
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "80",
+            "team": "克罗地亚",
+            "players_on": [
+              "Mario Pasalic"
+            ],
+            "players_off": [
+              "Mateo Kovacic"
+            ],
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "85",
+            "team": "加纳",
+            "players_on": [
+              "Caleb Yirenkyi"
+            ],
+            "players_off": [
+              "Kwasi Sibo"
+            ],
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "88",
+            "team": "克罗地亚",
+            "players_on": [
+              "Josko Gvardiol",
+              "Marco Pasalic"
+            ],
+            "players_off": [
+              "Marin Pongracic",
+              "Martin Baturina"
+            ],
+            "source_status": "confirmed_guardian_live"
+          }
+        ],
+        "injury_availability_notes": [
+          {
+            "team": "加纳",
+            "player": "Antoine Semenyo",
+            "note": "87分钟左右倒地捂腿并接受治疗，现场源描述为疑似膝部问题，赛后可用性需后续复核。",
+            "source_status": "injury_watch_guardian_live"
+          },
+          {
+            "team": "克罗地亚",
+            "player": "Luka Modric",
+            "note": "打满关键阶段并助攻制胜球；未见新增伤停，40岁老将负荷仍需赛后恢复跟踪。",
+            "source_status": "performance_and_minutes_watch"
+          },
+          {
+            "team": "克罗地亚",
+            "player": "Mateo Kovacic",
+            "note": "80分钟被Mario Pasalic换下；未见伤停说明，按常规轮换/体能管理观察。",
+            "source_status": "substitution_confirmed_reason_uncertain"
+          }
+        ],
+        "key_technical_stats": {
+          "xg": {
+            "croatia": 0.42,
+            "ghana": 0.74,
+            "source_status": "guardian_live_note"
+          },
+          "ghana_shots_on_target": {
+            "value": 1,
+            "source_status": "guardian_live_note"
+          },
+          "full_team_stats_status": "partial_missing_official_stats_table"
+        },
+        "round_of_32_context": {
+          "group_table_after_result": [
+            {
+              "team": "英格兰",
+              "played": 3,
+              "goal_difference": 4,
+              "points": 7
+            },
+            {
+              "team": "克罗地亚",
+              "played": 3,
+              "goal_difference": 0,
+              "points": 6
+            },
+            {
+              "team": "加纳",
+              "played": 3,
+              "goal_difference": 0,
+              "points": 4
+            },
+            {
+              "team": "巴拿马",
+              "played": 3,
+              "goal_difference": -4,
+              "points": 0
+            }
+          ],
+          "source_status": "guardian_live"
+        },
+        "player_state_handoff": {
+          "croatia_focus": [
+            "Petar Sucic：首发进球，内部评分应上修。",
+            "Nikola Vlasic：首发并83分钟制胜头球，内部评分上修。",
+            "Luka Modric：首发、制胜角球助攻、末段防守读取突出，40岁负荷需记录。",
+            "Mateo Kovacic：首发80分钟被换下，未见伤停说明。"
+          ],
+          "ghana_focus": [
+            "Derrick Luckassen：首发中卫，73分钟VAR确认进球。",
+            "Ernest Nuamah：72分钟替补登场，需记录替补分钟。",
+            "Antoine Semenyo：87分钟疑似腿/膝部问题，下一阶段可用性需复核。"
+          ]
+        }
+      },
+      {
+        "match_id": "2026-06-27_L_R3_PAN_0-2_ENG",
+        "match": "巴拿马 vs 英格兰",
+        "final_score": {
+          "home": 0,
+          "away": 2,
+          "text": "巴拿马 0-2 英格兰"
+        },
+        "venue": "New York New Jersey Stadium",
+        "kickoff_local_source_status": "confirmed_from_pre_match_local_packet",
+        "result_source_status": "confirmed",
+        "starting_lineups": {
+          "source_status": "confirmed_guardian_live",
+          "panama": [
+            "Orlando Mosquera",
+            "Amir Murillo",
+            "Escobar",
+            "Jose Cordoba",
+            "Andres Andrade",
+            "Gutierrez",
+            "Cristian Martinez",
+            "Yoel Barcenas",
+            "Carlos Harvey",
+            "Jose Luis Rodriguez",
+            "Tomas Rodriguez"
+          ],
+          "england": [
+            "Jordan Pickford",
+            "Jarell Quansah",
+            "Ezri Konsa",
+            "Marc Guehi",
+            "Nico O'Reilly",
+            "Jude Bellingham",
+            "Elliot Anderson",
+            "Bukayo Saka",
+            "Morgan Rogers",
+            "Marcus Rashford",
+            "Harry Kane"
+          ]
+        },
+        "goals": [
+          {
+            "minute": "62",
+            "team": "英格兰",
+            "player": "Jude Bellingham",
+            "assist": "Bukayo Saka",
+            "description": "Saka左侧角球，Bellingham前点脚下处理破门。",
+            "source_status": "confirmed_guardian_live_and_times"
+          },
+          {
+            "minute": "67",
+            "team": "英格兰",
+            "player": "Harry Kane",
+            "assist": "Jude Bellingham",
+            "description": "Bellingham左路突破传中，Kane头球破门；Kane成为英格兰世界杯决赛圈进球纪录保持者。",
+            "source_status": "confirmed_guardian_live_and_times"
+          }
+        ],
+        "cards": [
+          {
+            "minute": "53",
+            "team": "巴拿马",
+            "player": "Jose Fajardo",
+            "card": "yellow",
+            "reason": "拉拽Konsa球衣。",
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "60",
+            "team": "英格兰",
+            "player": "Jarell Quansah",
+            "card": "yellow",
+            "reason": "此前对Rodriguez的迟到冲撞；随后因脚踝伤势无法继续。",
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "83",
+            "team": "巴拿马",
+            "player": "Andres Andrade",
+            "card": "yellow",
+            "reason": "对Morgan Rogers的战术犯规。",
+            "source_status": "confirmed_guardian_live"
+          }
+        ],
+        "substitutions": [
+          {
+            "minute": "63",
+            "team": "英格兰",
+            "players_on": [
+              "Djed Spence",
+              "Noni Madueke"
+            ],
+            "players_off": [
+              "Jarell Quansah",
+              "Bukayo Saka"
+            ],
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "72",
+            "team": "巴拿马",
+            "players_on": [
+              "Diaz",
+              "Londono"
+            ],
+            "players_off": [
+              "Yoel Barcenas",
+              "Jose Luis Rodriguez"
+            ],
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "73",
+            "team": "英格兰",
+            "players_on": [
+              "Eberechi Eze"
+            ],
+            "players_off": [
+              "Jude Bellingham"
+            ],
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "85",
+            "team": "英格兰",
+            "players_on": [
+              "Ollie Watkins",
+              "Jordan Henderson"
+            ],
+            "players_off": [
+              "Harry Kane",
+              "Elliot Anderson"
+            ],
+            "source_status": "confirmed_guardian_live"
+          },
+          {
+            "minute": "88",
+            "team": "巴拿马",
+            "players_on": [
+              "Davis",
+              "Quintero"
+            ],
+            "players_off": [
+              "Carlos Harvey",
+              "Gutierrez"
+            ],
+            "source_status": "confirmed_guardian_live"
+          }
+        ],
+        "injury_availability_notes": [
+          {
+            "team": "英格兰",
+            "player": "Jarell Quansah",
+            "note": "60分钟脚踝扭伤/崴脚后无法继续，63分钟被Djed Spence换下；需赛后医学复核。",
+            "source_status": "confirmed_injury_watch_guardian_live"
+          },
+          {
+            "team": "英格兰",
+            "player": "Reece James",
+            "note": "赛前已因伤缺阵，Quansah顶替右后卫首发。",
+            "source_status": "confirmed_pre_match_context"
+          },
+          {
+            "team": "英格兰",
+            "player": "Declan Rice",
+            "note": "赛前Tuchel称其有轻微撞伤/伤情并需管理分钟，且身背黄牌；本场替补未出场。",
+            "source_status": "confirmed_pre_match_quote_guardian_live"
+          }
+        ],
+        "key_technical_stats": {
+          "team_shape_note": "英格兰上半场破低位效率低，62-67分钟连续通过Bellingham前插和左路传中完成破局；巴拿马开场与下半场有高压/反击机会。",
+          "panama_disallowed_goal": {
+            "minute": "90+1",
+            "player": "Jose Fajardo",
+            "note": "单刀破门被判越位，Pickford仍被迫处理后续角球。",
+            "source_status": "confirmed_guardian_live"
+          },
+          "full_team_stats_status": "partial_missing_official_stats_table"
+        },
+        "round_of_32_context": {
+          "group_table_after_result": [
+            {
+              "team": "英格兰",
+              "played": 3,
+              "goal_difference": 4,
+              "points": 7
+            },
+            {
+              "team": "克罗地亚",
+              "played": 3,
+              "goal_difference": 0,
+              "points": 6
+            },
+            {
+              "team": "加纳",
+              "played": 3,
+              "goal_difference": 0,
+              "points": 4
+            },
+            {
+              "team": "巴拿马",
+              "played": 3,
+              "goal_difference": -4,
+              "points": 0
+            }
+          ],
+          "source_status": "guardian_live"
+        },
+        "player_state_handoff": {
+          "england_focus": [
+            "Jude Bellingham：首发，62分钟进球，67分钟助攻Kane，73分钟被Eze换下；内部评分应明显上修。",
+            "Harry Kane：首发，67分钟头球破门，85分钟被换下；世界杯进球纪录节点需记录。",
+            "Jarell Quansah：首发右后卫，60分钟黄牌并脚踝伤退，63分钟被Spence换下；下一场可用性需重点复核。",
+            "Reece James：伤缺；Declan Rice替补未出场，赛前轻伤/黄牌管理。"
+          ],
+          "panama_focus": [
+            "巴拿马整体：高压和反击制造若干机会，但0进球结束小组赛。",
+            "Jose Fajardo：53分钟黄牌，90+1越位进球无效。",
+            "Andres Andrade：83分钟黄牌，并在Kane进球中被其抢点压制。"
+          ]
+        }
+      }
+    ],
+    "source_log": [
+      {
+        "source": "The Guardian live - Croatia 2-1 Ghana",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/croatia-v-ghana-world-cup-2026-live",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "starting_lineups",
+          "goals",
+          "substitutions",
+          "cards",
+          "xG note",
+          "injury watch"
+        ],
+        "source_status": "confirmed_primary_live"
+      },
+      {
+        "source": "The Guardian live - Panama 0-2 England",
+        "url": "https://www.theguardian.com/football/live/2026/jun/27/panama-v-england-world-cup-2026-live-updates",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "starting_lineups",
+          "goals",
+          "assists",
+          "substitutions",
+          "cards",
+          "injury watch",
+          "group table"
+        ],
+        "source_status": "confirmed_primary_live"
+      },
+      {
+        "source": "Times of India - Croatia vs Ghana result",
+        "url": "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/croatia-vs-ghana-fifa-world-cup-match-result-vlasic-sucic-strike-to-seal-croatias-knockout-berth-with-2-1-win-over-ghana/articleshow/132044231.cms",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "goalscorers",
+          "knockout context"
+        ],
+        "source_status": "supporting"
+      },
+      {
+        "source": "Times of India - England vs Panama result",
+        "url": "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/england-vs-panama-fifa-world-cup-match-result-jude-bellingham-record-breaker-harry-kane-guide-england-into-favourable-knockout-bracket/articleshow/132044172.cms",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "score",
+          "goalscorers",
+          "England top group context"
+        ],
+        "source_status": "supporting"
+      },
+      {
+        "source": "The Times live - England vs Panama",
+        "url": "https://www.thetimes.com/sport/football/world-cup/article/england-vs-panama-live-score-updates-world-cup-2026-latest-news-commentary-dc6kps9r7",
+        "captured_at": "2026-06-28T21:06:14+08:00",
+        "supports_fields": [
+          "England XI",
+          "Quansah injury",
+          "Bellingham/Kane goals",
+          "Rice fitness context"
+        ],
+        "source_status": "supporting"
+      }
+    ],
+    "gaps_and_conflicts": [
+      "FIFA官方完整事件表未取得。",
+      "两场官方完整逐人分钟、全部替补补时细节和完整技术统计未闭合。",
+      "同源外部逐人评分未取得；后续成员表/player_state应将 external_rating 设为 null，并写 rating_source_status/rating_missing_note。",
+      "克罗地亚 2-1 加纳部分助攻未由当前可靠源确认，Petar Sucic和Derrick Luckassen进球 assist 保留 null。",
+      "加纳 Antoine Semenyo、英格兰 Jarell Quansah 的赛后伤情需后续官方/队医或发布会源复核。",
+      "本包只提供结构化事实输入，未直接更新四队 canonical 成员表或 player_state。"
+    ],
+    "handoff_notes": [
+      "主线程或成员表更新线程可据此为四队每名球员追加 round3 match_internal_rating_log；未出场球员应记录0分钟低权重内部评分。",
+      "Croatia重点上修Petar Sucic、Nikola Vlasic、Luka Modric；Ghana重点记录Luckassen进球、Nuamah替补、Semenyo伤情观察。",
+      "England重点上修Bellingham/Kane，记录Quansah黄牌+脚踝伤退、Reece James伤缺、Rice替补未出场；Panama记录高压/反击但0进球和Fajardo越位无效球。"
+    ]
+  },
+  "tactical_packet": {
+    "phase": "group_round3_postmatch_tactics",
+    "group": "L",
+    "round": 3,
+    "status": "partial_source_limited",
+    "created_at": "2026-06-28T00:00:00+08:00",
+    "updated_at": "2026-06-28T00:00:00+08:00",
+    "owner": "worldcup-tactics-coach",
+    "scope": "L组第三轮两场详细战术复盘；不输出比分预测、胜平负概率或投注建议。",
+    "source_log": [
+      "user_provided_final_results: 克罗地亚 2-1 加纳; 巴拿马 0-2 英格兰",
+      "user_provided_tactical_focus: 克罗地亚定位球和老将控节奏; 加纳反击/定位球扳平后防守收缩失败; 英格兰前60分钟破低位/高压困难; Bellingham-Kane五分钟内破局; 巴拿马高线高压收益和代价",
+      "data/thread_outputs/l-group-round3-v3-20260627/tactics-coach.json",
+      "data/outputs/match_predictions/l-group-round3-v3-quant-prediction-20260627.json",
+      "比赛/已完成比赛/小组赛/L组/2026-06-17_英格兰_4-2_克罗地亚_复盘.md",
+      "比赛/已完成比赛/小组赛/L组/2026-06-17_加纳_1-0_巴拿马_复盘.md",
+      "比赛/已完成比赛/小组赛/L组/2026-06-23_英格兰_0-0_加纳_复盘.md",
+      "比赛/已完成比赛/小组赛/L组/2026-06-24_巴拿马_0-1_克罗地亚_复盘.md"
+    ],
+    "data_gaps": [
+      "两场官方首发、实际阵型、换人分钟、牌面和逐人事件表未在本地赛后事实包中核验。",
+      "两场官方技术统计、xG、定位球次数、射门链和压迫数据待数据采集线程补齐。",
+      "四队 player_state 和成员表仍需按官方分钟与事件回灌。"
+    ],
+    "matches": [
+      {
+        "match": "克罗地亚 2-1 加纳",
+        "tactical_summary": "克罗地亚赛前被要求从控节奏转向更主动拿结果，赛后主线兑现为老将中场把比赛压进可控节奏，并通过定位球/二次落点打开得分路径。加纳的反击和定位球路径不是误判，扳平说明其单事件威胁成立；偏差在于扳平后低位收缩没有继续维持第二轮对英格兰那种禁区前保护，防守线和二点球保护在后段被克罗地亚经验与定位球连续施压击穿。",
+        "actual_tactical_plan": {
+          "croatia": {
+            "shape_read": "以控球三中场/中位压迫为底色，进攻阶段靠Modric/Kovacic控制节奏、Perisic/Stanisic提供宽度，Budimir/Kramaric/Pasalic类高点和二点球参与禁区。",
+            "pressing_block": "并非全场高压，而是用中场压缩和定位球、二次进攻持续把加纳压回低位。",
+            "game_state": "必须赢的动机没有变成乱战，而是变成更耐心的控节奏和定位球压迫。"
+          },
+          "ghana": {
+            "shape_read": "中低位防守加直接反击，扳平依赖反击/定位球单事件质量。",
+            "pressing_block": "扳平后更明显收缩，但禁区前沿和二点球保护未能复制第二轮零封英格兰的稳定度。",
+            "game_state": "从守平价值转向被动守结果，后段缺少足够出球点把压力带出。"
+          }
+        },
+        "pre_match_audit": [
+          {
+            "claim": "克罗地亚central_control/build-up resistance是主优势。",
+            "result": "兑现。老将控节奏帮助克罗地亚避免被拖入加纳喜欢的开放转换。",
+            "confidence": "high"
+          },
+          {
+            "claim": "克罗地亚set_piece_advantage中等正向。",
+            "result": "应上修。定位球和二次落点成为关键破局方式。",
+            "confidence": "high"
+          },
+          {
+            "claim": "加纳draw_management和低位防线稳定是强因子。",
+            "result": "部分失效。扳平前路径成立，扳平后防守收缩失败，说明低位稳定性不能无条件外推。",
+            "confidence": "medium_high"
+          },
+          {
+            "claim": "加纳transition_attack_adjustment保留正向。",
+            "result": "兑现但限于单事件。扳平证明反击/定位球尾部存在，但没有转化为持续控局能力。",
+            "confidence": "medium_high"
+          }
+        ],
+        "quant_adjustments": {
+          "克罗地亚": {
+            "pressing_adjustment": {
+              "direction": "neutral",
+              "magnitude": 0.1,
+              "evidence": "胜利来自中位控制和定位球压迫，不是持续高压。",
+              "confidence": "medium",
+              "model_note": "不要把赢球机械转成高压上修。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": "Modric/Kovacic老将节奏控制兑现，避免被加纳反击拉开。",
+              "confidence": "high",
+              "model_note": "与central_control合并限幅。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "neutral",
+              "magnitude": 0.1,
+              "evidence": "克罗地亚主要靠阵地、定位球和二点，不是纯转换赢球。",
+              "confidence": "medium",
+              "model_note": "不宜上修转换攻击。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": 0.2,
+              "evidence": "加纳仍能通过反击/定位球扳平，克罗地亚防转换风险存在。",
+              "confidence": "medium",
+              "model_note": "风险保留但不扩大。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.5,
+              "evidence": "老将控节奏和中场抗压是2-1主线。",
+              "confidence": "high",
+              "model_note": "上修为后续淘汰赛控节奏因子。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.7,
+              "evidence": "定位球和二次落点成为破加纳低位的关键。",
+              "confidence": "high",
+              "model_note": "与Budimir/Pasalic/中卫高点player_state合并，避免重复。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": "前两轮Budimir/Kramaric后手已证明有效，本场战术主线继续围绕禁区高点和经验。",
+              "confidence": "medium",
+              "model_note": "作为后段破局能力保留。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": "必须赢时没有失控，而是用控节奏和定位球完成任务。",
+              "confidence": "high",
+              "model_note": "克罗地亚在压力局的tempo management上修。"
+            }
+          },
+          "加纳": {
+            "pressing_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": "加纳仍偏中低位，扳平后收缩更明显。",
+              "confidence": "medium_high",
+              "model_note": "不应上修压迫。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": "扳平后无法持续把压力带出，低位出球和中场连接不足。",
+              "confidence": "medium_high",
+              "model_note": "下修守住结果时的出球缓压能力。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": "反击/定位球扳平证明单事件路径存在。",
+              "confidence": "medium_high",
+              "model_note": "只保留为尾部通道，不上修阵地战。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": 0.4,
+              "evidence": "扳平后收缩失败，二点和禁区前保护被克罗地亚持续压迫。",
+              "confidence": "medium_high",
+              "model_note": "低位稳定因子下修。"
+            },
+            "central_control_advantage": {
+              "direction": "negative",
+              "magnitude": -0.4,
+              "evidence": "面对克罗地亚老将中场，加纳让出节奏后缺少反控手段。",
+              "confidence": "high",
+              "model_note": "与build-up resistance合并限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "mixed",
+              "magnitude": 0.2,
+              "evidence": "进攻端定位球/单事件有效，但防守端定位球和二次落点保护失效。",
+              "confidence": "high",
+              "model_note": "拆成进攻小正、防守负向，不可只看扳平球。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": 0.5,
+              "evidence": "第二轮防英格兰的低位强度没有在扳平后维持。",
+              "confidence": "medium_high",
+              "model_note": "下修加纳领先/持平后的收缩稳定性。"
+            },
+            "draw_management_tendency": {
+              "direction": "negative",
+              "magnitude": -0.5,
+              "evidence": "守平价值高但未守住，说明draw-management执行质量不足。",
+              "confidence": "high",
+              "model_note": "后续不能只因积分/动机上修守平。"
+            }
+          }
+        },
+        "player_state_role_updates_suggested": [
+          "克罗地亚：Modric/Kovacic控节奏上修；Budimir/Kramaric/Pasalic和中卫高点的定位球/二点职责上修；防线对反击和定位球单事件风险保留。",
+          "加纳：反击/定位球参与者小幅上修；Adjetey/Opoku/Partey低位保护不再无条件强上修；门将和防定位球组织需按官方事件复核。"
+        ]
+      },
+      {
+        "match": "巴拿马 0-2 英格兰",
+        "tactical_summary": "英格兰赛前被要求保留破低位不确定性，这一点前60分钟完全兑现：控球、高位逼抢和边路优势没有立刻转化为稳定高质量机会。真正改变比赛的是Bellingham-Kane在五分钟内的连续破局，说明英格兰最可靠的不是全场压制，而是核心十号位和中锋在关键窗口的组合质量。巴拿马则比赛前低位预期更主动，阶段性高线高压有收益，能让英格兰前60分钟难受；代价是体能、身后空间和中卫横移在被破局后迅速变成风险。",
+        "actual_tactical_plan": {
+          "panama": {
+            "shape_read": "不只是低位5-4-1，阶段性采用更高防线和前场压迫，试图用身体对抗和第一脚压迫打乱英格兰节奏。",
+            "pressing_block": "高线高压在前60分钟制造了收益，压缩英格兰中路接球和第一脚推进。",
+            "game_state": "一旦被Bellingham-Kane连续打穿，高线收益转为身后空间和防线横移代价。"
+          },
+          "england": {
+            "shape_read": "4-2-3-1/4-3-3控球框架，Bellingham在十号位/禁区前接应，Kane回撤和禁区终结共同决定破局。",
+            "pressing_block": "前60分钟高压和破低位效率不高，控球不等于机会转化；破局后进入更稳定的控场。",
+            "game_state": "核心五分钟窗口改变比赛，随后无需继续无条件拉高节奏。"
+          }
+        },
+        "pre_match_audit": [
+          {
+            "claim": "英格兰wide/central优势明显，但破低位不能过度乐观。",
+            "result": "兑现。前60分钟困难说明低位/高压混合防守确实压低英格兰早段转化。",
+            "confidence": "high"
+          },
+          {
+            "claim": "英格兰Bellingham/Kane/Saka等核心可在关键窗口提高上限。",
+            "result": "兑现且应上修Bellingham-Kane组合破局权重。",
+            "confidence": "high"
+          },
+          {
+            "claim": "巴拿马会主要低位抗压。",
+            "result": "部分偏差。巴拿马实际更敢用高线高压，短期收益高，但被破局后代价大。",
+            "confidence": "medium_high"
+          },
+          {
+            "claim": "巴拿马进攻创造不足。",
+            "result": "兑现。高压收益更多体现在扰乱节奏，而非持续制造进球威胁。",
+            "confidence": "high"
+          }
+        ],
+        "quant_adjustments": {
+          "巴拿马": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": "高线高压前60分钟让英格兰破局困难，超出赛前低位预期。",
+              "confidence": "medium_high",
+              "model_note": "上修压迫意愿，但与身后风险绑定。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.5,
+              "evidence": "高压没有转化为稳定出球和进攻续航。",
+              "confidence": "medium",
+              "model_note": "压迫收益不能上修控球能力。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "neutral",
+              "magnitude": 0.1,
+              "evidence": "扰乱英格兰节奏多于制造稳定反击机会。",
+              "confidence": "medium",
+              "model_note": "只保留小单事件窗口。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": 0.7,
+              "evidence": "高线高压被Bellingham-Kane连续破局后，身后空间和中卫横移成本暴露。",
+              "confidence": "high",
+              "model_note": "高压与防转风险必须联动入模。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": 0.7,
+              "evidence": "前60分钟收益后，防线被核心组合五分钟内打穿。",
+              "confidence": "high",
+              "model_note": "对强队时高线不可只作为正面压迫因子。"
+            },
+            "game_state_tendency": {
+              "direction": "mixed",
+              "magnitude": 0.4,
+              "evidence": "巴拿马并非纯低位，能主动压上；但落后后缺少追分质量。",
+              "confidence": "medium_high",
+              "model_note": "更新为高压-崩盘双态。"
+            },
+            "third_round_motivation_tactical_shift": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": "0分背景下尝试更主动高线高压。",
+              "confidence": "medium",
+              "model_note": "只上修冒险意愿，不上修终结能力。"
+            },
+            "first_goal_collapse_risk": {
+              "direction": "positive",
+              "magnitude": 0.6,
+              "evidence": "被连续破局后比赛迅速从抗压变为落后控不住。",
+              "confidence": "high",
+              "model_note": "建议作为后续弱队高线对强队的尾部字段。"
+            }
+          },
+          "英格兰": {
+            "pressing_adjustment": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": "英格兰前60分钟高压和控球没有稳定转化。",
+              "confidence": "high",
+              "model_note": "不因2-0上修全场压迫效率。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": "面对巴拿马高线高压最终能稳住并找到破局窗口。",
+              "confidence": "medium_high",
+              "model_note": "上修抗压耐心，但不等同早段机会质量。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": "巴拿马高线被打穿后，英格兰核心连续五分钟破局。",
+              "confidence": "high",
+              "model_note": "与Bellingham/Kane状态共线，限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": "宽路牵制仍存在，但真正破局来自Bellingham-Kane中路/禁区组合。",
+              "confidence": "medium",
+              "model_note": "下修单纯宽路解释。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.5,
+              "evidence": "Bellingham十号位与Kane回撤/终结是决定性中路质量。",
+              "confidence": "high",
+              "model_note": "应单列Bellingham-Kane combination factor。"
+            },
+            "set_piece_advantage": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": "本场主线不是定位球。",
+              "confidence": "medium",
+              "model_note": "不做额外上修。"
+            },
+            "coach_substitution_risk": {
+              "direction": "neutral",
+              "magnitude": 0.1,
+              "evidence": "破局来自首发/核心组合而非明确替补冲击。",
+              "confidence": "medium",
+              "model_note": "后续仍保留板凳深度，但本场不作为主因。"
+            },
+            "game_state_tendency": {
+              "direction": "mixed",
+              "magnitude": 0.3,
+              "evidence": "前60分钟低效率，破局后控场；不是持续大开大合。",
+              "confidence": "high",
+              "model_note": "强队对高压低位混合防守需分阶段建模。"
+            },
+            "low_block_breaking_efficiency": {
+              "direction": "mixed",
+              "magnitude": 0.4,
+              "evidence": "前60分钟困难但核心五分钟解决比赛。",
+              "confidence": "high",
+              "model_note": "拆为早段转化偏低、核心组合破局偏高。"
+            }
+          }
+        },
+        "player_state_role_updates_suggested": [
+          "英格兰：Bellingham-Kane组合破局权重上修；Bellingham关键窗口影响力上修，Kane回撤/终结双角色上修；宽路球员不应因比分被过度上修。",
+          "巴拿马：高线高压执行勇气上修；中卫和后腰的身后保护/连续横移风险上修；前场终结和追分质量仍偏弱。"
+        ]
+      }
+    ],
+    "double_counting_warnings": [
+      "克罗地亚定位球、Budimir/Pasalic高点和老将控节奏不要在set_piece、player_state和attack_score中三次满额叠加。",
+      "加纳扳平来自反击/定位球单事件，不应同时上修常规进攻、transition attack和set-piece三条主线。",
+      "英格兰2-0不能被解释为全场高压成功；Bellingham-Kane五分钟破局应独立于wide_channel_advantage。",
+      "巴拿马高线高压同时带来pressing正向和defensive_line_risk负向，必须成对入模。"
+    ],
+    "handoff_notes": [
+      "模型应新增或强化 Croatia_set_piece_control、Ghana_draw_management_failure、England_core_combo_breakthrough、Panama_high_line_tradeoff。",
+      "成员表/player_state需等待官方首发、分钟、进球助攻、牌面和技术统计后回灌。",
+      "本包不提供投注建议，不输出未来比分概率。"
+    ]
+  },
+  "red_team_status": "hold",
+  "betting_review_status": "postmatch_review_complete_no_new_betting",
+  "player_state_update_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
+  "outputs": {
+    "match_reviews": [
+      "比赛/已完成比赛/小组赛/L组/2026-06-28_克罗地亚_2-1_加纳_复盘.md",
+      "比赛/已完成比赛/小组赛/L组/2026-06-28_巴拿马_0-2_英格兰_复盘.md"
+    ],
+    "group_review": "比赛/已完成比赛/小组赛/L组/L组第三轮复盘.md"
+  }
+}

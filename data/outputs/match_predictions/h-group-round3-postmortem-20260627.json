@@ -1,0 +1,285 @@
+{
+  "schema_version": "worldcup_postmatch_backtest_v2",
+  "generated_at": "2026-06-27T19:45:00+08:00",
+  "group": "H",
+  "round": "group_stage_round_3",
+  "status": "postmatch_review_done_player_tables_blocked",
+  "red_team_verdict": "revise_partial",
+  "source_threads": {
+    "data_collector": "019edb8e-e57d-71c1-8b2f-ddcf57c48878",
+    "tactics_coach": "019edb8f-1c20-7f52-a33d-fde56a56d4a7",
+    "modeler": "019edb8f-536a-7100-84da-e13bfecb0def",
+    "red_team": "019edb8f-9069-7ca2-843a-4ec0f34a1b74",
+    "betting_risk": "019edb8f-cd0d-7393-bf92-d637962a67e4"
+  },
+  "source_files_read": [
+    "比赛/未开始比赛/小组赛/H组/2026-06-27_乌拉圭_vs_西班牙_量化预测.md",
+    "比赛/未开始比赛/小组赛/H组/2026-06-27_佛得角_vs_沙特_量化预测.md",
+    "data/outputs/match_predictions/h-group-round3-quant-prediction-20260625.json",
+    "比赛/已完成比赛/小组赛/H组/H组第二轮复盘.md"
+  ],
+  "source_urls": [
+    "https://www.theguardian.com/football/live/2026/jun/26/uruguay-v-spain-world-cup-2026-live",
+    "https://www.theguardian.com/football/2026/jun/27/uruguay-spain-world-cup-match-report",
+    "https://www.espn.com/soccer/match/_/gameId/760479",
+    "https://www.theguardian.com/football/live/2026/jun/26/cape-verde-v-saudi-arabia-world-cup-2026-live",
+    "https://www.theguardian.com/football/2026/jun/27/cape-verde-saudi-arabia-world-cup-match-report",
+    "https://www.espn.com/soccer/match/_/gameId/760478/saudi-arabia-cape-verde",
+    "https://www.foxsports.com/soccer/fifa-world-cup-men-cape-verde-vs-saudi-arabia-jun-26-2026-game-boxscore-647679"
+  ],
+  "final_group_table": [
+    {
+      "rank": 1,
+      "team": "西班牙",
+      "points": 7,
+      "goals_for": 5,
+      "goals_against": 0,
+      "goal_difference": 5,
+      "status": "qualified_group_winner"
+    },
+    {
+      "rank": 2,
+      "team": "佛得角",
+      "points": 3,
+      "goals_for": 2,
+      "goals_against": 2,
+      "goal_difference": 0,
+      "status": "qualified_group_runner_up"
+    },
+    {
+      "rank": 3,
+      "team": "乌拉圭",
+      "points": 2,
+      "goals_for": 3,
+      "goals_against": 4,
+      "goal_difference": -1,
+      "status": "eliminated"
+    },
+    {
+      "rank": 4,
+      "team": "沙特",
+      "points": 2,
+      "goals_for": 1,
+      "goals_against": 5,
+      "goal_difference": -4,
+      "status": "eliminated"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "2026-06-27_H_R3_乌拉圭_vs_西班牙",
+      "match": "乌拉圭 0-1 西班牙",
+      "actual_score": {
+        "home": 0,
+        "away": 1
+      },
+      "pre_match_probabilities_1x2": {
+        "home": 0.1708,
+        "draw": 0.2202,
+        "away": 0.609
+      },
+      "actual_1x2": "away",
+      "prediction_result": {
+        "match_direction_hit": true,
+        "top_score_hit": true,
+        "actual_score_probability": 0.119,
+        "top_score_actual_rank": 1,
+        "brier_score": 0.231,
+        "log_loss": 0.496,
+        "error_classification": [
+          "direction_hit",
+          "top_score_hit",
+          "total_xg_overstated",
+          "over_2_5_probability_too_high"
+        ]
+      },
+      "expected_goals_pre_match": {
+        "home": 0.88,
+        "away": 1.88
+      },
+      "actual_xg_sources": [
+        {
+          "source": "ESPN",
+          "home_xg": 0.2,
+          "away_xg": 0.86
+        }
+      ],
+      "key_stats": {
+        "possession": {
+          "home": 33,
+          "away": 67
+        },
+        "shots": {
+          "home": 5,
+          "away": 6
+        },
+        "shots_on_target": {
+          "home": 1,
+          "away": 1
+        },
+        "corners": {
+          "home": 1,
+          "away": 6
+        },
+        "fouls": {
+          "home": 14,
+          "away": 14
+        }
+      },
+      "key_events": [
+        {
+          "minute": "42",
+          "team": "西班牙",
+          "event": "阿莱克斯·巴埃纳进球；穆斯莱拉处理失误。"
+        },
+        {
+          "minute": "90+4",
+          "team": "乌拉圭",
+          "event": "卡诺比奥红牌。"
+        }
+      ],
+      "tactical_findings": [
+        "西班牙胜方向和0-1比分命中，领先后控节奏脚本成立。",
+        "乌拉圭必须争胜未能转化成高质量机会，effective_chase_quality应下修。",
+        "赛前xG和大2.5偏高，应加强强队领先后的tempo drag。"
+      ],
+      "parameter_updates": [
+        {
+          "name": "favorite_lead_tempo_drag",
+          "action": "increase",
+          "reason": "西班牙领先后控节奏，压低总进球和大胜尾部。"
+        },
+        {
+          "name": "effective_chase_quality",
+          "action": "add_or_increase",
+          "reason": "乌拉圭必须赢但无法持续制造高质量机会。"
+        },
+        {
+          "name": "must_win_auto_open_game",
+          "action": "decrease",
+          "reason": "必须赢不应自动转换成大球或高xG。"
+        }
+      ],
+      "betting_settlement_note": "乌拉圭(+1)平命中，因为真实比分为西班牙赢1球；这不同于笼统的西班牙胜方向。",
+      "player_table_update_status": "blocked_pending_official_minutes_cards_injuries_and_player_ratings"
+    },
+    {
+      "match_id": "2026-06-27_H_R3_佛得角_vs_沙特",
+      "match": "佛得角 0-0 沙特",
+      "actual_score": {
+        "home": 0,
+        "away": 0
+      },
+      "pre_match_probabilities_1x2": {
+        "home": 0.3899,
+        "draw": 0.2788,
+        "away": 0.3313
+      },
+      "actual_1x2": "draw",
+      "prediction_result": {
+        "match_direction_hit": false,
+        "draw_probability_covered": true,
+        "top_score_hit": true,
+        "actual_score_probability": 0.0944,
+        "top_score_actual_rank": 4,
+        "brier_score": 0.782,
+        "log_loss": 1.277,
+        "error_classification": [
+          "top_score_hit",
+          "draw_floor_underweighted",
+          "saudi_effective_attack_overstated",
+          "under_2_5_hit"
+        ]
+      },
+      "expected_goals_pre_match": {
+        "home": 1.24,
+        "away": 1.12
+      },
+      "actual_xg_sources": [
+        {
+          "source": "ESPN",
+          "home_xg": 1.52,
+          "away_xg": 0.4
+        }
+      ],
+      "key_stats": {
+        "shots_on_target": {
+          "home": 3,
+          "away": 1
+        },
+        "big_chances": {
+          "home_note": "Laros Duarte one-on-one chance saved around 74'",
+          "away_note": "Late 90+2 chance saved by Vozinha"
+        }
+      },
+      "key_events": [
+        {
+          "minute": "4",
+          "team": "沙特",
+          "event": "阿卜杜勒哈米德黄牌。"
+        },
+        {
+          "minute": "8",
+          "team": "佛得角",
+          "event": "瓦格纳·皮纳黄牌。"
+        },
+        {
+          "minute": "74",
+          "team": "佛得角",
+          "event": "拉罗斯·杜阿尔特一对一机会被扑出。"
+        },
+        {
+          "minute": "90+2",
+          "team": "沙特",
+          "event": "禁区内射门被沃齐尼亚扑住。"
+        }
+      ],
+      "tactical_findings": [
+        "佛得角低位纪律和反击机会质量真实存在，0-0不是单纯被动守平。",
+        "沙特必须赢但有效进攻质量不足，away xG显著低于赛前。",
+        "乌拉圭落后西班牙后，佛得角平局价值上升，应动态提高0-0/1-1权重。"
+      ],
+      "parameter_updates": [
+        {
+          "name": "third_round_scoreboard_draw_floor",
+          "action": "increase",
+          "reason": "同组另一场强队领先时，佛得角平局价值上升。"
+        },
+        {
+          "name": "low_block_0_0_floor",
+          "action": "increase",
+          "reason": "佛得角低位和沙特破密集不足共同支撑0-0。"
+        },
+        {
+          "name": "saudi_effective_attack_quality",
+          "action": "decrease",
+          "reason": "必须赢没有带来足够xG。"
+        }
+      ],
+      "betting_settlement_note": "0-0在赛前Top4中，后续任何比分集合或投注复盘都应列为covered_scoreline，而不是遗漏。",
+      "player_table_update_status": "blocked_pending_official_minutes_cards_injuries_and_player_ratings"
+    }
+  ],
+  "global_rule_updates": [
+    "Separate favorite win probability from favorite multi-goal margin probability.",
+    "Add effective_chase_quality to distinguish motivation from actual chance creation.",
+    "Raise dynamic draw floor when simultaneous match state makes a draw strategically valuable.",
+    "Scoreline-set outputs must explicitly include 0-0 when it appears in the top score cluster.",
+    "Handicap picks must be translated into exact real-score conditions before any betting settlement review."
+  ],
+  "red_team_blockers": [
+    "Do not mark complete until official lineups, substitutions, cards, injury follow-up, player ratings, player_state and member-table backfill are done.",
+    "Do not overfit Spain 0-1 into a permanent one-goal favorite template.",
+    "Do not globally raise weak-underdog draw floor from Cape Verde 0-0 without tying it to low-block and qualification context."
+  ],
+  "validation": {
+    "json_parse_expected": true,
+    "markdown_outputs": [
+      "比赛/已完成比赛/小组赛/H组/2026-06-27_乌拉圭_0-1_西班牙_复盘.md",
+      "比赛/已完成比赛/小组赛/H组/2026-06-27_佛得角_0-0_沙特_复盘.md",
+      "比赛/已完成比赛/小组赛/H组/H组第三轮复盘.md"
+    ],
+    "player_tables_updated": false,
+    "blocker": "Full player-state/member-table backfill needs official lineups, minutes, substitutions, cards, injuries and player-level rating inputs."
+  }
+}

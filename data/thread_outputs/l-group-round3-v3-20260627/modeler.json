@@ -1,0 +1,1087 @@
+{
+  "metadata": {
+    "phase": "l_group_round3_v3_quant_prediction",
+    "group": "L",
+    "round": 3,
+    "status": "completed_pre_red_team_pending_discussion_only",
+    "created_at": "2026-06-27T00:00:00+08:00",
+    "owner": "worldcup-data-modeler",
+    "template": "match-prediction-standard-template-v3",
+    "scope": [
+      "Croatia vs Ghana",
+      "Panama vs England"
+    ],
+    "betting_gate_status": "discussion_only_hold",
+    "source_log": [
+      "README.md",
+      "workflow discipline local file",
+      "project architecture local file",
+      ".codex/skills/worldcup-data-modeler/SKILL.md",
+      ".codex/skills/worldcup-quant-prediction-system/SKILL.md",
+      "data/templates/match-prediction-standard-template-v3.md",
+      "data/outputs/match_predictions/l-group-round3-quant-prediction-20260626.json",
+      "data/thread_outputs/l-group-round3-prediction-20260626/*.md",
+      "local L group round1/round2 postmatch reviews",
+      "four local player_state JSON files"
+    ],
+    "input_readiness": {
+      "existing_prediction_json": "available_20260626",
+      "v3_thread_outputs": "directory_created_no_upstream_files_found_before_model_write",
+      "data_collector_summary": "timeout_fallback_from_20260626",
+      "tactics_summary": "completed_from_20260626",
+      "predicted_lineups": "probable_not_official_from_local_player_state_and_usage",
+      "official_t75_lineups": "missing",
+      "odds_snapshot": "partial_ordinary_missing_for_panama_england"
+    }
+  },
+  "group_table_after_round2": [
+    {
+      "team": "英格兰",
+      "points": 4,
+      "gf": 4,
+      "ga": 2,
+      "gd": 2
+    },
+    {
+      "team": "加纳",
+      "points": 4,
+      "gf": 1,
+      "ga": 0,
+      "gd": 1
+    },
+    {
+      "team": "克罗地亚",
+      "points": 3,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1
+    },
+    {
+      "team": "巴拿马",
+      "points": 0,
+      "gf": 0,
+      "ga": 2,
+      "gd": -2
+    }
+  ],
+  "factor_weights": {
+    "baseline_strength": 0.22,
+    "attack": 0.14,
+    "defense": 0.14,
+    "player_state": 0.13,
+    "injury_suspension_minutes": 0.08,
+    "tactical_matchup": 0.12,
+    "schedule_environment": 0.05,
+    "third_round_context": 0.14,
+    "market": 0.08
+  },
+  "matches": [
+    {
+      "match_id": "2026-06-28_croatia_vs_ghana",
+      "match_no": "周六067",
+      "home_team": "Croatia",
+      "away_team": "Ghana",
+      "kickoff_beijing": "2026-06-28 05:00",
+      "fixture_note": "中国足彩网竞彩编号周六067，页面字段 22:40 / 05:00；数据采集线程核到 FIFA 口径为 2026-06-27 17:00 ET，即北京时间 2026-06-28 05:00。竞彩编号不等同 FIFA Match ID。",
+      "status": "v3_pre_match_discussion_only",
+      "factor_inputs": {
+        "baseline_strength": "Croatia have experience and midfield control edge; Ghana have stronger defensive form than market may imply.",
+        "attack": "Croatia rely on Modric tempo, Budimir/Kramaric box threat and second phase; Ghana rely on Semenyo/Jordan Ayew/Inaki Williams transition.",
+        "defense": "Ghana have two clean sheets and strong CB form; Croatia conceded 4 vs England but controlled Panama to low output.",
+        "player_state": "Croatia Modric/Budimir/Stanisic positive but veteran load watch; Ghana Adjetey/Opoku high, Ati-Zigi/Partey availability unresolved.",
+        "injury_suspension_minutes": "Ati-Zigi and Partey need T-75 check; Croatia veteran minutes and possible rotation remain open.",
+        "tactical_matchup": "Croatia controlled possession vs Ghana low block; Ghana draw-enough posture and physical counter threat keep draw/away tails.",
+        "schedule_environment": "Simultaneous final match at Beijing 05:00; no clear venue/weather edge in local files.",
+        "market": "SPF favors Croatia more than model; -1 handicap weakens strong-margin interpretation."
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+        "official_lineup_gate": "T-75 official XI required before final model lock",
+        "home": {
+          "source_status": "probable_not_official",
+          "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+          "official_lineup_gate": "T-75 official XI required before final model lock",
+          "team": "Croatia",
+          "formation": "4-2-3-1 / 3-4-2-1 hybrid",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_en": "Dominik Livakovic",
+              "player_cn": null,
+              "role_note": "starting keeper and low-event anchor"
+            },
+            {
+              "position": "RB",
+              "player_en": "Josip Stanisic",
+              "player_cn": null,
+              "role_note": "right-side recovery and progression"
+            },
+            {
+              "position": "CB",
+              "player_en": "Josip Sutalo",
+              "player_cn": null,
+              "role_note": "box defender"
+            },
+            {
+              "position": "CB",
+              "player_en": "Josko Gvardiol",
+              "player_cn": null,
+              "role_note": "left centre-back and carrying outlet"
+            },
+            {
+              "position": "LB",
+              "player_en": "Ivan Perisic",
+              "player_cn": null,
+              "role_note": "wide delivery and veteran left-side option"
+            },
+            {
+              "position": "CM",
+              "player_en": "Luka Modric",
+              "player_cn": null,
+              "role_note": "tempo control; minutes-management risk"
+            },
+            {
+              "position": "CM",
+              "player_en": "Petar Sucic",
+              "player_cn": null,
+              "role_note": "running support and second-ball midfielder"
+            },
+            {
+              "position": "RW",
+              "player_en": "Martin Baturina",
+              "player_cn": null,
+              "role_note": "right/central creator"
+            },
+            {
+              "position": "AM",
+              "player_en": "Mario Pasalic",
+              "player_cn": null,
+              "role_note": "late-box threat"
+            },
+            {
+              "position": "LW",
+              "player_en": "Andrej Kramaric",
+              "player_cn": null,
+              "role_note": "inside forward/creator if selected"
+            },
+            {
+              "position": "ST",
+              "player_en": "Ante Budimir",
+              "player_cn": null,
+              "role_note": "box target after round-two winner"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_en": "Mateo Kovacic",
+              "player_cn": null,
+              "trigger": "starts if Croatia prioritize midfield control over final-third runners"
+            },
+            {
+              "player_en": "Petar Musa",
+              "player_cn": null,
+              "trigger": "starts if Budimir is managed or coach wants earlier pressing"
+            },
+            {
+              "player_en": "Nikola Vlasic",
+              "player_cn": null,
+              "trigger": "late attacking midfielder if Croatia must chase a goal"
+            }
+          ],
+          "model_impact_if_changed": [
+            "If Modric is rested or capped below 60 minutes, Croatia control score drops and draw tail rises.",
+            "If Budimir starts, Croatia box xG rises but pressing mobility may fall."
+          ],
+          "source_log": [
+            "croatia-player-state.json",
+            "Panama 0-1 Croatia postmatch review",
+            "L round3 20260626 prediction files"
+          ]
+        },
+        "away": {
+          "source_status": "probable_not_official",
+          "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+          "official_lineup_gate": "T-75 official XI required before final model lock",
+          "team": "Ghana",
+          "formation": "5-4-1 / 4-4-1-1 defensive",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_en": "Benjamin Asare",
+              "player_cn": null,
+              "role_note": "probable keeper if Ati-Zigi risk remains"
+            },
+            {
+              "position": "RWB",
+              "player_en": "Caleb Yirenkyi",
+              "player_cn": null,
+              "role_note": "right width and late-run threat"
+            },
+            {
+              "position": "CB",
+              "player_en": "Jonas Adjetey",
+              "player_cn": null,
+              "role_note": "high-form box defender"
+            },
+            {
+              "position": "CB",
+              "player_en": "Jerome Opoku",
+              "player_cn": null,
+              "role_note": "central defensive organizer"
+            },
+            {
+              "position": "CB",
+              "player_en": "Gideon Mensah",
+              "player_cn": null,
+              "role_note": "left-side cover"
+            },
+            {
+              "position": "LWB",
+              "player_en": "Marvin Senaya",
+              "player_cn": null,
+              "role_note": "left wingback/defensive width"
+            },
+            {
+              "position": "CM",
+              "player_en": "Thomas Partey",
+              "player_cn": null,
+              "role_note": "central duel and distribution if fit"
+            },
+            {
+              "position": "CM",
+              "player_en": "Elisha Owusu",
+              "player_cn": null,
+              "role_note": "screening and ball-winning"
+            },
+            {
+              "position": "RM",
+              "player_en": "Antoine Semenyo",
+              "player_cn": null,
+              "role_note": "transition runner and ball-carrying outlet"
+            },
+            {
+              "position": "LM",
+              "player_en": "Jordan Ayew",
+              "player_cn": null,
+              "role_note": "physical outlet and foul-drawing route"
+            },
+            {
+              "position": "ST",
+              "player_en": "Inaki Williams",
+              "player_cn": null,
+              "role_note": "vertical striker / counter outlet"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_en": "Lawrence Ati-Zigi",
+              "player_cn": null,
+              "trigger": "returns if keeper fitness is cleared before T-75"
+            },
+            {
+              "player_en": "Brandon Thomas-Asante",
+              "player_cn": null,
+              "trigger": "starts or enters if Ghana want more box presence"
+            },
+            {
+              "player_en": "Abdul Fatawu",
+              "player_cn": null,
+              "trigger": "wide speed if Ghana need a goal after 60 minutes"
+            }
+          ],
+          "model_impact_if_changed": [
+            "If Ati-Zigi is confirmed fit, goalkeeper uncertainty decreases but xG changes only slightly.",
+            "If Partey is unavailable, Ghana progression and defensive screen both weaken."
+          ],
+          "source_log": [
+            "ghana-player-state.json",
+            "England 0-0 Ghana postmatch review",
+            "Ghana 1-0 Panama postmatch review"
+          ]
+        },
+        "gaps_and_conflicts": [
+          "Official starting XI not published.",
+          "Lineup confidence is capped at medium before T-75.",
+          "More than two starter changes, keeper change, or formation flip requires xG/Poisson rerun."
+        ]
+      },
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "attack": 0.14,
+        "defense": 0.14,
+        "player_state": 0.13,
+        "injury_suspension_minutes": 0.08,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.14,
+        "market": 0.08
+      },
+      "team_strength_score": {
+        "home": 70,
+        "away": 64
+      },
+      "attack_score": {
+        "home": 66,
+        "away": 58
+      },
+      "defense_score": {
+        "home": 65,
+        "away": 70
+      },
+      "player_state_adjustment": {
+        "home": 0.02,
+        "away": 0.05,
+        "note": "Ghana defensive state upgraded after 0-0 vs England; Croatia small positive from controlled 1-0 vs Panama."
+      },
+      "injury_adjustment": {
+        "home": -0.02,
+        "away": -0.04,
+        "note": "Croatia veteran load and Ghana keeper/Partey uncertainty both remain; Ghana penalty slightly larger."
+      },
+      "tactical_matchup_adjustment": {
+        "home": 0.04,
+        "away": 0.03,
+        "note": "Croatia control and second phase edge, but Ghana low-block/counter path is real."
+      },
+      "schedule_environment_adjustment": {
+        "home": 0,
+        "away": 0,
+        "note": "Same kickoff, no confirmed environment edge."
+      },
+      "third_round_context": {
+        "group_table_snapshot": [
+          {
+            "team": "英格兰",
+            "points": 4,
+            "gf": 4,
+            "ga": 2,
+            "gd": 2
+          },
+          {
+            "team": "加纳",
+            "points": 4,
+            "gf": 1,
+            "ga": 0,
+            "gd": 1
+          },
+          {
+            "team": "克罗地亚",
+            "points": 3,
+            "gf": 3,
+            "ga": 4,
+            "gd": -1
+          },
+          {
+            "team": "巴拿马",
+            "points": 0,
+            "gf": 0,
+            "ga": 2,
+            "gd": -2
+          }
+        ],
+        "qualification_state": "Croatia on 3 points likely need a win for direct top-two control; Ghana on 4 points can value a draw strongly.",
+        "simultaneous_match_dependency": "Panama vs England score can alter Croatia/Ghana risk appetite after 60 minutes.",
+        "strategic_tempo_adjustment": "Raised draw floor and one-goal corridor; Croatia urgency rises if level late.",
+        "rotation_risk": "Medium-low for both due qualification stakes.",
+        "yellow_card_suspension_risk": "Final card/suspension check missing.",
+        "third_round_context_adjustment": {
+          "home_win": 0.021,
+          "draw": 0,
+          "away_win": -0.021
+        }
+      },
+      "market_adjustment": {
+        "home": 0.021,
+        "draw": 0,
+        "away": -0.021,
+        "note": "Ordinary SPF pulls Croatia slightly upward, but handicap market prevents large-margin expansion."
+      },
+      "expected_goals": {
+        "pre_market": {
+          "home": 1.28,
+          "away": 0.78
+        },
+        "final": {
+          "home": 1.28,
+          "away": 0.78
+        },
+        "note": "v3 keeps the 20260626 red-team-calibrated xG baseline."
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0-0": 0.127454,
+          "0-1": 0.099414,
+          "0-2": 0.038771,
+          "0-3": 0.010081,
+          "0-4": 0.001966,
+          "0-5": 0.000307,
+          "1-0": 0.163141,
+          "1-1": 0.12725,
+          "1-2": 0.049628,
+          "1-3": 0.012903,
+          "1-4": 0.002516,
+          "1-5": 0.000393,
+          "2-0": 0.10441,
+          "2-1": 0.08144,
+          "2-2": 0.031762,
+          "2-3": 0.008258,
+          "2-4": 0.00161,
+          "2-5": 0.000251,
+          "3-0": 0.044548,
+          "3-1": 0.034748,
+          "3-2": 0.013552,
+          "3-3": 0.003523,
+          "3-4": 0.000687,
+          "3-5": 0.000107,
+          "4-0": 0.014255,
+          "4-1": 0.011119,
+          "4-2": 0.004337,
+          "4-3": 0.001127,
+          "4-4": 0.00022,
+          "4-5": 0.000034,
+          "5-0": 0.003649,
+          "5-1": 0.002847,
+          "5-2": 0.00111,
+          "5-3": 0.000289,
+          "5-4": 0.000056,
+          "5-5": 0.000009
+        },
+        "tail_probability": 0.002227,
+        "matrix_sum_check": 1
+      },
+      "raw_poisson_probabilities_1x2": {
+        "home_win": 0.482695,
+        "draw": 0.290218,
+        "away_win": 0.227087
+      },
+      "probabilities_1x2": {
+        "home_win": 0.503837,
+        "draw": 0.290208,
+        "away_win": 0.205955
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.339559,
+        "under_2_5": 0.660441,
+        "over_3_5": 0.153862,
+        "under_3_5": 0.846138,
+        "btts_yes": 0.391011,
+        "btts_no": 0.608989
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.163141
+        },
+        {
+          "score": "0-0",
+          "probability": 0.127454
+        },
+        {
+          "score": "1-1",
+          "probability": 0.12725
+        },
+        {
+          "score": "2-0",
+          "probability": 0.10441
+        },
+        {
+          "score": "0-1",
+          "probability": 0.099414
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_spf": {
+          "labels": [
+            "克罗地亚胜",
+            "平",
+            "加纳胜"
+          ],
+          "odds": [
+            1.6,
+            3.05,
+            5.65
+          ],
+          "raw_implied": [
+            0.625,
+            0.327869,
+            0.176991
+          ],
+          "overround": 1.12986,
+          "normalized": [
+            0.553166,
+            0.290185,
+            0.156649
+          ]
+        },
+        "handicap_spf": {
+          "handicap": "克罗地亚 -1",
+          "labels": [
+            "让胜",
+            "让平",
+            "让负"
+          ],
+          "odds": [
+            2.92,
+            3.35,
+            2.05
+          ],
+          "raw_implied": [
+            0.342466,
+            0.298507,
+            0.487805
+          ],
+          "overround": 1.128778,
+          "normalized": [
+            0.303395,
+            0.264452,
+            0.432153
+          ]
+        },
+        "source": "中国足彩网竞彩混合页",
+        "captured_at": "2026-06-26T17:43:00+08:00",
+        "sale_status": "普通胜平负与让球胜平负均显示可售"
+      },
+      "model_market_delta": {
+        "home_win": -0.049329,
+        "draw": 0.000023,
+        "away_win": 0.049306
+      },
+      "confidence_interval": {
+        "home_win": [
+          0.43,
+          0.57
+        ],
+        "draw": [
+          0.24,
+          0.35
+        ],
+        "away_win": [
+          0.15,
+          0.27
+        ],
+        "home_xg": [
+          1.02,
+          1.55
+        ],
+        "away_xg": [
+          0.56,
+          1.02
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "status": "pre_red_team_v3_equal_to_20260626_calibrated_baseline",
+        "home_win": 0.503837,
+        "draw": 0.290208,
+        "away_win": 0.205955
+      },
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "Previous red-team stance was revise_for_probability / hold_for_betting; this v3 file keeps red_team_status pending by request.",
+        "Ghana draw incentive and low block are major sensitivity variables.",
+        "T-75 lineups, Ati-Zigi/Partey and Croatia veteran minutes can move xG."
+      ]
+    },
+    {
+      "match_id": "2026-06-28_panama_vs_england",
+      "match_no": "周六068",
+      "home_team": "Panama",
+      "away_team": "England",
+      "kickoff_beijing": "2026-06-28 05:00",
+      "fixture_note": "中国足彩网竞彩编号周六068，页面字段 22:40 / 05:00；数据采集线程核到 FIFA 口径为 2026-06-27 17:00 ET，即北京时间 2026-06-28 05:00。竞彩编号不等同 FIFA Match ID。",
+      "status": "v3_pre_match_discussion_only",
+      "factor_inputs": {
+        "baseline_strength": "England remain the strongest team in group; Panama have two 0-1 losses and limited top-two path.",
+        "attack": "Panama crossing/set-piece routes and Murillo/Carrasquilla transitions; England Kane/Bellingham/Saka/Rashford/Kane finishing but Ghana 0-0 exposed low-block conversion risk.",
+        "defense": "Panama defense has not collapsed, two one-goal losses; England conceded twice vs Croatia but then kept Ghana at 0.",
+        "player_state": "England Kane/Bellingham/Rice/Saka paths strong but Reece James treatment and rotation watch; Panama Carrasquilla start uncertain and attack ceiling low.",
+        "injury_suspension_minutes": "T-75 official lineup missing; England may rotate, Panama may alter shape due must-win/theoretical third-place chase.",
+        "tactical_matchup": "England control vs Panama low/mid block; Panama must eventually open, raising England late transition tail.",
+        "schedule_environment": "Simultaneous final round; England can value risk control while Panama need a result.",
+        "market": "Ordinary SPF unavailable; +2 handicap suggests deep England margin is not automatic."
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+        "official_lineup_gate": "T-75 official XI required before final model lock",
+        "home": {
+          "source_status": "probable_not_official",
+          "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+          "official_lineup_gate": "T-75 official XI required before final model lock",
+          "team": "Panama",
+          "formation": "4-4-2 / 4-2-3-1 chase shape",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_en": "Orlando Mosquera",
+              "player_cn": null,
+              "role_note": "starting keeper and shot volume risk"
+            },
+            {
+              "position": "RB",
+              "player_en": "Amir Murillo",
+              "player_cn": null,
+              "role_note": "best wide progression outlet"
+            },
+            {
+              "position": "CB",
+              "player_en": "Jose Cordoba",
+              "player_cn": null,
+              "role_note": "central defender"
+            },
+            {
+              "position": "CB",
+              "player_en": "Andres Andrade",
+              "player_cn": null,
+              "role_note": "left centre-back / aerial cover"
+            },
+            {
+              "position": "LB",
+              "player_en": "Cesar Blackman",
+              "player_cn": null,
+              "role_note": "fullback/wingback role; discipline watch"
+            },
+            {
+              "position": "CM",
+              "player_en": "Cristian Martinez",
+              "player_cn": null,
+              "role_note": "screen and recovery runner"
+            },
+            {
+              "position": "CM",
+              "player_en": "Adalberto Carrasquilla",
+              "player_cn": null,
+              "role_note": "creative midfielder; start uncertain"
+            },
+            {
+              "position": "RW",
+              "player_en": "Yoel Barcenas",
+              "player_cn": null,
+              "role_note": "right delivery and set-piece option"
+            },
+            {
+              "position": "AM",
+              "player_en": "Carlos Harvey",
+              "player_cn": null,
+              "role_note": "second-line runner"
+            },
+            {
+              "position": "LW",
+              "player_en": "Jose Luis Rodriguez",
+              "player_cn": null,
+              "role_note": "left outlet"
+            },
+            {
+              "position": "ST",
+              "player_en": "Jose Fajardo",
+              "player_cn": null,
+              "role_note": "box striker if Panama chase early"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_en": "Cecilio Waterman",
+              "player_cn": null,
+              "trigger": "starts if coach wants a more physical striker"
+            },
+            {
+              "player_en": "Ismael Diaz",
+              "player_cn": null,
+              "trigger": "wide/forward runner if Panama need a goal"
+            },
+            {
+              "player_en": "Anibal Godoy",
+              "player_cn": null,
+              "trigger": "midfield stability if Panama avoid early chaos"
+            }
+          ],
+          "model_impact_if_changed": [
+            "If Carrasquilla is not fit to start, Panama xG drops and England clean-sheet probability rises.",
+            "If Panama open with a more aggressive 4-2-3-1, England transition tail rises."
+          ],
+          "source_log": [
+            "panama-player-state.json",
+            "Ghana 1-0 Panama postmatch review",
+            "Panama 0-1 Croatia postmatch review"
+          ]
+        },
+        "away": {
+          "source_status": "probable_not_official",
+          "captured_at": "2026-06-27 00:00 Asia/Shanghai",
+          "official_lineup_gate": "T-75 official XI required before final model lock",
+          "team": "England",
+          "formation": "4-2-3-1",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_en": "Jordan Pickford",
+              "player_cn": null,
+              "role_note": "starting keeper"
+            },
+            {
+              "position": "RB",
+              "player_en": "Reece James",
+              "player_cn": null,
+              "role_note": "right progression; treatment note requires recheck"
+            },
+            {
+              "position": "CB",
+              "player_en": "Ezri Konsa",
+              "player_cn": null,
+              "role_note": "right centre-back"
+            },
+            {
+              "position": "CB",
+              "player_en": "John Stones",
+              "player_cn": null,
+              "role_note": "build-up centre-back; minutes watch"
+            },
+            {
+              "position": "LB",
+              "player_en": "Nico OReilly",
+              "player_cn": null,
+              "role_note": "left width and late-box threat"
+            },
+            {
+              "position": "CM",
+              "player_en": "Declan Rice",
+              "player_cn": null,
+              "role_note": "set-piece delivery and duel control; probable"
+            },
+            {
+              "position": "CM",
+              "player_en": "Elliot Anderson",
+              "player_cn": null,
+              "role_note": "progressive midfield connector"
+            },
+            {
+              "position": "RW",
+              "player_en": "Bukayo Saka",
+              "player_cn": null,
+              "role_note": "direct 1v1 option after Ghana 0-0 lesson"
+            },
+            {
+              "position": "AM",
+              "player_en": "Jude Bellingham",
+              "player_cn": null,
+              "role_note": "central creator and box runner"
+            },
+            {
+              "position": "LW",
+              "player_en": "Marcus Rashford",
+              "player_cn": null,
+              "role_note": "vertical threat and transition runner"
+            },
+            {
+              "position": "ST",
+              "player_en": "Harry Kane",
+              "player_cn": null,
+              "role_note": "primary finisher and linking striker"
+            }
+          ],
+          "rotation_candidates": [
+            {
+              "player_en": "Noni Madueke",
+              "player_cn": null,
+              "trigger": "starts if Tuchel keeps first-round right-wing structure"
+            },
+            {
+              "player_en": "Anthony Gordon",
+              "player_cn": null,
+              "trigger": "starts if Rashford is rested or left-side pressing prioritized"
+            },
+            {
+              "player_en": "Morgan Rogers",
+              "player_cn": null,
+              "trigger": "late central runner if England need more box arrival"
+            }
+          ],
+          "model_impact_if_changed": [
+            "If Saka starts, England wide attack score rises versus low block.",
+            "If Kane or Bellingham are managed, England xG and favorite ceiling tail should be cut."
+          ],
+          "source_log": [
+            "england-player-state.json",
+            "England 4-2 Croatia postmatch review",
+            "England 0-0 Ghana postmatch review"
+          ]
+        },
+        "gaps_and_conflicts": [
+          "Official starting XI not published.",
+          "Lineup confidence is capped at medium before T-75.",
+          "More than two starter changes, keeper change, or formation flip requires xG/Poisson rerun."
+        ]
+      },
+      "factor_weights": {
+        "baseline_strength": 0.22,
+        "attack": 0.14,
+        "defense": 0.14,
+        "player_state": 0.13,
+        "injury_suspension_minutes": 0.08,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.05,
+        "third_round_context": 0.14,
+        "market": 0.08
+      },
+      "team_strength_score": {
+        "home": 52,
+        "away": 82
+      },
+      "attack_score": {
+        "home": 47,
+        "away": 80
+      },
+      "defense_score": {
+        "home": 58,
+        "away": 75
+      },
+      "player_state_adjustment": {
+        "home": -0.03,
+        "away": 0.04,
+        "note": "Panama attack state remains low; England still strong but Ghana draw reduces conversion optimism."
+      },
+      "injury_adjustment": {
+        "home": -0.02,
+        "away": -0.04,
+        "note": "Carrasquilla and England rotation/Reece James/Rice checks keep uncertainty."
+      },
+      "tactical_matchup_adjustment": {
+        "home": 0,
+        "away": 0.07,
+        "note": "England better suited to exploit Panama once match opens, but low-block phase caps early xG."
+      },
+      "schedule_environment_adjustment": {
+        "home": 0.01,
+        "away": -0.02,
+        "note": "Third-round risk management slightly lowers England ceiling."
+      },
+      "third_round_context": {
+        "group_table_snapshot": [
+          {
+            "team": "英格兰",
+            "points": 4,
+            "gf": 4,
+            "ga": 2,
+            "gd": 2
+          },
+          {
+            "team": "加纳",
+            "points": 4,
+            "gf": 1,
+            "ga": 0,
+            "gd": 1
+          },
+          {
+            "team": "克罗地亚",
+            "points": 3,
+            "gf": 3,
+            "ga": 4,
+            "gd": -1
+          },
+          {
+            "team": "巴拿马",
+            "points": 0,
+            "gf": 0,
+            "ga": 2,
+            "gd": -2
+          }
+        ],
+        "qualification_state": "England on 4 points can protect top-two but may want first place; Panama on 0 points have only theoretical third-place motivation.",
+        "simultaneous_match_dependency": "Croatia-Ghana state can change England risk appetite and Panama urgency.",
+        "strategic_tempo_adjustment": "Low-event England control early; late Panama chase can open England transition chances.",
+        "rotation_risk": "Medium for England, medium for Panama shape/personnel.",
+        "yellow_card_suspension_risk": "Final card/suspension check missing.",
+        "third_round_context_adjustment": {
+          "home_win": 0,
+          "draw": 0,
+          "away_win": 0
+        }
+      },
+      "market_adjustment": {
+        "home": 0,
+        "draw": 0,
+        "away": 0,
+        "note": "No ordinary SPF; handicap signal used only as margin warning, not 1X2 calibration."
+      },
+      "expected_goals": {
+        "pre_market": {
+          "home": 0.5,
+          "away": 1.75
+        },
+        "final": {
+          "home": 0.5,
+          "away": 1.75
+        },
+        "note": "v3 keeps the 20260626 red-team-calibrated xG baseline."
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0-0": 0.105399,
+          "0-1": 0.184449,
+          "0-2": 0.161393,
+          "0-3": 0.094146,
+          "0-4": 0.041189,
+          "0-5": 0.014416,
+          "1-0": 0.0527,
+          "1-1": 0.092224,
+          "1-2": 0.080696,
+          "1-3": 0.047073,
+          "1-4": 0.020594,
+          "1-5": 0.007208,
+          "2-0": 0.013175,
+          "2-1": 0.023056,
+          "2-2": 0.020174,
+          "2-3": 0.011768,
+          "2-4": 0.005149,
+          "2-5": 0.001802,
+          "3-0": 0.002196,
+          "3-1": 0.003843,
+          "3-2": 0.003362,
+          "3-3": 0.001961,
+          "3-4": 0.000858,
+          "3-5": 0.0003,
+          "4-0": 0.000274,
+          "4-1": 0.00048,
+          "4-2": 0.00042,
+          "4-3": 0.000245,
+          "4-4": 0.000107,
+          "4-5": 0.000038,
+          "5-0": 0.000027,
+          "5-1": 0.000048,
+          "5-2": 0.000042,
+          "5-3": 0.000025,
+          "5-4": 0.000011,
+          "5-5": 0.000004
+        },
+        "tail_probability": 0.009148,
+        "matrix_sum_check": 1
+      },
+      "raw_poisson_probabilities_1x2": {
+        "home_win": 0.099919,
+        "draw": 0.21987,
+        "away_win": 0.680211
+      },
+      "probabilities_1x2": {
+        "home_win": 0.099919,
+        "draw": 0.21987,
+        "away_win": 0.680211
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.390661,
+        "under_2_5": 0.609339,
+        "over_3_5": 0.190567,
+        "under_3_5": 0.809433,
+        "btts_yes": 0.325095,
+        "btts_no": 0.674905
+      },
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 0.184449
+        },
+        {
+          "score": "0-2",
+          "probability": 0.161393
+        },
+        {
+          "score": "0-0",
+          "probability": 0.105399
+        },
+        {
+          "score": "0-3",
+          "probability": 0.094146
+        },
+        {
+          "score": "1-1",
+          "probability": 0.092224
+        }
+      ],
+      "odds_implied_probability": {
+        "ordinary_spf": null,
+        "handicap_spf": {
+          "handicap": "巴拿马 +2",
+          "labels": [
+            "让胜",
+            "让平",
+            "让负"
+          ],
+          "odds": [
+            2.48,
+            3.9,
+            2.13
+          ],
+          "raw_implied": [
+            0.403226,
+            0.25641,
+            0.469484
+          ],
+          "overround": 1.12912,
+          "normalized": [
+            0.357115,
+            0.227089,
+            0.415796
+          ]
+        },
+        "source": "中国足彩网竞彩混合页",
+        "captured_at": "2026-06-26T17:43:00+08:00",
+        "sale_status": "普通胜平负显示未开售；让球胜平负显示可售"
+      },
+      "model_market_delta": {
+        "home_win": null,
+        "draw": null,
+        "away_win": null,
+        "note": "ordinary 1X2 unavailable; handicap market is not translated into direct 1X2 delta"
+      },
+      "confidence_interval": {
+        "home_win": [
+          0.06,
+          0.14
+        ],
+        "draw": [
+          0.17,
+          0.28
+        ],
+        "away_win": [
+          0.61,
+          0.75
+        ],
+        "home_xg": [
+          0.32,
+          0.72
+        ],
+        "away_xg": [
+          1.38,
+          2.08
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "status": "pre_red_team_v3_equal_to_20260626_calibrated_baseline",
+        "home_win": 0.099919,
+        "draw": 0.21987,
+        "away_win": 0.680211
+      },
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "Previous red-team stance was hold_for_betting and warned England are not automatic blowout.",
+        "Ordinary SPF missing, so model-market delta for 1X2 is null.",
+        "England lineup/rotation and Panama Carrasquilla availability can change attack ceiling."
+      ]
+    }
+  ],
+  "validation_policy": {
+    "json_parse_required": true,
+    "probability_sum_tolerance": 0.002,
+    "poisson_matrix_tail_required": true,
+    "prohibited_betting_advice": true
+  }
+}

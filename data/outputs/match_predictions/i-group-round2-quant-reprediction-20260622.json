@@ -1,0 +1,161 @@
+{
+  "model_scope": "I group round 2 quantitative reprediction",
+  "phase": "group_stage_round2_quant_reprediction",
+  "group": "I",
+  "round": 2,
+  "status": "completed_pre_match_partial",
+  "created_at": "2026-06-22T21:45:00+08:00",
+  "updated_at": "2026-06-22T22:05:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "model_version": "worldcup-quant-poisson-market-calibrated-v0.2",
+  "scope": "I组第二轮法国vs伊拉克、挪威vs塞内加尔量化再预测；不进入第三轮预测，不给投注建议。",
+  "input_readiness": {
+    "label": "partial",
+    "available_inputs": [
+      "2026-06-21 I group round 2 quant baseline",
+      "I group round 1 postmatch reviews",
+      "France/Iraq/Norway/Senegal roster and player_state files",
+      "France/Iraq/Norway/Senegal member tables",
+      "public odds snippets retained from baseline"
+    ],
+    "missing_or_stale_inputs": [
+      "T-75m official lineups",
+      "official Chinese sports lottery odds",
+      "same-source 1X2/handicap/totals live odds snapshot",
+      "final injury and minutes-limit confirmation",
+      "data refresh file exists but remains skeleton/in_progress with empty matches",
+      "tactical refresh file exists but remains skeleton/in_progress with empty matches"
+    ],
+    "upstream_refresh_status": {
+      "data_refresh": "upstream_refresh_partial_skeleton",
+      "tactical_refresh": "upstream_refresh_partial_skeleton"
+    },
+    "betting_execution_status": "discussion_only_hold"
+  },
+  "method": {
+    "summary": "Use 2026-06-21 quantitative baseline as prior, then apply local player_state and first-round postmatch calibration. Generate 0-0 to 5-5 Poisson matrix from final xG and derive 1X2/totals from a fuller Poisson grid; preserve 5+ tail in matrix.",
+    "double_counting_guard": "First-round events are used once through player_state/round1 correction. Public odds are market calibration only, not factual truth and not betting advice."
+  },
+  "factor_weights": {
+    "base_strength": 0.3,
+    "recent_round1_form": 0.2,
+    "attack_defense_structure": 0.2,
+    "player_availability": 0.1,
+    "tactical_matchup": 0.1,
+    "market_calibration": 0.1
+  },
+  "matches": [
+    {
+      "match": "France vs Iraq",
+      "date_local": "2026-06-22",
+      "venue_note": "Philadelphia Stadium / Lincoln Financial Field, Philadelphia",
+      "factor_inputs": {
+        "team_a": "France",
+        "team_b": "Iraq",
+        "baseline_strength": {"france": 0.92, "iraq": 0.48, "notes": "France retains very large squad-strength and tournament-quality advantage."},
+        "recent_round1_form": {"france": 0.86, "iraq": 0.42, "notes": "France beat Senegal 3-1 and showed late-game expansion; Iraq lost 1-4 and low-block durability fell after conceding."},
+        "attack_defense_structure": {"france_attack": 0.91, "france_defense": 0.84, "iraq_attack": 0.46, "iraq_defense": 0.4},
+        "player_state": {"france": "Mbappe 5.0, Olise 5.0, Barcola 5.0, Rabiot 4.0; several unused rotation players available but lineups unknown.", "iraq": "Aymen Hussein and Al-Ammari positive; Jalal Hassan post-error state low; back line state mostly 2.0 after 1-4."},
+        "availability_and_injury": {"france": "No confirmed new absence in local files; Saliba/Dembele/Doue workload still requires T-75m check.", "iraq": "Ahmed Yahya replacement already reflected; Ali Jasim and several starters require final availability check."},
+        "tactical_matchup": {"france": "Wide/half-space superiority, elite finisher conversion, bench impact and late-game attack boost.", "iraq": "Target-forward and set-piece path retained, but low-block resilience and game-state collapse risk remain negative."},
+        "market_signal": {"status": "public snippet retained from old baseline; no official jingcai/live same-book snapshot", "model_policy": "do not fully chase market because lineup and official odds gates are missing"}
+      },
+      "team_strength_score": {"france": 87.2, "iraq": 48.8},
+      "attack_score": {"france": 89.5, "iraq": 45.5},
+      "defense_score": {"france": 81.0, "iraq": 42.0},
+      "player_state_adjustment": {"france": 0.18, "iraq": -0.11},
+      "injury_adjustment": {"france": -0.15, "iraq": -0.02},
+      "tactical_matchup_adjustment": {"france": 0.22, "iraq": 0.05},
+      "schedule_environment_adjustment": {"france": -0.03, "iraq": 0.0},
+      "market_adjustment": {"france": 0.14, "iraq": -0.03},
+      "expected_goals": {"pre_market": {"france": 2.54, "iraq": 0.58}, "final": {"france": 2.62, "iraq": 0.56}, "old_baseline_final": {"france": 2.55, "iraq": 0.58}},
+      "poisson_score_matrix": {
+        "0-0": 0.0416, "0-1": 0.0233, "0-2": 0.0065, "0-3": 0.0012, "0-4": 0.0002, "0-5": 0.0,
+        "1-0": 0.109, "1-1": 0.061, "1-2": 0.0171, "1-3": 0.0032, "1-4": 0.0004, "1-5": 0.0001,
+        "2-0": 0.1427, "2-1": 0.0799, "2-2": 0.0224, "2-3": 0.0042, "2-4": 0.0006, "2-5": 0.0001,
+        "3-0": 0.1247, "3-1": 0.0698, "3-2": 0.0195, "3-3": 0.0036, "3-4": 0.0005, "3-5": 0.0001,
+        "4-0": 0.0816, "4-1": 0.0457, "4-2": 0.0128, "4-3": 0.0024, "4-4": 0.0003, "4-5": 0.0,
+        "5-0": 0.0428, "5-1": 0.024, "5-2": 0.0067, "5-3": 0.0013, "5-4": 0.0002, "5-5": 0.0,
+        "tail_probability": 0.0505
+      },
+      "probabilities_1x2": {"france_win": 0.8136, "draw": 0.129, "iraq_win": 0.0574},
+      "old_probabilities_1x2": {"france_win": 0.7999, "draw": 0.1366, "iraq_win": 0.0634},
+      "probability_change_vs_old": {"france_win": 0.0137, "draw": -0.0076, "iraq_win": -0.006},
+      "totals_probabilities": {"over_2_5": 0.6159, "under_2_5": 0.3841, "over_3_5": 0.393, "under_3_5": 0.607},
+      "top_scorelines": [{"score": "2-0", "probability": 0.1427}, {"score": "3-0", "probability": 0.1247}, {"score": "1-0", "probability": 0.109}, {"score": "4-0", "probability": 0.0816}, {"score": "2-1", "probability": 0.0799}],
+      "odds_implied_probability": {"included": true, "source": "public odds snippet retained from 20260621 baseline, not official jingcai and not live same-book snapshot", "captured_at": "2026-06-21T18:45:00+08:00", "raw_moneyline": {"france": -1100, "draw": 850, "iraq": 2500}, "normalized_no_vig": {"france_win": 0.8644, "draw": 0.0993, "iraq_win": 0.0363}, "overround": "not_recomputed_from_official_jingcai"},
+      "model_market_delta": {"france_win": -0.0508, "draw": 0.0297, "iraq_win": 0.0211},
+      "confidence_interval": {"france_win": [0.75, 0.86], "draw": [0.095, 0.17], "iraq_win": [0.03, 0.09], "xg_france": [2.25, 2.95], "xg_iraq": [0.38, 0.78]},
+      "red_team_status": "pending_or_hold_from_external_review",
+      "final_probabilities": {"france_win": 0.8136, "draw": 0.129, "iraq_win": 0.0574},
+      "quality_notes": ["Direction remains France favored, but the file is partial because the 20260622 data/tactical refresh files are skeletons.", "T-75m official lineup could move France xG materially if Mbappe, Olise, Barcola, Dembele or midfield protection is rotated.", "Official Chinese sports lottery odds and same-source handicap/totals are missing; betting status remains discussion_only_hold."],
+      "sensitivity": [{"variable": "france_core_attacker_rotation", "impact": "If two of Mbappe/Olise/Barcola/Dembele are rested or minutes-limited, France win may fall by 5-8pp and under 3.5 rises."}, {"variable": "iraq_goalkeeper_and_defensive_reset", "impact": "If Iraq stabilizes goalkeeper/low-block errors, France blowout tail falls; if early goal conceded, 3+ France goal path rises."}, {"variable": "market_heat_without_lineup_support", "impact": "Market may overstate France if price shortens before lineup confirmation; use as risk signal only."}]
+    },
+    {
+      "match": "Norway vs Senegal",
+      "date_local": "2026-06-22",
+      "venue_note": "New York/New Jersey Stadium, East Rutherford",
+      "factor_inputs": {
+        "team_a": "Norway",
+        "team_b": "Senegal",
+        "baseline_strength": {"norway": 0.78, "senegal": 0.69, "notes": "Norway has a small-to-moderate edge after round 1, but Senegal is not a weak-team profile."},
+        "recent_round1_form": {"norway": 0.82, "senegal": 0.54, "notes": "Norway beat Iraq 4-1 with Haaland/Odegaard/set-piece boost; Senegal lost 1-3 but retained transition and late scoring path."},
+        "attack_defense_structure": {"norway_attack": 0.82, "norway_defense": 0.64, "senegal_attack": 0.70, "senegal_defense": 0.58},
+        "player_state": {"norway": "Haaland 4.8, Odegaard 3.8, Moller Wolfe 3.6 but cramp monitor, Schjelderup head-contact monitor.", "senegal": "Mbaye 4.0 and Jackson/Diouf positive, but Koulibaly/Gueye/Mane/Niakhaté around 2.0 after France match."},
+        "availability_and_injury": {"norway": "No confirmed suspension; Moller Wolfe cramp, Schjelderup head collision and Odegaard load require T-75m check.", "senegal": "No confirmed new suspension in local files; older starters and first-round heavy minutes require final check."},
+        "tactical_matchup": {"norway": "Haaland/Odegaard axis, aerial edge and set pieces remain strong.", "senegal": "Transition, wide carries and must-score pressure raise both scoring and defensive exposure."},
+        "market_signal": {"status": "public snippet retained from old baseline; no official jingcai/live same-book snapshot", "model_policy": "reduce Norway edge slightly because Senegal desperation and Norway availability monitors are unresolved"}
+      },
+      "team_strength_score": {"norway": 77.4, "senegal": 68.9},
+      "attack_score": {"norway": 79.0, "senegal": 70.0},
+      "defense_score": {"norway": 65.0, "senegal": 59.0},
+      "player_state_adjustment": {"norway": 0.14, "senegal": 0.0},
+      "injury_adjustment": {"norway": -0.05, "senegal": -0.03},
+      "tactical_matchup_adjustment": {"norway": 0.10, "senegal": 0.13},
+      "schedule_environment_adjustment": {"norway": -0.02, "senegal": 0.05},
+      "market_adjustment": {"norway": -0.06, "senegal": 0.03},
+      "expected_goals": {"pre_market": {"norway": 1.74, "senegal": 1.27}, "final": {"norway": 1.70, "senegal": 1.32}, "old_baseline_final": {"norway": 1.75, "senegal": 1.25}},
+      "poisson_score_matrix": {
+        "0-0": 0.0488, "0-1": 0.0644, "0-2": 0.0425, "0-3": 0.0187, "0-4": 0.0062, "0-5": 0.0016,
+        "1-0": 0.083, "1-1": 0.1095, "1-2": 0.0723, "1-3": 0.0318, "1-4": 0.0105, "1-5": 0.0028,
+        "2-0": 0.0705, "2-1": 0.0931, "2-2": 0.0614, "2-3": 0.027, "2-4": 0.0089, "2-5": 0.0024,
+        "3-0": 0.04, "3-1": 0.0527, "3-2": 0.0348, "3-3": 0.0153, "3-4": 0.0051, "3-5": 0.0013,
+        "4-0": 0.017, "4-1": 0.0224, "4-2": 0.0148, "4-3": 0.0065, "4-4": 0.0021, "4-5": 0.0006,
+        "5-0": 0.0058, "5-1": 0.0076, "5-2": 0.005, "5-3": 0.0022, "5-4": 0.0007, "5-5": 0.0002,
+        "tail_probability": 0.0104
+      },
+      "probabilities_1x2": {"norway_win": 0.4641, "draw": 0.2374, "senegal_win": 0.2984},
+      "old_probabilities_1x2": {"norway_win": 0.4914, "draw": 0.2349, "senegal_win": 0.2737},
+      "probability_change_vs_old": {"norway_win": -0.0273, "draw": 0.0025, "senegal_win": 0.0247},
+      "totals_probabilities": {"over_2_5": 0.5813, "under_2_5": 0.4187, "over_3_5": 0.3572, "under_3_5": 0.6428},
+      "top_scorelines": [{"score": "1-1", "probability": 0.1095}, {"score": "2-1", "probability": 0.0931}, {"score": "1-0", "probability": 0.083}, {"score": "1-2", "probability": 0.0723}, {"score": "2-0", "probability": 0.0705}],
+      "odds_implied_probability": {"included": true, "source": "public odds snippet retained from 20260621 baseline, not official jingcai and not live same-book snapshot", "captured_at": "2026-06-21T18:45:00+08:00", "raw_fractional": {"norway": "11/8", "draw": "5/2", "senegal": "9/4"}, "normalized_no_vig": {"norway_win": 0.4149, "draw": 0.2816, "senegal_win": 0.3033}, "overround": "not_recomputed_from_official_jingcai"},
+      "model_market_delta": {"norway_win": 0.0492, "draw": -0.0442, "senegal_win": -0.0049},
+      "confidence_interval": {"norway_win": [0.40, 0.53], "draw": [0.19, 0.29], "senegal_win": [0.24, 0.36], "xg_norway": [1.35, 2.05], "xg_senegal": [0.98, 1.68]},
+      "red_team_status": "pending_or_hold_from_external_review",
+      "final_probabilities": {"norway_win": 0.4641, "draw": 0.2374, "senegal_win": 0.2984},
+      "quality_notes": ["Norway remains first direction but no longer near 49%; Senegal's must-score state and transition tail are higher.", "T-75m official lineup could move the match materially, especially Odegaard, Haaland, Moller Wolfe, Senegal's Jackson/Mane/Camara/Diouf roles.", "Official Chinese sports lottery odds and same-source handicap/totals are missing; betting status remains discussion_only_hold.", "This is a high-variance match: 1-1 is the single most likely scoreline even while Norway has the higher aggregate win probability."],
+      "sensitivity": [{"variable": "norway_left_side_and_odegaard_load", "impact": "If Moller Wolfe or Odegaard is limited, Norway xG may lose 0.10-0.20 and draw/Senegal tail rises."}, {"variable": "senegal_desperation_game_state", "impact": "If Senegal must press earlier, both over 2.5 and Norway transition paths rise; if Senegal chooses a lower block, draw rises."}, {"variable": "senegal_late_defensive_fatigue", "impact": "If first-round late fatigue repeats, Norway late-goal probability rises despite the lowered baseline."}]
+    }
+  ],
+  "aggregate_quality_notes": [
+    "Both upstream 20260622 refresh files exist but remain skeleton/in_progress, so this is a partial-current reprediction rather than a fully refreshed live model.",
+    "No official Chinese sports lottery odds, T-75m lineups, or same-source 1X2/handicap/totals snapshot is available in local inputs.",
+    "All betting language is held at discussion_only_hold; this file gives probability structure only."
+  ],
+  "source_log": [
+    "data/outputs/match_predictions/i-group-round2-quant-prediction-20260621.json",
+    "data/packets/matches/i-group-round2-data-refresh-20260622.json",
+    "data/packets/matchup_tactics/i-group-round2-tactical-refresh-20260622.json",
+    "比赛/已完成比赛/小组赛/I组/2026-06-16_法国_3-1_塞内加尔_复盘.md",
+    "比赛/已完成比赛/小组赛/I组/2026-06-16_伊拉克_1-4_挪威_复盘.md",
+    "data/outputs/player_state/france-player-state.json",
+    "data/outputs/player_state/iraq-player-state.json",
+    "data/outputs/player_state/norway-player-state.json",
+    "data/outputs/player_state/senegal-player-state.json",
+    "队伍/法国/成员表.md",
+    "队伍/伊拉克/成员表.md",
+    "队伍/挪威/成员表.md",
+    "队伍/塞内加尔/成员表.md"
+  ]
+}

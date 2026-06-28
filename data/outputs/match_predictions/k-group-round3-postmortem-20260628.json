@@ -1,0 +1,381 @@
+{
+  "schema_version": "group_round3_postmortem_v2",
+  "status": "completed_with_partial_player_state_updates",
+  "generated_at": "2026-06-28T22:05:00+08:00",
+  "group": "K",
+  "role_threads": {
+    "data_collector": "systemError/no k-group data-collector output found",
+    "modeler": "completed",
+    "tactics": "completed_source_limited",
+    "red_team": "completed_hold",
+    "betting_risk": "completed_postmatch_no_new_advice"
+  },
+  "data_collector_fallback": true,
+  "matches": [
+    {
+      "match_id": "2026-06-28_K_R3_COL_POR",
+      "fixture": "Colombia vs Portugal",
+      "actual_result": {
+        "actual_score": "0-0",
+        "home_goals": 0,
+        "away_goals": 0,
+        "outcome_label": "draw",
+        "actual_key": "draw",
+        "note": "Low-event draw; Colombia protected first place and Portugal could not convert must-win pressure."
+      },
+      "pre_match": {
+        "expected_goals": {
+          "home": 1.18,
+          "away": 1.48,
+          "total": 2.66
+        },
+        "final_probabilities": {
+          "哥伦比亚胜": 0.278,
+          "平": 0.261,
+          "葡萄牙胜": 0.461
+        },
+        "primary_direction": "away_win",
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.122158
+          },
+          {
+            "score": "0-1",
+            "probability": 0.103523
+          },
+          {
+            "score": "1-2",
+            "probability": 0.090397
+          },
+          {
+            "score": "1-0",
+            "probability": 0.082539
+          },
+          {
+            "score": "0-2",
+            "probability": 0.076607
+          }
+        ],
+        "totals_probabilities": {
+          "over_1_5": 0.74399,
+          "under_1_5": 0.25601,
+          "over_2_5": 0.496527,
+          "under_2_5": 0.503473,
+          "over_3_5": 0.27711,
+          "under_3_5": 0.72289,
+          "both_teams_to_score_yes": 0.535
+        },
+        "margin_bucket_probability": {
+          "哥伦比亚赢1球": 0.1789,
+          "哥伦比亚赢2球以上": 0.1232,
+          "平局": 0.257,
+          "葡萄牙赢1球": 0.2244,
+          "葡萄牙赢2球以上": 0.2164
+        },
+        "odds_implied_probability": {
+          "source": "500.com本地快照 tmp_500_jczq_20260626.html；周六069",
+          "captured_at": "2026-06-26/2026-06-27 local snapshot",
+          "odds_1x2": {
+            "哥伦比亚胜": 4.23,
+            "平": 3.28,
+            "葡萄牙胜": 1.7
+          },
+          "no_vig_probability": {
+            "哥伦比亚胜": 0.2093,
+            "平": 0.2699,
+            "葡萄牙胜": 0.5208
+          },
+          "handicap": {
+            "line": "哥伦比亚 +1",
+            "odds": {
+              "哥伦比亚(+1)胜": 1.9,
+              "哥伦比亚(+1)平": 3.45,
+              "哥伦比亚(+1)负": 3.2
+            }
+          }
+        },
+        "red_team_status": "hold",
+        "probabilities_1x2_english": {
+          "home_win": 0.278,
+          "draw": 0.261,
+          "away_win": 0.461
+        }
+      },
+      "backtest_metrics": {
+        "primary_direction_hit": false,
+        "brier_score_multiclass": 0.835926,
+        "log_loss_actual_bucket": 1.343235,
+        "actual_score_probability_in_matrix": 0.069948,
+        "actual_score_rank_in_0_0_to_5_5_matrix": 7,
+        "top3_score_hit": false,
+        "top5_score_hit": false,
+        "home_goal_abs_error_vs_xg": 1.18,
+        "away_goal_abs_error_vs_xg": 1.48,
+        "total_goal_abs_error_vs_xg_total": 2.66,
+        "over_2_5_actual": false,
+        "under_2_5_model_direction_hit": true,
+        "over_3_5_actual": false,
+        "under_3_5_model_direction_hit": true,
+        "actual_outcome_probability": 0.261
+      },
+      "market_calibration_error": {
+        "ordinary_1x2_actual_bucket": "draw",
+        "ordinary_1x2_calibration_read": "Market also made Portugal the favorite, but its draw probability was slightly above the model; favorite lean misled the primary direction while draw signal was usable.",
+        "handicap_line": "Colombia +1",
+        "handicap_actual_bucket": "Colombia +1 win because the real match was draw",
+        "handicap_model_probability": 0,
+        "handicap_market_no_vig_probability": 0.466315,
+        "handicap_calibration_read": "Handicap layer supported Colombia protection more than the ordinary 1X2 direction; actual landed inside the protected bucket.",
+        "ordinary_1x2_model_probability": 0.261
+      },
+      "postmatch_error": {
+        "type": "primary_direction_miss_low_event_draw",
+        "summary": "The model and market leaned Portugal, while the actual 0-0 rewarded Colombia draw-enough control and low-event suppression."
+      },
+      "factor_error": {
+        "market_signal": "Market favorite signal was absorbed more than the draw/control signal; draw no-vig was close to model but still not enough to offset Portugal direction.",
+        "tactical_signal": "Colombia game-management, defensive compactness, and Portugal frustration against a draw-enough opponent were underweighted.",
+        "player_state_signal": "Portugal attacking names were over-counted relative to actual chance conversion and Colombia defensive state."
+      },
+      "score_tail_error": {
+        "severity": "medium_high",
+        "actual_score_probability": 0.069948,
+        "diagnosis": "0-0 was outside Top5 despite a 7.0% matrix probability. The low-event clean draw branch should have been more visible for a leader needing only a draw."
+      },
+      "draw_floor_error": {
+        "severity": "high",
+        "diagnosis": "This is a clean draw-floor miss: group context and market both supported draw risk, but primary direction stayed with Portugal."
+      },
+      "third_round_context_error": {
+        "severity": "high",
+        "diagnosis": "The model read Portugal must-win pressure as attacking edge, but did not sufficiently model Colombia slowing the game once a draw protected first place."
+      }
+    },
+    {
+      "match_id": "2026-06-28_K_R3_DRC_UZB",
+      "fixture": "DR Congo vs Uzbekistan",
+      "actual_result": {
+        "actual_score": "3-1",
+        "home_goals": 3,
+        "away_goals": 1,
+        "outcome_label": "home_win",
+        "actual_key": "home_win",
+        "note": "DR Congo win direction hit; must-win second-half pressure produced a 3-1 tail rather than the lower-score cluster."
+      },
+      "pre_match": {
+        "expected_goals": {
+          "home": 1.48,
+          "away": 0.98,
+          "total": 2.46
+        },
+        "final_probabilities": {
+          "刚果金胜": 0.5,
+          "平": 0.255,
+          "乌兹别克斯坦胜": 0.245
+        },
+        "primary_direction": "home_win",
+        "top_scorelines": [
+          {
+            "score": "1-0",
+            "probability": 0.126444
+          },
+          {
+            "score": "1-1",
+            "probability": 0.123915
+          },
+          {
+            "score": "2-0",
+            "probability": 0.093568
+          },
+          {
+            "score": "2-1",
+            "probability": 0.091697
+          },
+          {
+            "score": "0-0",
+            "probability": 0.085435
+          }
+        ],
+        "totals_probabilities": {
+          "over_1_5": 0.704395,
+          "under_1_5": 0.295605,
+          "over_2_5": 0.445886,
+          "under_2_5": 0.554114,
+          "over_3_5": 0.233909,
+          "under_3_5": 0.766091,
+          "both_teams_to_score_yes": 0.4825
+        },
+        "margin_bucket_probability": {
+          "刚果金赢1球": 0.2432,
+          "刚果金赢2球以上": 0.2444,
+          "平局": 0.2622,
+          "乌兹别克斯坦赢1球": 0.161,
+          "乌兹别克斯坦赢2球以上": 0.0892
+        },
+        "odds_implied_probability": {
+          "source": "500.com本地快照 tmp_500_jczq_20260626.html；周六070",
+          "captured_at": "2026-06-26/2026-06-27 local snapshot",
+          "odds_1x2": {
+            "刚果金胜": 1.67,
+            "平": 3.82,
+            "乌兹别克斯坦胜": 3.72
+          },
+          "no_vig_probability": {
+            "刚果金胜": 0.5302,
+            "平": 0.2318,
+            "乌兹别克斯坦胜": 0.238
+          },
+          "handicap": {
+            "line": "刚果金 -1",
+            "odds": {
+              "刚果金(-1)胜": 3.1,
+              "刚果金(-1)平": 3.45,
+              "刚果金(-1)负": 1.94
+            }
+          }
+        },
+        "red_team_status": "hold",
+        "probabilities_1x2_english": {
+          "home_win": 0.5,
+          "draw": 0.255,
+          "away_win": 0.245
+        }
+      },
+      "backtest_metrics": {
+        "primary_direction_hit": true,
+        "brier_score_multiclass": 0.37505,
+        "log_loss_actual_bucket": 0.693147,
+        "actual_score_probability_in_matrix": 0.045237,
+        "actual_score_rank_in_0_0_to_5_5_matrix": 9,
+        "top3_score_hit": false,
+        "top5_score_hit": false,
+        "home_goal_abs_error_vs_xg": 1.52,
+        "away_goal_abs_error_vs_xg": 0.02,
+        "total_goal_abs_error_vs_xg_total": 1.54,
+        "over_2_5_actual": true,
+        "under_2_5_model_direction_hit": false,
+        "over_3_5_actual": true,
+        "under_3_5_model_direction_hit": false,
+        "actual_outcome_probability": 0.5
+      },
+      "market_calibration_error": {
+        "ordinary_1x2_actual_bucket": "home_win",
+        "ordinary_1x2_calibration_read": "Market was slightly stronger than the model on DR Congo win and helped the direction layer.",
+        "handicap_line": "DR Congo -1",
+        "handicap_actual_bucket": "DR Congo -1 win because DR Congo won by two goals",
+        "handicap_market_no_vig_probability": 0.286001,
+        "handicap_calibration_read": "Market priced the two-plus margin higher than the model; actual confirmed that the model underweighted the cover tail.",
+        "ordinary_1x2_model_probability": 0.5
+      },
+      "postmatch_error": {
+        "type": "direction_hit_tail_and_totals_miss",
+        "summary": "DR Congo win direction hit, but 3-1, over 2.5, over 3.5, and -1 cover tail were underweighted."
+      },
+      "factor_error": {
+        "market_signal": "Market was closer on DR Congo win and two-plus margin than the model, so market calibration helped but was not absorbed enough into margin/tail.",
+        "tactical_signal": "Must-win aggression and Uzbekistan open-game vulnerability were capped too tightly after a low-event first-cluster baseline.",
+        "player_state_signal": "Uzbekistan defensive fragility and DR Congo second-half attacking lift were underweighted; Uzbekistan still retained enough attack for one goal."
+      },
+      "score_tail_error": {
+        "severity": "medium_high",
+        "actual_score_probability": 0.045237,
+        "diagnosis": "3-1 sat outside Top5 with about 4.5% mass. The model covered 2-1 but did not push enough probability into the must-win 3-goal home tail."
+      },
+      "draw_floor_error": {
+        "severity": "low",
+        "diagnosis": "Draw floor was not the miss; both teams needed wins and the actual game confirmed a lower draw relevance than the 25.5% published draw."
+      },
+      "third_round_context_error": {
+        "severity": "medium_high",
+        "diagnosis": "The model identified DR Congo must-win context, but did not sufficiently convert it into second-half acceleration, Uzbekistan collapse exposure, and two-plus margin probability."
+      }
+    }
+  ],
+  "data_packet": {
+    "schema_version": "round3_postmatch_data_packet_v1",
+    "status": "partial_thread_fallback_after_data_collector_system_error",
+    "generated_at": "2026-06-28T22:05:00+08:00",
+    "owner": "main-thread-as-data-fallback",
+    "role_thread_status": {
+      "data_collector": "systemError/no k-group data-collector output found",
+      "modeler": "completed",
+      "tactics": "completed_source_limited",
+      "red_team": "completed_hold",
+      "betting_risk": "completed_postmatch_no_new_advice"
+    },
+    "scope": "K组第三轮两场赛后事实包，用于复盘与成员表 partial 更新。",
+    "matches": [
+      {
+        "match_id": "2026-06-28_K_R3_COL_POR",
+        "match_cn": "哥伦比亚 0-0 葡萄牙",
+        "actual_score": "0-0",
+        "facts": [
+          "哥伦比亚以平局锁定K组第一，葡萄牙第二出线。",
+          "哥伦比亚射门数量明显更多；补时阶段达文森·桑切斯头球被VAR/越位判定取消。",
+          "迪奥戈·科斯塔多次关键扑救，詹姆斯·罗德里格斯、科尔多瓦、阿里亚斯等制造威胁。",
+          "葡萄牙进攻端节奏偏急，C罗和布鲁诺的终结质量未能兑现赛前xG倾向。"
+        ],
+        "source_log": [
+          {
+            "name": "Fox Sports Colombia vs Portugal match center",
+            "url": "https://www.foxsports.com/soccer/fifa-world-cup-men-colombia-vs-portugal-jun-27-2026-game-boxscore-647665",
+            "status": "score/event_stats_partial"
+          },
+          {
+            "name": "Indian Express Colombia 0-0 Portugal live/report",
+            "url": "https://indianexpress.com/article/sports/football/colombia-vs-portugal-live-score-fifa-world-cup-2026-group-k-10083777/",
+            "status": "lineups/shots/event_chain_partial"
+          },
+          {
+            "name": "The Guardian Colombia vs Portugal live",
+            "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-colombia-v-portugal-updates-col-vs-por-group-k-match-score-latest",
+            "status": "match_narrative_partial"
+          }
+        ]
+      },
+      {
+        "match_id": "2026-06-28_K_R3_DRC_UZB",
+        "match_cn": "刚果金 3-1 乌兹别克斯坦",
+        "actual_score": "3-1",
+        "facts": [
+          "乌兹别克斯坦第10分钟由埃尔多尔·肖穆罗多夫先入一球。",
+          "刚果金下半场反扑，约阿内·维萨第68分钟点球扳平，菲斯顿·马耶莱第78分钟反超，维萨补时再入一球。",
+          "刚果金完成逆转并获得队史/本届关键胜利，三球尾部和让球穿盘明显高于赛前中位数。",
+          "乌兹别克斯坦连续多场防线承压，领先后仍未守住低位，后段追分与体能崩盘共同放大失球。"
+        ],
+        "source_log": [
+          {
+            "name": "Sky Sports DR Congo 3-1 Uzbekistan match report",
+            "url": "https://www.skysports.com/football/dr-congo-vs-uzbekistan/report/549801",
+            "status": "score/goals/report"
+          },
+          {
+            "name": "The Guardian DR Congo vs Uzbekistan live",
+            "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-dr-congo-v-uzbekistan-updates-cod-vs-uzb-group-k-match-score-latest",
+            "status": "event_chain_partial"
+          },
+          {
+            "name": "FIFA match centre DR Congo vs Uzbekistan",
+            "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-center/400018000",
+            "status": "result_reference_partial"
+          }
+        ]
+      }
+    ],
+    "data_gaps": [
+      "官方逐人完整出场分钟、扑救、预期进球、黄红牌、同源外部球员评分未完全闭合。",
+      "葡萄牙、哥伦比亚部分首发名单来自媒体快照，仍需赛会/官方技术报告复核。",
+      "刚果金3-1乌兹别克斯坦的点球制造者、全部换人和补时细节需官方事件表补齐。"
+    ]
+  },
+  "red_team_status": "hold",
+  "player_state_update_status": "partial_updated_official_full_minutes_and_external_ratings_missing",
+  "outputs": {
+    "match_reviews": [
+      "比赛/已完成比赛/小组赛/K组/2026-06-28_哥伦比亚_0-0_葡萄牙_复盘.md",
+      "比赛/已完成比赛/小组赛/K组/2026-06-28_刚果金_3-1_乌兹别克斯坦_复盘.md"
+    ],
+    "group_review": "比赛/已完成比赛/小组赛/K组/K组第三轮复盘.md"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "review_id": "k-group-round3-prediction-red-team-20260627",
+  "group": "K",
+  "round": 3,
+  "created_at": "2026-06-27T14:55:00+08:00",
+  "review_scope": [
+    "哥伦比亚 vs 葡萄牙",
+    "刚果金 vs 乌兹别克斯坦"
+  ],
+  "overall_status": "hold",
+  "betting_gate": "hold_not_executable",
+  "reason": "缺 T-75 官方首发、最新伤停最终确认和完整同源大小球盘口；第三轮排名动机导致节奏分布高度敏感。",
+  "checks": {
+    "sample_size": {
+      "status": "hold",
+      "finding": "两轮小组赛样本太小，不能直接把葡萄牙5-0或乌兹别克斯坦0-5外推为常态。"
+    },
+    "lineup_and_injury_freshness": {
+      "status": "hold",
+      "finding": "官方首发未公布，赛前预测首发只能作为临时输入。"
+    },
+    "overconfidence": {
+      "status": "hold",
+      "finding": "哥伦比亚 vs 葡萄牙的客胜热度高于模型；刚果金主胜方向不能转换为深胜。"
+    },
+    "poisson_limits": {
+      "status": "hold",
+      "finding": "泊松模型可能低估早球、红牌、同时开球记分牌反馈和第三名净胜球追赶导致的尾部比分。"
+    },
+    "market_heat": {
+      "status": "hold",
+      "finding": "葡萄牙客胜市场偏热；刚果金让球盘没有支持其赢2球以上的强信号。"
+    },
+    "double_counting": {
+      "status": "pass",
+      "finding": "已把排名动机、市场校准和球队实力分层处理，没有把同一强弱信号重复计入主胜/客胜。"
+    }
+  },
+  "match_reviews": [
+    {
+      "match": "哥伦比亚 vs 葡萄牙",
+      "status": "hold",
+      "risk_adjustment": {
+        "portugal_win": -0.06,
+        "colombia_win": 0.069,
+        "draw": -0.009
+      },
+      "main_risks": [
+        "葡萄牙客胜赔率偏热。",
+        "哥伦比亚平局收益高，比赛可能低速化。",
+        "若葡萄牙轮换或哥伦比亚保守首发，xG 需重跑。"
+      ],
+      "allowed_output": "可发布讨论型预测：葡萄牙不败偏强，1-1 为最高单比分；禁止投注执行表达。"
+    },
+    {
+      "match": "刚果金 vs 乌兹别克斯坦",
+      "status": "hold",
+      "risk_adjustment": {
+        "dr_congo_win": -0.03,
+        "draw": 0.023,
+        "uzbekistan_win": 0.007
+      },
+      "main_risks": [
+        "刚果金进攻创造力不足，1-1/0-0 风险不能忽略。",
+        "乌兹别克斯坦必须争胜，既增加自身进球窗口，也增加后场尾部丢球。",
+        "让球盘不支持刚果金深胜高置信。"
+      ],
+      "allowed_output": "可发布讨论型预测：刚果金胜率最高，1-0 为最高单比分；禁止稳胆和深胜表达。"
+    }
+  ],
+  "required_next_update": [
+    "T-75 官方首发",
+    "最新伤停和停赛",
+    "同源胜平负、让球、大小球快照",
+    "若盘口或首发出现重大变化，重跑 xG 与泊松矩阵"
+  ]
+}

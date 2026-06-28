@@ -1,0 +1,551 @@
+{
+  "phase": "postmatch_data_collection",
+  "status": "partial_source_limited",
+  "group": "L",
+  "round": 3,
+  "captured_at": "2026-06-28T21:06:14+08:00",
+  "owner": "worldcup-data-collector",
+  "scope": [
+    "克罗地亚 2-1 加纳",
+    "巴拿马 0-2 英格兰"
+  ],
+  "boundary": "只做赛后事实采集与成员表/player_state回灌输入，不做预测、不做投注建议。",
+  "player_state_update_status_recommendation": "partial",
+  "matches": [
+    {
+      "match_id": "2026-06-27_L_R3_CRO_2-1_GHA",
+      "match": "克罗地亚 vs 加纳",
+      "final_score": {
+        "home": 2,
+        "away": 1,
+        "text": "克罗地亚 2-1 加纳"
+      },
+      "venue": "Philadelphia Stadium",
+      "kickoff_local_source_status": "confirmed_from_pre_match_local_packet",
+      "result_source_status": "confirmed",
+      "starting_lineups": {
+        "source_status": "confirmed_guardian_live",
+        "croatia": [
+          "Dominik Livakovic",
+          "Josip Stanisic",
+          "Josip Sutalo",
+          "Marin Pongracic",
+          "Ivan Perisic",
+          "Luka Modric",
+          "Mateo Kovacic",
+          "Nikola Vlasic",
+          "Petar Sucic",
+          "Martin Baturina",
+          "Ante Budimir"
+        ],
+        "ghana": [
+          "Benjamin Asare",
+          "Marvin Senaya",
+          "Jonas Adjetey",
+          "Derrick Luckassen",
+          "Gideon Mensah",
+          "Thomas Partey",
+          "Elisha Owusu",
+          "Kwasi Sibo",
+          "Kamaldeen Sulemana",
+          "Jordan Ayew",
+          "Antoine Semenyo"
+        ]
+      },
+      "goals": [
+        {
+          "minute": "31",
+          "team": "克罗地亚",
+          "player": "Petar Sucic",
+          "assist": null,
+          "description": "约25码远射入底角。",
+          "source_status": "confirmed_goal_assist_missing"
+        },
+        {
+          "minute": "73",
+          "team": "加纳",
+          "player": "Derrick Luckassen",
+          "assist": null,
+          "description": "后点接任意球后破门，VAR长时间复核后确认有效。",
+          "source_status": "confirmed_goal_assist_missing_var_checked"
+        },
+        {
+          "minute": "83",
+          "team": "克罗地亚",
+          "player": "Nikola Vlasic",
+          "assist": "Luka Modric",
+          "description": "Modric角球助攻，Vlasic头球破门。",
+          "source_status": "confirmed"
+        }
+      ],
+      "cards": [
+        {
+          "minute": "68",
+          "team": "克罗地亚",
+          "player": "Ivan Perisic",
+          "card": "yellow",
+          "reason": "对Abdul Fatawu强硬犯规。",
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "90+4",
+          "team": "加纳",
+          "player": "Kojo Oppong",
+          "card": "yellow",
+          "reason": "战术犯规。",
+          "source_status": "confirmed_guardian_live"
+        }
+      ],
+      "substitutions": [
+        {
+          "minute": "46",
+          "team": "加纳",
+          "players_on": [
+            "Abdul Fatawu",
+            "Kojo Oppong"
+          ],
+          "players_off": [
+            "Jonas Adjetey",
+            "Elisha Owusu"
+          ],
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "67",
+          "team": "克罗地亚",
+          "players_on": [
+            "Igor Matanovic"
+          ],
+          "players_off": [
+            "Ante Budimir"
+          ],
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "72",
+          "team": "加纳",
+          "players_on": [
+            "Brandon Thomas-Asante",
+            "Ernest Nuamah"
+          ],
+          "players_off": [
+            "Kamaldeen Sulemana",
+            "Jordan Ayew"
+          ],
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "80",
+          "team": "克罗地亚",
+          "players_on": [
+            "Mario Pasalic"
+          ],
+          "players_off": [
+            "Mateo Kovacic"
+          ],
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "85",
+          "team": "加纳",
+          "players_on": [
+            "Caleb Yirenkyi"
+          ],
+          "players_off": [
+            "Kwasi Sibo"
+          ],
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "88",
+          "team": "克罗地亚",
+          "players_on": [
+            "Josko Gvardiol",
+            "Marco Pasalic"
+          ],
+          "players_off": [
+            "Marin Pongracic",
+            "Martin Baturina"
+          ],
+          "source_status": "confirmed_guardian_live"
+        }
+      ],
+      "injury_availability_notes": [
+        {
+          "team": "加纳",
+          "player": "Antoine Semenyo",
+          "note": "87分钟左右倒地捂腿并接受治疗，现场源描述为疑似膝部问题，赛后可用性需后续复核。",
+          "source_status": "injury_watch_guardian_live"
+        },
+        {
+          "team": "克罗地亚",
+          "player": "Luka Modric",
+          "note": "打满关键阶段并助攻制胜球；未见新增伤停，40岁老将负荷仍需赛后恢复跟踪。",
+          "source_status": "performance_and_minutes_watch"
+        },
+        {
+          "team": "克罗地亚",
+          "player": "Mateo Kovacic",
+          "note": "80分钟被Mario Pasalic换下；未见伤停说明，按常规轮换/体能管理观察。",
+          "source_status": "substitution_confirmed_reason_uncertain"
+        }
+      ],
+      "key_technical_stats": {
+        "xg": {
+          "croatia": 0.42,
+          "ghana": 0.74,
+          "source_status": "guardian_live_note"
+        },
+        "ghana_shots_on_target": {
+          "value": 1,
+          "source_status": "guardian_live_note"
+        },
+        "full_team_stats_status": "partial_missing_official_stats_table"
+      },
+      "round_of_32_context": {
+        "group_table_after_result": [
+          {
+            "team": "英格兰",
+            "played": 3,
+            "goal_difference": 4,
+            "points": 7
+          },
+          {
+            "team": "克罗地亚",
+            "played": 3,
+            "goal_difference": 0,
+            "points": 6
+          },
+          {
+            "team": "加纳",
+            "played": 3,
+            "goal_difference": 0,
+            "points": 4
+          },
+          {
+            "team": "巴拿马",
+            "played": 3,
+            "goal_difference": -4,
+            "points": 0
+          }
+        ],
+        "source_status": "guardian_live"
+      },
+      "player_state_handoff": {
+        "croatia_focus": [
+          "Petar Sucic：首发进球，内部评分应上修。",
+          "Nikola Vlasic：首发并83分钟制胜头球，内部评分上修。",
+          "Luka Modric：首发、制胜角球助攻、末段防守读取突出，40岁负荷需记录。",
+          "Mateo Kovacic：首发80分钟被换下，未见伤停说明。"
+        ],
+        "ghana_focus": [
+          "Derrick Luckassen：首发中卫，73分钟VAR确认进球。",
+          "Ernest Nuamah：72分钟替补登场，需记录替补分钟。",
+          "Antoine Semenyo：87分钟疑似腿/膝部问题，下一阶段可用性需复核。"
+        ]
+      }
+    },
+    {
+      "match_id": "2026-06-27_L_R3_PAN_0-2_ENG",
+      "match": "巴拿马 vs 英格兰",
+      "final_score": {
+        "home": 0,
+        "away": 2,
+        "text": "巴拿马 0-2 英格兰"
+      },
+      "venue": "New York New Jersey Stadium",
+      "kickoff_local_source_status": "confirmed_from_pre_match_local_packet",
+      "result_source_status": "confirmed",
+      "starting_lineups": {
+        "source_status": "confirmed_guardian_live",
+        "panama": [
+          "Orlando Mosquera",
+          "Amir Murillo",
+          "Escobar",
+          "Jose Cordoba",
+          "Andres Andrade",
+          "Gutierrez",
+          "Cristian Martinez",
+          "Yoel Barcenas",
+          "Carlos Harvey",
+          "Jose Luis Rodriguez",
+          "Tomas Rodriguez"
+        ],
+        "england": [
+          "Jordan Pickford",
+          "Jarell Quansah",
+          "Ezri Konsa",
+          "Marc Guehi",
+          "Nico O'Reilly",
+          "Jude Bellingham",
+          "Elliot Anderson",
+          "Bukayo Saka",
+          "Morgan Rogers",
+          "Marcus Rashford",
+          "Harry Kane"
+        ]
+      },
+      "goals": [
+        {
+          "minute": "62",
+          "team": "英格兰",
+          "player": "Jude Bellingham",
+          "assist": "Bukayo Saka",
+          "description": "Saka左侧角球，Bellingham前点脚下处理破门。",
+          "source_status": "confirmed_guardian_live_and_times"
+        },
+        {
+          "minute": "67",
+          "team": "英格兰",
+          "player": "Harry Kane",
+          "assist": "Jude Bellingham",
+          "description": "Bellingham左路突破传中，Kane头球破门；Kane成为英格兰世界杯决赛圈进球纪录保持者。",
+          "source_status": "confirmed_guardian_live_and_times"
+        }
+      ],
+      "cards": [
+        {
+          "minute": "53",
+          "team": "巴拿马",
+          "player": "Jose Fajardo",
+          "card": "yellow",
+          "reason": "拉拽Konsa球衣。",
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "60",
+          "team": "英格兰",
+          "player": "Jarell Quansah",
+          "card": "yellow",
+          "reason": "此前对Rodriguez的迟到冲撞；随后因脚踝伤势无法继续。",
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "83",
+          "team": "巴拿马",
+          "player": "Andres Andrade",
+          "card": "yellow",
+          "reason": "对Morgan Rogers的战术犯规。",
+          "source_status": "confirmed_guardian_live"
+        }
+      ],
+      "substitutions": [
+        {
+          "minute": "63",
+          "team": "英格兰",
+          "players_on": [
+            "Djed Spence",
+            "Noni Madueke"
+          ],
+          "players_off": [
+            "Jarell Quansah",
+            "Bukayo Saka"
+          ],
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "72",
+          "team": "巴拿马",
+          "players_on": [
+            "Diaz",
+            "Londono"
+          ],
+          "players_off": [
+            "Yoel Barcenas",
+            "Jose Luis Rodriguez"
+          ],
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "73",
+          "team": "英格兰",
+          "players_on": [
+            "Eberechi Eze"
+          ],
+          "players_off": [
+            "Jude Bellingham"
+          ],
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "85",
+          "team": "英格兰",
+          "players_on": [
+            "Ollie Watkins",
+            "Jordan Henderson"
+          ],
+          "players_off": [
+            "Harry Kane",
+            "Elliot Anderson"
+          ],
+          "source_status": "confirmed_guardian_live"
+        },
+        {
+          "minute": "88",
+          "team": "巴拿马",
+          "players_on": [
+            "Davis",
+            "Quintero"
+          ],
+          "players_off": [
+            "Carlos Harvey",
+            "Gutierrez"
+          ],
+          "source_status": "confirmed_guardian_live"
+        }
+      ],
+      "injury_availability_notes": [
+        {
+          "team": "英格兰",
+          "player": "Jarell Quansah",
+          "note": "60分钟脚踝扭伤/崴脚后无法继续，63分钟被Djed Spence换下；需赛后医学复核。",
+          "source_status": "confirmed_injury_watch_guardian_live"
+        },
+        {
+          "team": "英格兰",
+          "player": "Reece James",
+          "note": "赛前已因伤缺阵，Quansah顶替右后卫首发。",
+          "source_status": "confirmed_pre_match_context"
+        },
+        {
+          "team": "英格兰",
+          "player": "Declan Rice",
+          "note": "赛前Tuchel称其有轻微撞伤/伤情并需管理分钟，且身背黄牌；本场替补未出场。",
+          "source_status": "confirmed_pre_match_quote_guardian_live"
+        }
+      ],
+      "key_technical_stats": {
+        "team_shape_note": "英格兰上半场破低位效率低，62-67分钟连续通过Bellingham前插和左路传中完成破局；巴拿马开场与下半场有高压/反击机会。",
+        "panama_disallowed_goal": {
+          "minute": "90+1",
+          "player": "Jose Fajardo",
+          "note": "单刀破门被判越位，Pickford仍被迫处理后续角球。",
+          "source_status": "confirmed_guardian_live"
+        },
+        "full_team_stats_status": "partial_missing_official_stats_table"
+      },
+      "round_of_32_context": {
+        "group_table_after_result": [
+          {
+            "team": "英格兰",
+            "played": 3,
+            "goal_difference": 4,
+            "points": 7
+          },
+          {
+            "team": "克罗地亚",
+            "played": 3,
+            "goal_difference": 0,
+            "points": 6
+          },
+          {
+            "team": "加纳",
+            "played": 3,
+            "goal_difference": 0,
+            "points": 4
+          },
+          {
+            "team": "巴拿马",
+            "played": 3,
+            "goal_difference": -4,
+            "points": 0
+          }
+        ],
+        "source_status": "guardian_live"
+      },
+      "player_state_handoff": {
+        "england_focus": [
+          "Jude Bellingham：首发，62分钟进球，67分钟助攻Kane，73分钟被Eze换下；内部评分应明显上修。",
+          "Harry Kane：首发，67分钟头球破门，85分钟被换下；世界杯进球纪录节点需记录。",
+          "Jarell Quansah：首发右后卫，60分钟黄牌并脚踝伤退，63分钟被Spence换下；下一场可用性需重点复核。",
+          "Reece James：伤缺；Declan Rice替补未出场，赛前轻伤/黄牌管理。"
+        ],
+        "panama_focus": [
+          "巴拿马整体：高压和反击制造若干机会，但0进球结束小组赛。",
+          "Jose Fajardo：53分钟黄牌，90+1越位进球无效。",
+          "Andres Andrade：83分钟黄牌，并在Kane进球中被其抢点压制。"
+        ]
+      }
+    }
+  ],
+  "source_log": [
+    {
+      "source": "The Guardian live - Croatia 2-1 Ghana",
+      "url": "https://www.theguardian.com/football/live/2026/jun/27/croatia-v-ghana-world-cup-2026-live",
+      "captured_at": "2026-06-28T21:06:14+08:00",
+      "supports_fields": [
+        "score",
+        "starting_lineups",
+        "goals",
+        "substitutions",
+        "cards",
+        "xG note",
+        "injury watch"
+      ],
+      "source_status": "confirmed_primary_live"
+    },
+    {
+      "source": "The Guardian live - Panama 0-2 England",
+      "url": "https://www.theguardian.com/football/live/2026/jun/27/panama-v-england-world-cup-2026-live-updates",
+      "captured_at": "2026-06-28T21:06:14+08:00",
+      "supports_fields": [
+        "score",
+        "starting_lineups",
+        "goals",
+        "assists",
+        "substitutions",
+        "cards",
+        "injury watch",
+        "group table"
+      ],
+      "source_status": "confirmed_primary_live"
+    },
+    {
+      "source": "Times of India - Croatia vs Ghana result",
+      "url": "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/croatia-vs-ghana-fifa-world-cup-match-result-vlasic-sucic-strike-to-seal-croatias-knockout-berth-with-2-1-win-over-ghana/articleshow/132044231.cms",
+      "captured_at": "2026-06-28T21:06:14+08:00",
+      "supports_fields": [
+        "score",
+        "goalscorers",
+        "knockout context"
+      ],
+      "source_status": "supporting"
+    },
+    {
+      "source": "Times of India - England vs Panama result",
+      "url": "https://timesofindia.indiatimes.com/sports/football/fifa-world-cup/england-vs-panama-fifa-world-cup-match-result-jude-bellingham-record-breaker-harry-kane-guide-england-into-favourable-knockout-bracket/articleshow/132044172.cms",
+      "captured_at": "2026-06-28T21:06:14+08:00",
+      "supports_fields": [
+        "score",
+        "goalscorers",
+        "England top group context"
+      ],
+      "source_status": "supporting"
+    },
+    {
+      "source": "The Times live - England vs Panama",
+      "url": "https://www.thetimes.com/sport/football/world-cup/article/england-vs-panama-live-score-updates-world-cup-2026-latest-news-commentary-dc6kps9r7",
+      "captured_at": "2026-06-28T21:06:14+08:00",
+      "supports_fields": [
+        "England XI",
+        "Quansah injury",
+        "Bellingham/Kane goals",
+        "Rice fitness context"
+      ],
+      "source_status": "supporting"
+    }
+  ],
+  "gaps_and_conflicts": [
+    "FIFA官方完整事件表未取得。",
+    "两场官方完整逐人分钟、全部替补补时细节和完整技术统计未闭合。",
+    "同源外部逐人评分未取得；后续成员表/player_state应将 external_rating 设为 null，并写 rating_source_status/rating_missing_note。",
+    "克罗地亚 2-1 加纳部分助攻未由当前可靠源确认，Petar Sucic和Derrick Luckassen进球 assist 保留 null。",
+    "加纳 Antoine Semenyo、英格兰 Jarell Quansah 的赛后伤情需后续官方/队医或发布会源复核。",
+    "本包只提供结构化事实输入，未直接更新四队 canonical 成员表或 player_state。"
+  ],
+  "handoff_notes": [
+    "主线程或成员表更新线程可据此为四队每名球员追加 round3 match_internal_rating_log；未出场球员应记录0分钟低权重内部评分。",
+    "Croatia重点上修Petar Sucic、Nikola Vlasic、Luka Modric；Ghana重点记录Luckassen进球、Nuamah替补、Semenyo伤情观察。",
+    "England重点上修Bellingham/Kane，记录Quansah黄牌+脚踝伤退、Reece James伤缺、Rice替补未出场；Panama记录高压/反击但0进球和Fajardo越位无效球。"
+  ]
+}
