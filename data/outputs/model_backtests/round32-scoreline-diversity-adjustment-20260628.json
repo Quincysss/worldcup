@@ -1,0 +1,380 @@
+{
+  "schema_version": "round32_scoreline_diversity_adjustment_v1",
+  "created_at": "2026-06-28T23:55:00+08:00",
+  "status": "completed",
+  "scope": "M73-M84 existing Round of 32 v3 predictions",
+  "no_1x2_probability_change": true,
+  "adjustment_policy": "Existing xG and 1X2 probabilities are preserved. Scoreline display is changed from single exact-score emphasis to scoreline clusters.",
+  "trigger_summary": {
+    "triggered": [
+      "M73",
+      "M78",
+      "M79",
+      "M82"
+    ],
+    "near_miss": [
+      "M75",
+      "M83"
+    ],
+    "top1_caveat": [
+      "M76",
+      "M84"
+    ],
+    "not_triggered": [
+      "M74",
+      "M77",
+      "M80",
+      "M81"
+    ]
+  },
+  "matches": [
+    {
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M73_2026-06-28_南非_vs_加拿大_量化预测_v3.md",
+      "match_id": "M73",
+      "teams": [
+        "南非",
+        "加拿大"
+      ],
+      "status": "triggered",
+      "top1_scoreline": "1-1",
+      "one_one_rank": 1,
+      "xg_gap": 0.26,
+      "team_strength_gap": 6,
+      "top1_scoreline_caveat": "1-1 是中心平局切片，不应作为唯一比分叙事；需要同时展示一球差、开放平局和波动尾部。",
+      "cluster_priority": [
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.3709
+        },
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.3445
+        },
+        {
+          "cluster": "underdog_edge_cluster",
+          "probability": 0.2592
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M74_2026-06-29_德国_vs_巴拉圭_量化预测_v3.md",
+      "match_id": "M74",
+      "teams": [
+        "德国",
+        "巴拉圭"
+      ],
+      "status": "not_triggered",
+      "top1_scoreline": "2-0",
+      "one_one_rank": 4,
+      "xg_gap": 1.32,
+      "team_strength_gap": 18,
+      "top1_scoreline_caveat": "Top1 不是 1-1，但仍输出比分簇用于覆盖相邻路径和尾部风险。",
+      "cluster_priority": [
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.4322
+        },
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.2941
+        },
+        {
+          "cluster": "volatility_tail_cluster",
+          "probability": 0.1661
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M75_2026-06-29_荷兰_vs_摩洛哥_量化预测_v3.md",
+      "match_id": "M75",
+      "teams": [
+        "荷兰",
+        "摩洛哥"
+      ],
+      "status": "near_miss",
+      "top1_scoreline": "1-1",
+      "one_one_rank": 1,
+      "xg_gap": 0.36,
+      "team_strength_gap": 3,
+      "top1_scoreline_caveat": "1-1 是中心平局切片，不应作为唯一比分叙事；需要同时展示一球差、开放平局和波动尾部。",
+      "cluster_priority": [
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.3531
+        },
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.3524
+        },
+        {
+          "cluster": "underdog_edge_cluster",
+          "probability": 0.2434
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M76_2026-06-29_巴西_vs_日本_量化预测_v3.md",
+      "match_id": "M76",
+      "teams": [
+        "巴西",
+        "日本"
+      ],
+      "status": "not_triggered_but_top1_caveat",
+      "top1_scoreline": "1-1",
+      "one_one_rank": 1,
+      "xg_gap": 0.84,
+      "team_strength_gap": 11,
+      "top1_scoreline_caveat": "1-1 只是泊松矩阵的最高单格，强弱方向仍需看 1X2 合计和边际胜簇。",
+      "cluster_priority": [
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.3842
+        },
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.3042
+        },
+        {
+          "cluster": "volatility_tail_cluster",
+          "probability": 0.1945
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M77_2026-06-30_法国_vs_瑞典_量化预测_v3.md",
+      "match_id": "M77",
+      "teams": [
+        "法国",
+        "瑞典"
+      ],
+      "status": "not_triggered",
+      "top1_scoreline": "2-1",
+      "one_one_rank": 3,
+      "xg_gap": 1.07,
+      "team_strength_gap": 11,
+      "top1_scoreline_caveat": "Top1 不是 1-1，但仍输出比分簇用于覆盖相邻路径和尾部风险。",
+      "cluster_priority": [
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.3928
+        },
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.2848
+        },
+        {
+          "cluster": "volatility_tail_cluster",
+          "probability": 0.2037
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M78_2026-06-30_科特迪瓦_vs_挪威_量化预测_v3.md",
+      "match_id": "M78",
+      "teams": [
+        "科特迪瓦",
+        "挪威"
+      ],
+      "status": "triggered",
+      "top1_scoreline": "1-1",
+      "one_one_rank": 1,
+      "xg_gap": 0.23,
+      "team_strength_gap": 3,
+      "top1_scoreline_caveat": "1-1 是中心平局切片，不应作为唯一比分叙事；需要同时展示一球差、开放平局和波动尾部。",
+      "cluster_priority": [
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.3167
+        },
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.3154
+        },
+        {
+          "cluster": "underdog_edge_cluster",
+          "probability": 0.2579
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M79_2026-06-30_墨西哥_vs_厄瓜多尔_量化预测_v3.md",
+      "match_id": "M79",
+      "teams": [
+        "墨西哥",
+        "厄瓜多尔"
+      ],
+      "status": "triggered",
+      "top1_scoreline": "1-1",
+      "one_one_rank": 1,
+      "xg_gap": 0.2,
+      "team_strength_gap": 2,
+      "top1_scoreline_caveat": "1-1 是中心平局切片，不应作为唯一比分叙事；需要同时展示一球差、开放平局和波动尾部。",
+      "cluster_priority": [
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.3477
+        },
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.3264
+        },
+        {
+          "cluster": "underdog_edge_cluster",
+          "probability": 0.2676
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M80_2026-07-01_英格兰_vs_刚果金_量化预测_v3.md",
+      "match_id": "M80",
+      "teams": [
+        "英格兰",
+        "刚果金"
+      ],
+      "status": "not_triggered",
+      "top1_scoreline": "2-0",
+      "one_one_rank": 4,
+      "xg_gap": 1.19,
+      "team_strength_gap": 16,
+      "top1_scoreline_caveat": "Top1 不是 1-1，但仍输出比分簇用于覆盖相邻路径和尾部风险。",
+      "cluster_priority": [
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.4172
+        },
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.2951
+        },
+        {
+          "cluster": "volatility_tail_cluster",
+          "probability": 0.1793
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M81_2026-07-01_美国_vs_波黑_量化预测_v3.md",
+      "match_id": "M81",
+      "teams": [
+        "美国",
+        "波黑"
+      ],
+      "status": "not_triggered",
+      "top1_scoreline": "1-0",
+      "one_one_rank": 2,
+      "xg_gap": 0.75,
+      "team_strength_gap": 7,
+      "top1_scoreline_caveat": "Top1 不是 1-1，但仍输出比分簇用于覆盖相邻路径和尾部风险。",
+      "cluster_priority": [
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.393307
+        },
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.329629
+        },
+        {
+          "cluster": "underdog_edge_cluster",
+          "probability": 0.18679
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M82_2026-07-01_比利时_vs_塞内加尔_量化预测_v3.md",
+      "match_id": "M82",
+      "teams": [
+        "比利时",
+        "塞内加尔"
+      ],
+      "status": "triggered",
+      "top1_scoreline": "1-1",
+      "one_one_rank": 1,
+      "xg_gap": 0.22,
+      "team_strength_gap": 3,
+      "top1_scoreline_caveat": "1-1 是中心平局切片，不应作为唯一比分叙事；需要同时展示一球差、开放平局和波动尾部。",
+      "cluster_priority": [
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.307412
+        },
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.298604
+        },
+        {
+          "cluster": "underdog_edge_cluster",
+          "probability": 0.255182
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M83_2026-07-02_葡萄牙_vs_克罗地亚_量化预测_v3.md",
+      "match_id": "M83",
+      "teams": [
+        "葡萄牙",
+        "克罗地亚"
+      ],
+      "status": "near_miss",
+      "top1_scoreline": "1-1",
+      "one_one_rank": 1,
+      "xg_gap": 0.5,
+      "team_strength_gap": 8,
+      "top1_scoreline_caveat": "1-1 是中心平局切片，不应作为唯一比分叙事；需要同时展示一球差、开放平局和波动尾部。",
+      "cluster_priority": [
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.3686
+        },
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.34481
+        },
+        {
+          "cluster": "underdog_edge_cluster",
+          "probability": 0.222327
+        }
+      ]
+    },
+    {
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "markdown_file": "比赛/未开始比赛/32强/M84_2026-07-02_西班牙_vs_奥地利_量化预测_v3.md",
+      "match_id": "M84",
+      "teams": [
+        "西班牙",
+        "奥地利"
+      ],
+      "status": "not_triggered_but_top1_caveat",
+      "top1_scoreline": "1-1",
+      "one_one_rank": 1,
+      "xg_gap": 0.87,
+      "team_strength_gap": 12,
+      "top1_scoreline_caveat": "1-1 只是泊松矩阵的最高单格，强弱方向仍需看 1X2 合计和边际胜簇。",
+      "cluster_priority": [
+        {
+          "cluster": "favorite_edge_cluster",
+          "probability": 0.389262
+        },
+        {
+          "cluster": "balanced_one_goal_cluster",
+          "probability": 0.305959
+        },
+        {
+          "cluster": "volatility_tail_cluster",
+          "probability": 0.190452
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,413 @@
+{
+  "schema_version": "round32_matchup_tactics_v3",
+  "status": "partial_source_limited",
+  "updated_at": "2026-06-28T23:59:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "M73-M76 tactical matchup factors for single-match v3 modeling; no score prediction, no win-draw-loss probability, no betting advice",
+  "upstream_data_status": "partial_source_limited_data_collector_read",
+  "upstream_data_note": "data/thread_outputs/round32-m73-m76-v3-20260628/data-collector.json and .md were read after landing. The data packet provides confirmed fixtures, probable-not-official predicted XIs, formation estimates, availability conflicts and gates; T-75 official lineups, final injury minutes and complete same-source market chain remain missing.",
+  "source_files_read": [
+    "data/thread_outputs/round32-m73-m76-v3-20260628/data-collector.json",
+    "data/thread_outputs/round32-m73-m76-v3-20260628/data-collector.md",
+    "data/outputs/knockout/round-of-32-bracket-20260628.json",
+    "data/templates/match-prediction-standard-template-v3.md",
+    "data/packets/tactics/south-africa-tactics-packet.json",
+    "data/packets/tactics/canada-tactics-packet.json",
+    "data/packets/tactics/germany-tactics-packet.json",
+    "data/packets/tactics/paraguay-tactics-packet.json",
+    "data/packets/tactics/netherlands-tactics-packet.json",
+    "data/packets/tactics/morocco-tactics-packet.json",
+    "data/packets/tactics/brazil-tactics-packet.json",
+    "data/packets/tactics/japan-tactics-packet.json",
+    "data/outputs/player_state/* relevant eight teams",
+    "比赛/已完成比赛/小组赛/A组/A组第二轮复盘.md",
+    "比赛/已完成比赛/小组赛/B组/B组第三轮复盘.md",
+    "比赛/已完成比赛/小组赛/C组/C组第三轮复盘.md",
+    "比赛/已完成比赛/小组赛/D组/2026-06-19_土耳其_0-1_巴拉圭_复盘.md",
+    "比赛/已完成比赛/小组赛/E组/2026-06-25_厄瓜多尔_2-1_德国_复盘.md",
+    "比赛/已完成比赛/小组赛/F组/2026-06-26_日本_1-1_瑞典_复盘.md",
+    "比赛/已完成比赛/小组赛/F组/2026-06-26_突尼斯_1-3_荷兰_复盘.md"
+  ],
+  "data_gaps": [
+    "T-75 official lineups and actual starting formations missing; all predicted XIs remain probable_not_official",
+    "final injuries, suspensions and minute restrictions missing",
+    "official knockout match technical reports and referee profiles missing",
+    "same-source odds snapshots are outside this tactical lane and were not used",
+    "South Africa and Paraguay final group-round postmatch data are less complete than B/C/E/F local postmatch material"
+  ],
+  "double_counting_warnings": [
+    "Do not add Canada transition upside twice if player_state already rewards David, Buchanan or Davies availability; cap Canada wide/transition positives until T-75 confirms Davies/Eustaquio/Kone minutes.",
+    "Do not extrapolate Germany 7-1 Curacao attack into both attack score and pressing/set-piece factors; use this packet mainly to shape phase-specific caps.",
+    "Paraguay set-piece and low-block value may already be embedded in defensive rating after Turkey 0-1; cap extra defensive floor unless Almiron/Enciso/Gomez availability is confirmed.",
+    "Netherlands high ceiling after Sweden/Tunisia should not be duplicated in generic attack and favorite ceiling; this packet separates wide-channel, set-piece and game-state effects.",
+    "Morocco 4-2 Haiti should raise late bench/wide attack but also clean-sheet risk; do not count both as pure attack quality without adding transition-defense cost.",
+    "Brazil Vinicius/Bruno form from Scotland 0-3 is player_state-linked; use wide and transition factors as matchup shape, not raw scoring upgrades.",
+    "Japan defensive discipline and Suzuki form may already be in player_state; set-piece-defense risk should be a separate cap, not a broad defense downgrade."
+  ],
+  "matches": [
+    {
+      "match_no": 73,
+      "match": "M73 南非 vs 加拿大",
+      "host_date": "2026-06-28",
+      "venue": "Los Angeles Stadium",
+      "fixture_status": "confirmed_current_public_schedule",
+      "tactical_summary": "南非的最优脚本是 Broos 式中低位压缩、Williams 稳定门前、Mokoena 管理二点和定位球；加拿大的最优脚本是 Marsch 式高强度压迫和纵向转换。对模型最关键的不是谁控球，而是加拿大核心可用性是否足以支撑连续压迫，以及南非能否把比赛拖入低事件节奏。",
+      "teams": {
+        "南非": {
+          "expected_formation": "3-4-2-1, defending as 5-4-1 / 5-2-2-1 shell",
+          "predicted_lineup_basis": "Data-collector probable XI: Ronwen Williams; Nkosinathi Sibisi, Ime Okon, Mbekezeli Mbokazi; Khuliso Mudau, Aubrey Modiba; Teboho Mokoena, Jayden Adams; Oswin Appollis, Thalente Mbatha; Lyle Foster.",
+          "key_roles": [
+            "Ronwen Williams: goalkeeper leader and defensive-floor stabilizer",
+            "Teboho Mokoena: midfield heartbeat, second-ball and set-piece source",
+            "Aubrey Modiba / Oswin Appollis: wide release and delivery",
+            "Lyle Foster or Evidence Makgopa: outlet runner and forward reference"
+          ],
+          "substitution_triggers": [
+            "If trailing, add direct runner or forward reference and increase early deliveries.",
+            "If leading, protect the 4-5-1 shell and keep one counter outlet active.",
+            "If Canada press traps the first pass, earlier midfield stabilizer substitution is needed."
+          ],
+          "lineup_change_impact": {
+            "xg": "Williams and Mokoena availability mainly affects conceded xG floor and set-piece/second-ball xG, not high-volume open-play xG.",
+            "tempo": "A more defensive midfield lowers tempo and raises draw/low-event management; an extra runner raises transition volatility.",
+            "matchup": "Fullback selection decides how much Canada can isolate wide channels."
+          },
+          "rerun_conditions": [
+            "Williams missing or limited",
+            "Mokoena missing or moved away from central control",
+            "Two or more attacking-line changes",
+            "Official shape shifts to a back five"
+          ],
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "negative", "magnitude": -0.2, "evidence": "South Africa tactics packet describes medium pressing and compact block first; A-group postmatch shows low-event survival value.", "confidence": "medium", "model_note": "Small negative only; this is a choice to conserve structure, not a full defensive downgrade."},
+            "build_up_resistance_adjustment": {"direction": "mixed", "magnitude": -0.1, "evidence": "Williams/Mokoena can calm pressure, but Canada press can trap wide first passes.", "confidence": "medium", "model_note": "Cap near neutral unless T-75 confirms conservative midfield and full-strength goalkeeper."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.25, "evidence": "Tactics packet identifies counters, second balls and wide releases as main attack route.", "confidence": "medium", "model_note": "Do not combine with a large open-play attack upgrade; this is situational chance quality."},
+            "transition_defense_risk": {"direction": "neutral", "magnitude": 0.0, "evidence": "Compact block and goalkeeper leadership reduce exposure, but chasing game state can widen shape.", "confidence": "medium", "model_note": "Only raise risk if South Africa concede first or start a more attacking XI."},
+            "wide_channel_advantage": {"direction": "negative", "magnitude": -0.25, "evidence": "Canada have Davies/Buchanan-style wide acceleration when available; South Africa fullback spaces are a noted risk.", "confidence": "medium", "model_note": "Limit magnitude if Davies is unavailable or minute-limited."},
+            "central_control_advantage": {"direction": "neutral", "magnitude": 0.0, "evidence": "Mokoena gives central intelligence; Canada can match with Eustaquio/Kone if fit.", "confidence": "medium_low", "model_note": "Official midfields decide sign; keep neutral until lineup refresh."},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.25, "evidence": "Mokoena delivery and South Africa's low-event equalizer profile support set-piece relevance.", "confidence": "medium", "model_note": "Cap because complete taker-target map is missing."},
+            "defensive_line_risk": {"direction": "positive", "magnitude": 0.2, "evidence": "Lower block reduces space behind but repeated wide recovery runs remain possible.", "confidence": "medium", "model_note": "Positive means reduced risk; flip if South Africa must chase early."},
+            "coach_substitution_risk": {"direction": "neutral", "magnitude": 0.0, "evidence": "Broos tournament pragmatism is stable, but bench attack ceiling is less certain.", "confidence": "medium", "model_note": "No large coaching penalty; use as stability marker."},
+            "game_state_tendency": {"direction": "positive", "magnitude": 0.35, "evidence": "A-group postmatch highlighted South Africa late resilience in survival-style low-event matches.", "confidence": "medium", "model_note": "Apply to low-event and one-goal game states, not raw win probability."}
+          }
+        },
+        "加拿大": {
+          "expected_formation": "3-4-2-1, pressing into 3-2-5 / 5-2-3 phases",
+          "predicted_lineup_basis": "Data-collector probable XI: Maxime Crepeau; Alistair Johnston, Moise Bombito, Derek Cornelius; Tajon Buchanan, Alphonso Davies; Stephen Eustaquio, Nathan Saliba; Jonathan David, Cyle Larin, Promise David.",
+          "key_roles": [
+            "Jonathan David / Promise David: central finishing and bench impact route",
+            "Tajon Buchanan: wide runner and depth threat",
+            "Stephen Eustaquio / Ismael Kone: midfield release and press balance, availability-sensitive",
+            "Alphonso Davies: high-leverage wide outlet if fit, but local postmatch says he was not ready for Switzerland"
+          ],
+          "substitution_triggers": [
+            "If press intensity fades, add runner rather than slow controller.",
+            "If trailing, increase verticality and striker depth.",
+            "If leading, keep transition outlet active instead of pure passive shell."
+          ],
+          "lineup_change_impact": {
+            "xg": "Davies/Eustaquio availability materially changes xG creation and counterpress recovery; without them, Canada lose both chance speed and rest-defense quality.",
+            "tempo": "Full-strength Canada raises tempo; weakened midfield makes pressing more episodic and game-state swings larger.",
+            "matchup": "Wide advantage depends on whether the left-side outlet is truly available."
+          },
+          "rerun_conditions": [
+            "Davies starts or is excluded",
+            "Eustaquio or Kone unavailable",
+            "Canada use two strikers from the start",
+            "Back line changes reduce recovery speed"
+          ],
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.35, "evidence": "Canada tactics packet: Marsch identity, medium-high pressing and counterpress; local third-round review warns core absences reduce this.", "confidence": "medium", "model_note": "Use conditional positive; halve if Eustaquio/Kone/Davies are not in functional minutes."},
+            "build_up_resistance_adjustment": {"direction": "mixed", "magnitude": 0.05, "evidence": "Central control can be good with Eustaquio but weakened in the Switzerland match when he could not start.", "confidence": "medium_low", "model_note": "Do not add more than small positive before T-75."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.45, "evidence": "Tactics packet marks transition attack high; Promise David scored as substitute against Switzerland.", "confidence": "medium_high", "model_note": "Avoid double counting with player_state attacking form; cap if Davies absent."},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.35, "evidence": "Rest-defense exposure behind aggressive pressing is a standing Canada risk and worsened by midfield absences.", "confidence": "medium", "model_note": "Negative means higher risk; feed into opponent counter/set-piece transition windows."},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.35, "evidence": "Buchanan/Davies profiles create wide isolation, while South Africa can be stressed in fullback recovery.", "confidence": "medium", "model_note": "Davies availability is the cap switch."},
+            "central_control_advantage": {"direction": "mixed", "magnitude": 0.0, "evidence": "Eustaquio/Kone uncertainty offsets technical midfield upside.", "confidence": "medium_low", "model_note": "Keep neutral until official XI."},
+            "set_piece_advantage": {"direction": "neutral", "magnitude": 0.0, "evidence": "Canada set pieces are support weapon, not primary identity; complete map missing.", "confidence": "medium_low", "model_note": "No additional set-piece bump."},
+            "defensive_line_risk": {"direction": "negative", "magnitude": -0.3, "evidence": "High pressing and recovery races can expose the back line if first pressure is bypassed.", "confidence": "medium", "model_note": "Link to South Africa direct-outlet chances rather than broad defense downgrade."},
+            "coach_substitution_risk": {"direction": "mixed", "magnitude": -0.05, "evidence": "Marsch bench can refresh intensity, but health-driven substitutions can reduce structure.", "confidence": "medium", "model_note": "Treat as slight volatility, not pure penalty."},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.2, "evidence": "Canada keep transition outlet alive when leading and become vertical when chasing.", "confidence": "medium", "model_note": "Raises event volatility after first goal."}
+          }
+        }
+      },
+      "handoff_notes": {
+        "model_should_adjust": ["Canada transition and press are conditional on core availability", "South Africa low-event resistance deserves a draw/low-tempo floor but not an open-play attack boost"],
+        "red_team_should_challenge": ["Davies/Eustaquio/Kone actual minutes", "whether South Africa's A-group survival signal is stale without final group-round data"]
+      }
+    },
+    {
+      "match_no": 74,
+      "match": "M74 德国 vs 巴拉圭",
+      "host_date": "2026-06-29",
+      "venue": "Boston Stadium",
+      "fixture_status": "confirmed_current_public_schedule",
+      "tactical_summary": "德国仍有最高技术密度、前场反抢和多点攻击，但厄瓜多尔 2-1 德国复盘要求限制强队模板外推：若德国节奏管理下降，防守转换会被放大。巴拉圭更像 Alfaro 式低位、反击和定位球队；土耳其 0-1 巴拉圭证明其十人低位韧性，但美国 4-1 巴拉圭也暴露早丢球后结构散开。",
+      "teams": {
+        "德国": {
+          "expected_formation": "4-2-3-1 with 3-2 build-up options",
+          "predicted_lineup_basis": "Data-collector probable XI: Manuel Neuer; Joshua Kimmich, Jonathan Tah, Antonio Rudiger, Nathaniel Brown; Felix Nmecha, Nadiem Amiri; Florian Wirtz, Jamal Musiala, Leroy Sane; Kai Havertz. Neuer/Baumann and Sane/Undav are selection conflicts.",
+          "key_roles": [
+            "Kimmich: build-up organizer and tempo controller",
+            "Wirtz / Musiala: half-space creators and press-resistance receivers",
+            "Havertz / Undav: box occupation and pressing reference",
+            "Sane / wide runner: depth and isolated acceleration"
+          ],
+          "substitution_triggers": [
+            "If Paraguay low block survives, add box finisher or second striker profile.",
+            "If Germany lead, reduce fullback exposure and protect counter lanes.",
+            "If Paraguay counters through Enciso/Almiron-type outlet, add midfield security."
+          ],
+          "lineup_change_impact": {
+            "xg": "Creator-heavy XI raises settled xG; striker/second-runner choice changes box-touch quality.",
+            "tempo": "Already-qualified tempo drag from group stage should not be carried blindly into knockout, but recent Germany control issues remain relevant.",
+            "matchup": "The more aggressive the fullbacks, the more Paraguay counter and set-piece transition routes matter."
+          },
+          "rerun_conditions": [
+            "Kimmich or first-choice central controller missing",
+            "Wirtz or Musiala rested/limited",
+            "Back line switches to three center-backs",
+            "Paraguay start two direct forwards"
+          ],
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.4, "evidence": "Germany packet marks strong front pressing and counterpress; Paraguay prefer lower possession.", "confidence": "medium_high", "model_note": "Do not stack with raw attack ceiling from Curacao 7-1; this is phase pressure."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.45, "evidence": "Kimmich plus Wirtz/Musiala half-space receiving gives strong press resistance.", "confidence": "medium_high", "model_note": "Reduce if central controller absent or Paraguay front two press aggressively."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.35, "evidence": "Germany can convert front regains and second attacks; substitute depth noted after E-group reviews.", "confidence": "medium", "model_note": "Cap because Ecuador match showed control and recovery can dip."},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.25, "evidence": "Ecuador 2-1 Germany exposed space when Germany could not close transitions after early lead.", "confidence": "medium", "model_note": "Negative risk applies when fullbacks push and rest defense is thin."},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.25, "evidence": "Germany wide runners can pin Paraguay's fullbacks; Paraguay wide protection is a known risk after USA loss.", "confidence": "medium", "model_note": "Do not overstate if Germany pick a narrow control XI."},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.55, "evidence": "Higher technical density and central creators versus Paraguay's lower-possession structure.", "confidence": "medium_high", "model_note": "Use as tempo/progression edge, not automatic scoring conversion."},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.2, "evidence": "Germany have delivery and aerial quality; Paraguay also strong, so edge is limited.", "confidence": "medium_low", "model_note": "Small edge only because full taker-target maps are missing."},
+            "defensive_line_risk": {"direction": "mixed", "magnitude": -0.15, "evidence": "High line can invite Paraguay direct outlets, but Germany recovery quality remains above average.", "confidence": "medium", "model_note": "Treat as conditional volatility rather than broad defensive downgrade."},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.15, "evidence": "Nagelsmann has multiple role-for-role attacking and midfield options; E-group notes highlight bench contribution.", "confidence": "medium", "model_note": "Positive bench flexibility; cap if lineup rotation is heavy."},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.1, "evidence": "Group stage showed both high ceiling and tempo-management fragility.", "confidence": "medium", "model_note": "Knockout reduces rotation drag but not transition-control risk."}
+          }
+        },
+        "巴拉圭": {
+          "expected_formation": "4-4-2, with 5-4-1 protection possible",
+          "predicted_lineup_basis": "Data-collector probable XI: Orlando Gill; Juan Jose Caceres, Gustavo Gomez, Omar Alderete, Junior Alonso; Miguel Almiron, Andres Cubas, Matias Galarza, Diego Gomez; Isidro Pitta, Julio Enciso.",
+          "key_roles": [
+            "Gustavo Gomez / Junior Alonso: defensive organization and aerial duels",
+            "Miguel Almiron: transition runner if suspension/availability clears",
+            "Julio Enciso / Matias Galarza: counter shot and second-wave threat",
+            "Matias Rojas-type left-foot delivery: set-piece service"
+          ],
+          "substitution_triggers": [
+            "If level late, protect low block and set-piece outlet.",
+            "If trailing, add direct runner but accept higher defensive-line risk.",
+            "If card pressure rises, replace wide or defensive midfielder early."
+          ],
+          "lineup_change_impact": {
+            "xg": "Almiron/Enciso availability changes counter xG more than settled xG.",
+            "tempo": "A back five lowers tempo and raises set-piece importance; a 4-4-2 raises counter volume but adds gaps.",
+            "matchup": "Center-back pairing determines whether Germany can sustain box entries."
+          },
+          "rerun_conditions": [
+            "Almiron suspension or availability confirmed",
+            "Enciso omitted or shifted wide",
+            "Paraguay start a back five",
+            "Two or more defensive starters changed"
+          ],
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "negative", "magnitude": -0.25, "evidence": "Paraguay packet and Turkey match point to compactness after early lead, not full-match press.", "confidence": "medium", "model_note": "Negative press does not equal weak defense; it signals lower active regain."},
+            "build_up_resistance_adjustment": {"direction": "negative", "magnitude": -0.25, "evidence": "Low possession reliance and Germany counterpress can force hurried clearances.", "confidence": "medium", "model_note": "Cap if Paraguay use back five and long outlet successfully."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.3, "evidence": "Almiron/Enciso/Sosa profiles and USA/Turkey postmatch notes show counter route remains live.", "confidence": "medium", "model_note": "Availability-dependent; do not duplicate individual player_state boosts."},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.35, "evidence": "USA 4-1 Paraguay showed structure opened when chasing; Germany can punish disorganization.", "confidence": "medium_high", "model_note": "Apply strongly if Paraguay concede first."},
+            "wide_channel_advantage": {"direction": "negative", "magnitude": -0.25, "evidence": "Paraguay wide protection was flagged after first-round collapse; Germany can overload both half-spaces.", "confidence": "medium", "model_note": "Reduce if Paraguay select a back five."},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.45, "evidence": "Paraguay do not seek long central control; Germany's creators can pin the midfield block.", "confidence": "medium_high", "model_note": "Model as territory loss, not automatic collapse."},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.3, "evidence": "Paraguay packet marks set piece as traditional strength and low-score breaker.", "confidence": "medium", "model_note": "Cap because Germany also strong aerially and full map missing."},
+            "defensive_line_risk": {"direction": "mixed", "magnitude": -0.2, "evidence": "Low block reduces depth risk, but early concession can force unstable higher line.", "confidence": "medium", "model_note": "Tie to first-goal state."},
+            "coach_substitution_risk": {"direction": "mixed", "magnitude": -0.1, "evidence": "Alfaro pragmatism helps structure, but chasing substitutions can reduce protection.", "confidence": "medium_low", "model_note": "Small volatility marker."},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.25, "evidence": "Turkey 0-1 shows low-block survival; USA 4-1 shows collapse if game opens.", "confidence": "medium_high", "model_note": "Use bifurcated low-event/elevated-collapse branch."}
+          }
+        }
+      },
+      "handoff_notes": {
+        "model_should_adjust": ["Germany central/press edges are real but transition defense must stay in the tail", "Paraguay set-piece and low-block survival need a separate upset/low-event branch"],
+        "red_team_should_challenge": ["Almiron suspension status", "Germany overreward from Curacao 7-1 versus Ecuador loss context"]
+      }
+    },
+    {
+      "match_no": 75,
+      "match": "M75 荷兰 vs 摩洛哥",
+      "host_date": "2026-06-29",
+      "venue": "Estadio Monterrey",
+      "fixture_status": "confirmed_current_public_schedule",
+      "tactical_summary": "荷兰的小组后两场显示边路、多点进球和三球尾部仍强；摩洛哥则以右路 Hakimi、替补冲击和防守压缩为核心，但 4-2 海地说明其干净零封假设变脆。核心对位是荷兰中后场推进与高点定位球，碰上摩洛哥右路转换和低位防守韧性。",
+      "teams": {
+        "荷兰": {
+          "expected_formation": "4-3-3, with situational 4-2-3-1 / 3-4-2-1",
+          "predicted_lineup_basis": "Data-collector probable XI: Bart Verbruggen; Denzel Dumfries, Virgil van Dijk, Jan Paul van Hecke, Micky van de Ven; Frenkie de Jong, Ryan Gravenberch, Tijjani Reijnders; Cody Gakpo, Brian Brobbey, Crysencio Summerville.",
+          "key_roles": [
+            "Frenkie de Jong: progression and tempo controller",
+            "Gakpo / Xavi Simons: half-space receiver and scorer-creator",
+            "Dumfries: width, back-post and crossing lane",
+            "Van Dijk: defensive-floor and set-piece high point",
+            "Brobbey / Depay / Summerville: box and bench/rotation scoring profiles"
+          ],
+          "substitution_triggers": [
+            "If Morocco sit compact, add extra box runner or dribbler around 60 minutes.",
+            "If protecting lead, retain one wide outlet and improve rest defense.",
+            "If Morocco attacks Hakimi side, adjust left-sided cover earlier."
+          ],
+          "lineup_change_impact": {
+            "xg": "Brobbey/Depay/Summerville choice changes box presence and late scoring probability.",
+            "tempo": "De Jong start supports controlled tempo; a more vertical front four raises event volume.",
+            "matchup": "Dumfries and Gakpo-side choices decide whether Morocco's fullbacks are pinned."
+          },
+          "rerun_conditions": [
+            "De Jong missing or minutes-limited",
+            "Van Dijk/Gakpo unavailable after prior knocks",
+            "Netherlands use back three from kickoff",
+            "Morocco select a five-man defensive shell"
+          ],
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.25, "evidence": "Netherlands can press mid-high and recent Tunisia match started fast.", "confidence": "medium", "model_note": "Do not treat as constant high press; Morocco can bypass through Hakimi."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.35, "evidence": "De Jong progression and Van Dijk base improve resistance to Morocco's burst press.", "confidence": "medium_high", "model_note": "Reduce if De Jong unavailable."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.35, "evidence": "F-group reviews: Netherlands 5-1 Sweden and 3-1 Tunisia showed wide/multi-point acceleration.", "confidence": "medium_high", "model_note": "Separate from generic attack rating; cap after two high-output matches to avoid overfit."},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.3, "evidence": "Netherlands packet flags midfield-behind and wide recovery; Morocco transition outlets are strong.", "confidence": "medium", "model_note": "Key risk against Hakimi/Brahim/Rahimi counter channels."},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.2, "evidence": "Dumfries/Gakpo width can pin Morocco, but Hakimi creates a strong counter-edge.", "confidence": "medium", "model_note": "Use as slight edge, not dominant."},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.35, "evidence": "De Jong and Simons give central progression; Morocco prefer compact defense over long control.", "confidence": "medium", "model_note": "May not convert to high xG if Morocco block remains compact."},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.3, "evidence": "Netherlands high points and Van Dijk edge; Morocco are competent defensively but complete map missing.", "confidence": "medium", "model_note": "Cap due to Morocco aerial quality."},
+            "defensive_line_risk": {"direction": "mixed", "magnitude": -0.2, "evidence": "Strong individual back line, but transition space was recurring risk after Japan draw.", "confidence": "medium", "model_note": "Tie to Moroccan right-side outlet availability."},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.15, "evidence": "Recent scoring from Brobbey/Summerville/Depay-type roles supports bench/rotation value.", "confidence": "medium", "model_note": "Small late-game positive only."},
+            "game_state_tendency": {"direction": "positive", "magnitude": 0.25, "evidence": "Tunisia 1-3 Netherlands showed early lead did not automatically kill third-goal tail.", "confidence": "medium_high", "model_note": "Keep favorite third-goal tail alive without issuing score prediction."}
+          }
+        },
+        "摩洛哥": {
+          "expected_formation": "4-2-3-1, with 5-4-1 defensive shell available",
+          "predicted_lineup_basis": "Data-collector probable XI: Yassine Bounou; Achraf Hakimi, Chadi Riad, Issa Diop, Noussair Mazraoui; Azzedine Ounahi, Ayyoub Bouaddi; Ismael Saibari; Brahim Diaz, Bilal El Khannouss; Ayoub El Kaabi. Bounou has minor-knock watch.",
+          "key_roles": [
+            "Achraf Hakimi: right-side progression and transition engine",
+            "Sofyan Amrabat: central screen and duel anchor",
+            "Brahim Diaz / Hakim Ziyech-type creator: half-space unlocking",
+            "Yassine Bounou: goalkeeper floor, but recent own-goal/high-pressure handling requires caution",
+            "Rahimi / Saibari: late and box-arrival scoring value"
+          ],
+          "substitution_triggers": [
+            "If level or leading, refresh wide runners and protect Amrabat zone.",
+            "If trailing, push fullbacks and add half-space creator, accepting counter risk.",
+            "If Dutch high points dominate, add aerial defender or deeper block."
+          ],
+          "lineup_change_impact": {
+            "xg": "Hakimi plus late attackers can lift transition and late xG even if possession share is low.",
+            "tempo": "Compact XI lowers tempo; chasing with fullbacks high increases BTTS/open-game risk.",
+            "matchup": "Bounou/Amrabat/Hakimi availability decides defensive floor and escape quality."
+          },
+          "rerun_conditions": [
+            "Hakimi not starting or role reduced",
+            "Amrabat missing",
+            "Bounou replaced or fitness limited",
+            "Morocco start with a back five"
+          ],
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "neutral", "magnitude": 0.0, "evidence": "Morocco press in bursts but base identity is compactness and timed jumps.", "confidence": "medium", "model_note": "Do not reward full-match press."},
+            "build_up_resistance_adjustment": {"direction": "mixed", "magnitude": 0.05, "evidence": "Hakimi and central screen help exits, but Netherlands can trap slower circulation.", "confidence": "medium", "model_note": "Keep near neutral unless official XI confirms strongest ball carriers."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.4, "evidence": "Morocco packet and Haiti 4-2 show Hakimi, Rahimi and late runners can create in transition.", "confidence": "medium_high", "model_note": "Avoid double count with Hakimi/Rahimi player_state; apply as matchup to Dutch transition-defense gaps."},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.25, "evidence": "Haiti scored twice and exposed clean-sheet assumptions when Morocco chased tempo.", "confidence": "medium", "model_note": "Negative risk grows if fullbacks push high."},
+            "wide_channel_advantage": {"direction": "mixed", "magnitude": 0.15, "evidence": "Hakimi right side is elite, but Netherlands can pin wide zones with Dumfries/Gakpo.", "confidence": "medium", "model_note": "Model as asymmetric right-side edge, not whole-pitch advantage."},
+            "central_control_advantage": {"direction": "negative", "magnitude": -0.2, "evidence": "Morocco prefer compact defending and transitions; Netherlands have stronger sustained central progression.", "confidence": "medium", "model_note": "Can still defend the center well; do not turn into large xG penalty."},
+            "set_piece_advantage": {"direction": "mixed", "magnitude": 0.0, "evidence": "Morocco have delivery and aerial quality, but Netherlands high points offset it.", "confidence": "medium", "model_note": "Neutral until set-piece map and lineups are confirmed."},
+            "defensive_line_risk": {"direction": "positive", "magnitude": 0.15, "evidence": "Compact low/mid block protects depth; risk rises only if chasing.", "confidence": "medium", "model_note": "Positive means lower line risk in base game state."},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.2, "evidence": "Rahimi and Gessime Yassine late impact in Haiti match supports bench scoring path.", "confidence": "medium", "model_note": "Use as late xG support, not starter-quality upgrade."},
+            "game_state_tendency": {"direction": "mixed", "magnitude": 0.2, "evidence": "Morocco can lower tempo when ahead, but 4-2 Haiti shows chasing/goal-difference script opens the match.", "confidence": "medium", "model_note": "Bifurcate leading compactness and trailing openness."}
+          }
+        }
+      },
+      "handoff_notes": {
+        "model_should_adjust": ["Netherlands wide/set-piece edge is real but Morocco transition prevents over-clean-sheet assumptions", "Morocco late bench and Hakimi channel should be a separate counter branch"],
+        "red_team_should_challenge": ["Are Netherlands outputs inflated by Sweden/Tunisia contexts", "Is Morocco clean-sheet reputation stale after Haiti 4-2"]
+      }
+    },
+    {
+      "match_no": 76,
+      "match": "M76 巴西 vs 日本",
+      "host_date": "2026-06-29",
+      "venue": "Houston Stadium",
+      "fixture_status": "confirmed_current_public_schedule",
+      "tactical_summary": "巴西在苏格兰 0-3 中通过 Vinicius 左路和 Bruno Guimaraes 肋部输送兑现早球/继续进攻尾部；日本则通过纪律、边路组织和瑞典 1-1 的比赛管理证明强队对抗和低事件平局能力。关键是巴西左路个人突破与日本整体压迫/补位的冲突，以及日本定位球防守高点劣势。",
+      "teams": {
+        "巴西": {
+          "expected_formation": "4-2-3-1, with 4-3-3 attack phases",
+          "predicted_lineup_basis": "Data-collector probable XI: Alisson; Danilo Luiz, Marquinhos, Gabriel Magalhaes, Wesley; Bruno Guimaraes, Casemiro; Lucas Paqueta; Vinicius Junior, Raphinha; Matheus Cunha.",
+          "key_roles": [
+            "Vinicius Junior: left-side breaker and transition accelerator",
+            "Bruno Guimaraes: midfield balance and final-pass bridge",
+            "Rodrygo / Raphinha: inside-forward connector and opposite-side width",
+            "Marquinhos / Militao / Alisson: defensive axis and rest-defense floor",
+            "Neymar: availability/bench rhythm variable, not automatic full-match engine"
+          ],
+          "substitution_triggers": [
+            "If Japan compactness holds, add creator or second box runner.",
+            "If leading, manage star minutes while retaining left-side outlet.",
+            "If Japan counterpress wins central duels, add midfield balance."
+          ],
+          "lineup_change_impact": {
+            "xg": "Vinicius/Bruno starts sustain the left-half-space xG route; Neymar start or bench changes central creativity and tempo risk.",
+            "tempo": "Brazil can control after lead, but Scotland match shows they may continue chasing margin if space exists.",
+            "matchup": "Fullback aggression decides how dangerous Japan's counters become."
+          },
+          "rerun_conditions": [
+            "Vinicius or Bruno Guimaraes unavailable",
+            "Neymar starts and changes central structure",
+            "Brazil choose a double pivot instead of 4-3-3",
+            "Japan use back three with wingbacks"
+          ],
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.25, "evidence": "Brazil packet expects selective medium-high press; Scotland match had early control from aggressive start.", "confidence": "medium", "model_note": "Selective press only; avoid full-match press bonus."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.3, "evidence": "Brazil midfield and center-back axis support pressure exits, though Japan press discipline is strong.", "confidence": "medium", "model_note": "Moderate positive; Japan can still trap wide."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.5, "evidence": "Brazil packet marks elite transition; Vinicius two goals and Bruno two assists versus Scotland confirm left/half-space route.", "confidence": "high", "model_note": "Cap with player_state to avoid duplicating Vinicius form."},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.25, "evidence": "Brazil fullback/attacker-heavy spacing can expose rest defense; Japan's first pass and wide runners are dangerous.", "confidence": "medium", "model_note": "Use as Japan counter branch, not broad Brazil downgrade."},
+            "wide_channel_advantage": {"direction": "positive", "magnitude": 0.45, "evidence": "Vinicius left-side mismatch is Brazil's clearest destabilizer; Japan collective cover will be stretched.", "confidence": "high", "model_note": "If Japan back three doubles wide lane, reduce magnitude."},
+            "central_control_advantage": {"direction": "positive", "magnitude": 0.25, "evidence": "Bruno and midfield balance give Brazil progression, but Japan's compact midfield and discipline limit dominance.", "confidence": "medium", "model_note": "Small-to-moderate control edge only."},
+            "set_piece_advantage": {"direction": "positive", "magnitude": 0.25, "evidence": "Brazil have size and delivery; Japan packet flags defensive set-piece/high-point vulnerability.", "confidence": "medium", "model_note": "Do not stack with generic aerial superiority beyond this factor."},
+            "defensive_line_risk": {"direction": "mixed", "magnitude": -0.15, "evidence": "Brazil defensive axis is strong, but attacking fullbacks create counter windows.", "confidence": "medium", "model_note": "Risk rises if Brazil chase with both fullbacks high."},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.15, "evidence": "Brazil bench depth allows role refresh; Neymar appearance versus Scotland was load-management signal.", "confidence": "medium", "model_note": "Small late-quality support, not a scoreline tail by itself."},
+            "game_state_tendency": {"direction": "positive", "magnitude": 0.25, "evidence": "Scotland 0-3 showed Brazil did not stop after early lead in head-of-group context.", "confidence": "medium_high", "model_note": "Keep favorite ceiling branch alive if first goal comes early."}
+          }
+        },
+        "日本": {
+          "expected_formation": "3-4-2-1, with 5-4-1 low-block phases",
+          "predicted_lineup_basis": "Data-collector probable XI: Zion Suzuki; Takehiro Tomiyasu, Ko Itakura, Hiroki Ito; Yukinari Sugawara, Keito Nakamura; Kaishu Sano, Ao Tanaka; Daichi Kamada, Junya Ito; Ayase Ueda.",
+          "key_roles": [
+            "Zion Suzuki: goalkeeper and late-save floor",
+            "Takefusa Kubo: right/half-space creator and press-resistant receiver",
+            "Daizen Maeda: running, pressing and box attack",
+            "Wataru Endo-type role absent/uncertain in local squad context; central screen must be confirmed",
+            "Wide wingback/fullback pair: cover against Vinicius and release counterattacks"
+          ],
+          "substitution_triggers": [
+            "If Brazil overload the left, add extra wide cover or switch to back three.",
+            "If trailing, add runner and raise counterpress but protect set-piece defense.",
+            "If level late, preserve compactness and avoid exposing central rest defense."
+          ],
+          "lineup_change_impact": {
+            "xg": "Kubo/Maeda availability controls Japan's counter and late-arrival xG; a back three may lower open-play xG but improve wide containment.",
+            "tempo": "Japan can accept lower tempo if level; trailing game state raises verticality.",
+            "matchup": "The left defensive chain against Vinicius is the T-75 must-rerun variable."
+          },
+          "rerun_conditions": [
+            "Japan start a back three instead of back four",
+            "Kubo omitted or moved centrally",
+            "Maeda not starting",
+            "Central screen or left-back changes against Vinicius"
+          ],
+          "quant_adjustments": {
+            "pressing_adjustment": {"direction": "positive", "magnitude": 0.25, "evidence": "Japan tactics packet and F-group matches show disciplined team pressing and compact jumps.", "confidence": "medium_high", "model_note": "Brazil press resistance caps this positive."},
+            "build_up_resistance_adjustment": {"direction": "positive", "magnitude": 0.15, "evidence": "Japan have short passing and rotation, but Brazil can press and isolate physical duels.", "confidence": "medium", "model_note": "Use modestly; do not overrate against elite athletic press."},
+            "transition_attack_adjustment": {"direction": "positive", "magnitude": 0.3, "evidence": "Japan packet marks high transition speed; Netherlands 2-2 and Sweden 1-1 show strong-side creation and late threat.", "confidence": "medium", "model_note": "Apply mainly to Brazil fullback-space moments."},
+            "transition_defense_risk": {"direction": "negative", "magnitude": -0.2, "evidence": "Team movement is strong, but Brazil's wide one-v-one pace stresses recovery chains.", "confidence": "medium", "model_note": "Do not turn into a large defensive downgrade if back three starts."},
+            "wide_channel_advantage": {"direction": "negative", "magnitude": -0.35, "evidence": "Brazil's Vinicius channel is a major mismatch; Japan can mitigate through structure but not erase it.", "confidence": "medium_high", "model_note": "Reduce if Japan select extra left-side cover."},
+            "central_control_advantage": {"direction": "mixed", "magnitude": -0.05, "evidence": "Japan midfield discipline can slow Brazil; Brazil still have higher individual progression ceiling.", "confidence": "medium", "model_note": "Near neutral; official central screen decides."},
+            "set_piece_advantage": {"direction": "negative", "magnitude": -0.3, "evidence": "Japan packet explicitly flags defensive set-piece and physical high-point risk.", "confidence": "medium_high", "model_note": "Keep separate from general defense rating to avoid blanket downgrade."},
+            "defensive_line_risk": {"direction": "mixed", "magnitude": -0.15, "evidence": "Back four can be stretched by Brazil speed; back three can reduce depth but lower counter outlet.", "confidence": "medium", "model_note": "Shape-dependent; rerun after official formation."},
+            "coach_substitution_risk": {"direction": "positive", "magnitude": 0.1, "evidence": "Moriyasu has credible shape-change options and game-state discipline, shown by Sweden 1-1 management.", "confidence": "medium", "model_note": "Small stabilizer only."},
+            "game_state_tendency": {"direction": "positive", "magnitude": 0.2, "evidence": "Sweden 1-1 confirmed mutual-benefit/draw-management discipline and late goalkeeper intervention.", "confidence": "medium", "model_note": "Use for low-event resistance if level; does not imply prediction."}
+          }
+        }
+      },
+      "handoff_notes": {
+        "model_should_adjust": ["Brazil wide/transition ceiling is high but rest-defense risk keeps Japan counter branch live", "Japan set-piece-defense risk should be isolated rather than broad defense downgrade"],
+        "red_team_should_challenge": ["Japan left-side containment plan against Vinicius", "whether Brazil's Scotland early-goal script overstates knockout repeatability"]
+      }
+    }
+  ]
+}

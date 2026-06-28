@@ -1,0 +1,542 @@
+{
+  "schema_version": "round32_v3_data_collector_packet_20260628",
+  "project": "E:/worldcup",
+  "owner": "worldcup-data-collector",
+  "phase": "round_of_32_pre_match_fact_collection",
+  "status": "partial_source_limited",
+  "created_at": "2026-06-28T21:26:27+08:00",
+  "captured_at": "2026-06-28T21:26:27+08:00",
+  "scope": {
+    "matches": ["M73", "M74", "M75", "M76"],
+    "boundary": "facts_only_no_score_prediction_no_wdl_probability_no_betting_advice",
+    "template_reference": "data/templates/match-prediction-standard-template-v3.md",
+    "regulation_time_boundary": "Data packet is prepared for 90-minute model input. Extra time and penalties are knockout-procedure outcomes and are not forecast here."
+  },
+  "canonical_inputs": [
+    {
+      "path": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+      "used_for": ["fixtures", "slots", "venues", "kickoff_times", "round_of_16_paths"],
+      "source_status": "local_canonical_complete_current_public_schedule"
+    },
+    {
+      "path": "data/templates/match-prediction-standard-template-v3.md",
+      "used_for": ["predicted_lineups_required_fields", "source_and_gate_requirements"],
+      "source_status": "local_template"
+    },
+    {
+      "path": "data/outputs/player_state/*.json; data/packets/rosters/*.json; 队伍/*/成员表.md",
+      "used_for": ["player_state", "availability", "form_status_1_5", "internal_match_rating_1_5", "roster_names"],
+      "source_status": "local_mixed_freshness"
+    }
+  ],
+  "global_gates": {
+    "official_lineup_gate": {
+      "status": "not_available_yet",
+      "rule": "T-75 official lineups must be checked before any model finalization or betting-risk execution.",
+      "captured_at": "2026-06-28T21:26:27+08:00"
+    },
+    "betting_gate_status": "hold_not_executable",
+    "reason": [
+      "No complete same-source Chinese sports lottery market chain for M73-M76 was verified in this collection pass.",
+      "Official T-75 lineups are not available for M74-M76 and were not captured for M73 in this packet.",
+      "Several availability fields remain partial or conflicting."
+    ]
+  },
+  "matches": [
+    {
+      "match_no": 73,
+      "match_id": "M73_2026-06-28_南非_vs_加拿大",
+      "stage": "Round of 32",
+      "fixture": {
+        "home_team": {"zh": "南非", "en": "South Africa", "slot": "2A", "qualification_source": "A组第二"},
+        "away_team": {"zh": "加拿大", "en": "Canada", "slot": "2B", "qualification_source": "B组第二"},
+        "host_date": "2026-06-28",
+        "kickoff_host": "12:00",
+        "kickoff_uk": "20:00",
+        "venue": "Los Angeles Stadium",
+        "host_city": "Los Angeles",
+        "round_of_16_path": "M73胜者 vs M75胜者",
+        "source_status": "confirmed_by_local_round_of_32_bracket_and_public_fixture_schedule",
+        "captured_at": "2026-06-28T21:26:27+08:00"
+      },
+      "group_stage_summary": {
+        "south_africa": {
+          "known_results": ["墨西哥 2-0 南非", "捷克 1-1 南非", "南非 1-0 韩国"],
+          "rank_source": "round-of-32 bracket marks South Africa as 2A; local A组 third-round postmatch file not present",
+          "trend_notes": ["首轮负于墨西哥后防守压力明显", "第二轮靠 Teboho Mokoena 第83分钟点球拿到生机", "公开队闻称末轮击败韩国并首次进入淘汰赛"],
+          "source_status": "partial_local_third_round_gap"
+        },
+        "canada": {
+          "known_results": ["加拿大 1-1 波黑", "加拿大 6-0 卡塔尔", "瑞士 2-1 加拿大"],
+          "rank_source": "B组第三轮复盘 and bracket mark Canada as 2B",
+          "trend_notes": ["两轮后4分且净胜球优势大", "第三轮负瑞士后列B组第二", "Jonathan David/Cyle Larin/Promise David 攻击状态为主要本地正信号"],
+          "source_status": "local_postmatch_available"
+        }
+      },
+      "predicted_lineups": [
+        {
+          "team": "South Africa",
+          "team_zh": "南非",
+          "predicted_formation": "3-4-2-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium_low",
+          "official_lineup_gate": "not_captured_in_packet",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "龙文·威廉姆斯", "english_name": "Ronwen Williams", "role": "一门，防线组织"},
+            {"position": "CB", "chinese_name": "恩科西纳蒂·西比西", "english_name": "Nkosinathi Sibisi", "role": "中卫对抗"},
+            {"position": "CB", "chinese_name": "伊梅·奥孔", "english_name": "Ime Okon", "role": "中卫覆盖"},
+            {"position": "CB", "chinese_name": "姆贝克泽利·姆博卡齐", "english_name": "Mbekezeli Mbokazi", "role": "中卫轮转深度"},
+            {"position": "RWB", "chinese_name": "库利索·穆道", "english_name": "Khuliso Mudau", "role": "右翼卫推进与回追"},
+            {"position": "LWB", "chinese_name": "奥布里·莫迪巴", "english_name": "Aubrey Modiba", "role": "左路推进与定位球参与"},
+            {"position": "CM", "chinese_name": "特博霍·莫科纳", "english_name": "Teboho Mokoena", "role": "中场核心，点球/远射/定位球"},
+            {"position": "CM", "chinese_name": "杰登·亚当斯", "english_name": "Jayden Adams", "role": "中场覆盖"},
+            {"position": "AM", "chinese_name": "奥斯温·阿波利斯", "english_name": "Oswin Appollis", "role": "右侧反击接应"},
+            {"position": "AM", "chinese_name": "塔伦特·姆巴塔", "english_name": "Thalente Mbatha", "role": "二线接应"},
+            {"position": "ST", "chinese_name": "莱尔·福斯特", "english_name": "Lyle Foster", "role": "前场支点与纵深"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "伊克拉姆·雷纳斯", "english_name": "Iqraam Rayners", "trigger": "需要更直接禁区终结"},
+            {"chinese_name": "埃维登斯·马克戈帕", "english_name": "Evidence Makgopa", "trigger": "需要高点和长传落点"},
+            {"chinese_name": "卡莫盖洛·塞贝莱贝莱", "english_name": "Kamogelo Sebelebele", "trigger": "边路速度替补"}
+          ],
+          "conflicts": ["本地 player_state 曾标 Mokoena suspended，但 Guardian 队闻称其回归；此处标 conflicting_to_probable，T-75 必须复核。"]
+        },
+        {
+          "team": "Canada",
+          "team_zh": "加拿大",
+          "predicted_formation": "3-4-2-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium",
+          "official_lineup_gate": "not_captured_in_packet",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "马克西姆·克雷波", "english_name": "Maxime Crépeau", "role": "一门候选，门线与出击"},
+            {"position": "RCB", "chinese_name": "阿利斯泰尔·约翰斯顿", "english_name": "Alistair Johnston", "role": "右侧防守与推进"},
+            {"position": "CB", "chinese_name": "莫伊塞·邦比托", "english_name": "Moïse Bombito", "role": "回归中卫，对抗与速度"},
+            {"position": "LCB", "chinese_name": "德里克·科尔内柳斯", "english_name": "Derek Cornelius", "role": "左中卫"},
+            {"position": "RWB", "chinese_name": "泰琼·布坎南", "english_name": "Tajon Buchanan", "role": "右路推进"},
+            {"position": "LWB", "chinese_name": "阿方索·戴维斯", "english_name": "Alphonso Davies", "role": "伤后回归，左路爆点"},
+            {"position": "CM", "chinese_name": "斯蒂芬·欧斯塔基奥", "english_name": "Stephen Eustáquio", "role": "中场组织，肌肉疲劳观察"},
+            {"position": "CM", "chinese_name": "内森·萨利巴", "english_name": "Nathan Saliba", "role": "中场跑动"},
+            {"position": "FW", "chinese_name": "乔纳森·戴维", "english_name": "Jonathan David", "role": "核心终结"},
+            {"position": "FW", "chinese_name": "凯尔·拉林", "english_name": "Cyle Larin", "role": "中锋牵制"},
+            {"position": "FW", "chinese_name": "普罗米斯·戴维", "english_name": "Promise David", "role": "前场冲击/射门点"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "雅各布·沙费尔伯格", "english_name": "Jacob Shaffelburg", "trigger": "左路速度或 Davies 分钟受限"},
+            {"chinese_name": "里奇·拉里亚", "english_name": "Richie Laryea", "trigger": "右翼卫防守稳态"},
+            {"chinese_name": "阿里·艾哈迈德", "english_name": "Ali Ahmed", "trigger": "中前场轮换"}
+          ],
+          "conflicts": ["Davies/Bombito 回归口径来自 Guardian 队闻；本地 player_state 对 Davies 仍为 managed_return_uncertain。"]
+        }
+      ],
+      "availability_and_risk": {
+        "south_africa": [
+          {"player": "Teboho Mokoena", "status": "conflicting_probable", "note": "本地旧状态为 suspended；Guardian 队闻称 return。"},
+          {"player": "Ronwen Williams", "status": "probable", "note": "本地未见伤停。"}
+        ],
+        "canada": [
+          {"player": "Alphonso Davies", "status": "probable_managed_minutes", "note": "Guardian 报道 set to return after ACL injury。"},
+          {"player": "Moïse Bombito", "status": "probable_return", "note": "Guardian 报道 return。"},
+          {"player": "Ismaël Koné", "status": "out_or_major_doubt", "note": "Guardian 报道 serious injury。"},
+          {"player": "Stephen Eustáquio", "status": "doubtful_minutes_watch", "note": "Guardian 报道 muscle fatigue。"}
+        ]
+      },
+      "market_availability": {
+        "status": "incomplete_external_only",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "snapshots": [
+          {"source": "The Sun", "market": "moneyline reference", "value": "Canada -140 reported", "source_status": "third_party_non_chinese_incomplete"}
+        ],
+        "missing": ["中国体彩/中国足彩网同源完整玩法", "让球/大小球/比分/总进球/半全场完整赔率", "官方竞彩编号"]
+      }
+    },
+    {
+      "match_no": 74,
+      "match_id": "M74_2026-06-29_德国_vs_巴拉圭",
+      "stage": "Round of 32",
+      "fixture": {
+        "home_team": {"zh": "德国", "en": "Germany", "slot": "1E", "qualification_source": "E组第一"},
+        "away_team": {"zh": "巴拉圭", "en": "Paraguay", "slot": "3D", "qualification_source": "D组第三"},
+        "host_date": "2026-06-29",
+        "kickoff_host": "16:30",
+        "kickoff_uk": "21:30",
+        "venue": "Boston Stadium",
+        "host_city": "Foxborough / Boston",
+        "round_of_16_path": "M74胜者 vs M77胜者",
+        "source_status": "confirmed_by_local_round_of_32_bracket_and_public_fixture_schedule",
+        "captured_at": "2026-06-28T21:26:27+08:00"
+      },
+      "group_stage_summary": {
+        "germany": {
+          "known_results": ["德国 7-1 库拉索", "德国 2-1 科特迪瓦", "厄瓜多尔 2-1 德国"],
+          "rank_source": "bracket marks Germany as 1E; E组 results imply Germany top on goal difference among 6-point teams",
+          "trend_notes": ["前两轮攻击爆发", "第三轮已基本掌握出线后节奏和轮换被复盘为风险", "Wirtz/Musiala/Undav/Havertz/Sané 组合存在首发排序争议"]
+        },
+        "paraguay": {
+          "known_results": ["美国 4-1 巴拉圭", "土耳其 0-1 巴拉圭", "D组第三轮本地完整复盘缺失；bracket confirms 3D"],
+          "rank_source": "round-of-32 bracket marks Paraguay as 3D",
+          "trend_notes": ["首轮被美国打穿后 game_state_collapse_risk 上调", "第二轮 1-0 土耳其提升低比分防守和反击地板", "Julio Enciso 曾与本地名单冲突，当前已出现在本地 player_state"]
+        }
+      },
+      "predicted_lineups": [
+        {
+          "team": "Germany",
+          "team_zh": "德国",
+          "predicted_formation": "4-2-3-1",
+          "source_status": "probable_not_official_conflicting",
+          "lineup_confidence": "medium_low",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "曼努埃尔·诺伊尔", "english_name": "Manuel Neuer", "role": "经验一门；公开评论源存在是否应轮换争议"},
+            {"position": "RB", "chinese_name": "约书亚·基米希", "english_name": "Joshua Kimmich", "role": "右路/中场转换枢纽"},
+            {"position": "CB", "chinese_name": "约纳坦·塔", "english_name": "Jonathan Tah", "role": "中卫对抗"},
+            {"position": "CB", "chinese_name": "安东尼奥·吕迪格", "english_name": "Antonio Rüdiger", "role": "中卫领袖"},
+            {"position": "LB", "chinese_name": "纳撒尼尔·布朗", "english_name": "Nathaniel Brown", "role": "左后卫推进"},
+            {"position": "DM", "chinese_name": "费利克斯·恩梅查", "english_name": "Felix Nmecha", "role": "中场覆盖"},
+            {"position": "DM", "chinese_name": "纳迪姆·阿米里", "english_name": "Nadiem Amiri", "role": "中场连接"},
+            {"position": "AM", "chinese_name": "弗洛里安·维尔茨", "english_name": "Florian Wirtz", "role": "前腰创造"},
+            {"position": "AM", "chinese_name": "贾马尔·穆西亚拉", "english_name": "Jamal Musiala", "role": "肋部突破"},
+            {"position": "RW", "chinese_name": "勒鲁瓦·萨内", "english_name": "Leroy Sané", "role": "右路冲刺；首发争议"},
+            {"position": "ST", "chinese_name": "凯·哈弗茨", "english_name": "Kai Havertz", "role": "中锋牵制"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "德尼兹·翁达夫", "english_name": "Deniz Undav", "trigger": "若压低 Sané 或改双前锋，当前本地 form 最高"},
+            {"chinese_name": "奥利弗·鲍曼", "english_name": "Oliver Baumann", "trigger": "若门将位置按舆论建议轮换"},
+            {"chinese_name": "大卫·劳姆", "english_name": "David Raum", "trigger": "左后卫经验优先"}
+          ],
+          "conflicts": ["Bavarian Football Works 倾向 Baumann/Undav/基米希中场等调整，但承认 Neuer 不一定会被放到替补；官方未确认。"]
+        },
+        {
+          "team": "Paraguay",
+          "team_zh": "巴拉圭",
+          "predicted_formation": "4-4-2",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium_low",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "奥兰多·吉尔", "english_name": "Orlando Gill", "role": "二轮首发门将口径"},
+            {"position": "RB", "chinese_name": "胡安·何塞·卡塞雷斯", "english_name": "Juan José Cáceres", "role": "右后卫防守"},
+            {"position": "CB", "chinese_name": "古斯塔沃·戈麦斯", "english_name": "Gustavo Gómez", "role": "防线核心"},
+            {"position": "CB", "chinese_name": "奥马尔·阿尔德雷特", "english_name": "Omar Alderete", "role": "中卫/左脚出球"},
+            {"position": "LB", "chinese_name": "胡尼奥尔·阿隆索", "english_name": "Júnior Alonso", "role": "左侧防守"},
+            {"position": "RM", "chinese_name": "米格尔·阿尔米隆", "english_name": "Miguel Almirón", "role": "右路推进与反击"},
+            {"position": "CM", "chinese_name": "安德烈斯·库巴斯", "english_name": "Andrés Cubas", "role": "中场扫荡"},
+            {"position": "CM", "chinese_name": "马蒂亚斯·加拉萨", "english_name": "Matías Galarza", "role": "二轮高状态中场"},
+            {"position": "LM", "chinese_name": "迭戈·戈麦斯", "english_name": "Diego Gómez", "role": "左/中路前插"},
+            {"position": "ST", "chinese_name": "伊西德罗·皮塔", "english_name": "Isidro Pitta", "role": "中锋支点"},
+            {"position": "ST", "chinese_name": "胡利奥·恩西索", "english_name": "Julio Enciso", "role": "二前锋/反击衔接"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "亚历克斯·阿尔塞", "english_name": "Álex Arce", "trigger": "需要更强禁区终结"},
+            {"chinese_name": "加布里埃尔·阿瓦洛斯", "english_name": "Gabriel Ávalos", "trigger": "高点替补"},
+            {"chinese_name": "卡库", "english_name": "Kaku", "trigger": "需要前腰创造"}
+          ],
+          "conflicts": ["D组第三轮本地复盘不完整，预计 XI 主要继承土耳其 0-1 巴拉圭二轮首发和本地 player_state。"]
+        }
+      ],
+      "availability_and_risk": {
+        "germany": [
+          {"player": "Lennart Karl", "status": "out", "note": "本地 Germany player_state source_log notes Assan Ouedraogo replacing injured Lennart Karl."},
+          {"player": "Manuel Neuer / Leroy Sané", "status": "selection_pressure", "note": "公开评论源提出替补争议，不等于官方伤停。"}
+        ],
+        "paraguay": [
+          {"player": "Julio Enciso", "status": "probable", "note": "此前名单冲突已在本地 remediation 后出现；T-75复核。"},
+          {"player": "Gustavo Gómez", "status": "probable", "note": "本地未见新增停赛。"}
+        ]
+      },
+      "market_availability": {
+        "status": "missing_same_source_complete_snapshot",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "missing": ["官方中国竞彩完整玩法", "同源 1X2/让球/大小球/比分/总进球/半全场", "T-75后终盘"]
+      }
+    },
+    {
+      "match_no": 75,
+      "match_id": "M75_2026-06-29_荷兰_vs_摩洛哥",
+      "stage": "Round of 32",
+      "fixture": {
+        "home_team": {"zh": "荷兰", "en": "Netherlands", "slot": "1F", "qualification_source": "F组第一"},
+        "away_team": {"zh": "摩洛哥", "en": "Morocco", "slot": "2C", "qualification_source": "C组第二"},
+        "host_date": "2026-06-29",
+        "kickoff_host": "19:00",
+        "kickoff_uk": "2026-06-30 02:00",
+        "venue": "Estadio Monterrey",
+        "host_city": "Guadalupe / Monterrey",
+        "round_of_16_path": "M73胜者 vs M75胜者",
+        "source_status": "confirmed_by_local_round_of_32_bracket_and_public_fixture_schedule",
+        "captured_at": "2026-06-28T21:26:27+08:00"
+      },
+      "group_stage_summary": {
+        "netherlands": {
+          "known_results": ["荷兰 2-2 日本", "荷兰 5-1 瑞典", "突尼斯 1-3 荷兰"],
+          "rank_source": "F组第三轮复盘 and bracket mark Netherlands as 1F",
+          "trend_notes": ["Brobbey/Gakpo/Summerville 多点爆发", "第三轮继续打到三球，强队领先后继续进球尾部需保留", "部分第三轮 player_state 仍缺官方完整分钟/评分"]
+        },
+        "morocco": {
+          "known_results": ["巴西 1-1 摩洛哥", "苏格兰 0-1 摩洛哥", "摩洛哥 4-2 海地"],
+          "rank_source": "C组第三轮复盘 and bracket mark Morocco as 2C",
+          "trend_notes": ["小组不败但因净胜球列第二", "第三轮 4-2 暴露比赛开放度和 BTTS 尾部", "Bounou minor knock watch in local player_state"]
+        }
+      },
+      "predicted_lineups": [
+        {
+          "team": "Netherlands",
+          "team_zh": "荷兰",
+          "predicted_formation": "4-3-3",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "巴特·费布吕亨", "english_name": "Bart Verbruggen", "role": "一门"},
+            {"position": "RB", "chinese_name": "丹泽尔·邓弗里斯", "english_name": "Denzel Dumfries", "role": "右路冲击"},
+            {"position": "CB", "chinese_name": "维吉尔·范戴克", "english_name": "Virgil van Dijk", "role": "防线核心"},
+            {"position": "CB", "chinese_name": "扬·保罗·范赫克", "english_name": "Jan Paul van Hecke", "role": "中卫，第三轮进球状态"},
+            {"position": "LB", "chinese_name": "米基·范德芬", "english_name": "Micky van de Ven", "role": "左侧速度/中卫兼容"},
+            {"position": "CM", "chinese_name": "弗伦基·德容", "english_name": "Frenkie de Jong", "role": "控球组织"},
+            {"position": "CM", "chinese_name": "瑞安·赫拉芬贝赫", "english_name": "Ryan Gravenberch", "role": "后腰覆盖"},
+            {"position": "CM", "chinese_name": "蒂贾尼·赖因德斯", "english_name": "Tijjani Reijnders", "role": "前插连接"},
+            {"position": "LW", "chinese_name": "科迪·加克波", "english_name": "Cody Gakpo", "role": "左路终结，队内最高状态"},
+            {"position": "ST", "chinese_name": "布赖恩·布罗比", "english_name": "Brian Brobbey", "role": "中锋支点和禁区终结"},
+            {"position": "RW", "chinese_name": "克里森西奥·萨默维尔", "english_name": "Crysencio Summerville", "role": "右/左路速度与终结"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "孟菲斯·德佩", "english_name": "Memphis Depay", "trigger": "中锋或二前锋经验"},
+            {"chinese_name": "多尼耶尔·马伦", "english_name": "Donyell Malen", "trigger": "边锋冲刺"},
+            {"chinese_name": "特恩·库普梅纳斯", "english_name": "Teun Koopmeiners", "trigger": "中场控制/定位球"}
+          ],
+          "conflicts": ["第三轮荷兰复盘标 player_state_update_status blocked/partial for full official minutes, so XI confidence capped at medium."]
+        },
+        {
+          "team": "Morocco",
+          "team_zh": "摩洛哥",
+          "predicted_formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium_low",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "亚辛·布努", "english_name": "Yassine Bounou", "role": "一门；minor knock watch"},
+            {"position": "RB", "chinese_name": "阿什拉夫·哈基米", "english_name": "Achraf Hakimi", "role": "右路推进核心"},
+            {"position": "CB", "chinese_name": "沙迪·里亚德", "english_name": "Chadi Riad", "role": "中卫"},
+            {"position": "CB", "chinese_name": "伊萨·迪奥普", "english_name": "Issa Diop", "role": "中卫防空"},
+            {"position": "LB", "chinese_name": "努赛尔·马兹拉维", "english_name": "Noussair Mazraoui", "role": "边后卫/内收"},
+            {"position": "DM", "chinese_name": "阿泽丁·乌纳希", "english_name": "Azzedine Ounahi", "role": "中场推进"},
+            {"position": "DM", "chinese_name": "阿尤布·布阿迪", "english_name": "Ayyoub Bouaddi", "role": "年轻中场，高状态"},
+            {"position": "AM", "chinese_name": "伊斯梅尔·塞巴里", "english_name": "Ismael Saibari", "role": "前腰，第三轮高状态"},
+            {"position": "RW", "chinese_name": "布拉欣·迪亚斯", "english_name": "Brahim Díaz", "role": "右路/肋部创造"},
+            {"position": "LW", "chinese_name": "比拉尔·埃尔哈努斯", "english_name": "Bilal El Khannouss", "role": "左/中路创造"},
+            {"position": "ST", "chinese_name": "阿尤布·埃尔卡比", "english_name": "Ayoub El Kaabi", "role": "中锋终结"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "苏菲安·拉希米", "english_name": "Soufiane Rahimi", "trigger": "前场速度/二前锋"},
+            {"chinese_name": "尼尔·埃尔艾纳维", "english_name": "Neil El Aynaoui", "trigger": "中场稳态"},
+            {"chinese_name": "沙姆斯丁·塔尔比", "english_name": "Chemsdine Talbi", "trigger": "边路替补"}
+          ],
+          "conflicts": ["Bounou local status includes minor_knock_watch; official team news needed before final model run."]
+        }
+      ],
+      "availability_and_risk": {
+        "netherlands": [
+          {"player": "Cody Gakpo", "status": "probable", "note": "本地 form_status_1_5=5.0 after group stage."},
+          {"player": "Brian Brobbey", "status": "confirmed/probable", "note": "本地 form_status_1_5=4.8 and recent scoring record."}
+        ],
+        "morocco": [
+          {"player": "Yassine Bounou", "status": "probable_minor_knock_watch", "note": "本地 player_state 标 minor_knock_watch。"},
+          {"player": "Achraf Hakimi", "status": "probable", "note": "本地未见新增停赛。"}
+        ]
+      },
+      "market_availability": {
+        "status": "missing_same_source_complete_snapshot",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "missing": ["官方中国竞彩完整玩法", "同源赔率链", "T-75后终盘"]
+      }
+    },
+    {
+      "match_no": 76,
+      "match_id": "M76_2026-06-29_巴西_vs_日本",
+      "stage": "Round of 32",
+      "fixture": {
+        "home_team": {"zh": "巴西", "en": "Brazil", "slot": "1C", "qualification_source": "C组第一"},
+        "away_team": {"zh": "日本", "en": "Japan", "slot": "2F", "qualification_source": "F组第二"},
+        "host_date": "2026-06-29",
+        "kickoff_host": "12:00",
+        "kickoff_uk": "18:00",
+        "venue": "Houston Stadium",
+        "host_city": "Houston",
+        "round_of_16_path": "M76胜者 vs M78胜者",
+        "source_status": "confirmed_by_local_round_of_32_bracket_and_public_fixture_schedule",
+        "captured_at": "2026-06-28T21:26:27+08:00"
+      },
+      "group_stage_summary": {
+        "brazil": {
+          "known_results": ["巴西 1-1 摩洛哥", "巴西 3-0 海地", "苏格兰 0-3 巴西"],
+          "rank_source": "C组第三轮复盘 and bracket mark Brazil as 1C",
+          "trend_notes": ["C组第一，净胜球优势明显", "第三轮 3-0 属争头名高位尾部兑现", "Vinicius Junior local form_status_1_5=4.0"]
+        },
+        "japan": {
+          "known_results": ["荷兰 2-2 日本", "突尼斯 0-4 日本", "日本 1-1 瑞典"],
+          "rank_source": "F组第三轮复盘 and bracket mark Japan as 2F",
+          "trend_notes": ["小组第二出线", "上田绮世、伊东纯也、镰田大地、板仓滉、佐野海舟状态分突出", "第三轮 1-1 瑞典为平局收益场景，player_state 第三轮完整分钟仍需复核"]
+        }
+      },
+      "predicted_lineups": [
+        {
+          "team": "Brazil",
+          "team_zh": "巴西",
+          "predicted_formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium_low",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "阿利松", "english_name": "Alisson", "role": "一门"},
+            {"position": "RB", "chinese_name": "达尼洛·路易斯", "english_name": "Danilo Luiz", "role": "右后卫经验"},
+            {"position": "CB", "chinese_name": "马尔基尼奥斯", "english_name": "Marquinhos", "role": "中卫组织"},
+            {"position": "CB", "chinese_name": "加布里埃尔·马加良斯", "english_name": "Gabriel Magalhães", "role": "中卫对抗"},
+            {"position": "LB", "chinese_name": "韦斯利", "english_name": "Wesley", "role": "边后卫/轮换口径"},
+            {"position": "DM", "chinese_name": "布鲁诺·吉马良斯", "english_name": "Bruno Guimarães", "role": "中场组织"},
+            {"position": "DM", "chinese_name": "卡塞米罗", "english_name": "Casemiro", "role": "防守屏障"},
+            {"position": "AM", "chinese_name": "卢卡斯·帕奎塔", "english_name": "Lucas Paquetá", "role": "前腰连接"},
+            {"position": "LW", "chinese_name": "维尼修斯·儒尼奥尔", "english_name": "Vinicius Junior", "role": "左路核心爆点"},
+            {"position": "RW", "chinese_name": "拉菲尼亚", "english_name": "Raphinha", "role": "右路内切和定位球"},
+            {"position": "ST", "chinese_name": "马特乌斯·库尼亚", "english_name": "Matheus Cunha", "role": "中锋/九号半"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "恩德里克", "english_name": "Endrick", "trigger": "需要禁区终结和冲击"},
+            {"chinese_name": "加布里埃尔·马丁内利", "english_name": "Gabriel Martinelli", "trigger": "左路速度替补"},
+            {"chinese_name": "埃德森", "english_name": "Ederson", "trigger": "门将轮换或出球选择"}
+          ],
+          "conflicts": ["巴西 player_state positions partially blank in current local schema; positional roles are normalized from known squad roles and require T-75 verification."]
+        },
+        {
+          "team": "Japan",
+          "team_zh": "日本",
+          "predicted_formation": "3-4-2-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "铃木彩艳", "english_name": "Zion Suzuki", "role": "一门，第三轮关键扑救"},
+            {"position": "CB", "chinese_name": "富安健洋", "english_name": "Takehiro Tomiyasu", "role": "中卫/右侧覆盖"},
+            {"position": "CB", "chinese_name": "板仓滉", "english_name": "Ko Itakura", "role": "中卫组织"},
+            {"position": "CB", "chinese_name": "伊藤洋辉", "english_name": "Hiroki Ito", "role": "左中卫"},
+            {"position": "RWB", "chinese_name": "菅原由势", "english_name": "Yukinari Sugawara", "role": "右翼卫传中"},
+            {"position": "LWB", "chinese_name": "中村敬斗", "english_name": "Keito Nakamura", "role": "左侧推进/边锋兼容"},
+            {"position": "CM", "chinese_name": "佐野海舟", "english_name": "Kaishu Sano", "role": "后腰覆盖"},
+            {"position": "CM", "chinese_name": "田中碧", "english_name": "Ao Tanaka", "role": "中前卫插上"},
+            {"position": "AM", "chinese_name": "镰田大地", "english_name": "Daichi Kamada", "role": "前腰连接"},
+            {"position": "AM", "chinese_name": "伊东纯也", "english_name": "Junya Ito", "role": "右路突破"},
+            {"position": "ST", "chinese_name": "上田绮世", "english_name": "Ayase Ueda", "role": "中锋，队内最高状态"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "堂安律", "english_name": "Ritsu Doan", "trigger": "右侧内切和定位球"},
+            {"chinese_name": "铃木唯人", "english_name": "Yuito Suzuki", "trigger": "影锋替补"},
+            {"chinese_name": "町野修斗", "english_name": "Shuto Machino", "trigger": "中锋替补"}
+          ],
+          "conflicts": ["第三轮日本 1-1 瑞典复盘未直接回写完整 player_state；XI 主要依据本地 player_state 状态分和常用角色。"]
+        }
+      ],
+      "availability_and_risk": {
+        "brazil": [
+          {"player": "Vinicius Junior", "status": "probable", "note": "本地 form_status_1_5=4.0，未见新增伤停。"},
+          {"player": "Casemiro", "status": "probable_minutes_watch", "note": "年龄与淘汰赛负荷需 T-75/赛前新闻复核。"}
+        ],
+        "japan": [
+          {"player": "Ayase Ueda", "status": "available_high_form", "note": "本地 form_status_1_5=5.0。"},
+          {"player": "Zion Suzuki", "status": "available", "note": "第三轮复盘记录关键扑救。"}
+        ]
+      },
+      "market_availability": {
+        "status": "missing_same_source_complete_snapshot",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "missing": ["官方中国竞彩完整玩法", "同源赔率链", "T-75后终盘"]
+      }
+    }
+  ],
+  "team_state_completeness": [
+    {"team": "South Africa", "player_state_path": "data/outputs/player_state/south-africa-player-state.json", "players_detected": 26, "freshness": "updated_through_round2_local; round3 local postmatch missing", "source_status": "partial"},
+    {"team": "Canada", "player_state_path": "data/outputs/player_state/canada-player-state.json", "players_detected": 26, "freshness": "updated through B group local context but player_state_update_status partial", "source_status": "partial"},
+    {"team": "Germany", "player_state_path": "data/outputs/player_state/germany-player-state.json", "players_detected": 26, "freshness": "updated 2026-06-22 plus local group postmatch context", "source_status": "partial_for_round3"},
+    {"team": "Paraguay", "player_state_path": "data/outputs/player_state/paraguay-player-state.json", "players_detected": 26, "freshness": "updated through round2; D round3 local postmatch missing", "source_status": "partial"},
+    {"team": "Netherlands", "player_state_path": "data/outputs/player_state/netherlands-player-state.json", "players_detected": 26, "freshness": "updated after round2; round3 postmatch says player table full minutes blocked", "source_status": "partial"},
+    {"team": "Morocco", "player_state_path": "data/outputs/player_state/morocco-player-state.json", "players_detected": 26, "freshness": "updated through local C group context; Bounou knock watch", "source_status": "partial"},
+    {"team": "Brazil", "player_state_path": "data/outputs/player_state/brazil-player-state.json", "players_detected": 26, "freshness": "updated through local C group context; positions partly blank in state schema", "source_status": "partial"},
+    {"team": "Japan", "player_state_path": "data/outputs/player_state/japan-player-state.json", "players_detected": 26, "freshness": "complete_minimum_fact_packet; round3 full minutes not fully回写", "source_status": "partial"}
+  ],
+  "source_log": [
+    {
+      "source": "Local round-of-32 bracket",
+      "url": "E:/worldcup/data/outputs/knockout/round-of-32-bracket-20260628.json",
+      "captured_at": "2026-06-28T21:26:27+08:00",
+      "supports_fields": ["M73-M76 fixtures", "slots", "venues", "kickoff times", "round_of_16_paths"],
+      "source_status": "local_canonical"
+    },
+    {
+      "source": "Sky Sports fixture schedule",
+      "url": "https://www.skysports.com/football/news/12098/13481245/world-cup-2026-fixture-schedule-and-uk-kick-off-times-day-by-day-breakdown-of-all-104-matches-including-england-scotland",
+      "captured_at": "2026-06-28T21:26:27+08:00",
+      "supports_fields": ["public fixture schedule", "UK kickoff times", "host cities"],
+      "source_status": "public_schedule_source_used_by_local_bracket"
+    },
+    {
+      "source": "Guardian Canada-South Africa team news",
+      "url": "https://www.theguardian.com/football/2026/jun/28/alphonso-davies-returns-canada-world-cup-moment-of-destiny",
+      "captured_at": "2026-06-28T21:26:27+08:00",
+      "supports_fields": ["Davies return", "Bombito return", "Kone injury", "Eustaquio muscle fatigue", "Mokoena return note"],
+      "source_status": "reputable_news_current"
+    },
+    {
+      "source": "Bavarian Football Works Germany lineup discussion",
+      "url": "https://www.bavarianfootballworks.com/bayern-munich-coaches/222423/how-germany-should-lineup-against-paraguay",
+      "captured_at": "2026-06-28T21:26:27+08:00",
+      "supports_fields": ["Germany lineup debate", "Neuer/Baumann conflict", "Sané/Undav/Musiala/Wirtz/Havertz discussion"],
+      "source_status": "secondary_lineup_opinion_not_official"
+    },
+    {
+      "source": "AP round-of-32 context",
+      "url": "https://apnews.com/article/35a72baeef527fc815952f9b5997eb14",
+      "captured_at": "2026-06-28T21:26:27+08:00",
+      "supports_fields": ["round_of_32 matchup context", "Canada vs South Africa", "Brazil vs Japan", "Germany vs Paraguay", "Netherlands vs Morocco"],
+      "source_status": "reputable_news_context"
+    },
+    {
+      "source": "Local player_state and roster files",
+      "url": "E:/worldcup/data/outputs/player_state; E:/worldcup/data/packets/rosters",
+      "captured_at": "2026-06-28T21:26:27+08:00",
+      "supports_fields": ["player names", "form_status_1_5", "availability", "internal_match_rating_1_5 where available"],
+      "source_status": "local_mixed_freshness"
+    }
+  ],
+  "gaps_and_conflicts": [
+    "T-75 official lineups were not captured; all predicted_lineups are probable_not_official and must be rerun before final model or betting-risk use.",
+    "No complete same-source Chinese sports lottery odds chain was verified for M73-M76; betting_gate_status remains hold_not_executable.",
+    "Weather tool returned no usable forecast in this pass; climate fields are venue/city only and should be refreshed closer to kickoff.",
+    "South Africa Mokoena availability conflicts: local player_state contains older suspended flag, current Guardian team news says return.",
+    "A组 and D组 third-round local completed postmatch files are incomplete/missing in the local set used here; South Africa and Paraguay group-stage final summaries rely partly on bracket/public context.",
+    "Several round3 postmatch files explicitly mark player_state/member-table updates as partial/blocked for full official minutes and same-source ratings."
+  ],
+  "handoff_notes": {
+    "for_tactics": [
+      "M73: verify Canada left side with Davies minutes management against South Africa wing-back structure.",
+      "M74: Germany lineup conflict affects Kimmich position, Sané/Undav selection and pressing profile.",
+      "M75: Netherlands wide finishing surge vs Morocco right-sided Hakimi/Mazraoui structure needs matchup review.",
+      "M76: Brazil left-side Vinicius route vs Japan back-three/wing-back spacing is primary tactical input."
+    ],
+    "for_model": [
+      "Use group-stage trends but downgrade teams with incomplete round3 player_state freshness.",
+      "Do not treat third-party odds snippets as full market calibration.",
+      "Apply knockout 90-minute boundary separately from advancement probability."
+    ],
+    "for_red_team": [
+      "Challenge all predicted XI with T-75 official lineups.",
+      "Review South Africa/Canada injury conflicts and Germany lineup debate before pass.",
+      "Keep betting gate on hold until official lineup and same-source market chain are available."
+    ]
+  }
+}

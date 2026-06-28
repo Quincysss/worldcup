@@ -130,6 +130,23 @@
       "triggered": false,
       "triggers": [],
       "four_plus_goal_tail_delta": null
+    },
+    "scoreline_diversity_layer": {
+      "triggered": false,
+      "team_strength_gap": null,
+      "xg_gap": null,
+      "total_xg_band": null,
+      "tempo_profile": null,
+      "one_one_overconcentration_flag": false,
+      "redistribution_note": null,
+      "score_clusters": {
+        "low_event_draw_cluster": [],
+        "balanced_one_goal_cluster": [],
+        "open_draw_cluster": [],
+        "favorite_edge_cluster": [],
+        "underdog_edge_cluster": [],
+        "volatility_tail_cluster": []
+      }
     }
   },
   "expected_goals": {
@@ -159,6 +176,25 @@
       "under_2_5": null
     },
     "top_scorelines": [],
+    "top_scorelines_basis": "adjusted_final_ranking_after_scoreline_diversity_layer_when_triggered_otherwise_raw_poisson_matrix",
+    "raw_poisson_top_scorelines": [],
+    "adjusted_top_scorelines": [],
+    "final_adjusted_top_scoreline": {
+      "score": null,
+      "probability": null,
+      "confidence": null,
+      "basis": null,
+      "reason": null
+    },
+    "scoreline_clusters": {
+      "low_event_draw_cluster": [],
+      "balanced_one_goal_cluster": [],
+      "open_draw_cluster": [],
+      "favorite_edge_cluster": [],
+      "underdog_edge_cluster": [],
+      "volatility_tail_cluster": []
+    },
+    "top1_scoreline_caveat": null,
     "highest_single_scoreline": null,
     "aggregate_1x2_first_direction": null,
     "confidence_interval": null

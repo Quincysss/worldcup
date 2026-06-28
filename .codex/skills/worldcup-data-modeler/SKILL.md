@@ -30,16 +30,17 @@ Prediction work must follow the quantitative chain defined by `worldcup-quant-pr
 7. For final group-round matches, run a tournament-context layer: group-table snapshot, qualification scenarios, bracket-path expectation, same-group simultaneous-match dependency, rotation/yellow-card risk, and strategic tempo adjustment.
 8. Convert team scores into `expected_goals` for each team.
 9. Generate a Poisson score matrix from 0-0 through 5-5 and preserve higher-score tail probability.
-10. Derive 1X2, totals, and top scorelines from the matrix.
-11. Integrate market signal if requested:
+10. Derive 1X2, totals, top scorelines, and scoreline clusters from the matrix.
+11. Run the scoreline diversity check: when team strength and xG are close, do not let `1-1` become the only useful score story by default. Separate `1-1` from low-event draws, open draws, one-goal edge wins, and volatility tails.
+12. Integrate market signal if requested:
    - convert odds to implied probabilities
    - remove bookmaker margin when enough outcomes are available
    - compare market probabilities with model probabilities
    - explain disagreement without recommending bets
-12. Generate probabilities and confidence bands using the schema in `references/output-schemas.md`.
-13. Run sanity checks: probabilities sum correctly, score-matrix mass is accounted for, extreme outputs are explained, stale inputs are flagged, and upset paths remain visible.
-14. For post-match reviews, check whether the data collector has updated the participating teams' player-state files and member tables.
-15. Produce handoff notes for verifier and lead analyst.
+13. Generate probabilities and confidence bands using the schema in `references/output-schemas.md`.
+14. Run sanity checks: probabilities sum correctly, score-matrix mass is accounted for, extreme outputs are explained, stale inputs are flagged, and upset paths remain visible.
+15. For post-match reviews, check whether the data collector has updated the participating teams' player-state files and member tables.
+16. Produce handoff notes for verifier and lead analyst.
 
 ## Modeling Principles
 
@@ -54,6 +55,7 @@ Prediction work must follow the quantitative chain defined by `worldcup-quant-pr
 - Never output only a subjective score. Every match prediction needs a visible numeric chain from inputs to final probabilities.
 - Use Poisson as the default scoreline engine unless the task explicitly requires a different documented model.
 - Use red-team output to discount, revise, or hold final probabilities rather than hiding concerns in prose.
+- Treat the highest exact scoreline as a thin slice of the distribution, not as the match story. If close-strength teams repeatedly produce `1-1` as Top1, publish scoreline clusters and explain whether the match is actually low-event, open, one-goal-edge, or high-volatility.
 
 ## Required Prediction Outputs
 
@@ -69,6 +71,11 @@ For match and round predictions, include:
 - `probabilities_1x2`: team A win, draw, team B win.
 - `totals_probabilities`: at minimum over/under 2.5 when relevant; add other totals if requested.
 - `top_scorelines`: five most likely scores with probabilities.
+- `raw_poisson_top_scorelines`: five highest exact scores directly from the Poisson matrix before any scoreline diversity treatment.
+- `adjusted_top_scorelines`: final report ranking after scoreline diversity, 1X2 direction, xG gap, total-xG band, and tactical volatility are considered.
+- `final_adjusted_top_scoreline`: the single scoreline used in the user-facing conclusion, with a reason and confidence label.
+- `scoreline_clusters`: low-event draw, balanced one-goal, open draw, favorite-edge, underdog-edge, and volatility-tail clusters when relevant.
+- `scoreline_diversity_layer`: trigger status, xG gap, total-xG band, tempo profile, 1-1 overconcentration flag, and redistribution note.
 - `odds_implied_probability` and `model_market_delta` when odds are included.
 - `confidence_interval` or uncertainty band for 1X2 and xG.
 - `red_team_status`: `pending`, `pass`, `revise`, or `hold`.
@@ -92,6 +99,32 @@ Return:
 - `player_state_backtest_link`: whether match minutes, `form_status_1_5`, `internal_match_rating_1_5`, injuries, cards, and rating notes were pushed back into player_state/member-table files.
 - `quality_notes`: calibration risks, sample-size warnings, and next checks.
 - `handoff_notes`: what verifier or lead analyst should challenge.
+
+## Scoreline Diversity Layer
+
+Use this layer whenever:
+
+- team strength gap is small, normally under 8 points on a 0-100 internal scale
+- final xG gap is under 0.35
+- raw Poisson places `1-1` first by less than 2.5 percentage points over nearby scores
+- total xG is between 2.2 and 3.2
+- tactical evidence does not clearly support a locked low-event match
+
+Required treatment:
+
+- Keep the raw Poisson probabilities visible.
+- Do not manually remove `1-1`; mark it as the central draw slice.
+- Do not leave the report's final Top5 locked to raw Poisson order when `1-1` is only a thin central slice. Preserve it in `raw_poisson_top_scorelines`, then generate `adjusted_top_scorelines` and `final_adjusted_top_scoreline`.
+- If the aggregate 1X2 leader and xG direction point to a narrow win, and the `1-1` margin over an adjacent one-goal win is small, the final display should prefer the adjacent one-goal win while keeping `1-1` as the leading draw path.
+- Add clusters:
+  - `low_event_draw_cluster`: usually 0-0 and 1-1
+  - `balanced_one_goal_cluster`: 1-0, 0-1, 2-1, 1-2
+  - `open_draw_cluster`: 2-2 and sometimes 3-3
+  - `favorite_edge_cluster`: favorite one-goal and two-goal wins
+  - `underdog_edge_cluster`: underdog one-goal wins
+  - `volatility_tail_cluster`: 3-2, 2-3, 3-1, 1-3 and higher tails when tactical volatility exists
+- If `1-1` is Top1 but the 1X2 leader is a narrow win under 45-48%, label the match as dual-path rather than presenting one score as the clear prediction.
+- If both teams have high transition or set-piece volatility, shift the narrative from `1-1 default` to `open balanced game`; raise 2-1/1-2/2-2 cluster visibility before changing 1X2 headline.
 
 Use `references/output-schemas.md` for JSON-compatible shapes.
 

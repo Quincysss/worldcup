@@ -1,0 +1,575 @@
+{
+  "schema_version": "red_team_round32_m73_m76_v3_review_after_model_fill",
+  "created_at": "2026-06-28T21:40:00+08:00",
+  "project": "E:/worldcup",
+  "agent_role": "worldcup-red-team-verifier",
+  "review_target": "Round of 32 M73-M76 v3 pre-match prediction chain",
+  "overall_verdict": "hold",
+  "red_team_status": "complete_red_team_review_after_data_tactics_model_fill",
+  "upstream_status": "present_partial_source_limited",
+  "betting_gate": "hold_not_executable",
+  "betting_language_blocked": true,
+  "no_betting_advice": true,
+  "upstream_files": {
+    "data_collector": {
+      "path": "data/thread_outputs/round32-m73-m76-v3-20260628/data-collector.json",
+      "last_write_time_observed": "2026-06-28T21:28:54+08:00",
+      "status": "present_partial_source_limited"
+    },
+    "tactics_coach": {
+      "path": "data/thread_outputs/round32-m73-m76-v3-20260628/tactics-coach.json",
+      "last_write_time_observed": "2026-06-28T21:30:45+08:00",
+      "status": "present_partial_source_limited"
+    },
+    "modeler": {
+      "path": "data/thread_outputs/round32-m73-m76-v3-20260628/modeler.json",
+      "last_write_time_observed": "2026-06-28T21:30:59+08:00",
+      "status": "present_completed_partial_source_limited_data_and_tactics_absorbed"
+    }
+  },
+  "input_integrity_flags": [],
+  "global_blocking_gates": [
+    {
+      "gate": "T-75 official lineups",
+      "status": "missing_or_not_captured",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "data"
+    },
+    {
+      "gate": "final injuries, suspensions, and minutes restrictions",
+      "status": "partial_conflicting",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "data"
+    },
+    {
+      "gate": "official Chinese sports lottery and same-source 1X2/handicap/totals odds",
+      "status": "missing_or_incomplete",
+      "severity": "blocker",
+      "confidence": "high",
+      "owner": "market"
+    },
+    {
+      "gate": "market calibration",
+      "status": "disabled_by_modeler_market_weight_0",
+      "severity": "high",
+      "confidence": "high",
+      "owner": "model/market"
+    },
+    {
+      "gate": "90-minute vs advancement boundary",
+      "status": "90_minute_1x2_present_advancement_not_simulated",
+      "severity": "medium",
+      "confidence": "high",
+      "owner": "model"
+    }
+  ],
+  "global_quant_chain_review": {
+    "factor_weights": {
+      "baseline_strength": 0.27,
+      "attack": 0.15,
+      "defense": 0.15,
+      "player_state": 0.14,
+      "injury_suspension_minutes": 0.09,
+      "tactical_matchup": 0.12,
+      "schedule_environment": 0.04,
+      "knockout_context": 0.04,
+      "market": 0
+    },
+    "red_team_read": [
+      "The modeler absorbed the tactics-coach ten-factor package and retained conservative caps.",
+      "The modeler kept market weight at 0 because same-source odds are missing.",
+      "The modeler labels probabilities as 90-minute 1X2 and does not simulate extra time or penalties.",
+      "Remaining publish risk is partial source freshness, lineup gates, market gates and tail calibration."
+    ],
+    "duplicate_counting_risks": [
+      "Canada transition upside may overlap with player_state rewards for David, Buchanan and Davies.",
+      "Germany 7-1 Curacao may leak into baseline attack, favorite ceiling and pressing factors at once.",
+      "Netherlands recent high-output games may inflate attack score and favorite ceiling unless capped.",
+      "Brazil Vinicius/Bruno form may be counted through player_state, attack score and wide/transition tactical boosts.",
+      "Japan defensive discipline and Suzuki goalkeeper form may be counted in player_state and draw-floor logic simultaneously."
+    ]
+  },
+  "matches": [
+    {
+      "match_id": "M73",
+      "match": "South Africa vs Canada",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_summary": {
+        "expected_goals": {
+          "south_africa": 1.08,
+          "canada": 1.34,
+          "total": 2.42
+        },
+        "probabilities_90m_1x2": {
+          "south_africa_win": 0.3012,
+          "draw": 0.2724,
+          "canada_win": 0.4265
+        },
+        "totals": {
+          "over_2_5": 0.4355,
+          "under_2_5": 0.5645,
+          "btts_yes": 0.4875
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1287
+          },
+          {
+            "score": "0-1",
+            "probability": 0.1192
+          },
+          {
+            "score": "1-0",
+            "probability": 0.096
+          },
+          {
+            "score": "0-0",
+            "probability": 0.0889
+          },
+          {
+            "score": "1-2",
+            "probability": 0.0862
+          }
+        ],
+        "tail_notes": {
+          "draw_floor": "triggered at 0.27",
+          "favorite_ceiling": "not triggered",
+          "favorite_home_4plus_goal_probability": 0.0243
+        }
+      },
+      "top_concerns": [
+        {
+          "concern": "Canada edge is conditional on unresolved availability and minutes risk.",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "Data packet flags Davies managed return, Kone out or major doubt, Eustaquio muscle fatigue, and T-75 lineups not captured.",
+          "why_it_matters": "Canada press and transition advantage are the main reason for the 42.65% away-win estimate.",
+          "follow_up_check": "Confirm official XI and minutes outlook for Davies, Eustaquio, Kone and Bombito.",
+          "owner": "data"
+        },
+        {
+          "concern": "South Africa Mokoena status conflict remains a blocker.",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "Data collector says old local player_state marked Mokoena suspended while current team news says return.",
+          "why_it_matters": "Mokoena affects low-event control, set pieces and penalty/second-ball routes.",
+          "follow_up_check": "Resolve suspension/availability with official matchday source.",
+          "owner": "data"
+        },
+        {
+          "concern": "Low-event draw is raised but unstable under first-goal game state.",
+          "category": "model",
+          "severity": "high",
+          "confidence": "medium",
+          "evidence": "Model draw is 27.24%, top score is 1-1, and tactics note Canada first-goal script can raise event volume.",
+          "why_it_matters": "A first goal can break the conservative under/low-event matrix quickly.",
+          "follow_up_check": "Keep explicit first-goal and event-volatility sensitivity.",
+          "owner": "model"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "South Africa low block plus Williams saves keeps 0-0 or 1-1 alive into extra-time path.",
+        "Canada press works early, forcing a higher-event match than the under-leaning total suggests.",
+        "Set piece or penalty from Mokoena route breaks the Canada edge."
+      ],
+      "overconfidence_flags": [
+        "Do not publish Canada as a firm favorite before availability gates.",
+        "Do not read 42.65% as an advancement probability.",
+        "Do not double count Canada transition upside with player_state form."
+      ],
+      "market_flags": [
+        "Only incomplete third-party moneyline reference was observed.",
+        "No official Chinese sports lottery odds.",
+        "No same-source 1X2, handicap and totals chain; model_market_delta unavailable."
+      ],
+      "quant_chain_flags": [
+        "factor_inputs present but source-limited",
+        "factor_weights present and market weight set to 0",
+        "xG present at 1.08-1.34",
+        "Poisson matrix present with 0.35% tail probability",
+        "1X2 present but pre-red-team",
+        "market calibration missing",
+        "official lineup sensitivity unresolved"
+      ],
+      "recommended_probability_adjustment": "Keep Canada win below a hard-publication band until lineups resolve; review Canada 42.65% toward a provisional 39-42% band if Davies/Eustaquio minutes are limited, and keep draw no lower than the model 27% band before T-75.",
+      "missing_data": [
+        "T-75 official lineups",
+        "Mokoena official availability",
+        "Davies/Eustaquio/Kone minutes and fitness",
+        "same-source odds and official Chinese sports lottery",
+        "weather and referee profile"
+      ],
+      "handoff_owner": "data/model/market/main",
+      "handoff_notes": "Hold. The model chain exists, but availability and market gates prevent final publication or betting-like use."
+    },
+    {
+      "match_id": "M74",
+      "match": "Germany vs Paraguay",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_summary": {
+        "expected_goals": {
+          "germany": 2.1,
+          "paraguay": 0.78,
+          "total": 2.88
+        },
+        "probabilities_90m_1x2": {
+          "germany_win": 0.6793,
+          "draw": 0.1933,
+          "paraguay_win": 0.1274
+        },
+        "totals": {
+          "over_2_5": 0.5494,
+          "under_2_5": 0.4506,
+          "btts_yes": 0.4753
+        },
+        "top_scorelines": [
+          {
+            "score": "2-0",
+            "probability": 0.1238
+          },
+          {
+            "score": "1-0",
+            "probability": 0.1179
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0965
+          },
+          {
+            "score": "1-1",
+            "probability": 0.0919
+          },
+          {
+            "score": "3-0",
+            "probability": 0.0866
+          }
+        ],
+        "tail_notes": {
+          "draw_floor": "not triggered",
+          "favorite_ceiling": "triggered conservative_xg_based",
+          "favorite_home_4plus_goal_probability": 0.1614
+        }
+      },
+      "top_concerns": [
+        {
+          "concern": "Germany favorite probability is high while official XI and market calibration are absent.",
+          "category": "availability/market",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "Model has Germany 67.93%, but data packet marks official lineups missing and model market delta unavailable.",
+          "why_it_matters": "Germany public-team premium and lineup debate can materially change both price and xG.",
+          "follow_up_check": "Confirm Germany official XI, same-source odds, and overround-normalized market delta.",
+          "owner": "data/market"
+        },
+        {
+          "concern": "Germany attack may still overlearn the 7-1 Curacao tail despite conservative notes.",
+          "category": "data/model",
+          "severity": "high",
+          "confidence": "medium",
+          "evidence": "Tactics warning says not to extrapolate Curacao into attack, pressing and set-piece factors; model still has xG 2.10 and 16.14% home 4+ probability.",
+          "why_it_matters": "Favorite-ceiling tail can become too fat if first-round blowout and tactical superiority are not separated.",
+          "follow_up_check": "Show factor contribution caps for attack, favorite ceiling and event volatility.",
+          "owner": "model"
+        },
+        {
+          "concern": "Paraguay low-block and set-piece upset path is acknowledged but draw floor is not triggered.",
+          "category": "tactical/model",
+          "severity": "high",
+          "confidence": "medium",
+          "evidence": "Tactics packet says Paraguay low-block survival and set pieces need a separate branch; model draw is 19.33%.",
+          "why_it_matters": "In knockout 90 minutes, low-event draw and set-piece opener are likely ways to falsify a high favorite estimate.",
+          "follow_up_check": "Stress test 0-0, 1-1 and Paraguay first-goal branches.",
+          "owner": "model/tactics"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "Paraguay set piece or transition opener forces Germany into a chase script.",
+        "Germany rotated or debated XI lowers central control and raises Paraguay counter frequency.",
+        "Germany wins advancement path but not 90-minute win if Paraguay low block survives."
+      ],
+      "overconfidence_flags": [
+        "Do not state Germany 67.93% without lineup and market caveat.",
+        "Do not merge Germany 4+ tail with executable handicap language.",
+        "Do not suppress Paraguay set-piece and draw tail because the favorite is famous."
+      ],
+      "market_flags": [
+        "No official Chinese sports lottery odds.",
+        "No same-source 1X2/handicap/totals.",
+        "Germany favorite tax cannot be audited.",
+        "Market weight is 0 by model design."
+      ],
+      "quant_chain_flags": [
+        "factor_inputs present but source-limited",
+        "xG present at 2.10-0.78",
+        "Poisson matrix present with 2.06% tail probability",
+        "favorite ceiling triggered",
+        "draw floor not triggered despite tactical low-block concern",
+        "market calibration missing",
+        "official lineup sensitivity unresolved"
+      ],
+      "recommended_probability_adjustment": "Before T-75 and market calibration, cap Germany win language around 63-66% rather than treating 67.93% as publishable certainty; raise low-event draw and Paraguay set-piece branch in narrative risk.",
+      "missing_data": [
+        "T-75 official lineups",
+        "Germany Neuer/Baumann and Sane/Undav selection resolution",
+        "Paraguay Almiron/Enciso availability and suspension status",
+        "same-source odds and official Chinese sports lottery",
+        "referee and weather profile"
+      ],
+      "handoff_owner": "data/tactics/model/market",
+      "handoff_notes": "Hold. Numeric chain is present, but favorite overconfidence and missing market gate block final use."
+    },
+    {
+      "match_id": "M75",
+      "match": "Netherlands vs Morocco",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_summary": {
+        "expected_goals": {
+          "netherlands": 1.48,
+          "morocco": 1.12,
+          "total": 2.6
+        },
+        "probabilities_90m_1x2": {
+          "netherlands_win": 0.4545,
+          "draw": 0.2588,
+          "morocco_win": 0.2867
+        },
+        "totals": {
+          "over_2_5": 0.4816,
+          "under_2_5": 0.5184,
+          "btts_yes": 0.5204
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1231
+          },
+          {
+            "score": "1-0",
+            "probability": 0.1099
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0911
+          },
+          {
+            "score": "0-1",
+            "probability": 0.0832
+          },
+          {
+            "score": "2-0",
+            "probability": 0.0813
+          }
+        ],
+        "tail_notes": {
+          "draw_floor": "triggered at 0.25",
+          "favorite_ceiling": "triggered small_xg_based",
+          "favorite_home_4plus_goal_probability": 0.0632
+        }
+      },
+      "top_concerns": [
+        {
+          "concern": "This is the closest and most draw-sensitive match, so any single-outcome wording would be overconfident.",
+          "category": "model",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "Model has Netherlands 45.45%, draw 25.88%, Morocco 28.67%; top score is 1-1.",
+          "why_it_matters": "The favorite edge is modest and sits inside a wide confidence band before official lineups.",
+          "follow_up_check": "Keep explicit draw/extra-time path and avoid converting Netherlands edge into a firm pick.",
+          "owner": "main/model"
+        },
+        {
+          "concern": "Netherlands high-output form and favorite ceiling may still be too influenced by Sweden/Tunisia contexts.",
+          "category": "data/model",
+          "severity": "high",
+          "confidence": "medium",
+          "evidence": "Tactics red-team challenge asks whether Netherlands outputs are inflated by Sweden/Tunisia; model triggers favorite ceiling.",
+          "why_it_matters": "Recent high-event matches can overstate repeatability against Morocco compactness.",
+          "follow_up_check": "Separate attack form from Morocco-specific transition and defensive structure.",
+          "owner": "model"
+        },
+        {
+          "concern": "Morocco clean-sheet reputation is also stale because Haiti 4-2 exposed open-game risk.",
+          "category": "tactical",
+          "severity": "medium",
+          "confidence": "medium",
+          "evidence": "Tactics packet warns Morocco 4-2 Haiti should raise late attack but also clean-sheet risk.",
+          "why_it_matters": "Both under and BTTS paths remain live; the model has BTTS yes at 52.04%.",
+          "follow_up_check": "Verify Morocco defensive spine and Bounou status.",
+          "owner": "tactics/data"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "Morocco right-side Hakimi/Brahim transition punishes Dutch wide recovery.",
+        "Netherlands field tilt produces shots but Morocco blocks chance quality, leaving 1-1 or 0-1 alive.",
+        "Bounou minor knock or defensive-spine changes swing the xG gap toward Netherlands."
+      ],
+      "overconfidence_flags": [
+        "Do not publish Netherlands edge without emphasizing 25.88% draw and 28.67% Morocco win.",
+        "Do not double count Dutch wide/set-piece edge with recent scoring form.",
+        "Do not treat Morocco as a passive underdog; transition branch is material."
+      ],
+      "market_flags": [
+        "No official Chinese sports lottery odds.",
+        "No same-source 1X2/handicap/totals.",
+        "European favorite/public bias cannot be audited.",
+        "Market delta unavailable."
+      ],
+      "quant_chain_flags": [
+        "factor_inputs present but source-limited",
+        "xG present at 1.48-1.12",
+        "Poisson matrix present with 0.52% tail probability",
+        "draw floor triggered and appropriate",
+        "favorite ceiling triggered despite modest edge",
+        "market calibration missing",
+        "official lineup and Bounou status unresolved"
+      ],
+      "recommended_probability_adjustment": "Keep Netherlands win in a provisional 42-45% review band before T-75 if Morocco spine is intact; preserve draw around 26% and avoid lowering Morocco tail below the model 28.67% without official lineup evidence.",
+      "missing_data": [
+        "T-75 official lineups",
+        "Bounou minor knock confirmation",
+        "Netherlands De Jong/Van Dijk/Gakpo fitness and minutes",
+        "same-source odds and official Chinese sports lottery",
+        "referee and weather profile"
+      ],
+      "handoff_owner": "data/tactics/model/market",
+      "handoff_notes": "Hold. This can be discussed as a close 90-minute distribution only; no executable or single-outcome language."
+    },
+    {
+      "match_id": "M76",
+      "match": "Brazil vs Japan",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_summary": {
+        "expected_goals": {
+          "brazil": 1.92,
+          "japan": 1.08,
+          "total": 3
+        },
+        "probabilities_90m_1x2": {
+          "brazil_win": 0.5694,
+          "draw": 0.2206,
+          "japan_win": 0.21
+        },
+        "totals": {
+          "over_2_5": 0.5768,
+          "under_2_5": 0.4232,
+          "btts_yes": 0.5636
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1032
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0991
+          },
+          {
+            "score": "1-0",
+            "probability": 0.0956
+          },
+          {
+            "score": "2-0",
+            "probability": 0.0918
+          },
+          {
+            "score": "3-1",
+            "probability": 0.0634
+          }
+        ],
+        "tail_notes": {
+          "draw_floor": "triggered at 0.22",
+          "favorite_ceiling": "triggered conservative_xg_based",
+          "favorite_home_4plus_goal_probability": 0.1287
+        }
+      },
+      "top_concerns": [
+        {
+          "concern": "Brazil public-team and star-name premium cannot be audited without odds.",
+          "category": "market",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "Model keeps market weight at 0 because same-source odds are missing; Brazil still carries a 56.94% favorite probability.",
+          "why_it_matters": "Without market delta, the main thread cannot tell whether Brazil is under- or over-priced by public bias.",
+          "follow_up_check": "Capture official lottery and same-source 1X2/handicap/totals before any betting-like language.",
+          "owner": "market"
+        },
+        {
+          "concern": "Brazil wide/transition ceiling and Vinicius player_state can be double counted.",
+          "category": "model/tactical",
+          "severity": "high",
+          "confidence": "medium",
+          "evidence": "Tactics warning says Vinicius/Bruno form is player_state-linked; model also triggers favorite ceiling and 12.87% home 4+ probability.",
+          "why_it_matters": "Brazil 4+ and over tails may be overconfident if the same Scotland evidence drives multiple factors.",
+          "follow_up_check": "Show cap logic for player_state, attack score and wide-channel adjustment.",
+          "owner": "model"
+        },
+        {
+          "concern": "Japan is not a low-floor underdog and the 1-1 top score should block one-sided phrasing.",
+          "category": "tactical/model",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "Model lists 1-1 as top score at 10.32%, draw 22.06%, Japan win 21.00%, and tactics says Japan low-event discipline stays live.",
+          "why_it_matters": "Brazil can be favored while still having a large non-win mass in 90 minutes.",
+          "follow_up_check": "Keep Japan counter/press and draw branches in final writeup.",
+          "owner": "main/model"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "Japan left-side containment and compactness slow Vinicius enough to keep 1-1 live.",
+        "Japan press or transition attacks Brazil fullback space, turning Brazil dominance into BTTS variance.",
+        "Brazil scores early and the favorite ceiling tail expands, but that tail should not erase Japan counter risk."
+      ],
+      "overconfidence_flags": [
+        "Do not translate Brazil 56.94% into safe or executable language.",
+        "Do not treat Brazil advancement edge as 90-minute win certainty.",
+        "Do not double count Vinicius/Bruno form across player_state and tactical factors."
+      ],
+      "market_flags": [
+        "No official Chinese sports lottery odds.",
+        "No same-source 1X2/handicap/totals.",
+        "Brazil public-team tax cannot be audited.",
+        "Model-market delta unavailable."
+      ],
+      "quant_chain_flags": [
+        "factor_inputs present but source-limited",
+        "xG present at 1.92-1.08",
+        "Poisson matrix present with 1.47% tail probability",
+        "draw floor triggered",
+        "favorite ceiling triggered with Brazil 4+ at 12.87%",
+        "market calibration missing",
+        "official lineup sensitivity unresolved"
+      ],
+      "recommended_probability_adjustment": "Before odds and T-75, treat Brazil 56.94% as an upper provisional center rather than final; review toward a 53-56% band if Japan left-side containment and Brazil rotation are confirmed, while keeping draw plus Japan non-win mass above 40% in risk language.",
+      "missing_data": [
+        "T-75 official lineups",
+        "Brazil rotation and Casemiro/Neymar role or minutes",
+        "Japan left-side containment plan and central screen",
+        "same-source odds and official Chinese sports lottery",
+        "Houston weather and referee profile"
+      ],
+      "handoff_owner": "data/tactics/model/market",
+      "handoff_notes": "Hold. Brazil is a model favorite, but market gate, lineup gate and Japan tail prevent final or betting-like use."
+    }
+  ],
+  "release_threshold": [
+    "Capture T-75 official lineups and compare against probable XI.",
+    "Resolve all listed injury, suspension and minutes conflicts.",
+    "Capture official Chinese sports lottery and same-source 1X2, handicap and totals snapshots.",
+    "Re-run model if two or more starters, a key goalkeeper, a key creator, or a formation changes.",
+    "Keep all betting language blocked while verdict is hold."
+  ],
+  "validation": {
+    "json_parse": "passed_after_bom_normalization",
+    "encoding": "utf8_no_bom"
+  },
+  "handoff_notes": "Final red-team verdict remains hold, but no longer because the v3 chain is absent. Data, tactics and model outputs are present and reviewed; the remaining blockers are official lineups, final availability, same-source odds, and overconfidence/tail calibration."
+}

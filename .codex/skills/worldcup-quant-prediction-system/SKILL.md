@@ -47,11 +47,12 @@ This skill is the system-level contract for prediction, projection, and backtest
 5. Third-round tournament-context simulation when the match is a final group-round fixture.
 6. Expected goals.
 7. Poisson score matrix.
-8. 1X2, totals, and score probabilities.
-9. Odds-implied probability calibration.
-10. Red-team risk adjustment.
-11. Final prediction output.
-12. Post-match backtest, player-state update, and parameter update.
+8. Scoreline diversity layer: close-strength teams must be reported as score clusters, not only as a repeated `1-1` exact-score default.
+9. 1X2, totals, and score probabilities.
+10. Odds-implied probability calibration.
+11. Red-team risk adjustment.
+12. Final prediction output.
+13. Post-match backtest, player-state update, and parameter update.
 
 ## Real Thread Participation Gate
 
@@ -96,6 +97,11 @@ Prediction, projection, and backtest JSON should include these fields when appli
 - `market_adjustment`
 - `expected_goals`
 - `poisson_score_matrix`
+- `scoreline_diversity_layer`
+- `raw_poisson_top_scorelines`
+- `adjusted_top_scorelines`
+- `final_adjusted_top_scoreline`
+- `scoreline_clusters`
 - `probabilities_1x2`
 - `totals_probabilities`
 - `odds_implied_probability`
@@ -174,6 +180,8 @@ Move weight between buckets only with a short reason. Increase tournament contex
 - Derive 1X2 and totals from the matrix, not from a separate unsupported estimate.
 - List the top five scorelines with probabilities.
 - Explain any manual adjustment away from the raw matrix.
+- For close-strength teams, run a `1-1 overconcentration` check. If raw Poisson repeatedly makes `1-1` Top1, also publish low-event draw, one-goal edge, open draw, and volatility-tail clusters. Do not present `1-1` as the whole prediction unless tactical tempo, lineups, and incentives clearly support a low-event draw.
+- If `1-1` is a raw Top1 but the aggregate 1X2 and xG direction favor one side, produce a separate final scoreline ranking: keep `raw_poisson_top_scorelines` unchanged, then set `adjusted_top_scorelines` and `final_adjusted_top_scoreline` for the user-facing conclusion. The report's headline Top5 must use the adjusted ranking, not the raw Poisson order, whenever this layer is triggered.
 
 ## Odds Boundary
 

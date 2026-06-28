@@ -1,0 +1,2257 @@
+{
+  "schema_version": "round32_scoreline_diversity_modeler_review_v1",
+  "created_at": "2026-06-28T23:55:00+08:00",
+  "status": "completed_review_only_no_probability_change",
+  "scope": "Round of 32 M73-M84 v3 scoreline_diversity_layer review",
+  "input_files": [
+    "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+    "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+    "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+    "data/outputs/model_backtests/scoreline-diversity-calibration-20260628.json",
+    "汇总/比分簇多样性修正_20260628.md"
+  ],
+  "calibration_thresholds": {
+    "team_strength_gap_max": 8,
+    "xg_gap_max": 0.35,
+    "total_xg_band": [
+      2.2,
+      3.2
+    ],
+    "one_one_top1_margin_max": 0.025,
+    "favorite_1x2_max_for_dual_path": 0.48,
+    "requires_tactical_label": true
+  },
+  "no_probability_change": true,
+  "no_betting_advice": true,
+  "summary": {
+    "triggered": [
+      "M73",
+      "M78",
+      "M79",
+      "M82"
+    ],
+    "near_miss": [
+      "M75",
+      "M83"
+    ],
+    "not_only_1_1_or_cluster_required": [
+      "M73",
+      "M75",
+      "M76",
+      "M78",
+      "M79",
+      "M82",
+      "M83",
+      "M84"
+    ],
+    "algorithm_note": "Keep 1X2 and raw Poisson unchanged. For triggered or top1-1-1 artifact matches, add scoreline_clusters and top1 caveat in presentation."
+  },
+  "matches": [
+    {
+      "match_id": "M73",
+      "match_no": 73,
+      "match": "南非 vs 加拿大",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 1.08,
+        "team_b": 1.34,
+        "total": 2.42
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.3012,
+        "draw": 0.2724,
+        "team_b_win": 0.4265,
+        "sum": 1
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "1-1",
+          "probability": 0.1287
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1192
+        },
+        {
+          "score": "1-0",
+          "probability": 0.096
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0889
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0862
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "triggered",
+        "reasons": [
+          "strength_gap=6 <=8",
+          "xg_gap=0.26 <=0.35",
+          "total_xg=2.42 in 2.2-3.2",
+          "top1=1-1 margin=0.95pp 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 6,
+          "xg_gap": 0.26,
+          "total_xg": 2.42,
+          "top1_scoreline": "1-1",
+          "top1_probability": 0.1287,
+          "top1_margin_over_top2": 0.0095,
+          "favorite_1x2_probability": 0.4265,
+          "btts_yes": 0.4875
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.0889
+              },
+              {
+                "score": "1-1",
+                "probability": 0.1287
+              }
+            ],
+            "probability_sum": 0.2176
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.096
+              },
+              {
+                "score": "0-1",
+                "probability": 0.1192
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0695
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0862
+              }
+            ],
+            "probability_sum": 0.3709
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.0466
+              },
+              {
+                "score": "3-3",
+                "probability": 0.0075
+              }
+            ],
+            "probability_sum": 0.0541
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.1192
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0862
+              },
+              {
+                "score": "0-2",
+                "probability": 0.0798
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0385
+              }
+            ],
+            "probability_sum": 0.3237
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.096
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0695
+              },
+              {
+                "score": "2-0",
+                "probability": 0.0519
+              }
+            ],
+            "probability_sum": 0.2174
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.0168
+              },
+              {
+                "score": "2-3",
+                "probability": 0.0208
+              },
+              {
+                "score": "3-1",
+                "probability": 0.025
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0385
+              },
+              {
+                "score": "4-2",
+                "probability": 0.0045
+              },
+              {
+                "score": "2-4",
+                "probability": 0.007
+              }
+            ],
+            "probability_sum": 0.1126
+          }
+        },
+        "top1_caveat": "`1-1` is only the central draw slice; publish as dual-path: draw core plus one-goal edge cluster.",
+        "publication_recommendation": "write_double_path_or_scoreline_clusters",
+        "should_not_only_write_1_1": true
+      }
+    },
+    {
+      "match_id": "M74",
+      "match_no": 74,
+      "match": "德国 vs 巴拉圭",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 2.1,
+        "team_b": 0.78,
+        "total": 2.88
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.6793,
+        "draw": 0.1933,
+        "team_b_win": 0.1274,
+        "sum": 1
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "2-0",
+          "probability": 0.1238
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1179
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0965
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0919
+        },
+        {
+          "score": "3-0",
+          "probability": 0.0866
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "not_triggered",
+        "reasons": [
+          "strength_gap=18 >8 or unknown",
+          "xg_gap=1.32 >0.35",
+          "total_xg=2.88 in 2.2-3.2",
+          "top1=2-0 margin=0.59pp not 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 18,
+          "xg_gap": 1.32,
+          "total_xg": 2.88,
+          "top1_scoreline": "2-0",
+          "top1_probability": 0.1238,
+          "top1_margin_over_top2": 0.0059,
+          "favorite_1x2_probability": 0.6793,
+          "btts_yes": 0.4753
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.0561
+              },
+              {
+                "score": "1-1",
+                "probability": 0.0919
+              }
+            ],
+            "probability_sum": 0.148
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.1179
+              },
+              {
+                "score": "0-1",
+                "probability": 0.0438
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0965
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0359
+              }
+            ],
+            "probability_sum": 0.2941
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.0377
+              },
+              {
+                "score": "3-3",
+                "probability": 0.0069
+              }
+            ],
+            "probability_sum": 0.0446
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.1179
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0965
+              },
+              {
+                "score": "2-0",
+                "probability": 0.1238
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0676
+              }
+            ],
+            "probability_sum": 0.4058
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.0438
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0359
+              },
+              {
+                "score": "0-2",
+                "probability": 0.0171
+              }
+            ],
+            "probability_sum": 0.0968
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.0264
+              },
+              {
+                "score": "2-3",
+                "probability": 0.0098
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0676
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0093
+              },
+              {
+                "score": "4-2",
+                "probability": 0.0138
+              },
+              {
+                "score": "2-4",
+                "probability": 0.0019
+              }
+            ],
+            "probability_sum": 0.1288
+          }
+        },
+        "top1_caveat": "No special `1-1` caveat required; keep score clusters available for audit.",
+        "publication_recommendation": "standard_top5_sufficient_with_cluster_optional",
+        "should_not_only_write_1_1": false
+      }
+    },
+    {
+      "match_id": "M75",
+      "match_no": 75,
+      "match": "荷兰 vs 摩洛哥",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 1.48,
+        "team_b": 1.12,
+        "total": 2.6
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4545,
+        "draw": 0.2588,
+        "team_b_win": 0.2867,
+        "sum": 1
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "1-1",
+          "probability": 0.1231
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1099
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0911
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0832
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0813
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "near_miss",
+        "reasons": [
+          "strength_gap=3 <=8",
+          "xg_gap=0.36 >0.35",
+          "total_xg=2.6 in 2.2-3.2",
+          "top1=1-1 margin=1.32pp 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 3,
+          "xg_gap": 0.36,
+          "total_xg": 2.6,
+          "top1_scoreline": "1-1",
+          "top1_probability": 0.1231,
+          "top1_margin_over_top2": 0.0132,
+          "favorite_1x2_probability": 0.4545,
+          "btts_yes": 0.5204
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.0743
+              },
+              {
+                "score": "1-1",
+                "probability": 0.1231
+              }
+            ],
+            "probability_sum": 0.1974
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.1099
+              },
+              {
+                "score": "0-1",
+                "probability": 0.0832
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0911
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0689
+              }
+            ],
+            "probability_sum": 0.3531
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.051
+              },
+              {
+                "score": "3-3",
+                "probability": 0.0094
+              }
+            ],
+            "probability_sum": 0.0604
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.1099
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0911
+              },
+              {
+                "score": "2-0",
+                "probability": 0.0813
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0449
+              }
+            ],
+            "probability_sum": 0.3272
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.0832
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0689
+              },
+              {
+                "score": "0-2",
+                "probability": 0.0466
+              }
+            ],
+            "probability_sum": 0.1987
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.0252
+              },
+              {
+                "score": "2-3",
+                "probability": 0.019
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0449
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0257
+              },
+              {
+                "score": "4-2",
+                "probability": 0.0093
+              },
+              {
+                "score": "2-4",
+                "probability": 0.0053
+              }
+            ],
+            "probability_sum": 0.1294
+          }
+        },
+        "top1_caveat": "`1-1` needs a caveat because adjacent one-goal scores are close.",
+        "publication_recommendation": "write_top1_caveat_and_relevant_cluster",
+        "should_not_only_write_1_1": true
+      }
+    },
+    {
+      "match_id": "M76",
+      "match_no": 76,
+      "match": "巴西 vs 日本",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 1.92,
+        "team_b": 1.08,
+        "total": 3
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5694,
+        "draw": 0.2206,
+        "team_b_win": 0.21,
+        "sum": 1
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "1-1",
+          "probability": 0.1032
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0991
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0956
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0918
+        },
+        {
+          "score": "3-1",
+          "probability": 0.0634
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "not_triggered",
+        "reasons": [
+          "strength_gap=11 >8 or unknown",
+          "xg_gap=0.84 >0.35",
+          "total_xg=3 in 2.2-3.2",
+          "top1=1-1 margin=0.41pp 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 11,
+          "xg_gap": 0.84,
+          "total_xg": 3,
+          "top1_scoreline": "1-1",
+          "top1_probability": 0.1032,
+          "top1_margin_over_top2": 0.0041,
+          "favorite_1x2_probability": 0.5694,
+          "btts_yes": 0.5636
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.0498
+              },
+              {
+                "score": "1-1",
+                "probability": 0.1032
+              }
+            ],
+            "probability_sum": 0.153
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.0956
+              },
+              {
+                "score": "0-1",
+                "probability": 0.0538
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0991
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0557
+              }
+            ],
+            "probability_sum": 0.3042
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.0535
+              },
+              {
+                "score": "3-3",
+                "probability": 0.0123
+              }
+            ],
+            "probability_sum": 0.0658
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.0956
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0991
+              },
+              {
+                "score": "2-0",
+                "probability": 0.0918
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0634
+              }
+            ],
+            "probability_sum": 0.3499
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.0538
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0557
+              },
+              {
+                "score": "0-2",
+                "probability": 0.029
+              }
+            ],
+            "probability_sum": 0.1385
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.0343
+              },
+              {
+                "score": "2-3",
+                "probability": 0.0193
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0634
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0201
+              },
+              {
+                "score": "4-2",
+                "probability": 0.0164
+              },
+              {
+                "score": "2-4",
+                "probability": 0.0052
+              }
+            ],
+            "probability_sum": 0.1587
+          }
+        },
+        "top1_caveat": "`1-1` is a raw-grid artifact despite a clearer 1X2 favorite; headline should use favorite-edge cluster.",
+        "publication_recommendation": "write_top1_caveat_and_relevant_cluster",
+        "should_not_only_write_1_1": true
+      }
+    },
+    {
+      "match_id": "M77",
+      "match_no": 77,
+      "match": "法国 vs 瑞典",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 2.1,
+        "team_b": 1.03,
+        "total": 3.13
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.6194,
+        "draw": 0.2035,
+        "team_b_win": 0.1771,
+        "sum": 1
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "2-1",
+          "probability": 0.0993
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0964
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0946
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0918
+        },
+        {
+          "score": "3-1",
+          "probability": 0.0695
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "not_triggered",
+        "reasons": [
+          "strength_gap=11 >8 or unknown",
+          "xg_gap=1.07 >0.35",
+          "total_xg=3.13 in 2.2-3.2",
+          "top1=2-1 margin=0.29pp not 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 11,
+          "xg_gap": 1.07,
+          "total_xg": 3.13,
+          "top1_scoreline": "2-1",
+          "top1_probability": 0.0993,
+          "top1_margin_over_top2": 0.0029,
+          "favorite_1x2_probability": 0.6194,
+          "btts_yes": 0.5643
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.0437
+              },
+              {
+                "score": "1-1",
+                "probability": 0.0946
+              }
+            ],
+            "probability_sum": 0.1383
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.0918
+              },
+              {
+                "score": "0-1",
+                "probability": 0.045
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0993
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0487
+              }
+            ],
+            "probability_sum": 0.2848
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.0511
+              },
+              {
+                "score": "3-3",
+                "probability": 0.0123
+              }
+            ],
+            "probability_sum": 0.0634
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.0918
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0993
+              },
+              {
+                "score": "2-0",
+                "probability": 0.0964
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0695
+              }
+            ],
+            "probability_sum": 0.357
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.045
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0487
+              },
+              {
+                "score": "0-2",
+                "probability": 0.0232
+              }
+            ],
+            "probability_sum": 0.1169
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.0358
+              },
+              {
+                "score": "2-3",
+                "probability": 0.0176
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0695
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0167
+              },
+              {
+                "score": "4-2",
+                "probability": 0.0188
+              },
+              {
+                "score": "2-4",
+                "probability": 0.0045
+              }
+            ],
+            "probability_sum": 0.1629
+          }
+        },
+        "top1_caveat": "No special `1-1` caveat required; keep score clusters available for audit.",
+        "publication_recommendation": "standard_top5_sufficient_with_cluster_optional",
+        "should_not_only_write_1_1": false
+      }
+    },
+    {
+      "match_id": "M78",
+      "match_no": 78,
+      "match": "科特迪瓦 vs 挪威",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 1.39,
+        "team_b": 1.62,
+        "total": 3.01
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.3292,
+        "draw": 0.2408,
+        "team_b_win": 0.43,
+        "sum": 1
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "1-1",
+          "probability": 0.111
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0899
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0799
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0771
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0685
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "triggered",
+        "reasons": [
+          "strength_gap=3 <=8",
+          "xg_gap=0.23 <=0.35",
+          "total_xg=3.01 in 2.2-3.2",
+          "top1=1-1 margin=2.11pp 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 3,
+          "xg_gap": 0.23,
+          "total_xg": 3.01,
+          "top1_scoreline": "1-1",
+          "top1_probability": 0.111,
+          "top1_margin_over_top2": 0.0211,
+          "favorite_1x2_probability": 0.43,
+          "btts_yes": 0.6023
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.0493
+              },
+              {
+                "score": "1-1",
+                "probability": 0.111
+              }
+            ],
+            "probability_sum": 0.1603
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.0685
+              },
+              {
+                "score": "0-1",
+                "probability": 0.0799
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0771
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0899
+              }
+            ],
+            "probability_sum": 0.3154
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.0625
+              },
+              {
+                "score": "3-3",
+                "probability": 0.0156
+              }
+            ],
+            "probability_sum": 0.0781
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.0799
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0899
+              },
+              {
+                "score": "0-2",
+                "probability": 0.0647
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0485
+              }
+            ],
+            "probability_sum": 0.283
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.0685
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0771
+              },
+              {
+                "score": "2-0",
+                "probability": 0.0476
+              }
+            ],
+            "probability_sum": 0.1932
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.029
+              },
+              {
+                "score": "2-3",
+                "probability": 0.0337
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0357
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0485
+              },
+              {
+                "score": "4-2",
+                "probability": 0.0101
+              },
+              {
+                "score": "2-4",
+                "probability": 0.0137
+              }
+            ],
+            "probability_sum": 0.1707
+          }
+        },
+        "top1_caveat": "`1-1` is only the central draw slice; publish as dual-path: draw core plus one-goal edge cluster.",
+        "publication_recommendation": "write_double_path_or_scoreline_clusters",
+        "should_not_only_write_1_1": true
+      }
+    },
+    {
+      "match_id": "M79",
+      "match_no": 79,
+      "match": "墨西哥 vs 厄瓜多尔",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 1.44,
+        "team_b": 1.24,
+        "total": 2.68
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4173,
+        "draw": 0.2578,
+        "team_b_win": 0.3249,
+        "sum": 1
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "1-1",
+          "probability": 0.1224
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0987
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0881
+        },
+        {
+          "score": "0-1",
+          "probability": 0.085
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0759
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "triggered",
+        "reasons": [
+          "strength_gap=2 <=8",
+          "xg_gap=0.2 <=0.35",
+          "total_xg=2.68 in 2.2-3.2",
+          "top1=1-1 margin=2.37pp 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 2,
+          "xg_gap": 0.2,
+          "total_xg": 2.68,
+          "top1_scoreline": "1-1",
+          "top1_probability": 0.1224,
+          "top1_margin_over_top2": 0.0237,
+          "favorite_1x2_probability": 0.4173,
+          "btts_yes": 0.5423
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.0686
+              },
+              {
+                "score": "1-1",
+                "probability": 0.1224
+              }
+            ],
+            "probability_sum": 0.191
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.0987
+              },
+              {
+                "score": "0-1",
+                "probability": 0.085
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0881
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0759
+              }
+            ],
+            "probability_sum": 0.3477
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.0547
+              },
+              {
+                "score": "3-3",
+                "probability": 0.0108
+              }
+            ],
+            "probability_sum": 0.0655
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.0987
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0881
+              },
+              {
+                "score": "2-0",
+                "probability": 0.0711
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0423
+              }
+            ],
+            "probability_sum": 0.3002
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.085
+              },
+              {
+                "score": "1-2",
+                "probability": 0.0759
+              },
+              {
+                "score": "0-2",
+                "probability": 0.0527
+              }
+            ],
+            "probability_sum": 0.2136
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.0262
+              },
+              {
+                "score": "2-3",
+                "probability": 0.0226
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0423
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0314
+              },
+              {
+                "score": "4-2",
+                "probability": 0.0094
+              },
+              {
+                "score": "2-4",
+                "probability": 0.007
+              }
+            ],
+            "probability_sum": 0.1389
+          }
+        },
+        "top1_caveat": "`1-1` is only the central draw slice; publish as dual-path: draw core plus one-goal edge cluster.",
+        "publication_recommendation": "write_double_path_or_scoreline_clusters",
+        "should_not_only_write_1_1": true
+      }
+    },
+    {
+      "match_id": "M80",
+      "match_no": 80,
+      "match": "英格兰 vs 刚果金",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 2.07,
+        "team_b": 0.88,
+        "total": 2.95
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.649,
+        "draw": 0.201,
+        "team_b_win": 0.15,
+        "sum": 1
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "2-0",
+          "probability": 0.1121
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1083
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0987
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0953
+        },
+        {
+          "score": "3-0",
+          "probability": 0.0774
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "not_triggered",
+        "reasons": [
+          "strength_gap=16 >8 or unknown",
+          "xg_gap=1.19 >0.35",
+          "total_xg=2.95 in 2.2-3.2",
+          "top1=2-0 margin=0.38pp not 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 16,
+          "xg_gap": 1.19,
+          "total_xg": 2.95,
+          "top1_scoreline": "2-0",
+          "top1_probability": 0.1121,
+          "top1_margin_over_top2": 0.0038,
+          "favorite_1x2_probability": 0.649,
+          "btts_yes": 0.5114
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.0523
+              },
+              {
+                "score": "1-1",
+                "probability": 0.0953
+              }
+            ],
+            "probability_sum": 0.1476
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.1083
+              },
+              {
+                "score": "0-1",
+                "probability": 0.0461
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0987
+              },
+              {
+                "score": "1-2",
+                "probability": 0.042
+              }
+            ],
+            "probability_sum": 0.2951
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.0434
+              },
+              {
+                "score": "3-3",
+                "probability": 0.0088
+              }
+            ],
+            "probability_sum": 0.0522
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.1083
+              },
+              {
+                "score": "2-1",
+                "probability": 0.0987
+              },
+              {
+                "score": "2-0",
+                "probability": 0.1121
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0681
+              }
+            ],
+            "probability_sum": 0.3872
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.0461
+              },
+              {
+                "score": "1-2",
+                "probability": 0.042
+              },
+              {
+                "score": "0-2",
+                "probability": 0.0203
+              }
+            ],
+            "probability_sum": 0.1084
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.03
+              },
+              {
+                "score": "2-3",
+                "probability": 0.0127
+              },
+              {
+                "score": "3-1",
+                "probability": 0.0681
+              },
+              {
+                "score": "1-3",
+                "probability": 0.0123
+              },
+              {
+                "score": "4-2",
+                "probability": 0.0155
+              },
+              {
+                "score": "2-4",
+                "probability": 0.0028
+              }
+            ],
+            "probability_sum": 0.1414
+          }
+        },
+        "top1_caveat": "No special `1-1` caveat required; keep score clusters available for audit.",
+        "publication_recommendation": "standard_top5_sufficient_with_cluster_optional",
+        "should_not_only_write_1_1": false
+      }
+    },
+    {
+      "match_id": "M81",
+      "match_no": 81,
+      "match": "美国 vs 波黑",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 1.75,
+        "team_b": 1,
+        "total": 2.75
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5498,
+        "draw": 0.2354,
+        "team_b_win": 0.2148
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "1-0",
+          "probability": 0.111874
+        },
+        {
+          "score": "1-1",
+          "probability": 0.111874
+        },
+        {
+          "score": "2-0",
+          "probability": 0.09789
+        },
+        {
+          "score": "2-1",
+          "probability": 0.09789
+        },
+        {
+          "score": "0-0",
+          "probability": 0.063928
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "not_triggered",
+        "reasons": [
+          "strength_gap=7 <=8",
+          "xg_gap=0.75 >0.35",
+          "total_xg=2.75 in 2.2-3.2",
+          "top1=1-0 margin=0pp not 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 7,
+          "xg_gap": 0.75,
+          "total_xg": 2.75,
+          "top1_scoreline": "1-0",
+          "top1_probability": 0.111874,
+          "top1_margin_over_top2": 0,
+          "favorite_1x2_probability": 0.5498,
+          "btts_yes": 0.5223
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.063928
+              },
+              {
+                "score": "1-1",
+                "probability": 0.111874
+              }
+            ],
+            "probability_sum": 0.175802
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.111874
+              },
+              {
+                "score": "0-1",
+                "probability": 0.063928
+              },
+              {
+                "score": "2-1",
+                "probability": 0.09789
+              },
+              {
+                "score": "1-2",
+                "probability": 0.055937
+              }
+            ],
+            "probability_sum": 0.329629
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.048945
+              },
+              {
+                "score": "3-3",
+                "probability": 0.009517
+              }
+            ],
+            "probability_sum": 0.058462
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.111874
+              },
+              {
+                "score": "2-1",
+                "probability": 0.09789
+              },
+              {
+                "score": "2-0",
+                "probability": 0.09789
+              },
+              {
+                "score": "3-1",
+                "probability": 0.057102
+              }
+            ],
+            "probability_sum": 0.364756
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.063928
+              },
+              {
+                "score": "1-2",
+                "probability": 0.055937
+              },
+              {
+                "score": "0-2",
+                "probability": 0.031964
+              }
+            ],
+            "probability_sum": 0.151829
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.028551
+              },
+              {
+                "score": "2-3",
+                "probability": 0.016315
+              },
+              {
+                "score": "3-1",
+                "probability": 0.057102
+              },
+              {
+                "score": "1-3",
+                "probability": 0.018646
+              },
+              {
+                "score": "4-2",
+                "probability": 0.012491
+              },
+              {
+                "score": "2-4",
+                "probability": 0.004079
+              }
+            ],
+            "probability_sum": 0.137184
+          }
+        },
+        "top1_caveat": "No special `1-1` caveat required; keep score clusters available for audit.",
+        "publication_recommendation": "standard_top5_sufficient_with_cluster_optional",
+        "should_not_only_write_1_1": false
+      }
+    },
+    {
+      "match_id": "M82",
+      "match_no": 82,
+      "match": "比利时 vs 塞内加尔",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 1.7,
+        "team_b": 1.48,
+        "total": 3.18
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4302,
+        "draw": 0.2336,
+        "team_b_win": 0.3361
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "1-1",
+          "probability": 0.10463
+        },
+        {
+          "score": "2-1",
+          "probability": 0.088935
+        },
+        {
+          "score": "1-2",
+          "probability": 0.077426
+        },
+        {
+          "score": "1-0",
+          "probability": 0.070696
+        },
+        {
+          "score": "2-2",
+          "probability": 0.065812
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "triggered",
+        "reasons": [
+          "strength_gap=3 <=8",
+          "xg_gap=0.22 <=0.35",
+          "total_xg=3.18 in 2.2-3.2",
+          "top1=1-1 margin=1.57pp 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 3,
+          "xg_gap": 0.22,
+          "total_xg": 3.18,
+          "top1_scoreline": "1-1",
+          "top1_probability": 0.10463,
+          "top1_margin_over_top2": 0.015695,
+          "favorite_1x2_probability": 0.4302,
+          "btts_yes": 0.6313
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.041586
+              },
+              {
+                "score": "1-1",
+                "probability": 0.10463
+              }
+            ],
+            "probability_sum": 0.146216
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.070696
+              },
+              {
+                "score": "0-1",
+                "probability": 0.061547
+              },
+              {
+                "score": "2-1",
+                "probability": 0.088935
+              },
+              {
+                "score": "1-2",
+                "probability": 0.077426
+              }
+            ],
+            "probability_sum": 0.298604
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.065812
+              },
+              {
+                "score": "3-3",
+                "probability": 0.018398
+              }
+            ],
+            "probability_sum": 0.08421
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.070696
+              },
+              {
+                "score": "2-1",
+                "probability": 0.088935
+              },
+              {
+                "score": "2-0",
+                "probability": 0.060091
+              },
+              {
+                "score": "3-1",
+                "probability": 0.050397
+              }
+            ],
+            "probability_sum": 0.270119
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.061547
+              },
+              {
+                "score": "1-2",
+                "probability": 0.077426
+              },
+              {
+                "score": "0-2",
+                "probability": 0.045545
+              }
+            ],
+            "probability_sum": 0.184518
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.037293
+              },
+              {
+                "score": "2-3",
+                "probability": 0.032467
+              },
+              {
+                "score": "3-1",
+                "probability": 0.050397
+              },
+              {
+                "score": "1-3",
+                "probability": 0.038197
+              },
+              {
+                "score": "4-2",
+                "probability": 0.01585
+              },
+              {
+                "score": "2-4",
+                "probability": 0.012013
+              }
+            ],
+            "probability_sum": 0.186217
+          }
+        },
+        "top1_caveat": "`1-1` is only the central draw slice; publish as dual-path: draw core plus one-goal edge cluster.",
+        "publication_recommendation": "write_double_path_or_scoreline_clusters",
+        "should_not_only_write_1_1": true
+      }
+    },
+    {
+      "match_id": "M83",
+      "match_no": 83,
+      "match": "葡萄牙 vs 克罗地亚",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 1.58,
+        "team_b": 1.08,
+        "total": 2.66
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4893,
+        "draw": 0.251,
+        "team_b_win": 0.2597
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "1-1",
+          "probability": 0.11936
+        },
+        {
+          "score": "1-0",
+          "probability": 0.110518
+        },
+        {
+          "score": "2-1",
+          "probability": 0.094294
+        },
+        {
+          "score": "2-0",
+          "probability": 0.087309
+        },
+        {
+          "score": "0-1",
+          "probability": 0.075544
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "near_miss",
+        "reasons": [
+          "strength_gap=8 <=8",
+          "xg_gap=0.5 >0.35",
+          "total_xg=2.66 in 2.2-3.2",
+          "top1=1-1 margin=0.88pp 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 8,
+          "xg_gap": 0.5,
+          "total_xg": 2.66,
+          "top1_scoreline": "1-1",
+          "top1_probability": 0.11936,
+          "top1_margin_over_top2": 0.008842,
+          "favorite_1x2_probability": 0.4893,
+          "btts_yes": 0.5244
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.069948
+              },
+              {
+                "score": "1-1",
+                "probability": 0.11936
+              }
+            ],
+            "probability_sum": 0.189308
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.110518
+              },
+              {
+                "score": "0-1",
+                "probability": 0.075544
+              },
+              {
+                "score": "2-1",
+                "probability": 0.094294
+              },
+              {
+                "score": "1-2",
+                "probability": 0.064454
+              }
+            ],
+            "probability_sum": 0.34481
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.050919
+              },
+              {
+                "score": "3-3",
+                "probability": 0.009654
+              }
+            ],
+            "probability_sum": 0.060573
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.110518
+              },
+              {
+                "score": "2-1",
+                "probability": 0.094294
+              },
+              {
+                "score": "2-0",
+                "probability": 0.087309
+              },
+              {
+                "score": "3-1",
+                "probability": 0.049662
+              }
+            ],
+            "probability_sum": 0.341783
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.075544
+              },
+              {
+                "score": "1-2",
+                "probability": 0.064454
+              },
+              {
+                "score": "0-2",
+                "probability": 0.040794
+              }
+            ],
+            "probability_sum": 0.180792
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.026817
+              },
+              {
+                "score": "2-3",
+                "probability": 0.018331
+              },
+              {
+                "score": "3-1",
+                "probability": 0.049662
+              },
+              {
+                "score": "1-3",
+                "probability": 0.023204
+              },
+              {
+                "score": "4-2",
+                "probability": 0.010593
+              },
+              {
+                "score": "2-4",
+                "probability": 0.004949
+              }
+            ],
+            "probability_sum": 0.133556
+          }
+        },
+        "top1_caveat": "`1-1` is a raw-grid artifact despite a clearer 1X2 favorite; headline should use favorite-edge cluster.",
+        "publication_recommendation": "write_top1_caveat_and_relevant_cluster",
+        "should_not_only_write_1_1": true
+      }
+    },
+    {
+      "match_id": "M84",
+      "match_no": 84,
+      "match": "西班牙 vs 奥地利",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "expected_goals": {
+        "team_a": 1.92,
+        "team_b": 1.05,
+        "total": 2.97
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5765,
+        "draw": 0.2201,
+        "team_b_win": 0.2033
+      },
+      "top_scorelines_raw": [
+        {
+          "score": "1-1",
+          "probability": 0.103427
+        },
+        {
+          "score": "2-1",
+          "probability": 0.09929
+        },
+        {
+          "score": "1-0",
+          "probability": 0.098502
+        },
+        {
+          "score": "2-0",
+          "probability": 0.094562
+        },
+        {
+          "score": "3-1",
+          "probability": 0.063546
+        }
+      ],
+      "scoreline_diversity_layer": {
+        "trigger_status": "not_triggered",
+        "reasons": [
+          "strength_gap=12 >8 or unknown",
+          "xg_gap=0.87 >0.35",
+          "total_xg=2.97 in 2.2-3.2",
+          "top1=1-1 margin=0.41pp 1-1 overconcentration"
+        ],
+        "metrics": {
+          "team_strength_gap": 12,
+          "xg_gap": 0.87,
+          "total_xg": 2.97,
+          "top1_scoreline": "1-1",
+          "top1_probability": 0.103427,
+          "top1_margin_over_top2": 0.004137,
+          "favorite_1x2_probability": 0.5765,
+          "btts_yes": 0.5548
+        },
+        "scoreline_clusters": {
+          "low_event_draw_cluster": {
+            "name": "low_event_draw_cluster",
+            "scores": [
+              {
+                "score": "0-0",
+                "probability": 0.051303
+              },
+              {
+                "score": "1-1",
+                "probability": 0.103427
+              }
+            ],
+            "probability_sum": 0.15473
+          },
+          "balanced_one_goal_cluster": {
+            "name": "balanced_one_goal_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.098502
+              },
+              {
+                "score": "0-1",
+                "probability": 0.053868
+              },
+              {
+                "score": "2-1",
+                "probability": 0.09929
+              },
+              {
+                "score": "1-2",
+                "probability": 0.054299
+              }
+            ],
+            "probability_sum": 0.305959
+          },
+          "open_draw_cluster": {
+            "name": "open_draw_cluster",
+            "scores": [
+              {
+                "score": "2-2",
+                "probability": 0.052127
+              },
+              {
+                "score": "3-3",
+                "probability": 0.011677
+              }
+            ],
+            "probability_sum": 0.063804
+          },
+          "favorite_edge_cluster": {
+            "name": "favorite_edge_cluster",
+            "scores": [
+              {
+                "score": "1-0",
+                "probability": 0.098502
+              },
+              {
+                "score": "2-1",
+                "probability": 0.09929
+              },
+              {
+                "score": "2-0",
+                "probability": 0.094562
+              },
+              {
+                "score": "3-1",
+                "probability": 0.063546
+              }
+            ],
+            "probability_sum": 0.3559
+          },
+          "underdog_edge_cluster": {
+            "name": "underdog_edge_cluster",
+            "scores": [
+              {
+                "score": "0-1",
+                "probability": 0.053868
+              },
+              {
+                "score": "1-2",
+                "probability": 0.054299
+              },
+              {
+                "score": "0-2",
+                "probability": 0.028281
+              }
+            ],
+            "probability_sum": 0.136448
+          },
+          "volatility_tail_cluster": {
+            "name": "volatility_tail_cluster",
+            "scores": [
+              {
+                "score": "3-2",
+                "probability": 0.033362
+              },
+              {
+                "score": "2-3",
+                "probability": 0.018245
+              },
+              {
+                "score": "3-1",
+                "probability": 0.063546
+              },
+              {
+                "score": "1-3",
+                "probability": 0.019005
+              },
+              {
+                "score": "4-2",
+                "probability": 0.016014
+              },
+              {
+                "score": "2-4",
+                "probability": 0.004789
+              }
+            ],
+            "probability_sum": 0.154961
+          }
+        },
+        "top1_caveat": "`1-1` is a raw-grid artifact despite a clearer 1X2 favorite; headline should use favorite-edge cluster.",
+        "publication_recommendation": "write_top1_caveat_and_relevant_cluster",
+        "should_not_only_write_1_1": true
+      }
+    }
+  ],
+  "algorithm_adjustment_recommendations": [
+    {
+      "item": "publish_scoreline_clusters_when_triggered",
+      "recommendation": "When trigger_status=triggered, display low_event_draw_cluster, balanced_one_goal_cluster, open_draw_cluster, favorite_edge_cluster, underdog_edge_cluster, volatility_tail_cluster before or alongside exact Top5."
+    },
+    {
+      "item": "top1_scoreline_caveat",
+      "recommendation": "If Top1 is 1-1 and favorite 1X2 probability is below 0.48, label as dual-path. If Top1 is 1-1 but favorite probability is above 0.48, label as raw-grid artifact and lead with favorite-edge cluster."
+    },
+    {
+      "item": "do_not_change_1x2",
+      "recommendation": "This layer is a reporting and scoreline-cluster layer; do not move W/D/L probabilities unless separate tactical or market evidence supports it."
+    }
+  ]
+}

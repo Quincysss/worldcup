@@ -1,0 +1,489 @@
+{
+  "schema_version": "2026-06-28.scoreline_final_rerank.v2",
+  "created_at": "2026-06-29T00:08:00+08:00",
+  "status": "completed_aligned_with_modeler_thread_review",
+  "source_review": "data/thread_outputs/round32-scoreline-final-rerank-20260628/modeler-rerank-review.json",
+  "issue": "The previous adjustment only added explanatory clusters and did not rerank final scoreline display, leaving too many 1-1 headlines.",
+  "boundary": {
+    "raw_poisson_matrix_changed": false,
+    "expected_goals_changed": false,
+    "probabilities_1x2_changed": false,
+    "totals_changed": false,
+    "red_team_gate_changed": false,
+    "betting_gate_changed": false
+  },
+  "updated_matches": [
+    {
+      "match_id": "M73",
+      "teams": "南非 vs 加拿大",
+      "raw_top1": {
+        "score": "1-1",
+        "probability": 0.1287
+      },
+      "adjusted_top1": {
+        "score": "0-1",
+        "probability": 0.1192,
+        "confidence": "medium",
+        "basis": "modeler_thread_review_raw_poisson_neighbourhood_plus_1x2_xg_total_tactical_volatility",
+        "reason": "raw 1-1 is only 0.95pp above 0-1. Canada leads 1X2 and xG, while total xG/Under profile keeps the adjusted display on a narrow away-edge path."
+      },
+      "adjusted_top5": [
+        {
+          "rank": 1,
+          "score": "0-1",
+          "probability": 0.1192,
+          "raw_poisson_probability": 0.1192,
+          "adjustment_role": "final_adjusted_top_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 2,
+          "score": "1-1",
+          "probability": 0.1287,
+          "raw_poisson_probability": 0.1287,
+          "adjustment_role": "raw_central_draw_slice_retained",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 3,
+          "score": "1-2",
+          "probability": 0.0862,
+          "raw_poisson_probability": 0.0862,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 4,
+          "score": "1-0",
+          "probability": 0.096,
+          "raw_poisson_probability": 0.096,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 5,
+          "score": "0-0",
+          "probability": 0.0889,
+          "raw_poisson_probability": 0.0889,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        }
+      ],
+      "reason": "raw 1-1 is only 0.95pp above 0-1. Canada leads 1X2 and xG, while total xG/Under profile keeps the adjusted display on a narrow away-edge path.",
+      "confidence": "medium"
+    },
+    {
+      "match_id": "M75",
+      "teams": "荷兰 vs 摩洛哥",
+      "raw_top1": {
+        "score": "1-1",
+        "probability": 0.1231
+      },
+      "adjusted_top1": {
+        "score": "2-1",
+        "probability": 0.0911,
+        "confidence": "medium_low",
+        "basis": "modeler_thread_review_raw_poisson_neighbourhood_plus_1x2_xg_total_tactical_volatility",
+        "reason": "Netherlands has the 1X2 and xG edge, and near-miss status means the final display should use a one-goal favorite path rather than another 1-1 default. 2-1 keeps Morocco scoring risk visible."
+      },
+      "adjusted_top5": [
+        {
+          "rank": 1,
+          "score": "2-1",
+          "probability": 0.0911,
+          "raw_poisson_probability": 0.0911,
+          "adjustment_role": "final_adjusted_top_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 2,
+          "score": "1-0",
+          "probability": 0.1099,
+          "raw_poisson_probability": 0.1099,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 3,
+          "score": "1-1",
+          "probability": 0.1231,
+          "raw_poisson_probability": 0.1231,
+          "adjustment_role": "raw_central_draw_slice_retained",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 4,
+          "score": "2-0",
+          "probability": 0.0813,
+          "raw_poisson_probability": 0.0813,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 5,
+          "score": "1-2",
+          "probability": 0.0689,
+          "raw_poisson_probability": 0.0689,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        }
+      ],
+      "reason": "Netherlands has the 1X2 and xG edge, and near-miss status means the final display should use a one-goal favorite path rather than another 1-1 default. 2-1 keeps Morocco scoring risk visible.",
+      "confidence": "medium_low"
+    },
+    {
+      "match_id": "M76",
+      "teams": "巴西 vs 日本",
+      "raw_top1": {
+        "score": "1-1",
+        "probability": 0.1032
+      },
+      "adjusted_top1": {
+        "score": "2-1",
+        "probability": 0.0991,
+        "confidence": "medium_high",
+        "basis": "modeler_thread_review_raw_poisson_neighbourhood_plus_1x2_xg_total_tactical_volatility",
+        "reason": "Brazil is a clearer favorite by 1X2, xG and strength. Raw 1-1 leads 2-1 by only 0.41pp, so final display should follow the favorite-edge/BTTS path."
+      },
+      "adjusted_top5": [
+        {
+          "rank": 1,
+          "score": "2-1",
+          "probability": 0.0991,
+          "raw_poisson_probability": 0.0991,
+          "adjustment_role": "final_adjusted_top_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 2,
+          "score": "2-0",
+          "probability": 0.0918,
+          "raw_poisson_probability": 0.0918,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 3,
+          "score": "1-0",
+          "probability": 0.0956,
+          "raw_poisson_probability": 0.0956,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 4,
+          "score": "3-1",
+          "probability": 0.0634,
+          "raw_poisson_probability": 0.0634,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 5,
+          "score": "1-1",
+          "probability": 0.1032,
+          "raw_poisson_probability": 0.1032,
+          "adjustment_role": "raw_central_draw_slice_retained",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        }
+      ],
+      "reason": "Brazil is a clearer favorite by 1X2, xG and strength. Raw 1-1 leads 2-1 by only 0.41pp, so final display should follow the favorite-edge/BTTS path.",
+      "confidence": "medium_high"
+    },
+    {
+      "match_id": "M78",
+      "teams": "科特迪瓦 vs 挪威",
+      "raw_top1": {
+        "score": "1-1",
+        "probability": 0.111
+      },
+      "adjusted_top1": {
+        "score": "1-2",
+        "probability": 0.0899,
+        "confidence": "medium",
+        "basis": "modeler_thread_review_raw_poisson_neighbourhood_plus_1x2_xg_total_tactical_volatility",
+        "reason": "Norway owns the narrow 1X2 and xG edge, with high total xG and BTTS. The adjusted scoreline should be an open away one-goal path, while preserving raw 1-1 as central draw slice."
+      },
+      "adjusted_top5": [
+        {
+          "rank": 1,
+          "score": "1-2",
+          "probability": 0.0899,
+          "raw_poisson_probability": 0.0899,
+          "adjustment_role": "final_adjusted_top_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 2,
+          "score": "1-1",
+          "probability": 0.111,
+          "raw_poisson_probability": 0.111,
+          "adjustment_role": "raw_central_draw_slice_retained",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 3,
+          "score": "2-1",
+          "probability": 0.0771,
+          "raw_poisson_probability": 0.0771,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 4,
+          "score": "2-2",
+          "probability": 0.0625,
+          "raw_poisson_probability": 0.0625,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 5,
+          "score": "0-1",
+          "probability": 0.0799,
+          "raw_poisson_probability": 0.0799,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        }
+      ],
+      "reason": "Norway owns the narrow 1X2 and xG edge, with high total xG and BTTS. The adjusted scoreline should be an open away one-goal path, while preserving raw 1-1 as central draw slice.",
+      "confidence": "medium"
+    },
+    {
+      "match_id": "M79",
+      "teams": "墨西哥 vs 厄瓜多尔",
+      "raw_top1": {
+        "score": "1-1",
+        "probability": 0.1224
+      },
+      "adjusted_top1": {
+        "score": "1-0",
+        "probability": 0.0987,
+        "confidence": "medium_low",
+        "basis": "modeler_thread_review_raw_poisson_neighbourhood_plus_1x2_xg_total_tactical_volatility",
+        "reason": "Mexico's edge is small but points in the home direction; 1-0 is the closest non-draw neighbor and fits the balanced total profile better than using 1-1 as final display again."
+      },
+      "adjusted_top5": [
+        {
+          "rank": 1,
+          "score": "1-0",
+          "probability": 0.0987,
+          "raw_poisson_probability": 0.0987,
+          "adjustment_role": "final_adjusted_top_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 2,
+          "score": "2-1",
+          "probability": 0.0881,
+          "raw_poisson_probability": 0.0881,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 3,
+          "score": "1-1",
+          "probability": 0.1224,
+          "raw_poisson_probability": 0.1224,
+          "adjustment_role": "raw_central_draw_slice_retained",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 4,
+          "score": "0-1",
+          "probability": 0.085,
+          "raw_poisson_probability": 0.085,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 5,
+          "score": "1-2",
+          "probability": 0.0759,
+          "raw_poisson_probability": 0.0759,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        }
+      ],
+      "reason": "Mexico's edge is small but points in the home direction; 1-0 is the closest non-draw neighbor and fits the balanced total profile better than using 1-1 as final display again.",
+      "confidence": "medium_low"
+    },
+    {
+      "match_id": "M82",
+      "teams": "比利时 vs 塞内加尔",
+      "raw_top1": {
+        "score": "1-1",
+        "probability": 0.10463
+      },
+      "adjusted_top1": {
+        "score": "2-1",
+        "probability": 0.088935,
+        "confidence": "medium_low",
+        "basis": "modeler_thread_review_raw_poisson_neighbourhood_plus_1x2_xg_total_tactical_volatility",
+        "reason": "Belgium's 1X2/xG edge is modest, but total xG is high and the match has transition volatility. Final display should move from 1-1 to open favorite-edge, with Senegal's 1-2 and 2-2 kept high."
+      },
+      "adjusted_top5": [
+        {
+          "rank": 1,
+          "score": "2-1",
+          "probability": 0.088935,
+          "raw_poisson_probability": 0.088935,
+          "adjustment_role": "final_adjusted_top_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 2,
+          "score": "1-2",
+          "probability": 0.077426,
+          "raw_poisson_probability": 0.077426,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 3,
+          "score": "2-2",
+          "probability": 0.065812,
+          "raw_poisson_probability": 0.065812,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 4,
+          "score": "1-1",
+          "probability": 0.10463,
+          "raw_poisson_probability": 0.10463,
+          "adjustment_role": "raw_central_draw_slice_retained",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 5,
+          "score": "3-1",
+          "probability": 0.050397,
+          "raw_poisson_probability": 0.050397,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        }
+      ],
+      "reason": "Belgium's 1X2/xG edge is modest, but total xG is high and the match has transition volatility. Final display should move from 1-1 to open favorite-edge, with Senegal's 1-2 and 2-2 kept high.",
+      "confidence": "medium_low"
+    },
+    {
+      "match_id": "M83",
+      "teams": "葡萄牙 vs 克罗地亚",
+      "raw_top1": {
+        "score": "1-1",
+        "probability": 0.11936
+      },
+      "adjusted_top1": {
+        "score": "1-0",
+        "probability": 0.110518,
+        "confidence": "medium",
+        "basis": "modeler_thread_review_raw_poisson_neighbourhood_plus_1x2_xg_total_tactical_volatility",
+        "reason": "Portugal has the stronger 1X2/xG direction but the total profile is not strongly over. 1-0 is the closest non-draw neighbor and better represents controlled favorite edge."
+      },
+      "adjusted_top5": [
+        {
+          "rank": 1,
+          "score": "1-0",
+          "probability": 0.110518,
+          "raw_poisson_probability": 0.110518,
+          "adjustment_role": "final_adjusted_top_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 2,
+          "score": "2-1",
+          "probability": 0.094294,
+          "raw_poisson_probability": 0.094294,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 3,
+          "score": "2-0",
+          "probability": 0.087309,
+          "raw_poisson_probability": 0.087309,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 4,
+          "score": "1-1",
+          "probability": 0.11936,
+          "raw_poisson_probability": 0.11936,
+          "adjustment_role": "raw_central_draw_slice_retained",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 5,
+          "score": "0-1",
+          "probability": 0.075544,
+          "raw_poisson_probability": 0.075544,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        }
+      ],
+      "reason": "Portugal has the stronger 1X2/xG direction but the total profile is not strongly over. 1-0 is the closest non-draw neighbor and better represents controlled favorite edge.",
+      "confidence": "medium"
+    },
+    {
+      "match_id": "M84",
+      "teams": "西班牙 vs 奥地利",
+      "raw_top1": {
+        "score": "1-1",
+        "probability": 0.103427
+      },
+      "adjusted_top1": {
+        "score": "2-1",
+        "probability": 0.09929,
+        "confidence": "medium_high",
+        "basis": "modeler_thread_review_raw_poisson_neighbourhood_plus_1x2_xg_total_tactical_volatility",
+        "reason": "Spain is a clear favorite and raw 1-1 is only 0.41pp above 2-1. With total xG near 3 and Austria's pressing/transition threat, 2-1 is the better adjusted display."
+      },
+      "adjusted_top5": [
+        {
+          "rank": 1,
+          "score": "2-1",
+          "probability": 0.09929,
+          "raw_poisson_probability": 0.09929,
+          "adjustment_role": "final_adjusted_top_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 2,
+          "score": "2-0",
+          "probability": 0.094562,
+          "raw_poisson_probability": 0.094562,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 3,
+          "score": "1-0",
+          "probability": 0.098502,
+          "raw_poisson_probability": 0.098502,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 4,
+          "score": "3-1",
+          "probability": 0.063546,
+          "raw_poisson_probability": 0.063546,
+          "adjustment_role": "neighbor_cluster_scoreline",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        },
+        {
+          "rank": 5,
+          "score": "1-1",
+          "probability": 0.103427,
+          "raw_poisson_probability": 0.103427,
+          "adjustment_role": "raw_central_draw_slice_retained",
+          "basis": "scoreline_diversity_final_rerank_modeler_review"
+        }
+      ],
+      "reason": "Spain is a clear favorite and raw 1-1 is only 0.41pp above 2-1. With total xG near 3 and Austria's pressing/transition threat, 2-1 is the better adjusted display.",
+      "confidence": "medium_high"
+    }
+  ]
+}

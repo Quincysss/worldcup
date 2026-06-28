@@ -1,0 +1,471 @@
+{
+  "schema_version": "round32_m73_m76_betting_risk_v2_refresh",
+  "created_at": "2026-06-28T00:00:00+08:00",
+  "project": "E:/worldcup",
+  "role": "betting_risk_thread",
+  "overall_status": "hold_not_executable",
+  "scope": {
+    "stage": "Round of 32",
+    "matches": [
+      "M73 南非 vs 加拿大",
+      "M74 德国 vs 巴拉圭",
+      "M75 荷兰 vs 摩洛哥",
+      "M76 巴西 vs 日本"
+    ],
+    "no_executable_betting_advice": true
+  },
+  "refresh_summary": {
+    "previous_blocker": "upstream_missing",
+    "current_blocker": "red_team_completed_verdict_hold_plus_live_market_and_lineup_gates_open",
+    "summary": "Data collector and modeler outputs are available. Red-team review is complete after data/tactics/model fill with overall_verdict=hold; T-75 official lineups, latest final availability and same-source China lottery odds remain unverified."
+  },
+  "upstream_dependency_status": {
+    "data_collector": {
+      "path": "data/thread_outputs/round32-m73-m76-v3-20260628/data-collector.json",
+      "status": "available_partial_source_limited",
+      "captured_at": "2026-06-28T21:26:27+08:00",
+      "effect": "usable_for_discussion_only_risk_context"
+    },
+    "modeler": {
+      "path": "data/thread_outputs/round32-m73-m76-v3-20260628/modeler.json",
+      "status": "available_completed_partial_source_limited",
+      "created_at": "2026-06-28T23:59:00+08:00",
+      "effect": "usable_for_observation_only_model_risk"
+    },
+    "red_team": {
+      "path": "data/thread_outputs/round32-m73-m76-v3-20260628/red-team.json",
+      "status": "complete_verdict_hold",
+      "red_team_gate": "complete_hold",
+      "reason": "Red-team review is complete after refreshed upstream, but overall_verdict=hold and betting_gate=hold_not_executable.",
+      "effect": "hold_not_executable"
+    }
+  },
+  "global_gates": {
+    "t75_official_lineups": {
+      "status": "not_confirmed",
+      "effect": "hold_not_executable"
+    },
+    "latest_injuries_suspensions_minutes": {
+      "status": "partial_source_limited_not_final",
+      "effect": "hold_not_executable"
+    },
+    "official_china_jingcai_odds": {
+      "status": "not_captured",
+      "effect": "hold_not_executable"
+    },
+    "same_source_1x2_handicap_totals_snapshot": {
+      "status": "not_captured_complete",
+      "effect": "hold_not_executable"
+    },
+    "score_total_goals_half_full_time_same_source": {
+      "status": "not_captured",
+      "effect": "hold_not_executable"
+    },
+    "red_team_gate": {
+      "status": "complete_hold",
+      "overall_verdict": "hold",
+      "red_team_status": "complete_red_team_review_after_data_tactics_model_fill",
+      "effect": "hold_not_executable"
+    },
+    "model_probability_package": {
+      "status": "available_pre_red_team_discussion_only",
+      "effect": "observation_only"
+    }
+  },
+  "matches": [
+    {
+      "match_no": "M73",
+      "fixture": "南非 vs 加拿大",
+      "english_fixture": "South Africa vs Canada",
+      "betting_gate_status": "hold_not_executable",
+      "model_context": {
+        "status": "available_pre_red_team",
+        "xg": {
+          "south_africa": 1.08,
+          "canada": 1.34
+        },
+        "probabilities_90m": {
+          "south_africa_win": 0.3012,
+          "draw": 0.2724,
+          "canada_win": 0.4265
+        },
+        "totals": {
+          "over_2_5": 0.4355,
+          "under_2_5": 0.5645
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1287
+          },
+          {
+            "score": "0-1",
+            "probability": 0.1192
+          },
+          {
+            "score": "1-0",
+            "probability": 0.096
+          },
+          {
+            "score": "0-0",
+            "probability": 0.0889
+          },
+          {
+            "score": "1-2",
+            "probability": 0.0862
+          }
+        ],
+        "model_betting_status": "discussion_only_hold"
+      },
+      "market_availability": {
+        "official_china_jingcai": {
+          "status": "not_captured",
+          "captured_at": null
+        },
+        "china_football_lottery_site": {
+          "status": "not_captured_same_source_complete",
+          "captured_at": null
+        },
+        "500_snapshot": {
+          "status": "not_captured_same_source_complete",
+          "captured_at": null
+        },
+        "third_party_external": {
+          "status": "incomplete_external_only",
+          "source_note": "Data collector recorded a The Sun moneyline reference for Canada, not usable as official China lottery or same-source calibration."
+        },
+        "markets": {
+          "1x2": "not_captured",
+          "handicap": "not_captured",
+          "over_under": "not_captured",
+          "correct_score": "not_captured",
+          "total_goals": "not_captured",
+          "half_full_time": "not_captured"
+        },
+        "odds_calibration_status": "unavailable_for_betting"
+      },
+      "gate_detail": {
+        "t75_official_lineup": "not_confirmed",
+        "latest_injury_suspension_minutes": "partial_conflicting",
+        "official_odds": "not_captured",
+        "same_source_odds": "missing",
+        "red_team_gate": "complete_hold"
+      },
+      "risk_observation": [
+        "Model shows Canada edge but draw floor is high at 27.24%; this can only be a risk observation before red-team rerun and odds capture.",
+        "South Africa Mokoena availability and Canada Davies/Eustaquio minutes remain final-check variables.",
+        "Low-score cluster is prominent, but score and total-goals markets have no same-source odds."
+      ],
+      "deleted_items": [
+        "Any executable ticket wording",
+        "Any Canada-edge market value claim",
+        "Any low-score ticket construction"
+      ],
+      "live_wait_items": [
+        "T-75 official lineups",
+        "Final availability and minutes limits",
+        "Official China lottery odds",
+        "Same-source 1X2, handicap and totals",
+        "Red-team verdict hold resolution after live gates"
+      ]
+    },
+    {
+      "match_no": "M74",
+      "fixture": "德国 vs 巴拉圭",
+      "english_fixture": "Germany vs Paraguay",
+      "betting_gate_status": "hold_not_executable",
+      "model_context": {
+        "status": "available_pre_red_team",
+        "xg": {
+          "germany": 2.1,
+          "paraguay": 0.78
+        },
+        "probabilities_90m": {
+          "germany_win": 0.6793,
+          "draw": 0.1933,
+          "paraguay_win": 0.1274
+        },
+        "totals": {
+          "over_2_5": 0.5494,
+          "under_2_5": 0.4506
+        },
+        "top_scorelines": [
+          {
+            "score": "2-0",
+            "probability": 0.1238
+          },
+          {
+            "score": "1-0",
+            "probability": 0.1179
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0965
+          },
+          {
+            "score": "1-1",
+            "probability": 0.0919
+          },
+          {
+            "score": "3-0",
+            "probability": 0.0866
+          }
+        ],
+        "model_betting_status": "discussion_only_hold"
+      },
+      "market_availability": {
+        "official_china_jingcai": {
+          "status": "not_captured",
+          "captured_at": null
+        },
+        "china_football_lottery_site": {
+          "status": "not_captured_same_source_complete",
+          "captured_at": null
+        },
+        "500_snapshot": {
+          "status": "not_captured_same_source_complete",
+          "captured_at": null
+        },
+        "third_party_external": {
+          "status": "not_used_for_calibration"
+        },
+        "markets": {
+          "1x2": "not_captured",
+          "handicap": "not_captured",
+          "over_under": "not_captured",
+          "correct_score": "not_captured",
+          "total_goals": "not_captured",
+          "half_full_time": "not_captured"
+        },
+        "odds_calibration_status": "unavailable_for_betting"
+      },
+      "gate_detail": {
+        "t75_official_lineup": "not_confirmed",
+        "latest_injury_suspension_minutes": "partial_not_final",
+        "official_odds": "not_captured",
+        "same_source_odds": "missing",
+        "red_team_gate": "complete_hold"
+      },
+      "risk_observation": [
+        "Model gives Germany a strong 90-minute edge, but market weight is zero because same-source odds are missing.",
+        "Germany lineup debate around goalkeeper, attacking selection and Kimmich role is still a T-75 sensitivity.",
+        "Top-score cluster includes 1-0, 2-0 and 2-1; handicap and score-language must stay blocked without odds and red-team rerun."
+      ],
+      "deleted_items": [
+        "Any automatic favorite conversion",
+        "Any handicap-cover wording",
+        "Any score valuation"
+      ],
+      "live_wait_items": [
+        "T-75 official lineups",
+        "Final injuries, suspensions and minutes limits",
+        "Official China lottery odds",
+        "Same-source 1X2, handicap and totals",
+        "Red-team verdict hold resolution after live gates"
+      ]
+    },
+    {
+      "match_no": "M75",
+      "fixture": "荷兰 vs 摩洛哥",
+      "english_fixture": "Netherlands vs Morocco",
+      "betting_gate_status": "hold_not_executable",
+      "model_context": {
+        "status": "available_pre_red_team",
+        "xg": {
+          "netherlands": 1.48,
+          "morocco": 1.12
+        },
+        "probabilities_90m": {
+          "netherlands_win": 0.4545,
+          "draw": 0.2588,
+          "morocco_win": 0.2867
+        },
+        "totals": {
+          "over_2_5": 0.4816,
+          "under_2_5": 0.5184
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1231
+          },
+          {
+            "score": "1-0",
+            "probability": 0.1099
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0911
+          },
+          {
+            "score": "0-1",
+            "probability": 0.0832
+          },
+          {
+            "score": "2-0",
+            "probability": 0.0813
+          }
+        ],
+        "model_betting_status": "discussion_only_hold"
+      },
+      "market_availability": {
+        "official_china_jingcai": {
+          "status": "not_captured",
+          "captured_at": null
+        },
+        "china_football_lottery_site": {
+          "status": "not_captured_same_source_complete",
+          "captured_at": null
+        },
+        "500_snapshot": {
+          "status": "not_captured_same_source_complete",
+          "captured_at": null
+        },
+        "third_party_external": {
+          "status": "not_used_for_calibration"
+        },
+        "markets": {
+          "1x2": "not_captured",
+          "handicap": "not_captured",
+          "over_under": "not_captured",
+          "correct_score": "not_captured",
+          "total_goals": "not_captured",
+          "half_full_time": "not_captured"
+        },
+        "odds_calibration_status": "unavailable_for_betting"
+      },
+      "gate_detail": {
+        "t75_official_lineup": "not_confirmed",
+        "latest_injury_suspension_minutes": "partial_not_final",
+        "official_odds": "not_captured",
+        "same_source_odds": "missing",
+        "red_team_gate": "complete_hold"
+      },
+      "risk_observation": [
+        "Model is closer than a simple favorite framing: Netherlands 45.45%, Morocco 28.67%, draw 25.88%.",
+        "Morocco goalkeeper and defensive availability, plus Netherlands front-line selection, remain live gates.",
+        "1-1 is the highest single scoreline; any market output that deletes draw/BTTS paths must remain blocked."
+      ],
+      "deleted_items": [
+        "Any 90-minute certainty framing",
+        "Any low-score ticket construction",
+        "Any parlay role assignment"
+      ],
+      "live_wait_items": [
+        "T-75 official lineups",
+        "Final injuries, suspensions and minutes limits",
+        "Official China lottery odds",
+        "Same-source 1X2, handicap and totals",
+        "Red-team verdict hold resolution after live gates"
+      ]
+    },
+    {
+      "match_no": "M76",
+      "fixture": "巴西 vs 日本",
+      "english_fixture": "Brazil vs Japan",
+      "betting_gate_status": "hold_not_executable",
+      "model_context": {
+        "status": "available_pre_red_team",
+        "xg": {
+          "brazil": 1.92,
+          "japan": 1.08
+        },
+        "probabilities_90m": {
+          "brazil_win": 0.5694,
+          "draw": 0.2206,
+          "japan_win": 0.21
+        },
+        "totals": {
+          "over_2_5": 0.5768,
+          "under_2_5": 0.4232
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1032
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0991
+          },
+          {
+            "score": "1-0",
+            "probability": 0.0956
+          },
+          {
+            "score": "2-0",
+            "probability": 0.0918
+          },
+          {
+            "score": "3-1",
+            "probability": 0.0634
+          }
+        ],
+        "model_betting_status": "discussion_only_hold"
+      },
+      "market_availability": {
+        "official_china_jingcai": {
+          "status": "not_captured",
+          "captured_at": null
+        },
+        "china_football_lottery_site": {
+          "status": "not_captured_same_source_complete",
+          "captured_at": null
+        },
+        "500_snapshot": {
+          "status": "not_captured_same_source_complete",
+          "captured_at": null
+        },
+        "third_party_external": {
+          "status": "not_used_for_calibration"
+        },
+        "markets": {
+          "1x2": "not_captured",
+          "handicap": "not_captured",
+          "over_under": "not_captured",
+          "correct_score": "not_captured",
+          "total_goals": "not_captured",
+          "half_full_time": "not_captured"
+        },
+        "odds_calibration_status": "unavailable_for_betting"
+      },
+      "gate_detail": {
+        "t75_official_lineup": "not_confirmed",
+        "latest_injury_suspension_minutes": "partial_not_final",
+        "official_odds": "not_captured",
+        "same_source_odds": "missing",
+        "red_team_gate": "complete_hold"
+      },
+      "risk_observation": [
+        "Model favors Brazil, but Japan draw/upset band remains material at 43.06% combined draw plus Japan win.",
+        "Brazil public price-compression risk cannot be measured because official and same-source odds are missing.",
+        "Top scoreline is 1-1 while favorite win probability leads in aggregate; score and 1X2 must not be conflated."
+      ],
+      "deleted_items": [
+        "Any brand-name favorite valuation",
+        "Any handicap-cover wording",
+        "Any correct-score or total-goals valuation"
+      ],
+      "live_wait_items": [
+        "T-75 official lineups",
+        "Final injuries, suspensions and minutes limits",
+        "Official China lottery odds",
+        "Same-source 1X2, handicap and totals",
+        "Red-team verdict hold resolution after live gates"
+      ]
+    }
+  ],
+  "output_limits": [
+    "No executable ticket list.",
+    "No stake, payout or parlay construction.",
+    "No model-market edge calculation.",
+    "No upgrade beyond observation_only while red-team verdict is hold and official/same-source China odds are missing.",
+    "Model probabilities may be referenced only as pre-red-team discussion context."
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "no_placeholder_markers": true,
+    "no_executable_betting_language": true,
+    "encoding": "utf8_no_bom"
+  }
+}

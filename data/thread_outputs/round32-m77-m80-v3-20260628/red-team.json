@@ -1,0 +1,164 @@
+﻿{
+  "schema_version": "red_team_round32_m77_m80_v3_final_model_review",
+  "created_at": "2026-06-28T22:20:00+08:00",
+  "project": "E:/worldcup",
+  "agent_role": "worldcup-red-team-verifier",
+  "review_target": "Round of 32 M77-M80 v3 pre-match prediction chain after final modeler 22:11:42",
+  "canonical_bracket_required": "2026-06-28",
+  "overall_verdict": "hold",
+  "red_team_status": "complete_red_team_review_after_final_model_fill",
+  "upstream_status": "present_partial_source_limited_data_and_tactics_absorbed_by_modeler",
+  "betting_gate": "hold_not_executable",
+  "betting_language_blocked": true,
+  "no_betting_advice": true,
+  "upstream_files": {
+    "data_collector": {"path": "data/thread_outputs/round32-m77-m80-v3-20260628/data-collector.json", "last_write_time_observed": "2026-06-28T22:08:44+08:00", "status": "present_partial_source_limited"},
+    "tactics_coach": {"path": "data/thread_outputs/round32-m77-m80-v3-20260628/tactics-coach.json", "last_write_time_observed": "2026-06-28T22:09:02+08:00", "status": "present_partial_source_limited"},
+    "modeler": {"path": "data/thread_outputs/round32-m77-m80-v3-20260628/modeler.json", "last_write_time_observed": "2026-06-28T22:11:42+08:00", "status": "completed_partial_source_limited_data_and_tactics_absorbed"}
+  },
+  "canonical_fixture_check": [
+    {"match_id": "M77", "fixture": "France vs Sweden", "status": "confirmed_20260628_canonical"},
+    {"match_id": "M78", "fixture": "Ivory Coast vs Norway", "status": "confirmed_20260628_canonical"},
+    {"match_id": "M79", "fixture": "Mexico vs Ecuador", "status": "confirmed_20260628_canonical"},
+    {"match_id": "M80", "fixture": "England vs DR Congo", "status": "confirmed_20260628_canonical_do_not_use_20260627_england_vs_senegal"}
+  ],
+  "global_blocking_gates": [
+    {"gate": "T-75 official lineups", "status": "missing", "severity": "blocker", "confidence": "high", "owner": "data"},
+    {"gate": "latest injuries, suspensions, and minutes restrictions", "status": "partial_source_limited", "severity": "blocker", "confidence": "high", "owner": "data"},
+    {"gate": "official Chinese sports lottery odds", "status": "missing", "severity": "blocker", "confidence": "high", "owner": "market"},
+    {"gate": "same-source 1X2/handicap/totals odds and model-market delta", "status": "missing", "severity": "blocker", "confidence": "high", "owner": "market/model"},
+    {"gate": "weather/referee/live environment", "status": "missing_or_partial", "severity": "high", "confidence": "medium", "owner": "data"},
+    {"gate": "90-minute vs advancement boundary", "status": "90_minute_1x2_present_advancement_not_simulated", "severity": "medium", "confidence": "high", "owner": "model"}
+  ],
+  "global_quant_chain_review": {
+    "factor_weights": {"baseline_strength": 0.27, "attack": 0.15, "defense": 0.15, "player_state": 0.14, "injury_suspension_minutes": 0.09, "tactical_matchup": 0.12, "schedule_environment": 0.04, "knockout_context": 0.04, "market": 0},
+    "red_team_read": [
+      "Final modeler status is completed_partial_source_limited_data_and_tactics_absorbed.",
+      "Market calibration is disabled because same-source odds are missing.",
+      "Predicted lineups are data-collector probable lineups, not T-75 official lineups.",
+      "Probabilities are 90-minute 1X2 only; advancement, extra time and penalties are not simulated."
+    ],
+    "duplicate_counting_risks": [
+      "France 4-1 Norway signal, Mbappe/Dembele/Olise player_state and transition tactical boost may stack.",
+      "Norway Haaland/Odegaard attacking value can be counted in player_state, attack score and set-piece/tactical routes.",
+      "Mexico host/altitude can be counted in schedule_environment, tactics and later market pricing if not capped.",
+      "England brand/team strength, set pieces, Kane/Bellingham state and favorite ceiling can overstate the 4+ tail.",
+      "DR Congo transition/set-piece upset branch should remain separate from generic attack rating."
+    ]
+  },
+  "matches": [
+    {
+      "match_id": "M77",
+      "match": "France vs Sweden",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_summary": {
+        "expected_goals": {"france": 2.10, "sweden": 1.03, "total": 3.13},
+        "probabilities_90m_1x2": {"france_win": 0.6194, "draw": 0.2035, "sweden_win": 0.1771},
+        "totals": {"over_2_5": 0.6053, "under_2_5": 0.3947, "btts_yes": 0.5643},
+        "top_scorelines": [{"score": "2-1", "probability": 0.0993}, {"score": "2-0", "probability": 0.0964}, {"score": "1-1", "probability": 0.0946}, {"score": "1-0", "probability": 0.0918}, {"score": "3-1", "probability": 0.0695}],
+        "home_4plus_goal_probability": 0.1614,
+        "model_status": "pre_red_team_model_after_data_absorption"
+      },
+      "top_concerns": [
+        {"concern": "France favorite and 4+ ceiling are plausible but vulnerable to duplicate counting.", "category": "model", "severity": "high", "confidence": "medium", "evidence": "Model has France 61.94%, xG 2.10 and 16.14% France 4+; tactics warns France transition and elite-form signals can overlap with player_state and attack rating.", "why_it_matters": "A favorite can be correctly favored but still have overfat blowout tail if the 4-1 Norway signal is counted multiple times.", "follow_up_check": "Model owner should show caps across attack, player_state and transition factors before final prose.", "owner": "model"},
+        {"concern": "Sweden set-piece, aerial and two-forward branch remains a high-impact upset path.", "category": "tactical", "severity": "high", "confidence": "medium", "evidence": "Model itself notes Sweden set-piece/aerial branch is the easiest route to beat the model; tactics notes Isak/Gyokeres/Elanga transition and high-point value.", "why_it_matters": "The non-France-win mass is 38.06% in 90 minutes, too large for one-sided language.", "follow_up_check": "Confirm Sweden XI shape and set-piece personnel at T-75.", "owner": "data/tactics"},
+        {"concern": "No same-source odds means France public/favorite tax cannot be checked.", "category": "market", "severity": "blocker", "confidence": "high", "evidence": "odds_implied_probability is missing_same_source_complete_snapshot and model_market_delta unavailable.", "why_it_matters": "Market may overprice France brand and recent 4-1 result, or may disagree for team-news reasons the model cannot see.", "follow_up_check": "Capture official Chinese sports lottery and same-source 1X2/handicap/totals.", "owner": "market"}
+      ],
+      "upset_or_failure_scenarios": ["Sweden scores first through set piece or second ball and raises 1-1/1-2 branch.", "France fullback height opens transition lanes for Isak/Gyokeres/Elanga.", "France rotates or caps key attackers, cutting the 4+ ceiling."],
+      "overconfidence_flags": ["Do not publish France 61.94% as final certainty before T-75.", "Do not convert 16.14% 4+ tail into handicap-like wording.", "Do not confuse 90-minute win with advancement."],
+      "market_flags": ["official Chinese sports lottery missing", "same-source 1X2/handicap/totals missing", "model_market_delta unavailable", "France favorite tax unmeasured"],
+      "quant_chain_flags": ["xG and Poisson present after data/tactics absorption", "market weight 0 due odds gap", "favorite ceiling triggered", "draw floor not triggered", "red-card/early-goal/GK variance mostly narrative", "official XI missing"],
+      "recommended_probability_adjustment": "Keep France win in a provisional 59-61% review band before T-75 and odds; preserve Sweden non-win risk above one-third and avoid expanding the 4+ tail without lineup/market support.",
+      "missing_data": ["T-75 official lineups", "France attacker mix and Tchouameni minutes", "Sweden two-forward shape", "official Chinese sports lottery", "same-source 1X2/handicap/totals", "weather/referee profile"],
+      "handoff_owner": "data/tactics/model/market"
+    },
+    {
+      "match_id": "M78",
+      "match": "Ivory Coast vs Norway",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_summary": {
+        "expected_goals": {"ivory_coast": 1.39, "norway": 1.62, "total": 3.01},
+        "probabilities_90m_1x2": {"ivory_coast_win": 0.3292, "draw": 0.2408, "norway_win": 0.43},
+        "totals": {"over_2_5": 0.579, "under_2_5": 0.421, "btts_yes": 0.6023},
+        "top_scorelines": [{"score": "1-1", "probability": 0.111}, {"score": "1-2", "probability": 0.0899}, {"score": "0-1", "probability": 0.0799}, {"score": "2-1", "probability": 0.0771}, {"score": "1-0", "probability": 0.0685}],
+        "home_4plus_goal_probability": 0.0526,
+        "model_status": "pre_red_team_model_after_data_absorption"
+      },
+      "top_concerns": [
+        {"concern": "Norway edge is sensitive to Haaland and Odegaard availability/minutes.", "category": "availability", "severity": "blocker", "confidence": "high", "evidence": "Data says Haaland is probable_return after sitting out France; model uncertainty says Haaland and Odegaard are main xG switches.", "why_it_matters": "Norway 43.00% depends heavily on elite chance conversion and creation, not a broad team-strength cushion.", "follow_up_check": "Confirm Haaland/Odegaard/Nusa/Sorloth roles and minutes at T-75.", "owner": "data"},
+        {"concern": "This is the highest BTTS branch and one of the most event-volatile matches.", "category": "model/tactical", "severity": "high", "confidence": "high", "evidence": "Model has over 2.5 at 57.9%, BTTS yes at 60.23%, draw floor triggered, and tactics notes both teams' transition/set-piece routes.", "why_it_matters": "Independent Poisson can understate first-goal, fatigue, red-card and chasing-state correlation.", "follow_up_check": "Add game-state sensitivity for early goal and late fatigue in Dallas noon conditions.", "owner": "model/tactics"},
+        {"concern": "Ivory Coast physical transition and set pieces must not be flattened into generic underdog status.", "category": "tactical", "severity": "high", "confidence": "medium", "evidence": "Tactics notes Haller/high points, wide runners and Germany/Curacao samples; double-counting warning says use phase caps.", "why_it_matters": "Ivory Coast win 32.92% plus draw 24.08% means Norway non-win is majority mass.", "follow_up_check": "Separate Ivory Coast set-piece and wide-transition tail in final prose.", "owner": "tactics/model"}
+      ],
+      "upset_or_failure_scenarios": ["Ivory Coast wins aerial/set-piece battle and forces Norway chase-state exposure.", "Norway attack plays but defense remains fragile after France 1-4.", "Dallas heat suppresses pressing and turns the game into late-error volatility."],
+      "overconfidence_flags": ["Do not label Norway as a strong favorite at 43.00%.", "Do not double count Haaland in attack, player_state and set pieces.", "Do not ignore Ivory Coast/draw combined mass of 57.00%."],
+      "market_flags": ["official Chinese sports lottery missing", "same-source odds missing", "Haaland/star premium unmeasured", "totals market unavailable despite over/BTTS signals"],
+      "quant_chain_flags": ["xG and Poisson present after data/tactics absorption", "draw floor triggered", "event volatility triggered", "favorite ceiling not triggered", "market calibration missing", "T-75 lineups missing", "Haaland/Odegaard sensitivity high"],
+      "recommended_probability_adjustment": "Treat Norway 43.00% as a narrow provisional edge; cap public language around 40-43% until Haaland/Odegaard minutes and odds are confirmed, and keep Ivory Coast plus draw as the larger combined risk band.",
+      "missing_data": ["T-75 official lineups", "Haaland/Odegaard/Nusa minutes", "Ivory Coast Haller/Adingra/Amad XI", "official Chinese sports lottery", "same-source 1X2/handicap/totals", "Dallas weather/referee profile"],
+      "handoff_owner": "data/tactics/model/market"
+    },
+    {
+      "match_id": "M79",
+      "match": "Mexico vs Ecuador",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_summary": {
+        "expected_goals": {"mexico": 1.44, "ecuador": 1.24, "total": 2.68},
+        "probabilities_90m_1x2": {"mexico_win": 0.4173, "draw": 0.2578, "ecuador_win": 0.3249},
+        "totals": {"over_2_5": 0.5015, "under_2_5": 0.4985, "btts_yes": 0.5423},
+        "top_scorelines": [{"score": "1-1", "probability": 0.1224}, {"score": "1-0", "probability": 0.0987}, {"score": "2-1", "probability": 0.0881}, {"score": "0-1", "probability": 0.085}, {"score": "1-2", "probability": 0.0759}],
+        "home_4plus_goal_probability": 0.0583,
+        "model_status": "pre_red_team_model_after_data_absorption"
+      },
+      "top_concerns": [
+        {"concern": "Mexico home/altitude context is material but double-counting risk remains.", "category": "data/model", "severity": "high", "confidence": "high", "evidence": "Data says Mexico City altitude is materially relevant but exact conditions not refreshed; model uncertainty says altitude/home must not be double counted if odds later arrive.", "why_it_matters": "Mexico 41.73% is a modest edge, and home context can be overused across schedule, tactics and market.", "follow_up_check": "Refresh stadium/weather/altitude conditions and cap home adjustments when odds arrive.", "owner": "data/model"},
+        {"concern": "Ecuador transition after Germany win remains a live upset path but can be overfit from one match.", "category": "data/tactical", "severity": "high", "confidence": "medium", "evidence": "Tactics says Ecuador exploited Germany in transition but warns not to over-upgrade finishing from one upset; model has Ecuador win 32.49%.", "why_it_matters": "Ecuador tail is large enough that Mexico cannot be framed as secure, but the upset signal needs player-minute refresh.", "follow_up_check": "Update Caicedo/Plata/Paez/Valencia freshness and separate chance quality from finishing variance.", "owner": "data/tactics/model"},
+        {"concern": "Low-event draw is the central failure mode for one-sided language.", "category": "model", "severity": "high", "confidence": "high", "evidence": "Top score is 1-1 at 12.24%, draw is 25.78%, over/under 2.5 is nearly 50/50, and draw floor is triggered.", "why_it_matters": "Any firm Mexico or Ecuador direction would hide a large draw floor.", "follow_up_check": "Keep 0-0/1-1/1-goal-game branches explicit.", "owner": "main/model"}
+      ],
+      "upset_or_failure_scenarios": ["Ecuador beats Mexico's press through Caicedo/Paez/Plata transition.", "Mexico controls venue tempo but creates only low-quality shots, ending 0-0 or 1-1.", "Host energy raises Mexico line and leaves fullback space."],
+      "overconfidence_flags": ["Do not convert Mexico 41.73% into a strong home pick.", "Do not double count altitude with tactics and later odds.", "Do not lower Ecuador 32.49% without current player-minute evidence."],
+      "market_flags": ["official Chinese sports lottery missing", "same-source odds missing", "host sentiment premium unmeasured", "draw suppression cannot be checked"],
+      "quant_chain_flags": ["xG and Poisson present after data/tactics absorption", "draw floor triggered", "event volatility triggered", "favorite ceiling not triggered", "market calibration missing", "T-75 lineups missing", "altitude/weather source-limited"],
+      "recommended_probability_adjustment": "Keep Mexico win in a provisional 39-42% review band before T-75 and odds; preserve draw near 26% and Ecuador upset tail around 32% unless official lineups materially change midfield/transition assumptions.",
+      "missing_data": ["T-75 official lineups", "Mexico third-round player_state freshness", "Ecuador post-Germany player-minute refresh", "Mexico City weather/altitude conditions", "official Chinese sports lottery", "same-source 1X2/handicap/totals"],
+      "handoff_owner": "data/tactics/model/market"
+    },
+    {
+      "match_id": "M80",
+      "match": "England vs DR Congo",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_summary": {
+        "expected_goals": {"england": 2.07, "dr_congo": 0.88, "total": 2.95},
+        "probabilities_90m_1x2": {"england_win": 0.649, "draw": 0.201, "dr_congo_win": 0.15},
+        "totals": {"over_2_5": 0.5655, "under_2_5": 0.4345, "btts_yes": 0.5114},
+        "top_scorelines": [{"score": "2-0", "probability": 0.1121}, {"score": "1-0", "probability": 0.1083}, {"score": "2-1", "probability": 0.0987}, {"score": "1-1", "probability": 0.0953}, {"score": "3-0", "probability": 0.0774}],
+        "home_4plus_goal_probability": 0.1557,
+        "model_status": "pre_red_team_model_after_data_absorption"
+      },
+      "top_concerns": [
+        {"concern": "M80 canonical correction is satisfied but must remain guarded.", "category": "data", "severity": "blocker", "confidence": "high", "evidence": "modeler source_status says confirmed_by_2026_06_28_canonical_bracket_not_20260627_temporary_pairing; data packet warns old England vs Senegal is obsolete.", "why_it_matters": "Any stale England vs Senegal text would invalidate the match packet.", "follow_up_check": "Main thread should scan final prose and filenames for Senegal references.", "owner": "main"},
+        {"concern": "England right-back injuries materially affect the DR Congo transition branch.", "category": "availability/tactical", "severity": "blocker", "confidence": "high", "evidence": "Data flags Quansah injury doubt, Reece James absence, Livramento absence; model uncertainty calls right-back injury a material defensive-side sensitivity.", "why_it_matters": "England 64.90% and 2.07-0.88 xG may overstate defensive control if the weak-side channel is exposed.", "follow_up_check": "Confirm England fullback solution and DR Congo Wissa/Mayele/Bakambu outlet choices at T-75.", "owner": "data/tactics"},
+        {"concern": "England favorite ceiling and public-team framing need market check.", "category": "market/model", "severity": "high", "confidence": "high", "evidence": "Market delta is unavailable; model has England 4+ at 15.57%, over 2.5 at 56.55%, and favorite ceiling triggered.", "why_it_matters": "England brand and squad depth can inflate public confidence before odds and lineups confirm value.", "follow_up_check": "Capture same-source odds and compare handicap/totals against model before any publication language.", "owner": "market/model"}
+      ],
+      "upset_or_failure_scenarios": ["DR Congo attacks England's right-back channel and creates transition/BTTS path.", "England controls but struggles to break compact block early, keeping 1-1 or late draw alive.", "England first goal opens DR Congo chase-state gaps but also increases late-card/transition variance."],
+      "overconfidence_flags": ["Do not publish England 64.90% as final certainty before T-75.", "Do not turn 15.57% 4+ tail into handicap language.", "Do not hide DR Congo 35.10% non-England-win mass in 90 minutes."],
+      "market_flags": ["official Chinese sports lottery missing", "same-source odds missing", "England public-team tax unmeasured", "model_market_delta unavailable"],
+      "quant_chain_flags": ["xG and Poisson present after data/tactics absorption", "favorite ceiling triggered", "draw floor not triggered despite compact-block/transition branch", "market calibration missing", "T-75 lineups missing", "right-back injury sensitivity high", "90-minute only not advancement"],
+      "recommended_probability_adjustment": "Before T-75 and odds, cap England win language around 61-64%; if right-back crisis persists or DR Congo transition XI is full strength, raise draw/DR Congo tail and reduce confidence in England 4+ margin.",
+      "missing_data": ["T-75 official lineups", "England right-back injury resolution", "DR Congo Wissa/Mayele/Bakambu and Mbemba status", "official Chinese sports lottery", "same-source 1X2/handicap/totals", "Atlanta weather/referee profile"],
+      "handoff_owner": "main/data/tactics/model/market"
+    }
+  ],
+  "release_threshold": [
+    "T-75 official lineups captured and compared with probable XI.",
+    "Final injury, suspension and minutes updates captured for all eight teams.",
+    "Official Chinese sports lottery and same-source 1X2/handicap/totals snapshots captured.",
+    "Model-market delta calculated after odds are available.",
+    "M80 remains England vs DR Congo in every downstream output.",
+    "No executable betting language while verdict is hold."
+  ],
+  "handoff_notes": "Overall hold. Final modeler has absorbed data and tactics, so the prior upstream-order objection is closed. Remaining blockers are T-75 official lineups, final availability, same-source odds, market calibration and several overconfidence/tail risks."
+}

@@ -1,0 +1,793 @@
+{
+  "schema_version": "round32_scoreline_final_rerank_modeler_review_v1",
+  "created_at": "2026-06-28T23:30:00+08:00",
+  "status": "completed_review_only_no_main_prediction_file_change",
+  "owner": "worldcup-data-modeler",
+  "scope": "M73/M75/M76/M78/M79/M82/M83/M84 final adjusted scoreline ranking review",
+  "input_files": [
+    "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+    "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+    "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+    "data/outputs/model_backtests/round32-scoreline-diversity-adjustment-20260628.json",
+    "汇总/32强已预测比分簇调整_20260628.md"
+  ],
+  "no_main_prediction_file_change": true,
+  "no_1x2_probability_change": true,
+  "no_betting_advice": true,
+  "previous_algorithm_assessment": {
+    "conclusion": "The previous scoreline_diversity_layer mostly added explanation and scoreline clusters. It preserved raw Poisson and did not provide a separate final_adjusted_top_scoreline ranking, so user-facing Markdown could still repeatedly surface 1-1.",
+    "required_change": "Add explicit raw_poisson_top_scorelines and adjusted_top_scorelines. Use final_adjusted_top_scoreline for display headline, while retaining raw_poisson_top1 for audit."
+  },
+  "rerank_policy": {
+    "raw_poisson_matrix": "preserve",
+    "final_adjusted_top_scoreline": "May be selected from nearby Poisson scores using 1X2 main direction, xG gap, team-strength edge, total xG, tactical volatility, and red-team risk.",
+    "close_strength_guard": "When 1-1 and adjacent one-goal scores are close, do not let every close-strength match display as 1-1.",
+    "stronger_favorite_guard": "When a clear favorite has raw 1-1 top1 due to single-cell Poisson concentration, display 2-1, 2-0 or 1-0 if adjacent probability and xG direction support it."
+  },
+  "matches": [
+    {
+      "match_id": "M73",
+      "match": "南非 vs 加拿大",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "previous_adjustment_status": "triggered",
+      "raw_poisson_top1": {
+        "score": "1-1",
+        "probability": 0.1287
+      },
+      "raw_poisson_top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1287
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1192
+        },
+        {
+          "score": "1-0",
+          "probability": 0.096
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0889
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0862
+        }
+      ],
+      "expected_goals": {
+        "team_a": 1.08,
+        "team_b": 1.34,
+        "total": 2.42,
+        "xg_gap": 0.26
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.3012,
+        "draw": 0.2724,
+        "team_b_win": 0.4265,
+        "sum": 1
+      },
+      "team_strength_score": {
+        "team_a": 68,
+        "team_b": 74,
+        "scale": "0-100 internal"
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4355,
+        "under_2_5": 0.5645,
+        "btts_yes": 0.4875,
+        "btts_no": 0.5125
+      },
+      "final_adjusted_top_scoreline": "0-1",
+      "adjusted_top_scorelines": [
+        {
+          "rank": 1,
+          "score": "0-1",
+          "raw_poisson_probability": 0.1192,
+          "adjustment_role": "final_adjusted_top_scoreline"
+        },
+        {
+          "rank": 2,
+          "score": "1-1",
+          "raw_poisson_probability": 0.1287,
+          "adjustment_role": "raw_central_draw_slice_retained"
+        },
+        {
+          "rank": 3,
+          "score": "1-2",
+          "raw_poisson_probability": 0.0862,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 4,
+          "score": "1-0",
+          "raw_poisson_probability": 0.096,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 5,
+          "score": "0-0",
+          "raw_poisson_probability": 0.0889,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        }
+      ],
+      "ranking_method": "Display rerank only: raw Poisson matrix remains unchanged; final adjusted ranking chooses a nearby high-probability score using 1X2 direction, xG edge, total-goal profile, tactical volatility and red-team uncertainty.",
+      "reason": "raw 1-1 is only 0.95pp above 0-1. Canada leads 1X2 and xG, while total xG/Under profile keeps the adjusted display on a narrow away-edge path.",
+      "confidence": "medium",
+      "safeguards": [
+        "Do not overwrite poisson_score_matrix.",
+        "Keep raw_poisson_top_scorelines visible beside adjusted_top_scorelines.",
+        "Do not change 1X2, xG, totals, red-team status or betting gate."
+      ]
+    },
+    {
+      "match_id": "M75",
+      "match": "荷兰 vs 摩洛哥",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "previous_adjustment_status": "near_miss",
+      "raw_poisson_top1": {
+        "score": "1-1",
+        "probability": 0.1231
+      },
+      "raw_poisson_top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1231
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1099
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0911
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0832
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0813
+        }
+      ],
+      "expected_goals": {
+        "team_a": 1.48,
+        "team_b": 1.12,
+        "total": 2.6,
+        "xg_gap": 0.36
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4545,
+        "draw": 0.2588,
+        "team_b_win": 0.2867,
+        "sum": 1
+      },
+      "team_strength_score": {
+        "team_a": 82,
+        "team_b": 79,
+        "scale": "0-100 internal"
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4816,
+        "under_2_5": 0.5184,
+        "btts_yes": 0.5204,
+        "btts_no": 0.4796
+      },
+      "final_adjusted_top_scoreline": "2-1",
+      "adjusted_top_scorelines": [
+        {
+          "rank": 1,
+          "score": "2-1",
+          "raw_poisson_probability": 0.0911,
+          "adjustment_role": "final_adjusted_top_scoreline"
+        },
+        {
+          "rank": 2,
+          "score": "1-0",
+          "raw_poisson_probability": 0.1099,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 3,
+          "score": "1-1",
+          "raw_poisson_probability": 0.1231,
+          "adjustment_role": "raw_central_draw_slice_retained"
+        },
+        {
+          "rank": 4,
+          "score": "2-0",
+          "raw_poisson_probability": 0.0813,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 5,
+          "score": "1-2",
+          "raw_poisson_probability": 0.0689,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        }
+      ],
+      "ranking_method": "Display rerank only: raw Poisson matrix remains unchanged; final adjusted ranking chooses a nearby high-probability score using 1X2 direction, xG edge, total-goal profile, tactical volatility and red-team uncertainty.",
+      "reason": "Netherlands has the 1X2 and xG edge, and near-miss status means the final display should use a one-goal favorite path rather than another 1-1 default. 2-1 keeps Morocco scoring risk visible.",
+      "confidence": "medium_low",
+      "safeguards": [
+        "Do not overwrite poisson_score_matrix.",
+        "Keep raw_poisson_top_scorelines visible beside adjusted_top_scorelines.",
+        "Do not change 1X2, xG, totals, red-team status or betting gate."
+      ]
+    },
+    {
+      "match_id": "M76",
+      "match": "巴西 vs 日本",
+      "source_file": "data/outputs/match_predictions/round32-m73-m76-v3-quant-prediction-20260628.json",
+      "previous_adjustment_status": "not_triggered_but_top1_caveat",
+      "raw_poisson_top1": {
+        "score": "1-1",
+        "probability": 0.1032
+      },
+      "raw_poisson_top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1032
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0991
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0956
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0918
+        },
+        {
+          "score": "3-1",
+          "probability": 0.0634
+        }
+      ],
+      "expected_goals": {
+        "team_a": 1.92,
+        "team_b": 1.08,
+        "total": 3,
+        "xg_gap": 0.84
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5694,
+        "draw": 0.2206,
+        "team_b_win": 0.21,
+        "sum": 1
+      },
+      "team_strength_score": {
+        "team_a": 89,
+        "team_b": 78,
+        "scale": "0-100 internal"
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5768,
+        "under_2_5": 0.4232,
+        "btts_yes": 0.5636,
+        "btts_no": 0.4364
+      },
+      "final_adjusted_top_scoreline": "2-1",
+      "adjusted_top_scorelines": [
+        {
+          "rank": 1,
+          "score": "2-1",
+          "raw_poisson_probability": 0.0991,
+          "adjustment_role": "final_adjusted_top_scoreline"
+        },
+        {
+          "rank": 2,
+          "score": "2-0",
+          "raw_poisson_probability": 0.0918,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 3,
+          "score": "1-0",
+          "raw_poisson_probability": 0.0956,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 4,
+          "score": "3-1",
+          "raw_poisson_probability": 0.0634,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 5,
+          "score": "1-1",
+          "raw_poisson_probability": 0.1032,
+          "adjustment_role": "raw_central_draw_slice_retained"
+        }
+      ],
+      "ranking_method": "Display rerank only: raw Poisson matrix remains unchanged; final adjusted ranking chooses a nearby high-probability score using 1X2 direction, xG edge, total-goal profile, tactical volatility and red-team uncertainty.",
+      "reason": "Brazil is a clearer favorite by 1X2, xG and strength. Raw 1-1 leads 2-1 by only 0.41pp, so final display should follow the favorite-edge/BTTS path.",
+      "confidence": "medium_high",
+      "safeguards": [
+        "Do not overwrite poisson_score_matrix.",
+        "Keep raw_poisson_top_scorelines visible beside adjusted_top_scorelines.",
+        "Do not change 1X2, xG, totals, red-team status or betting gate."
+      ]
+    },
+    {
+      "match_id": "M78",
+      "match": "科特迪瓦 vs 挪威",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "previous_adjustment_status": "triggered",
+      "raw_poisson_top1": {
+        "score": "1-1",
+        "probability": 0.111
+      },
+      "raw_poisson_top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.111
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0899
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0799
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0771
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0685
+        }
+      ],
+      "expected_goals": {
+        "team_a": 1.39,
+        "team_b": 1.62,
+        "total": 3.01,
+        "xg_gap": 0.23
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.3292,
+        "draw": 0.2408,
+        "team_b_win": 0.43,
+        "sum": 1
+      },
+      "team_strength_score": {
+        "team_a": 77,
+        "team_b": 80,
+        "scale": "0-100 internal"
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.579,
+        "under_2_5": 0.421,
+        "btts_yes": 0.6023,
+        "btts_no": 0.3977
+      },
+      "final_adjusted_top_scoreline": "1-2",
+      "adjusted_top_scorelines": [
+        {
+          "rank": 1,
+          "score": "1-2",
+          "raw_poisson_probability": 0.0899,
+          "adjustment_role": "final_adjusted_top_scoreline"
+        },
+        {
+          "rank": 2,
+          "score": "1-1",
+          "raw_poisson_probability": 0.111,
+          "adjustment_role": "raw_central_draw_slice_retained"
+        },
+        {
+          "rank": 3,
+          "score": "2-1",
+          "raw_poisson_probability": 0.0771,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 4,
+          "score": "2-2",
+          "raw_poisson_probability": 0.0625,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 5,
+          "score": "0-1",
+          "raw_poisson_probability": 0.0799,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        }
+      ],
+      "ranking_method": "Display rerank only: raw Poisson matrix remains unchanged; final adjusted ranking chooses a nearby high-probability score using 1X2 direction, xG edge, total-goal profile, tactical volatility and red-team uncertainty.",
+      "reason": "Norway owns the narrow 1X2 and xG edge, with high total xG and BTTS. The adjusted scoreline should be an open away one-goal path, while preserving raw 1-1 as central draw slice.",
+      "confidence": "medium",
+      "safeguards": [
+        "Do not overwrite poisson_score_matrix.",
+        "Keep raw_poisson_top_scorelines visible beside adjusted_top_scorelines.",
+        "Do not change 1X2, xG, totals, red-team status or betting gate."
+      ]
+    },
+    {
+      "match_id": "M79",
+      "match": "墨西哥 vs 厄瓜多尔",
+      "source_file": "data/outputs/match_predictions/round32-m77-m80-v3-quant-prediction-20260628.json",
+      "previous_adjustment_status": "triggered",
+      "raw_poisson_top1": {
+        "score": "1-1",
+        "probability": 0.1224
+      },
+      "raw_poisson_top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1224
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0987
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0881
+        },
+        {
+          "score": "0-1",
+          "probability": 0.085
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0759
+        }
+      ],
+      "expected_goals": {
+        "team_a": 1.44,
+        "team_b": 1.24,
+        "total": 2.68,
+        "xg_gap": 0.2
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4173,
+        "draw": 0.2578,
+        "team_b_win": 0.3249,
+        "sum": 1
+      },
+      "team_strength_score": {
+        "team_a": 81,
+        "team_b": 79,
+        "scale": "0-100 internal"
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5015,
+        "under_2_5": 0.4985,
+        "btts_yes": 0.5423,
+        "btts_no": 0.4577
+      },
+      "final_adjusted_top_scoreline": "1-0",
+      "adjusted_top_scorelines": [
+        {
+          "rank": 1,
+          "score": "1-0",
+          "raw_poisson_probability": 0.0987,
+          "adjustment_role": "final_adjusted_top_scoreline"
+        },
+        {
+          "rank": 2,
+          "score": "2-1",
+          "raw_poisson_probability": 0.0881,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 3,
+          "score": "1-1",
+          "raw_poisson_probability": 0.1224,
+          "adjustment_role": "raw_central_draw_slice_retained"
+        },
+        {
+          "rank": 4,
+          "score": "0-1",
+          "raw_poisson_probability": 0.085,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 5,
+          "score": "1-2",
+          "raw_poisson_probability": 0.0759,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        }
+      ],
+      "ranking_method": "Display rerank only: raw Poisson matrix remains unchanged; final adjusted ranking chooses a nearby high-probability score using 1X2 direction, xG edge, total-goal profile, tactical volatility and red-team uncertainty.",
+      "reason": "Mexico's edge is small but points in the home direction; 1-0 is the closest non-draw neighbor and fits the balanced total profile better than using 1-1 as final display again.",
+      "confidence": "medium_low",
+      "safeguards": [
+        "Do not overwrite poisson_score_matrix.",
+        "Keep raw_poisson_top_scorelines visible beside adjusted_top_scorelines.",
+        "Do not change 1X2, xG, totals, red-team status or betting gate."
+      ]
+    },
+    {
+      "match_id": "M82",
+      "match": "比利时 vs 塞内加尔",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "previous_adjustment_status": "triggered",
+      "raw_poisson_top1": {
+        "score": "1-1",
+        "probability": 0.10463
+      },
+      "raw_poisson_top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.10463
+        },
+        {
+          "score": "2-1",
+          "probability": 0.088935
+        },
+        {
+          "score": "1-2",
+          "probability": 0.077426
+        },
+        {
+          "score": "1-0",
+          "probability": 0.070696
+        },
+        {
+          "score": "2-2",
+          "probability": 0.065812
+        }
+      ],
+      "expected_goals": {
+        "team_a": 1.7,
+        "team_b": 1.48,
+        "total": 3.18,
+        "xg_gap": 0.22
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4302,
+        "draw": 0.2336,
+        "team_b_win": 0.3361
+      },
+      "team_strength_score": {
+        "team_a": 82,
+        "team_b": 79,
+        "scale": "0-100"
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.6159,
+        "under_2_5": 0.3841
+      },
+      "final_adjusted_top_scoreline": "2-1",
+      "adjusted_top_scorelines": [
+        {
+          "rank": 1,
+          "score": "2-1",
+          "raw_poisson_probability": 0.088935,
+          "adjustment_role": "final_adjusted_top_scoreline"
+        },
+        {
+          "rank": 2,
+          "score": "1-2",
+          "raw_poisson_probability": 0.077426,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 3,
+          "score": "2-2",
+          "raw_poisson_probability": 0.065812,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 4,
+          "score": "1-1",
+          "raw_poisson_probability": 0.10463,
+          "adjustment_role": "raw_central_draw_slice_retained"
+        },
+        {
+          "rank": 5,
+          "score": "3-1",
+          "raw_poisson_probability": 0.050397,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        }
+      ],
+      "ranking_method": "Display rerank only: raw Poisson matrix remains unchanged; final adjusted ranking chooses a nearby high-probability score using 1X2 direction, xG edge, total-goal profile, tactical volatility and red-team uncertainty.",
+      "reason": "Belgium's 1X2/xG edge is modest, but total xG is high and the match has transition volatility. Final display should move from 1-1 to open favorite-edge, with Senegal's 1-2 and 2-2 kept high.",
+      "confidence": "medium_low",
+      "safeguards": [
+        "Do not overwrite poisson_score_matrix.",
+        "Keep raw_poisson_top_scorelines visible beside adjusted_top_scorelines.",
+        "Do not change 1X2, xG, totals, red-team status or betting gate."
+      ]
+    },
+    {
+      "match_id": "M83",
+      "match": "葡萄牙 vs 克罗地亚",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "previous_adjustment_status": "near_miss",
+      "raw_poisson_top1": {
+        "score": "1-1",
+        "probability": 0.11936
+      },
+      "raw_poisson_top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.11936
+        },
+        {
+          "score": "1-0",
+          "probability": 0.110518
+        },
+        {
+          "score": "2-1",
+          "probability": 0.094294
+        },
+        {
+          "score": "2-0",
+          "probability": 0.087309
+        },
+        {
+          "score": "0-1",
+          "probability": 0.075544
+        }
+      ],
+      "expected_goals": {
+        "team_a": 1.58,
+        "team_b": 1.08,
+        "total": 2.66,
+        "xg_gap": 0.5
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4893,
+        "draw": 0.251,
+        "team_b_win": 0.2597
+      },
+      "team_strength_score": {
+        "team_a": 83,
+        "team_b": 75,
+        "scale": "0-100"
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4965,
+        "under_2_5": 0.5035
+      },
+      "final_adjusted_top_scoreline": "1-0",
+      "adjusted_top_scorelines": [
+        {
+          "rank": 1,
+          "score": "1-0",
+          "raw_poisson_probability": 0.110518,
+          "adjustment_role": "final_adjusted_top_scoreline"
+        },
+        {
+          "rank": 2,
+          "score": "2-1",
+          "raw_poisson_probability": 0.094294,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 3,
+          "score": "2-0",
+          "raw_poisson_probability": 0.087309,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 4,
+          "score": "1-1",
+          "raw_poisson_probability": 0.11936,
+          "adjustment_role": "raw_central_draw_slice_retained"
+        },
+        {
+          "rank": 5,
+          "score": "0-1",
+          "raw_poisson_probability": 0.075544,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        }
+      ],
+      "ranking_method": "Display rerank only: raw Poisson matrix remains unchanged; final adjusted ranking chooses a nearby high-probability score using 1X2 direction, xG edge, total-goal profile, tactical volatility and red-team uncertainty.",
+      "reason": "Portugal has the stronger 1X2/xG direction but the total profile is not strongly over. 1-0 is the closest non-draw neighbor and better represents controlled favorite edge.",
+      "confidence": "medium",
+      "safeguards": [
+        "Do not overwrite poisson_score_matrix.",
+        "Keep raw_poisson_top_scorelines visible beside adjusted_top_scorelines.",
+        "Do not change 1X2, xG, totals, red-team status or betting gate."
+      ]
+    },
+    {
+      "match_id": "M84",
+      "match": "西班牙 vs 奥地利",
+      "source_file": "data/outputs/match_predictions/round32-m81-m84-v3-quant-prediction-20260628.json",
+      "previous_adjustment_status": "not_triggered_but_top1_caveat",
+      "raw_poisson_top1": {
+        "score": "1-1",
+        "probability": 0.103427
+      },
+      "raw_poisson_top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.103427
+        },
+        {
+          "score": "2-1",
+          "probability": 0.09929
+        },
+        {
+          "score": "1-0",
+          "probability": 0.098502
+        },
+        {
+          "score": "2-0",
+          "probability": 0.094562
+        },
+        {
+          "score": "3-1",
+          "probability": 0.063546
+        }
+      ],
+      "expected_goals": {
+        "team_a": 1.92,
+        "team_b": 1.05,
+        "total": 2.97,
+        "xg_gap": 0.87
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5765,
+        "draw": 0.2201,
+        "team_b_win": 0.2033
+      },
+      "team_strength_score": {
+        "team_a": 88,
+        "team_b": 76,
+        "scale": "0-100"
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5701,
+        "under_2_5": 0.4299
+      },
+      "final_adjusted_top_scoreline": "2-1",
+      "adjusted_top_scorelines": [
+        {
+          "rank": 1,
+          "score": "2-1",
+          "raw_poisson_probability": 0.09929,
+          "adjustment_role": "final_adjusted_top_scoreline"
+        },
+        {
+          "rank": 2,
+          "score": "2-0",
+          "raw_poisson_probability": 0.094562,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 3,
+          "score": "1-0",
+          "raw_poisson_probability": 0.098502,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 4,
+          "score": "3-1",
+          "raw_poisson_probability": 0.063546,
+          "adjustment_role": "neighbor_cluster_scoreline"
+        },
+        {
+          "rank": 5,
+          "score": "1-1",
+          "raw_poisson_probability": 0.103427,
+          "adjustment_role": "raw_central_draw_slice_retained"
+        }
+      ],
+      "ranking_method": "Display rerank only: raw Poisson matrix remains unchanged; final adjusted ranking chooses a nearby high-probability score using 1X2 direction, xG edge, total-goal profile, tactical volatility and red-team uncertainty.",
+      "reason": "Spain is a clear favorite and raw 1-1 is only 0.41pp above 2-1. With total xG near 3 and Austria's pressing/transition threat, 2-1 is the better adjusted display.",
+      "confidence": "medium_high",
+      "safeguards": [
+        "Do not overwrite poisson_score_matrix.",
+        "Keep raw_poisson_top_scorelines visible beside adjusted_top_scorelines.",
+        "Do not change 1X2, xG, totals, red-team status or betting gate."
+      ]
+    }
+  ],
+  "handoff_to_main": [
+    "Formal Markdown should read final_adjusted_top_scoreline for headline score.",
+    "Formal Markdown should also show raw_poisson_top1/raw_poisson_top_scorelines to avoid hiding the mathematical source.",
+    "Do not alter 1X2 probabilities or raw Poisson matrix during this display rerank."
+  ]
+}

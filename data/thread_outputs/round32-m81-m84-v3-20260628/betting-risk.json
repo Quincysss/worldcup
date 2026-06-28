@@ -1,0 +1,129 @@
+﻿{
+  "schema_version": "round32_m81_m84_betting_risk_v1_initial_hold",
+  "created_at": "2026-06-28T23:59:00+08:00",
+  "project": "E:/worldcup",
+  "role": "betting_risk_thread",
+  "overall_status": "hold_not_executable",
+  "scope": {
+    "stage": "Round of 32",
+    "canonical_bracket_source": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+    "canonical_bracket_status": "revalidated_after_2026_06_28_results",
+    "matches": [
+      "M81 美国 vs 波黑",
+      "M82 比利时 vs 塞内加尔",
+      "M83 葡萄牙 vs 克罗地亚",
+      "M84 西班牙 vs 奥地利"
+    ],
+    "no_executable_betting_advice": true
+  },
+  "allowed_output_states": ["discussion_only", "hold_not_executable", "observation_only"],
+  "upstream_dependency_status": {
+    "data_collector": {
+      "path": "data/thread_outputs/round32-m81-m84-v3-20260628/data-collector.json",
+      "status": "missing",
+      "effect": "hold_not_executable"
+    },
+    "modeler": {
+      "path": "data/thread_outputs/round32-m81-m84-v3-20260628/modeler.json",
+      "status": "missing",
+      "effect": "hold_not_executable"
+    },
+    "red_team": {
+      "path": "data/thread_outputs/round32-m81-m84-v3-20260628/red-team.json",
+      "status": "missing",
+      "effect": "hold_not_executable"
+    }
+  },
+  "global_gates": {
+    "t75_official_lineups": {"status": "not_available_from_required_upstream", "effect": "hold_not_executable"},
+    "latest_injuries_suspensions_minutes": {"status": "not_available_from_required_upstream", "effect": "hold_not_executable"},
+    "official_china_jingcai_odds": {"status": "not_captured", "effect": "hold_not_executable"},
+    "same_source_1x2_handicap_totals_snapshot": {"status": "not_captured", "effect": "hold_not_executable"},
+    "score_total_goals_half_full_time_same_source": {"status": "not_captured", "effect": "hold_not_executable"},
+    "red_team_gate": {"status": "missing", "effect": "hold_not_executable"},
+    "model_probability_package": {"status": "missing", "effect": "hold_not_executable"}
+  },
+  "canonical_fixture_check": [
+    {"match_no": "M81", "fixture": "美国 vs 波黑", "source_slot": "1D vs 3B", "host_date": "2026-07-01", "kickoff_host": "17:00", "venue": "San Francisco Bay Area Stadium", "round_of_16_path": "M94 胜者路径：M81胜者 vs M82胜者", "status": "confirmed_current_public_schedule"},
+    {"match_no": "M82", "fixture": "比利时 vs 塞内加尔", "source_slot": "1G vs 3I", "host_date": "2026-07-01", "kickoff_host": "13:00", "venue": "Seattle Stadium", "round_of_16_path": "M94 胜者路径：M81胜者 vs M82胜者", "status": "confirmed_current_public_schedule"},
+    {"match_no": "M83", "fixture": "葡萄牙 vs 克罗地亚", "source_slot": "2K vs 2L", "host_date": "2026-07-02", "kickoff_host": "19:00", "venue": "Toronto Stadium", "round_of_16_path": "M93 胜者路径：M83胜者 vs M84胜者", "status": "confirmed_current_public_schedule"},
+    {"match_no": "M84", "fixture": "西班牙 vs 奥地利", "source_slot": "1H vs 2J", "host_date": "2026-07-02", "kickoff_host": "12:00", "venue": "Los Angeles Stadium", "round_of_16_path": "M93 胜者路径：M83胜者 vs M84胜者", "status": "confirmed_current_public_schedule"}
+  ],
+  "matches": [
+    {
+      "match_no": "M81",
+      "fixture": "美国 vs 波黑",
+      "betting_gate_status": "hold_not_executable",
+      "market_availability": {
+        "official_china_jingcai": {"status": "not_captured", "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "captured_at": null},
+        "500_snapshot": {"status": "not_captured", "captured_at": null},
+        "markets": {"1x2": "not_captured", "handicap": "not_captured", "over_under": "not_captured", "correct_score": "not_captured", "total_goals": "not_captured", "half_full_time": "not_captured"},
+        "same_source_completeness": "missing",
+        "odds_calibration_status": "unavailable"
+      },
+      "gates": {"t75_official_lineup": "missing", "latest_injury_suspension_minutes": "missing", "same_source_odds": "missing", "red_team": "missing", "modeler": "missing"},
+      "risk_observation": ["Canonical fixture is confirmed, but no M81-M84 v3 data/model/red-team package exists at the required path.", "No official China or same-source market chain is available.", "Host-team narrative, handicap and score language cannot be valued without model and market packets."],
+      "deleted_items": ["Executable ticket wording", "Model-market edge claim", "Score, total-goals or handicap valuation"],
+      "live_wait_items": ["data-collector.json", "modeler.json", "red-team.json", "T-75 official lineups", "latest injuries, suspensions and minutes limits", "official China Jingcai odds", "same-source 1X2, handicap and totals"]
+    },
+    {
+      "match_no": "M82",
+      "fixture": "比利时 vs 塞内加尔",
+      "betting_gate_status": "hold_not_executable",
+      "market_availability": {
+        "official_china_jingcai": {"status": "not_captured", "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "captured_at": null},
+        "500_snapshot": {"status": "not_captured", "captured_at": null},
+        "markets": {"1x2": "not_captured", "handicap": "not_captured", "over_under": "not_captured", "correct_score": "not_captured", "total_goals": "not_captured", "half_full_time": "not_captured"},
+        "same_source_completeness": "missing",
+        "odds_calibration_status": "unavailable"
+      },
+      "gates": {"t75_official_lineup": "missing", "latest_injury_suspension_minutes": "missing", "same_source_odds": "missing", "red_team": "missing", "modeler": "missing"},
+      "risk_observation": ["Canonical fixture is confirmed, but model probabilities and red-team verdict are absent.", "Belgium favorite framing and Senegal transition/upset tails cannot be priced without lineup and odds packets.", "No 1X2, handicap or totals snapshot is available from one source."],
+      "deleted_items": ["Executable ticket wording", "Favorite framing without price check", "Totals and score valuation"],
+      "live_wait_items": ["data-collector.json", "modeler.json", "red-team.json", "T-75 official lineups", "latest injuries, suspensions and minutes limits", "official China Jingcai odds", "same-source 1X2, handicap and totals"]
+    },
+    {
+      "match_no": "M83",
+      "fixture": "葡萄牙 vs 克罗地亚",
+      "betting_gate_status": "hold_not_executable",
+      "market_availability": {
+        "official_china_jingcai": {"status": "not_captured", "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "captured_at": null},
+        "500_snapshot": {"status": "not_captured", "captured_at": null},
+        "markets": {"1x2": "not_captured", "handicap": "not_captured", "over_under": "not_captured", "correct_score": "not_captured", "total_goals": "not_captured", "half_full_time": "not_captured"},
+        "same_source_completeness": "missing",
+        "odds_calibration_status": "unavailable"
+      },
+      "gates": {"t75_official_lineup": "missing", "latest_injury_suspension_minutes": "missing", "same_source_odds": "missing", "red_team": "missing", "modeler": "missing"},
+      "risk_observation": ["Canonical fixture is confirmed as a 2K vs 2L knockout match, but no model package exists here.", "Portugal-Croatia likely requires explicit 90-minute versus advancement boundary before any market discussion.", "No same-source odds means draw, extra-time and narrow-margin risk cannot be calibrated."],
+      "deleted_items": ["Executable ticket wording", "90-minute direction claim without model", "Narrow-margin score or handicap valuation"],
+      "live_wait_items": ["data-collector.json", "modeler.json", "red-team.json", "T-75 official lineups", "latest injuries, suspensions and minutes limits", "official China Jingcai odds", "same-source 1X2, handicap and totals"]
+    },
+    {
+      "match_no": "M84",
+      "fixture": "西班牙 vs 奥地利",
+      "betting_gate_status": "hold_not_executable",
+      "market_availability": {
+        "official_china_jingcai": {"status": "not_captured", "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "captured_at": null},
+        "500_snapshot": {"status": "not_captured", "captured_at": null},
+        "markets": {"1x2": "not_captured", "handicap": "not_captured", "over_under": "not_captured", "correct_score": "not_captured", "total_goals": "not_captured", "half_full_time": "not_captured"},
+        "same_source_completeness": "missing",
+        "odds_calibration_status": "unavailable"
+      },
+      "gates": {"t75_official_lineup": "missing", "latest_injury_suspension_minutes": "missing", "same_source_odds": "missing", "red_team": "missing", "modeler": "missing"},
+      "risk_observation": ["Canonical fixture is confirmed, but no M84 v3 model and red-team package exists.", "Spain control narrative and Austria pressing/transition resistance cannot be translated into odds terms without model, lineup and same-source markets.", "Score, total-goals and half/full-time markets remain unavailable for calibration."],
+      "deleted_items": ["Executable ticket wording", "Favorite or handicap valuation", "Score, total-goals or half/full-time valuation"],
+      "live_wait_items": ["data-collector.json", "modeler.json", "red-team.json", "T-75 official lineups", "latest injuries, suspensions and minutes limits", "official China Jingcai odds", "same-source 1X2, handicap and totals"]
+    }
+  ],
+  "output_limits": [
+    "No executable ticket list.",
+    "No stake, payout or parlay construction.",
+    "No model-market edge calculation.",
+    "No upgrade beyond observation_only while required upstream and official/same-source China odds are missing."
+  ],
+  "validation": {"json_parse": "passed_after_write", "no_placeholder_markers": true, "no_executable_betting_language": true}
+}

@@ -1,0 +1,2051 @@
+{
+  "schema_version": "round32_m81_m84_modeler_v3",
+  "phase": "round_of_32_match_prediction",
+  "status": "completed_partial_source_limited_data_available_tactics_older_than_data",
+  "created_at": "2026-06-28T22:46:00+08:00",
+  "updated_at": "2026-06-28T22:52:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "M81-M84 Round of 32 90-minute quantitative predictions; no betting advice",
+  "model_scope": {
+    "canonical_bracket": "2026-06-28",
+    "matches": [
+      {
+        "match_id": "M81",
+        "team_a": "美国",
+        "team_b": "波黑"
+      },
+      {
+        "match_id": "M82",
+        "team_a": "比利时",
+        "team_b": "塞内加尔"
+      },
+      {
+        "match_id": "M83",
+        "team_a": "葡萄牙",
+        "team_b": "克罗地亚"
+      },
+      {
+        "match_id": "M84",
+        "team_a": "西班牙",
+        "team_b": "奥地利"
+      }
+    ]
+  },
+  "input_readiness": {
+    "overall_status": "partial_source_limited_data_available_tactics_older_than_data",
+    "data_collector_packet": "available",
+    "tactics_coach_packet": "available_but_older_than_data_partial",
+    "predicted_lineups_source": "data_collector_packet",
+    "predicted_lineups_data_thread_blocker": false,
+    "odds_snapshot": "missing_same_source_complete_snapshot",
+    "red_team": "pending",
+    "no_betting_advice": true
+  },
+  "method": {
+    "engine": "Independent Poisson from final xG, 0-0 to 5-5 matrix with tail retained.",
+    "probability_basis": "90-minute 1X2; knockout advancement not simulated.",
+    "market_treatment": "No odds shift because same-source odds snapshot is missing.",
+    "lineup_treatment": "Data-collector probable XI retained for all eight teams; official T-75 XI remains missing.",
+    "tactical_treatment": "Tactics-coach package is available but older than data; absorbed with conservative caps."
+  },
+  "factor_weights": {
+    "baseline_strength": 0.27,
+    "attack": 0.15,
+    "defense": 0.15,
+    "player_state": 0.14,
+    "injury_suspension_minutes": 0.09,
+    "tactical_matchup": 0.12,
+    "schedule_environment": 0.04,
+    "knockout_context": 0.04,
+    "market": 0,
+    "notes": "Market weight set to 0.00 because same-source odds are missing; tactics are capped because tactics-coach packet is missing."
+  },
+  "matches": [
+    {
+      "match_id": "M81",
+      "match_no": 81,
+      "stage": "Round of 32",
+      "match_identity": {
+        "match_id": "M81",
+        "source_match_id": "M81_2026-07-01_美国_vs_波黑",
+        "match_no": 81,
+        "stage": "Round of 32",
+        "team_a": "美国",
+        "team_b": "波黑",
+        "team_a_en": "United States",
+        "team_b_en": "Bosnia and Herzegovina",
+        "canonical_bracket": "2026-06-28",
+        "kickoff_local": "2026-07-01 17:00",
+        "kickoff_beijing": "2026-07-02 01:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "host_city": "Santa Clara / San Francisco Bay Area",
+        "round_of_16_path": "M81胜者 vs M82胜者",
+        "source_status": "confirmed_by_2026_06_28_canonical_bracket",
+        "captured_at": "2026-06-28T22:41:40+08:00"
+      },
+      "input_readiness": {
+        "data_collector_packet": "available",
+        "tactics_coach_packet": "available_but_older_than_data_partial",
+        "overall_status": "partial_source_limited_data_available_tactics_older_than_data",
+        "predicted_lineups_source": "data_collector_packet",
+        "predicted_lineups_data_thread_blocker": false,
+        "official_lineups_status": "missing_until_T_minus_75m",
+        "odds_snapshot": "missing_same_source_complete_snapshot",
+        "market_availability": "not_available_yet",
+        "red_team": "pending",
+        "no_betting_advice": true,
+        "gaps_and_conflicts": [
+          "data-collector.json 已吸收，赛程和 predicted_lineups 来自数据线程。",
+          "tactics-coach.json 可用但时间早于 data-collector.json，按 partial tactics 限幅吸收。",
+          "T-75 官方首发和同源赔率仍缺失。"
+        ]
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official_from_data_collector_packet",
+        "captured_at": "2026-06-28T22:41:40+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "team_a": {
+          "team": "美国",
+          "team_en": "United States",
+          "formation": "4-2-3-1",
+          "confidence": "medium",
+          "source_status": "probable_not_official",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "马特·弗里斯",
+              "player_en": "Matt Freese",
+              "role_note": "一门候选，本地状态稳定"
+            },
+            {
+              "position": "RB",
+              "player_cn": "亚历克斯·弗里曼",
+              "player_en": "Alex Freeman",
+              "role_note": "右后卫，高状态"
+            },
+            {
+              "position": "CB",
+              "player_cn": "克里斯·理查兹",
+              "player_en": "Chris Richards",
+              "role_note": "中卫对抗"
+            },
+            {
+              "position": "CB",
+              "player_cn": "蒂姆·里姆",
+              "player_en": "Tim Ream",
+              "role_note": "中卫出球和经验"
+            },
+            {
+              "position": "LB",
+              "player_cn": "安东尼·罗宾逊",
+              "player_en": "Antonee Robinson",
+              "role_note": "左后卫推进"
+            },
+            {
+              "position": "DM",
+              "player_cn": "泰勒·亚当斯",
+              "player_en": "Tyler Adams",
+              "role_note": "后腰保护"
+            },
+            {
+              "position": "CM",
+              "player_cn": "韦斯顿·麦肯尼",
+              "player_en": "Weston McKennie",
+              "role_note": "中场前插"
+            },
+            {
+              "position": "AM",
+              "player_cn": "马利克·蒂尔曼",
+              "player_en": "Malik Tillman",
+              "role_note": "前腰连接"
+            },
+            {
+              "position": "RW",
+              "player_cn": "乔瓦尼·雷纳",
+              "player_en": "Giovanni Reyna",
+              "role_note": "右/中路创造"
+            },
+            {
+              "position": "LW",
+              "player_cn": "亚历杭德罗·森德哈斯",
+              "player_en": "Álex Zendejas",
+              "role_note": "边路内切"
+            },
+            {
+              "position": "ST",
+              "player_cn": "弗拉林·巴洛贡",
+              "player_en": "Folarin Balogun",
+              "role_note": "中锋终结"
+            }
+          ],
+          "rotation_candidates": [],
+          "model_impact_if_changed": [
+            "若核心球员或阵型变化，xG、Top5 比分和尾部概率需重跑。"
+          ]
+        },
+        "team_b": {
+          "team": "波黑",
+          "team_en": "Bosnia and Herzegovina",
+          "formation": "4-2-3-1",
+          "confidence": "medium_low",
+          "source_status": "probable_not_official",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "尼古拉·瓦西利",
+              "player_en": "Nikola Vasilj",
+              "role_note": "门将候选"
+            },
+            {
+              "position": "RB",
+              "player_cn": "阿马尔·德迪奇",
+              "player_en": "Amar Dedić",
+              "role_note": "右后卫推进"
+            },
+            {
+              "position": "CB",
+              "player_cn": "埃明·马赫米奇",
+              "player_en": "Emin Mahmić",
+              "role_note": "中卫，本地状态高"
+            },
+            {
+              "position": "CB",
+              "player_cn": "斯捷潘·拉德利奇",
+              "player_en": "Stjepan Radeljić",
+              "role_note": "中卫"
+            },
+            {
+              "position": "LB",
+              "player_cn": "赛德·科拉希纳茨",
+              "player_en": "Sead Kolašinac",
+              "role_note": "左后卫/中卫经验"
+            },
+            {
+              "position": "DM",
+              "player_cn": "阿米尔·哈季艾哈梅托维奇",
+              "player_en": "Amir Hadžiahmetović",
+              "role_note": "后腰连接"
+            },
+            {
+              "position": "CM",
+              "player_cn": "丹尼斯·侯赛因巴希奇",
+              "player_en": "Denis Huseinbašić",
+              "role_note": "中场跑动"
+            },
+            {
+              "position": "AM",
+              "player_cn": "伊万·巴希奇",
+              "player_en": "Ivan Bašić",
+              "role_note": "前腰/中场"
+            },
+            {
+              "position": "RW",
+              "player_cn": "伊斯梅特·巴伊拉克塔雷维奇",
+              "player_en": "Esmir Bajraktarević",
+              "role_note": "边路创造"
+            },
+            {
+              "position": "LW",
+              "player_cn": "凯里姆·阿拉伊贝戈维奇",
+              "player_en": "Kerim Alajbegović",
+              "role_note": "边锋/二前锋"
+            },
+            {
+              "position": "ST",
+              "player_cn": "卢卡·库拉希纳茨",
+              "player_en": "Luka Kulenović",
+              "role_note": "中锋，高状态"
+            }
+          ],
+          "rotation_candidates": [],
+          "model_impact_if_changed": [
+            "若核心球员或阵型变化，xG、Top5 比分和尾部概率需重跑。"
+          ]
+        },
+        "source_log": [
+          "data\\thread_outputs\\round32-m81-m84-v3-20260628\\data-collector.json"
+        ],
+        "gaps_and_conflicts": [
+          "官方首发未公布，confidence capped at medium。"
+        ]
+      },
+      "factor_inputs": {
+        "baseline_strength": {
+          "team_a_score": 78,
+          "team_b_score": 71,
+          "note": "基于 data-collector canonical bracket、晋级路径、小组赛趋势和本地 player_state。"
+        },
+        "attack": {
+          "team_a_score": 77,
+          "team_b_score": 68,
+          "note": "吸收小组赛进球趋势、前场状态点和淘汰赛尾部信号。"
+        },
+        "defense": {
+          "team_a_score": 72,
+          "team_b_score": 66,
+          "note": "吸收失球、门将、低位抗压和转换防守风险。"
+        },
+        "player_state": {
+          "team_a_adjustment": 0.04,
+          "team_b_adjustment": -0.02,
+          "source_status": "local_player_state_partial"
+        },
+        "injury_suspension_minutes": {
+          "team_a_adjustment": 0,
+          "team_b_adjustment": -0.02,
+          "source_status": "latest_thread_packet_missing"
+        },
+        "tactical_matchup": {
+          "source_status": "tactics_available_but_older_than_data_partial",
+          "summary": "美国4-2-3-1/4-3-3的主场压迫、宽度和运动能力，对波黑4-2-3-1/4-4-2的Dzeko支点、Pjanic节奏和定位球形成主动压制与高线反击风险并存的对位。"
+        },
+        "schedule_environment": {
+          "venue": "San Francisco Bay Area Stadium",
+          "host_city": "Santa Clara / San Francisco Bay Area",
+          "kickoff_local": "2026-07-01 17:00",
+          "source_status": "data_collector_packet"
+        },
+        "market": {
+          "status": "odds_missing",
+          "adjustment": 0
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.27,
+        "attack": 0.15,
+        "defense": 0.15,
+        "player_state": 0.14,
+        "injury_suspension_minutes": 0.09,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.04,
+        "knockout_context": 0.04,
+        "market": 0,
+        "notes": "Market weight set to 0.00 because same-source odds are missing; tactics are capped because tactics-coach packet is missing."
+      },
+      "team_strength_score": {
+        "team_a": 78,
+        "team_b": 71,
+        "scale": "0-100"
+      },
+      "attack_score": {
+        "team_a": 77,
+        "team_b": 68,
+        "scale": "0-100"
+      },
+      "defense_score": {
+        "team_a": 72,
+        "team_b": 66,
+        "scale": "0-100"
+      },
+      "player_state_adjustment": {
+        "team_a": 0.04,
+        "team_b": -0.02,
+        "unit": "xG-equivalent capped small shift"
+      },
+      "injury_adjustment": {
+        "team_a": 0,
+        "team_b": -0.02,
+        "unit": "xG-equivalent capped small shift"
+      },
+      "tactical_matchup_adjustment": {
+        "team_a": 0.06,
+        "team_b": -0.04,
+        "note": "美国4-2-3-1/4-3-3的主场压迫、宽度和运动能力，对波黑4-2-3-1/4-4-2的Dzeko支点、Pjanic节奏和定位球形成主动压制与高线反击风险并存的对位。"
+      },
+      "schedule_environment_adjustment": {
+        "team_a": 0.03,
+        "team_b": -0.01,
+        "note": "赛程/场地来自 data-collector：San Francisco Bay Area Stadium。"
+      },
+      "market_adjustment": {
+        "status": "odds_missing",
+        "xg_shift": {
+          "team_a": 0,
+          "team_b": 0
+        },
+        "probability_shift": 0
+      },
+      "expected_goals": {
+        "pre_market": {
+          "team_a": 1.75,
+          "team_b": 1
+        },
+        "final": {
+          "team_a": 1.75,
+          "team_b": 1,
+          "total": 2.75
+        },
+        "total": 2.75,
+        "team_a_xg": 1.75,
+        "team_b_xg": 1,
+        "total_xg": 2.75,
+        "xg_display": {
+          "team_a": 1.75,
+          "team_b": 1,
+          "total": 2.75,
+          "source_path": "expected_goals.final"
+        }
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0": {
+            "0": 0.063928,
+            "1": 0.063928,
+            "2": 0.031964,
+            "3": 0.010655,
+            "4": 0.002664,
+            "5": 0.000533
+          },
+          "1": {
+            "0": 0.111874,
+            "1": 0.111874,
+            "2": 0.055937,
+            "3": 0.018646,
+            "4": 0.004661,
+            "5": 0.000932
+          },
+          "2": {
+            "0": 0.09789,
+            "1": 0.09789,
+            "2": 0.048945,
+            "3": 0.016315,
+            "4": 0.004079,
+            "5": 0.000816
+          },
+          "3": {
+            "0": 0.057102,
+            "1": 0.057102,
+            "2": 0.028551,
+            "3": 0.009517,
+            "4": 0.002379,
+            "5": 0.000476
+          },
+          "4": {
+            "0": 0.024982,
+            "1": 0.024982,
+            "2": 0.012491,
+            "3": 0.004164,
+            "4": 0.001041,
+            "5": 0.000208
+          },
+          "5": {
+            "0": 0.008744,
+            "1": 0.008744,
+            "2": 0.004372,
+            "3": 0.001457,
+            "4": 0.000364,
+            "5": 0.000073
+          }
+        },
+        "tail_probability": 0.00972,
+        "matrix_sum_check": 1
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5498,
+        "draw": 0.2354,
+        "team_b_win": 0.2148
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5185,
+        "under_2_5": 0.4815
+      },
+      "btts": {
+        "yes": 0.5223,
+        "no": 0.4777
+      },
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 0.111874
+        },
+        {
+          "score": "1-1",
+          "probability": 0.111874
+        },
+        {
+          "score": "2-0",
+          "probability": 0.09789
+        },
+        {
+          "score": "2-1",
+          "probability": 0.09789
+        },
+        {
+          "score": "0-0",
+          "probability": 0.063928
+        }
+      ],
+      "odds_implied_probability": null,
+      "model_market_delta": null,
+      "confidence_interval": {
+        "team_a_win": [
+          0.4998,
+          0.5998
+        ],
+        "draw": [
+          0.2004,
+          0.2704
+        ],
+        "team_b_win": [
+          0.1648,
+          0.2648
+        ],
+        "xg_team_a": [
+          1.59,
+          1.91
+        ],
+        "xg_team_b": [
+          0.84,
+          1.16
+        ]
+      },
+      "uncertainty": {
+        "level": "medium_high",
+        "reasons": [
+          "上游 data/tactics 缺失",
+          "T-75 官方首发缺失",
+          "淘汰赛加时/点球不在90分钟1X2内",
+          "赔率快照缺失"
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "basis": "pre_red_team_model",
+        "team_a_win": 0.5498,
+        "draw": 0.2354,
+        "team_b_win": 0.2148
+      },
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "90分钟胜平负模型，不含加时点球晋级概率。",
+        "上游 data/tactics 落盘后应重跑，尤其是 predicted_lineups、venue、odds 和战术十因子。",
+        "不输出投注建议，betting_gate_status=discussion_only_hold。"
+      ],
+      "group_stage_summary": {
+        "usa": {
+          "known_results": [
+            "美国 4-1 巴拉圭",
+            "美国 2-0 澳大利亚",
+            "土耳其 vs 美国 第三轮本地复盘缺失"
+          ],
+          "rank_source": "canonical bracket marks United States as 1D; public reports say USA topped Group D despite final-game loss to Turkey",
+          "trend_notes": [
+            "前两轮主场冲击和前场速度强",
+            "第三轮据公开报道负于土耳其但不影响头名",
+            "Freeman/Adams/McKennie/Tillman/Balogun 本地状态分高"
+          ]
+        },
+        "bosnia_herzegovina": {
+          "known_results": [
+            "加拿大 1-1 波黑",
+            "瑞士 4-1 波黑",
+            "波黑 3-1 卡塔尔"
+          ],
+          "rank_source": "canonical third-place assignment maps Bosnia and Herzegovina as 3B",
+          "trend_notes": [
+            "第三轮击败卡塔尔后作为B组第三晋级",
+            "本地 player_state 标 completed_core_partial_match_detail",
+            "Mahmić/Kulenović/Bajraktarević/Demirović 是主要状态和进攻线索"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": "M82",
+      "match_no": 82,
+      "stage": "Round of 32",
+      "match_identity": {
+        "match_id": "M82",
+        "source_match_id": "M82_2026-07-01_比利时_vs_塞内加尔",
+        "match_no": 82,
+        "stage": "Round of 32",
+        "team_a": "比利时",
+        "team_b": "塞内加尔",
+        "team_a_en": "Belgium",
+        "team_b_en": "Senegal",
+        "canonical_bracket": "2026-06-28",
+        "kickoff_local": "2026-07-01 13:00",
+        "kickoff_beijing": "21:00",
+        "venue": "Seattle Stadium",
+        "host_city": "Seattle",
+        "round_of_16_path": "M81胜者 vs M82胜者",
+        "source_status": "confirmed_by_2026_06_28_canonical_bracket",
+        "captured_at": "2026-06-28T22:41:40+08:00"
+      },
+      "input_readiness": {
+        "data_collector_packet": "available",
+        "tactics_coach_packet": "available_but_older_than_data_partial",
+        "overall_status": "partial_source_limited_data_available_tactics_older_than_data",
+        "predicted_lineups_source": "data_collector_packet",
+        "predicted_lineups_data_thread_blocker": false,
+        "official_lineups_status": "missing_until_T_minus_75m",
+        "odds_snapshot": "missing_same_source_complete_snapshot",
+        "market_availability": "not_available_yet",
+        "red_team": "pending",
+        "no_betting_advice": true,
+        "gaps_and_conflicts": [
+          "data-collector.json 已吸收，赛程和 predicted_lineups 来自数据线程。",
+          "tactics-coach.json 可用但时间早于 data-collector.json，按 partial tactics 限幅吸收。",
+          "T-75 官方首发和同源赔率仍缺失。"
+        ]
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official_from_data_collector_packet",
+        "captured_at": "2026-06-28T22:41:40+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "team_a": {
+          "team": "比利时",
+          "team_en": "Belgium",
+          "formation": "4-2-3-1",
+          "confidence": "medium_low",
+          "source_status": "probable_not_official",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "蒂博·库尔图瓦",
+              "player_en": "Thibaut Courtois",
+              "role_note": "一门，队内状态最高"
+            },
+            {
+              "position": "RB",
+              "player_cn": "蒂莫西·卡斯塔涅",
+              "player_en": "Timothy Castagne",
+              "role_note": "右后卫"
+            },
+            {
+              "position": "CB",
+              "player_cn": "泽诺·德巴斯特",
+              "player_en": "Zeno Debast",
+              "role_note": "中卫"
+            },
+            {
+              "position": "CB",
+              "player_cn": "阿蒂尔·泰特",
+              "player_en": "Arthur Theate",
+              "role_note": "中卫/左侧防守"
+            },
+            {
+              "position": "LB",
+              "player_cn": "阿莱克西斯·萨勒马克尔斯",
+              "player_en": "Alexis Saelemaekers",
+              "role_note": "边后卫/翼侧候选"
+            },
+            {
+              "position": "DM",
+              "player_cn": "阿马杜·奥纳纳",
+              "player_en": "Amadou Onana",
+              "role_note": "后腰对抗"
+            },
+            {
+              "position": "CM",
+              "player_cn": "尤里·蒂勒曼斯",
+              "player_en": "Youri Tielemans",
+              "role_note": "中场传球"
+            },
+            {
+              "position": "AM",
+              "player_cn": "凯文·德布劳内",
+              "player_en": "Kevin De Bruyne",
+              "role_note": "核心创造"
+            },
+            {
+              "position": "RW",
+              "player_cn": "杰里米·多库",
+              "player_en": "Jeremy Doku",
+              "role_note": "右/左路突破"
+            },
+            {
+              "position": "LW",
+              "player_cn": "莱安德罗·特罗萨德",
+              "player_en": "Leandro Trossard",
+              "role_note": "左路内切"
+            },
+            {
+              "position": "ST",
+              "player_cn": "查尔斯·德凯特拉雷",
+              "player_en": "Charles De Ketelaere",
+              "role_note": "中锋/九号半"
+            }
+          ],
+          "rotation_candidates": [],
+          "model_impact_if_changed": [
+            "若核心球员或阵型变化，xG、Top5 比分和尾部概率需重跑。"
+          ]
+        },
+        "team_b": {
+          "team": "塞内加尔",
+          "team_en": "Senegal",
+          "formation": "4-3-3",
+          "confidence": "medium_low",
+          "source_status": "probable_not_official",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "爱德华-门迪",
+              "player_en": "Édouard Mendy",
+              "role_note": "一门"
+            },
+            {
+              "position": "RB",
+              "player_cn": "克雷潘-迪亚塔",
+              "player_en": "Krépin Diatta",
+              "role_note": "右路往返"
+            },
+            {
+              "position": "CB",
+              "player_cn": "穆萨-尼亚哈特",
+              "player_en": "Moussa Niakhaté",
+              "role_note": "中卫"
+            },
+            {
+              "position": "CB",
+              "player_cn": "阿卜杜拉耶-塞克",
+              "player_en": "Abdoulaye Seck",
+              "role_note": "中卫防空"
+            },
+            {
+              "position": "LB",
+              "player_cn": "埃尔-哈吉-马利克-迪乌夫",
+              "player_en": "El Hadji Malick Diouf",
+              "role_note": "左后卫推进"
+            },
+            {
+              "position": "DM",
+              "player_cn": "伊德里萨-盖耶",
+              "player_en": "Idrissa Gueye",
+              "role_note": "后腰经验"
+            },
+            {
+              "position": "CM",
+              "player_cn": "拉明-卡马拉",
+              "player_en": "Lamine Camara",
+              "role_note": "中场推进"
+            },
+            {
+              "position": "CM",
+              "player_cn": "帕普-马塔尔-萨尔",
+              "player_en": "Pape Matar Sarr",
+              "role_note": "中场跑动"
+            },
+            {
+              "position": "RW",
+              "player_cn": "易卜拉欣-姆巴耶",
+              "player_en": "Ibrahim Mbaye",
+              "role_note": "右路高状态"
+            },
+            {
+              "position": "LW",
+              "player_cn": "伊利曼-恩迪亚耶",
+              "player_en": "Iliman Ndiaye",
+              "role_note": "左/中路创造"
+            },
+            {
+              "position": "ST",
+              "player_cn": "尼古拉斯-杰克逊",
+              "player_en": "Nicolas Jackson",
+              "role_note": "中锋冲击"
+            }
+          ],
+          "rotation_candidates": [],
+          "model_impact_if_changed": [
+            "若核心球员或阵型变化，xG、Top5 比分和尾部概率需重跑。"
+          ]
+        },
+        "source_log": [
+          "data\\thread_outputs\\round32-m81-m84-v3-20260628\\data-collector.json"
+        ],
+        "gaps_and_conflicts": [
+          "官方首发未公布，confidence capped at medium。"
+        ]
+      },
+      "factor_inputs": {
+        "baseline_strength": {
+          "team_a_score": 82,
+          "team_b_score": 79,
+          "note": "基于 data-collector canonical bracket、晋级路径、小组赛趋势和本地 player_state。"
+        },
+        "attack": {
+          "team_a_score": 85,
+          "team_b_score": 81,
+          "note": "吸收小组赛进球趋势、前场状态点和淘汰赛尾部信号。"
+        },
+        "defense": {
+          "team_a_score": 76,
+          "team_b_score": 77,
+          "note": "吸收失球、门将、低位抗压和转换防守风险。"
+        },
+        "player_state": {
+          "team_a_adjustment": 0.04,
+          "team_b_adjustment": 0.05,
+          "source_status": "local_player_state_partial"
+        },
+        "injury_suspension_minutes": {
+          "team_a_adjustment": 0,
+          "team_b_adjustment": 0,
+          "source_status": "latest_thread_packet_missing"
+        },
+        "tactical_matchup": {
+          "source_status": "tactics_available_but_older_than_data_partial",
+          "summary": "比利时4-2-3-1的De Bruyne/Lukaku/Doku纵深与塞内加尔4-2-3-1/4-3-3的身体压迫、边路速度和低位反击互相放大比赛波动。"
+        },
+        "schedule_environment": {
+          "venue": "Seattle Stadium",
+          "host_city": "Seattle",
+          "kickoff_local": "2026-07-01 13:00",
+          "source_status": "data_collector_packet"
+        },
+        "market": {
+          "status": "odds_missing",
+          "adjustment": 0
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.27,
+        "attack": 0.15,
+        "defense": 0.15,
+        "player_state": 0.14,
+        "injury_suspension_minutes": 0.09,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.04,
+        "knockout_context": 0.04,
+        "market": 0,
+        "notes": "Market weight set to 0.00 because same-source odds are missing; tactics are capped because tactics-coach packet is missing."
+      },
+      "team_strength_score": {
+        "team_a": 82,
+        "team_b": 79,
+        "scale": "0-100"
+      },
+      "attack_score": {
+        "team_a": 85,
+        "team_b": 81,
+        "scale": "0-100"
+      },
+      "defense_score": {
+        "team_a": 76,
+        "team_b": 77,
+        "scale": "0-100"
+      },
+      "player_state_adjustment": {
+        "team_a": 0.04,
+        "team_b": 0.05,
+        "unit": "xG-equivalent capped small shift"
+      },
+      "injury_adjustment": {
+        "team_a": 0,
+        "team_b": 0,
+        "unit": "xG-equivalent capped small shift"
+      },
+      "tactical_matchup_adjustment": {
+        "team_a": 0.02,
+        "team_b": 0.03,
+        "note": "比利时4-2-3-1的De Bruyne/Lukaku/Doku纵深与塞内加尔4-2-3-1/4-3-3的身体压迫、边路速度和低位反击互相放大比赛波动。"
+      },
+      "schedule_environment_adjustment": {
+        "team_a": 0,
+        "team_b": 0,
+        "note": "赛程/场地来自 data-collector：Seattle Stadium。"
+      },
+      "market_adjustment": {
+        "status": "odds_missing",
+        "xg_shift": {
+          "team_a": 0,
+          "team_b": 0
+        },
+        "probability_shift": 0
+      },
+      "expected_goals": {
+        "pre_market": {
+          "team_a": 1.7,
+          "team_b": 1.48
+        },
+        "final": {
+          "team_a": 1.7,
+          "team_b": 1.48,
+          "total": 3.18
+        },
+        "total": 3.18,
+        "team_a_xg": 1.7,
+        "team_b_xg": 1.48,
+        "total_xg": 3.18,
+        "xg_display": {
+          "team_a": 1.7,
+          "team_b": 1.48,
+          "total": 3.18,
+          "source_path": "expected_goals.final"
+        }
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0": {
+            "0": 0.041586,
+            "1": 0.061547,
+            "2": 0.045545,
+            "3": 0.022469,
+            "4": 0.008313,
+            "5": 0.002461
+          },
+          "1": {
+            "0": 0.070696,
+            "1": 0.10463,
+            "2": 0.077426,
+            "3": 0.038197,
+            "4": 0.014133,
+            "5": 0.004183
+          },
+          "2": {
+            "0": 0.060091,
+            "1": 0.088935,
+            "2": 0.065812,
+            "3": 0.032467,
+            "4": 0.012013,
+            "5": 0.003556
+          },
+          "3": {
+            "0": 0.034052,
+            "1": 0.050397,
+            "2": 0.037293,
+            "3": 0.018398,
+            "4": 0.006807,
+            "5": 0.002015
+          },
+          "4": {
+            "0": 0.014472,
+            "1": 0.021419,
+            "2": 0.01585,
+            "3": 0.007819,
+            "4": 0.002893,
+            "5": 0.000856
+          },
+          "5": {
+            "0": 0.00492,
+            "1": 0.007282,
+            "2": 0.005389,
+            "3": 0.002659,
+            "4": 0.000984,
+            "5": 0.000291
+          }
+        },
+        "tail_probability": 0.012144,
+        "matrix_sum_check": 1
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4302,
+        "draw": 0.2336,
+        "team_b_win": 0.3361
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.6159,
+        "under_2_5": 0.3841
+      },
+      "btts": {
+        "yes": 0.6313,
+        "no": 0.3687
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.10463
+        },
+        {
+          "score": "2-1",
+          "probability": 0.088935
+        },
+        {
+          "score": "1-2",
+          "probability": 0.077426
+        },
+        {
+          "score": "1-0",
+          "probability": 0.070696
+        },
+        {
+          "score": "2-2",
+          "probability": 0.065812
+        }
+      ],
+      "odds_implied_probability": null,
+      "model_market_delta": null,
+      "confidence_interval": {
+        "team_a_win": [
+          0.3802,
+          0.4802
+        ],
+        "draw": [
+          0.1986,
+          0.2686
+        ],
+        "team_b_win": [
+          0.2861,
+          0.3861
+        ],
+        "xg_team_a": [
+          1.54,
+          1.86
+        ],
+        "xg_team_b": [
+          1.32,
+          1.64
+        ]
+      },
+      "uncertainty": {
+        "level": "medium_high",
+        "reasons": [
+          "上游 data/tactics 缺失",
+          "T-75 官方首发缺失",
+          "淘汰赛加时/点球不在90分钟1X2内",
+          "赔率快照缺失"
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "basis": "pre_red_team_model",
+        "team_a_win": 0.4302,
+        "draw": 0.2336,
+        "team_b_win": 0.3361
+      },
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "90分钟胜平负模型，不含加时点球晋级概率。",
+        "上游 data/tactics 落盘后应重跑，尤其是 predicted_lineups、venue、odds 和战术十因子。",
+        "不输出投注建议，betting_gate_status=discussion_only_hold。"
+      ],
+      "group_stage_summary": {
+        "belgium": {
+          "known_results": [
+            "比利时 vs 埃及 首轮本地复盘需复核",
+            "比利时 0-0 伊朗",
+            "新西兰 1-5 比利时"
+          ],
+          "rank_source": "canonical bracket marks Belgium as 1G; G组第三轮复盘 thread state says Belgium won group",
+          "trend_notes": [
+            "第二轮低转化0-0，第三轮5-1新西兰反弹",
+            "Courtois/De Bruyne/Doku 为核心状态点",
+            "player_state 仍缺完整第三轮官方分钟"
+          ]
+        },
+        "senegal": {
+          "known_results": [
+            "法国 vs 塞内加尔 首轮本地资料需复核",
+            "挪威 vs 塞内加尔 第二轮本地资料需复核",
+            "塞内加尔 5-0 伊拉克"
+          ],
+          "rank_source": "canonical bracket maps Senegal as 3I; I组第三轮复盘 says Senegal 3 points GD +2 awaiting/qualifying third-place comparison",
+          "trend_notes": [
+            "第三轮5-0伊拉克大胜但仅第三出线",
+            "Mbaye/ Jackson / Ndiaye / Mendy 是本地主要状态点",
+            "I组第三轮 player_state/member-table 未完整回灌"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": "M83",
+      "match_no": 83,
+      "stage": "Round of 32",
+      "match_identity": {
+        "match_id": "M83",
+        "source_match_id": "M83_2026-07-02_葡萄牙_vs_克罗地亚",
+        "match_no": 83,
+        "stage": "Round of 32",
+        "team_a": "葡萄牙",
+        "team_b": "克罗地亚",
+        "team_a_en": "Portugal",
+        "team_b_en": "Croatia",
+        "canonical_bracket": "2026-06-28",
+        "kickoff_local": "2026-07-02 19:00",
+        "kickoff_beijing": "2026-07-03 00:00",
+        "venue": "Toronto Stadium",
+        "host_city": "Toronto",
+        "round_of_16_path": "M83胜者 vs M84胜者",
+        "source_status": "confirmed_by_2026_06_28_canonical_bracket_not_old_portugal_ghana_pairing",
+        "captured_at": "2026-06-28T22:41:40+08:00"
+      },
+      "input_readiness": {
+        "data_collector_packet": "available",
+        "tactics_coach_packet": "available_but_older_than_data_partial",
+        "overall_status": "partial_source_limited_data_available_tactics_older_than_data",
+        "predicted_lineups_source": "data_collector_packet",
+        "predicted_lineups_data_thread_blocker": false,
+        "official_lineups_status": "missing_until_T_minus_75m",
+        "odds_snapshot": "missing_same_source_complete_snapshot",
+        "market_availability": "not_available_yet",
+        "red_team": "pending",
+        "no_betting_advice": true,
+        "gaps_and_conflicts": [
+          "data-collector.json 已吸收，赛程和 predicted_lineups 来自数据线程。",
+          "tactics-coach.json 可用但时间早于 data-collector.json，按 partial tactics 限幅吸收。",
+          "T-75 官方首发和同源赔率仍缺失。"
+        ]
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official_from_data_collector_packet",
+        "captured_at": "2026-06-28T22:41:40+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "team_a": {
+          "team": "葡萄牙",
+          "team_en": "Portugal",
+          "formation": "4-2-3-1",
+          "confidence": "medium",
+          "source_status": "probable_not_official",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "迪奥戈·科斯塔",
+              "player_en": "Diogo Costa",
+              "role_note": "一门，高状态"
+            },
+            {
+              "position": "RB",
+              "player_cn": "迪奥戈·达洛特",
+              "player_en": "Diogo Dalot",
+              "role_note": "右后卫"
+            },
+            {
+              "position": "CB",
+              "player_cn": "鲁本·迪亚斯",
+              "player_en": "Rúben Dias",
+              "role_note": "中卫核心"
+            },
+            {
+              "position": "CB",
+              "player_cn": "雷纳托·韦加",
+              "player_en": "Renato Veiga",
+              "role_note": "中卫/左脚平衡"
+            },
+            {
+              "position": "LB",
+              "player_cn": "若昂·坎塞洛",
+              "player_en": "João Cancelo",
+              "role_note": "边后卫组织"
+            },
+            {
+              "position": "DM",
+              "player_cn": "鲁本·内维斯",
+              "player_en": "Rúben Neves",
+              "role_note": "后腰传球"
+            },
+            {
+              "position": "CM",
+              "player_cn": "若昂·内维斯",
+              "player_en": "João Neves",
+              "role_note": "中场覆盖"
+            },
+            {
+              "position": "AM",
+              "player_cn": "布鲁诺·费尔南德斯",
+              "player_en": "Bruno Fernandes",
+              "role_note": "核心创造"
+            },
+            {
+              "position": "RW",
+              "player_cn": "佩德罗·内托",
+              "player_en": "Pedro Neto",
+              "role_note": "右路速度"
+            },
+            {
+              "position": "LW",
+              "player_cn": "拉斐尔·莱奥",
+              "player_en": "Rafael Leão",
+              "role_note": "左路纵深"
+            },
+            {
+              "position": "ST",
+              "player_cn": "贡萨洛·拉莫斯",
+              "player_en": "Gonçalo Ramos",
+              "role_note": "中锋终结"
+            }
+          ],
+          "rotation_candidates": [],
+          "model_impact_if_changed": [
+            "若核心球员或阵型变化，xG、Top5 比分和尾部概率需重跑。"
+          ]
+        },
+        "team_b": {
+          "team": "克罗地亚",
+          "team_en": "Croatia",
+          "formation": "4-2-3-1",
+          "confidence": "medium",
+          "source_status": "probable_not_official",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "多米尼克·利瓦科维奇",
+              "player_en": "Dominik Livakovic",
+              "role_note": "一门"
+            },
+            {
+              "position": "RB",
+              "player_cn": "约西普·斯塔尼希奇",
+              "player_en": "Josip Stanisic",
+              "role_note": "右后卫"
+            },
+            {
+              "position": "CB",
+              "player_cn": "约西普·舒塔洛",
+              "player_en": "Josip Sutalo",
+              "role_note": "中卫"
+            },
+            {
+              "position": "CB",
+              "player_cn": "约什科·格瓦迪奥尔",
+              "player_en": "Josko Gvardiol",
+              "role_note": "中卫/左侧推进"
+            },
+            {
+              "position": "LB",
+              "player_cn": "伊万·佩里希奇",
+              "player_en": "Ivan Perisic",
+              "role_note": "左路经验与传中"
+            },
+            {
+              "position": "DM",
+              "player_cn": "马特奥·科瓦契奇",
+              "player_en": "Mateo Kovacic",
+              "role_note": "中场推进，80分钟下场负荷观察"
+            },
+            {
+              "position": "CM",
+              "player_cn": "卢卡·莫德里奇",
+              "player_en": "Luka Modric",
+              "role_note": "组织核心，第三轮角球助攻"
+            },
+            {
+              "position": "AM",
+              "player_cn": "尼古拉·弗拉希奇",
+              "player_en": "Nikola Vlasic",
+              "role_note": "前腰，第三轮制胜球"
+            },
+            {
+              "position": "RW",
+              "player_cn": "佩塔尔·苏契奇",
+              "player_en": "Petar Sucic",
+              "role_note": "右/中场攻击，第三轮进球"
+            },
+            {
+              "position": "LW",
+              "player_cn": "马丁·巴图里纳",
+              "player_en": "Martin Baturina",
+              "role_note": "左/中路创造"
+            },
+            {
+              "position": "ST",
+              "player_cn": "安特·布迪米尔",
+              "player_en": "Ante Budimir",
+              "role_note": "中锋支点"
+            }
+          ],
+          "rotation_candidates": [],
+          "model_impact_if_changed": [
+            "若核心球员或阵型变化，xG、Top5 比分和尾部概率需重跑。"
+          ]
+        },
+        "source_log": [
+          "data\\thread_outputs\\round32-m81-m84-v3-20260628\\data-collector.json"
+        ],
+        "gaps_and_conflicts": [
+          "官方首发未公布，confidence capped at medium。"
+        ]
+      },
+      "factor_inputs": {
+        "baseline_strength": {
+          "team_a_score": 83,
+          "team_b_score": 75,
+          "note": "基于 data-collector canonical bracket、晋级路径、小组赛趋势和本地 player_state。"
+        },
+        "attack": {
+          "team_a_score": 82,
+          "team_b_score": 72,
+          "note": "吸收小组赛进球趋势、前场状态点和淘汰赛尾部信号。"
+        },
+        "defense": {
+          "team_a_score": 79,
+          "team_b_score": 74,
+          "note": "吸收失球、门将、低位抗压和转换防守风险。"
+        },
+        "player_state": {
+          "team_a_adjustment": 0.03,
+          "team_b_adjustment": 0.01,
+          "source_status": "local_player_state_partial"
+        },
+        "injury_suspension_minutes": {
+          "team_a_adjustment": 0,
+          "team_b_adjustment": -0.01,
+          "source_status": "latest_thread_packet_missing"
+        },
+        "tactical_matchup": {
+          "source_status": "tactics_available_but_older_than_data_partial",
+          "summary": "葡萄牙4-3-3的高质量边锋、Bruno/Bernardo肋部创造，对克罗地亚老将中场控节奏、定位球和低位防守形成技术型淘汰赛对位。"
+        },
+        "schedule_environment": {
+          "venue": "Toronto Stadium",
+          "host_city": "Toronto",
+          "kickoff_local": "2026-07-02 19:00",
+          "source_status": "data_collector_packet"
+        },
+        "market": {
+          "status": "odds_missing",
+          "adjustment": 0
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.27,
+        "attack": 0.15,
+        "defense": 0.15,
+        "player_state": 0.14,
+        "injury_suspension_minutes": 0.09,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.04,
+        "knockout_context": 0.04,
+        "market": 0,
+        "notes": "Market weight set to 0.00 because same-source odds are missing; tactics are capped because tactics-coach packet is missing."
+      },
+      "team_strength_score": {
+        "team_a": 83,
+        "team_b": 75,
+        "scale": "0-100"
+      },
+      "attack_score": {
+        "team_a": 82,
+        "team_b": 72,
+        "scale": "0-100"
+      },
+      "defense_score": {
+        "team_a": 79,
+        "team_b": 74,
+        "scale": "0-100"
+      },
+      "player_state_adjustment": {
+        "team_a": 0.03,
+        "team_b": 0.01,
+        "unit": "xG-equivalent capped small shift"
+      },
+      "injury_adjustment": {
+        "team_a": 0,
+        "team_b": -0.01,
+        "unit": "xG-equivalent capped small shift"
+      },
+      "tactical_matchup_adjustment": {
+        "team_a": 0.04,
+        "team_b": 0.01,
+        "note": "葡萄牙4-3-3的高质量边锋、Bruno/Bernardo肋部创造，对克罗地亚老将中场控节奏、定位球和低位防守形成技术型淘汰赛对位。"
+      },
+      "schedule_environment_adjustment": {
+        "team_a": 0,
+        "team_b": 0,
+        "note": "赛程/场地来自 data-collector：Toronto Stadium。"
+      },
+      "market_adjustment": {
+        "status": "odds_missing",
+        "xg_shift": {
+          "team_a": 0,
+          "team_b": 0
+        },
+        "probability_shift": 0
+      },
+      "expected_goals": {
+        "pre_market": {
+          "team_a": 1.58,
+          "team_b": 1.08
+        },
+        "final": {
+          "team_a": 1.58,
+          "team_b": 1.08,
+          "total": 2.66
+        },
+        "total": 2.66,
+        "team_a_xg": 1.58,
+        "team_b_xg": 1.08,
+        "total_xg": 2.66,
+        "xg_display": {
+          "team_a": 1.58,
+          "team_b": 1.08,
+          "total": 2.66,
+          "source_path": "expected_goals.final"
+        }
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0": {
+            "0": 0.069948,
+            "1": 0.075544,
+            "2": 0.040794,
+            "3": 0.014686,
+            "4": 0.003965,
+            "5": 0.000856
+          },
+          "1": {
+            "0": 0.110518,
+            "1": 0.11936,
+            "2": 0.064454,
+            "3": 0.023204,
+            "4": 0.006265,
+            "5": 0.001353
+          },
+          "2": {
+            "0": 0.087309,
+            "1": 0.094294,
+            "2": 0.050919,
+            "3": 0.018331,
+            "4": 0.004949,
+            "5": 0.001069
+          },
+          "3": {
+            "0": 0.045983,
+            "1": 0.049662,
+            "2": 0.026817,
+            "3": 0.009654,
+            "4": 0.002607,
+            "5": 0.000563
+          },
+          "4": {
+            "0": 0.018163,
+            "1": 0.019616,
+            "2": 0.010593,
+            "3": 0.003813,
+            "4": 0.00103,
+            "5": 0.000222
+          },
+          "5": {
+            "0": 0.00574,
+            "1": 0.006199,
+            "2": 0.003347,
+            "3": 0.001205,
+            "4": 0.000325,
+            "5": 0.00007
+          }
+        },
+        "tail_probability": 0.006573,
+        "matrix_sum_check": 1
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4893,
+        "draw": 0.251,
+        "team_b_win": 0.2597
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4965,
+        "under_2_5": 0.5035
+      },
+      "btts": {
+        "yes": 0.5244,
+        "no": 0.4756
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.11936
+        },
+        {
+          "score": "1-0",
+          "probability": 0.110518
+        },
+        {
+          "score": "2-1",
+          "probability": 0.094294
+        },
+        {
+          "score": "2-0",
+          "probability": 0.087309
+        },
+        {
+          "score": "0-1",
+          "probability": 0.075544
+        }
+      ],
+      "odds_implied_probability": null,
+      "model_market_delta": null,
+      "confidence_interval": {
+        "team_a_win": [
+          0.4393,
+          0.5393
+        ],
+        "draw": [
+          0.216,
+          0.286
+        ],
+        "team_b_win": [
+          0.2097,
+          0.3097
+        ],
+        "xg_team_a": [
+          1.42,
+          1.74
+        ],
+        "xg_team_b": [
+          0.92,
+          1.24
+        ]
+      },
+      "uncertainty": {
+        "level": "medium_high",
+        "reasons": [
+          "上游 data/tactics 缺失",
+          "T-75 官方首发缺失",
+          "淘汰赛加时/点球不在90分钟1X2内",
+          "赔率快照缺失"
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "basis": "pre_red_team_model",
+        "team_a_win": 0.4893,
+        "draw": 0.251,
+        "team_b_win": 0.2597
+      },
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "90分钟胜平负模型，不含加时点球晋级概率。",
+        "上游 data/tactics 落盘后应重跑，尤其是 predicted_lineups、venue、odds 和战术十因子。",
+        "不输出投注建议，betting_gate_status=discussion_only_hold。"
+      ],
+      "group_stage_summary": {
+        "portugal": {
+          "known_results": [
+            "葡萄牙 1-1 刚果金",
+            "葡萄牙 vs 乌兹别克斯坦 第二轮资料需复核",
+            "哥伦比亚 0-0 葡萄牙"
+          ],
+          "rank_source": "canonical bracket marks Portugal as 2K; K组第三轮复盘 says Portugal runner-up",
+          "trend_notes": [
+            "第三轮0-0哥伦比亚为低事件平局",
+            "Diogo Costa/Rúben Dias/Bruno Fernandes 是当前本地主要状态点",
+            "K组三轮回灌为 partial_updated_official_full_minutes_and_external_ratings_missing"
+          ]
+        },
+        "croatia": {
+          "known_results": [
+            "英格兰 4-2 克罗地亚",
+            "巴拿马 0-1 克罗地亚",
+            "克罗地亚 2-1 加纳"
+          ],
+          "rank_source": "canonical bracket marks Croatia as 2L; L组第三轮复盘 confirms Croatia runner-up",
+          "trend_notes": [
+            "第三轮 Sucic、Vlasic、Modric 关键事件带动晋级",
+            "Modric/Vlasic/Sucic/Kovacic 状态分高",
+            "官方完整分钟/外部评分仍 partial"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": "M84",
+      "match_no": 84,
+      "stage": "Round of 32",
+      "match_identity": {
+        "match_id": "M84",
+        "source_match_id": "M84_2026-07-02_西班牙_vs_奥地利",
+        "match_no": 84,
+        "stage": "Round of 32",
+        "team_a": "西班牙",
+        "team_b": "奥地利",
+        "team_a_en": "Spain",
+        "team_b_en": "Austria",
+        "canonical_bracket": "2026-06-28",
+        "kickoff_local": "2026-07-02 12:00",
+        "kickoff_beijing": "20:00",
+        "venue": "Los Angeles Stadium",
+        "host_city": "Los Angeles",
+        "round_of_16_path": "M83胜者 vs M84胜者",
+        "source_status": "confirmed_by_2026_06_28_canonical_bracket",
+        "captured_at": "2026-06-28T22:41:40+08:00"
+      },
+      "input_readiness": {
+        "data_collector_packet": "available",
+        "tactics_coach_packet": "available_but_older_than_data_partial",
+        "overall_status": "partial_source_limited_data_available_tactics_older_than_data",
+        "predicted_lineups_source": "data_collector_packet",
+        "predicted_lineups_data_thread_blocker": false,
+        "official_lineups_status": "missing_until_T_minus_75m",
+        "odds_snapshot": "missing_same_source_complete_snapshot",
+        "market_availability": "not_available_yet",
+        "red_team": "pending",
+        "no_betting_advice": true,
+        "gaps_and_conflicts": [
+          "data-collector.json 已吸收，赛程和 predicted_lineups 来自数据线程。",
+          "tactics-coach.json 可用但时间早于 data-collector.json，按 partial tactics 限幅吸收。",
+          "T-75 官方首发和同源赔率仍缺失。"
+        ]
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official_from_data_collector_packet",
+        "captured_at": "2026-06-28T22:41:40+08:00",
+        "official_lineup_gate": "T-75 official XI required before executable betting or final model lock",
+        "team_a": {
+          "team": "西班牙",
+          "team_en": "Spain",
+          "formation": "4-3-3",
+          "confidence": "medium",
+          "source_status": "probable_not_official",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "乌奈·西蒙",
+              "player_en": "Unai Simón",
+              "role_note": "一门候选"
+            },
+            {
+              "position": "RB",
+              "player_cn": "马科斯·略伦特",
+              "player_en": "Marcos Llorente",
+              "role_note": "右后卫/中场兼容"
+            },
+            {
+              "position": "CB",
+              "player_cn": "保·库巴西",
+              "player_en": "Pau Cubarsí",
+              "role_note": "中卫出球"
+            },
+            {
+              "position": "CB",
+              "player_cn": "艾梅里克·拉波尔特",
+              "player_en": "Aymeric Laporte",
+              "role_note": "中卫经验"
+            },
+            {
+              "position": "LB",
+              "player_cn": "马克·库库雷利亚",
+              "player_en": "Marc Cucurella",
+              "role_note": "左后卫"
+            },
+            {
+              "position": "DM",
+              "player_cn": "罗德里",
+              "player_en": "Rodri",
+              "role_note": "中场轴心"
+            },
+            {
+              "position": "CM",
+              "player_cn": "马丁·祖比门迪",
+              "player_en": "Martín Zubimendi",
+              "role_note": "中场控制"
+            },
+            {
+              "position": "CM",
+              "player_cn": "佩德里",
+              "player_en": "Pedri",
+              "role_note": "中场创造"
+            },
+            {
+              "position": "RW",
+              "player_cn": "拉明·亚马尔",
+              "player_en": "Lamine Yamal",
+              "role_note": "右路核心，肌肉问题管理"
+            },
+            {
+              "position": "LW",
+              "player_cn": "尼科·威廉姆斯",
+              "player_en": "Nico Williams",
+              "role_note": "左路速度，肌肉问题管理"
+            },
+            {
+              "position": "ST",
+              "player_cn": "米克尔·奥亚萨瓦尔",
+              "player_en": "Mikel Oyarzabal",
+              "role_note": "中锋/左路，状态最高"
+            }
+          ],
+          "rotation_candidates": [],
+          "model_impact_if_changed": [
+            "若核心球员或阵型变化，xG、Top5 比分和尾部概率需重跑。"
+          ]
+        },
+        "team_b": {
+          "team": "奥地利",
+          "team_en": "Austria",
+          "formation": "4-2-3-1",
+          "confidence": "medium",
+          "source_status": "probable_not_official",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "亚历山大-施拉格尔",
+              "player_en": "Alexander Schlager",
+              "role_note": "门将候选"
+            },
+            {
+              "position": "RB",
+              "player_cn": "康拉德-莱默尔",
+              "player_en": "Konrad Laimer",
+              "role_note": "右后卫/中场压迫"
+            },
+            {
+              "position": "CB",
+              "player_cn": "凯文-丹索",
+              "player_en": "Kevin Danso",
+              "role_note": "中卫对抗"
+            },
+            {
+              "position": "CB",
+              "player_cn": "菲利普-林哈特",
+              "player_en": "Philipp Lienhart",
+              "role_note": "中卫"
+            },
+            {
+              "position": "LB",
+              "player_cn": "菲利普-姆韦内",
+              "player_en": "Phillipp Mwene",
+              "role_note": "左后卫"
+            },
+            {
+              "position": "DM",
+              "player_cn": "尼古拉斯-塞瓦尔德",
+              "player_en": "Nicolas Seiwald",
+              "role_note": "后腰覆盖"
+            },
+            {
+              "position": "CM",
+              "player_cn": "克萨韦尔-施拉格尔",
+              "player_en": "Xaver Schlager",
+              "role_note": "中场压迫"
+            },
+            {
+              "position": "AM",
+              "player_cn": "马塞尔-萨比策",
+              "player_en": "Marcel Sabitzer",
+              "role_note": "中前场核心，高状态"
+            },
+            {
+              "position": "RW",
+              "player_cn": "帕特里克-维默尔",
+              "player_en": "Patrick Wimmer",
+              "role_note": "右路突破"
+            },
+            {
+              "position": "LW",
+              "player_cn": "亚历山大-普拉斯",
+              "player_en": "Alexander Prass",
+              "role_note": "左路/中场覆盖"
+            },
+            {
+              "position": "ST",
+              "player_cn": "萨沙-卡拉季奇",
+              "player_en": "Saša Kalajdžić",
+              "role_note": "中锋高点"
+            }
+          ],
+          "rotation_candidates": [],
+          "model_impact_if_changed": [
+            "若核心球员或阵型变化，xG、Top5 比分和尾部概率需重跑。"
+          ]
+        },
+        "source_log": [
+          "data\\thread_outputs\\round32-m81-m84-v3-20260628\\data-collector.json"
+        ],
+        "gaps_and_conflicts": [
+          "官方首发未公布，confidence capped at medium。"
+        ]
+      },
+      "factor_inputs": {
+        "baseline_strength": {
+          "team_a_score": 88,
+          "team_b_score": 76,
+          "note": "基于 data-collector canonical bracket、晋级路径、小组赛趋势和本地 player_state。"
+        },
+        "attack": {
+          "team_a_score": 87,
+          "team_b_score": 74,
+          "note": "吸收小组赛进球趋势、前场状态点和淘汰赛尾部信号。"
+        },
+        "defense": {
+          "team_a_score": 84,
+          "team_b_score": 75,
+          "note": "吸收失球、门将、低位抗压和转换防守风险。"
+        },
+        "player_state": {
+          "team_a_adjustment": 0.06,
+          "team_b_adjustment": 0.02,
+          "source_status": "local_player_state_partial"
+        },
+        "injury_suspension_minutes": {
+          "team_a_adjustment": 0,
+          "team_b_adjustment": -0.01,
+          "source_status": "latest_thread_packet_missing"
+        },
+        "tactical_matchup": {
+          "source_status": "tactics_available_but_older_than_data_partial",
+          "summary": "西班牙4-3-3的控球、反压和边路一对一，对奥地利4-2-3-1的Rangnick式高压、纵向冲刺和定位球形成压迫互相测试。"
+        },
+        "schedule_environment": {
+          "venue": "Los Angeles Stadium",
+          "host_city": "Los Angeles",
+          "kickoff_local": "2026-07-02 12:00",
+          "source_status": "data_collector_packet"
+        },
+        "market": {
+          "status": "odds_missing",
+          "adjustment": 0
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.27,
+        "attack": 0.15,
+        "defense": 0.15,
+        "player_state": 0.14,
+        "injury_suspension_minutes": 0.09,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.04,
+        "knockout_context": 0.04,
+        "market": 0,
+        "notes": "Market weight set to 0.00 because same-source odds are missing; tactics are capped because tactics-coach packet is missing."
+      },
+      "team_strength_score": {
+        "team_a": 88,
+        "team_b": 76,
+        "scale": "0-100"
+      },
+      "attack_score": {
+        "team_a": 87,
+        "team_b": 74,
+        "scale": "0-100"
+      },
+      "defense_score": {
+        "team_a": 84,
+        "team_b": 75,
+        "scale": "0-100"
+      },
+      "player_state_adjustment": {
+        "team_a": 0.06,
+        "team_b": 0.02,
+        "unit": "xG-equivalent capped small shift"
+      },
+      "injury_adjustment": {
+        "team_a": 0,
+        "team_b": -0.01,
+        "unit": "xG-equivalent capped small shift"
+      },
+      "tactical_matchup_adjustment": {
+        "team_a": 0.07,
+        "team_b": -0.02,
+        "note": "西班牙4-3-3的控球、反压和边路一对一，对奥地利4-2-3-1的Rangnick式高压、纵向冲刺和定位球形成压迫互相测试。"
+      },
+      "schedule_environment_adjustment": {
+        "team_a": 0,
+        "team_b": 0,
+        "note": "赛程/场地来自 data-collector：Los Angeles Stadium。"
+      },
+      "market_adjustment": {
+        "status": "odds_missing",
+        "xg_shift": {
+          "team_a": 0,
+          "team_b": 0
+        },
+        "probability_shift": 0
+      },
+      "expected_goals": {
+        "pre_market": {
+          "team_a": 1.92,
+          "team_b": 1.05
+        },
+        "final": {
+          "team_a": 1.92,
+          "team_b": 1.05,
+          "total": 2.97
+        },
+        "total": 2.97,
+        "team_a_xg": 1.92,
+        "team_b_xg": 1.05,
+        "total_xg": 2.97,
+        "xg_display": {
+          "team_a": 1.92,
+          "team_b": 1.05,
+          "total": 2.97,
+          "source_path": "expected_goals.final"
+        }
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0": {
+            "0": 0.051303,
+            "1": 0.053868,
+            "2": 0.028281,
+            "3": 0.009898,
+            "4": 0.002598,
+            "5": 0.000546
+          },
+          "1": {
+            "0": 0.098502,
+            "1": 0.103427,
+            "2": 0.054299,
+            "3": 0.019005,
+            "4": 0.004989,
+            "5": 0.001048
+          },
+          "2": {
+            "0": 0.094562,
+            "1": 0.09929,
+            "2": 0.052127,
+            "3": 0.018245,
+            "4": 0.004789,
+            "5": 0.001006
+          },
+          "3": {
+            "0": 0.06052,
+            "1": 0.063546,
+            "2": 0.033362,
+            "3": 0.011677,
+            "4": 0.003065,
+            "5": 0.000644
+          },
+          "4": {
+            "0": 0.02905,
+            "1": 0.030502,
+            "2": 0.016014,
+            "3": 0.005605,
+            "4": 0.001471,
+            "5": 0.000309
+          },
+          "5": {
+            "0": 0.011155,
+            "1": 0.011713,
+            "2": 0.006149,
+            "3": 0.002152,
+            "4": 0.000565,
+            "5": 0.000119
+          }
+        },
+        "tail_probability": 0.014599,
+        "matrix_sum_check": 1
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5765,
+        "draw": 0.2201,
+        "team_b_win": 0.2033
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5701,
+        "under_2_5": 0.4299
+      },
+      "btts": {
+        "yes": 0.5548,
+        "no": 0.4452
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.103427
+        },
+        {
+          "score": "2-1",
+          "probability": 0.09929
+        },
+        {
+          "score": "1-0",
+          "probability": 0.098502
+        },
+        {
+          "score": "2-0",
+          "probability": 0.094562
+        },
+        {
+          "score": "3-1",
+          "probability": 0.063546
+        }
+      ],
+      "odds_implied_probability": null,
+      "model_market_delta": null,
+      "confidence_interval": {
+        "team_a_win": [
+          0.5265,
+          0.6265
+        ],
+        "draw": [
+          0.1851,
+          0.2551
+        ],
+        "team_b_win": [
+          0.1533,
+          0.2533
+        ],
+        "xg_team_a": [
+          1.76,
+          2.08
+        ],
+        "xg_team_b": [
+          0.89,
+          1.21
+        ]
+      },
+      "uncertainty": {
+        "level": "medium_high",
+        "reasons": [
+          "上游 data/tactics 缺失",
+          "T-75 官方首发缺失",
+          "淘汰赛加时/点球不在90分钟1X2内",
+          "赔率快照缺失"
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "basis": "pre_red_team_model",
+        "team_a_win": 0.5765,
+        "draw": 0.2201,
+        "team_b_win": 0.2033
+      },
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "90分钟胜平负模型，不含加时点球晋级概率。",
+        "上游 data/tactics 落盘后应重跑，尤其是 predicted_lineups、venue、odds 和战术十因子。",
+        "不输出投注建议，betting_gate_status=discussion_only_hold。"
+      ],
+      "group_stage_summary": {
+        "spain": {
+          "known_results": [
+            "西班牙 4-0 沙特",
+            "H组第二轮/第三轮本地资料需复核",
+            "乌拉圭 0-1 西班牙"
+          ],
+          "rank_source": "canonical bracket marks Spain as 1H; H组第三轮复盘 says Spain 7 points GD +5 group winner",
+          "trend_notes": [
+            "首轮4-0沙特和第三轮1-0乌拉圭构成攻守两端正信号",
+            "Oyarzabal/Yamal/Rodri/Zubimendi/Pedri 状态分高",
+            "Yamal/Nico Williams 有 recent_muscle_issue_managed"
+          ]
+        },
+        "austria": {
+          "known_results": [
+            "奥地利 vs 约旦 首轮本地资料需复核",
+            "阿根廷 vs 奥地利 第二轮本地资料需复核",
+            "阿尔及利亚 3-3 奥地利"
+          ],
+          "rank_source": "canonical bracket marks Austria as 2J; J组三轮复盘 confirms Austria runner-up",
+          "trend_notes": [
+            "第三轮与阿尔及利亚3-3，最后阶段拿到出线结果",
+            "Sabitzer/Kalajdzic/Laimer/Arnautovic 状态分靠前",
+            "Alaba/Arnautovic 伤情或体能需后续复核"
+          ]
+        }
+      }
+    }
+  ],
+  "betting_gate_status": "discussion_only_hold",
+  "handoff_notes": [
+    "data-collector 已吸收，modeler 不再是 fallback missing-data 版本。",
+    "tactics-coach 可用但旧于 data，主线程若取得新版 tactics 可要求二次微调。",
+    "展示层读取 xG 时使用 expected_goals.final.team_a/team_b/total，兼容字段为 expected_goals.team_a_xg/team_b_xg/total_xg。"
+  ]
+}

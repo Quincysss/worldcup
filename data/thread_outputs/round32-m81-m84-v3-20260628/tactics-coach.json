@@ -1,0 +1,1755 @@
+{
+  "schema_version": "round32_matchup_tactics_v3",
+  "status": "partial_source_limited",
+  "updated_at": "2026-06-28T22:48:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "M81-M84 tactical matchup factors for single-match v3 modeling; no score prediction, no win-draw-loss probability, no betting advice",
+  "upstream_data_status": "data_collector_available_partial_source_limited",
+  "upstream_data_note": "Read data/thread_outputs/round32-m81-m84-v3-20260628/data-collector.json after it landed at 22:44:05. Upstream status is partial_source_limited; projected XIs are probable_not_official pending T-75 official lineups.",
+  "source_files_read": [
+    "data/thread_outputs/round32-m81-m84-v3-20260628/data-collector.md",
+    "data/thread_outputs/round32-m81-m84-v3-20260628/data-collector.json",
+    "data/outputs/knockout/round-of-32-bracket-20260628.json",
+    "data/templates/match-prediction-standard-template-v3.md",
+    "data/packets/tactics/usa-tactics-packet.json",
+    "data/packets/teams/usa-team-packet.json",
+    "data/packets/rosters/usa-roster.json",
+    "data/outputs/player_state/usa-player-state.json",
+    "data/packets/tactics/bosnia-herzegovina-tactics-packet.json",
+    "data/packets/teams/bosnia-herzegovina-team-packet.json",
+    "data/packets/rosters/bosnia-herzegovina-roster.json",
+    "data/outputs/player_state/bosnia-herzegovina-player-state.json",
+    "data/packets/tactics/belgium-tactics-packet.json",
+    "data/packets/teams/belgium-team-packet.json",
+    "data/packets/rosters/belgium-roster.json",
+    "data/outputs/player_state/belgium-player-state.json",
+    "data/packets/tactics/senegal-tactics-packet.json",
+    "data/packets/teams/senegal-team-packet.json",
+    "data/packets/rosters/senegal-roster.json",
+    "data/outputs/player_state/senegal-player-state.json",
+    "data/packets/tactics/portugal-tactics-packet.json",
+    "data/packets/teams/portugal-team-packet.json",
+    "data/packets/rosters/portugal-roster.json",
+    "data/outputs/player_state/portugal-player-state.json",
+    "data/packets/tactics/croatia-tactics-packet.json",
+    "data/packets/teams/croatia-team-packet.json",
+    "data/packets/rosters/croatia-roster.json",
+    "data/outputs/player_state/croatia-player-state.json",
+    "data/packets/tactics/spain-tactics-packet.json",
+    "data/packets/teams/spain-team-packet.json",
+    "data/packets/rosters/spain-roster.json",
+    "data/outputs/player_state/spain-player-state.json",
+    "data/packets/tactics/austria-tactics-packet.json",
+    "data/packets/teams/austria-team-packet.json",
+    "data/packets/rosters/austria-roster.json",
+    "data/outputs/player_state/austria-player-state.json"
+  ],
+  "canonical_fixture_guard": {
+    "source": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+    "note": "Uses canonical M81-M84 fixtures only.",
+    "matches": [
+      "M81 美国 vs 波黑",
+      "M82 比利时 vs 塞内加尔",
+      "M83 葡萄牙 vs 克罗地亚",
+      "M84 西班牙 vs 奥地利"
+    ]
+  },
+  "data_gaps": [
+    "T-75官方首发和实际阵型尚未发布；数据包仅提供probable_not_official预计首发",
+    "最终伤停、停赛、分钟限制、热身状态和裁判尺度仍需刷新",
+    "淘汰赛同源旅行/天气/场地与官方技术报告尚未完整并入本战术包",
+    "部分球队第三轮逐分钟评分与官方外部评级仍为partial_source_limited"
+  ],
+  "double_counting_warnings": [
+    "核心球员状态已经可能进入attack/player_state；transition_attack、wide_channel、central_control必须限幅。",
+    "set_piece_advantage只表达对位窗口，不重复叠加身高、定位球xG或球员头球评分。",
+    "transition_defense_risk与defensive_line_risk高度相关，模型应合并或设相关性上限。",
+    "game_state_tendency只描述淘汰赛行为倾向，不转成比分、胜平负概率或投注建议。"
+  ],
+  "factor_order": [
+    "pressing_adjustment",
+    "build_up_resistance_adjustment",
+    "transition_attack_adjustment",
+    "transition_defense_risk",
+    "wide_channel_advantage",
+    "central_control_advantage",
+    "set_piece_advantage",
+    "defensive_line_risk",
+    "coach_substitution_risk",
+    "game_state_tendency"
+  ],
+  "matches": [
+    {
+      "match_id": "M81",
+      "fixture": {
+        "home": "美国",
+        "away": "波黑",
+        "date": "2026-07-01",
+        "venue": "San Francisco Bay Area Stadium"
+      },
+      "matchup_summary": "美国4-2-3-1/4-3-3的主场压迫、宽度和运动能力，对波黑4-2-3-1/4-4-2的Dzeko支点、Pjanic节奏和定位球形成主动压制与高线反击风险并存的对位。",
+      "teams": {
+        "美国": {
+          "expected_formation": "4-2-3-1，替代方案：4-3-3或4-4-2 pressing shape",
+          "key_roles": [
+            "Pulisic/Reyna负责肋部接应和最后一传",
+            "McKennie/Musah/Adams承担反压与二点",
+            "Dest/Robinson提供宽度和外侧推进",
+            "Balogun或Sargent负责纵深牵制"
+          ],
+          "substitution_triggers": [
+            "低位久攻不下时增加边锋或第二前锋",
+            "领先后补后腰保护边后卫身后",
+            "右路被打穿时降低Dest前插高度"
+          ],
+          "alternative_shape": "4-3-3或4-4-2 pressing shape",
+          "lineup_impact": "数据包预计首发为 4-2-3-1：Matt Freese, Alex Freeman, Chris Richards, Tim Ream, Antonee Robinson, Tyler Adams, Weston McKennie, Malik Tillman, Giovanni Reyna, Álex Zendejas, Folarin Balogun。替补触发候选：Ricardo Pepi, Sergiño Dest, Haji Wright。Pulisic/Reyna同场会提高xG创造与节奏；Adams若无法首发，transition_defense_risk和central_control需重跑。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "usa-tactics-packet记录默认4-2-3-1和4-4-2压迫形态。",
+                "主场淘汰赛更支持前段压迫。"
+              ],
+              "confidence": "medium",
+              "model_note": "与主场优势分开，只作为压迫结构加成。 T-75官方首发后必须重跑或限幅。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Reyna、Musah和后腰接应能提升第一波抗压。"
+              ],
+              "confidence": "medium",
+              "model_note": "若Adams或Reyna不首发，下修。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Pulisic、Weah/Dest和前锋纵深能攻击波黑老化防线身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "与球员状态和attack评分重复，限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "双边后卫前插会给Dzeko支点和二线插上留下反击通道。"
+              ],
+              "confidence": "medium",
+              "model_note": "与defensive_line_risk相关，合并设上限。 T-75官方首发后必须重跑或限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "美国两翼速度和边后卫推进强于波黑边路回追。"
+              ],
+              "confidence": "medium",
+              "model_note": "若Pulisic或Dest缺席，明显下修。 T-75官方首发后必须重跑或限幅。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "McKennie/Musah/Adams组合有对抗和覆盖优势。"
+              ],
+              "confidence": "medium",
+              "model_note": "不重复叠加中场球员评分。 T-75官方首发后必须重跑或限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.1,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "McKennie和中卫高点有定位球窗口，但波黑防空不弱。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "小幅即可。 T-75官方首发后必须重跑或限幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "高线压迫会被Dzeko支点和Pjanic长传测试。"
+              ],
+              "confidence": "medium",
+              "model_note": "T-75后按中卫组合重跑。 T-75官方首发后必须重跑或限幅。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.1,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "替补边锋和中场可改变强度，但淘汰赛换人信息不足。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "只用于后60分钟状态分支。 T-75官方首发后必须重跑或限幅。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计美国为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "主场淘汰赛下美国更可能主动提速，领先后保留边路反击出口。"
+              ],
+              "confidence": "medium",
+              "model_note": "描述行为倾向，不输出比分。 T-75官方首发后必须重跑或限幅。"
+            }
+          },
+          "double_counting_warning": "Pulisic/Reyna/McKennie状态可能已进入player_state，wide与transition需限幅。",
+          "predicted_lineup_from_data_collector": {
+            "team_en": "United States",
+            "team_zh": "美国",
+            "predicted_formation": "4-2-3-1",
+            "source_status": "probable_not_official",
+            "lineup_confidence": "medium",
+            "official_lineup_gate": "not_available_yet",
+            "predicted_xi": [
+              {
+                "position": "GK",
+                "english_name": "Matt Freese",
+                "role": "一门候选，本地状态稳定"
+              },
+              {
+                "position": "RB",
+                "english_name": "Alex Freeman",
+                "role": "右后卫，高状态"
+              },
+              {
+                "position": "CB",
+                "english_name": "Chris Richards",
+                "role": "中卫对抗"
+              },
+              {
+                "position": "CB",
+                "english_name": "Tim Ream",
+                "role": "中卫出球和经验"
+              },
+              {
+                "position": "LB",
+                "english_name": "Antonee Robinson",
+                "role": "左后卫推进"
+              },
+              {
+                "position": "DM",
+                "english_name": "Tyler Adams",
+                "role": "后腰保护"
+              },
+              {
+                "position": "CM",
+                "english_name": "Weston McKennie",
+                "role": "中场前插"
+              },
+              {
+                "position": "AM",
+                "english_name": "Malik Tillman",
+                "role": "前腰连接"
+              },
+              {
+                "position": "RW",
+                "english_name": "Giovanni Reyna",
+                "role": "右/中路创造"
+              },
+              {
+                "position": "LW",
+                "english_name": "Álex Zendejas",
+                "role": "边路内切"
+              },
+              {
+                "position": "ST",
+                "english_name": "Folarin Balogun",
+                "role": "中锋终结"
+              }
+            ],
+            "bench_rotation_candidates": [
+              {
+                "english_name": "Ricardo Pepi",
+                "trigger": "中锋轮换或双前锋"
+              },
+              {
+                "english_name": "Sergiño Dest",
+                "trigger": "右后卫/翼侧推进选择"
+              },
+              {
+                "english_name": "Haji Wright",
+                "trigger": "需要禁区冲击"
+              }
+            ],
+            "conflicts": [
+              "D组第三轮美国对土耳其完整本地复盘缺失；最终首发和第三轮负荷需T-75复核。"
+            ]
+          }
+        },
+        "波黑": {
+          "expected_formation": "4-2-3-1，替代方案：4-4-2或5-4-1",
+          "key_roles": [
+            "Dzeko负责支点和禁区第一点",
+            "Pjanic负责节奏和长传释放",
+            "Krunić/后腰保护禁区前二点",
+            "Kolasinac/Demic一侧承担身体对抗和边路推进"
+          ],
+          "substitution_triggers": [
+            "落后时增加第二前锋和传中频率",
+            "领先或平局后段更可能收成低位保护禁区",
+            "中场被压制时补防守型中场"
+          ],
+          "alternative_shape": "4-4-2或5-4-1",
+          "lineup_impact": "数据包预计首发为 4-2-3-1：Nikola Vasilj, Amar Dedić, Emin Mahmić, Stjepan Radeljić, Sead Kolašinac, Amir Hadžiahmetović, Denis Huseinbašić, Ivan Bašić, Esmir Bajraktarević, Kerim Alajbegović, Luka Kulenović。替补触发候选：Ermedin Demirović, Alen Halilović, Dario Šarić。Dzeko/Pjanic是否同时首发决定出球和定位球上限；若中卫速度不足，防线身后风险上升。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.1,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "波黑更适合中低位而非持续高压美国后场。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "负向代表不适合高压。 T-75官方首发后必须重跑或限幅。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.25,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "美国前场压迫和运动能力会迫使波黑更多长传。"
+              ],
+              "confidence": "medium",
+              "model_note": "Pjanic首发可部分缓解。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "Dzeko支点和二线插上能攻击美国边后卫身后。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "作为反击分支，不上调整体attack。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "边路回追和防线转身会被美国速度持续测试。"
+              ],
+              "confidence": "medium",
+              "model_note": "与defensive_line_risk合并限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "面对美国外侧速度，波黑边路防守压力大。"
+              ],
+              "confidence": "medium",
+              "model_note": "不抹掉Kolasinac身体对抗窗口。 T-75官方首发后必须重跑或限幅。"
+            },
+            "central_control_advantage": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "Pjanic节奏能力存在，但覆盖和反压强度弱于美国中场。"
+              ],
+              "confidence": "medium",
+              "model_note": "若美国缺Adams，可降风险。 T-75官方首发后必须重跑或限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "Dzeko和中卫高点提供定位球真实威胁。"
+              ],
+              "confidence": "medium",
+              "model_note": "不要和球员身高/头球评分重复。 T-75官方首发后必须重跑或限幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "防线身后和边肋速度对位是主要扣分点。"
+              ],
+              "confidence": "medium",
+              "model_note": "作为美国大空间转换窗口。 T-75官方首发后必须重跑或限幅。"
+            },
+            "coach_substitution_risk": {
+              "direction": "negative",
+              "magnitude": -0.05,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "替补能加直接性但容易牺牲中场保护。"
+              ],
+              "confidence": "low",
+              "model_note": "数据不足，轻微负向。 T-75官方首发后必须重跑或限幅。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计波黑为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "弱势淘汰赛更可能接受低位、定位球和支点路线。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于低事件和反击分支。 T-75官方首发后必须重跑或限幅。"
+            }
+          },
+          "double_counting_warning": "Dzeko/Pjanic的定位球与支点价值可能已在attack或player_state中体现。",
+          "predicted_lineup_from_data_collector": {
+            "team_en": "Bosnia and Herzegovina",
+            "team_zh": "波黑",
+            "predicted_formation": "4-2-3-1",
+            "source_status": "probable_not_official",
+            "lineup_confidence": "medium_low",
+            "official_lineup_gate": "not_available_yet",
+            "predicted_xi": [
+              {
+                "position": "GK",
+                "english_name": "Nikola Vasilj",
+                "role": "门将候选"
+              },
+              {
+                "position": "RB",
+                "english_name": "Amar Dedić",
+                "role": "右后卫推进"
+              },
+              {
+                "position": "CB",
+                "english_name": "Emin Mahmić",
+                "role": "中卫，本地状态高"
+              },
+              {
+                "position": "CB",
+                "english_name": "Stjepan Radeljić",
+                "role": "中卫"
+              },
+              {
+                "position": "LB",
+                "english_name": "Sead Kolašinac",
+                "role": "左后卫/中卫经验"
+              },
+              {
+                "position": "DM",
+                "english_name": "Amir Hadžiahmetović",
+                "role": "后腰连接"
+              },
+              {
+                "position": "CM",
+                "english_name": "Denis Huseinbašić",
+                "role": "中场跑动"
+              },
+              {
+                "position": "AM",
+                "english_name": "Ivan Bašić",
+                "role": "前腰/中场"
+              },
+              {
+                "position": "RW",
+                "english_name": "Esmir Bajraktarević",
+                "role": "边路创造"
+              },
+              {
+                "position": "LW",
+                "english_name": "Kerim Alajbegović",
+                "role": "边锋/二前锋"
+              },
+              {
+                "position": "ST",
+                "english_name": "Luka Kulenović",
+                "role": "中锋，高状态"
+              }
+            ],
+            "bench_rotation_candidates": [
+              {
+                "english_name": "Ermedin Demirović",
+                "trigger": "前锋经验和压迫"
+              },
+              {
+                "english_name": "Alen Halilović",
+                "trigger": "前场创造"
+              },
+              {
+                "english_name": "Dario Šarić",
+                "trigger": "中场稳态"
+              }
+            ],
+            "conflicts": [
+              "Bosnia player_state 是 core partial match detail，第三轮逐人分钟和牌面需复核。"
+            ]
+          }
+        }
+      },
+      "data_collector_status": "partial_source_limited"
+    },
+    {
+      "match_id": "M82",
+      "fixture": {
+        "home": "比利时",
+        "away": "塞内加尔",
+        "date": "2026-07-01",
+        "venue": "Seattle Stadium"
+      },
+      "matchup_summary": "比利时4-2-3-1的De Bruyne/Lukaku/Doku纵深与塞内加尔4-2-3-1/4-3-3的身体压迫、边路速度和低位反击互相放大比赛波动。",
+      "teams": {
+        "比利时": {
+          "expected_formation": "4-2-3-1，替代方案：4-3-3或3-4-2-1",
+          "key_roles": [
+            "De Bruyne负责肋部最后一传和定位球",
+            "Lukaku负责支点与禁区压制",
+            "Doku/Bakayoko提供外侧突破",
+            "Onana/Tielemans保护二点"
+          ],
+          "substitution_triggers": [
+            "打不开低位时增加边锋一对一和禁区高点",
+            "领先后补中场保护转换防守",
+            "中卫被速度冲击时降低防线高度"
+          ],
+          "alternative_shape": "4-3-3或3-4-2-1",
+          "lineup_impact": "数据包预计首发为 4-2-3-1：Thibaut Courtois, Timothy Castagne, Zeno Debast, Arthur Theate, Alexis Saelemaekers, Amadou Onana, Youri Tielemans, Kevin De Bruyne, Jeremy Doku, Leandro Trossard, Charles De Ketelaere。替补触发候选：Dodi Lukebakio, Hans Vanaken, Nicolas Raskin。De Bruyne和Lukaku同场抬高xG与定位球；若中卫组合偏慢，塞内加尔transition_attack需上调。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.1,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "比利时可选择前场压迫，但核心价值仍在控球和转换。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "不要把阵容实力等同于高压。 T-75官方首发后必须重跑或限幅。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "De Bruyne/Tielemans/Onana能在塞内加尔身体压迫下找到释放点。"
+              ],
+              "confidence": "medium",
+              "model_note": "若De Bruyne轮休或受限，下修。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "Doku/Bakayoko和Lukaku支点能攻击塞内加尔边后卫身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "与球员状态重复，模型限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "比利时中卫转身和边卫身后会被Sarr/Diatta等速度测试。"
+              ],
+              "confidence": "medium",
+              "model_note": "关键对冲项。 T-75官方首发后必须重跑或限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "Doku单点突破是比利时最清晰宽度来源。"
+              ],
+              "confidence": "medium",
+              "model_note": "不与个人突破评分重复。 T-75官方首发后必须重跑或限幅。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "De Bruyne和双后腰提高中路出球质量。"
+              ],
+              "confidence": "medium",
+              "model_note": "塞内加尔对抗会压低幅度。 T-75官方首发后必须重跑或限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "De Bruyne脚法和Lukaku/中卫高点提供定位球威胁。"
+              ],
+              "confidence": "medium",
+              "model_note": "与定位球模型重叠，限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "若压上过高，身后空间会被塞内加尔速度点利用。"
+              ],
+              "confidence": "medium",
+              "model_note": "与transition_defense联动。 T-75官方首发后必须重跑或限幅。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.1,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "替补边锋和中场可调整节奏，但防守换人质量需确认。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "只用于后段。 T-75官方首发后必须重跑或限幅。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计比利时为4-2-3-1，首发状态probable_not_official，置信度medium_low。",
+                "比利时领先后仍有反击出口，落后会快速增加禁区人数。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于事件波动分支。 T-75官方首发后必须重跑或限幅。"
+            }
+          },
+          "double_counting_warning": "De Bruyne/Lukaku/Doku对attack、player_state、set_piece多项重叠，必须限幅。",
+          "predicted_lineup_from_data_collector": {
+            "team_en": "Belgium",
+            "team_zh": "比利时",
+            "predicted_formation": "4-2-3-1",
+            "source_status": "probable_not_official",
+            "lineup_confidence": "medium_low",
+            "official_lineup_gate": "not_available_yet",
+            "predicted_xi": [
+              {
+                "position": "GK",
+                "english_name": "Thibaut Courtois",
+                "role": "一门，队内状态最高"
+              },
+              {
+                "position": "RB",
+                "english_name": "Timothy Castagne",
+                "role": "右后卫"
+              },
+              {
+                "position": "CB",
+                "english_name": "Zeno Debast",
+                "role": "中卫"
+              },
+              {
+                "position": "CB",
+                "english_name": "Arthur Theate",
+                "role": "中卫/左侧防守"
+              },
+              {
+                "position": "LB",
+                "english_name": "Alexis Saelemaekers",
+                "role": "边后卫/翼侧候选"
+              },
+              {
+                "position": "DM",
+                "english_name": "Amadou Onana",
+                "role": "后腰对抗"
+              },
+              {
+                "position": "CM",
+                "english_name": "Youri Tielemans",
+                "role": "中场传球"
+              },
+              {
+                "position": "AM",
+                "english_name": "Kevin De Bruyne",
+                "role": "核心创造"
+              },
+              {
+                "position": "RW",
+                "english_name": "Jeremy Doku",
+                "role": "右/左路突破"
+              },
+              {
+                "position": "LW",
+                "english_name": "Leandro Trossard",
+                "role": "左路内切"
+              },
+              {
+                "position": "ST",
+                "english_name": "Charles De Ketelaere",
+                "role": "中锋/九号半"
+              }
+            ],
+            "bench_rotation_candidates": [
+              {
+                "english_name": "Dodi Lukebakio",
+                "trigger": "边路速度"
+              },
+              {
+                "english_name": "Hans Vanaken",
+                "trigger": "前场高度与二线"
+              },
+              {
+                "english_name": "Nicolas Raskin",
+                "trigger": "中场防守替补"
+              }
+            ],
+            "conflicts": [
+              "Belgium player_state 仍是较早版本，第三轮5-1后的逐人状态未完全结构化。"
+            ]
+          }
+        },
+        "塞内加尔": {
+          "expected_formation": "4-3-3，替代方案：4-3-3、4-4-2或5-4-1保护",
+          "key_roles": [
+            "Koulibaly/Niang或中卫负责禁区防空",
+            "Gueye/Camara控制二点和反压",
+            "Sarr/Diatta提供边路转换",
+            "Jackson/Dia负责纵深和禁区跑动"
+          ],
+          "substitution_triggers": [
+            "落后时增加前场速度和直接跑身后",
+            "领先后降低边后卫高度并保护中路",
+            "中场犯规压力大时提前换防守中场"
+          ],
+          "alternative_shape": "4-3-3、4-4-2或5-4-1保护",
+          "lineup_impact": "数据包预计首发为 4-3-3：Édouard Mendy, Krépin Diatta, Moussa Niakhaté, Abdoulaye Seck, El Hadji Malick Diouf, Idrissa Gueye, Lamine Camara, Pape Matar Sarr, Ibrahim Mbaye, Iliman Ndiaye, Nicolas Jackson。替补触发候选：Ismaïla Sarr, Habib Diarra, Pape Gueye。若速度型边锋和Jackson/Dia同时首发，transition_attack上调；若Koulibaly缺席，set_piece_defense和line_risk下修。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "塞内加尔身体对抗和中前场覆盖适合触发式压迫。"
+              ],
+              "confidence": "medium",
+              "model_note": "不作为全场高压。 T-75官方首发后必须重跑或限幅。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.1,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "面对比利时中前场压迫，后场出球稳定性仍有限。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "若三中场控球首发可回调。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "Sarr/Diatta/Jackson类速度点能攻击比利时身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "与player_state速度点重复，限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.25,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "边路前压后会暴露给Doku和De Bruyne斜传。"
+              ],
+              "confidence": "medium",
+              "model_note": "与wide防守相关。 T-75官方首发后必须重跑或限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "negative",
+              "magnitude": -0.1,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "塞内加尔有速度，但Doku一侧会给防线造成持续回撤压力。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "轻微负向，不否定反击窗口。 T-75官方首发后必须重跑或限幅。"
+            },
+            "central_control_advantage": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "Gueye/Camara对抗强，但创造和最后一传弱于比利时。"
+              ],
+              "confidence": "medium",
+              "model_note": "若比利时核心缺席可降至中性。 T-75官方首发后必须重跑或限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "Koulibaly和前场高点让定位球有现实窗口。"
+              ],
+              "confidence": "medium",
+              "model_note": "与防空/身高模型重复，限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.25,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "比利时肋部直塞和边锋一对一会测试防线横移。"
+              ],
+              "confidence": "medium",
+              "model_note": "T-75后按边后卫组合重跑。 T-75官方首发后必须重跑或限幅。"
+            },
+            "coach_substitution_risk": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "替补可提高速度，但结构稳定性信息不足。"
+              ],
+              "confidence": "low",
+              "model_note": "保持中性。 T-75官方首发后必须重跑或限幅。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "data-collector.json预计塞内加尔为4-3-3，首发状态probable_not_official，置信度medium_low。",
+                "弱势但有反击质量，落后后会更直接，平局末段可收缩。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于淘汰赛波动分支。 T-75官方首发后必须重跑或限幅。"
+            }
+          },
+          "double_counting_warning": "塞内加尔速度反击和定位球已可能在attack/player_state中体现。",
+          "predicted_lineup_from_data_collector": {
+            "team_en": "Senegal",
+            "team_zh": "塞内加尔",
+            "predicted_formation": "4-3-3",
+            "source_status": "probable_not_official",
+            "lineup_confidence": "medium_low",
+            "official_lineup_gate": "not_available_yet",
+            "predicted_xi": [
+              {
+                "position": "GK",
+                "english_name": "Édouard Mendy",
+                "role": "一门"
+              },
+              {
+                "position": "RB",
+                "english_name": "Krépin Diatta",
+                "role": "右路往返"
+              },
+              {
+                "position": "CB",
+                "english_name": "Moussa Niakhaté",
+                "role": "中卫"
+              },
+              {
+                "position": "CB",
+                "english_name": "Abdoulaye Seck",
+                "role": "中卫防空"
+              },
+              {
+                "position": "LB",
+                "english_name": "El Hadji Malick Diouf",
+                "role": "左后卫推进"
+              },
+              {
+                "position": "DM",
+                "english_name": "Idrissa Gueye",
+                "role": "后腰经验"
+              },
+              {
+                "position": "CM",
+                "english_name": "Lamine Camara",
+                "role": "中场推进"
+              },
+              {
+                "position": "CM",
+                "english_name": "Pape Matar Sarr",
+                "role": "中场跑动"
+              },
+              {
+                "position": "RW",
+                "english_name": "Ibrahim Mbaye",
+                "role": "右路高状态"
+              },
+              {
+                "position": "LW",
+                "english_name": "Iliman Ndiaye",
+                "role": "左/中路创造"
+              },
+              {
+                "position": "ST",
+                "english_name": "Nicolas Jackson",
+                "role": "中锋冲击"
+              }
+            ],
+            "bench_rotation_candidates": [
+              {
+                "english_name": "Ismaïla Sarr",
+                "trigger": "边路速度"
+              },
+              {
+                "english_name": "Habib Diarra",
+                "trigger": "中场推进"
+              },
+              {
+                "english_name": "Pape Gueye",
+                "trigger": "后腰轮换"
+              }
+            ],
+            "conflicts": [
+              "I组第三轮5-0伊拉克逐人完整分钟和牌面未完全回写，首发置信度受限。"
+            ]
+          }
+        }
+      },
+      "data_collector_status": "partial_source_limited"
+    },
+    {
+      "match_id": "M83",
+      "fixture": {
+        "home": "葡萄牙",
+        "away": "克罗地亚",
+        "date": "2026-07-02",
+        "venue": "Toronto Stadium"
+      },
+      "matchup_summary": "葡萄牙4-3-3的高质量边锋、Bruno/Bernardo肋部创造，对克罗地亚老将中场控节奏、定位球和低位防守形成技术型淘汰赛对位。",
+      "teams": {
+        "葡萄牙": {
+          "expected_formation": "4-2-3-1，替代方案：4-2-3-1或3-4-2-1",
+          "key_roles": [
+            "Bruno Fernandes负责直塞和定位球",
+            "Bernardo Silva负责右肋控球",
+            "Leao/Conceicao/Neto提供边路一对一",
+            "Ruben Dias和Palhinha保护转换防守"
+          ],
+          "substitution_triggers": [
+            "打不开低位时增加Leao或第二前锋冲击",
+            "领先后补Palhinha类防守屏障",
+            "边路被反击时降低边后卫高度"
+          ],
+          "alternative_shape": "4-2-3-1或3-4-2-1",
+          "lineup_impact": "数据包预计首发为 4-2-3-1：Diogo Costa, Diogo Dalot, Rúben Dias, Renato Veiga, João Cancelo, Rúben Neves, João Neves, Bruno Fernandes, Pedro Neto, Rafael Leão, Gonçalo Ramos。替补触发候选：Bernardo Silva, João Félix, Francisco Conceição。Bruno/Bernardo同场提高central_control和chance_creation；若Ronaldo首发，禁区xG和定位球提高但压迫连续性下降。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "葡萄牙前场技术和边锋速度支持中高位压迫。"
+              ],
+              "confidence": "medium",
+              "model_note": "不重复叠加整体实力。 T-75官方首发后必须重跑或限幅。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Dias、Vitinha/Neves、Bernardo能稳定出球。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "若中场轮换，幅度下修。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Leao/边锋速度可攻击克罗地亚边肋身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "与边锋状态重叠，限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.15,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "边后卫压上后会给克罗地亚老将长传和二点机会。"
+              ],
+              "confidence": "medium",
+              "model_note": "Palhinha首发可降低。 T-75官方首发后必须重跑或限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "葡萄牙边锋一对一强于克罗地亚边路防守速度。"
+              ],
+              "confidence": "medium",
+              "model_note": "不与个人能力重复过量。 T-75官方首发后必须重跑或限幅。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Bruno/Bernardo/Vitinha能提高肋部创造，但克罗地亚控节奏强。"
+              ],
+              "confidence": "medium",
+              "model_note": "保持中等而非高幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Bruno脚法和Dias/Ronaldo高点可制造威胁。"
+              ],
+              "confidence": "medium",
+              "model_note": "与定位球模型限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.15,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "高位压制下需要防Modric/Kovacic转移后的弱侧。"
+              ],
+              "confidence": "medium",
+              "model_note": "与transition_defense合并。 T-75官方首发后必须重跑或限幅。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Roberto Martinez可用边锋、后腰和中锋改变比赛。"
+              ],
+              "confidence": "medium",
+              "model_note": "阵容深度项限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计葡萄牙为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "领先后可控球降速，落后后边路和禁区人数增加。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于状态分支。 T-75官方首发后必须重跑或限幅。"
+            }
+          },
+          "double_counting_warning": "Bruno/Bernardo/Leao/Ronaldo状态会同时影响attack、wide和set_piece。",
+          "predicted_lineup_from_data_collector": {
+            "team_en": "Portugal",
+            "team_zh": "葡萄牙",
+            "predicted_formation": "4-2-3-1",
+            "source_status": "probable_not_official",
+            "lineup_confidence": "medium",
+            "official_lineup_gate": "not_available_yet",
+            "predicted_xi": [
+              {
+                "position": "GK",
+                "english_name": "Diogo Costa",
+                "role": "一门，高状态"
+              },
+              {
+                "position": "RB",
+                "english_name": "Diogo Dalot",
+                "role": "右后卫"
+              },
+              {
+                "position": "CB",
+                "english_name": "Rúben Dias",
+                "role": "中卫核心"
+              },
+              {
+                "position": "CB",
+                "english_name": "Renato Veiga",
+                "role": "中卫/左脚平衡"
+              },
+              {
+                "position": "LB",
+                "english_name": "João Cancelo",
+                "role": "边后卫组织"
+              },
+              {
+                "position": "DM",
+                "english_name": "Rúben Neves",
+                "role": "后腰传球"
+              },
+              {
+                "position": "CM",
+                "english_name": "João Neves",
+                "role": "中场覆盖"
+              },
+              {
+                "position": "AM",
+                "english_name": "Bruno Fernandes",
+                "role": "核心创造"
+              },
+              {
+                "position": "RW",
+                "english_name": "Pedro Neto",
+                "role": "右路速度"
+              },
+              {
+                "position": "LW",
+                "english_name": "Rafael Leão",
+                "role": "左路纵深"
+              },
+              {
+                "position": "ST",
+                "english_name": "Gonçalo Ramos",
+                "role": "中锋终结"
+              }
+            ],
+            "bench_rotation_candidates": [
+              {
+                "english_name": "Bernardo Silva",
+                "trigger": "控球和右肋组织"
+              },
+              {
+                "english_name": "João Félix",
+                "trigger": "二前锋/左肋创造"
+              },
+              {
+                "english_name": "Francisco Conceição",
+                "trigger": "右路替补冲击"
+              }
+            ],
+            "conflicts": [
+              "K组第三轮0-0回灌为partial，前场排序和Bernardo/Leão/Ramos组合需T-75确认。"
+            ]
+          }
+        },
+        "克罗地亚": {
+          "expected_formation": "4-2-3-1，替代方案：4-5-1或4-4-2追分",
+          "key_roles": [
+            "Modric/Kovacic负责控节奏和转移",
+            "Gvardiol负责左侧推进和防线覆盖",
+            "Kramaric/Budimir负责禁区支点",
+            "中卫高点负责定位球攻防"
+          ],
+          "substitution_triggers": [
+            "落后时增加中锋和传中",
+            "领先后补跑动型中场保护边肋",
+            "老将体能下降后降低压迫高度"
+          ],
+          "alternative_shape": "4-5-1或4-4-2追分",
+          "lineup_impact": "数据包预计首发为 4-2-3-1：Dominik Livakovic, Josip Stanisic, Josip Sutalo, Josko Gvardiol, Ivan Perisic, Mateo Kovacic, Luka Modric, Nikola Vlasic, Petar Sucic, Martin Baturina, Ante Budimir。替补触发候选：Mario Pasalic, Igor Matanovic, Andrej Kramaric。Modric/Kovacic首发提高build_up_resistance和central_control；若老将体能受限，后60分钟抗压和边肋防守下修。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.05,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "克罗地亚更适合中位控节奏，不适合持续压葡萄牙后场。"
+              ],
+              "confidence": "medium",
+              "model_note": "轻微负向。 T-75官方首发后必须重跑或限幅。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Modric/Kovacic/Gvardiol能在压力下保球和转移。"
+              ],
+              "confidence": "medium",
+              "model_note": "体能和首发状态是重跑条件。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "老将长传和边路转移可抓葡萄牙压上后的弱侧。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "不提升整体速度上限。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "边肋回追和老将体能会被葡萄牙边锋测试。"
+              ],
+              "confidence": "medium",
+              "model_note": "后60分钟风险更高。 T-75官方首发后必须重跑或限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "negative",
+              "magnitude": -0.25,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "面对葡萄牙边锋，克罗地亚边路防守压力大。"
+              ],
+              "confidence": "medium",
+              "model_note": "Gvardiol一侧可部分抵消。 T-75官方首发后必须重跑或限幅。"
+            },
+            "central_control_advantage": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "克罗地亚控节奏强，但葡萄牙肋部创造和反压质量高。"
+              ],
+              "confidence": "medium",
+              "model_note": "维持中性。 T-75官方首发后必须重跑或限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "克罗地亚定位球和高点是淘汰赛现实窗口。"
+              ],
+              "confidence": "medium",
+              "model_note": "与近期定位球表现可能重复，限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "边肋身后和回追速度对葡萄牙边锋不利。"
+              ],
+              "confidence": "medium",
+              "model_note": "与transition_defense合并。 T-75官方首发后必须重跑或限幅。"
+            },
+            "coach_substitution_risk": {
+              "direction": "negative",
+              "magnitude": -0.05,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "老将换人后控节奏质量可能下降。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "作为后段稳定性风险。 T-75官方首发后必须重跑或限幅。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计克罗地亚为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "平局或领先时更倾向降速和定位球，落后时传中增加。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于低事件和后段分支。 T-75官方首发后必须重跑或限幅。"
+            }
+          },
+          "double_counting_warning": "Modric/Kovacic控节奏和定位球优势可能已在经验/中场评分中体现。",
+          "predicted_lineup_from_data_collector": {
+            "team_en": "Croatia",
+            "team_zh": "克罗地亚",
+            "predicted_formation": "4-2-3-1",
+            "source_status": "probable_not_official",
+            "lineup_confidence": "medium",
+            "official_lineup_gate": "not_available_yet",
+            "predicted_xi": [
+              {
+                "position": "GK",
+                "english_name": "Dominik Livakovic",
+                "role": "一门"
+              },
+              {
+                "position": "RB",
+                "english_name": "Josip Stanisic",
+                "role": "右后卫"
+              },
+              {
+                "position": "CB",
+                "english_name": "Josip Sutalo",
+                "role": "中卫"
+              },
+              {
+                "position": "CB",
+                "english_name": "Josko Gvardiol",
+                "role": "中卫/左侧推进"
+              },
+              {
+                "position": "LB",
+                "english_name": "Ivan Perisic",
+                "role": "左路经验与传中"
+              },
+              {
+                "position": "DM",
+                "english_name": "Mateo Kovacic",
+                "role": "中场推进，80分钟下场负荷观察"
+              },
+              {
+                "position": "CM",
+                "english_name": "Luka Modric",
+                "role": "组织核心，第三轮角球助攻"
+              },
+              {
+                "position": "AM",
+                "english_name": "Nikola Vlasic",
+                "role": "前腰，第三轮制胜球"
+              },
+              {
+                "position": "RW",
+                "english_name": "Petar Sucic",
+                "role": "右/中场攻击，第三轮进球"
+              },
+              {
+                "position": "LW",
+                "english_name": "Martin Baturina",
+                "role": "左/中路创造"
+              },
+              {
+                "position": "ST",
+                "english_name": "Ante Budimir",
+                "role": "中锋支点"
+              }
+            ],
+            "bench_rotation_candidates": [
+              {
+                "english_name": "Mario Pasalic",
+                "trigger": "中场/禁区后插上"
+              },
+              {
+                "english_name": "Igor Matanovic",
+                "trigger": "中锋替补"
+              },
+              {
+                "english_name": "Andrej Kramaric",
+                "trigger": "前腰/锋线经验"
+              }
+            ],
+            "conflicts": [
+              "Croatia第三轮完整外部评分缺失；Kovacic下场原因需赛前队闻确认。"
+            ]
+          }
+        }
+      },
+      "data_collector_status": "partial_source_limited"
+    },
+    {
+      "match_id": "M84",
+      "fixture": {
+        "home": "西班牙",
+        "away": "奥地利",
+        "date": "2026-07-02",
+        "venue": "Los Angeles Stadium"
+      },
+      "matchup_summary": "西班牙4-3-3的控球、反压和边路一对一，对奥地利4-2-3-1的Rangnick式高压、纵向冲刺和定位球形成压迫互相测试。",
+      "teams": {
+        "西班牙": {
+          "expected_formation": "4-3-3，替代方案：4-2-3-1或4-1-4-1",
+          "key_roles": [
+            "Rodri/Zubimendi负责单后腰出球与反压",
+            "Pedri/Olmo负责肋部接应",
+            "Yamal/Nico Williams提供边路一对一",
+            "Morata或中锋负责禁区牵制"
+          ],
+          "substitution_triggers": [
+            "打不开高压时增加肋部接应和边路爆点",
+            "领先后补中场控球降低奥地利转换",
+            "被压迫失误增多时降低后场冒险"
+          ],
+          "alternative_shape": "4-2-3-1或4-1-4-1",
+          "lineup_impact": "数据包预计首发为 4-3-3：Unai Simón, Marcos Llorente, Pau Cubarsí, Aymeric Laporte, Marc Cucurella, Rodri, Martín Zubimendi, Pedri, Lamine Yamal, Nico Williams, Mikel Oyarzabal。替补触发候选：Álex Baena, Mikel Merino, Borja Iglesias。Rodri/Pedri/Yamal首发会提高build_up和wide；若轮换中轴，抗奥地利高压需下修。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "西班牙4-3-3反压成熟，丢球后能快速围抢。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "与防守评分限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "Rodri/Pedri和中卫出球能对抗奥地利高压。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "Rodri或Pedri缺席需显著下修。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "Yamal/Nico能攻击奥地利高压后的边路身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "与边锋player_state重复，限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.1,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "奥地利纵向冲刺会测试西班牙反压后的身后保护。"
+              ],
+              "confidence": "medium",
+              "model_note": "作为对冲项。 T-75官方首发后必须重跑或限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "西班牙两翼一对一质量高，能拉开奥地利压迫。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "和个人状态限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "Rodri/Pedri中轴强于奥地利中路控球质量。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "避免与基础实力重复。 T-75官方首发后必须重跑或限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.05,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "西班牙有脚法但奥地利高点和纪律不弱。"
+              ],
+              "confidence": "low",
+              "model_note": "定位球不宜高估。 T-75官方首发后必须重跑或限幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.1,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "高位控球仍会给奥地利直塞和二点反击机会。"
+              ],
+              "confidence": "medium",
+              "model_note": "T-75按中卫/边卫组合调整。 T-75官方首发后必须重跑或限幅。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "De la Fuente可用边锋和中场控制比赛节奏。"
+              ],
+              "confidence": "medium",
+              "model_note": "替补深度限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计西班牙为4-3-3，首发状态probable_not_official，置信度medium。",
+                "领先后倾向控球降速，落后时通过边路和肋部持续压迫。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于状态管理。 T-75官方首发后必须重跑或限幅。"
+            }
+          },
+          "double_counting_warning": "Rodri/Pedri/Yamal/Nico的影响会在attack、midfield和player_state中重复出现。",
+          "predicted_lineup_from_data_collector": {
+            "team_en": "Spain",
+            "team_zh": "西班牙",
+            "predicted_formation": "4-3-3",
+            "source_status": "probable_not_official",
+            "lineup_confidence": "medium",
+            "official_lineup_gate": "not_available_yet",
+            "predicted_xi": [
+              {
+                "position": "GK",
+                "english_name": "Unai Simón",
+                "role": "一门候选"
+              },
+              {
+                "position": "RB",
+                "english_name": "Marcos Llorente",
+                "role": "右后卫/中场兼容"
+              },
+              {
+                "position": "CB",
+                "english_name": "Pau Cubarsí",
+                "role": "中卫出球"
+              },
+              {
+                "position": "CB",
+                "english_name": "Aymeric Laporte",
+                "role": "中卫经验"
+              },
+              {
+                "position": "LB",
+                "english_name": "Marc Cucurella",
+                "role": "左后卫"
+              },
+              {
+                "position": "DM",
+                "english_name": "Rodri",
+                "role": "中场轴心"
+              },
+              {
+                "position": "CM",
+                "english_name": "Martín Zubimendi",
+                "role": "中场控制"
+              },
+              {
+                "position": "CM",
+                "english_name": "Pedri",
+                "role": "中场创造"
+              },
+              {
+                "position": "RW",
+                "english_name": "Lamine Yamal",
+                "role": "右路核心，肌肉问题管理"
+              },
+              {
+                "position": "LW",
+                "english_name": "Nico Williams",
+                "role": "左路速度，肌肉问题管理"
+              },
+              {
+                "position": "ST",
+                "english_name": "Mikel Oyarzabal",
+                "role": "中锋/左路，状态最高"
+              }
+            ],
+            "bench_rotation_candidates": [
+              {
+                "english_name": "Álex Baena",
+                "trigger": "左路/前腰轮换"
+              },
+              {
+                "english_name": "Mikel Merino",
+                "trigger": "中场高度和后插上"
+              },
+              {
+                "english_name": "Borja Iglesias",
+                "trigger": "禁区中锋替补"
+              }
+            ],
+            "conflicts": [
+              "Yamal/Nico Williams 肌肉问题为 managed，不等于缺阵；T-75前需确认首发和分钟限制。"
+            ]
+          }
+        },
+        "奥地利": {
+          "expected_formation": "4-2-3-1，替代方案：4-4-2或4-3-3",
+          "key_roles": [
+            "Sabitzer/Laimer负责高压触发和二点冲刺",
+            "Baumgartner负责前腰压迫与禁区后插",
+            "Arnautovic/Gregoritsch提供支点和定位球高点",
+            "Alaba若可用影响左侧出球与定位球"
+          ],
+          "substitution_triggers": [
+            "落后时增加双前锋和传中",
+            "领先后降低压迫高度改中低位",
+            "高压被穿透时加第三中场保护中路"
+          ],
+          "alternative_shape": "4-4-2或4-3-3",
+          "lineup_impact": "数据包预计首发为 4-2-3-1：Alexander Schlager, Konrad Laimer, Kevin Danso, Philipp Lienhart, Phillipp Mwene, Nicolas Seiwald, Xaver Schlager, Marcel Sabitzer, Patrick Wimmer, Alexander Prass, Saša Kalajdžić。替补触发候选：Marko Arnautović, Romano Schmid, David Alaba。Laimer/Sabitzer首发决定pressing和transition_attack；Alaba可用性影响build_up和set_piece。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "奥地利战术包记录4-2-3-1和高压倾向。"
+              ],
+              "confidence": "medium",
+              "model_note": "高压强度高但对西班牙风险也高。 T-75官方首发后必须重跑或限幅。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "面对西班牙反压，奥地利后场可能被迫快速直传。"
+              ],
+              "confidence": "medium",
+              "model_note": "Alaba可用则回调。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Laimer/Sabitzer/Baumgartner纵向冲刺可攻击西班牙高位身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "与球员跑动状态重复，限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "高压一旦被穿透，西班牙边锋会获得开阔外侧空间。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "关键扣分项。 T-75官方首发后必须重跑或限幅。"
+            },
+            "wide_channel_advantage": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "面对Yamal/Nico，边路防守会长期承压。"
+              ],
+              "confidence": "medium",
+              "model_note": "不否定奥地利逼抢回合。 T-75官方首发后必须重跑或限幅。"
+            },
+            "central_control_advantage": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "奥地利跑动强，但控球细腻度弱于西班牙中轴。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "与基础中场评分限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Arnautovic/Gregoritsch和中卫高点提供定位球窗口。"
+              ],
+              "confidence": "medium",
+              "model_note": "与身高模型重复，限幅。 T-75官方首发后必须重跑或限幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "高线身后和边肋回追会被西班牙边锋测试。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "与transition_defense合并。 T-75官方首发后必须重跑或限幅。"
+            },
+            "coach_substitution_risk": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "Rangnick式调整清晰，但对西班牙可能需要更早降压。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "保持中性。 T-75官方首发后必须重跑或限幅。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "data-collector.json预计奥地利为4-2-3-1，首发状态probable_not_official，置信度medium。",
+                "落后会提高压迫和直接性，平局后段可能转为更谨慎中位防守。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于节奏和事件波动。 T-75官方首发后必须重跑或限幅。"
+            }
+          },
+          "double_counting_warning": "奥地利高压、跑动和定位球可能已在team_style/player_state中体现。",
+          "predicted_lineup_from_data_collector": {
+            "team_en": "Austria",
+            "team_zh": "奥地利",
+            "predicted_formation": "4-2-3-1",
+            "source_status": "probable_not_official",
+            "lineup_confidence": "medium",
+            "official_lineup_gate": "not_available_yet",
+            "predicted_xi": [
+              {
+                "position": "GK",
+                "english_name": "Alexander Schlager",
+                "role": "门将候选"
+              },
+              {
+                "position": "RB",
+                "english_name": "Konrad Laimer",
+                "role": "右后卫/中场压迫"
+              },
+              {
+                "position": "CB",
+                "english_name": "Kevin Danso",
+                "role": "中卫对抗"
+              },
+              {
+                "position": "CB",
+                "english_name": "Philipp Lienhart",
+                "role": "中卫"
+              },
+              {
+                "position": "LB",
+                "english_name": "Phillipp Mwene",
+                "role": "左后卫"
+              },
+              {
+                "position": "DM",
+                "english_name": "Nicolas Seiwald",
+                "role": "后腰覆盖"
+              },
+              {
+                "position": "CM",
+                "english_name": "Xaver Schlager",
+                "role": "中场压迫"
+              },
+              {
+                "position": "AM",
+                "english_name": "Marcel Sabitzer",
+                "role": "中前场核心，高状态"
+              },
+              {
+                "position": "RW",
+                "english_name": "Patrick Wimmer",
+                "role": "右路突破"
+              },
+              {
+                "position": "LW",
+                "english_name": "Alexander Prass",
+                "role": "左路/中场覆盖"
+              },
+              {
+                "position": "ST",
+                "english_name": "Saša Kalajdžić",
+                "role": "中锋高点"
+              }
+            ],
+            "bench_rotation_candidates": [
+              {
+                "english_name": "Marko Arnautović",
+                "trigger": "中锋经验但体能需复核"
+              },
+              {
+                "english_name": "Romano Schmid",
+                "trigger": "前腰创造"
+              },
+              {
+                "english_name": "David Alaba",
+                "trigger": "中卫/后场组织，健康和分钟限制需复核"
+              }
+            ],
+            "conflicts": [
+              "Alaba/Arnautovic 伤情或体能需后续复核；第三轮3-3完整事件链仍 partial_source_limited。"
+            ]
+          }
+        }
+      },
+      "data_collector_status": "partial_source_limited"
+    }
+  ],
+  "validation_expectation": {
+    "matches_count": 4,
+    "teams_per_match": 2,
+    "factors_per_team": 10
+  },
+  "data_collector_files_read": [
+    "data/thread_outputs/round32-m81-m84-v3-20260628/data-collector.json",
+    "data/thread_outputs/round32-m81-m84-v3-20260628/data-collector.md"
+  ],
+  "data_collector_created_at": "2026-06-28T22:41:40+08:00",
+  "data_collector_captured_at": "2026-06-28T22:41:40+08:00"
+}

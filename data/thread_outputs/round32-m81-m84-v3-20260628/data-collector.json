@@ -1,0 +1,505 @@
+{
+  "schema_version": "round32_v3_data_collector_packet_20260628",
+  "project": "E:/worldcup",
+  "owner": "worldcup-data-collector",
+  "phase": "round_of_32_pre_match_fact_collection",
+  "status": "partial_source_limited",
+  "created_at": "2026-06-28T22:41:40+08:00",
+  "captured_at": "2026-06-28T22:41:40+08:00",
+  "scope": {
+    "matches": ["M81", "M82", "M83", "M84"],
+    "canonical_bracket": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+    "boundary": "facts_only_no_score_prediction_no_wdl_probability_no_betting_advice",
+    "regulation_time_boundary": "Prepared as a 90-minute pre-match fact packet. Extra time and penalties are knockout procedure outcomes and are not forecast here."
+  },
+  "global_gates": {
+    "official_lineup_gate": {
+      "status": "not_available_yet",
+      "rule": "T-75 official lineups must be checked before any model finalization or betting-risk execution.",
+      "captured_at": "2026-06-28T22:41:40+08:00"
+    },
+    "betting_gate_status": "hold_not_executable",
+    "reason": [
+      "No complete same-source Chinese sports lottery market chain was verified for M81-M84 in this collection pass.",
+      "Official T-75 lineups are not available or not captured for all four matches.",
+      "Several team player_state files are partial or not fully updated through third round official minutes."
+    ]
+  },
+  "matches": [
+    {
+      "match_no": 81,
+      "match_id": "M81_2026-07-01_美国_vs_波黑",
+      "stage": "Round of 32",
+      "fixture": {
+        "home_team": {"zh": "美国", "en": "United States", "slot": "1D", "qualification_source": "D组第一"},
+        "away_team": {"zh": "波黑", "en": "Bosnia and Herzegovina", "slot": "3B", "qualification_source": "B组第三"},
+        "host_date": "2026-07-01",
+        "kickoff_host": "17:00",
+        "kickoff_uk": "2026-07-02 01:00",
+        "venue": "San Francisco Bay Area Stadium",
+        "host_city": "Santa Clara / San Francisco Bay Area",
+        "round_of_16_path": "M81胜者 vs M82胜者",
+        "source_status": "confirmed_by_2026_06_28_canonical_bracket",
+        "captured_at": "2026-06-28T22:41:40+08:00"
+      },
+      "group_stage_summary": {
+        "usa": {
+          "known_results": ["美国 4-1 巴拉圭", "美国 2-0 澳大利亚", "土耳其 vs 美国 第三轮本地复盘缺失"],
+          "rank_source": "canonical bracket marks United States as 1D; public reports say USA topped Group D despite final-game loss to Turkey",
+          "trend_notes": ["前两轮主场冲击和前场速度强", "第三轮据公开报道负于土耳其但不影响头名", "Freeman/Adams/McKennie/Tillman/Balogun 本地状态分高"]
+        },
+        "bosnia_herzegovina": {
+          "known_results": ["加拿大 1-1 波黑", "瑞士 4-1 波黑", "波黑 3-1 卡塔尔"],
+          "rank_source": "canonical third-place assignment maps Bosnia and Herzegovina as 3B",
+          "trend_notes": ["第三轮击败卡塔尔后作为B组第三晋级", "本地 player_state 标 completed_core_partial_match_detail", "Mahmić/Kulenović/Bajraktarević/Demirović 是主要状态和进攻线索"]
+        }
+      },
+      "predicted_lineups": [
+        {
+          "team": "United States",
+          "team_zh": "美国",
+          "predicted_formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "马特·弗里斯", "english_name": "Matt Freese", "role": "一门候选，本地状态稳定"},
+            {"position": "RB", "chinese_name": "亚历克斯·弗里曼", "english_name": "Alex Freeman", "role": "右后卫，高状态"},
+            {"position": "CB", "chinese_name": "克里斯·理查兹", "english_name": "Chris Richards", "role": "中卫对抗"},
+            {"position": "CB", "chinese_name": "蒂姆·里姆", "english_name": "Tim Ream", "role": "中卫出球和经验"},
+            {"position": "LB", "chinese_name": "安东尼·罗宾逊", "english_name": "Antonee Robinson", "role": "左后卫推进"},
+            {"position": "DM", "chinese_name": "泰勒·亚当斯", "english_name": "Tyler Adams", "role": "后腰保护"},
+            {"position": "CM", "chinese_name": "韦斯顿·麦肯尼", "english_name": "Weston McKennie", "role": "中场前插"},
+            {"position": "AM", "chinese_name": "马利克·蒂尔曼", "english_name": "Malik Tillman", "role": "前腰连接"},
+            {"position": "RW", "chinese_name": "乔瓦尼·雷纳", "english_name": "Giovanni Reyna", "role": "右/中路创造"},
+            {"position": "LW", "chinese_name": "亚历杭德罗·森德哈斯", "english_name": "Álex Zendejas", "role": "边路内切"},
+            {"position": "ST", "chinese_name": "弗拉林·巴洛贡", "english_name": "Folarin Balogun", "role": "中锋终结"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "里卡多·佩皮", "english_name": "Ricardo Pepi", "trigger": "中锋轮换或双前锋"},
+            {"chinese_name": "塞尔吉尼奥·德斯特", "english_name": "Sergiño Dest", "trigger": "右后卫/翼侧推进选择"},
+            {"chinese_name": "哈吉·赖特", "english_name": "Haji Wright", "trigger": "需要禁区冲击"}
+          ],
+          "conflicts": ["D组第三轮美国对土耳其完整本地复盘缺失；最终首发和第三轮负荷需T-75复核。"]
+        },
+        {
+          "team": "Bosnia and Herzegovina",
+          "team_zh": "波黑",
+          "predicted_formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium_low",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "尼古拉·瓦西利", "english_name": "Nikola Vasilj", "role": "门将候选"},
+            {"position": "RB", "chinese_name": "阿马尔·德迪奇", "english_name": "Amar Dedić", "role": "右后卫推进"},
+            {"position": "CB", "chinese_name": "埃明·马赫米奇", "english_name": "Emin Mahmić", "role": "中卫，本地状态高"},
+            {"position": "CB", "chinese_name": "斯捷潘·拉德利奇", "english_name": "Stjepan Radeljić", "role": "中卫"},
+            {"position": "LB", "chinese_name": "赛德·科拉希纳茨", "english_name": "Sead Kolašinac", "role": "左后卫/中卫经验"},
+            {"position": "DM", "chinese_name": "阿米尔·哈季艾哈梅托维奇", "english_name": "Amir Hadžiahmetović", "role": "后腰连接"},
+            {"position": "CM", "chinese_name": "丹尼斯·侯赛因巴希奇", "english_name": "Denis Huseinbašić", "role": "中场跑动"},
+            {"position": "AM", "chinese_name": "伊万·巴希奇", "english_name": "Ivan Bašić", "role": "前腰/中场"},
+            {"position": "RW", "chinese_name": "伊斯梅特·巴伊拉克塔雷维奇", "english_name": "Esmir Bajraktarević", "role": "边路创造"},
+            {"position": "LW", "chinese_name": "凯里姆·阿拉伊贝戈维奇", "english_name": "Kerim Alajbegović", "role": "边锋/二前锋"},
+            {"position": "ST", "chinese_name": "卢卡·库拉希纳茨", "english_name": "Luka Kulenović", "role": "中锋，高状态"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "埃尔梅丁·德米罗维奇", "english_name": "Ermedin Demirović", "trigger": "前锋经验和压迫"},
+            {"chinese_name": "阿伦·哈利洛维奇", "english_name": "Alen Halilović", "trigger": "前场创造"},
+            {"chinese_name": "达里奥·萨里奇", "english_name": "Dario Šarić", "trigger": "中场稳态"}
+          ],
+          "conflicts": ["Bosnia player_state 是 core partial match detail，第三轮逐人分钟和牌面需复核。"]
+        }
+      ],
+      "availability_and_risk": {
+        "usa": [
+          {"player": "Alex Freeman", "status": "probable_high_form", "note": "本地 form_status_1_5=4.6。"},
+          {"player": "Tyler Adams", "status": "probable", "note": "本地未见新增伤停；淘汰赛负荷需复核。"}
+        ],
+        "bosnia_herzegovina": [
+          {"player": "Emin Mahmić / Luka Kulenović", "status": "probable_high_local_form", "note": "本地状态分靠前；无 confirmed injury。"},
+          {"player": "Ermedin Demirović", "status": "probable", "note": "可能与 Kulenović 存在中锋/前场排序冲突。"}
+        ]
+      },
+      "environment": {"rest_days": {"usa": 6, "bosnia_herzegovina": 7}, "travel_note": "USA from Los Angeles/San Francisco group context to Santa Clara; Bosnia from Seattle group finale to Bay Area; exact team logistics not verified.", "weather_status": "missing"},
+      "market_availability": {"status": "missing_same_source_complete_snapshot", "betting_gate": "hold_not_executable", "missing": ["official_lottery_id", "1X2", "handicap", "totals", "correct_score", "total_goals", "half_full_time"]}
+    },
+    {
+      "match_no": 82,
+      "match_id": "M82_2026-07-01_比利时_vs_塞内加尔",
+      "stage": "Round of 32",
+      "fixture": {
+        "home_team": {"zh": "比利时", "en": "Belgium", "slot": "1G", "qualification_source": "G组第一"},
+        "away_team": {"zh": "塞内加尔", "en": "Senegal", "slot": "3I", "qualification_source": "I组第三"},
+        "host_date": "2026-07-01",
+        "kickoff_host": "13:00",
+        "kickoff_uk": "21:00",
+        "venue": "Seattle Stadium",
+        "host_city": "Seattle",
+        "round_of_16_path": "M81胜者 vs M82胜者",
+        "source_status": "confirmed_by_2026_06_28_canonical_bracket",
+        "captured_at": "2026-06-28T22:41:40+08:00"
+      },
+      "group_stage_summary": {
+        "belgium": {
+          "known_results": ["比利时 vs 埃及 首轮本地复盘需复核", "比利时 0-0 伊朗", "新西兰 1-5 比利时"],
+          "rank_source": "canonical bracket marks Belgium as 1G; G组第三轮复盘 thread state says Belgium won group",
+          "trend_notes": ["第二轮低转化0-0，第三轮5-1新西兰反弹", "Courtois/De Bruyne/Doku 为核心状态点", "player_state 仍缺完整第三轮官方分钟"]
+        },
+        "senegal": {
+          "known_results": ["法国 vs 塞内加尔 首轮本地资料需复核", "挪威 vs 塞内加尔 第二轮本地资料需复核", "塞内加尔 5-0 伊拉克"],
+          "rank_source": "canonical bracket maps Senegal as 3I; I组第三轮复盘 says Senegal 3 points GD +2 awaiting/qualifying third-place comparison",
+          "trend_notes": ["第三轮5-0伊拉克大胜但仅第三出线", "Mbaye/ Jackson / Ndiaye / Mendy 是本地主要状态点", "I组第三轮 player_state/member-table 未完整回灌"]
+        }
+      },
+      "predicted_lineups": [
+        {
+          "team": "Belgium",
+          "team_zh": "比利时",
+          "predicted_formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium_low",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "蒂博·库尔图瓦", "english_name": "Thibaut Courtois", "role": "一门，队内状态最高"},
+            {"position": "RB", "chinese_name": "蒂莫西·卡斯塔涅", "english_name": "Timothy Castagne", "role": "右后卫"},
+            {"position": "CB", "chinese_name": "泽诺·德巴斯特", "english_name": "Zeno Debast", "role": "中卫"},
+            {"position": "CB", "chinese_name": "阿蒂尔·泰特", "english_name": "Arthur Theate", "role": "中卫/左侧防守"},
+            {"position": "LB", "chinese_name": "阿莱克西斯·萨勒马克尔斯", "english_name": "Alexis Saelemaekers", "role": "边后卫/翼侧候选"},
+            {"position": "DM", "chinese_name": "阿马杜·奥纳纳", "english_name": "Amadou Onana", "role": "后腰对抗"},
+            {"position": "CM", "chinese_name": "尤里·蒂勒曼斯", "english_name": "Youri Tielemans", "role": "中场传球"},
+            {"position": "AM", "chinese_name": "凯文·德布劳内", "english_name": "Kevin De Bruyne", "role": "核心创造"},
+            {"position": "RW", "chinese_name": "杰里米·多库", "english_name": "Jeremy Doku", "role": "右/左路突破"},
+            {"position": "LW", "chinese_name": "莱安德罗·特罗萨德", "english_name": "Leandro Trossard", "role": "左路内切"},
+            {"position": "ST", "chinese_name": "查尔斯·德凯特拉雷", "english_name": "Charles De Ketelaere", "role": "中锋/九号半"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "多迪·卢克巴基奥", "english_name": "Dodi Lukebakio", "trigger": "边路速度"},
+            {"chinese_name": "汉斯·瓦纳肯", "english_name": "Hans Vanaken", "trigger": "前场高度与二线"},
+            {"chinese_name": "尼古拉斯·拉斯金", "english_name": "Nicolas Raskin", "trigger": "中场防守替补"}
+          ],
+          "conflicts": ["Belgium player_state 仍是较早版本，第三轮5-1后的逐人状态未完全结构化。"]
+        },
+        {
+          "team": "Senegal",
+          "team_zh": "塞内加尔",
+          "predicted_formation": "4-3-3",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium_low",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "爱德华-门迪", "english_name": "Édouard Mendy", "role": "一门"},
+            {"position": "RB", "chinese_name": "克雷潘-迪亚塔", "english_name": "Krépin Diatta", "role": "右路往返"},
+            {"position": "CB", "chinese_name": "穆萨-尼亚哈特", "english_name": "Moussa Niakhaté", "role": "中卫"},
+            {"position": "CB", "chinese_name": "阿卜杜拉耶-塞克", "english_name": "Abdoulaye Seck", "role": "中卫防空"},
+            {"position": "LB", "chinese_name": "埃尔-哈吉-马利克-迪乌夫", "english_name": "El Hadji Malick Diouf", "role": "左后卫推进"},
+            {"position": "DM", "chinese_name": "伊德里萨-盖耶", "english_name": "Idrissa Gueye", "role": "后腰经验"},
+            {"position": "CM", "chinese_name": "拉明-卡马拉", "english_name": "Lamine Camara", "role": "中场推进"},
+            {"position": "CM", "chinese_name": "帕普-马塔尔-萨尔", "english_name": "Pape Matar Sarr", "role": "中场跑动"},
+            {"position": "RW", "chinese_name": "易卜拉欣-姆巴耶", "english_name": "Ibrahim Mbaye", "role": "右路高状态"},
+            {"position": "LW", "chinese_name": "伊利曼-恩迪亚耶", "english_name": "Iliman Ndiaye", "role": "左/中路创造"},
+            {"position": "ST", "chinese_name": "尼古拉斯-杰克逊", "english_name": "Nicolas Jackson", "role": "中锋冲击"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "伊斯梅拉-萨尔", "english_name": "Ismaïla Sarr", "trigger": "边路速度"},
+            {"chinese_name": "哈比卜-迪亚拉", "english_name": "Habib Diarra", "trigger": "中场推进"},
+            {"chinese_name": "帕普-盖耶", "english_name": "Pape Gueye", "trigger": "后腰轮换"}
+          ],
+          "conflicts": ["I组第三轮5-0伊拉克逐人完整分钟和牌面未完全回写，首发置信度受限。"]
+        }
+      ],
+      "availability_and_risk": {
+        "belgium": [
+          {"player": "Thibaut Courtois", "status": "probable", "note": "本地 form_status_1_5=3.5。"},
+          {"player": "Kevin De Bruyne", "status": "probable", "note": "本地无 confirmed injury，但第三轮负荷需赛前核验。"}
+        ],
+        "senegal": [
+          {"player": "Ibrahim Mbaye", "status": "probable_high_local_form", "note": "本地 form_status_1_5=4.0。"},
+          {"player": "Nicolas Jackson", "status": "probable", "note": "中锋候选，本地无伤停。"}
+        ]
+      },
+      "environment": {"rest_days": {"belgium": 5, "senegal": 5}, "travel_note": "Belgium from Vancouver group finale to Seattle; Senegal from Toronto group finale to Seattle; exact logistics not verified.", "weather_status": "missing"},
+      "market_availability": {"status": "missing_same_source_complete_snapshot", "betting_gate": "hold_not_executable", "missing": ["official_lottery_id", "1X2", "handicap", "totals", "correct_score", "total_goals", "half_full_time"]}
+    },
+    {
+      "match_no": 83,
+      "match_id": "M83_2026-07-02_葡萄牙_vs_克罗地亚",
+      "stage": "Round of 32",
+      "fixture": {
+        "home_team": {"zh": "葡萄牙", "en": "Portugal", "slot": "2K", "qualification_source": "K组第二"},
+        "away_team": {"zh": "克罗地亚", "en": "Croatia", "slot": "2L", "qualification_source": "L组第二"},
+        "host_date": "2026-07-02",
+        "kickoff_host": "19:00",
+        "kickoff_uk": "2026-07-03 00:00",
+        "venue": "Toronto Stadium",
+        "host_city": "Toronto",
+        "round_of_16_path": "M83胜者 vs M84胜者",
+        "source_status": "confirmed_by_2026_06_28_canonical_bracket_not_old_portugal_ghana_pairing",
+        "captured_at": "2026-06-28T22:41:40+08:00"
+      },
+      "group_stage_summary": {
+        "portugal": {
+          "known_results": ["葡萄牙 1-1 刚果金", "葡萄牙 vs 乌兹别克斯坦 第二轮资料需复核", "哥伦比亚 0-0 葡萄牙"],
+          "rank_source": "canonical bracket marks Portugal as 2K; K组第三轮复盘 says Portugal runner-up",
+          "trend_notes": ["第三轮0-0哥伦比亚为低事件平局", "Diogo Costa/Rúben Dias/Bruno Fernandes 是当前本地主要状态点", "K组三轮回灌为 partial_updated_official_full_minutes_and_external_ratings_missing"]
+        },
+        "croatia": {
+          "known_results": ["英格兰 4-2 克罗地亚", "巴拿马 0-1 克罗地亚", "克罗地亚 2-1 加纳"],
+          "rank_source": "canonical bracket marks Croatia as 2L; L组第三轮复盘 confirms Croatia runner-up",
+          "trend_notes": ["第三轮 Sucic、Vlasic、Modric 关键事件带动晋级", "Modric/Vlasic/Sucic/Kovacic 状态分高", "官方完整分钟/外部评分仍 partial"]
+        }
+      },
+      "predicted_lineups": [
+        {
+          "team": "Portugal",
+          "team_zh": "葡萄牙",
+          "predicted_formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "迪奥戈·科斯塔", "english_name": "Diogo Costa", "role": "一门，高状态"},
+            {"position": "RB", "chinese_name": "迪奥戈·达洛特", "english_name": "Diogo Dalot", "role": "右后卫"},
+            {"position": "CB", "chinese_name": "鲁本·迪亚斯", "english_name": "Rúben Dias", "role": "中卫核心"},
+            {"position": "CB", "chinese_name": "雷纳托·韦加", "english_name": "Renato Veiga", "role": "中卫/左脚平衡"},
+            {"position": "LB", "chinese_name": "若昂·坎塞洛", "english_name": "João Cancelo", "role": "边后卫组织"},
+            {"position": "DM", "chinese_name": "鲁本·内维斯", "english_name": "Rúben Neves", "role": "后腰传球"},
+            {"position": "CM", "chinese_name": "若昂·内维斯", "english_name": "João Neves", "role": "中场覆盖"},
+            {"position": "AM", "chinese_name": "布鲁诺·费尔南德斯", "english_name": "Bruno Fernandes", "role": "核心创造"},
+            {"position": "RW", "chinese_name": "佩德罗·内托", "english_name": "Pedro Neto", "role": "右路速度"},
+            {"position": "LW", "chinese_name": "拉斐尔·莱奥", "english_name": "Rafael Leão", "role": "左路纵深"},
+            {"position": "ST", "chinese_name": "贡萨洛·拉莫斯", "english_name": "Gonçalo Ramos", "role": "中锋终结"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "贝尔纳多·席尔瓦", "english_name": "Bernardo Silva", "trigger": "控球和右肋组织"},
+            {"chinese_name": "若昂·菲利克斯", "english_name": "João Félix", "trigger": "二前锋/左肋创造"},
+            {"chinese_name": "弗朗西斯科·孔塞桑", "english_name": "Francisco Conceição", "trigger": "右路替补冲击"}
+          ],
+          "conflicts": ["K组第三轮0-0回灌为partial，前场排序和Bernardo/Leão/Ramos组合需T-75确认。"]
+        },
+        {
+          "team": "Croatia",
+          "team_zh": "克罗地亚",
+          "predicted_formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "多米尼克·利瓦科维奇", "english_name": "Dominik Livakovic", "role": "一门"},
+            {"position": "RB", "chinese_name": "约西普·斯塔尼希奇", "english_name": "Josip Stanisic", "role": "右后卫"},
+            {"position": "CB", "chinese_name": "约西普·舒塔洛", "english_name": "Josip Sutalo", "role": "中卫"},
+            {"position": "CB", "chinese_name": "约什科·格瓦迪奥尔", "english_name": "Josko Gvardiol", "role": "中卫/左侧推进"},
+            {"position": "LB", "chinese_name": "伊万·佩里希奇", "english_name": "Ivan Perisic", "role": "左路经验与传中"},
+            {"position": "DM", "chinese_name": "马特奥·科瓦契奇", "english_name": "Mateo Kovacic", "role": "中场推进，80分钟下场负荷观察"},
+            {"position": "CM", "chinese_name": "卢卡·莫德里奇", "english_name": "Luka Modric", "role": "组织核心，第三轮角球助攻"},
+            {"position": "AM", "chinese_name": "尼古拉·弗拉希奇", "english_name": "Nikola Vlasic", "role": "前腰，第三轮制胜球"},
+            {"position": "RW", "chinese_name": "佩塔尔·苏契奇", "english_name": "Petar Sucic", "role": "右/中场攻击，第三轮进球"},
+            {"position": "LW", "chinese_name": "马丁·巴图里纳", "english_name": "Martin Baturina", "role": "左/中路创造"},
+            {"position": "ST", "chinese_name": "安特·布迪米尔", "english_name": "Ante Budimir", "role": "中锋支点"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "马里奥·帕沙利奇", "english_name": "Mario Pasalic", "trigger": "中场/禁区后插上"},
+            {"chinese_name": "伊戈尔·马塔诺维奇", "english_name": "Igor Matanovic", "trigger": "中锋替补"},
+            {"chinese_name": "安德雷·克拉马里奇", "english_name": "Andrej Kramaric", "trigger": "前腰/锋线经验"}
+          ],
+          "conflicts": ["Croatia第三轮完整外部评分缺失；Kovacic下场原因需赛前队闻确认。"]
+        }
+      ],
+      "availability_and_risk": {
+        "portugal": [
+          {"player": "Diogo Costa", "status": "probable_high_form", "note": "本地 form_status_1_5=4.3。"},
+          {"player": "Bruno Fernandes", "status": "probable", "note": "本地未见新增伤停；三轮负荷需核验。"}
+        ],
+        "croatia": [
+          {"player": "Luka Modric / Nikola Vlasic / Petar Sucic", "status": "probable_high_form", "note": "第三轮关键事件后本地状态分 4.4-4.6。"},
+          {"player": "Mateo Kovacic", "status": "probable_minutes_watch", "note": "第三轮80分钟下场，需确认是否轮换/负荷。"}
+        ]
+      },
+      "environment": {"rest_days": {"portugal": 4, "croatia": 5}, "travel_note": "Portugal from Miami group finale to Toronto; Croatia from Philadelphia group finale to Toronto; exact logistics not verified.", "weather_status": "missing"},
+      "market_availability": {"status": "missing_same_source_complete_snapshot", "betting_gate": "hold_not_executable", "missing": ["official_lottery_id", "1X2", "handicap", "totals", "correct_score", "total_goals", "half_full_time"]}
+    },
+    {
+      "match_no": 84,
+      "match_id": "M84_2026-07-02_西班牙_vs_奥地利",
+      "stage": "Round of 32",
+      "fixture": {
+        "home_team": {"zh": "西班牙", "en": "Spain", "slot": "1H", "qualification_source": "H组第一"},
+        "away_team": {"zh": "奥地利", "en": "Austria", "slot": "2J", "qualification_source": "J组第二"},
+        "host_date": "2026-07-02",
+        "kickoff_host": "12:00",
+        "kickoff_uk": "20:00",
+        "venue": "Los Angeles Stadium",
+        "host_city": "Los Angeles",
+        "round_of_16_path": "M83胜者 vs M84胜者",
+        "source_status": "confirmed_by_2026_06_28_canonical_bracket",
+        "captured_at": "2026-06-28T22:41:40+08:00"
+      },
+      "group_stage_summary": {
+        "spain": {
+          "known_results": ["西班牙 4-0 沙特", "H组第二轮/第三轮本地资料需复核", "乌拉圭 0-1 西班牙"],
+          "rank_source": "canonical bracket marks Spain as 1H; H组第三轮复盘 says Spain 7 points GD +5 group winner",
+          "trend_notes": ["首轮4-0沙特和第三轮1-0乌拉圭构成攻守两端正信号", "Oyarzabal/Yamal/Rodri/Zubimendi/Pedri 状态分高", "Yamal/Nico Williams 有 recent_muscle_issue_managed"]
+        },
+        "austria": {
+          "known_results": ["奥地利 vs 约旦 首轮本地资料需复核", "阿根廷 vs 奥地利 第二轮本地资料需复核", "阿尔及利亚 3-3 奥地利"],
+          "rank_source": "canonical bracket marks Austria as 2J; J组三轮复盘 confirms Austria runner-up",
+          "trend_notes": ["第三轮与阿尔及利亚3-3，最后阶段拿到出线结果", "Sabitzer/Kalajdzic/Laimer/Arnautovic 状态分靠前", "Alaba/Arnautovic 伤情或体能需后续复核"]
+        }
+      },
+      "predicted_lineups": [
+        {
+          "team": "Spain",
+          "team_zh": "西班牙",
+          "predicted_formation": "4-3-3",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "乌奈·西蒙", "english_name": "Unai Simón", "role": "一门候选"},
+            {"position": "RB", "chinese_name": "马科斯·略伦特", "english_name": "Marcos Llorente", "role": "右后卫/中场兼容"},
+            {"position": "CB", "chinese_name": "保·库巴西", "english_name": "Pau Cubarsí", "role": "中卫出球"},
+            {"position": "CB", "chinese_name": "艾梅里克·拉波尔特", "english_name": "Aymeric Laporte", "role": "中卫经验"},
+            {"position": "LB", "chinese_name": "马克·库库雷利亚", "english_name": "Marc Cucurella", "role": "左后卫"},
+            {"position": "DM", "chinese_name": "罗德里", "english_name": "Rodri", "role": "中场轴心"},
+            {"position": "CM", "chinese_name": "马丁·祖比门迪", "english_name": "Martín Zubimendi", "role": "中场控制"},
+            {"position": "CM", "chinese_name": "佩德里", "english_name": "Pedri", "role": "中场创造"},
+            {"position": "RW", "chinese_name": "拉明·亚马尔", "english_name": "Lamine Yamal", "role": "右路核心，肌肉问题管理"},
+            {"position": "LW", "chinese_name": "尼科·威廉姆斯", "english_name": "Nico Williams", "role": "左路速度，肌肉问题管理"},
+            {"position": "ST", "chinese_name": "米克尔·奥亚萨瓦尔", "english_name": "Mikel Oyarzabal", "role": "中锋/左路，状态最高"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "亚历克斯·巴埃纳", "english_name": "Álex Baena", "trigger": "左路/前腰轮换"},
+            {"chinese_name": "米克尔·梅里诺", "english_name": "Mikel Merino", "trigger": "中场高度和后插上"},
+            {"chinese_name": "博尔哈·伊格莱西亚斯", "english_name": "Borja Iglesias", "trigger": "禁区中锋替补"}
+          ],
+          "conflicts": ["Yamal/Nico Williams 肌肉问题为 managed，不等于缺阵；T-75前需确认首发和分钟限制。"]
+        },
+        {
+          "team": "Austria",
+          "team_zh": "奥地利",
+          "predicted_formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "lineup_confidence": "medium",
+          "official_lineup_gate": "not_available_yet",
+          "captured_at": "2026-06-28T22:41:40+08:00",
+          "predicted_xi": [
+            {"position": "GK", "chinese_name": "亚历山大-施拉格尔", "english_name": "Alexander Schlager", "role": "门将候选"},
+            {"position": "RB", "chinese_name": "康拉德-莱默尔", "english_name": "Konrad Laimer", "role": "右后卫/中场压迫"},
+            {"position": "CB", "chinese_name": "凯文-丹索", "english_name": "Kevin Danso", "role": "中卫对抗"},
+            {"position": "CB", "chinese_name": "菲利普-林哈特", "english_name": "Philipp Lienhart", "role": "中卫"},
+            {"position": "LB", "chinese_name": "菲利普-姆韦内", "english_name": "Phillipp Mwene", "role": "左后卫"},
+            {"position": "DM", "chinese_name": "尼古拉斯-塞瓦尔德", "english_name": "Nicolas Seiwald", "role": "后腰覆盖"},
+            {"position": "CM", "chinese_name": "克萨韦尔-施拉格尔", "english_name": "Xaver Schlager", "role": "中场压迫"},
+            {"position": "AM", "chinese_name": "马塞尔-萨比策", "english_name": "Marcel Sabitzer", "role": "中前场核心，高状态"},
+            {"position": "RW", "chinese_name": "帕特里克-维默尔", "english_name": "Patrick Wimmer", "role": "右路突破"},
+            {"position": "LW", "chinese_name": "亚历山大-普拉斯", "english_name": "Alexander Prass", "role": "左路/中场覆盖"},
+            {"position": "ST", "chinese_name": "萨沙-卡拉季奇", "english_name": "Saša Kalajdžić", "role": "中锋高点"}
+          ],
+          "bench_rotation_candidates": [
+            {"chinese_name": "马尔科-阿瑙托维奇", "english_name": "Marko Arnautović", "trigger": "中锋经验但体能需复核"},
+            {"chinese_name": "罗马诺-施密德", "english_name": "Romano Schmid", "trigger": "前腰创造"},
+            {"chinese_name": "大卫-阿拉巴", "english_name": "David Alaba", "trigger": "中卫/后场组织，健康和分钟限制需复核"}
+          ],
+          "conflicts": ["Alaba/Arnautovic 伤情或体能需后续复核；第三轮3-3完整事件链仍 partial_source_limited。"]
+        }
+      ],
+      "availability_and_risk": {
+        "spain": [
+          {"player": "Lamine Yamal / Nico Williams", "status": "probable_managed", "note": "本地 player_state 标 recent_muscle_issue_managed。"},
+          {"player": "Mikel Oyarzabal", "status": "probable_high_form", "note": "本地 form_status_1_5=4.8。"}
+        ],
+        "austria": [
+          {"player": "Marcel Sabitzer / Saša Kalajdžić", "status": "probable_high_form", "note": "本地状态分靠前。"},
+          {"player": "David Alaba / Marko Arnautović", "status": "fitness_watch", "note": "线程状态提示后续需复核伤情或体能。"}
+        ]
+      },
+      "environment": {"rest_days": {"spain": 6, "austria": 4}, "travel_note": "Spain from Guadalajara group finale to Los Angeles; Austria from Kansas City group finale to Los Angeles; exact logistics not verified.", "weather_status": "missing"},
+      "market_availability": {"status": "missing_same_source_complete_snapshot", "betting_gate": "hold_not_executable", "missing": ["official_lottery_id", "1X2", "handicap", "totals", "correct_score", "total_goals", "half_full_time"]}
+    }
+  ],
+  "team_state_completeness": [
+    {"team": "United States", "player_state_path": "data/outputs/player_state/usa-player-state.json", "players_detected": 26, "freshness": "updated through D group second-round; third-round local postmatch gap", "source_status": "partial"},
+    {"team": "Bosnia and Herzegovina", "player_state_path": "data/outputs/player_state/bosnia-herzegovina-player-state.json", "players_detected": 26, "freshness": "completed_core_partial_match_detail", "source_status": "partial"},
+    {"team": "Belgium", "player_state_path": "data/outputs/player_state/belgium-player-state.json", "players_detected": 26, "freshness": "updated before/around round2; third-round 5-1 full player table missing", "source_status": "partial"},
+    {"team": "Senegal", "player_state_path": "data/outputs/player_state/senegal-player-state.json", "players_detected": 26, "freshness": "updated through I group local context but third-round full player table incomplete", "source_status": "partial"},
+    {"team": "Portugal", "player_state_path": "data/outputs/player_state/portugal-player-state.json", "players_detected": 26, "freshness": "updated 2026-06-28 after K group third round; official full minutes missing", "source_status": "partial"},
+    {"team": "Croatia", "player_state_path": "data/outputs/player_state/croatia-player-state.json", "players_detected": 26, "freshness": "updated 2026-06-28 after L group third round; official full minutes missing", "source_status": "partial"},
+    {"team": "Spain", "player_state_path": "data/outputs/player_state/spain-player-state.json", "players_detected": 26, "freshness": "updated around H group round2; third-round full player table missing", "source_status": "partial"},
+    {"team": "Austria", "player_state_path": "data/outputs/player_state/austria-player-state.json", "players_detected": 26, "freshness": "updated 2026-06-28 after J group third round; some injury/fitness follow-up needed", "source_status": "partial"}
+  ],
+  "source_log": [
+    {
+      "source": "Local canonical round-of-32 bracket",
+      "url": "E:/worldcup/data/outputs/knockout/round-of-32-bracket-20260628.json",
+      "captured_at": "2026-06-28T22:41:40+08:00",
+      "supports_fields": ["M81-M84 fixtures", "slots", "venues", "kickoff times", "round_of_16_paths"],
+      "source_status": "local_canonical_revalidated_after_2026_06_28_results"
+    },
+    {
+      "source": "Local round-of-32 bracket markdown",
+      "url": "E:/worldcup/比赛/未开始比赛/32强/32强对阵落位_20260628.md",
+      "captured_at": "2026-06-28T22:41:40+08:00",
+      "supports_fields": ["human-readable bracket", "third-place assignment", "old temporary pairing removal"],
+      "source_status": "local_canonical"
+    },
+    {
+      "source": "SB Nation Round of 32 schedule",
+      "url": "https://www.sbnation.com/soccer/1120771/world-cup-schedule-scores-round-32",
+      "captured_at": "2026-06-28T22:41:40+08:00",
+      "supports_fields": ["round_of_32_schedule_context", "USA vs Bosnia highlight", "broadcast context"],
+      "source_status": "external_context"
+    },
+    {
+      "source": "SB Nation knockout bracket tracker",
+      "url": "https://www.sbnation.com/fifa-world-cup/1120327/2026-world-cup-round-of-32-full-list-of-matches-potential-round-of-16-games",
+      "captured_at": "2026-06-28T22:41:40+08:00",
+      "supports_fields": ["Portugal vs Croatia", "Spain vs Austria", "Belgium vs Senegal", "USA vs Bosnia and Herzegovina"],
+      "source_status": "external_context"
+    },
+    {
+      "source": "AP Round of 32 context",
+      "url": "https://apnews.com/article/35a72baeef527fc815952f9b5997eb14",
+      "captured_at": "2026-06-28T22:41:40+08:00",
+      "supports_fields": ["USA vs Bosnia and Herzegovina", "major qualified teams context"],
+      "source_status": "reputable_news_context"
+    },
+    {
+      "source": "Local player_state and roster files",
+      "url": "E:/worldcup/data/outputs/player_state; E:/worldcup/data/packets/rosters",
+      "captured_at": "2026-06-28T22:41:40+08:00",
+      "supports_fields": ["26-player rosters", "form_status_1_5", "availability", "recent internal ratings where present"],
+      "source_status": "local_mixed_freshness"
+    }
+  ],
+  "gaps_and_conflicts": [
+    "T-75 official lineups are not captured; all predicted_lineups remain probable_not_official.",
+    "No complete same-source Chinese sports lottery odds chain was verified for M81-M84; betting_gate_status remains hold_not_executable.",
+    "Weather refresh returned no usable local forecast in this pass; environment fields keep venue/city/rest/travel notes only.",
+    "USA, Belgium, Senegal and Spain player_state freshness is partial for third-round full minutes and same-source ratings.",
+    "M83 must use Portugal vs Croatia from the 2026-06-28 canonical bracket; the old Portugal vs Ghana temporary pairing is obsolete."
+  ],
+  "handoff_notes": {
+    "for_tactics": [
+      "M81: USA fullback width against Bosnia's compact block and Dedic/Kolasinac channels.",
+      "M82: Belgium transition defense versus Senegal wide pace and Jackson/Mbaye movement.",
+      "M83: Portugal low-event control versus Croatia Modric/Vlasic/Sucic late-game craft.",
+      "M84: Spain right-side Yamal condition and Austria pressing/height through Kalajdzic."
+    ],
+    "for_model": [
+      "Use 90-minute knockout boundary separately from advancement probabilities.",
+      "Downgrade stale player_state fields where third-round full minutes are missing.",
+      "Do not use missing odds markets for calibration."
+    ],
+    "for_red_team": [
+      "Challenge all predicted XI at T-75.",
+      "Recheck Spain managed muscle issues, Austria Alaba/Arnautovic fitness, Portugal front-three selection, and USA third-round freshness.",
+      "Keep betting gate closed until official lineups and same-source markets are present."
+    ]
+  }
+}

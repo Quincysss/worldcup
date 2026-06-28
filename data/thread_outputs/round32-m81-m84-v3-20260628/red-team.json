@@ -1,0 +1,410 @@
+{
+  "schema_version": "round32_m81_m84_red_team_v2_clean_utf8",
+  "red_team_status": "complete_after_model_rerun_data_available_hold_clean_utf8",
+  "review_target": "M81-M84 Round of 32 v3 integrated prediction",
+  "created_at": "2026-06-28T23:20:00+08:00",
+  "owner": "worldcup-red-team-verifier",
+  "verdict": "hold",
+  "upstream_status": {
+    "data_collector": "partial_source_limited_available",
+    "tactics_coach": "partial_source_limited_available_but_older_than_data",
+    "modeler": "main_integrated_data_lineups_with_model_chain",
+    "odds_snapshot": "same_source_complete_snapshot_not_available"
+  },
+  "betting_gate": "hold_not_executable",
+  "betting_language_blocked": true,
+  "global_blocking_gates": [
+    "T-75 official lineups",
+    "latest injuries suspensions minutes limits",
+    "official China Jingcai same-source odds",
+    "final tactical and model rerun after official XI"
+  ],
+  "model_chain_observations": [
+    "正式整合 JSON 已有 xG、泊松矩阵、1X2、大小球、Top5 和 data predicted_lineups。",
+    "战术与模型线程的原始产物仍有 partial/fallback 痕迹，主线程已做整合修正，但临场前仍需全链重跑。",
+    "当前结论适合 discussion_only，不适合可执行购彩。"
+  ],
+  "matches": [
+    {
+      "match_no": 81,
+      "match_id": "M81",
+      "match": "美国 vs 波黑",
+      "canonical_status": "confirmed_by_2026_06_28_bracket",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_snapshot": {
+        "xg": {
+          "美国": 1.75,
+          "波黑": 1
+        },
+        "probabilities_1x2": {
+          "美国_win": 0.5498,
+          "draw": 0.2354,
+          "波黑_win": 0.2148
+        }
+      },
+      "top_concerns": [
+        {
+          "concern": "T-75 官方首发、最终伤停、停赛和分钟限制仍未闭合。",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "数据包和正式预测均标记 probable_not_official；当前不是官方首发。",
+          "why_it_matters": "核心轮换、门将选择、后腰保护或边锋首发变化会直接改变 xG、节奏和尾部比分。",
+          "follow_up_check": "T-75 官方名单发布后由数据线程刷新首发和可用性，再由模型线程重跑。",
+          "owner": "data"
+        },
+        {
+          "concern": "模型链已吸收数据线程首发，但战术包早于数据包，模型原始线程包有 fallback 痕迹。",
+          "category": "data",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "主线程最终整合层已修正 data_collector_packet=available，但 tactics 仍为 partial，需临场重跑闭环。",
+          "why_it_matters": "当前可用于讨论，但不能视为完全自动闭环的最终锁盘模型。",
+          "follow_up_check": "战术线程在 T-75 后基于最终首发重新输出十因子，模型线程重新生成概率链。",
+          "owner": "main"
+        },
+        {
+          "concern": "官方竞彩与同源盘口快照未闭合，市场校准和 model-market delta 不可用。",
+          "category": "market",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "正式 JSON 和竞彩风控均保持 hold_not_executable，market_adjustment 为 0。",
+          "why_it_matters": "无法判断热门税、赔率过热、盘口诱导或模型与市场的真实差值。",
+          "follow_up_check": "数据线程捕获同源 1X2、让球、大小球、比分、总进球、半全场快照后再审。",
+          "owner": "data"
+        },
+        {
+          "concern": "东道主和市场热度容易与赛程环境重复计权。",
+          "category": "model",
+          "severity": "medium",
+          "confidence": "medium",
+          "evidence": "泊松矩阵保留 tail，但淘汰赛强相关事件、早球、红牌和门将波动仍可能被低估。",
+          "why_it_matters": "会影响 Top3 比分命中和大比分/低事件平局覆盖。",
+          "follow_up_check": "模型线程在下一版加入尾部混合层和淘汰赛状态相关修正。",
+          "owner": "model"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "波黑 通过定位球、早球或转换先手，把比赛拖入低事件平局或一球胜负。",
+        "美国 控制比赛但禁区效率偏低，1-1 或 0-0/1-0 小比分尾部变厚。",
+        "红牌、门将超常发挥、早段点球等相关事件使常规泊松低估尾部比分。"
+      ],
+      "overconfidence_flags": [
+        "禁止把当前概率写成可执行投注结论。",
+        "T-75 前首发置信度不得升高。",
+        "波黑低位、支点和定位球会抬高低事件平局与一球冷门尾部。"
+      ],
+      "market_flags": [
+        "官方竞彩同源赔率未闭合。",
+        "无去水隐含概率，model-market delta 暂不可用。",
+        "热门球队可能存在公共资金溢价。"
+      ],
+      "quant_chain_flags": [
+        "xG、泊松矩阵、1X2、大小球和 Top5 比分已存在。",
+        "主线程已修正数据首发来源，但战术与模型线程仍需赛前全链重跑。",
+        "需同时保留强队大比分尾部和低事件平局地板。"
+      ],
+      "recommended_probability_adjustment": "美国胜建议从模型中心值下调到 51-53% 观察带；保留 1-1、0-1 和波黑定位球先手路径。",
+      "missing_data": [
+        "T-75 官方首发。",
+        "最终伤停、停赛、分钟限制。",
+        "官方竞彩同源赔率快照。",
+        "临场天气、裁判尺度、草皮状态。",
+        "基于最终首发的战术十因子与模型重跑。"
+      ],
+      "handoff_notes": {
+        "data": "补官方首发、伤停、分钟限制和同源赔率快照。",
+        "tactics": "基于最终首发重算对位因子，尤其是转换、防线身后、定位球和替补触发。",
+        "model": "加入淘汰赛尾部混合层，重跑 xG、泊松、Top5、大小球和置信区间。",
+        "main": "发布继续保持 hold，不输出可执行购彩建议。"
+      }
+    },
+    {
+      "match_no": 82,
+      "match_id": "M82",
+      "match": "比利时 vs 塞内加尔",
+      "canonical_status": "confirmed_by_2026_06_28_bracket",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_snapshot": {
+        "xg": {
+          "比利时": 1.7,
+          "塞内加尔": 1.48
+        },
+        "probabilities_1x2": {
+          "比利时_win": 0.4302,
+          "draw": 0.2336,
+          "塞内加尔_win": 0.3361
+        }
+      },
+      "top_concerns": [
+        {
+          "concern": "T-75 官方首发、最终伤停、停赛和分钟限制仍未闭合。",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "数据包和正式预测均标记 probable_not_official；当前不是官方首发。",
+          "why_it_matters": "核心轮换、门将选择、后腰保护或边锋首发变化会直接改变 xG、节奏和尾部比分。",
+          "follow_up_check": "T-75 官方名单发布后由数据线程刷新首发和可用性，再由模型线程重跑。",
+          "owner": "data"
+        },
+        {
+          "concern": "模型链已吸收数据线程首发，但战术包早于数据包，模型原始线程包有 fallback 痕迹。",
+          "category": "data",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "主线程最终整合层已修正 data_collector_packet=available，但 tactics 仍为 partial，需临场重跑闭环。",
+          "why_it_matters": "当前可用于讨论，但不能视为完全自动闭环的最终锁盘模型。",
+          "follow_up_check": "战术线程在 T-75 后基于最终首发重新输出十因子，模型线程重新生成概率链。",
+          "owner": "main"
+        },
+        {
+          "concern": "官方竞彩与同源盘口快照未闭合，市场校准和 model-market delta 不可用。",
+          "category": "market",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "正式 JSON 和竞彩风控均保持 hold_not_executable，market_adjustment 为 0。",
+          "why_it_matters": "无法判断热门税、赔率过热、盘口诱导或模型与市场的真实差值。",
+          "follow_up_check": "数据线程捕获同源 1X2、让球、大小球、比分、总进球、半全场快照后再审。",
+          "owner": "data"
+        },
+        {
+          "concern": "两队实力差距不大，模型对比利时创造力的权重不宜过满。",
+          "category": "model",
+          "severity": "medium",
+          "confidence": "medium",
+          "evidence": "泊松矩阵保留 tail，但淘汰赛强相关事件、早球、红牌和门将波动仍可能被低估。",
+          "why_it_matters": "会影响 Top3 比分命中和大比分/低事件平局覆盖。",
+          "follow_up_check": "模型线程在下一版加入尾部混合层和淘汰赛状态相关修正。",
+          "owner": "model"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "塞内加尔 通过定位球、早球或转换先手，把比赛拖入低事件平局或一球胜负。",
+        "比利时 控制比赛但禁区效率偏低，1-1 或 0-0/1-0 小比分尾部变厚。",
+        "红牌、门将超常发挥、早段点球等相关事件使常规泊松低估尾部比分。"
+      ],
+      "overconfidence_flags": [
+        "禁止把当前概率写成可执行投注结论。",
+        "T-75 前首发置信度不得升高。",
+        "塞内加尔高强度转换会放大 1-2、2-2 一类尾部分布。"
+      ],
+      "market_flags": [
+        "官方竞彩同源赔率未闭合。",
+        "无去水隐含概率，model-market delta 暂不可用。",
+        "热门球队可能存在公共资金溢价。"
+      ],
+      "quant_chain_flags": [
+        "xG、泊松矩阵、1X2、大小球和 Top5 比分已存在。",
+        "主线程已修正数据首发来源，但战术与模型线程仍需赛前全链重跑。",
+        "需同时保留强队大比分尾部和低事件平局地板。"
+      ],
+      "recommended_probability_adjustment": "比利时胜建议从模型中心值下调到 40-42% 观察带；塞内加尔转换和身体对抗尾部需要单独保留。",
+      "missing_data": [
+        "T-75 官方首发。",
+        "最终伤停、停赛、分钟限制。",
+        "官方竞彩同源赔率快照。",
+        "临场天气、裁判尺度、草皮状态。",
+        "基于最终首发的战术十因子与模型重跑。"
+      ],
+      "handoff_notes": {
+        "data": "补官方首发、伤停、分钟限制和同源赔率快照。",
+        "tactics": "基于最终首发重算对位因子，尤其是转换、防线身后、定位球和替补触发。",
+        "model": "加入淘汰赛尾部混合层，重跑 xG、泊松、Top5、大小球和置信区间。",
+        "main": "发布继续保持 hold，不输出可执行购彩建议。"
+      }
+    },
+    {
+      "match_no": 83,
+      "match_id": "M83",
+      "match": "葡萄牙 vs 克罗地亚",
+      "canonical_status": "confirmed_by_2026_06_28_bracket",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_snapshot": {
+        "xg": {
+          "葡萄牙": 1.58,
+          "克罗地亚": 1.08
+        },
+        "probabilities_1x2": {
+          "葡萄牙_win": 0.4893,
+          "draw": 0.251,
+          "克罗地亚_win": 0.2597
+        }
+      },
+      "top_concerns": [
+        {
+          "concern": "T-75 官方首发、最终伤停、停赛和分钟限制仍未闭合。",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "数据包和正式预测均标记 probable_not_official；当前不是官方首发。",
+          "why_it_matters": "核心轮换、门将选择、后腰保护或边锋首发变化会直接改变 xG、节奏和尾部比分。",
+          "follow_up_check": "T-75 官方名单发布后由数据线程刷新首发和可用性，再由模型线程重跑。",
+          "owner": "data"
+        },
+        {
+          "concern": "模型链已吸收数据线程首发，但战术包早于数据包，模型原始线程包有 fallback 痕迹。",
+          "category": "data",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "主线程最终整合层已修正 data_collector_packet=available，但 tactics 仍为 partial，需临场重跑闭环。",
+          "why_it_matters": "当前可用于讨论，但不能视为完全自动闭环的最终锁盘模型。",
+          "follow_up_check": "战术线程在 T-75 后基于最终首发重新输出十因子，模型线程重新生成概率链。",
+          "owner": "main"
+        },
+        {
+          "concern": "官方竞彩与同源盘口快照未闭合，市场校准和 model-market delta 不可用。",
+          "category": "market",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "正式 JSON 和竞彩风控均保持 hold_not_executable，market_adjustment 为 0。",
+          "why_it_matters": "无法判断热门税、赔率过热、盘口诱导或模型与市场的真实差值。",
+          "follow_up_check": "数据线程捕获同源 1X2、让球、大小球、比分、总进球、半全场快照后再审。",
+          "owner": "data"
+        },
+        {
+          "concern": "淘汰赛 90 分钟模型不能把加时点球优势错误折入常规时间胜率。",
+          "category": "model",
+          "severity": "medium",
+          "confidence": "medium",
+          "evidence": "泊松矩阵保留 tail，但淘汰赛强相关事件、早球、红牌和门将波动仍可能被低估。",
+          "why_it_matters": "会影响 Top3 比分命中和大比分/低事件平局覆盖。",
+          "follow_up_check": "模型线程在下一版加入尾部混合层和淘汰赛状态相关修正。",
+          "owner": "model"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "克罗地亚 通过定位球、早球或转换先手，把比赛拖入低事件平局或一球胜负。",
+        "葡萄牙 控制比赛但禁区效率偏低，1-1 或 0-0/1-0 小比分尾部变厚。",
+        "红牌、门将超常发挥、早段点球等相关事件使常规泊松低估尾部比分。"
+      ],
+      "overconfidence_flags": [
+        "禁止把当前概率写成可执行投注结论。",
+        "T-75 前首发置信度不得升高。",
+        "克罗地亚慢节奏、定位球和经验会抬高 1-1 与 0-0/1-0 双向尾部。"
+      ],
+      "market_flags": [
+        "官方竞彩同源赔率未闭合。",
+        "无去水隐含概率，model-market delta 暂不可用。",
+        "热门球队可能存在公共资金溢价。"
+      ],
+      "quant_chain_flags": [
+        "xG、泊松矩阵、1X2、大小球和 Top5 比分已存在。",
+        "主线程已修正数据首发来源，但战术与模型线程仍需赛前全链重跑。",
+        "需同时保留强队大比分尾部和低事件平局地板。"
+      ],
+      "recommended_probability_adjustment": "葡萄牙胜建议从模型中心值下调到 45-47% 观察带；克罗地亚控节奏和平局地板需要加厚。",
+      "missing_data": [
+        "T-75 官方首发。",
+        "最终伤停、停赛、分钟限制。",
+        "官方竞彩同源赔率快照。",
+        "临场天气、裁判尺度、草皮状态。",
+        "基于最终首发的战术十因子与模型重跑。"
+      ],
+      "handoff_notes": {
+        "data": "补官方首发、伤停、分钟限制和同源赔率快照。",
+        "tactics": "基于最终首发重算对位因子，尤其是转换、防线身后、定位球和替补触发。",
+        "model": "加入淘汰赛尾部混合层，重跑 xG、泊松、Top5、大小球和置信区间。",
+        "main": "发布继续保持 hold，不输出可执行购彩建议。"
+      }
+    },
+    {
+      "match_no": 84,
+      "match_id": "M84",
+      "match": "西班牙 vs 奥地利",
+      "canonical_status": "confirmed_by_2026_06_28_bracket",
+      "verdict": "hold",
+      "betting_gate": "hold_not_executable",
+      "model_snapshot": {
+        "xg": {
+          "西班牙": 1.92,
+          "奥地利": 1.05
+        },
+        "probabilities_1x2": {
+          "西班牙_win": 0.5765,
+          "draw": 0.2201,
+          "奥地利_win": 0.2033
+        }
+      },
+      "top_concerns": [
+        {
+          "concern": "T-75 官方首发、最终伤停、停赛和分钟限制仍未闭合。",
+          "category": "availability",
+          "severity": "blocker",
+          "confidence": "high",
+          "evidence": "数据包和正式预测均标记 probable_not_official；当前不是官方首发。",
+          "why_it_matters": "核心轮换、门将选择、后腰保护或边锋首发变化会直接改变 xG、节奏和尾部比分。",
+          "follow_up_check": "T-75 官方名单发布后由数据线程刷新首发和可用性，再由模型线程重跑。",
+          "owner": "data"
+        },
+        {
+          "concern": "模型链已吸收数据线程首发，但战术包早于数据包，模型原始线程包有 fallback 痕迹。",
+          "category": "data",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "主线程最终整合层已修正 data_collector_packet=available，但 tactics 仍为 partial，需临场重跑闭环。",
+          "why_it_matters": "当前可用于讨论，但不能视为完全自动闭环的最终锁盘模型。",
+          "follow_up_check": "战术线程在 T-75 后基于最终首发重新输出十因子，模型线程重新生成概率链。",
+          "owner": "main"
+        },
+        {
+          "concern": "官方竞彩与同源盘口快照未闭合，市场校准和 model-market delta 不可用。",
+          "category": "market",
+          "severity": "high",
+          "confidence": "high",
+          "evidence": "正式 JSON 和竞彩风控均保持 hold_not_executable，market_adjustment 为 0。",
+          "why_it_matters": "无法判断热门税、赔率过热、盘口诱导或模型与市场的真实差值。",
+          "follow_up_check": "数据线程捕获同源 1X2、让球、大小球、比分、总进球、半全场快照后再审。",
+          "owner": "data"
+        },
+        {
+          "concern": "西班牙控球优势明显，但高压出球一旦被奥地利冲击，门前转换风险会升高。",
+          "category": "model",
+          "severity": "medium",
+          "confidence": "medium",
+          "evidence": "泊松矩阵保留 tail，但淘汰赛强相关事件、早球、红牌和门将波动仍可能被低估。",
+          "why_it_matters": "会影响 Top3 比分命中和大比分/低事件平局覆盖。",
+          "follow_up_check": "模型线程在下一版加入尾部混合层和淘汰赛状态相关修正。",
+          "owner": "model"
+        }
+      ],
+      "upset_or_failure_scenarios": [
+        "奥地利 通过定位球、早球或转换先手，把比赛拖入低事件平局或一球胜负。",
+        "西班牙 控制比赛但禁区效率偏低，1-1 或 0-0/1-0 小比分尾部变厚。",
+        "红牌、门将超常发挥、早段点球等相关事件使常规泊松低估尾部比分。"
+      ],
+      "overconfidence_flags": [
+        "禁止把当前概率写成可执行投注结论。",
+        "T-75 前首发置信度不得升高。",
+        "若边锋或中场核心轮换，西班牙 xG 与大比分尾部都需重跑。"
+      ],
+      "market_flags": [
+        "官方竞彩同源赔率未闭合。",
+        "无去水隐含概率，model-market delta 暂不可用。",
+        "热门球队可能存在公共资金溢价。"
+      ],
+      "quant_chain_flags": [
+        "xG、泊松矩阵、1X2、大小球和 Top5 比分已存在。",
+        "主线程已修正数据首发来源，但战术与模型线程仍需赛前全链重跑。",
+        "需同时保留强队大比分尾部和低事件平局地板。"
+      ],
+      "recommended_probability_adjustment": "西班牙胜建议从模型中心值下调到 53-55% 观察带；T-75 后需重核 Yamal、Nico、Rodri、Pedri 相关首发和分钟风险。",
+      "missing_data": [
+        "T-75 官方首发。",
+        "最终伤停、停赛、分钟限制。",
+        "官方竞彩同源赔率快照。",
+        "临场天气、裁判尺度、草皮状态。",
+        "基于最终首发的战术十因子与模型重跑。"
+      ],
+      "handoff_notes": {
+        "data": "补官方首发、伤停、分钟限制和同源赔率快照。",
+        "tactics": "基于最终首发重算对位因子，尤其是转换、防线身后、定位球和替补触发。",
+        "model": "加入淘汰赛尾部混合层，重跑 xG、泊松、Top5、大小球和置信区间。",
+        "main": "发布继续保持 hold，不输出可执行购彩建议。"
+      }
+    }
+  ],
+  "overall_handoff_notes": "四场均为临场数据和链路一致性 hold，不是上游完全缺失 hold。"
+}

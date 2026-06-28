@@ -1,0 +1,192 @@
+﻿{
+  "schema_version": "round32_m77_m80_betting_risk_v3_final_red_team_refresh",
+  "updated_at": "2026-06-28T22:25:00+08:00",
+  "project": "E:/worldcup",
+  "role": "betting_risk_thread",
+  "overall_status": "hold_not_executable",
+  "scope": {
+    "stage": "Round of 32",
+    "canonical_bracket_source": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+    "canonical_bracket_status": "revalidated_after_2026_06_28_results",
+    "do_not_use": "2026-06-27 temporary pairings",
+    "matches": ["M77 法国 vs 瑞典", "M78 科特迪瓦 vs 挪威", "M79 墨西哥 vs 厄瓜多尔", "M80 英格兰 vs 刚果金"],
+    "no_executable_betting_advice": true
+  },
+  "allowed_output_states": ["discussion_only", "hold_not_executable", "observation_only"],
+  "refresh_summary": {
+    "data_model_red_team_available": true,
+    "final_red_team_last_write": "2026-06-28T22:15:20+08:00",
+    "red_team_status": "complete_red_team_review_after_final_model_fill",
+    "red_team_overall_verdict": "hold",
+    "upstream_status": "present_partial_source_limited_data_and_tactics_absorbed_by_modeler",
+    "blocking_reason": "Data, model and final red-team files are present, but red-team verdict is hold; T-75 official lineups, final injuries/minutes and official China same-source market snapshots are not closed.",
+    "stake_total_executable": 0
+  },
+  "upstream_dependency_status": {
+    "data_collector": {
+      "path": "data/thread_outputs/round32-m77-m80-v3-20260628/data-collector.json",
+      "file_last_write": "2026-06-28T22:08:44+08:00",
+      "status": "present_partial_source_limited",
+      "effect": "discussion_only_hold"
+    },
+    "modeler": {
+      "path": "data/thread_outputs/round32-m77-m80-v3-20260628/modeler.json",
+      "file_last_write": "2026-06-28T22:11:42+08:00",
+      "status": "completed_partial_source_limited_data_and_tactics_absorbed",
+      "effect": "discussion_only_hold"
+    },
+    "red_team": {
+      "path": "data/thread_outputs/round32-m77-m80-v3-20260628/red-team.json",
+      "file_last_write": "2026-06-28T22:15:20+08:00",
+      "status": "complete_red_team_review_after_final_model_fill",
+      "overall_verdict": "hold",
+      "effect": "hold_not_executable"
+    }
+  },
+  "global_gates": {
+    "t75_official_lineups": {"status": "missing", "effect": "hold_not_executable"},
+    "latest_injuries_suspensions_minutes": {"status": "partial_source_limited_not_final", "effect": "hold_not_executable"},
+    "official_china_jingcai_odds": {"status": "missing", "effect": "hold_not_executable"},
+    "same_source_1x2_handicap_totals_snapshot": {"status": "missing", "effect": "hold_not_executable"},
+    "score_total_goals_half_full_time_same_source": {"status": "not_captured", "effect": "hold_not_executable"},
+    "weather_referee_live_environment": {"status": "missing_or_partial", "effect": "discussion_only_hold"},
+    "red_team_gate": {"status": "complete_hold", "overall_verdict": "hold", "effect": "hold_not_executable"},
+    "ninety_minute_vs_advancement_boundary": {"status": "90_minute_1x2_present_advancement_not_simulated", "effect": "discussion_only_only"}
+  },
+  "canonical_fixture_check": [
+    {"match_no": "M77", "fixture": "法国 vs 瑞典", "source_slot": "1I vs 3F", "host_date": "2026-06-30", "venue": "New York New Jersey Stadium", "status": "confirmed_20260628_canonical"},
+    {"match_no": "M78", "fixture": "科特迪瓦 vs 挪威", "source_slot": "2E vs 2I", "host_date": "2026-06-30", "venue": "Dallas Stadium", "status": "confirmed_20260628_canonical"},
+    {"match_no": "M79", "fixture": "墨西哥 vs 厄瓜多尔", "source_slot": "1A vs 3E", "host_date": "2026-06-30", "venue": "Mexico City Stadium", "status": "confirmed_20260628_canonical"},
+    {"match_no": "M80", "fixture": "英格兰 vs 刚果金", "source_slot": "1L vs 3K", "host_date": "2026-07-01", "venue": "Atlanta Stadium", "status": "confirmed_20260628_canonical", "correction_note": "Use England vs DR Congo from the 2026-06-28 canonical bracket; do not use the removed 2026-06-27 temporary England vs Senegal pairing."}
+  ],
+  "matches": [
+    {
+      "match_no": "M77",
+      "fixture": "法国 vs 瑞典",
+      "betting_gate_status": "hold_not_executable",
+      "red_team_verdict": "hold",
+      "model_context": {
+        "model_status": "pre_red_team_model_after_data_absorption",
+        "xg": {"france": 2.10, "sweden": 1.03},
+        "ninety_minute_1x2": {"france": 0.6194, "draw": 0.2035, "sweden": 0.1771},
+        "totals": {"over_2_5": 0.6053, "btts_yes": 0.5643},
+        "top_scores": ["2-1 9.93%", "2-0 9.64%", "1-1 9.46%", "1-0 9.18%", "3-1 6.95%"],
+        "home_4_plus_probability": 0.1614
+      },
+      "market_availability": {
+        "official_china_jingcai": {"status": "missing", "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "captured_at": null},
+        "500_snapshot": {"status": "not_captured", "captured_at": null},
+        "markets": {"1x2": "missing_same_source_complete_snapshot", "handicap": "missing_same_source_complete_snapshot", "over_under": "missing_same_source_complete_snapshot", "correct_score": "not_captured", "total_goals": "not_captured", "half_full_time": "not_captured"},
+        "same_source_completeness": "missing",
+        "odds_calibration_status": "unavailable"
+      },
+      "risk_observation": [
+        "France favorite and 4+ ceiling are plausible but vulnerable to duplicate counting across recent result, player state and tactical transition boost.",
+        "Sweden set-piece, aerial and two-forward branch keeps non-France-win mass above one third in 90 minutes.",
+        "No same-source odds means France public/favorite tax cannot be checked."
+      ],
+      "deleted_items": ["Executable ticket construction", "Handicap or score valuation from unpriced favorite ceiling", "Any model-market edge claim without official same-source odds"],
+      "live_wait_items": ["T-75 official lineups", "France attacker mix and Tchouameni minutes", "Sweden two-forward shape", "Official China Jingcai odds", "Same-source 1X2, handicap and totals snapshot", "Red-team verdict release from hold"]
+    },
+    {
+      "match_no": "M78",
+      "fixture": "科特迪瓦 vs 挪威",
+      "betting_gate_status": "hold_not_executable",
+      "red_team_verdict": "hold",
+      "model_context": {
+        "model_status": "pre_red_team_model_after_data_absorption",
+        "xg": {"ivory_coast": 1.39, "norway": 1.62},
+        "ninety_minute_1x2": {"ivory_coast": 0.3292, "draw": 0.2408, "norway": 0.43},
+        "totals": {"over_2_5": 0.579, "btts_yes": 0.6023},
+        "top_scores": ["1-1 11.10%", "1-2 8.99%", "0-1 7.99%", "2-1 7.71%", "1-0 6.85%"],
+        "home_4_plus_probability": 0.0526
+      },
+      "market_availability": {
+        "official_china_jingcai": {"status": "missing", "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "captured_at": null},
+        "500_snapshot": {"status": "not_captured", "captured_at": null},
+        "markets": {"1x2": "missing_same_source_complete_snapshot", "handicap": "missing_same_source_complete_snapshot", "over_under": "missing_same_source_complete_snapshot", "correct_score": "not_captured", "total_goals": "not_captured", "half_full_time": "not_captured"},
+        "same_source_completeness": "missing",
+        "odds_calibration_status": "unavailable"
+      },
+      "risk_observation": [
+        "Norway edge is narrow and highly sensitive to Haaland, Odegaard, Nusa and Sorloth roles and minutes.",
+        "This match carries the highest BTTS branch and strong event volatility; early goal and late fatigue can distort totals and handicap mapping.",
+        "Ivory Coast physical transition and set pieces keep the Ivory Coast plus draw combined mass larger than Norway win mass."
+      ],
+      "deleted_items": ["Single-player driven ticket language", "Norway direction translated into an executable leg", "Totals or score branches without same-source prices"],
+      "live_wait_items": ["T-75 official lineups", "Haaland/Odegaard/Nusa/Sorloth minutes", "Ivory Coast Haller or front-line configuration", "Official China Jingcai odds", "Same-source 1X2, handicap and totals snapshot", "Red-team verdict release from hold"]
+    },
+    {
+      "match_no": "M79",
+      "fixture": "墨西哥 vs 厄瓜多尔",
+      "betting_gate_status": "hold_not_executable",
+      "red_team_verdict": "hold",
+      "model_context": {
+        "model_status": "pre_red_team_model_after_data_absorption",
+        "xg": {"mexico": 1.44, "ecuador": 1.24},
+        "ninety_minute_1x2": {"mexico": 0.4173, "draw": 0.2578, "ecuador": 0.3249},
+        "totals": {"over_2_5": 0.5015, "btts_yes": 0.5423},
+        "top_scores": ["1-1 12.24%", "1-0 9.87%", "2-1 8.81%", "0-1 8.50%", "1-2 7.59%"],
+        "home_4_plus_probability": 0.0583
+      },
+      "market_availability": {
+        "official_china_jingcai": {"status": "missing", "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "captured_at": null},
+        "500_snapshot": {"status": "not_captured", "captured_at": null},
+        "markets": {"1x2": "missing_same_source_complete_snapshot", "handicap": "missing_same_source_complete_snapshot", "over_under": "missing_same_source_complete_snapshot", "correct_score": "not_captured", "total_goals": "not_captured", "half_full_time": "not_captured"},
+        "same_source_completeness": "missing",
+        "odds_calibration_status": "unavailable"
+      },
+      "risk_observation": [
+        "Mexico home and altitude context is material but remains a double-counting risk across environment, tactics and later market pricing.",
+        "Ecuador transition after the Germany result is live but may be overfit from one match without current player-minute refresh.",
+        "The 1-1 top score and 25.78% draw mass make low-event draw the central failure mode for any one-sided expression."
+      ],
+      "deleted_items": ["Host-context ticket language", "One-sided result mapping without draw-tail accounting", "Score or low-total valuation without official same-source odds"],
+      "live_wait_items": ["T-75 official lineups", "Mexico third-round player-state freshness", "Ecuador post-Germany player-minute refresh", "Mexico City weather and altitude conditions", "Official China Jingcai odds", "Same-source 1X2, handicap and totals snapshot", "Red-team verdict release from hold"]
+    },
+    {
+      "match_no": "M80",
+      "fixture": "英格兰 vs 刚果金",
+      "betting_gate_status": "hold_not_executable",
+      "red_team_verdict": "hold",
+      "canonical_correction": "Confirmed as England vs DR Congo from 2026-06-28 canonical bracket; removed 2026-06-27 temporary England vs Senegal pairing must not be used.",
+      "model_context": {
+        "model_status": "pre_red_team_model_after_data_absorption",
+        "xg": {"england": 2.07, "dr_congo": 0.88},
+        "ninety_minute_1x2": {"england": 0.649, "draw": 0.201, "dr_congo": 0.15},
+        "totals": {"over_2_5": 0.5655, "btts_yes": 0.5114},
+        "top_scores": ["2-0 11.21%", "1-0 10.83%", "2-1 9.87%", "1-1 9.53%", "3-0 7.74%"],
+        "home_4_plus_probability": 0.1557
+      },
+      "market_availability": {
+        "official_china_jingcai": {"status": "missing", "captured_at": null},
+        "china_football_lottery_site": {"status": "not_captured", "captured_at": null},
+        "500_snapshot": {"status": "not_captured", "captured_at": null},
+        "markets": {"1x2": "missing_same_source_complete_snapshot", "handicap": "missing_same_source_complete_snapshot", "over_under": "missing_same_source_complete_snapshot", "correct_score": "not_captured", "total_goals": "not_captured", "half_full_time": "not_captured"},
+        "same_source_completeness": "missing",
+        "odds_calibration_status": "unavailable"
+      },
+      "risk_observation": [
+        "M80 canonical correction is satisfied but must remain guarded in downstream text and filenames.",
+        "England right-back injuries materially affect the DR Congo transition branch and any handicap or score corridor mapping.",
+        "England favorite ceiling and public-team framing require same-source market check before any model-market language."
+      ],
+      "deleted_items": ["Any output using England vs Senegal", "Favorite, handicap or total-goals valuation without gates", "Any score cluster treated as actionable"],
+      "live_wait_items": ["T-75 official lineups", "England right-back injury resolution", "DR Congo Wissa/Mayele/Bakambu and Mbemba status", "Official China Jingcai odds", "Same-source 1X2, handicap and totals snapshot", "Red-team verdict release from hold"]
+    }
+  ],
+  "output_limits": [
+    "No executable ticket list.",
+    "No stake, payout or parlay construction.",
+    "No model-market edge calculation.",
+    "No upgrade beyond observation_only while red-team verdict is hold and official/same-source China odds are missing."
+  ],
+  "validation": {
+    "json_parse": "passed_after_write",
+    "no_placeholder_markers": true,
+    "no_executable_betting_language": true
+  }
+}

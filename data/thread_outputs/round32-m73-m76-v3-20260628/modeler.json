@@ -1,0 +1,3096 @@
+{
+  "schema_version": "round32_m73_m76_modeler_v3",
+  "phase": "round_of_32_match_prediction",
+  "status": "completed_partial_source_limited_data_and_tactics_absorbed",
+  "created_at": "2026-06-28T23:59:00+08:00",
+  "owner": "worldcup-data-modeler",
+  "scope": "M73-M76 Round of 32 90-minute quantitative predictions; no betting advice",
+  "model_scope": {
+    "matches": [
+      {
+        "match_id": "M73",
+        "team_a": "South Africa",
+        "team_b": "Canada"
+      },
+      {
+        "match_id": "M74",
+        "team_a": "Germany",
+        "team_b": "Paraguay"
+      },
+      {
+        "match_id": "M75",
+        "team_a": "Netherlands",
+        "team_b": "Morocco"
+      },
+      {
+        "match_id": "M76",
+        "team_a": "Brazil",
+        "team_b": "Japan"
+      }
+    ]
+  },
+  "input_readiness": {
+    "overall_status": "partial_source_limited_data_and_tactics_available",
+    "data_collector_json": "available_partial_source_limited",
+    "tactics_coach_json": "available_partial_source_limited_ten_factor_matchups_absorbed",
+    "predicted_lineups_source": "data_collector_predicted_lineups_probable_not_official",
+    "predicted_lineups_data_thread_blocker": false,
+    "odds_snapshot": "missing_or_incomplete_same_source",
+    "red_team": "pending",
+    "no_betting_advice": true,
+    "official_lineups_status": "not_available_yet",
+    "tactics_coach_packet": "available_partial_source_limited_ten_factor_matchups_absorbed"
+  },
+  "method": {
+    "engine": "Independent Poisson from final xG, 0-0 to 5-5 matrix with tail above matrix retained.",
+    "probability_basis": "90-minute 1X2; knockout advancement not simulated.",
+    "market_treatment": "No odds shift because same-source odds snapshot is missing.",
+    "lineup_treatment": "Data-collector probable XI retained for all eight teams. Official T-75 XI remains missing, so confidence remains capped.",
+    "tactical_treatment": "Tactics-coach ten-factor matchup package absorbed. Adjustments are conservative and capped to avoid double counting player_state or group-stage form.",
+    "tail_treatment": "Strong-favorite ceiling and low-event draw floors are expressed through final xG and explicit tail-shape notes; no unsupported manual matrix mass injection."
+  },
+  "factor_weights": {
+    "baseline_strength": 0.27,
+    "attack": 0.15,
+    "defense": 0.15,
+    "player_state": 0.14,
+    "injury_suspension_minutes": 0.09,
+    "tactical_matchup": 0.12,
+    "schedule_environment": 0.04,
+    "knockout_context": 0.04,
+    "market": 0,
+    "notes": "Market weight set to 0.00 because same-source odds snapshot is missing. Knockout context is small and does not replace team/tactical factors."
+  },
+  "matches": [
+    {
+      "match_id": "M73",
+      "match_no": 73,
+      "stage": "Round of 32",
+      "match_identity": {
+        "match_id": "M73",
+        "match_no": 73,
+        "team_a": "South Africa",
+        "team_b": "Canada",
+        "host_date": "2026-06-28",
+        "kickoff_host": "12:00",
+        "city": "Los Angeles",
+        "venue": "Los Angeles Stadium"
+      },
+      "input_readiness": {
+        "overall_status": "partial_source_limited_data_and_tactics_available",
+        "data_collector_packet": "available_partial_source_limited",
+        "tactics_coach_packet": "available_partial_source_limited_ten_factor_matchups_absorbed",
+        "bracket_source": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+        "template_source": "data/templates/match-prediction-standard-template-v3.md",
+        "prediction_contract_source": "data/templates/prediction-contract-v2.json",
+        "player_state_files": "local_fallback_readiness_not_fresh_data_thread",
+        "roster_files": "local_fallback_readiness_not_fresh_data_thread",
+        "official_lineups_status": "not_available_yet",
+        "predicted_lineups_status": "data_collector_predicted_lineups_probable_not_official",
+        "predicted_lineups_data_thread_blocker": false,
+        "odds_snapshot": "incomplete_external_only",
+        "gaps_and_conflicts": [
+          "Data collector packet is partial_source_limited, not complete final team news.",
+          "Tactics-coach ten-factor packet is available and absorbed, but remains partial_source_limited.",
+          "Official T-75 XI is still not available.",
+          "Complete same-source odds chain is missing or incomplete."
+        ]
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "source_status_detail": "data_collector_partial_source_limited",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "official_lineup_gate": "T-75 official lineups must be checked before any model finalization or betting-risk execution.",
+        "data_thread_required": false,
+        "team_a": {
+          "team": "South Africa",
+          "team_zh": "南非",
+          "formation": "3-4-2-1",
+          "source_status": "probable_not_official",
+          "source_status_detail": "from_data_collector_partial_source_limited_probable_not_official",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "official_lineup_gate": "not_captured_in_packet",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "龙文·威廉姆斯",
+              "player_en": "Ronwen Williams",
+              "role_note": "一门，防线组织"
+            },
+            {
+              "position": "CB",
+              "player_cn": "恩科西纳蒂·西比西",
+              "player_en": "Nkosinathi Sibisi",
+              "role_note": "中卫对抗"
+            },
+            {
+              "position": "CB",
+              "player_cn": "伊梅·奥孔",
+              "player_en": "Ime Okon",
+              "role_note": "中卫覆盖"
+            },
+            {
+              "position": "CB",
+              "player_cn": "姆贝克泽利·姆博卡齐",
+              "player_en": "Mbekezeli Mbokazi",
+              "role_note": "中卫轮转深度"
+            },
+            {
+              "position": "RWB",
+              "player_cn": "库利索·穆道",
+              "player_en": "Khuliso Mudau",
+              "role_note": "右翼卫推进与回追"
+            },
+            {
+              "position": "LWB",
+              "player_cn": "奥布里·莫迪巴",
+              "player_en": "Aubrey Modiba",
+              "role_note": "左路推进与定位球参与"
+            },
+            {
+              "position": "CM",
+              "player_cn": "特博霍·莫科纳",
+              "player_en": "Teboho Mokoena",
+              "role_note": "中场核心，点球/远射/定位球"
+            },
+            {
+              "position": "CM",
+              "player_cn": "杰登·亚当斯",
+              "player_en": "Jayden Adams",
+              "role_note": "中场覆盖"
+            },
+            {
+              "position": "AM",
+              "player_cn": "奥斯温·阿波利斯",
+              "player_en": "Oswin Appollis",
+              "role_note": "右侧反击接应"
+            },
+            {
+              "position": "AM",
+              "player_cn": "塔伦特·姆巴塔",
+              "player_en": "Thalente Mbatha",
+              "role_note": "二线接应"
+            },
+            {
+              "position": "ST",
+              "player_cn": "莱尔·福斯特",
+              "player_en": "Lyle Foster",
+              "role_note": "前场支点与纵深"
+            }
+          ],
+          "predicted_xi_count": 11,
+          "rotation_candidates": [
+            {
+              "player_cn": "伊克拉姆·雷纳斯",
+              "player_en": "Iqraam Rayners",
+              "trigger": "需要更直接禁区终结"
+            },
+            {
+              "player_cn": "埃维登斯·马克戈帕",
+              "player_en": "Evidence Makgopa",
+              "trigger": "需要高点和长传落点"
+            },
+            {
+              "player_cn": "卡莫盖洛·塞贝莱贝莱",
+              "player_en": "Kamogelo Sebelebele",
+              "trigger": "边路速度替补"
+            }
+          ],
+          "conflicts": [
+            "本地 player_state 曾标 Mokoena suspended，但 Guardian 队闻称其回归；此处标 conflicting_to_probable，T-75 必须复核。"
+          ],
+          "model_impact_if_changed": [
+            "Data-thread probable XI is not official. Two or more starter changes, a formation change, or a key minutes cap should trigger xG and matrix rerun."
+          ]
+        },
+        "team_b": {
+          "team": "Canada",
+          "team_zh": "加拿大",
+          "formation": "3-4-2-1",
+          "source_status": "probable_not_official",
+          "source_status_detail": "from_data_collector_partial_source_limited_probable_not_official",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "official_lineup_gate": "not_captured_in_packet",
+          "confidence": "medium",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "马克西姆·克雷波",
+              "player_en": "Maxime Crépeau",
+              "role_note": "一门候选，门线与出击"
+            },
+            {
+              "position": "RCB",
+              "player_cn": "阿利斯泰尔·约翰斯顿",
+              "player_en": "Alistair Johnston",
+              "role_note": "右侧防守与推进"
+            },
+            {
+              "position": "CB",
+              "player_cn": "莫伊塞·邦比托",
+              "player_en": "Moïse Bombito",
+              "role_note": "回归中卫，对抗与速度"
+            },
+            {
+              "position": "LCB",
+              "player_cn": "德里克·科尔内柳斯",
+              "player_en": "Derek Cornelius",
+              "role_note": "左中卫"
+            },
+            {
+              "position": "RWB",
+              "player_cn": "泰琼·布坎南",
+              "player_en": "Tajon Buchanan",
+              "role_note": "右路推进"
+            },
+            {
+              "position": "LWB",
+              "player_cn": "阿方索·戴维斯",
+              "player_en": "Alphonso Davies",
+              "role_note": "伤后回归，左路爆点"
+            },
+            {
+              "position": "CM",
+              "player_cn": "斯蒂芬·欧斯塔基奥",
+              "player_en": "Stephen Eustáquio",
+              "role_note": "中场组织，肌肉疲劳观察"
+            },
+            {
+              "position": "CM",
+              "player_cn": "内森·萨利巴",
+              "player_en": "Nathan Saliba",
+              "role_note": "中场跑动"
+            },
+            {
+              "position": "FW",
+              "player_cn": "乔纳森·戴维",
+              "player_en": "Jonathan David",
+              "role_note": "核心终结"
+            },
+            {
+              "position": "FW",
+              "player_cn": "凯尔·拉林",
+              "player_en": "Cyle Larin",
+              "role_note": "中锋牵制"
+            },
+            {
+              "position": "FW",
+              "player_cn": "普罗米斯·戴维",
+              "player_en": "Promise David",
+              "role_note": "前场冲击/射门点"
+            }
+          ],
+          "predicted_xi_count": 11,
+          "rotation_candidates": [
+            {
+              "player_cn": "雅各布·沙费尔伯格",
+              "player_en": "Jacob Shaffelburg",
+              "trigger": "左路速度或 Davies 分钟受限"
+            },
+            {
+              "player_cn": "里奇·拉里亚",
+              "player_en": "Richie Laryea",
+              "trigger": "右翼卫防守稳态"
+            },
+            {
+              "player_cn": "阿里·艾哈迈德",
+              "player_en": "Ali Ahmed",
+              "trigger": "中前场轮换"
+            }
+          ],
+          "conflicts": [
+            "Davies/Bombito 回归口径来自 Guardian 队闻；本地 player_state 对 Davies 仍为 managed_return_uncertain。"
+          ],
+          "model_impact_if_changed": [
+            "Data-thread probable XI is not official. Two or more starter changes, a formation change, or a key minutes cap should trigger xG and matrix rerun."
+          ]
+        },
+        "source_log": [
+          {
+            "source": "data\\thread_outputs\\round32-m73-m76-v3-20260628\\data-collector.json",
+            "captured_at": "2026-06-28T21:26:27+08:00",
+            "status": "partial_source_limited"
+          }
+        ],
+        "gaps_and_conflicts": [
+          "本地 player_state 曾标 Mokoena suspended，但 Guardian 队闻称其回归；此处标 conflicting_to_probable，T-75 必须复核。",
+          "Davies/Bombito 回归口径来自 Guardian 队闻；本地 player_state 对 Davies 仍为 managed_return_uncertain。",
+          "Official lineup not available; data-thread XI is probable only."
+        ]
+      },
+      "factor_inputs": {
+        "baseline_strength": "South Africa kept a structured underdog profile from group play; Canada rate higher on athletic upside and host-continent tempo but remain volatile in settled possession.",
+        "attack": "South Africa chance creation is lower-volume and set-piece/counter dependent; Canada have David/Larin/Davies/Buchanan transition and box-arrival routes.",
+        "defense": "South Africa defensive resilience and goalkeeper signal keep the match from a simple favorite script; Canada transition defense is the main leakage risk.",
+        "player_state": "Canada attacking core rates above South Africa, but Kone/minutes risk and role choices cap confidence. South Africa Mokoena/Williams spine supports low-event survival.",
+        "injury_suspension_minutes": "No data-thread injury packet available. Treat Canada central-midfield availability and South Africa attacking minutes as recheck items.",
+        "tactical_matchup": "南非的最优脚本是 Broos 式中低位压缩、Williams 稳定门前、Mokoena 管理二点和定位球；加拿大的最优脚本是 Marsch 式高强度压迫和纵向转换。对模型最关键的不是谁控球，而是加拿大核心可用性是否足以支撑连续压迫，以及南非能否把比赛拖入低事件节奏。",
+        "schedule_environment": "Los Angeles noon host kickoff creates heat/tempo uncertainty. Canada travel context is relatively familiar but not enough for a large bonus.",
+        "market": "Incomplete external market snippet only; no overround-adjusted same-source calibration.",
+        "group_stage_summary": {
+          "south_africa": {
+            "known_results": [
+              "墨西哥 2-0 南非",
+              "捷克 1-1 南非",
+              "南非 1-0 韩国"
+            ],
+            "rank_source": "round-of-32 bracket marks South Africa as 2A; local A组 third-round postmatch file not present",
+            "trend_notes": [
+              "首轮负于墨西哥后防守压力明显",
+              "第二轮靠 Teboho Mokoena 第83分钟点球拿到生机",
+              "公开队闻称末轮击败韩国并首次进入淘汰赛"
+            ],
+            "source_status": "partial_local_third_round_gap"
+          },
+          "canada": {
+            "known_results": [
+              "加拿大 1-1 波黑",
+              "加拿大 6-0 卡塔尔",
+              "瑞士 2-1 加拿大"
+            ],
+            "rank_source": "B组第三轮复盘 and bracket mark Canada as 2B",
+            "trend_notes": [
+              "两轮后4分且净胜球优势大",
+              "第三轮负瑞士后列B组第二",
+              "Jonathan David/Cyle Larin/Promise David 攻击状态为主要本地正信号"
+            ],
+            "source_status": "local_postmatch_available"
+          }
+        },
+        "availability_and_risk": {
+          "south_africa": [
+            {
+              "player": "Teboho Mokoena",
+              "status": "conflicting_probable",
+              "note": "本地旧状态为 suspended；Guardian 队闻称 return。"
+            },
+            {
+              "player": "Ronwen Williams",
+              "status": "probable",
+              "note": "本地未见伤停。"
+            }
+          ],
+          "canada": [
+            {
+              "player": "Alphonso Davies",
+              "status": "probable_managed_minutes",
+              "note": "Guardian 报道 set to return after ACL injury。"
+            },
+            {
+              "player": "Moïse Bombito",
+              "status": "probable_return",
+              "note": "Guardian 报道 return。"
+            },
+            {
+              "player": "Ismaël Koné",
+              "status": "out_or_major_doubt",
+              "note": "Guardian 报道 serious injury。"
+            },
+            {
+              "player": "Stephen Eustáquio",
+              "status": "doubtful_minutes_watch",
+              "note": "Guardian 报道 muscle fatigue。"
+            }
+          ]
+        },
+        "tactical_ten_factor_summary": {
+          "南非": {
+            "expected_formation": "3-4-2-1, defending as 5-4-1 / 5-2-2-1 shell",
+            "tactical_summary": "南非的最优脚本是 Broos 式中低位压缩、Williams 稳定门前、Mokoena 管理二点和定位球；加拿大的最优脚本是 Marsch 式高强度压迫和纵向转换。对模型最关键的不是谁控球，而是加拿大核心可用性是否足以支撑连续压迫，以及南非能否把比赛拖入低事件节奏。",
+            "ten_factor_adjustments": {
+              "pressing_adjustment": {
+                "direction": "negative",
+                "magnitude": -0.2,
+                "confidence": "medium",
+                "model_note": "Small negative only; this is a choice to conserve structure, not a full defensive downgrade."
+              },
+              "build_up_resistance_adjustment": {
+                "direction": "mixed",
+                "magnitude": -0.1,
+                "confidence": "medium",
+                "model_note": "Cap near neutral unless T-75 confirms conservative midfield and full-strength goalkeeper."
+              },
+              "transition_attack_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium",
+                "model_note": "Do not combine with a large open-play attack upgrade; this is situational chance quality."
+              },
+              "transition_defense_risk": {
+                "direction": "neutral",
+                "magnitude": 0,
+                "confidence": "medium",
+                "model_note": "Only raise risk if South Africa concede first or start a more attacking XI."
+              },
+              "wide_channel_advantage": {
+                "direction": "negative",
+                "magnitude": -0.25,
+                "confidence": "medium",
+                "model_note": "Limit magnitude if Davies is unavailable or minute-limited."
+              },
+              "central_control_advantage": {
+                "direction": "neutral",
+                "magnitude": 0,
+                "confidence": "medium_low",
+                "model_note": "Official midfields decide sign; keep neutral until lineup refresh."
+              },
+              "set_piece_advantage": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium",
+                "model_note": "Cap because complete taker-target map is missing."
+              },
+              "defensive_line_risk": {
+                "direction": "positive",
+                "magnitude": 0.2,
+                "confidence": "medium",
+                "model_note": "Positive means reduced risk; flip if South Africa must chase early."
+              },
+              "coach_substitution_risk": {
+                "direction": "neutral",
+                "magnitude": 0,
+                "confidence": "medium",
+                "model_note": "No large coaching penalty; use as stability marker."
+              },
+              "game_state_tendency": {
+                "direction": "positive",
+                "magnitude": 0.35,
+                "confidence": "medium",
+                "model_note": "Apply to low-event and one-goal game states, not raw win probability."
+              }
+            },
+            "model_should_adjust": [
+              "Canada transition and press are conditional on core availability",
+              "South Africa low-event resistance deserves a draw/low-tempo floor but not an open-play attack boost"
+            ],
+            "red_team_should_challenge": [
+              "Davies/Eustaquio/Kone actual minutes",
+              "whether South Africa's A-group survival signal is stale without final group-round data"
+            ]
+          },
+          "加拿大": {
+            "expected_formation": "3-4-2-1, pressing into 3-2-5 / 5-2-3 phases",
+            "tactical_summary": "南非的最优脚本是 Broos 式中低位压缩、Williams 稳定门前、Mokoena 管理二点和定位球；加拿大的最优脚本是 Marsch 式高强度压迫和纵向转换。对模型最关键的不是谁控球，而是加拿大核心可用性是否足以支撑连续压迫，以及南非能否把比赛拖入低事件节奏。",
+            "ten_factor_adjustments": {
+              "pressing_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.35,
+                "confidence": "medium",
+                "model_note": "Use conditional positive; halve if Eustaquio/Kone/Davies are not in functional minutes."
+              },
+              "build_up_resistance_adjustment": {
+                "direction": "mixed",
+                "magnitude": 0.05,
+                "confidence": "medium_low",
+                "model_note": "Do not add more than small positive before T-75."
+              },
+              "transition_attack_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.45,
+                "confidence": "medium_high",
+                "model_note": "Avoid double counting with player_state attacking form; cap if Davies absent."
+              },
+              "transition_defense_risk": {
+                "direction": "negative",
+                "magnitude": -0.35,
+                "confidence": "medium",
+                "model_note": "Negative means higher risk; feed into opponent counter/set-piece transition windows."
+              },
+              "wide_channel_advantage": {
+                "direction": "positive",
+                "magnitude": 0.35,
+                "confidence": "medium",
+                "model_note": "Davies availability is the cap switch."
+              },
+              "central_control_advantage": {
+                "direction": "mixed",
+                "magnitude": 0,
+                "confidence": "medium_low",
+                "model_note": "Keep neutral until official XI."
+              },
+              "set_piece_advantage": {
+                "direction": "neutral",
+                "magnitude": 0,
+                "confidence": "medium_low",
+                "model_note": "No additional set-piece bump."
+              },
+              "defensive_line_risk": {
+                "direction": "negative",
+                "magnitude": -0.3,
+                "confidence": "medium",
+                "model_note": "Link to South Africa direct-outlet chances rather than broad defense downgrade."
+              },
+              "coach_substitution_risk": {
+                "direction": "mixed",
+                "magnitude": -0.05,
+                "confidence": "medium",
+                "model_note": "Treat as slight volatility, not pure penalty."
+              },
+              "game_state_tendency": {
+                "direction": "mixed",
+                "magnitude": 0.2,
+                "confidence": "medium",
+                "model_note": "Raises event volatility after first goal."
+              }
+            },
+            "model_should_adjust": [
+              "Canada transition and press are conditional on core availability",
+              "South Africa low-event resistance deserves a draw/low-tempo floor but not an open-play attack boost"
+            ],
+            "red_team_should_challenge": [
+              "Davies/Eustaquio/Kone actual minutes",
+              "whether South Africa's A-group survival signal is stale without final group-round data"
+            ]
+          }
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.27,
+        "attack": 0.15,
+        "defense": 0.15,
+        "player_state": 0.14,
+        "injury_suspension_minutes": 0.09,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.04,
+        "knockout_context": 0.04,
+        "market": 0,
+        "notes": "Market weight set to 0.00 because same-source odds snapshot is missing. Knockout context is small and does not replace team/tactical factors."
+      },
+      "team_strength_score": {
+        "team_a": 68,
+        "team_b": 74,
+        "scale": "0-100 internal"
+      },
+      "attack_score": {
+        "team_a": 66,
+        "team_b": 76,
+        "scale": "0-100 internal"
+      },
+      "defense_score": {
+        "team_a": 71,
+        "team_b": 69,
+        "scale": "0-100 internal"
+      },
+      "player_state_adjustment": {
+        "team_a_xg_delta": -0.02,
+        "team_b_xg_delta": 0.05,
+        "note": "Derived from local player_state/model-brief fallback; capped for missing upstream."
+      },
+      "injury_adjustment": {
+        "team_a_xg_delta": 0,
+        "team_b_xg_delta": -0.04,
+        "note": "No fresh data-thread injury packet; conservative unresolved-risk adjustment only."
+      },
+      "tactical_matchup_adjustment": {
+        "team_a_xg_delta": 0.04,
+        "team_b_xg_delta": -0.05,
+        "note": "Tactics ten-factor layer raises South Africa low-event/set-piece and late-resilience branch while capping Canada transition upside for Davies/Eustaquio/Kone uncertainty.",
+        "tactics_packet_status": "partial_source_limited",
+        "ten_factor_source": "data\\thread_outputs\\round32-m73-m76-v3-20260628\\tactics-coach.json"
+      },
+      "schedule_environment_adjustment": {
+        "team_a_xg_delta": 0.01,
+        "team_b_xg_delta": 0.01,
+        "note": "Venue/kickoff environment applied conservatively from bracket file only."
+      },
+      "market_adjustment": {
+        "team_a_xg_delta": 0,
+        "team_b_xg_delta": 0,
+        "status": "missing_odds_no_market_shift"
+      },
+      "knockout_context": {
+        "stage": "single_elimination_round_of_32",
+        "draw_after_90": "extra_time_path_not_advance_probability",
+        "context_adjustment_note": "1X2 probabilities are 90-minute model probabilities; advancement simulation not run in this packet."
+      },
+      "expected_goals": {
+        "pre_market": {
+          "team_a": 1.08,
+          "team_b": 1.34
+        },
+        "final": {
+          "team_a": 1.08,
+          "team_b": 1.34
+        },
+        "total": 2.42,
+        "update_note": "Recomputed after data-collector predicted XI and tactics-coach ten-factor absorption; market shift remains zero."
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0": {
+            "0": 0.0889,
+            "1": 0.1192,
+            "2": 0.0798,
+            "3": 0.0357,
+            "4": 0.0119,
+            "5": 0.0032
+          },
+          "1": {
+            "0": 0.096,
+            "1": 0.1287,
+            "2": 0.0862,
+            "3": 0.0385,
+            "4": 0.0129,
+            "5": 0.0035
+          },
+          "2": {
+            "0": 0.0519,
+            "1": 0.0695,
+            "2": 0.0466,
+            "3": 0.0208,
+            "4": 0.007,
+            "5": 0.0019
+          },
+          "3": {
+            "0": 0.0187,
+            "1": 0.025,
+            "2": 0.0168,
+            "3": 0.0075,
+            "4": 0.0025,
+            "5": 0.0007
+          },
+          "4": {
+            "0": 0.005,
+            "1": 0.0068,
+            "2": 0.0045,
+            "3": 0.002,
+            "4": 0.0007,
+            "5": 0.0002
+          },
+          "5": {
+            "0": 0.0011,
+            "1": 0.0015,
+            "2": 0.001,
+            "3": 0.0004,
+            "4": 0.0001,
+            "5": 0
+          }
+        },
+        "tail_probability": 0.0035,
+        "matrix_sum_check": 1
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.3012,
+        "draw": 0.2724,
+        "team_b_win": 0.4265,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4355,
+        "under_2_5": 0.5645,
+        "btts_yes": 0.4875,
+        "btts_no": 0.5125
+      },
+      "btts": {
+        "yes": 0.4875,
+        "no": 0.5125
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1287
+        },
+        {
+          "score": "0-1",
+          "probability": 0.1192
+        },
+        {
+          "score": "1-0",
+          "probability": 0.096
+        },
+        {
+          "score": "0-0",
+          "probability": 0.0889
+        },
+        {
+          "score": "1-2",
+          "probability": 0.0862
+        }
+      ],
+      "odds_implied_probability": {
+        "status": "incomplete_external_only",
+        "source": "data_collector.market_availability",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "raw_snapshots": [
+          {
+            "source": "The Sun",
+            "market": "moneyline reference",
+            "value": "Canada -140 reported",
+            "source_status": "third_party_non_chinese_incomplete"
+          }
+        ],
+        "overround": null,
+        "normalized": null,
+        "reason": "Market data is incomplete or not same-source; no odds-implied probability applied."
+      },
+      "model_market_delta": {
+        "status": "not_available_without_complete_same_source_odds",
+        "deltas": null
+      },
+      "confidence_interval": {
+        "team_a_win": [
+          0.24,
+          0.37
+        ],
+        "draw": [
+          0.23,
+          0.32
+        ],
+        "team_b_win": [
+          0.36,
+          0.5
+        ],
+        "xg_a": [
+          0.82,
+          1.34
+        ],
+        "xg_b": [
+          1.02,
+          1.66
+        ]
+      },
+      "uncertainty": {
+        "level": "medium_high",
+        "drivers": [
+          "Data collector package missing; predicted XI is fallback only.",
+          "Canada injury/minutes risk in midfield can move xG by about 0.10.",
+          "If South Africa score first, draw and extra-time path rises materially."
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "status": "pre_red_team_model_after_tactics_absorption",
+        "probabilities_1x2": {
+          "team_a_win": 0.3012,
+          "draw": 0.2724,
+          "team_b_win": 0.4265,
+          "sum": 1
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1287
+          },
+          {
+            "score": "0-1",
+            "probability": 0.1192
+          },
+          {
+            "score": "1-0",
+            "probability": 0.096
+          },
+          {
+            "score": "0-0",
+            "probability": 0.0889
+          },
+          {
+            "score": "1-2",
+            "probability": 0.0862
+          }
+        ]
+      },
+      "betting_gate_status": "discussion_only_hold",
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "No betting advice is included.",
+        "Data-collector probable XI retained, but official T-75 XI is missing.",
+        "Tactics-coach ten-factor package absorbed with conservative caps to avoid double counting.",
+        "Market calibration is disabled because complete same-source odds are missing.",
+        "Red-team review is pending; probabilities should be treated as pre-red-team."
+      ],
+      "sensitivity": {
+        "most_sensitive_variables": [
+          "Data collector package missing; predicted XI is fallback only.",
+          "Canada injury/minutes risk in midfield can move xG by about 0.10.",
+          "If South Africa score first, draw and extra-time path rises materially."
+        ],
+        "easiest_to_falsify_assumptions": [
+          "Fresh data-thread predicted XI differs by two or more starters.",
+          "Key attacker or goalkeeper availability changes.",
+          "Same-source odds imply a much different baseline after overround removal."
+        ]
+      },
+      "tail_shape_adjustments": {
+        "draw_floor_dynamic": {
+          "triggered": true,
+          "probability_floor": 0.27,
+          "applied_note": "Low-event South Africa shell plus Canada availability cap supports a higher draw/one-goal-game floor through lower total xG and closer xG gap."
+        },
+        "event_volatility_layer": {
+          "triggered": true,
+          "tail_note": "Canada first-goal script can raise event volume, but base matrix keeps conservative low-event mass."
+        },
+        "favorite_ceiling_tail": {
+          "triggered": false,
+          "note": "No favorite-ceiling expansion; Canada edge is conditional."
+        }
+      },
+      "favorite_home_4plus_goal_probability": 0.0243
+    },
+    {
+      "match_id": "M74",
+      "match_no": 74,
+      "stage": "Round of 32",
+      "match_identity": {
+        "match_id": "M74",
+        "match_no": 74,
+        "team_a": "Germany",
+        "team_b": "Paraguay",
+        "host_date": "2026-06-29",
+        "kickoff_host": "16:30",
+        "city": "Foxborough / Boston",
+        "venue": "Boston Stadium"
+      },
+      "input_readiness": {
+        "overall_status": "partial_source_limited_data_and_tactics_available",
+        "data_collector_packet": "available_partial_source_limited",
+        "tactics_coach_packet": "available_partial_source_limited_ten_factor_matchups_absorbed",
+        "bracket_source": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+        "template_source": "data/templates/match-prediction-standard-template-v3.md",
+        "prediction_contract_source": "data/templates/prediction-contract-v2.json",
+        "player_state_files": "local_fallback_readiness_not_fresh_data_thread",
+        "roster_files": "local_fallback_readiness_not_fresh_data_thread",
+        "official_lineups_status": "not_available_yet",
+        "predicted_lineups_status": "data_collector_predicted_lineups_probable_not_official",
+        "predicted_lineups_data_thread_blocker": false,
+        "odds_snapshot": "missing_same_source_complete_snapshot",
+        "gaps_and_conflicts": [
+          "Data collector packet is partial_source_limited, not complete final team news.",
+          "Tactics-coach ten-factor packet is available and absorbed, but remains partial_source_limited.",
+          "Official T-75 XI is still not available.",
+          "Complete same-source odds chain is missing or incomplete."
+        ]
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "source_status_detail": "data_collector_partial_source_limited",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "official_lineup_gate": "T-75 official lineups must be checked before any model finalization or betting-risk execution.",
+        "data_thread_required": false,
+        "team_a": {
+          "team": "Germany",
+          "team_zh": "德国",
+          "formation": "4-2-3-1",
+          "source_status": "probable_not_official_conflicting",
+          "source_status_detail": "from_data_collector_partial_source_limited_probable_not_official",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "official_lineup_gate": "not_available_yet",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "曼努埃尔·诺伊尔",
+              "player_en": "Manuel Neuer",
+              "role_note": "经验一门；公开评论源存在是否应轮换争议"
+            },
+            {
+              "position": "RB",
+              "player_cn": "约书亚·基米希",
+              "player_en": "Joshua Kimmich",
+              "role_note": "右路/中场转换枢纽"
+            },
+            {
+              "position": "CB",
+              "player_cn": "约纳坦·塔",
+              "player_en": "Jonathan Tah",
+              "role_note": "中卫对抗"
+            },
+            {
+              "position": "CB",
+              "player_cn": "安东尼奥·吕迪格",
+              "player_en": "Antonio Rüdiger",
+              "role_note": "中卫领袖"
+            },
+            {
+              "position": "LB",
+              "player_cn": "纳撒尼尔·布朗",
+              "player_en": "Nathaniel Brown",
+              "role_note": "左后卫推进"
+            },
+            {
+              "position": "DM",
+              "player_cn": "费利克斯·恩梅查",
+              "player_en": "Felix Nmecha",
+              "role_note": "中场覆盖"
+            },
+            {
+              "position": "DM",
+              "player_cn": "纳迪姆·阿米里",
+              "player_en": "Nadiem Amiri",
+              "role_note": "中场连接"
+            },
+            {
+              "position": "AM",
+              "player_cn": "弗洛里安·维尔茨",
+              "player_en": "Florian Wirtz",
+              "role_note": "前腰创造"
+            },
+            {
+              "position": "AM",
+              "player_cn": "贾马尔·穆西亚拉",
+              "player_en": "Jamal Musiala",
+              "role_note": "肋部突破"
+            },
+            {
+              "position": "RW",
+              "player_cn": "勒鲁瓦·萨内",
+              "player_en": "Leroy Sané",
+              "role_note": "右路冲刺；首发争议"
+            },
+            {
+              "position": "ST",
+              "player_cn": "凯·哈弗茨",
+              "player_en": "Kai Havertz",
+              "role_note": "中锋牵制"
+            }
+          ],
+          "predicted_xi_count": 11,
+          "rotation_candidates": [
+            {
+              "player_cn": "德尼兹·翁达夫",
+              "player_en": "Deniz Undav",
+              "trigger": "若压低 Sané 或改双前锋，当前本地 form 最高"
+            },
+            {
+              "player_cn": "奥利弗·鲍曼",
+              "player_en": "Oliver Baumann",
+              "trigger": "若门将位置按舆论建议轮换"
+            },
+            {
+              "player_cn": "大卫·劳姆",
+              "player_en": "David Raum",
+              "trigger": "左后卫经验优先"
+            }
+          ],
+          "conflicts": [
+            "Bavarian Football Works 倾向 Baumann/Undav/基米希中场等调整，但承认 Neuer 不一定会被放到替补；官方未确认。"
+          ],
+          "model_impact_if_changed": [
+            "Data-thread probable XI is not official. Two or more starter changes, a formation change, or a key minutes cap should trigger xG and matrix rerun."
+          ]
+        },
+        "team_b": {
+          "team": "Paraguay",
+          "team_zh": "巴拉圭",
+          "formation": "4-4-2",
+          "source_status": "probable_not_official",
+          "source_status_detail": "from_data_collector_partial_source_limited_probable_not_official",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "official_lineup_gate": "not_available_yet",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "奥兰多·吉尔",
+              "player_en": "Orlando Gill",
+              "role_note": "二轮首发门将口径"
+            },
+            {
+              "position": "RB",
+              "player_cn": "胡安·何塞·卡塞雷斯",
+              "player_en": "Juan José Cáceres",
+              "role_note": "右后卫防守"
+            },
+            {
+              "position": "CB",
+              "player_cn": "古斯塔沃·戈麦斯",
+              "player_en": "Gustavo Gómez",
+              "role_note": "防线核心"
+            },
+            {
+              "position": "CB",
+              "player_cn": "奥马尔·阿尔德雷特",
+              "player_en": "Omar Alderete",
+              "role_note": "中卫/左脚出球"
+            },
+            {
+              "position": "LB",
+              "player_cn": "胡尼奥尔·阿隆索",
+              "player_en": "Júnior Alonso",
+              "role_note": "左侧防守"
+            },
+            {
+              "position": "RM",
+              "player_cn": "米格尔·阿尔米隆",
+              "player_en": "Miguel Almirón",
+              "role_note": "右路推进与反击"
+            },
+            {
+              "position": "CM",
+              "player_cn": "安德烈斯·库巴斯",
+              "player_en": "Andrés Cubas",
+              "role_note": "中场扫荡"
+            },
+            {
+              "position": "CM",
+              "player_cn": "马蒂亚斯·加拉萨",
+              "player_en": "Matías Galarza",
+              "role_note": "二轮高状态中场"
+            },
+            {
+              "position": "LM",
+              "player_cn": "迭戈·戈麦斯",
+              "player_en": "Diego Gómez",
+              "role_note": "左/中路前插"
+            },
+            {
+              "position": "ST",
+              "player_cn": "伊西德罗·皮塔",
+              "player_en": "Isidro Pitta",
+              "role_note": "中锋支点"
+            },
+            {
+              "position": "ST",
+              "player_cn": "胡利奥·恩西索",
+              "player_en": "Julio Enciso",
+              "role_note": "二前锋/反击衔接"
+            }
+          ],
+          "predicted_xi_count": 11,
+          "rotation_candidates": [
+            {
+              "player_cn": "亚历克斯·阿尔塞",
+              "player_en": "Álex Arce",
+              "trigger": "需要更强禁区终结"
+            },
+            {
+              "player_cn": "加布里埃尔·阿瓦洛斯",
+              "player_en": "Gabriel Ávalos",
+              "trigger": "高点替补"
+            },
+            {
+              "player_cn": "卡库",
+              "player_en": "Kaku",
+              "trigger": "需要前腰创造"
+            }
+          ],
+          "conflicts": [
+            "D组第三轮本地复盘不完整，预计 XI 主要继承土耳其 0-1 巴拉圭二轮首发和本地 player_state。"
+          ],
+          "model_impact_if_changed": [
+            "Data-thread probable XI is not official. Two or more starter changes, a formation change, or a key minutes cap should trigger xG and matrix rerun."
+          ]
+        },
+        "source_log": [
+          {
+            "source": "data\\thread_outputs\\round32-m73-m76-v3-20260628\\data-collector.json",
+            "captured_at": "2026-06-28T21:26:27+08:00",
+            "status": "partial_source_limited"
+          }
+        ],
+        "gaps_and_conflicts": [
+          "Bavarian Football Works 倾向 Baumann/Undav/基米希中场等调整，但承认 Neuer 不一定会被放到替补；官方未确认。",
+          "D组第三轮本地复盘不完整，预计 XI 主要继承土耳其 0-1 巴拉圭二轮首发和本地 player_state。",
+          "Official lineup not available; data-thread XI is probable only."
+        ]
+      },
+      "factor_inputs": {
+        "baseline_strength": "Germany carry top-tier attack and round-one ceiling signal; Paraguay are competitive but profile as third-place underdog after defensive volatility.",
+        "attack": "Germany have Musiala/Wirtz/Kimmich creative density plus set-piece and secondary runners. Paraguay rely on Almiron/Enciso transition and set pieces.",
+        "defense": "Germany defense is strong but can expose space when fullbacks push. Paraguay defensive floor was downgraded after heavy concession paths.",
+        "player_state": "Germany core availability assumed probable_not_official; Paraguay key attackers are dangerous but support platform is less stable.",
+        "injury_suspension_minutes": "No data-thread injury packet available. Rotation and late fitness checks remain open.",
+        "tactical_matchup": "德国仍有最高技术密度、前场反抢和多点攻击，但厄瓜多尔 2-1 德国复盘要求限制强队模板外推：若德国节奏管理下降，防守转换会被放大。巴拉圭更像 Alfaro 式低位、反击和定位球队；土耳其 0-1 巴拉圭证明其十人低位韧性，但美国 4-1 巴拉圭也暴露早丢球后结构散开。",
+        "schedule_environment": "Boston late afternoon conditions are moderate; no major travel edge applied.",
+        "market": "No complete same-source odds snapshot available.",
+        "group_stage_summary": {
+          "germany": {
+            "known_results": [
+              "德国 7-1 库拉索",
+              "德国 2-1 科特迪瓦",
+              "厄瓜多尔 2-1 德国"
+            ],
+            "rank_source": "bracket marks Germany as 1E; E组 results imply Germany top on goal difference among 6-point teams",
+            "trend_notes": [
+              "前两轮攻击爆发",
+              "第三轮已基本掌握出线后节奏和轮换被复盘为风险",
+              "Wirtz/Musiala/Undav/Havertz/Sané 组合存在首发排序争议"
+            ]
+          },
+          "paraguay": {
+            "known_results": [
+              "美国 4-1 巴拉圭",
+              "土耳其 0-1 巴拉圭",
+              "D组第三轮本地完整复盘缺失；bracket confirms 3D"
+            ],
+            "rank_source": "round-of-32 bracket marks Paraguay as 3D",
+            "trend_notes": [
+              "首轮被美国打穿后 game_state_collapse_risk 上调",
+              "第二轮 1-0 土耳其提升低比分防守和反击地板",
+              "Julio Enciso 曾与本地名单冲突，当前已出现在本地 player_state"
+            ]
+          }
+        },
+        "availability_and_risk": {
+          "germany": [
+            {
+              "player": "Lennart Karl",
+              "status": "out",
+              "note": "本地 Germany player_state source_log notes Assan Ouedraogo replacing injured Lennart Karl."
+            },
+            {
+              "player": "Manuel Neuer / Leroy Sané",
+              "status": "selection_pressure",
+              "note": "公开评论源提出替补争议，不等于官方伤停。"
+            }
+          ],
+          "paraguay": [
+            {
+              "player": "Julio Enciso",
+              "status": "probable",
+              "note": "此前名单冲突已在本地 remediation 后出现；T-75复核。"
+            },
+            {
+              "player": "Gustavo Gómez",
+              "status": "probable",
+              "note": "本地未见新增停赛。"
+            }
+          ]
+        },
+        "tactical_ten_factor_summary": {
+          "德国": {
+            "expected_formation": "4-2-3-1 with 3-2 build-up options",
+            "tactical_summary": "德国仍有最高技术密度、前场反抢和多点攻击，但厄瓜多尔 2-1 德国复盘要求限制强队模板外推：若德国节奏管理下降，防守转换会被放大。巴拉圭更像 Alfaro 式低位、反击和定位球队；土耳其 0-1 巴拉圭证明其十人低位韧性，但美国 4-1 巴拉圭也暴露早丢球后结构散开。",
+            "ten_factor_adjustments": {
+              "pressing_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.4,
+                "confidence": "medium_high",
+                "model_note": "Do not stack with raw attack ceiling from Curacao 7-1; this is phase pressure."
+              },
+              "build_up_resistance_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.45,
+                "confidence": "medium_high",
+                "model_note": "Reduce if central controller absent or Paraguay front two press aggressively."
+              },
+              "transition_attack_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.35,
+                "confidence": "medium",
+                "model_note": "Cap because Ecuador match showed control and recovery can dip."
+              },
+              "transition_defense_risk": {
+                "direction": "negative",
+                "magnitude": -0.25,
+                "confidence": "medium",
+                "model_note": "Negative risk applies when fullbacks push and rest defense is thin."
+              },
+              "wide_channel_advantage": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium",
+                "model_note": "Do not overstate if Germany pick a narrow control XI."
+              },
+              "central_control_advantage": {
+                "direction": "positive",
+                "magnitude": 0.55,
+                "confidence": "medium_high",
+                "model_note": "Use as tempo/progression edge, not automatic scoring conversion."
+              },
+              "set_piece_advantage": {
+                "direction": "positive",
+                "magnitude": 0.2,
+                "confidence": "medium_low",
+                "model_note": "Small edge only because full taker-target maps are missing."
+              },
+              "defensive_line_risk": {
+                "direction": "mixed",
+                "magnitude": -0.15,
+                "confidence": "medium",
+                "model_note": "Treat as conditional volatility rather than broad defensive downgrade."
+              },
+              "coach_substitution_risk": {
+                "direction": "positive",
+                "magnitude": 0.15,
+                "confidence": "medium",
+                "model_note": "Positive bench flexibility; cap if lineup rotation is heavy."
+              },
+              "game_state_tendency": {
+                "direction": "mixed",
+                "magnitude": 0.1,
+                "confidence": "medium",
+                "model_note": "Knockout reduces rotation drag but not transition-control risk."
+              }
+            },
+            "model_should_adjust": [
+              "Germany central/press edges are real but transition defense must stay in the tail",
+              "Paraguay set-piece and low-block survival need a separate upset/low-event branch"
+            ],
+            "red_team_should_challenge": [
+              "Almiron suspension status",
+              "Germany overreward from Curacao 7-1 versus Ecuador loss context"
+            ]
+          },
+          "巴拉圭": {
+            "expected_formation": "4-4-2, with 5-4-1 protection possible",
+            "tactical_summary": "德国仍有最高技术密度、前场反抢和多点攻击，但厄瓜多尔 2-1 德国复盘要求限制强队模板外推：若德国节奏管理下降，防守转换会被放大。巴拉圭更像 Alfaro 式低位、反击和定位球队；土耳其 0-1 巴拉圭证明其十人低位韧性，但美国 4-1 巴拉圭也暴露早丢球后结构散开。",
+            "ten_factor_adjustments": {
+              "pressing_adjustment": {
+                "direction": "negative",
+                "magnitude": -0.25,
+                "confidence": "medium",
+                "model_note": "Negative press does not equal weak defense; it signals lower active regain."
+              },
+              "build_up_resistance_adjustment": {
+                "direction": "negative",
+                "magnitude": -0.25,
+                "confidence": "medium",
+                "model_note": "Cap if Paraguay use back five and long outlet successfully."
+              },
+              "transition_attack_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.3,
+                "confidence": "medium",
+                "model_note": "Availability-dependent; do not duplicate individual player_state boosts."
+              },
+              "transition_defense_risk": {
+                "direction": "negative",
+                "magnitude": -0.35,
+                "confidence": "medium_high",
+                "model_note": "Apply strongly if Paraguay concede first."
+              },
+              "wide_channel_advantage": {
+                "direction": "negative",
+                "magnitude": -0.25,
+                "confidence": "medium",
+                "model_note": "Reduce if Paraguay select a back five."
+              },
+              "central_control_advantage": {
+                "direction": "negative",
+                "magnitude": -0.45,
+                "confidence": "medium_high",
+                "model_note": "Model as territory loss, not automatic collapse."
+              },
+              "set_piece_advantage": {
+                "direction": "positive",
+                "magnitude": 0.3,
+                "confidence": "medium",
+                "model_note": "Cap because Germany also strong aerially and full map missing."
+              },
+              "defensive_line_risk": {
+                "direction": "mixed",
+                "magnitude": -0.2,
+                "confidence": "medium",
+                "model_note": "Tie to first-goal state."
+              },
+              "coach_substitution_risk": {
+                "direction": "mixed",
+                "magnitude": -0.1,
+                "confidence": "medium_low",
+                "model_note": "Small volatility marker."
+              },
+              "game_state_tendency": {
+                "direction": "mixed",
+                "magnitude": 0.25,
+                "confidence": "medium_high",
+                "model_note": "Use bifurcated low-event/elevated-collapse branch."
+              }
+            },
+            "model_should_adjust": [
+              "Germany central/press edges are real but transition defense must stay in the tail",
+              "Paraguay set-piece and low-block survival need a separate upset/low-event branch"
+            ],
+            "red_team_should_challenge": [
+              "Almiron suspension status",
+              "Germany overreward from Curacao 7-1 versus Ecuador loss context"
+            ]
+          }
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.27,
+        "attack": 0.15,
+        "defense": 0.15,
+        "player_state": 0.14,
+        "injury_suspension_minutes": 0.09,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.04,
+        "knockout_context": 0.04,
+        "market": 0,
+        "notes": "Market weight set to 0.00 because same-source odds snapshot is missing. Knockout context is small and does not replace team/tactical factors."
+      },
+      "team_strength_score": {
+        "team_a": 87,
+        "team_b": 69,
+        "scale": "0-100 internal"
+      },
+      "attack_score": {
+        "team_a": 90,
+        "team_b": 68,
+        "scale": "0-100 internal"
+      },
+      "defense_score": {
+        "team_a": 82,
+        "team_b": 67,
+        "scale": "0-100 internal"
+      },
+      "player_state_adjustment": {
+        "team_a_xg_delta": 0.08,
+        "team_b_xg_delta": -0.03,
+        "note": "Derived from local player_state/model-brief fallback; capped for missing upstream."
+      },
+      "injury_adjustment": {
+        "team_a_xg_delta": -0.02,
+        "team_b_xg_delta": -0.02,
+        "note": "No fresh data-thread injury packet; conservative unresolved-risk adjustment only."
+      },
+      "tactical_matchup_adjustment": {
+        "team_a_xg_delta": 0.1,
+        "team_b_xg_delta": 0.02,
+        "note": "Germany central-control, pressing and build-up resistance edges are absorbed; Paraguay set-piece/transition keeps away xG from being crushed.",
+        "tactics_packet_status": "partial_source_limited",
+        "ten_factor_source": "data\\thread_outputs\\round32-m73-m76-v3-20260628\\tactics-coach.json"
+      },
+      "schedule_environment_adjustment": {
+        "team_a_xg_delta": 0,
+        "team_b_xg_delta": 0,
+        "note": "Venue/kickoff environment applied conservatively from bracket file only."
+      },
+      "market_adjustment": {
+        "team_a_xg_delta": 0,
+        "team_b_xg_delta": 0,
+        "status": "missing_odds_no_market_shift"
+      },
+      "knockout_context": {
+        "stage": "single_elimination_round_of_32",
+        "draw_after_90": "extra_time_path_not_advance_probability",
+        "context_adjustment_note": "1X2 probabilities are 90-minute model probabilities; advancement simulation not run in this packet."
+      },
+      "expected_goals": {
+        "pre_market": {
+          "team_a": 2.1,
+          "team_b": 0.78
+        },
+        "final": {
+          "team_a": 2.1,
+          "team_b": 0.78
+        },
+        "total": 2.88,
+        "update_note": "Recomputed after data-collector predicted XI and tactics-coach ten-factor absorption; market shift remains zero."
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0": {
+            "0": 0.0561,
+            "1": 0.0438,
+            "2": 0.0171,
+            "3": 0.0044,
+            "4": 0.0009,
+            "5": 0.0001
+          },
+          "1": {
+            "0": 0.1179,
+            "1": 0.0919,
+            "2": 0.0359,
+            "3": 0.0093,
+            "4": 0.0018,
+            "5": 0.0003
+          },
+          "2": {
+            "0": 0.1238,
+            "1": 0.0965,
+            "2": 0.0377,
+            "3": 0.0098,
+            "4": 0.0019,
+            "5": 0.0003
+          },
+          "3": {
+            "0": 0.0866,
+            "1": 0.0676,
+            "2": 0.0264,
+            "3": 0.0069,
+            "4": 0.0013,
+            "5": 0.0002
+          },
+          "4": {
+            "0": 0.0455,
+            "1": 0.0355,
+            "2": 0.0138,
+            "3": 0.0036,
+            "4": 0.0007,
+            "5": 0.0001
+          },
+          "5": {
+            "0": 0.0191,
+            "1": 0.0149,
+            "2": 0.0058,
+            "3": 0.0015,
+            "4": 0.0003,
+            "5": 0
+          }
+        },
+        "tail_probability": 0.0206,
+        "matrix_sum_check": 1
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.6793,
+        "draw": 0.1933,
+        "team_b_win": 0.1274,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5494,
+        "under_2_5": 0.4506,
+        "btts_yes": 0.4753,
+        "btts_no": 0.5247
+      },
+      "btts": {
+        "yes": 0.4753,
+        "no": 0.5247
+      },
+      "top_scorelines": [
+        {
+          "score": "2-0",
+          "probability": 0.1238
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1179
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0965
+        },
+        {
+          "score": "1-1",
+          "probability": 0.0919
+        },
+        {
+          "score": "3-0",
+          "probability": 0.0866
+        }
+      ],
+      "odds_implied_probability": {
+        "status": "missing_same_source_complete_snapshot",
+        "source": "data_collector.market_availability",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "raw_snapshots": [],
+        "overround": null,
+        "normalized": null,
+        "reason": "Market data is incomplete or not same-source; no odds-implied probability applied."
+      },
+      "model_market_delta": {
+        "status": "not_available_without_complete_same_source_odds",
+        "deltas": null
+      },
+      "confidence_interval": {
+        "team_a_win": [
+          0.62,
+          0.75
+        ],
+        "draw": [
+          0.15,
+          0.23
+        ],
+        "team_b_win": [
+          0.08,
+          0.17
+        ],
+        "xg_a": [
+          1.74,
+          2.48
+        ],
+        "xg_b": [
+          0.54,
+          1.04
+        ]
+      },
+      "uncertainty": {
+        "level": "medium_high",
+        "drivers": [
+          "Favorite-ceiling tail is live, but without odds and official XI the 4+ goal tail is not expanded beyond conservative v2 bounds.",
+          "If Germany rotate heavily or lose rest-defense balance, Paraguay transition probability rises.",
+          "Paraguay set-piece opener is the easiest way to break the central estimate."
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "status": "pre_red_team_model_after_tactics_absorption",
+        "probabilities_1x2": {
+          "team_a_win": 0.6793,
+          "draw": 0.1933,
+          "team_b_win": 0.1274,
+          "sum": 1
+        },
+        "top_scorelines": [
+          {
+            "score": "2-0",
+            "probability": 0.1238
+          },
+          {
+            "score": "1-0",
+            "probability": 0.1179
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0965
+          },
+          {
+            "score": "1-1",
+            "probability": 0.0919
+          },
+          {
+            "score": "3-0",
+            "probability": 0.0866
+          }
+        ]
+      },
+      "betting_gate_status": "discussion_only_hold",
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "No betting advice is included.",
+        "Data-collector probable XI retained, but official T-75 XI is missing.",
+        "Tactics-coach ten-factor package absorbed with conservative caps to avoid double counting.",
+        "Market calibration is disabled because complete same-source odds are missing.",
+        "Red-team review is pending; probabilities should be treated as pre-red-team."
+      ],
+      "sensitivity": {
+        "most_sensitive_variables": [
+          "Favorite-ceiling tail is live, but without odds and official XI the 4+ goal tail is not expanded beyond conservative v2 bounds.",
+          "If Germany rotate heavily or lose rest-defense balance, Paraguay transition probability rises.",
+          "Paraguay set-piece opener is the easiest way to break the central estimate."
+        ],
+        "easiest_to_falsify_assumptions": [
+          "Fresh data-thread predicted XI differs by two or more starters.",
+          "Key attacker or goalkeeper availability changes.",
+          "Same-source odds imply a much different baseline after overround removal."
+        ]
+      },
+      "tail_shape_adjustments": {
+        "draw_floor_dynamic": {
+          "triggered": false,
+          "note": "Paraguay low block is noted but Germany central-control edge prevents a high draw floor."
+        },
+        "event_volatility_layer": {
+          "triggered": true,
+          "tail_note": "Germany first-goal and Paraguay collapse/state-change risk mildly thicken 3+ goal path via higher home xG."
+        },
+        "favorite_ceiling_tail": {
+          "triggered": true,
+          "four_plus_goal_tail_delta": "conservative_xg_based",
+          "note": "No manual probability injection; favorite tail is expanded through xG 2.10 and tactical note only."
+        }
+      },
+      "favorite_home_4plus_goal_probability": 0.1614
+    },
+    {
+      "match_id": "M75",
+      "match_no": 75,
+      "stage": "Round of 32",
+      "match_identity": {
+        "match_id": "M75",
+        "match_no": 75,
+        "team_a": "Netherlands",
+        "team_b": "Morocco",
+        "host_date": "2026-06-29",
+        "kickoff_host": "19:00",
+        "city": "Guadalupe / Monterrey",
+        "venue": "Estadio Monterrey"
+      },
+      "input_readiness": {
+        "overall_status": "partial_source_limited_data_and_tactics_available",
+        "data_collector_packet": "available_partial_source_limited",
+        "tactics_coach_packet": "available_partial_source_limited_ten_factor_matchups_absorbed",
+        "bracket_source": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+        "template_source": "data/templates/match-prediction-standard-template-v3.md",
+        "prediction_contract_source": "data/templates/prediction-contract-v2.json",
+        "player_state_files": "local_fallback_readiness_not_fresh_data_thread",
+        "roster_files": "local_fallback_readiness_not_fresh_data_thread",
+        "official_lineups_status": "not_available_yet",
+        "predicted_lineups_status": "data_collector_predicted_lineups_probable_not_official",
+        "predicted_lineups_data_thread_blocker": false,
+        "odds_snapshot": "missing_same_source_complete_snapshot",
+        "gaps_and_conflicts": [
+          "Data collector packet is partial_source_limited, not complete final team news.",
+          "Tactics-coach ten-factor packet is available and absorbed, but remains partial_source_limited.",
+          "Official T-75 XI is still not available.",
+          "Complete same-source odds chain is missing or incomplete."
+        ]
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "source_status_detail": "data_collector_partial_source_limited",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "official_lineup_gate": "T-75 official lineups must be checked before any model finalization or betting-risk execution.",
+        "data_thread_required": false,
+        "team_a": {
+          "team": "Netherlands",
+          "team_zh": "荷兰",
+          "formation": "4-3-3",
+          "source_status": "probable_not_official",
+          "source_status_detail": "from_data_collector_partial_source_limited_probable_not_official",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "official_lineup_gate": "not_available_yet",
+          "confidence": "medium",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "巴特·费布吕亨",
+              "player_en": "Bart Verbruggen",
+              "role_note": "一门"
+            },
+            {
+              "position": "RB",
+              "player_cn": "丹泽尔·邓弗里斯",
+              "player_en": "Denzel Dumfries",
+              "role_note": "右路冲击"
+            },
+            {
+              "position": "CB",
+              "player_cn": "维吉尔·范戴克",
+              "player_en": "Virgil van Dijk",
+              "role_note": "防线核心"
+            },
+            {
+              "position": "CB",
+              "player_cn": "扬·保罗·范赫克",
+              "player_en": "Jan Paul van Hecke",
+              "role_note": "中卫，第三轮进球状态"
+            },
+            {
+              "position": "LB",
+              "player_cn": "米基·范德芬",
+              "player_en": "Micky van de Ven",
+              "role_note": "左侧速度/中卫兼容"
+            },
+            {
+              "position": "CM",
+              "player_cn": "弗伦基·德容",
+              "player_en": "Frenkie de Jong",
+              "role_note": "控球组织"
+            },
+            {
+              "position": "CM",
+              "player_cn": "瑞安·赫拉芬贝赫",
+              "player_en": "Ryan Gravenberch",
+              "role_note": "后腰覆盖"
+            },
+            {
+              "position": "CM",
+              "player_cn": "蒂贾尼·赖因德斯",
+              "player_en": "Tijjani Reijnders",
+              "role_note": "前插连接"
+            },
+            {
+              "position": "LW",
+              "player_cn": "科迪·加克波",
+              "player_en": "Cody Gakpo",
+              "role_note": "左路终结，队内最高状态"
+            },
+            {
+              "position": "ST",
+              "player_cn": "布赖恩·布罗比",
+              "player_en": "Brian Brobbey",
+              "role_note": "中锋支点和禁区终结"
+            },
+            {
+              "position": "RW",
+              "player_cn": "克里森西奥·萨默维尔",
+              "player_en": "Crysencio Summerville",
+              "role_note": "右/左路速度与终结"
+            }
+          ],
+          "predicted_xi_count": 11,
+          "rotation_candidates": [
+            {
+              "player_cn": "孟菲斯·德佩",
+              "player_en": "Memphis Depay",
+              "trigger": "中锋或二前锋经验"
+            },
+            {
+              "player_cn": "多尼耶尔·马伦",
+              "player_en": "Donyell Malen",
+              "trigger": "边锋冲刺"
+            },
+            {
+              "player_cn": "特恩·库普梅纳斯",
+              "player_en": "Teun Koopmeiners",
+              "trigger": "中场控制/定位球"
+            }
+          ],
+          "conflicts": [
+            "第三轮荷兰复盘标 player_state_update_status blocked/partial for full official minutes, so XI confidence capped at medium."
+          ],
+          "model_impact_if_changed": [
+            "Data-thread probable XI is not official. Two or more starter changes, a formation change, or a key minutes cap should trigger xG and matrix rerun."
+          ]
+        },
+        "team_b": {
+          "team": "Morocco",
+          "team_zh": "摩洛哥",
+          "formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "source_status_detail": "from_data_collector_partial_source_limited_probable_not_official",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "official_lineup_gate": "not_available_yet",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "亚辛·布努",
+              "player_en": "Yassine Bounou",
+              "role_note": "一门；minor knock watch"
+            },
+            {
+              "position": "RB",
+              "player_cn": "阿什拉夫·哈基米",
+              "player_en": "Achraf Hakimi",
+              "role_note": "右路推进核心"
+            },
+            {
+              "position": "CB",
+              "player_cn": "沙迪·里亚德",
+              "player_en": "Chadi Riad",
+              "role_note": "中卫"
+            },
+            {
+              "position": "CB",
+              "player_cn": "伊萨·迪奥普",
+              "player_en": "Issa Diop",
+              "role_note": "中卫防空"
+            },
+            {
+              "position": "LB",
+              "player_cn": "努赛尔·马兹拉维",
+              "player_en": "Noussair Mazraoui",
+              "role_note": "边后卫/内收"
+            },
+            {
+              "position": "DM",
+              "player_cn": "阿泽丁·乌纳希",
+              "player_en": "Azzedine Ounahi",
+              "role_note": "中场推进"
+            },
+            {
+              "position": "DM",
+              "player_cn": "阿尤布·布阿迪",
+              "player_en": "Ayyoub Bouaddi",
+              "role_note": "年轻中场，高状态"
+            },
+            {
+              "position": "AM",
+              "player_cn": "伊斯梅尔·塞巴里",
+              "player_en": "Ismael Saibari",
+              "role_note": "前腰，第三轮高状态"
+            },
+            {
+              "position": "RW",
+              "player_cn": "布拉欣·迪亚斯",
+              "player_en": "Brahim Díaz",
+              "role_note": "右路/肋部创造"
+            },
+            {
+              "position": "LW",
+              "player_cn": "比拉尔·埃尔哈努斯",
+              "player_en": "Bilal El Khannouss",
+              "role_note": "左/中路创造"
+            },
+            {
+              "position": "ST",
+              "player_cn": "阿尤布·埃尔卡比",
+              "player_en": "Ayoub El Kaabi",
+              "role_note": "中锋终结"
+            }
+          ],
+          "predicted_xi_count": 11,
+          "rotation_candidates": [
+            {
+              "player_cn": "苏菲安·拉希米",
+              "player_en": "Soufiane Rahimi",
+              "trigger": "前场速度/二前锋"
+            },
+            {
+              "player_cn": "尼尔·埃尔艾纳维",
+              "player_en": "Neil El Aynaoui",
+              "trigger": "中场稳态"
+            },
+            {
+              "player_cn": "沙姆斯丁·塔尔比",
+              "player_en": "Chemsdine Talbi",
+              "trigger": "边路替补"
+            }
+          ],
+          "conflicts": [
+            "Bounou local status includes minor_knock_watch; official team news needed before final model run."
+          ],
+          "model_impact_if_changed": [
+            "Data-thread probable XI is not official. Two or more starter changes, a formation change, or a key minutes cap should trigger xG and matrix rerun."
+          ]
+        },
+        "source_log": [
+          {
+            "source": "data\\thread_outputs\\round32-m73-m76-v3-20260628\\data-collector.json",
+            "captured_at": "2026-06-28T21:26:27+08:00",
+            "status": "partial_source_limited"
+          }
+        ],
+        "gaps_and_conflicts": [
+          "第三轮荷兰复盘标 player_state_update_status blocked/partial for full official minutes, so XI confidence capped at medium.",
+          "Bounou local status includes minor_knock_watch; official team news needed before final model run.",
+          "Official lineup not available; data-thread XI is probable only."
+        ]
+      },
+      "factor_inputs": {
+        "baseline_strength": "Netherlands hold a narrow power edge; Morocco rate close because defensive floor and tournament structure are strong.",
+        "attack": "Netherlands have wide/fullback and half-space creation; Morocco have Hakimi/Brahim/Ziyech transition and final-third quality.",
+        "defense": "Morocco defensive compactness is a major draw/upset stabilizer. Netherlands defense is good but transition-space risk remains.",
+        "player_state": "Netherlands core quality is high but recent draw signal lowers stability. Morocco spine is coherent if Bounou/Hakimi/Amrabat/Aguerd are available.",
+        "injury_suspension_minutes": "No data-thread injury packet available; both XI and minutes loads require T-75 recheck.",
+        "tactical_matchup": "荷兰的小组后两场显示边路、多点进球和三球尾部仍强；摩洛哥则以右路 Hakimi、替补冲击和防守压缩为核心，但 4-2 海地说明其干净零封假设变脆。核心对位是荷兰中后场推进与高点定位球，碰上摩洛哥右路转换和低位防守韧性。",
+        "schedule_environment": "Monterrey evening reduces heat risk, but venue/travel still keep tempo uncertainty.",
+        "market": "No complete same-source odds snapshot available.",
+        "group_stage_summary": {
+          "netherlands": {
+            "known_results": [
+              "荷兰 2-2 日本",
+              "荷兰 5-1 瑞典",
+              "突尼斯 1-3 荷兰"
+            ],
+            "rank_source": "F组第三轮复盘 and bracket mark Netherlands as 1F",
+            "trend_notes": [
+              "Brobbey/Gakpo/Summerville 多点爆发",
+              "第三轮继续打到三球，强队领先后继续进球尾部需保留",
+              "部分第三轮 player_state 仍缺官方完整分钟/评分"
+            ]
+          },
+          "morocco": {
+            "known_results": [
+              "巴西 1-1 摩洛哥",
+              "苏格兰 0-1 摩洛哥",
+              "摩洛哥 4-2 海地"
+            ],
+            "rank_source": "C组第三轮复盘 and bracket mark Morocco as 2C",
+            "trend_notes": [
+              "小组不败但因净胜球列第二",
+              "第三轮 4-2 暴露比赛开放度和 BTTS 尾部",
+              "Bounou minor knock watch in local player_state"
+            ]
+          }
+        },
+        "availability_and_risk": {
+          "netherlands": [
+            {
+              "player": "Cody Gakpo",
+              "status": "probable",
+              "note": "本地 form_status_1_5=5.0 after group stage."
+            },
+            {
+              "player": "Brian Brobbey",
+              "status": "confirmed/probable",
+              "note": "本地 form_status_1_5=4.8 and recent scoring record."
+            }
+          ],
+          "morocco": [
+            {
+              "player": "Yassine Bounou",
+              "status": "probable_minor_knock_watch",
+              "note": "本地 player_state 标 minor_knock_watch。"
+            },
+            {
+              "player": "Achraf Hakimi",
+              "status": "probable",
+              "note": "本地未见新增停赛。"
+            }
+          ]
+        },
+        "tactical_ten_factor_summary": {
+          "荷兰": {
+            "expected_formation": "4-3-3, with situational 4-2-3-1 / 3-4-2-1",
+            "tactical_summary": "荷兰的小组后两场显示边路、多点进球和三球尾部仍强；摩洛哥则以右路 Hakimi、替补冲击和防守压缩为核心，但 4-2 海地说明其干净零封假设变脆。核心对位是荷兰中后场推进与高点定位球，碰上摩洛哥右路转换和低位防守韧性。",
+            "ten_factor_adjustments": {
+              "pressing_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium",
+                "model_note": "Do not treat as constant high press; Morocco can bypass through Hakimi."
+              },
+              "build_up_resistance_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.35,
+                "confidence": "medium_high",
+                "model_note": "Reduce if De Jong unavailable."
+              },
+              "transition_attack_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.35,
+                "confidence": "medium_high",
+                "model_note": "Separate from generic attack rating; cap after two high-output matches to avoid overfit."
+              },
+              "transition_defense_risk": {
+                "direction": "negative",
+                "magnitude": -0.3,
+                "confidence": "medium",
+                "model_note": "Key risk against Hakimi/Brahim/Rahimi counter channels."
+              },
+              "wide_channel_advantage": {
+                "direction": "positive",
+                "magnitude": 0.2,
+                "confidence": "medium",
+                "model_note": "Use as slight edge, not dominant."
+              },
+              "central_control_advantage": {
+                "direction": "positive",
+                "magnitude": 0.35,
+                "confidence": "medium",
+                "model_note": "May not convert to high xG if Morocco block remains compact."
+              },
+              "set_piece_advantage": {
+                "direction": "positive",
+                "magnitude": 0.3,
+                "confidence": "medium",
+                "model_note": "Cap due to Morocco aerial quality."
+              },
+              "defensive_line_risk": {
+                "direction": "mixed",
+                "magnitude": -0.2,
+                "confidence": "medium",
+                "model_note": "Tie to Moroccan right-side outlet availability."
+              },
+              "coach_substitution_risk": {
+                "direction": "positive",
+                "magnitude": 0.15,
+                "confidence": "medium",
+                "model_note": "Small late-game positive only."
+              },
+              "game_state_tendency": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium_high",
+                "model_note": "Keep favorite third-goal tail alive without issuing score prediction."
+              }
+            },
+            "model_should_adjust": [
+              "Netherlands wide/set-piece edge is real but Morocco transition prevents over-clean-sheet assumptions",
+              "Morocco late bench and Hakimi channel should be a separate counter branch"
+            ],
+            "red_team_should_challenge": [
+              "Are Netherlands outputs inflated by Sweden/Tunisia contexts",
+              "Is Morocco clean-sheet reputation stale after Haiti 4-2"
+            ]
+          },
+          "摩洛哥": {
+            "expected_formation": "4-2-3-1, with 5-4-1 defensive shell available",
+            "tactical_summary": "荷兰的小组后两场显示边路、多点进球和三球尾部仍强；摩洛哥则以右路 Hakimi、替补冲击和防守压缩为核心，但 4-2 海地说明其干净零封假设变脆。核心对位是荷兰中后场推进与高点定位球，碰上摩洛哥右路转换和低位防守韧性。",
+            "ten_factor_adjustments": {
+              "pressing_adjustment": {
+                "direction": "neutral",
+                "magnitude": 0,
+                "confidence": "medium",
+                "model_note": "Do not reward full-match press."
+              },
+              "build_up_resistance_adjustment": {
+                "direction": "mixed",
+                "magnitude": 0.05,
+                "confidence": "medium",
+                "model_note": "Keep near neutral unless official XI confirms strongest ball carriers."
+              },
+              "transition_attack_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.4,
+                "confidence": "medium_high",
+                "model_note": "Avoid double count with Hakimi/Rahimi player_state; apply as matchup to Dutch transition-defense gaps."
+              },
+              "transition_defense_risk": {
+                "direction": "negative",
+                "magnitude": -0.25,
+                "confidence": "medium",
+                "model_note": "Negative risk grows if fullbacks push high."
+              },
+              "wide_channel_advantage": {
+                "direction": "mixed",
+                "magnitude": 0.15,
+                "confidence": "medium",
+                "model_note": "Model as asymmetric right-side edge, not whole-pitch advantage."
+              },
+              "central_control_advantage": {
+                "direction": "negative",
+                "magnitude": -0.2,
+                "confidence": "medium",
+                "model_note": "Can still defend the center well; do not turn into large xG penalty."
+              },
+              "set_piece_advantage": {
+                "direction": "mixed",
+                "magnitude": 0,
+                "confidence": "medium",
+                "model_note": "Neutral until set-piece map and lineups are confirmed."
+              },
+              "defensive_line_risk": {
+                "direction": "positive",
+                "magnitude": 0.15,
+                "confidence": "medium",
+                "model_note": "Positive means lower line risk in base game state."
+              },
+              "coach_substitution_risk": {
+                "direction": "positive",
+                "magnitude": 0.2,
+                "confidence": "medium",
+                "model_note": "Use as late xG support, not starter-quality upgrade."
+              },
+              "game_state_tendency": {
+                "direction": "mixed",
+                "magnitude": 0.2,
+                "confidence": "medium",
+                "model_note": "Bifurcate leading compactness and trailing openness."
+              }
+            },
+            "model_should_adjust": [
+              "Netherlands wide/set-piece edge is real but Morocco transition prevents over-clean-sheet assumptions",
+              "Morocco late bench and Hakimi channel should be a separate counter branch"
+            ],
+            "red_team_should_challenge": [
+              "Are Netherlands outputs inflated by Sweden/Tunisia contexts",
+              "Is Morocco clean-sheet reputation stale after Haiti 4-2"
+            ]
+          }
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.27,
+        "attack": 0.15,
+        "defense": 0.15,
+        "player_state": 0.14,
+        "injury_suspension_minutes": 0.09,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.04,
+        "knockout_context": 0.04,
+        "market": 0,
+        "notes": "Market weight set to 0.00 because same-source odds snapshot is missing. Knockout context is small and does not replace team/tactical factors."
+      },
+      "team_strength_score": {
+        "team_a": 82,
+        "team_b": 79,
+        "scale": "0-100 internal"
+      },
+      "attack_score": {
+        "team_a": 82,
+        "team_b": 77,
+        "scale": "0-100 internal"
+      },
+      "defense_score": {
+        "team_a": 79,
+        "team_b": 81,
+        "scale": "0-100 internal"
+      },
+      "player_state_adjustment": {
+        "team_a_xg_delta": 0.03,
+        "team_b_xg_delta": 0.04,
+        "note": "Derived from local player_state/model-brief fallback; capped for missing upstream."
+      },
+      "injury_adjustment": {
+        "team_a_xg_delta": -0.01,
+        "team_b_xg_delta": -0.01,
+        "note": "No fresh data-thread injury packet; conservative unresolved-risk adjustment only."
+      },
+      "tactical_matchup_adjustment": {
+        "team_a_xg_delta": 0.08,
+        "team_b_xg_delta": 0.04,
+        "note": "Netherlands wide/set-piece and late-game scoring signal lift home xG; Morocco Hakimi/bench transition branch and Haiti 4-2 clean-sheet fragility lift away xG too.",
+        "tactics_packet_status": "partial_source_limited",
+        "ten_factor_source": "data\\thread_outputs\\round32-m73-m76-v3-20260628\\tactics-coach.json"
+      },
+      "schedule_environment_adjustment": {
+        "team_a_xg_delta": 0,
+        "team_b_xg_delta": 0,
+        "note": "Venue/kickoff environment applied conservatively from bracket file only."
+      },
+      "market_adjustment": {
+        "team_a_xg_delta": 0,
+        "team_b_xg_delta": 0,
+        "status": "missing_odds_no_market_shift"
+      },
+      "knockout_context": {
+        "stage": "single_elimination_round_of_32",
+        "draw_after_90": "extra_time_path_not_advance_probability",
+        "context_adjustment_note": "1X2 probabilities are 90-minute model probabilities; advancement simulation not run in this packet."
+      },
+      "expected_goals": {
+        "pre_market": {
+          "team_a": 1.48,
+          "team_b": 1.12
+        },
+        "final": {
+          "team_a": 1.48,
+          "team_b": 1.12
+        },
+        "total": 2.6,
+        "update_note": "Recomputed after data-collector predicted XI and tactics-coach ten-factor absorption; market shift remains zero."
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0": {
+            "0": 0.0743,
+            "1": 0.0832,
+            "2": 0.0466,
+            "3": 0.0174,
+            "4": 0.0049,
+            "5": 0.0011
+          },
+          "1": {
+            "0": 0.1099,
+            "1": 0.1231,
+            "2": 0.0689,
+            "3": 0.0257,
+            "4": 0.0072,
+            "5": 0.0016
+          },
+          "2": {
+            "0": 0.0813,
+            "1": 0.0911,
+            "2": 0.051,
+            "3": 0.019,
+            "4": 0.0053,
+            "5": 0.0012
+          },
+          "3": {
+            "0": 0.0401,
+            "1": 0.0449,
+            "2": 0.0252,
+            "3": 0.0094,
+            "4": 0.0026,
+            "5": 0.0006
+          },
+          "4": {
+            "0": 0.0148,
+            "1": 0.0166,
+            "2": 0.0093,
+            "3": 0.0035,
+            "4": 0.001,
+            "5": 0.0002
+          },
+          "5": {
+            "0": 0.0044,
+            "1": 0.0049,
+            "2": 0.0028,
+            "3": 0.001,
+            "4": 0.0003,
+            "5": 0.0001
+          }
+        },
+        "tail_probability": 0.0052,
+        "matrix_sum_check": 1
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.4545,
+        "draw": 0.2588,
+        "team_b_win": 0.2867,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.4816,
+        "under_2_5": 0.5184,
+        "btts_yes": 0.5204,
+        "btts_no": 0.4796
+      },
+      "btts": {
+        "yes": 0.5204,
+        "no": 0.4796
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1231
+        },
+        {
+          "score": "1-0",
+          "probability": 0.1099
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0911
+        },
+        {
+          "score": "0-1",
+          "probability": 0.0832
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0813
+        }
+      ],
+      "odds_implied_probability": {
+        "status": "missing_same_source_complete_snapshot",
+        "source": "data_collector.market_availability",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "raw_snapshots": [],
+        "overround": null,
+        "normalized": null,
+        "reason": "Market data is incomplete or not same-source; no odds-implied probability applied."
+      },
+      "model_market_delta": {
+        "status": "not_available_without_complete_same_source_odds",
+        "deltas": null
+      },
+      "confidence_interval": {
+        "team_a_win": [
+          0.38,
+          0.52
+        ],
+        "draw": [
+          0.23,
+          0.31
+        ],
+        "team_b_win": [
+          0.2,
+          0.33
+        ],
+        "xg_a": [
+          1.14,
+          1.8
+        ],
+        "xg_b": [
+          0.84,
+          1.42
+        ]
+      },
+      "uncertainty": {
+        "level": "medium_high",
+        "drivers": [
+          "This is the strongest draw-floor match among M73-M76.",
+          "If Netherlands score early, Morocco transition tail rises rather than collapses.",
+          "If Morocco cannot start a first-choice defensive spine, Netherlands xG can rise by about 0.12-0.18."
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "status": "pre_red_team_model_after_tactics_absorption",
+        "probabilities_1x2": {
+          "team_a_win": 0.4545,
+          "draw": 0.2588,
+          "team_b_win": 0.2867,
+          "sum": 1
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1231
+          },
+          {
+            "score": "1-0",
+            "probability": 0.1099
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0911
+          },
+          {
+            "score": "0-1",
+            "probability": 0.0832
+          },
+          {
+            "score": "2-0",
+            "probability": 0.0813
+          }
+        ]
+      },
+      "betting_gate_status": "discussion_only_hold",
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "No betting advice is included.",
+        "Data-collector probable XI retained, but official T-75 XI is missing.",
+        "Tactics-coach ten-factor package absorbed with conservative caps to avoid double counting.",
+        "Market calibration is disabled because complete same-source odds are missing.",
+        "Red-team review is pending; probabilities should be treated as pre-red-team."
+      ],
+      "sensitivity": {
+        "most_sensitive_variables": [
+          "This is the strongest draw-floor match among M73-M76.",
+          "If Netherlands score early, Morocco transition tail rises rather than collapses.",
+          "If Morocco cannot start a first-choice defensive spine, Netherlands xG can rise by about 0.12-0.18."
+        ],
+        "easiest_to_falsify_assumptions": [
+          "Fresh data-thread predicted XI differs by two or more starters.",
+          "Key attacker or goalkeeper availability changes.",
+          "Same-source odds imply a much different baseline after overround removal."
+        ]
+      },
+      "tail_shape_adjustments": {
+        "draw_floor_dynamic": {
+          "triggered": true,
+          "probability_floor": 0.25,
+          "applied_note": "Morocco compact shell keeps draw floor alive even after Netherlands xG lift."
+        },
+        "event_volatility_layer": {
+          "triggered": true,
+          "tail_note": "Both teams have transition/late-bench branches, so BTTS and 3-goal tail are raised without removing 1-1 as key score."
+        },
+        "favorite_ceiling_tail": {
+          "triggered": true,
+          "four_plus_goal_tail_delta": "small_xg_based",
+          "note": "Netherlands three-goal branch retained, but Morocco transition prevents one-sided tail expansion."
+        }
+      },
+      "favorite_home_4plus_goal_probability": 0.0632
+    },
+    {
+      "match_id": "M76",
+      "match_no": 76,
+      "stage": "Round of 32",
+      "match_identity": {
+        "match_id": "M76",
+        "match_no": 76,
+        "team_a": "Brazil",
+        "team_b": "Japan",
+        "host_date": "2026-06-29",
+        "kickoff_host": "12:00",
+        "city": "Houston",
+        "venue": "Houston Stadium"
+      },
+      "input_readiness": {
+        "overall_status": "partial_source_limited_data_and_tactics_available",
+        "data_collector_packet": "available_partial_source_limited",
+        "tactics_coach_packet": "available_partial_source_limited_ten_factor_matchups_absorbed",
+        "bracket_source": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+        "template_source": "data/templates/match-prediction-standard-template-v3.md",
+        "prediction_contract_source": "data/templates/prediction-contract-v2.json",
+        "player_state_files": "local_fallback_readiness_not_fresh_data_thread",
+        "roster_files": "local_fallback_readiness_not_fresh_data_thread",
+        "official_lineups_status": "not_available_yet",
+        "predicted_lineups_status": "data_collector_predicted_lineups_probable_not_official",
+        "predicted_lineups_data_thread_blocker": false,
+        "odds_snapshot": "missing_same_source_complete_snapshot",
+        "gaps_and_conflicts": [
+          "Data collector packet is partial_source_limited, not complete final team news.",
+          "Tactics-coach ten-factor packet is available and absorbed, but remains partial_source_limited.",
+          "Official T-75 XI is still not available.",
+          "Complete same-source odds chain is missing or incomplete."
+        ]
+      },
+      "predicted_lineups": {
+        "source_status": "probable_not_official",
+        "source_status_detail": "data_collector_partial_source_limited",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "official_lineup_gate": "T-75 official lineups must be checked before any model finalization or betting-risk execution.",
+        "data_thread_required": false,
+        "team_a": {
+          "team": "Brazil",
+          "team_zh": "巴西",
+          "formation": "4-2-3-1",
+          "source_status": "probable_not_official",
+          "source_status_detail": "from_data_collector_partial_source_limited_probable_not_official",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "official_lineup_gate": "not_available_yet",
+          "confidence": "medium_low",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "阿利松",
+              "player_en": "Alisson",
+              "role_note": "一门"
+            },
+            {
+              "position": "RB",
+              "player_cn": "达尼洛·路易斯",
+              "player_en": "Danilo Luiz",
+              "role_note": "右后卫经验"
+            },
+            {
+              "position": "CB",
+              "player_cn": "马尔基尼奥斯",
+              "player_en": "Marquinhos",
+              "role_note": "中卫组织"
+            },
+            {
+              "position": "CB",
+              "player_cn": "加布里埃尔·马加良斯",
+              "player_en": "Gabriel Magalhães",
+              "role_note": "中卫对抗"
+            },
+            {
+              "position": "LB",
+              "player_cn": "韦斯利",
+              "player_en": "Wesley",
+              "role_note": "边后卫/轮换口径"
+            },
+            {
+              "position": "DM",
+              "player_cn": "布鲁诺·吉马良斯",
+              "player_en": "Bruno Guimarães",
+              "role_note": "中场组织"
+            },
+            {
+              "position": "DM",
+              "player_cn": "卡塞米罗",
+              "player_en": "Casemiro",
+              "role_note": "防守屏障"
+            },
+            {
+              "position": "AM",
+              "player_cn": "卢卡斯·帕奎塔",
+              "player_en": "Lucas Paquetá",
+              "role_note": "前腰连接"
+            },
+            {
+              "position": "LW",
+              "player_cn": "维尼修斯·儒尼奥尔",
+              "player_en": "Vinicius Junior",
+              "role_note": "左路核心爆点"
+            },
+            {
+              "position": "RW",
+              "player_cn": "拉菲尼亚",
+              "player_en": "Raphinha",
+              "role_note": "右路内切和定位球"
+            },
+            {
+              "position": "ST",
+              "player_cn": "马特乌斯·库尼亚",
+              "player_en": "Matheus Cunha",
+              "role_note": "中锋/九号半"
+            }
+          ],
+          "predicted_xi_count": 11,
+          "rotation_candidates": [
+            {
+              "player_cn": "恩德里克",
+              "player_en": "Endrick",
+              "trigger": "需要禁区终结和冲击"
+            },
+            {
+              "player_cn": "加布里埃尔·马丁内利",
+              "player_en": "Gabriel Martinelli",
+              "trigger": "左路速度替补"
+            },
+            {
+              "player_cn": "埃德森",
+              "player_en": "Ederson",
+              "trigger": "门将轮换或出球选择"
+            }
+          ],
+          "conflicts": [
+            "巴西 player_state positions partially blank in current local schema; positional roles are normalized from known squad roles and require T-75 verification."
+          ],
+          "model_impact_if_changed": [
+            "Data-thread probable XI is not official. Two or more starter changes, a formation change, or a key minutes cap should trigger xG and matrix rerun."
+          ]
+        },
+        "team_b": {
+          "team": "Japan",
+          "team_zh": "日本",
+          "formation": "3-4-2-1",
+          "source_status": "probable_not_official",
+          "source_status_detail": "from_data_collector_partial_source_limited_probable_not_official",
+          "captured_at": "2026-06-28T21:26:27+08:00",
+          "official_lineup_gate": "not_available_yet",
+          "confidence": "medium",
+          "predicted_xi": [
+            {
+              "position": "GK",
+              "player_cn": "铃木彩艳",
+              "player_en": "Zion Suzuki",
+              "role_note": "一门，第三轮关键扑救"
+            },
+            {
+              "position": "CB",
+              "player_cn": "富安健洋",
+              "player_en": "Takehiro Tomiyasu",
+              "role_note": "中卫/右侧覆盖"
+            },
+            {
+              "position": "CB",
+              "player_cn": "板仓滉",
+              "player_en": "Ko Itakura",
+              "role_note": "中卫组织"
+            },
+            {
+              "position": "CB",
+              "player_cn": "伊藤洋辉",
+              "player_en": "Hiroki Ito",
+              "role_note": "左中卫"
+            },
+            {
+              "position": "RWB",
+              "player_cn": "菅原由势",
+              "player_en": "Yukinari Sugawara",
+              "role_note": "右翼卫传中"
+            },
+            {
+              "position": "LWB",
+              "player_cn": "中村敬斗",
+              "player_en": "Keito Nakamura",
+              "role_note": "左侧推进/边锋兼容"
+            },
+            {
+              "position": "CM",
+              "player_cn": "佐野海舟",
+              "player_en": "Kaishu Sano",
+              "role_note": "后腰覆盖"
+            },
+            {
+              "position": "CM",
+              "player_cn": "田中碧",
+              "player_en": "Ao Tanaka",
+              "role_note": "中前卫插上"
+            },
+            {
+              "position": "AM",
+              "player_cn": "镰田大地",
+              "player_en": "Daichi Kamada",
+              "role_note": "前腰连接"
+            },
+            {
+              "position": "AM",
+              "player_cn": "伊东纯也",
+              "player_en": "Junya Ito",
+              "role_note": "右路突破"
+            },
+            {
+              "position": "ST",
+              "player_cn": "上田绮世",
+              "player_en": "Ayase Ueda",
+              "role_note": "中锋，队内最高状态"
+            }
+          ],
+          "predicted_xi_count": 11,
+          "rotation_candidates": [
+            {
+              "player_cn": "堂安律",
+              "player_en": "Ritsu Doan",
+              "trigger": "右侧内切和定位球"
+            },
+            {
+              "player_cn": "铃木唯人",
+              "player_en": "Yuito Suzuki",
+              "trigger": "影锋替补"
+            },
+            {
+              "player_cn": "町野修斗",
+              "player_en": "Shuto Machino",
+              "trigger": "中锋替补"
+            }
+          ],
+          "conflicts": [
+            "第三轮日本 1-1 瑞典复盘未直接回写完整 player_state；XI 主要依据本地 player_state 状态分和常用角色。"
+          ],
+          "model_impact_if_changed": [
+            "Data-thread probable XI is not official. Two or more starter changes, a formation change, or a key minutes cap should trigger xG and matrix rerun."
+          ]
+        },
+        "source_log": [
+          {
+            "source": "data\\thread_outputs\\round32-m73-m76-v3-20260628\\data-collector.json",
+            "captured_at": "2026-06-28T21:26:27+08:00",
+            "status": "partial_source_limited"
+          }
+        ],
+        "gaps_and_conflicts": [
+          "巴西 player_state positions partially blank in current local schema; positional roles are normalized from known squad roles and require T-75 verification.",
+          "第三轮日本 1-1 瑞典复盘未直接回写完整 player_state；XI 主要依据本地 player_state 状态分和常用角色。",
+          "Official lineup not available; data-thread XI is probable only."
+        ]
+      },
+      "factor_inputs": {
+        "baseline_strength": "Brazil remain elite by squad depth and creation ceiling; Japan are a mid-upper opponent with Netherlands draw signal and tactical discipline.",
+        "attack": "Brazil have Vinicius/Rodrygo/Raphinha/Endrick shot creation layers. Japan rely on Kubo/Mitoma/Doan transition and combination play.",
+        "defense": "Brazil defense is high quality but can be stretched if fullbacks and midfield lose rest defense. Japan defensive structure is strong but set-piece defense remains a risk.",
+        "player_state": "Brazil depth supports late scoring; Japan form signal is positive but opponent-specific availability must be rechecked.",
+        "injury_suspension_minutes": "No data-thread injury packet available; Japan Mitoma/Tomiyasu role availability and Brazil forward rotation are key rechecks.",
+        "tactical_matchup": "巴西在苏格兰 0-3 中通过 Vinicius 左路和 Bruno Guimaraes 肋部输送兑现早球/继续进攻尾部；日本则通过纪律、边路组织和瑞典 1-1 的比赛管理证明强队对抗和低事件平局能力。关键是巴西左路个人突破与日本整体压迫/补位的冲突，以及日本定位球防守高点劣势。",
+        "schedule_environment": "Houston noon kickoff creates heat/tempo uncertainty; apply small dampener to sustained pressing and late tempo.",
+        "market": "No complete same-source odds snapshot available.",
+        "group_stage_summary": {
+          "brazil": {
+            "known_results": [
+              "巴西 1-1 摩洛哥",
+              "巴西 3-0 海地",
+              "苏格兰 0-3 巴西"
+            ],
+            "rank_source": "C组第三轮复盘 and bracket mark Brazil as 1C",
+            "trend_notes": [
+              "C组第一，净胜球优势明显",
+              "第三轮 3-0 属争头名高位尾部兑现",
+              "Vinicius Junior local form_status_1_5=4.0"
+            ]
+          },
+          "japan": {
+            "known_results": [
+              "荷兰 2-2 日本",
+              "突尼斯 0-4 日本",
+              "日本 1-1 瑞典"
+            ],
+            "rank_source": "F组第三轮复盘 and bracket mark Japan as 2F",
+            "trend_notes": [
+              "小组第二出线",
+              "上田绮世、伊东纯也、镰田大地、板仓滉、佐野海舟状态分突出",
+              "第三轮 1-1 瑞典为平局收益场景，player_state 第三轮完整分钟仍需复核"
+            ]
+          }
+        },
+        "availability_and_risk": {
+          "brazil": [
+            {
+              "player": "Vinicius Junior",
+              "status": "probable",
+              "note": "本地 form_status_1_5=4.0，未见新增伤停。"
+            },
+            {
+              "player": "Casemiro",
+              "status": "probable_minutes_watch",
+              "note": "年龄与淘汰赛负荷需 T-75/赛前新闻复核。"
+            }
+          ],
+          "japan": [
+            {
+              "player": "Ayase Ueda",
+              "status": "available_high_form",
+              "note": "本地 form_status_1_5=5.0。"
+            },
+            {
+              "player": "Zion Suzuki",
+              "status": "available",
+              "note": "第三轮复盘记录关键扑救。"
+            }
+          ]
+        },
+        "tactical_ten_factor_summary": {
+          "巴西": {
+            "expected_formation": "4-2-3-1, with 4-3-3 attack phases",
+            "tactical_summary": "巴西在苏格兰 0-3 中通过 Vinicius 左路和 Bruno Guimaraes 肋部输送兑现早球/继续进攻尾部；日本则通过纪律、边路组织和瑞典 1-1 的比赛管理证明强队对抗和低事件平局能力。关键是巴西左路个人突破与日本整体压迫/补位的冲突，以及日本定位球防守高点劣势。",
+            "ten_factor_adjustments": {
+              "pressing_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium",
+                "model_note": "Selective press only; avoid full-match press bonus."
+              },
+              "build_up_resistance_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.3,
+                "confidence": "medium",
+                "model_note": "Moderate positive; Japan can still trap wide."
+              },
+              "transition_attack_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.5,
+                "confidence": "high",
+                "model_note": "Cap with player_state to avoid duplicating Vinicius form."
+              },
+              "transition_defense_risk": {
+                "direction": "negative",
+                "magnitude": -0.25,
+                "confidence": "medium",
+                "model_note": "Use as Japan counter branch, not broad Brazil downgrade."
+              },
+              "wide_channel_advantage": {
+                "direction": "positive",
+                "magnitude": 0.45,
+                "confidence": "high",
+                "model_note": "If Japan back three doubles wide lane, reduce magnitude."
+              },
+              "central_control_advantage": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium",
+                "model_note": "Small-to-moderate control edge only."
+              },
+              "set_piece_advantage": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium",
+                "model_note": "Do not stack with generic aerial superiority beyond this factor."
+              },
+              "defensive_line_risk": {
+                "direction": "mixed",
+                "magnitude": -0.15,
+                "confidence": "medium",
+                "model_note": "Risk rises if Brazil chase with both fullbacks high."
+              },
+              "coach_substitution_risk": {
+                "direction": "positive",
+                "magnitude": 0.15,
+                "confidence": "medium",
+                "model_note": "Small late-quality support, not a scoreline tail by itself."
+              },
+              "game_state_tendency": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium_high",
+                "model_note": "Keep favorite ceiling branch alive if first goal comes early."
+              }
+            },
+            "model_should_adjust": [
+              "Brazil wide/transition ceiling is high but rest-defense risk keeps Japan counter branch live",
+              "Japan set-piece-defense risk should be isolated rather than broad defense downgrade"
+            ],
+            "red_team_should_challenge": [
+              "Japan left-side containment plan against Vinicius",
+              "whether Brazil's Scotland early-goal script overstates knockout repeatability"
+            ]
+          },
+          "日本": {
+            "expected_formation": "3-4-2-1, with 5-4-1 low-block phases",
+            "tactical_summary": "巴西在苏格兰 0-3 中通过 Vinicius 左路和 Bruno Guimaraes 肋部输送兑现早球/继续进攻尾部；日本则通过纪律、边路组织和瑞典 1-1 的比赛管理证明强队对抗和低事件平局能力。关键是巴西左路个人突破与日本整体压迫/补位的冲突，以及日本定位球防守高点劣势。",
+            "ten_factor_adjustments": {
+              "pressing_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.25,
+                "confidence": "medium_high",
+                "model_note": "Brazil press resistance caps this positive."
+              },
+              "build_up_resistance_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.15,
+                "confidence": "medium",
+                "model_note": "Use modestly; do not overrate against elite athletic press."
+              },
+              "transition_attack_adjustment": {
+                "direction": "positive",
+                "magnitude": 0.3,
+                "confidence": "medium",
+                "model_note": "Apply mainly to Brazil fullback-space moments."
+              },
+              "transition_defense_risk": {
+                "direction": "negative",
+                "magnitude": -0.2,
+                "confidence": "medium",
+                "model_note": "Do not turn into a large defensive downgrade if back three starts."
+              },
+              "wide_channel_advantage": {
+                "direction": "negative",
+                "magnitude": -0.35,
+                "confidence": "medium_high",
+                "model_note": "Reduce if Japan select extra left-side cover."
+              },
+              "central_control_advantage": {
+                "direction": "mixed",
+                "magnitude": -0.05,
+                "confidence": "medium",
+                "model_note": "Near neutral; official central screen decides."
+              },
+              "set_piece_advantage": {
+                "direction": "negative",
+                "magnitude": -0.3,
+                "confidence": "medium_high",
+                "model_note": "Keep separate from general defense rating to avoid blanket downgrade."
+              },
+              "defensive_line_risk": {
+                "direction": "mixed",
+                "magnitude": -0.15,
+                "confidence": "medium",
+                "model_note": "Shape-dependent; rerun after official formation."
+              },
+              "coach_substitution_risk": {
+                "direction": "positive",
+                "magnitude": 0.1,
+                "confidence": "medium",
+                "model_note": "Small stabilizer only."
+              },
+              "game_state_tendency": {
+                "direction": "positive",
+                "magnitude": 0.2,
+                "confidence": "medium",
+                "model_note": "Use for low-event resistance if level; does not imply prediction."
+              }
+            },
+            "model_should_adjust": [
+              "Brazil wide/transition ceiling is high but rest-defense risk keeps Japan counter branch live",
+              "Japan set-piece-defense risk should be isolated rather than broad defense downgrade"
+            ],
+            "red_team_should_challenge": [
+              "Japan left-side containment plan against Vinicius",
+              "whether Brazil's Scotland early-goal script overstates knockout repeatability"
+            ]
+          }
+        }
+      },
+      "factor_weights": {
+        "baseline_strength": 0.27,
+        "attack": 0.15,
+        "defense": 0.15,
+        "player_state": 0.14,
+        "injury_suspension_minutes": 0.09,
+        "tactical_matchup": 0.12,
+        "schedule_environment": 0.04,
+        "knockout_context": 0.04,
+        "market": 0,
+        "notes": "Market weight set to 0.00 because same-source odds snapshot is missing. Knockout context is small and does not replace team/tactical factors."
+      },
+      "team_strength_score": {
+        "team_a": 89,
+        "team_b": 78,
+        "scale": "0-100 internal"
+      },
+      "attack_score": {
+        "team_a": 91,
+        "team_b": 76,
+        "scale": "0-100 internal"
+      },
+      "defense_score": {
+        "team_a": 84,
+        "team_b": 78,
+        "scale": "0-100 internal"
+      },
+      "player_state_adjustment": {
+        "team_a_xg_delta": 0.07,
+        "team_b_xg_delta": 0.03,
+        "note": "Derived from local player_state/model-brief fallback; capped for missing upstream."
+      },
+      "injury_adjustment": {
+        "team_a_xg_delta": -0.02,
+        "team_b_xg_delta": -0.04,
+        "note": "No fresh data-thread injury packet; conservative unresolved-risk adjustment only."
+      },
+      "tactical_matchup_adjustment": {
+        "team_a_xg_delta": 0.1,
+        "team_b_xg_delta": 0.02,
+        "note": "Brazil Vinicius/Bruno wide-transition and set-piece edge raises home xG; Japan transition and draw-management quality keep away xG live.",
+        "tactics_packet_status": "partial_source_limited",
+        "ten_factor_source": "data\\thread_outputs\\round32-m73-m76-v3-20260628\\tactics-coach.json"
+      },
+      "schedule_environment_adjustment": {
+        "team_a_xg_delta": -0.03,
+        "team_b_xg_delta": -0.02,
+        "note": "Venue/kickoff environment applied conservatively from bracket file only."
+      },
+      "market_adjustment": {
+        "team_a_xg_delta": 0,
+        "team_b_xg_delta": 0,
+        "status": "missing_odds_no_market_shift"
+      },
+      "knockout_context": {
+        "stage": "single_elimination_round_of_32",
+        "draw_after_90": "extra_time_path_not_advance_probability",
+        "context_adjustment_note": "1X2 probabilities are 90-minute model probabilities; advancement simulation not run in this packet."
+      },
+      "expected_goals": {
+        "pre_market": {
+          "team_a": 1.92,
+          "team_b": 1.08
+        },
+        "final": {
+          "team_a": 1.92,
+          "team_b": 1.08
+        },
+        "total": 3,
+        "update_note": "Recomputed after data-collector predicted XI and tactics-coach ten-factor absorption; market shift remains zero."
+      },
+      "poisson_score_matrix": {
+        "range": "0-0 through 5-5",
+        "matrix": {
+          "0": {
+            "0": 0.0498,
+            "1": 0.0538,
+            "2": 0.029,
+            "3": 0.0105,
+            "4": 0.0028,
+            "5": 0.0006
+          },
+          "1": {
+            "0": 0.0956,
+            "1": 0.1032,
+            "2": 0.0557,
+            "3": 0.0201,
+            "4": 0.0054,
+            "5": 0.0012
+          },
+          "2": {
+            "0": 0.0918,
+            "1": 0.0991,
+            "2": 0.0535,
+            "3": 0.0193,
+            "4": 0.0052,
+            "5": 0.0011
+          },
+          "3": {
+            "0": 0.0587,
+            "1": 0.0634,
+            "2": 0.0343,
+            "3": 0.0123,
+            "4": 0.0033,
+            "5": 0.0007
+          },
+          "4": {
+            "0": 0.0282,
+            "1": 0.0304,
+            "2": 0.0164,
+            "3": 0.0059,
+            "4": 0.0016,
+            "5": 0.0003
+          },
+          "5": {
+            "0": 0.0108,
+            "1": 0.0117,
+            "2": 0.0063,
+            "3": 0.0023,
+            "4": 0.0006,
+            "5": 0.0001
+          }
+        },
+        "tail_probability": 0.0147,
+        "matrix_sum_check": 1
+      },
+      "probabilities_1x2": {
+        "team_a_win": 0.5694,
+        "draw": 0.2206,
+        "team_b_win": 0.21,
+        "sum": 1
+      },
+      "totals_probabilities": {
+        "over_2_5": 0.5768,
+        "under_2_5": 0.4232,
+        "btts_yes": 0.5636,
+        "btts_no": 0.4364
+      },
+      "btts": {
+        "yes": 0.5636,
+        "no": 0.4364
+      },
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 0.1032
+        },
+        {
+          "score": "2-1",
+          "probability": 0.0991
+        },
+        {
+          "score": "1-0",
+          "probability": 0.0956
+        },
+        {
+          "score": "2-0",
+          "probability": 0.0918
+        },
+        {
+          "score": "3-1",
+          "probability": 0.0634
+        }
+      ],
+      "odds_implied_probability": {
+        "status": "missing_same_source_complete_snapshot",
+        "source": "data_collector.market_availability",
+        "captured_at": "2026-06-28T21:26:27+08:00",
+        "raw_snapshots": [],
+        "overround": null,
+        "normalized": null,
+        "reason": "Market data is incomplete or not same-source; no odds-implied probability applied."
+      },
+      "model_market_delta": {
+        "status": "not_available_without_complete_same_source_odds",
+        "deltas": null
+      },
+      "confidence_interval": {
+        "team_a_win": [
+          0.52,
+          0.66
+        ],
+        "draw": [
+          0.19,
+          0.27
+        ],
+        "team_b_win": [
+          0.14,
+          0.24
+        ],
+        "xg_a": [
+          1.54,
+          2.28
+        ],
+        "xg_b": [
+          0.8,
+          1.38
+        ]
+      },
+      "uncertainty": {
+        "level": "medium_high",
+        "drivers": [
+          "Brazil are favored but Japan are not a low-floor underdog; transition quality keeps upset probability visible.",
+          "Heat and noon kickoff can reduce pressing sustainability and favor lower tempo phases.",
+          "If Brazil rotate attackers or Japan key wide players are unavailable, xG gap can move by 0.15+."
+        ]
+      },
+      "red_team_status": "pending",
+      "final_probabilities": {
+        "status": "pre_red_team_model_after_tactics_absorption",
+        "probabilities_1x2": {
+          "team_a_win": 0.5694,
+          "draw": 0.2206,
+          "team_b_win": 0.21,
+          "sum": 1
+        },
+        "top_scorelines": [
+          {
+            "score": "1-1",
+            "probability": 0.1032
+          },
+          {
+            "score": "2-1",
+            "probability": 0.0991
+          },
+          {
+            "score": "1-0",
+            "probability": 0.0956
+          },
+          {
+            "score": "2-0",
+            "probability": 0.0918
+          },
+          {
+            "score": "3-1",
+            "probability": 0.0634
+          }
+        ]
+      },
+      "betting_gate_status": "discussion_only_hold",
+      "postmatch_error": null,
+      "parameter_updates": null,
+      "quality_notes": [
+        "No betting advice is included.",
+        "Data-collector probable XI retained, but official T-75 XI is missing.",
+        "Tactics-coach ten-factor package absorbed with conservative caps to avoid double counting.",
+        "Market calibration is disabled because complete same-source odds are missing.",
+        "Red-team review is pending; probabilities should be treated as pre-red-team."
+      ],
+      "sensitivity": {
+        "most_sensitive_variables": [
+          "Brazil are favored but Japan are not a low-floor underdog; transition quality keeps upset probability visible.",
+          "Heat and noon kickoff can reduce pressing sustainability and favor lower tempo phases.",
+          "If Brazil rotate attackers or Japan key wide players are unavailable, xG gap can move by 0.15+."
+        ],
+        "easiest_to_falsify_assumptions": [
+          "Fresh data-thread predicted XI differs by two or more starters.",
+          "Key attacker or goalkeeper availability changes.",
+          "Same-source odds imply a much different baseline after overround removal."
+        ]
+      },
+      "tail_shape_adjustments": {
+        "draw_floor_dynamic": {
+          "triggered": true,
+          "probability_floor": 0.22,
+          "applied_note": "Japan low-event discipline and Suzuki form keep draw path visible, but Brazil wide-channel edge limits the floor."
+        },
+        "event_volatility_layer": {
+          "triggered": true,
+          "tail_note": "Brazil early-goal script and Japan counter branch increase over/BTTS paths."
+        },
+        "favorite_ceiling_tail": {
+          "triggered": true,
+          "four_plus_goal_tail_delta": "conservative_xg_based",
+          "note": "Brazil 4+ score tail is lifted through xG 1.92 plus set-piece/wide edge, not manual overfit."
+        }
+      },
+      "favorite_home_4plus_goal_probability": 0.1287
+    }
+  ],
+  "validation_expectations": {
+    "json_parse": true,
+    "predicted_xi_count_required": 11,
+    "probabilities_sum_target": 1,
+    "matrix_plus_tail_target": 1,
+    "prohibited_betting_language": "not_used"
+  },
+  "handoff_notes": [
+    "Data-collector probable XI retained, 11/11 each team.",
+    "Tactics-coach ten-factor package absorbed for all four matches.",
+    "Official T-75 lineups and complete same-source odds remain missing; red-team status remains pending."
+  ],
+  "updated_at": "2026-06-28T23:59:55+08:00"
+}

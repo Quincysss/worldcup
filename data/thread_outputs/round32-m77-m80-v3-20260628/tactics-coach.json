@@ -1,0 +1,964 @@
+{
+  "schema_version": "round32_matchup_tactics_v3",
+  "status": "partial_source_limited",
+  "updated_at": "2026-06-28T22:20:00+08:00",
+  "owner": "worldcup-tactics-coach",
+  "scope": "M77-M80 tactical matchup factors; no score prediction, no win-draw-loss probability, no betting advice",
+  "upstream_data_status": "data_collector_available_partial_source_limited",
+  "upstream_data_note": "Data collector packet parsed successfully; upstream status is partial_source_limited and projected XIs remain probable_not_official pending T-75 official lineups.",
+  "data_collector_files_read": [
+    "data/thread_outputs/round32-m77-m80-v3-20260628/data-collector.json"
+  ],
+  "data_collector_created_at": "2026-06-28T22:06:14+08:00",
+  "canonical_fixture_guard": {
+    "source": "data/outputs/knockout/round-of-32-bracket-20260628.json",
+    "note": "Uses revalidated 2026-06-28 canonical Round of 32 fixtures only.",
+    "matches": [
+      "M77 法国 vs 瑞典",
+      "M78 科特迪瓦 vs 挪威",
+      "M79 墨西哥 vs 厄瓜多尔",
+      "M80 英格兰 vs 刚果金"
+    ]
+  },
+  "data_gaps": [
+    "T-75官方首发和实际阵型尚未发布；数据包仅提供probable_not_official预计首发",
+    "最终伤停、停赛、分钟限制和赛前热身状态仍需刷新",
+    "淘汰赛官方技术报告、裁判尺度和天气草皮细节仍缺",
+    "部分球队小组赛逐分钟评分与同源外部评级仍为partial_source_limited"
+  ],
+  "double_counting_warnings": [
+    "强队边锋、核心前锋和中场状态已可能进入attack/player_state；transition_attack、wide_channel和central_control需限幅。",
+    "定位球优势可能与身高、球员状态和防守评分重复；set_piece_advantage只表达对位和执行窗口。",
+    "淘汰赛game_state_tendency只描述领先、落后和平局阶段的行为倾向，不转成比分或胜平负概率。",
+    "defensive_line_risk与transition_defense_risk高度相关，模型应合并或设相关性上限。"
+  ],
+  "factor_order": [
+    "pressing_adjustment",
+    "build_up_resistance_adjustment",
+    "transition_attack_adjustment",
+    "transition_defense_risk",
+    "wide_channel_advantage",
+    "central_control_advantage",
+    "set_piece_advantage",
+    "defensive_line_risk",
+    "coach_substitution_risk",
+    "game_state_tendency"
+  ],
+  "matches": [
+    {
+      "match_id": "M77",
+      "fixture": {
+        "home": "法国",
+        "away": "瑞典",
+        "date": "2026-06-30",
+        "venue": "New York New Jersey Stadium"
+      },
+      "data_collector_status": "partial_source_limited",
+      "matchup_summary": "法国4-3-3的高质量边锋和中前场压迫，对瑞典4-4-2双前锋直接冲击形成压制与反击窗口并存的对位。",
+      "teams": {
+        "法国": {
+          "expected_formation": "4-3-3，控球阶段可切到4-2-3-1",
+          "key_roles": [
+            "Maignan负责第一脚出球和高线身后保护",
+            "Tchouameni/Rabiot负责反压和二点控制",
+            "Barcola-Mbappe-Olise承担纵深、内切与弱侧终结"
+          ],
+          "substitution_triggers": [
+            "低位久攻不下时用Dembele、Thuram或Cherki增加一对一和禁区人数",
+            "领先后用Lucas Hernandez或中场替补降低防线身后暴露"
+          ],
+          "alternative_shape": "4-2-3-1或3-2-5控球站位",
+          "lineup_impact": "Mbappe/Olise/Barcola同时首发会抬高节奏和transition_attack；若Tchouameni缺席，central_control与defensive_line_risk必须重跑。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "数据包预计法国4-3-3，前场三人和双8号便于高位反抢。"
+              ],
+              "confidence": "medium",
+              "model_note": "只给相对压迫结构加成，避免和基础防守评分重复。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "Maignan、Saliba、Upamecano和Tchouameni提供中轴抗压。"
+              ],
+              "confidence": "medium",
+              "model_note": "若官方首发移除Tchouameni或主力中卫，降一档。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.5,
+              "evidence": [
+                "Mbappe、Barcola、Olise的纵深组合针对瑞典边后卫身后。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "与核心球员player_state强重叠，模型应限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.15,
+              "evidence": [
+                "瑞典Isak/Gyokeres/Elanga具备第一时间反击威胁。"
+              ],
+              "confidence": "medium",
+              "model_note": "作为瑞典反击分支的对冲。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "法国两翼和边后卫可形成持续宽度优势。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "避免和边锋个人状态重复计权。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": [
+                "Tchouameni/Rabiot/Cherki配置更利于控二点。"
+              ],
+              "confidence": "medium",
+              "model_note": "如果Cherki不首发，维持方向但下修幅度。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "Saliba、Upamecano和Rabiot提供高点。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "定位球与防守评分可能重叠，限幅使用。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.1,
+              "evidence": [
+                "高线压迫会给瑞典双前锋留冲刺空间。"
+              ],
+              "confidence": "medium",
+              "model_note": "作为高线副作用输入。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "Deschamps淘汰赛替补资源丰富，可在边锋、前锋和左脚中卫间调节。"
+              ],
+              "confidence": "medium",
+              "model_note": "与阵容深度评分重叠，建议只用于后段状态分支。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "法国领先后仍保留反击出口，淘汰赛会更重视控风险。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于领先后是否继续制造转换机会。"
+            }
+          },
+          "double_counting_warning": "Mbappe、Olise、Barcola状态已可能进入attack/player_state，transition和wide两项需联合限幅。"
+        },
+        "瑞典": {
+          "expected_formation": "4-4-2，落后时可转4-2-3-1",
+          "key_roles": [
+            "Isak/Gyokeres负责第一落点和纵深牵制",
+            "Elanga提供右侧速度和反击推进",
+            "Bergvall/Ayari承担中场第一脚释放"
+          ],
+          "substitution_triggers": [
+            "落后时增加Taha Ali或Gustaf Nilsson，改为更直接的传中和双前锋压迫",
+            "平局末段更可能保留低位和定位球窗口"
+          ],
+          "alternative_shape": "4-2-3-1或5-3-2低位保护",
+          "lineup_impact": "双前锋同时首发抬高transition_attack和set_piece，但会降低central_control与后场抗压。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "4-4-2可对法国双中卫做方向性压迫。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "只在开场和落后阶段有效。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.25,
+              "evidence": [
+                "法国前场三人压迫会锁瑞典边路出球。"
+              ],
+              "confidence": "medium",
+              "model_note": "若官方首发增加第三中场，可回调。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "Isak/Gyokeres/Elanga能攻击法国边后卫身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "与前锋个人状态重复，限制为反击结构加成。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "双前锋和边路前压后，身后空间会被法国边锋利用。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "瑞典最大战术扣分项，应与防线速度同步但不要双扣。"
+            },
+            "wide_channel_advantage": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": [
+                "Elanga有速度但整体边路防守将长期承压。"
+              ],
+              "confidence": "medium",
+              "model_note": "不否定单次反击窗口。"
+            },
+            "central_control_advantage": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "瑞典双中场面对法国三中场和肋部接应人数不足。"
+              ],
+              "confidence": "medium",
+              "model_note": "若转三中场，幅度下修。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "Isak/Gyokeres和中卫高点让瑞典定位球是真实窗口。"
+              ],
+              "confidence": "medium",
+              "model_note": "不要和高点球员能力重复加。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "防线回追速度和边路身后会被法国纵深持续测试。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "作为强队上限尾部风险输入之一。"
+            },
+            "coach_substitution_risk": {
+              "direction": "negative",
+              "magnitude": -0.05,
+              "evidence": [
+                "替补能增加直接性，但改变控球质量有限。"
+              ],
+              "confidence": "low",
+              "model_note": "等待官方替补名单。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "弱势淘汰赛下更容易接受低位和定位球路线。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于分支，不等同于结果预测。"
+            }
+          },
+          "double_counting_warning": "Isak/Gyokeres/Elanga已可能在attack/player_state中体现，transition_attack和set_piece需限幅。"
+        }
+      }
+    },
+    {
+      "match_id": "M78",
+      "fixture": {
+        "home": "科特迪瓦",
+        "away": "挪威",
+        "date": "2026-06-30",
+        "venue": "Dallas Stadium"
+      },
+      "data_collector_status": "partial_source_limited",
+      "matchup_summary": "科特迪瓦4-3-3的身体对抗、边路速度和定位球，对挪威4-2-3-1的Odegaard-Haaland连接与高线身后风险形成对冲。",
+      "teams": {
+        "科特迪瓦": {
+          "expected_formation": "4-3-3，局部可转4-2-3-1",
+          "key_roles": [
+            "Kessie、Sangare、Seko Fofana提供中路对抗和二点保护",
+            "Adingra/Amad提供外侧推进",
+            "Guessand负责支点和禁区牵制"
+          ],
+          "substitution_triggers": [
+            "打不开局面时用Yan Diomande或Pepe增加边路一对一",
+            "领先后降低边后卫高度并加强中场屏障"
+          ],
+          "alternative_shape": "4-2-3-1或5-4-1保护优势",
+          "lineup_impact": "若Kessie/Sangare同时首发，中路对抗和定位球保护上调；若缺少正印中锋，禁区xG和二点压迫需下修。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": [
+                "更合理是中位逼抢和边路触发，而非全场高压。"
+              ],
+              "confidence": "medium",
+              "model_note": "保持中性，避免把身体优势等同于压迫优势。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.05,
+              "evidence": [
+                "后场出球稳定性仍需官方首发确认。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "小幅下修。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "Adingra、Amad和Kessie后插可攻击挪威边后卫身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "与边锋个人状态可能重复，按战术路线限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "压上后会给Odegaard寻找Haaland的第一传空间。"
+              ],
+              "confidence": "medium",
+              "model_note": "和defensive_line_risk相关，模型不要双重扣满。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.1,
+              "evidence": [
+                "Adingra/Amad有单点冲击力，但挪威边路也有反击外侧。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "轻微加成即可。"
+            },
+            "central_control_advantage": {
+              "direction": "negative",
+              "magnitude": -0.1,
+              "evidence": [
+                "Kessie/Sangare对抗强，但Odegaard接应质量会拉开中场距离。"
+              ],
+              "confidence": "medium",
+              "model_note": "若Odegaard未首发可回到中性。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "中卫和中场高点充足，Guessand/Kessie能制造禁区触点。"
+              ],
+              "confidence": "medium",
+              "model_note": "与身体对抗评分重叠，限幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "边路压上会被Haaland冲刺和Odegaard直塞测试。"
+              ],
+              "confidence": "medium",
+              "model_note": "和transition_defense_risk联动。"
+            },
+            "coach_substitution_risk": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": [
+                "替补可加宽度但结构变化幅度有限。"
+              ],
+              "confidence": "low",
+              "model_note": "数据不足，保持中性。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "更适合把比赛拖入身体对抗和定位球回合。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于节奏与事件波动。"
+            }
+          },
+          "double_counting_warning": "Kessie、Fofana、Adingra的状态和身体优势可能已在基础攻防中体现。"
+        },
+        "挪威": {
+          "expected_formation": "4-2-3-1，必要时双前锋化",
+          "key_roles": [
+            "Haaland负责纵深和禁区终结",
+            "Odegaard负责右肋组织和最后一传",
+            "Berge/Aursnes保护中路二点"
+          ],
+          "substitution_triggers": [
+            "打不开局面时上Sorloth形成双高点",
+            "领先后加中场保护并降低边后卫高度"
+          ],
+          "alternative_shape": "4-4-2或4-3-3",
+          "lineup_impact": "Haaland回归会显著抬高transition_attack和set_piece；Odegaard若受体能限制，central_control和build_up_resistance需下修。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.1,
+              "evidence": [
+                "4-2-3-1可用前腰和中锋封科特迪瓦中路第一脚。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "不宜放大为全场压迫优势。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "Odegaard、Berge、Aursnes能在第一压迫下保球。"
+              ],
+              "confidence": "medium",
+              "model_note": "Odegaard官方状态是重跑条件。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.4,
+              "evidence": [
+                "Odegaard-Haaland连线直接惩罚身后空间。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "与Haaland/player_state高度重叠，建议限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "此前暴露的回追和边路轮转问题仍需扣分。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "关键风险项。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "Nusa/Bobb提供一对一和传中质量。"
+              ],
+              "confidence": "medium",
+              "model_note": "需同时输入被反击风险。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "Odegaard提升中路接应和最后一传质量。"
+              ],
+              "confidence": "medium",
+              "model_note": "若Odegaard体能不足，下修为中性。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "Haaland、Ajer、Ostigard和Sorloth提供高点。"
+              ],
+              "confidence": "medium",
+              "model_note": "与高点球员状态重复，轻中幅即可。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "高线和边后卫压上会被Adingra/Amad攻击。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "模型应保留被打穿尾部。"
+            },
+            "coach_substitution_risk": {
+              "direction": "negative",
+              "magnitude": -0.05,
+              "evidence": [
+                "双前锋化能提升禁区威胁但会削弱中场保护。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "作为阵型摇摆风险。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "落后时会快速增加禁区人数，领先后仍保留纵深威慑。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于事件波动分支。"
+            }
+          },
+          "double_counting_warning": "Haaland/Odegaard会同时影响attack、player_state和transition。"
+        }
+      }
+    },
+    {
+      "match_id": "M79",
+      "fixture": {
+        "home": "墨西哥",
+        "away": "厄瓜多尔",
+        "date": "2026-06-30",
+        "venue": "Mexico City Stadium"
+      },
+      "data_collector_status": "partial_source_limited",
+      "matchup_summary": "墨西哥4-3-3的主场节奏、边路推进与厄瓜多尔4-2-3-1的Caicedo中轴和左路推进相互制约。",
+      "teams": {
+        "墨西哥": {
+          "expected_formation": "4-3-3，控球时可转4-2-3-1",
+          "key_roles": [
+            "Edson Alvarez负责中路屏障和定位球防守",
+            "Luis Chavez/Fidalgo负责转移和定位球脚法",
+            "Alvarado/Quinones提供宽度和内切"
+          ],
+          "substitution_triggers": [
+            "打不开局面时用Santiago Gimenez或Cesar Huerta增加禁区触点",
+            "领先后用中场替补稳住二点和边后卫身后"
+          ],
+          "alternative_shape": "4-2-3-1或4-4-2后段追分",
+          "lineup_impact": "Edson Alvarez是否首发是防线保护开关；若Gimenez替代Jimenez，禁区跑动会上升但支点和控节奏略变。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "主场和海拔环境支持墨西哥前段压迫。"
+              ],
+              "confidence": "medium",
+              "model_note": "不要与主场优势重复计权。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.05,
+              "evidence": [
+                "中场脚下质量足以维持基本出球。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "只给小幅正向。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "Quinones/Alvarado能利用厄瓜多尔边后卫前插后的空间。"
+              ],
+              "confidence": "medium",
+              "model_note": "与边锋状态和主场节奏重叠，限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": [
+                "边后卫压上会暴露给Plata/Estupinan一侧推进。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "墨西哥不能过度前压的关键约束。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "墨西哥边路人数和主场推进积极。"
+              ],
+              "confidence": "medium",
+              "model_note": "轻微优势而非单边碾压。"
+            },
+            "central_control_advantage": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": [
+                "Alvarez屏障与Caicedo中轴相互抵消。"
+              ],
+              "confidence": "medium",
+              "model_note": "保持中性。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.15,
+              "evidence": [
+                "Chavez脚法和中卫高点提供窗口。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "定位球只作小幅加成。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "主场压迫若推进过深，身后会被厄瓜多尔斜传利用。"
+              ],
+              "confidence": "medium",
+              "model_note": "官方首发后重跑。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.1,
+              "evidence": [
+                "Aguirre可用Gimenez、Huerta、Mora改变禁区和边路配置。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "替补影响限于后段。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "更可能在主场先控制节奏，再按状态加速。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于节奏分支。"
+            }
+          },
+          "double_counting_warning": "主场、海拔、Jimenez/Quinones状态可能已进入基础项。"
+        },
+        "厄瓜多尔": {
+          "expected_formation": "4-2-3-1，攻守可切4-3-3",
+          "key_roles": [
+            "Caicedo负责抢断后第一传和节奏保护",
+            "Pacho/Hincapie负责后场抗压与左侧推进",
+            "Estupinan/Plata提供左路强侧冲击"
+          ],
+          "substitution_triggers": [
+            "落后时增加John Yeboah或前场速度点",
+            "领先后加强中路双后腰保护"
+          ],
+          "alternative_shape": "4-3-3或5-4-1保护边路",
+          "lineup_impact": "Caicedo首发会稳住central_control和transition_defense；Plata若不首发，反击终端需下修。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "Caicedo带动的中前场对抗可压迫墨西哥中路接应。"
+              ],
+              "confidence": "medium",
+              "model_note": "避免和防守强度重复。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "Pacho/Hincapie与Caicedo能抗第一波逼抢。"
+              ],
+              "confidence": "medium",
+              "model_note": "若边后卫首发变化，需调整。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "Plata/Estupinan和前场速度能攻击墨西哥边后卫身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "不可把单场终结表现重复叠加到attack。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "边后卫前插后会被墨西哥反打外侧。"
+              ],
+              "confidence": "medium",
+              "model_note": "与defensive_line_risk联动。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "Estupinan/Plata侧具备推进质量。"
+              ],
+              "confidence": "medium",
+              "model_note": "仍需考虑墨西哥主场压迫。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.05,
+              "evidence": [
+                "Caicedo提高中路抢断和二点质量。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "仅小幅正向。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.05,
+              "evidence": [
+                "中卫高点具备基础威胁。"
+              ],
+              "confidence": "low",
+              "model_note": "低置信小幅。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.15,
+              "evidence": [
+                "主动前压后会给Quinones/Alvarado跑身后空间。"
+              ],
+              "confidence": "medium",
+              "model_note": "作为小到中风险。"
+            },
+            "coach_substitution_risk": {
+              "direction": "neutral",
+              "magnitude": 0.0,
+              "evidence": [
+                "替补速度点可增波动，但结构变化信息不足。"
+              ],
+              "confidence": "low",
+              "model_note": "保持中性。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "能接受中低位等待转换，落后后会把Plata和边后卫推高。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于节奏和风险分支。"
+            }
+          },
+          "double_counting_warning": "Caicedo、Plata、Hincapie/Pacho状态会影响多项，transition与build_up要和player_state限幅。"
+        }
+      }
+    },
+    {
+      "match_id": "M80",
+      "fixture": {
+        "home": "英格兰",
+        "away": "刚果金",
+        "date": "2026-07-01",
+        "venue": "Atlanta Stadium"
+      },
+      "data_collector_status": "partial_source_limited",
+      "matchup_summary": "英格兰4-2-3-1的中路控制、定位球和替补深度，对刚果金4-2-3-1的Wissa/Mayele/Elia转换形成典型淘汰赛强弱对位。",
+      "teams": {
+        "英格兰": {
+          "expected_formation": "4-2-3-1，控球可转3-2-5",
+          "key_roles": [
+            "Rice/Anderson负责中路屏障与二点",
+            "Bellingham负责前腰接应和禁区后插",
+            "Kane负责回撤连接与禁区终结",
+            "Saka/Rashford提供两翼纵深"
+          ],
+          "substitution_triggers": [
+            "打不开低位时用Rogers、Madueke或Watkins改变跑动和边路一对一",
+            "领先后增加中场保护并降低右后卫前插"
+          ],
+          "alternative_shape": "4-3-3或3-2-5控球站位",
+          "lineup_impact": "右后卫危机会直接影响wide_channel和defensive_line_risk；Bellingham/Kane同时首发抬高central_control、set_piece和后段破局能力。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "英格兰前场和双后腰能对刚果金后场第一脚施压。"
+              ],
+              "confidence": "medium",
+              "model_note": "压迫加成不要与整体实力重复。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "Rice、Anderson、Bellingham和Kane回撤提供多层接应。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "右后卫人选若明显弱化，略降。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": [
+                "Saka/Rashford和Bellingham后插可攻击刚果金边后卫身后。"
+              ],
+              "confidence": "medium",
+              "model_note": "与前场个人状态重叠，限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.15,
+              "evidence": [
+                "Wissa、Mayele、Elia具备直接反击威胁。"
+              ],
+              "confidence": "medium",
+              "model_note": "作为结构性对冲输入。"
+            },
+            "wide_channel_advantage": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": [
+                "Saka/Rashford提供两翼单点优势。"
+              ],
+              "confidence": "medium",
+              "model_note": "右后卫官方首发后可调整。"
+            },
+            "central_control_advantage": {
+              "direction": "positive",
+              "magnitude": 0.45,
+              "evidence": [
+                "Rice-Bellingham-Kane中轴质量明显高。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "与基础中场评分重叠，建议限幅但保留方向。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.3,
+              "evidence": [
+                "英格兰定位球脚法和中卫/前锋高点稳定。"
+              ],
+              "confidence": "medium",
+              "model_note": "作为战术执行加成。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.1,
+              "evidence": [
+                "强控球下高线风险存在，右侧伤病链是主要不确定。"
+              ],
+              "confidence": "medium",
+              "model_note": "若右路临时改造，重跑。"
+            },
+            "coach_substitution_risk": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "Rogers、Madueke、Watkins能改变进攻节奏。"
+              ],
+              "confidence": "medium",
+              "model_note": "与阵容深度重复，限制在后段。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.2,
+              "evidence": [
+                "更可能先控风险再加速，领先后用控球降低转换次数。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于淘汰赛状态管理。"
+            }
+          },
+          "double_counting_warning": "Bellingham/Kane和定位球优势已可能在attack/player_state中体现。"
+        },
+        "刚果金": {
+          "expected_formation": "4-2-3-1，防守可落5-4-1或4-5-1",
+          "key_roles": [
+            "Wissa负责左侧/中路转换终端",
+            "Mayele负责纵深和禁区第一点",
+            "Meschak Elia提供外侧速度",
+            "Pickel/Moutoussamy负责中路拦截"
+          ],
+          "substitution_triggers": [
+            "落后时用Bakambu、Banza或Mbuku增加禁区人数和直接性",
+            "领先或平局后段会更低位保护中路"
+          ],
+          "alternative_shape": "5-4-1低位或4-4-2追分",
+          "lineup_impact": "Wissa/Mayele同时首发会抬高transition_attack，但Pickel若吃牌或被迫保守，中路屏障和防守纪律下滑。",
+          "factors": {
+            "pressing_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.2,
+              "evidence": [
+                "面对英格兰中轴，持续高压风险高。"
+              ],
+              "confidence": "medium",
+              "model_note": "负向代表不适合高压，不等于完全无压迫。"
+            },
+            "build_up_resistance_adjustment": {
+              "direction": "negative",
+              "magnitude": -0.3,
+              "evidence": [
+                "英格兰前场压迫和中路封锁会迫使刚果金更直接。"
+              ],
+              "confidence": "medium",
+              "model_note": "若官方首发增加控球型中场可小幅回调。"
+            },
+            "transition_attack_adjustment": {
+              "direction": "positive",
+              "magnitude": 0.35,
+              "evidence": [
+                "Wissa/Mayele/Elia具备快速前插和直接冲击。"
+              ],
+              "confidence": "medium",
+              "model_note": "与Wissa高状态和attack评分重叠，限幅。"
+            },
+            "transition_defense_risk": {
+              "direction": "negative",
+              "magnitude": -0.35,
+              "evidence": [
+                "反击失败后会被英格兰二次进攻和肋部推进压回禁区。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "刚果金最大风险项。"
+            },
+            "wide_channel_advantage": {
+              "direction": "negative",
+              "magnitude": -0.25,
+              "evidence": [
+                "边路进攻速度存在，但防守端要面对Saka/Rashford。"
+              ],
+              "confidence": "medium",
+              "model_note": "不抹掉单次反击窗口。"
+            },
+            "central_control_advantage": {
+              "direction": "negative",
+              "magnitude": -0.45,
+              "evidence": [
+                "Pickel/Moutoussamy面对Rice-Bellingham-Kane中轴人数和质量劣势。"
+              ],
+              "confidence": "medium_high",
+              "model_note": "与中场实力差距重叠，模型限幅。"
+            },
+            "set_piece_advantage": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "Mbemba、Mayele和替补高点给定位球保留窗口。"
+              ],
+              "confidence": "medium",
+              "model_note": "与身体优势重复，限制为事件分支。"
+            },
+            "defensive_line_risk": {
+              "direction": "negative",
+              "magnitude": -0.25,
+              "evidence": [
+                "防线若前压会被Kane回撤和Bellingham后插撕开。"
+              ],
+              "confidence": "medium",
+              "model_note": "根据官方阵型调整。"
+            },
+            "coach_substitution_risk": {
+              "direction": "negative",
+              "magnitude": -0.05,
+              "evidence": [
+                "换上更多前锋可增加事件，但会牺牲中场保护。"
+              ],
+              "confidence": "medium_low",
+              "model_note": "作为后段波动风险。"
+            },
+            "game_state_tendency": {
+              "direction": "positive",
+              "magnitude": 0.25,
+              "evidence": [
+                "更可能接受低位、直接反击和定位球路线，落后后会迅速提高直接性。"
+              ],
+              "confidence": "medium",
+              "model_note": "用于波动分支。"
+            }
+          },
+          "double_counting_warning": "Wissa/Mayele/Elia的转换能力可能已在player_state中体现。"
+        }
+      }
+    }
+  ],
+  "validation_expectation": {
+    "matches_count": 4,
+    "teams_per_match": 2,
+    "factors_per_team": 10
+  }
+}
